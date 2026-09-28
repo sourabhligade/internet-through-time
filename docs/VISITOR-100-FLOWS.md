@@ -6,7 +6,7 @@
 **I/O law:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).  
 **Leftover-3× unique dest-true law:** [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md).  
 **Leftover list:** [`UNDONE.md`](UNDONE.md).  
-**Scan:** door **100%** of **26** playable years · dest-true I/O **~87%** · look **~81%** · combined **~89%**. **2015 wiped.** **2018 wiped.** Leftover-3× unique catalogs are **empty**.
+**Scan:** door **100%** of **26** playable years · dest-true I/O **~87%** · look **~81%** · combined **~89%**. **2015 wiped.** ** wiped.** Leftover-3× unique catalogs are **empty**.
 
 **One-line law:** 100% is dest-true **flows** on dests already on disk. Dest-farm **links** (new dest folders, dest-lock revert of dest-lock years, leftover dest leftover-3× dest-farm extra dests as leftover-3× unique dest-true dests) fail I/O.
 
@@ -21,7 +21,7 @@ Do not dest-farm dests. Do not dest-lock 2015–2020 again. Do not dest-lock for
 | **Flows** | Official dest `data-official-need` · leftover-3× unique dest-true dests (one dest / one verb / one key) · star empty/trap never writes · cream leftover-3× unique dest-true leftover go 1 · period look / failed-final | **This is 100%.** |
 | **Links** | More dest folders · dest-farm leftover dest leftover-3× dest-farm extra dests · dest-lock revert of 2007 / 2010–2012 / 2014 / 2021 · leftover dest leftover-20 dest-farm on years that are not 2017 | **Fails I/O.** A year that looks full because it has 200 leftover dests has failed I/O. |
 
-2015 and 2018 are **wiped**. 2017 / 2019–2021 are **React doors** (0 HTML dest folders). Warehouse dest-folder counts from dest-lock-reverted years do not raise visitor 100%. Leftover-3× unique catalogs are empty.
+2015 and  are **wiped**. 2017 / –2021 are **React doors** (0 HTML dest folders). Warehouse dest-folder counts from dest-lock-reverted years do not raise visitor 100%. Leftover-3× unique catalogs are empty.
 
 ---
 
@@ -35,7 +35,7 @@ Do not dest-farm dests. Do not dest-lock 2015–2020 again. Do not dest-lock for
 | Leftover-3× unique dest-true dests | **0** · catalogs empty · leftover go **1** · empty never writes · leftover never writes the star |
 | Dest-farm leftover-3× CUT specs | Dest-true pack asserts the catalogs stay empty |
 | Mock-flow DEST_FIELD / WEAK_REAL / HASH_CTA | **0** |
-| Wiped | **2015 · 2018 · 2023 · 2024 · 2025** no tree |
+| Wiped | **2015 ·  · 2023 · 2024 · 2025** no tree |
 | Boarded | **2009** plaque · tree stays · not a visitor door |
 
 ---
@@ -73,7 +73,7 @@ Only **2017** has unique leftover-20. leftover-3× unique dest-true dests (9 / 3
 
 ## 4. Why 2021 looks kaggy
 
-2021 is a dest-lock **lean door** (18 dests), same class as 2018 GDPR (24 dests). It is **not** dest-lock-reverted 2019 (170 dests). Kaggy is **look + leftover-3× unique dest-true dests stop at 5**, not a missing year tree.
+2021 is a dest-lock **lean door** (18 dests), same class as  GDPR (24 dests). It is **not** dest-lock-reverted  (170 dests). Kaggy is **look + leftover-3× unique dest-true dests stop at 5**, not a missing year tree.
 
 | Fact | Disk | Stale copy |
 |------|------|------------|
@@ -81,11 +81,11 @@ Only **2017** has unique leftover-20. leftover-3× unique dest-true dests (9 / 3
 | Leftover dest leftover-2× warehouse | dest-lock **stripped** official dest leftover-2× **0** | READ-FIRST still says leftover-2× on every dest |
 | Leftover-3× unique dest-true dests | **5 leftover dests** · amazon / google / instagram · twitter / youtube · **third strip 0** | READ-FIRST still says first 3 + third 3 |
 | Period files | `assets/period/2021/README-PIXELS.txt` failed-final · 0 capture files | — |
-| `css/period-2021.css` | **3.2 KB** (imports 2019 + ATT phone chrome) | `period-2018.css` **14.7 KB** |
+| `css/period-2021.css` | **3.2 KB** (imports  + ATT phone chrome) | `period-.css` **14.7 KB** |
 | ATT star dest | dest-true I/O · phone frame · failed-final · `data-official-need` | — |
 | 2022 | live lean **25** dests | **2022 live** |
 
-2018 feels complete because GDPR **Manage** is the year in the chrome. 2021 ATT **Ask** is dest-true in a phone frame, but dest-lock stripped leftover dest leftover-2× warehouse, leftover-3× unique dest-true dests stop at 5, and there is no period harvest.
+ feels complete because GDPR **Manage** is the year in the chrome. 2021 ATT **Ask** is dest-true in a phone frame, but dest-lock stripped leftover dest leftover-2× warehouse, leftover-3× unique dest-true dests stop at 5, and there is no period harvest.
 
 **Do not dest-lock revert 2021 to 294 dests.** That is dest-farm. **Do not dest-farm leftover dest leftover-3× unique dest-true dests to 9.** Criteria: **stop at 5**.
 
@@ -115,9 +115,9 @@ Verified. Do not invent dests. Failed-final stays honest until a dated capture e
 | Meta leftover | Facebook, Inc. corporate rename to Meta Platforms, Inc. **28 Oct 2021**. Family of Apps still Facebook / Instagram / Messenger / WhatsApp. Not Meta-as-gold. | [SEC 8-K](https://www.sec.gov/Archives/edgar/data/1326801/000132680121000071/fb-20211028.htm) | — |
 | Windows 11 leftover | Measured rollout **4 Oct 2021**. Eligible Win10 PCs offered upgrade by mid-2022. Not January 2021 OS. Desktop stays Win10 + Chrome habit. | [Windows Experience Blog](https://blogs.windows.com/windowsexperience/2021/10/04/how-to-get-windows-11/) | — |
 | Flash leftover | Adobe support ended **31 Dec 2020**. Flash content blocked beginning **12 Jan 2021**. Not a 2021 launch. | Adobe EOL (inspected in research) | Dest copy “End of Flash” is leftover, not gold |
-| About honesty | ILS June websites table **ends 2018** at **1,630,322,579**. No 2019–2021 websites cell. Invented June 2021 websites = I11 fail. | [Internet Live Stats](https://www.internetlivestats.com/total-number-of-websites/) | ITU 4.9B / 63% not independently fetched this pass |
+| About honesty | ILS June websites table **ends ** at **1,630,322,579**. No –2021 websites cell. Invented June 2021 websites = I11 fail. | [Internet Live Stats](https://www.internetlivestats.com/total-number-of-websites/) | ITU 4.9B / 63% not independently fetched this pass |
 
-2018 feels complete because GDPR Manage is sticky banner I/O (`Accept All` never writes · Manage writes). 2021 official dests 2–10 are max-width literacy plaques; dest-true look is ATT phone frame + leftover dest leftover-3× unique dest-true dests stay 5.
+ feels complete because GDPR Manage is sticky banner I/O (`Accept All` never writes · Manage writes). 2021 official dests 2–10 are max-width literacy plaques; dest-true look is ATT phone frame + leftover dest leftover-3× unique dest-true dests stay 5.
 
 ---
 
@@ -128,9 +128,9 @@ Do not dest-farm leftover dest leftover-3× unique dest-true dests past these st
 | Year | Leftover-3× unique dest-true dests | Stop |
 |------|-----------------------------------:|------|
 | Forests 1994–2006 | stacked leftover-3× workshop | Unique leftover-3×n **not the forest job** |
-| 2007 / 2010–2016 / 2019–2020 | **9** | Shipped |
+| 2007 / 2010–2016 / –2020 | **9** | Shipped |
 | 2017 | **0 leftover-3× unique dest-true dests** | Unique leftover-20 already shipped |
-| 2018 | **3** (first only) | Cannot pass 9 without new dests |
+|  | **3** (first only) | Cannot pass 9 without new dests |
 | 2021 | **5** (first 3 + second 2) | Cannot pass 9 without new dests |
 | 2022 | **9 dests on disk** | e2e matrix **0 rows** — dest-true dests, not dest-farm dests |
 | 2009 | catalog leftover-3× | Boarded · ignore |
@@ -141,22 +141,22 @@ Do not dest-farm leftover dest leftover-3× unique dest-true dests past these st
 
 ### Phase 0 — law / docs (no dest HTML)
 
-- [x] Strike stale 27 / 28 years. Hub **24 years**. **2015 wiped.** **2018 wiped.** **2022 live**. **2023–2025 wiped**.
-- [x] Close GitHub **#11–#14** (A clutter-clear already on tree · dest-lock 2015–2018 reverted · not dest-lock tickets).
+- [x] Strike stale 27 / 28 years. Hub **24 years**. **2015 wiped.** ** wiped.** **2022 live**. **2023–2025 wiped**.
+- [x] Close GitHub **#11–#14** (A clutter-clear already on tree · dest-lock 2015– reverted · not dest-lock tickets).
 - [x] Link this file from [`docs/README.md`](README.md) + [`UNDONE.md`](UNDONE.md).
 
 ### Phase 1 — official dest gold I/O (highest-leverage flows)
 
 Same dests. `data-official-need` so empty never writes.
 
-- [x] **2019** official dests 0 → 10 (`data-official-need` on dests already on trail).
+- [x] **** official dests 0 → 10 (`data-official-need` on dests already on trail).
 - [x] **2010** official dests 1 → 10 (Instagram iOS star already dest-true).
 - [x] **2016** official dests 2 → 10 (IG Stories star already dest-true).
 - [x] **2017** official dests 3 → 10 (Face ID star already dest-true). Unique leftover-20 dest-true dests stay the leftover map.
 - [x] **2021 ATT** star dest `data-official-need` (9 → 10).
 - [x] **2012** official dests 3 → 10.
 - [x] Forest official dest gold I/O after lean doors (2000 0/10 · 1994 1/10 · 1999 1/10).
-- [x] **2018 GDPR** star dest `data-official-need` (9 → 10). Manage is dest-true; Accept All never writes.
+- [x] ** GDPR** star dest `data-official-need` (9 → 10). Manage is dest-true; Accept All never writes.
 
 **e2e:** year mvp empty never writes · complete writes official · leftover never writes star.
 
@@ -189,7 +189,7 @@ Fold or dest-true leftover dest leftover-2× warehouse. Do not dest-farm leftove
 
 ### Phase 6 — unique leftover-20 (only if named)
 
-- [ ] **Do not dest-farm leftover dest leftover-20 dests** on 2013 / 2014 / 2015 / 2018–2022.
+- [ ] **Do not dest-farm leftover dest leftover-20 dests** on 2013 / 2014 / 2015 / –2022.
 - [x] 2017 leftover dest leftover-20 dests already dest-true (shared `bootUniqueFlow` · 18 failed-final on purpose · Storm Circle gym complete e2e).
 
 ---
@@ -199,7 +199,7 @@ Fold or dest-true leftover dest leftover-2× warehouse. Do not dest-farm leftove
 - Dest-farm dests to raise the percentage.
 - Dest-lock revert 2007 / 2010–2012 / 2014 / 2021.
 - Dest-lock 2015–2020 again.
-- Dest-farm leftover dest leftover-3× unique dest-true dests on 2018 past 3 or 2021 past 5.
+- Dest-farm leftover dest leftover-3× unique dest-true dests on  past 3 or 2021 past 5.
 - Dest-farm leftover dest leftover-3× dest-farm extra dests (facebook / hbonow / hqtrivia) as leftover-3× unique dest-true dests.
 - Unique leftover-3×n on forests 1994–2006.
 - Restore 2009 as a playable door.

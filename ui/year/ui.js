@@ -3,11 +3,11 @@
  *
  * Year shell (years/YYYY/index.html):
  *   <script src="../../ui/year/ui.js"></script>
- *   <script>ITT.YearUI.paint("2018");</script>
+ *   <script>ITT.YearUI.paint("");</script>
  *
  * Starting Point (years/YYYY/pages/home.html):
  *   <script src="../../../ui/year/ui.js"></script>
- *   <script>ITT.YearUI.paintStart("2018");</script>
+ *   <script>ITT.YearUI.paintStart("");</script>
  *
  * Internals stay in this folder (years.js · shell.js · start-*.js).
  * Starting Point also pulls js/config/flow-trails.js for the official 10.

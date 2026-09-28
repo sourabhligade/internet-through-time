@@ -91,7 +91,7 @@ const YEARS = [
     star: "itt09-like",
     gold: "/years/2009/sites/facebook/index.html",
     leftover: /** @type {LoDest[]} */ ([
-      { href: "/years/2009/sites/youtube/index.html", suffix: "yt", needPick: "", minPick: 2, field: false, placeholder: "" },
+      { href: "/years/2009/sites/youtube/index.html", suffix: "yt", needPick: "keep", minPick: 0, field: true, placeholder: "Watch leftover" },
       { href: "/years/2009/sites/wikipedia/index.html", suffix: "wiki", needPick: "", minPick: 2, field: false, placeholder: "" },
       { href: "/years/2009/sites/chrome/index.html", suffix: "chrome", needPick: "", minPick: 2, field: false, placeholder: "" },
     ]),
@@ -258,7 +258,7 @@ test.describe("1994–2000 + 2009 leftover dests are real full leftover-official
         expect(fs.existsSync(file), dest.href + " missing").toBeTruthy();
         const html = fs.readFileSync(file, "utf8");
         test.skip(
-          !html.includes('data-lo-key="' + dest.suffix + '"'),
+          !html.includes('data-lo-save') || !html.includes('data-lo-key="' + dest.suffix + '"'),
           dest.href + " is an official room, not leftover " + dest.suffix
         );
         expect(html.includes('data-lo-key="' + dest.suffix + '"'), dest.href + " " + dest.suffix).toBeTruthy();

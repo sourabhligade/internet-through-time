@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * REAL-flow alignment for every year game (1994–2018).
+ * REAL-flow alignment for every year game (1994–).
  * Rules (docs/REAL-FLOW-SYSTEM.md adapted to games):
  *  - Page load alone must not invent a finished-run best (except ongoing farm/room state).
  *  - Complete primary action writes year-prefixed ittYY-game-* with content.

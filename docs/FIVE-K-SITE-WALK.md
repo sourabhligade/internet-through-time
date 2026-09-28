@@ -192,17 +192,17 @@ KEEP 12. Rows with a cite that are not already on disk: 0.
 
 | Action | Slug | Name | What the source says | Cite | Source |
 |---|---|---|---|---|---|
-| already on disk | `classroom` | sites/classroom/index.html | itt20-classroom |  | docs/2019-2020-DEST-DENSITY.md:203 |
-| already on disk | `discord` | sites/discord/index.html | itt20-discord |  | docs/2019-2020-DEST-DENSITY.md:201 |
-| already on disk | `teams` | sites/teams/index.html | itt20-teams |  | docs/2019-2020-DEST-DENSITY.md:202 |
-| already on disk | `zoom` | sites/zoom/meeting.html | itt20-zoom` **star** |  | docs/2019-2020-DEST-DENSITY.md:199 |
-| named in a list, no cite row | `coinbase` |  | `twitter` · `chrome` · `windows10` · `iphone` · `spotify` · `twitch` · `uber` · `whatsapp` · `linkedin` · `github` · `hulu` · `airbnb` · `peacock` · `hbomax` · `edge` (Chromium Edge **15 Jan 2020** is 2020, not 2019 defa |  | docs/2019-2020-DEST-DENSITY.md:230 |
-| named in a list, no cite row | `figma` |  | `twitter` · `chrome` · `windows10` · `iphone` · `spotify` · `twitch` · `uber` · `whatsapp` · `linkedin` · `github` · `hulu` · `airbnb` · `peacock` · `hbomax` · `edge` (Chromium Edge **15 Jan 2020** is 2020, not 2019 defa |  | docs/2019-2020-DEST-DENSITY.md:230 |
-| named in a list, no cite row | `hbomax` |  | `twitter` · `chrome` · `windows10` · `iphone` · `spotify` · `twitch` · `uber` · `whatsapp` · `linkedin` · `github` · `hulu` · `airbnb` · `peacock` · `hbomax` · `edge` (Chromium Edge **15 Jan 2020** is 2020, not 2019 defa |  | docs/2019-2020-DEST-DENSITY.md:230 |
-| named in a list, no cite row | `notion` |  | `twitter` · `chrome` · `windows10` · `iphone` · `spotify` · `twitch` · `uber` · `whatsapp` · `linkedin` · `github` · `hulu` · `airbnb` · `peacock` · `hbomax` · `edge` (Chromium Edge **15 Jan 2020** is 2020, not 2019 defa |  | docs/2019-2020-DEST-DENSITY.md:230 |
-| named in a list, no cite row | `peacock` |  | `twitter` · `chrome` · `windows10` · `iphone` · `spotify` · `twitch` · `uber` · `whatsapp` · `linkedin` · `github` · `hulu` · `airbnb` · `peacock` · `hbomax` · `edge` (Chromium Edge **15 Jan 2020** is 2020, not 2019 defa |  | docs/2019-2020-DEST-DENSITY.md:230 |
-| named in a list, no cite row | `robinhood` |  | `twitter` · `chrome` · `windows10` · `iphone` · `spotify` · `twitch` · `uber` · `whatsapp` · `linkedin` · `github` · `hulu` · `airbnb` · `peacock` · `hbomax` · `edge` (Chromium Edge **15 Jan 2020** is 2020, not 2019 defa |  | docs/2019-2020-DEST-DENSITY.md:230 |
-| do not add | `airbnb` |  | `twitter` · `chrome` · `windows10` · `iphone` · `spotify` · `twitch` · `uber` · `whatsapp` · `linkedin` · `github` · `hulu` · `airbnb` · `peacock` · `hbomax` · `edge` (Chromium Edge **15 Jan 2020** is 2020, not 2019 defa |  | docs/2019-2020-DEST-DENSITY.md:230 |
+| already on disk | `classroom` | sites/classroom/index.html | itt20-classroom |  | docs/-2020-DEST-DENSITY.md:203 |
+| already on disk | `discord` | sites/discord/index.html | itt20-discord |  | docs/-2020-DEST-DENSITY.md:201 |
+| already on disk | `teams` | sites/teams/index.html | itt20-teams |  | docs/-2020-DEST-DENSITY.md:202 |
+| already on disk | `zoom` | sites/zoom/meeting.html | itt20-zoom` **star** |  | docs/-2020-DEST-DENSITY.md:199 |
+| named in a list, no cite row | `coinbase` |  | `twitter` · `chrome` · `windows10` · `iphone` · `spotify` · `twitch` · `uber` · `whatsapp` · `linkedin` · `github` · `hulu` · `airbnb` · `peacock` · `hbomax` · `edge` (Chromium Edge **15 Jan 2020** is 2020, not  defa |  | docs/-2020-DEST-DENSITY.md:230 |
+| named in a list, no cite row | `figma` |  | `twitter` · `chrome` · `windows10` · `iphone` · `spotify` · `twitch` · `uber` · `whatsapp` · `linkedin` · `github` · `hulu` · `airbnb` · `peacock` · `hbomax` · `edge` (Chromium Edge **15 Jan 2020** is 2020, not  defa |  | docs/-2020-DEST-DENSITY.md:230 |
+| named in a list, no cite row | `hbomax` |  | `twitter` · `chrome` · `windows10` · `iphone` · `spotify` · `twitch` · `uber` · `whatsapp` · `linkedin` · `github` · `hulu` · `airbnb` · `peacock` · `hbomax` · `edge` (Chromium Edge **15 Jan 2020** is 2020, not  defa |  | docs/-2020-DEST-DENSITY.md:230 |
+| named in a list, no cite row | `notion` |  | `twitter` · `chrome` · `windows10` · `iphone` · `spotify` · `twitch` · `uber` · `whatsapp` · `linkedin` · `github` · `hulu` · `airbnb` · `peacock` · `hbomax` · `edge` (Chromium Edge **15 Jan 2020** is 2020, not  defa |  | docs/-2020-DEST-DENSITY.md:230 |
+| named in a list, no cite row | `peacock` |  | `twitter` · `chrome` · `windows10` · `iphone` · `spotify` · `twitch` · `uber` · `whatsapp` · `linkedin` · `github` · `hulu` · `airbnb` · `peacock` · `hbomax` · `edge` (Chromium Edge **15 Jan 2020** is 2020, not  defa |  | docs/-2020-DEST-DENSITY.md:230 |
+| named in a list, no cite row | `robinhood` |  | `twitter` · `chrome` · `windows10` · `iphone` · `spotify` · `twitch` · `uber` · `whatsapp` · `linkedin` · `github` · `hulu` · `airbnb` · `peacock` · `hbomax` · `edge` (Chromium Edge **15 Jan 2020** is 2020, not  defa |  | docs/-2020-DEST-DENSITY.md:230 |
+| do not add | `airbnb` |  | `twitter` · `chrome` · `windows10` · `iphone` · `spotify` · `twitch` · `uber` · `whatsapp` · `linkedin` · `github` · `hulu` · `airbnb` · `peacock` · `hbomax` · `edge` (Chromium Edge **15 Jan 2020** is 2020, not  defa |  | docs/-2020-DEST-DENSITY.md:230 |
 | do not add | `itt20-zoom` |  | / **2020** / `sites/zoom/meeting.html` / `itt20-zoom` / Mute → chat → **Leave** / **Join** · “300M Zoom users” / Win10 mass · Chrome habit · Edge 79 leftover / ChatGPT · GameStop · June ILS websites digit / **38 dests**  |  | docs/2016-2021-IO-CRITERIA.md:55 |
 
 ### 2021
@@ -2071,7 +2071,7 @@ KEEP 7. Rows with a cite that are not already on disk: 0.
 | `yandex17` | slack17 | **DROP** |  | docs/TODO-EXTRA-DEST-RESEARCH.md:751 |
 | `youtubetv` | slack17 | **DROP** |  | docs/TODO-EXTRA-DEST-RESEARCH.md:754 |
 
-### 2018 — 7 KEEP, do not build
+###  — 7 KEEP, do not build
 
 | Slug | Name | What the source says | Cite | Source |
 |---|---|---|---|---|
@@ -2083,49 +2083,49 @@ KEEP 7. Rows with a cite that are not already on disk: 0.
 | `itt18-tiktok-fyp` | itt18-tiktok-fyp | sites/tiktok/fyp.html |  | docs/AUDIT-MAP-2026-09-23.md:636 |
 | `onedot` |  | **Leftover dests** (31): `facebook` · `twitter` · `amazon` · `google` · `yahoo` · `baidu` · `yandex` · `netflix` · `snapchat` · `discord` · `gplusgone` · `androidpie` · `ios12` · `spotify` · `twitch` · `whatsapp` · `link |  | docs/DEST-TRUE-FLOW-MAP.md:328 |
 
-### 2019 — 39 KEEP, do not build
+###  — 39 KEEP, do not build
 
 | Slug | Name | What the source says | Cite | Source |
 |---|---|---|---|---|
-| `appletv` |  | `airpodspro` · `amazon` · `appletv` · `arcade` · `chrome` · `disneyplus` · `facebook` · `google` · `instagram` · `iphone` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `windows10` · `yahoo` · ` |  | docs/2019-2020-DEST-DENSITY.md:121 |
-| `cnil` | CNIL €50M GDPR fine **21 Jan 2019** [S5] | Fine leftover |  | docs/2019-2020-DEST-DENSITY.md:137 |
-| `disneyplus` |  | `airpodspro` · `amazon` · `appletv` · `arcade` · `chrome` · `disneyplus` · `facebook` · `google` · `instagram` · `iphone` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `windows10` · `yahoo` · ` |  | docs/2019-2020-DEST-DENSITY.md:121 |
-| `facebook` |  | `airpodspro` · `amazon` · `appletv` · `arcade` · `chrome` · `disneyplus` · `facebook` · `google` · `instagram` · `iphone` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `windows10` · `yahoo` · ` |  | docs/2019-2020-DEST-DENSITY.md:121 |
-| `ftc` | FTC Facebook $5B **24 Jul 2019** [S5] | Fine leftover |  | docs/2019-2020-DEST-DENSITY.md:138 |
+| `appletv` |  | `airpodspro` · `amazon` · `appletv` · `arcade` · `chrome` · `disneyplus` · `facebook` · `google` · `instagram` · `iphone` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `windows10` · `yahoo` · ` |  | docs/-2020-DEST-DENSITY.md:121 |
+| `cnil` | CNIL €50M GDPR fine **21 Jan ** [S5] | Fine leftover |  | docs/-2020-DEST-DENSITY.md:137 |
+| `disneyplus` |  | `airpodspro` · `amazon` · `appletv` · `arcade` · `chrome` · `disneyplus` · `facebook` · `google` · `instagram` · `iphone` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `windows10` · `yahoo` · ` |  | docs/-2020-DEST-DENSITY.md:121 |
+| `facebook` |  | `airpodspro` · `amazon` · `appletv` · `arcade` · `chrome` · `disneyplus` · `facebook` · `google` · `instagram` · `iphone` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `windows10` · `yahoo` · ` |  | docs/-2020-DEST-DENSITY.md:121 |
+| `ftc` | FTC Facebook $5B **24 Jul ** [S5] | Fine leftover |  | docs/-2020-DEST-DENSITY.md:138 |
 | `geforcenow` |  | ADD extra dest KEEP already on disk: `airpods2` · `android10` · `anthem19` · `apex` · `applewatch5` · `astralchain` · `bloodstained` · `borderlands3` · `catalina` · `control19` · `crashteamracing` · `daysgone` · `deathst |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:405 |
-| `github` | leftover dest | Issue leftover |  | docs/2019-2020-DEST-DENSITY.md:151 |
-| `google` |  | `airpodspro` · `amazon` · `appletv` · `arcade` · `chrome` · `disneyplus` · `facebook` · `google` · `instagram` · `iphone` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `windows10` · `yahoo` · ` |  | docs/2019-2020-DEST-DENSITY.md:121 |
+| `github` | leftover dest | Issue leftover |  | docs/-2020-DEST-DENSITY.md:151 |
+| `google` |  | `airpodspro` · `amazon` · `appletv` · `arcade` · `chrome` · `disneyplus` · `facebook` · `google` · `instagram` · `iphone` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `windows10` · `yahoo` · ` |  | docs/-2020-DEST-DENSITY.md:121 |
 | `huawei` |  | KEEP original (27): `airpodspro` · `amazon` · `applecard` · `appletv` · `arcade` · `area51` · `chrome` · `disneyplus` · `facebook` · `google` · `hidelikes` · `huawei` · `instagram` · `ios13` · `ipados` · `iphone` · `libr |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:403 |
-| `hulu` | leftover dest · Disney+ is star | Watch leftover |  | docs/2019-2020-DEST-DENSITY.md:152 |
-| `itt19-appletv` | sites/appletv/index.html | itt19-appletv |  | docs/2019-2020-DEST-DENSITY.md:95 |
-| `itt19-disneyplus` |  | / **2019** / `sites/disneyplus/home.html` / `itt19-disneyplus` / Continue watching / Trial / join (`index.html`) · “Who’s watching” as Disney press quote / Win10 mass · Chrome habit / Reels · Zoom-as-mass · Meta · Travis |  | docs/2016-2021-IO-CRITERIA.md:54 |
-| `itt19-pop-amazon` |  | / first / amazon / `itt19-pop-amazon` / |  | docs/2019-2020-DEST-DENSITY.md:109 |
-| `itt19-pop-facebook` |  | / first / facebook / `itt19-pop-facebook` / |  | docs/2019-2020-DEST-DENSITY.md:110 |
-| `itt19-pop-google` |  | / first / google / `itt19-pop-google` / |  | docs/2019-2020-DEST-DENSITY.md:111 |
-| `itt19-pop2-instagram` |  | / second / instagram / `itt19-pop2-instagram` / |  | docs/2019-2020-DEST-DENSITY.md:112 |
-| `itt19-pop2-nyt` |  | / second / nyt / `itt19-pop2-nyt` / |  | docs/2019-2020-DEST-DENSITY.md:113 |
-| `itt19-pop3-twitter` |  | / third / twitter / `itt19-pop3-twitter` / |  | docs/2019-2020-DEST-DENSITY.md:115 |
-| `itt19-pop3-yahoo` |  | / third / yahoo / `itt19-pop3-yahoo` / |  | docs/2019-2020-DEST-DENSITY.md:116 |
-| `itt19-pop3-youtube` |  | / third / youtube / `itt19-pop3-youtube` / |  | docs/2019-2020-DEST-DENSITY.md:117 |
-| `itt19-stadia` | sites/stadia/index.html | itt19-stadia |  | docs/2019-2020-DEST-DENSITY.md:96 |
-| `itt19-tiktok` | sites/tiktok/index.html | itt19-tiktok |  | docs/2019-2020-DEST-DENSITY.md:93 |
-| `linkedin` | leftover dest | Feed leftover |  | docs/2019-2020-DEST-DENSITY.md:150 |
+| `hulu` | leftover dest · Disney+ is star | Watch leftover |  | docs/-2020-DEST-DENSITY.md:152 |
+| `itt19-appletv` | sites/appletv/index.html | itt19-appletv |  | docs/-2020-DEST-DENSITY.md:95 |
+| `itt19-disneyplus` |  | / **** / `sites/disneyplus/home.html` / `itt19-disneyplus` / Continue watching / Trial / join (`index.html`) · “Who’s watching” as Disney press quote / Win10 mass · Chrome habit / Reels · Zoom-as-mass · Meta · Travis |  | docs/2016-2021-IO-CRITERIA.md:54 |
+| `itt19-pop-amazon` |  | / first / amazon / `itt19-pop-amazon` / |  | docs/-2020-DEST-DENSITY.md:109 |
+| `itt19-pop-facebook` |  | / first / facebook / `itt19-pop-facebook` / |  | docs/-2020-DEST-DENSITY.md:110 |
+| `itt19-pop-google` |  | / first / google / `itt19-pop-google` / |  | docs/-2020-DEST-DENSITY.md:111 |
+| `itt19-pop2-instagram` |  | / second / instagram / `itt19-pop2-instagram` / |  | docs/-2020-DEST-DENSITY.md:112 |
+| `itt19-pop2-nyt` |  | / second / nyt / `itt19-pop2-nyt` / |  | docs/-2020-DEST-DENSITY.md:113 |
+| `itt19-pop3-twitter` |  | / third / twitter / `itt19-pop3-twitter` / |  | docs/-2020-DEST-DENSITY.md:115 |
+| `itt19-pop3-yahoo` |  | / third / yahoo / `itt19-pop3-yahoo` / |  | docs/-2020-DEST-DENSITY.md:116 |
+| `itt19-pop3-youtube` |  | / third / youtube / `itt19-pop3-youtube` / |  | docs/-2020-DEST-DENSITY.md:117 |
+| `itt19-stadia` | sites/stadia/index.html | itt19-stadia |  | docs/-2020-DEST-DENSITY.md:96 |
+| `itt19-tiktok` | sites/tiktok/index.html | itt19-tiktok |  | docs/-2020-DEST-DENSITY.md:93 |
+| `linkedin` | leftover dest | Feed leftover |  | docs/-2020-DEST-DENSITY.md:150 |
 | `mixer19` | youtube | **KEEP** |  | docs/TODO-EXTRA-DEST-RESEARCH.md:857 |
-| `nyt` |  | `airpodspro` · `amazon` · `appletv` · `arcade` · `chrome` · `disneyplus` · `facebook` · `google` · `instagram` · `iphone` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `windows10` · `yahoo` · ` |  | docs/2019-2020-DEST-DENSITY.md:121 |
-| `pinterest` | leftover dest | Pin leftover |  | docs/2019-2020-DEST-DENSITY.md:155 |
-| `reddit` | leftover dest · dest-disjoint | Post leftover |  | docs/2019-2020-DEST-DENSITY.md:141 |
-| `slack` | leftover dest | Message leftover |  | docs/2019-2020-DEST-DENSITY.md:147 |
-| `snapchat` | leftover dest · not Reels | Snap leftover |  | docs/2019-2020-DEST-DENSITY.md:145 |
-| `spotify` | leftover dest | Wrapped leftover |  | docs/2019-2020-DEST-DENSITY.md:144 |
-| `stadia` |  | `airpodspro` · `amazon` · `appletv` · `arcade` · `chrome` · `disneyplus` · `facebook` · `google` · `instagram` · `iphone` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `windows10` · `yahoo` · ` |  | docs/2019-2020-DEST-DENSITY.md:121 |
-| `twitch` | leftover dest | Watch leftover |  | docs/2019-2020-DEST-DENSITY.md:146 |
-| `twitter` |  | `airpodspro` · `amazon` · `appletv` · `arcade` · `chrome` · `disneyplus` · `facebook` · `google` · `instagram` · `iphone` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `windows10` · `yahoo` · ` |  | docs/2019-2020-DEST-DENSITY.md:121 |
-| `uber` | leftover dest | Ride leftover |  | docs/2019-2020-DEST-DENSITY.md:148 |
+| `nyt` |  | `airpodspro` · `amazon` · `appletv` · `arcade` · `chrome` · `disneyplus` · `facebook` · `google` · `instagram` · `iphone` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `windows10` · `yahoo` · ` |  | docs/-2020-DEST-DENSITY.md:121 |
+| `pinterest` | leftover dest | Pin leftover |  | docs/-2020-DEST-DENSITY.md:155 |
+| `reddit` | leftover dest · dest-disjoint | Post leftover |  | docs/-2020-DEST-DENSITY.md:141 |
+| `slack` | leftover dest | Message leftover |  | docs/-2020-DEST-DENSITY.md:147 |
+| `snapchat` | leftover dest · not Reels | Snap leftover |  | docs/-2020-DEST-DENSITY.md:145 |
+| `spotify` | leftover dest | Wrapped leftover |  | docs/-2020-DEST-DENSITY.md:144 |
+| `stadia` |  | `airpodspro` · `amazon` · `appletv` · `arcade` · `chrome` · `disneyplus` · `facebook` · `google` · `instagram` · `iphone` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `windows10` · `yahoo` · ` |  | docs/-2020-DEST-DENSITY.md:121 |
+| `twitch` | leftover dest | Watch leftover |  | docs/-2020-DEST-DENSITY.md:146 |
+| `twitter` |  | `airpodspro` · `amazon` · `appletv` · `arcade` · `chrome` · `disneyplus` · `facebook` · `google` · `instagram` · `iphone` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `windows10` · `yahoo` · ` |  | docs/-2020-DEST-DENSITY.md:121 |
+| `uber` | leftover dest | Ride leftover |  | docs/-2020-DEST-DENSITY.md:148 |
 | `wework` |  | KEEP original (27): `airpodspro` · `amazon` · `applecard` · `appletv` · `arcade` · `area51` · `chrome` · `disneyplus` · `facebook` · `google` · `hidelikes` · `huawei` · `instagram` · `ios13` · `ipados` · `iphone` · `libr |  | docs/LEFTOVER-2X-UNIQUE-LINKS.md:403 |
-| `whatsapp` | leftover dest | Chat leftover |  | docs/2019-2020-DEST-DENSITY.md:149 |
-| `wikipedia` | leftover dest · dest-disjoint | Read leftover |  | docs/2019-2020-DEST-DENSITY.md:142 |
-| `yahoo` |  | `airpodspro` · `amazon` · `appletv` · `arcade` · `chrome` · `disneyplus` · `facebook` · `google` · `instagram` · `iphone` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `windows10` · `yahoo` · ` |  | docs/2019-2020-DEST-DENSITY.md:121 |
-| `youtube` |  | `airpodspro` · `amazon` · `appletv` · `arcade` · `chrome` · `disneyplus` · `facebook` · `google` · `instagram` · `iphone` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `windows10` · `yahoo` · ` |  | docs/2019-2020-DEST-DENSITY.md:121 |
+| `whatsapp` | leftover dest | Chat leftover |  | docs/-2020-DEST-DENSITY.md:149 |
+| `wikipedia` | leftover dest · dest-disjoint | Read leftover |  | docs/-2020-DEST-DENSITY.md:142 |
+| `yahoo` |  | `airpodspro` · `amazon` · `appletv` · `arcade` · `chrome` · `disneyplus` · `facebook` · `google` · `instagram` · `iphone` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `windows10` · `yahoo` · ` |  | docs/-2020-DEST-DENSITY.md:121 |
+| `youtube` |  | `airpodspro` · `amazon` · `appletv` · `arcade` · `chrome` · `disneyplus` · `facebook` · `google` · `instagram` · `iphone` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `windows10` · `yahoo` · ` |  | docs/-2020-DEST-DENSITY.md:121 |
 
 ### unknown — 3 KEEP, do not build
 

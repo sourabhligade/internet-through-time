@@ -81,8 +81,8 @@ These dests are already on disk, not on that year’s trail, and were named by t
 | 2015 | `apple/about.html` |
 | 2016 | `facebook/about.html`, `instagram/about.html`, `whatsapp/about.html`, `windows10/end.html` |
 | 2017 | `iphone/about.html`, `twitter/about.html`, `vine/gone.html` |
-| 2018 | `chrome/not-secure.html`, `fortnite/switch.html`, `instagram/igtv.html`, `playable/game.html` |
-| 2019 | `iphone/about.html` |
+|  | `chrome/not-secure.html`, `fortnite/switch.html`, `instagram/igtv.html`, `playable/game.html` |
+|  | `iphone/about.html` |
 | 2022 | `iphone/14.html` |
 
 `docs/TODO-FULL-AUDIT.md` defines museum grade as a playable hub door, dest-true official I/O, leftover dests that are famous-that-year or leftover-3× unique / leftover-20, and look that is a capture or an honest failed-final. Boarded, wiped, and dest-farm warehouses are the other class. That definition does not require an `index.html` alias. Official trail stops that already name `record.html`, `ipod.html`, or `14.html` are specified as those files. `scripts/audit-year-flows.py` does not treat “has another HTML file, no index” as a broken year. 2013 Vine’s star path is `sites/vine/record.html`.
@@ -194,7 +194,7 @@ The first draft of this note kept names and dates. This section is the rest of w
 
 Other same-year stand-ins that were looked for and not found: no `lycos` in 1995; no `geocities` in 1997–2000 (`angelfire` and `tripod` are other hosts); no `facebook` or `thefacebook` in 2005; no `reddit` in 2006 or ; no `auctionweb` or `half` standing in for missing `ebay` in 2001, 2002, or 2004.
 
-`years/2014/sites/google`, `years/2018/sites/google`, and `years/2021/sites/wikipedia` are also absent. Those are DROP slugs in [`LEFTOVER-3X-UNIQUE-LINKS.md`](LEFTOVER-3X-UNIQUE-LINKS.md) (2014 `google` with `yahoo`, `amazon`, `netflix`; 2021 `wikipedia`). They are not open trail holes. The 2014 / 2020 / 2021 / 2022 leftover-3× link caps are already filled without new folders.
+`years/2014/sites/google`, `years//sites/google`, and `years/2021/sites/wikipedia` are also absent. Those are DROP slugs in [`LEFTOVER-3X-UNIQUE-LINKS.md`](LEFTOVER-3X-UNIQUE-LINKS.md) (2014 `google` with `yahoo`, `amazon`, `netflix`; 2021 `wikipedia`). They are not open trail holes. The 2014 / 2020 / 2021 / 2022 leftover-3× link caps are already filled without new folders.
 
 ### 7.2 Which “no index.html” files are the trail (disk)
 
@@ -208,8 +208,8 @@ These trail hrefs already name the file that exists. An `index.html` is not how 
 | 2013 | `sites/vine/record.html` (star; match `/vine/record`), `sites/instagram/video.html`, `sites/snapchat/story.html`, `sites/playable/game.html`, `sites/iphone/ios7.html` |
 | 2016 | `sites/instagram/stories.html`, `sites/facebook/reactions.html`, `sites/whatsapp/e2e.html`, `sites/windows10/end.html` |
 | 2017 | `sites/iphone/x.html`, `sites/twitter/280.html`, `sites/vine/gone.html` |
-| 2018 | `sites/chrome/not-secure.html`, `sites/fortnite/switch.html`, `sites/instagram/igtv.html`, `sites/playable/game.html` |
-| 2019 | `sites/iphone/iphone11.html` |
+|  | `sites/chrome/not-secure.html`, `sites/fortnite/switch.html`, `sites/instagram/igtv.html`, `sites/playable/game.html` |
+|  | `sites/iphone/iphone11.html` |
 | 2022 | `sites/iphone/14.html` |
 
 These files are in the folder and are **not** the trail page. Pointing an index at them would not fix the trail:
@@ -220,7 +220,7 @@ These files are in the folder and are **not** the trail page. Pointing an index 
 | 2015 | `apple/about.html` | `apple/watch.html` |
 | 2016 | `instagram/about.html`, `facebook/about.html` | `instagram/stories.html`, `facebook/reactions.html` |
 | 2017 | `iphone/about.html`, `twitter/about.html` | `iphone/x.html`, `twitter/280.html` |
-| 2019 | `iphone/about.html` | `iphone/iphone11.html` |
+|  | `iphone/about.html` | `iphone/iphone11.html` |
 
 [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) locks the star, guided item, year-start, and atlas to `sites/vine/record.html`, and treats `vine/index.html` as the wrong path (and as a file that does not exist). The same criteria file still lists `touchid.html` as official n=5 in a 10-stop table. Live `flow-trails.js` for 2013 has nine stops and uses `ios7.html`. That disagreement was not cleaned up.
 

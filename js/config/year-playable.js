@@ -273,19 +273,6 @@
       famous: "Leave Room leftover",
       accent: "#2d8cff"
     },
-    "2019": {
-      id: "continuerow",
-      title: "Continue Row",
-      href: "game.html",
-      key: "itt19-game-continuerow",
-      inspire: "Disney+ Continue-class row — trial is the trap",
-      blurb: "Add a title. Continue. Trial never writes.",
-      why: "2019 leftover cabinet. The star is still Disney+ Continue.",
-      era: "Profiles are the door. A weeklong trial is the trap.",
-      famous: "Continue Row",
-      accent: "#e50914"
-    },
-
     "2021": {
       id: "five",
       title: "Five Letter leftover",

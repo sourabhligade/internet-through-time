@@ -16029,10 +16029,10 @@
       "board": "B"
     }
   ],
-  "2019": [
+  "": [
     {
       "slug": "apex",
-      "path": "/years/2019/sites/apex/index.html",
+      "path": "/years//sites/apex/index.html",
       "k1": "itt19-apex-lx",
       "k2": "itt19-apex-d2",
       "star": "itt19-disneyplus",
@@ -16040,7 +16040,7 @@
     },
     {
       "slug": "sekiro",
-      "path": "/years/2019/sites/sekiro/index.html",
+      "path": "/years//sites/sekiro/index.html",
       "k1": "itt19-sekiro-lx",
       "k2": "itt19-sekiro-d2",
       "star": "itt19-disneyplus",
@@ -16048,7 +16048,7 @@
     },
     {
       "slug": "deathstranding",
-      "path": "/years/2019/sites/deathstranding/index.html",
+      "path": "/years//sites/deathstranding/index.html",
       "k1": "itt19-deathstranding-lx",
       "k2": "itt19-deathstranding-d2",
       "star": "itt19-disneyplus",
@@ -16056,7 +16056,7 @@
     },
     {
       "slug": "ringfit",
-      "path": "/years/2019/sites/ringfit/index.html",
+      "path": "/years//sites/ringfit/index.html",
       "k1": "itt19-ringfit-lx",
       "k2": "itt19-ringfit-d2",
       "star": "itt19-disneyplus",
@@ -16064,7 +16064,7 @@
     },
     {
       "slug": "mariomaker2",
-      "path": "/years/2019/sites/mariomaker2/index.html",
+      "path": "/years//sites/mariomaker2/index.html",
       "k1": "itt19-mariomaker2-lx",
       "k2": "itt19-mariomaker2-d2",
       "star": "itt19-disneyplus",
@@ -16072,7 +16072,7 @@
     },
     {
       "slug": "fireemblem3h",
-      "path": "/years/2019/sites/fireemblem3h/index.html",
+      "path": "/years//sites/fireemblem3h/index.html",
       "k1": "itt19-fireemblem3h-lx",
       "k2": "itt19-fireemblem3h-d2",
       "star": "itt19-disneyplus",
@@ -16080,7 +16080,7 @@
     },
     {
       "slug": "linksawakening",
-      "path": "/years/2019/sites/linksawakening/index.html",
+      "path": "/years//sites/linksawakening/index.html",
       "k1": "itt19-linksawakening-lx",
       "k2": "itt19-linksawakening-d2",
       "star": "itt19-disneyplus",
@@ -16088,7 +16088,7 @@
     },
     {
       "slug": "luigismansion3",
-      "path": "/years/2019/sites/luigismansion3/index.html",
+      "path": "/years//sites/luigismansion3/index.html",
       "k1": "itt19-luigismansion3-lx",
       "k2": "itt19-luigismansion3-d2",
       "star": "itt19-disneyplus",
@@ -16096,7 +16096,7 @@
     },
     {
       "slug": "untitledgoose",
-      "path": "/years/2019/sites/untitledgoose/index.html",
+      "path": "/years//sites/untitledgoose/index.html",
       "k1": "itt19-untitledgoose-lx",
       "k2": "itt19-untitledgoose-d2",
       "star": "itt19-disneyplus",
@@ -16104,7 +16104,7 @@
     },
     {
       "slug": "discoelysium",
-      "path": "/years/2019/sites/discoelysium/index.html",
+      "path": "/years//sites/discoelysium/index.html",
       "k1": "itt19-discoelysium-lx",
       "k2": "itt19-discoelysium-d2",
       "star": "itt19-disneyplus",
@@ -16112,7 +16112,7 @@
     },
     {
       "slug": "outerwilds",
-      "path": "/years/2019/sites/outerwilds/index.html",
+      "path": "/years//sites/outerwilds/index.html",
       "k1": "itt19-outerwilds-lx",
       "k2": "itt19-outerwilds-d2",
       "star": "itt19-disneyplus",
@@ -16120,7 +16120,7 @@
     },
     {
       "slug": "control19",
-      "path": "/years/2019/sites/control19/index.html",
+      "path": "/years//sites/control19/index.html",
       "k1": "itt19-control19-lx",
       "k2": "itt19-control19-d2",
       "star": "itt19-disneyplus",
@@ -16128,7 +16128,7 @@
     },
     {
       "slug": "residentevil2",
-      "path": "/years/2019/sites/residentevil2/index.html",
+      "path": "/years//sites/residentevil2/index.html",
       "k1": "itt19-residentevil2-lx",
       "k2": "itt19-residentevil2-d2",
       "star": "itt19-disneyplus",
@@ -16136,7 +16136,7 @@
     },
     {
       "slug": "catalina",
-      "path": "/years/2019/sites/catalina/index.html",
+      "path": "/years//sites/catalina/index.html",
       "k1": "itt19-catalina-lx",
       "k2": "itt19-catalina-d2",
       "star": "itt19-disneyplus",
@@ -16144,7 +16144,7 @@
     },
     {
       "slug": "android10",
-      "path": "/years/2019/sites/android10/index.html",
+      "path": "/years//sites/android10/index.html",
       "k1": "itt19-android10-lx",
       "k2": "itt19-android10-d2",
       "star": "itt19-disneyplus",
@@ -16152,7 +16152,7 @@
     },
     {
       "slug": "pixel4",
-      "path": "/years/2019/sites/pixel4/index.html",
+      "path": "/years//sites/pixel4/index.html",
       "k1": "itt19-pixel4-lx",
       "k2": "itt19-pixel4-d2",
       "star": "itt19-disneyplus",
@@ -16160,7 +16160,7 @@
     },
     {
       "slug": "galaxyfold",
-      "path": "/years/2019/sites/galaxyfold/index.html",
+      "path": "/years//sites/galaxyfold/index.html",
       "k1": "itt19-galaxyfold-lx",
       "k2": "itt19-galaxyfold-d2",
       "star": "itt19-disneyplus",
@@ -16168,7 +16168,7 @@
     },
     {
       "slug": "galaxys10",
-      "path": "/years/2019/sites/galaxys10/index.html",
+      "path": "/years//sites/galaxys10/index.html",
       "k1": "itt19-galaxys10-lx",
       "k2": "itt19-galaxys10-d2",
       "star": "itt19-disneyplus",
@@ -16176,7 +16176,7 @@
     },
     {
       "slug": "applewatch5",
-      "path": "/years/2019/sites/applewatch5/index.html",
+      "path": "/years//sites/applewatch5/index.html",
       "k1": "itt19-applewatch5-lx",
       "k2": "itt19-applewatch5-d2",
       "star": "itt19-disneyplus",
@@ -16184,7 +16184,7 @@
     },
     {
       "slug": "xcloud",
-      "path": "/years/2019/sites/xcloud/index.html",
+      "path": "/years//sites/xcloud/index.html",
       "k1": "itt19-xcloud-lx",
       "k2": "itt19-xcloud-d2",
       "star": "itt19-disneyplus",
@@ -16192,7 +16192,7 @@
     },
     {
       "slug": "geforcenow",
-      "path": "/years/2019/sites/geforcenow/index.html",
+      "path": "/years//sites/geforcenow/index.html",
       "k1": "itt19-geforcenow-lx",
       "k2": "itt19-geforcenow-d2",
       "star": "itt19-disneyplus",
@@ -16200,7 +16200,7 @@
     },
     {
       "slug": "mixer19",
-      "path": "/years/2019/sites/mixer19/index.html",
+      "path": "/years//sites/mixer19/index.html",
       "k1": "itt19-mixer19-lx",
       "k2": "itt19-mixer19-d2",
       "star": "itt19-disneyplus",
@@ -16208,7 +16208,7 @@
     },
     {
       "slug": "tetris99",
-      "path": "/years/2019/sites/tetris99/index.html",
+      "path": "/years//sites/tetris99/index.html",
       "k1": "itt19-tetris99-lx",
       "k2": "itt19-tetris99-d2",
       "star": "itt19-disneyplus",
@@ -16216,7 +16216,7 @@
     },
     {
       "slug": "jedifallenorder",
-      "path": "/years/2019/sites/jedifallenorder/index.html",
+      "path": "/years//sites/jedifallenorder/index.html",
       "k1": "itt19-jedifallenorder-lx",
       "k2": "itt19-jedifallenorder-d2",
       "star": "itt19-disneyplus",
@@ -16224,7 +16224,7 @@
     },
     {
       "slug": "modernwarfare19",
-      "path": "/years/2019/sites/modernwarfare19/index.html",
+      "path": "/years//sites/modernwarfare19/index.html",
       "k1": "itt19-modernwarfare19-lx",
       "k2": "itt19-modernwarfare19-d2",
       "star": "itt19-disneyplus",
@@ -16232,7 +16232,7 @@
     },
     {
       "slug": "borderlands3",
-      "path": "/years/2019/sites/borderlands3/index.html",
+      "path": "/years//sites/borderlands3/index.html",
       "k1": "itt19-borderlands3-lx",
       "k2": "itt19-borderlands3-d2",
       "star": "itt19-disneyplus",
@@ -16240,7 +16240,7 @@
     },
     {
       "slug": "dmc5",
-      "path": "/years/2019/sites/dmc5/index.html",
+      "path": "/years//sites/dmc5/index.html",
       "k1": "itt19-dmc5-lx",
       "k2": "itt19-dmc5-d2",
       "star": "itt19-disneyplus",
@@ -16248,7 +16248,7 @@
     },
     {
       "slug": "daysgone",
-      "path": "/years/2019/sites/daysgone/index.html",
+      "path": "/years//sites/daysgone/index.html",
       "k1": "itt19-daysgone-lx",
       "k2": "itt19-daysgone-d2",
       "star": "itt19-disneyplus",
@@ -16256,7 +16256,7 @@
     },
     {
       "slug": "outerworlds",
-      "path": "/years/2019/sites/outerworlds/index.html",
+      "path": "/years//sites/outerworlds/index.html",
       "k1": "itt19-outerworlds-lx",
       "k2": "itt19-outerworlds-d2",
       "star": "itt19-disneyplus",
@@ -16264,7 +16264,7 @@
     },
     {
       "slug": "astralchain",
-      "path": "/years/2019/sites/astralchain/index.html",
+      "path": "/years//sites/astralchain/index.html",
       "k1": "itt19-astralchain-lx",
       "k2": "itt19-astralchain-d2",
       "star": "itt19-disneyplus",
@@ -16272,7 +16272,7 @@
     },
     {
       "slug": "mk11",
-      "path": "/years/2019/sites/mk11/index.html",
+      "path": "/years//sites/mk11/index.html",
       "k1": "itt19-mk11-lx",
       "k2": "itt19-mk11-d2",
       "star": "itt19-disneyplus",
@@ -16280,7 +16280,7 @@
     },
     {
       "slug": "kingdomhearts3",
-      "path": "/years/2019/sites/kingdomhearts3/index.html",
+      "path": "/years//sites/kingdomhearts3/index.html",
       "k1": "itt19-kingdomhearts3-lx",
       "k2": "itt19-kingdomhearts3-d2",
       "star": "itt19-disneyplus",
@@ -16288,7 +16288,7 @@
     },
     {
       "slug": "anthem19",
-      "path": "/years/2019/sites/anthem19/index.html",
+      "path": "/years//sites/anthem19/index.html",
       "k1": "itt19-anthem19-lx",
       "k2": "itt19-anthem19-d2",
       "star": "itt19-disneyplus",
@@ -16296,7 +16296,7 @@
     },
     {
       "slug": "metroexodus",
-      "path": "/years/2019/sites/metroexodus/index.html",
+      "path": "/years//sites/metroexodus/index.html",
       "k1": "itt19-metroexodus-lx",
       "k2": "itt19-metroexodus-d2",
       "star": "itt19-disneyplus",
@@ -16304,7 +16304,7 @@
     },
     {
       "slug": "yoshicrafted",
-      "path": "/years/2019/sites/yoshicrafted/index.html",
+      "path": "/years//sites/yoshicrafted/index.html",
       "k1": "itt19-yoshicrafted-lx",
       "k2": "itt19-yoshicrafted-d2",
       "star": "itt19-disneyplus",
@@ -16312,7 +16312,7 @@
     },
     {
       "slug": "nsmbudeluxe",
-      "path": "/years/2019/sites/nsmbudeluxe/index.html",
+      "path": "/years//sites/nsmbudeluxe/index.html",
       "k1": "itt19-nsmbudeluxe-lx",
       "k2": "itt19-nsmbudeluxe-d2",
       "star": "itt19-disneyplus",
@@ -16320,7 +16320,7 @@
     },
     {
       "slug": "bloodstained",
-      "path": "/years/2019/sites/bloodstained/index.html",
+      "path": "/years//sites/bloodstained/index.html",
       "k1": "itt19-bloodstained-lx",
       "k2": "itt19-bloodstained-d2",
       "star": "itt19-disneyplus",
@@ -16328,7 +16328,7 @@
     },
     {
       "slug": "crashteamracing",
-      "path": "/years/2019/sites/crashteamracing/index.html",
+      "path": "/years//sites/crashteamracing/index.html",
       "k1": "itt19-crashteamracing-lx",
       "k2": "itt19-crashteamracing-d2",
       "star": "itt19-disneyplus",
@@ -16336,7 +16336,7 @@
     },
     {
       "slug": "ipad7",
-      "path": "/years/2019/sites/ipad7/index.html",
+      "path": "/years//sites/ipad7/index.html",
       "k1": "itt19-ipad7-lx",
       "k2": "itt19-ipad7-d2",
       "star": "itt19-disneyplus",
@@ -16344,7 +16344,7 @@
     },
     {
       "slug": "ipadmini5",
-      "path": "/years/2019/sites/ipadmini5/index.html",
+      "path": "/years//sites/ipadmini5/index.html",
       "k1": "itt19-ipadmini5-lx",
       "k2": "itt19-ipadmini5-d2",
       "star": "itt19-disneyplus",
@@ -16352,7 +16352,7 @@
     },
     {
       "slug": "airpods2",
-      "path": "/years/2019/sites/airpods2/index.html",
+      "path": "/years//sites/airpods2/index.html",
       "k1": "itt19-airpods2-lx",
       "k2": "itt19-airpods2-d2",
       "star": "itt19-disneyplus",
@@ -16360,7 +16360,7 @@
     },
     {
       "slug": "macpro19",
-      "path": "/years/2019/sites/macpro19/index.html",
+      "path": "/years//sites/macpro19/index.html",
       "k1": "itt19-macpro19-lx",
       "k2": "itt19-macpro19-d2",
       "star": "itt19-disneyplus",
@@ -16368,7 +16368,7 @@
     },
     {
       "slug": "macbookpro16",
-      "path": "/years/2019/sites/macbookpro16/index.html",
+      "path": "/years//sites/macbookpro16/index.html",
       "k1": "itt19-macbookpro16-lx",
       "k2": "itt19-macbookpro16-d2",
       "star": "itt19-disneyplus",
@@ -16376,7 +16376,7 @@
     },
     {
       "slug": "galaxynote10",
-      "path": "/years/2019/sites/galaxynote10/index.html",
+      "path": "/years//sites/galaxynote10/index.html",
       "k1": "itt19-galaxynote10-lx",
       "k2": "itt19-galaxynote10-d2",
       "star": "itt19-disneyplus",
@@ -16384,7 +16384,7 @@
     },
     {
       "slug": "pixel3a",
-      "path": "/years/2019/sites/pixel3a/index.html",
+      "path": "/years//sites/pixel3a/index.html",
       "k1": "itt19-pixel3a-lx",
       "k2": "itt19-pixel3a-d2",
       "star": "itt19-disneyplus",

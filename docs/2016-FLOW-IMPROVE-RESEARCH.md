@@ -39,7 +39,7 @@ Do not compete with Wayback on coverage or Web Design Museum on screenshot count
 | One dest slug once as leftover-2× unique dest **link** | Live catalog **19** hrefs |
 | `[failed-final]` | Keep when no official brand pixels. `assets/period/2016/` is `README-PIXELS.txt` only |
 | Cites | On the room. Never send visitors to `SOURCES.md` |
-| Dest-farm | Do not add dest folders. Do not dest-lock 2015–2020. Do not restore 2018. Do not restore git dest-farm `years/2016/` (132 dests) |
+| Dest-farm | Do not add dest folders. Do not dest-lock 2015–2020. Do not restore . Do not restore git dest-farm `years/2016/` (132 dests) |
 | ILS | Do not invent a June websites-users digit. About already dual-cites (see §12) |
 | Year-false | No TikTok brand, Reels, Meta, Chromium Edge, Face ID / iPhone X, AirPods Pro, Switch as a 2016 buy, slither.io as the year game, Nov 8 campaign UI as a dest |
 
@@ -86,7 +86,7 @@ Prefix every path with `/years/2016/`.
 |------|-----|------|
 | Douyin | `itt16-douyin-lx` | `sites/douyin/index.html` |
 
-Already has `[data-lo-panel][data-itt-dest-true]`, keep pick, Reels-as-gold trap, field, 2 honesty ticks. Body copy already names “TikTok 2018 brand is a trap”; the trap **button** is still Reels.
+Already has `[data-lo-panel][data-itt-dest-true]`, keep pick, Reels-as-gold trap, field, 2 honesty ticks. Body copy already names “TikTok  brand is a trap”; the trap **button** is still Reels.
 
 ### 3.3 Lean-triple leftover dest KEEP dest-true (19)
 
@@ -144,19 +144,19 @@ Not official, not leftover-2× unique dest links, not lean-double/triple:
 
 `YEAR-FALSE-KEEP-DROP.md` leftover-3× unique class: alphago / assistant / dyn / fblive **KEEP**; slack / reddit / netflix / youtube / moments **DO-NOT-APPLY**. That is leftover-3× unique class, not leftover dest KEEP dest-true I/O. Do not restore leftover-3× unique dest-true farms. Repair KEEP dests as leftover dest-true leftover I/O (`data-lo-panel` + `itt16-<slug>-lx`).
 
-`e2e/2016-2018-3x-detail.spec.js` still names slack / reddit / netflix / youtube leftover-3× dest-true I/O (`itt16-pop-slack`, …). The spec **skips** when `data-itt-lo3x` is missing.
+`e2e/2016--3x-detail.spec.js` still names slack / reddit / netflix / youtube leftover-3× dest-true I/O (`itt16-pop-slack`, …). The spec **skips** when `data-itt-lo3x` is missing.
 
 ### 3.6 Follow-a-site 2016 stops
 
-File: `js/config/follow-site.js`. Shell: `ui/year/shell.js` `bindFollow` (GitNexus **LOW**; caller `paint`). `#itt-follow-next` only exists on HTML year shells. React 2017/2019/2020/2021 have **no** FollowSite control.
+File: `js/config/follow-site.js`. Shell: `ui/year/shell.js` `bindFollow` (GitNexus **LOW**; caller `paint`). `#itt-follow-next` only exists on HTML year shells. React 2017//2020/2021 have **no** FollowSite control.
 
-For next year in `{2017, 2019, 2020, 2021}`, href is `/app/index.html#/year/YYYY` and **`rec.path` is discarded**. Hop cannot open a leftover dest or auto-write Face ID.
+For next year in `{2017, , 2020, 2021}`, href is `/app/index.html#/year/YYYY` and **`rec.path` is discarded**. Hop cannot open a leftover dest or auto-write Face ID.
 
 2016 year shells now load `ui/year/ui.js` (follow-site.js included). `e2e/follow-site.spec.js` covers 1995 Yahoo and 2016 Instagram → 2017 React. **Not** on the dest-true allowlist.
 
 | Brand | 2016 dest | Official? | Next in follow-site.js | What bindFollow does |
 |-------|-----------|:---:|------------------------|----------------------|
-| Facebook | `sites/facebook/reactions.html` | n=3 | **2019** `sites/facebook/index.html` | Opens **2019 React** (Disney+ Continue), dest path discarded |
+| Facebook | `sites/facebook/reactions.html` | n=3 | **** `sites/facebook/index.html` | Opens ** React** (Disney+ Continue), dest path discarded |
 | YouTube | `sites/youtube/index.html` | no | 2017 `sites/youtube/index.html` | Opens 2017 React (Face ID). 2017 has **no** YouTube dest |
 | Instagram | `sites/instagram/stories.html` | n=1 star | 2017 `sites/instagram/…` | Opens 2017 React (Face ID). Same-brand leftover is `itt17-instagram17` (`instagram17`, leftover n=20), a **different slug**. No dest hash |
 | iPhone | `sites/iphone/index.html` | n=5 | 2017 `sites/iphone/x.html` | Opens 2017 React. **This hop is dest-true** — Face ID is the 2017 star |
@@ -378,13 +378,13 @@ Do **not** swap in Reactions, YouTube, or iPhone. Do **not** grow YEAR_STARTS to
 
 2016 stop is official n=3: `years/2016/sites/facebook/reactions.html`. Yahoo-quality room (dated verb, capture cite, honesty ticks).
 
-Broken hop: follow-site next is `"2019", "sites/facebook/index.html"`. 2017 has **no** Facebook dest (`react/src/year2017.js`). 2018 is off-hub. 2019 leftover Facebook is React-only, and the href becomes `#/year/2019` (Disney+), not Facebook.
+Broken hop: follow-site next is `"", "sites/facebook/index.html"`. 2017 has **no** Facebook dest (`react/src/year2017.js`).  is off-hub.  leftover Facebook is React-only, and the href becomes `#/year/` (Disney+), not Facebook.
 
 Actions:
 
 1. Keep 2016 `reactions.html`. Do not add a 2017 Facebook folder.
-2. Skip 2017/2018 in the list (honest gap, like Yahoo skipping 2009).
-3. Close the 2016→2019 jump so Reactions matches the other 2016 stops (2017 year door, dest path discarded) **or** hop to 2022 `years/2022/sites/facebook/index.html` (leftover-3× unique per DEST-TRUE, leftover-thin). Deep-research recommended closing the hop to 2017 year door. Extra follow-agent recommended 2022 as next **HTML** same-brand dest. **Product choice at implement time:** 2017 door (consistent with Instagram/iPhone bindFollow) vs 2022 Facebook leftover HTML (same-brand dest on disk). Do not pretend 2019/2021 Facebook is a room.
+2. Skip 2017/ in the list (honest gap, like Yahoo skipping 2009).
+3. Close the 2016→ jump so Reactions matches the other 2016 stops (2017 year door, dest path discarded) **or** hop to 2022 `years/2022/sites/facebook/index.html` (leftover-3× unique per DEST-TRUE, leftover-thin). Deep-research recommended closing the hop to 2017 year door. Extra follow-agent recommended 2022 as next **HTML** same-brand dest. **Product choice at implement time:** 2017 door (consistent with Instagram/iPhone bindFollow) vs 2022 Facebook leftover HTML (same-brand dest on disk). Do not pretend /2021 Facebook is a room.
 4. Note stays `"Reactions"`, not `"Continue year"`.
 5. Grow atlas Facebook 2004 → 2006 Feed → 2010 Open Graph → 2016 Reactions to match the shell, still no new dests.
 6. e2e: 2016 `?room=sites/facebook/reactions.html` shows follow-next; href must not claim a 2017 Facebook HTML path.
@@ -395,7 +395,7 @@ Actions:
 
 On disk: `years/2016/sites/youtube/index.html` is a popular-session stub (`data-itt-popular-save`, title “YouTube — 2016”, no 2016 verb). `about.html` is a leftover Watch panel (`data-ytl-key="pop7-yt16"`). Follow note is `"Stories year"` — Instagram’s identity, not YouTube’s.
 
-**Drop 2016 (and 2017/2019/2021) from the YouTube follow list.** Keep earlier real rooms (2005 upload gold, 2006 Google deal). Next disk YouTube after 2015 is `years/2022/sites/youtube/index.html` (`shorts.html` exists — use the existing folder, don’t dest-farm).
+**Drop 2016 (and 2017//2021) from the YouTube follow list.** Keep earlier real rooms (2005 upload gold, 2006 Google deal). Next disk YouTube after 2015 is `years/2022/sites/youtube/index.html` (`shorts.html` exists — use the existing folder, don’t dest-farm).
 
 If 2016 YouTube is kept as leftover continuity: relabel leftover, point at the existing Watch leftover, skip 2017–2021, hop to 2022. Still do **not** add YouTube to official 10 or YEAR_STARTS.
 
@@ -411,10 +411,10 @@ If 2016 YouTube is kept as leftover continuity: relabel leftover, point at the e
 
 ### 6.5 iPhone — best 2016 hop
 
-2016 `sites/iphone/index.html` is official n=5 (`itt16-iphone7`, no jack). Next is 2017 Face ID — dumping `#/year/2017` accidentally works (Yahoo-like). 2019 iPhone 11 is official on React (`itt19-iphone11`) but follow-site **skips** 2019. 2022 `sites/iphone/14.html` is leftover Island.
+2016 `sites/iphone/index.html` is official n=5 (`itt16-iphone7`, no jack). Next is 2017 Face ID — dumping `#/year/2017` accidentally works (Yahoo-like).  iPhone 11 is official on React (`itt19-iphone11`) but follow-site **skips** . 2022 `sites/iphone/14.html` is leftover Island.
 
 1. Keep 2016 → 2017 Face ID. Note `"iPhone 7"` / `"no jack"`.
-2. Honest skip 2018 (off-hub). Optional next HTML dest: 2022 `14.html`. Do not add 2018–2021 iPhone folders.
+2. Honest skip  (off-hub). Optional next HTML dest: 2022 `14.html`. Do not add –2021 iPhone folders.
 3. e2e: 2016 `?room=sites/iphone/index.html` follow-next → `#/year/2017`.
 4. Atlas `phone` thread is Instagram 2010 → WhatsApp E2E 2016 → Face ID. Either keep that as a “phone ate the web” story or add iPhone 7 → Face ID as the **brand** thread; don’t mix WhatsApp into the iPhone follow list.
 
@@ -475,7 +475,7 @@ Forest leftover KEEP may still stack `lx` + `d2` on **forest** dests. Improve co
 
 Already have dest-true leftover face. Weakness is **star-adjacent generic trap/copy**, not missing I/O.
 
-- Trap is always “Reels as gold (trap)” (year trap, not dest trap). Douyin body copy already names TikTok 2018; trap button is still Reels.
+- Trap is always “Reels as gold (trap)” (year trap, not dest trap). Douyin body copy already names TikTok ; trap button is still Reels.
 - Honesty is “The chip is not this dest” / “Empty / trap never write” — literacy, not dest verb.
 - Leftover-2× unique dest LINKS rails on these dests still href the 4 overlap dests.
 
@@ -533,7 +533,7 @@ The 137 leftover-official keys on official dests and official siblings. Safe to 
 
 | Dest-true pack | Risk if you strip leftover-dest `-d2` |
 |----------------|----------------------------------------|
-| `e2e/2016-2018-3x-detail.spec.js` | **None.** Rooms are slack/reddit/netflix/youtube. Live HTML has **no** `data-itt-lo3x`; spec already skips to `toHaveCount(0)` |
+| `e2e/2016--3x-detail.spec.js` | **None.** Rooms are slack/reddit/netflix/youtube. Live HTML has **no** `data-itt-lo3x`; spec already skips to `toHaveCount(0)` |
 | leftover-2× unique dest **links** | **None** if you only delete `-d2` **panels**. Catalog is hrefs. **Breaks** if you delete dest folders houseparty/jio/linkedinms/smario |
 | lean-double / lean-triple | **None.** Those dests are `-lx` only (`data-itt-dest-true`) |
 | leftover-official dest-true pack | **None** for dest-true rows. Warehouse 137 stays stale either way |
@@ -549,7 +549,7 @@ The 137 leftover-official keys on official dests and official siblings. Safe to 
 - Users **3,424,971,237 (46.1%)** labeled as the ILS **users** table (1 Jul est), not a June websites-users digit
 - 1B hostnames restabilized March 2016; active sites ~170M all year
 
-Inventing a June Live Stats websites-users digit after 2018 is an I11 fail. Do **not** treat ITU 3.5B / 47% as ILS. Do **not** fill the blank June websites-users cell.
+Inventing a June Live Stats websites-users digit after  is an I11 fail. Do **not** treat ITU 3.5B / 47% as ILS. Do **not** fill the blank June websites-users cell.
 
 Period chrome: Win10 rising + Chrome habit. `.ig16-phone`, WA teal, Snap yellow, Win10 `--itt-desktop-bg: #0078d7`. Do not iframe Wayback or oldweb.today.
 
@@ -559,13 +559,13 @@ Period chrome: Win10 rising + Chrome habit. `.ig16-phone`, WA teal, Snap yellow,
 
 ## 10. Implement sequence (when you say so)
 
-Do in order. No new dest folders. No leftover-3×/4× fill. No dest-lock 2015–2020. No restore 2018.
+Do in order. No new dest folders. No leftover-3×/4× fill. No dest-lock 2015–2020. No restore .
 
 **Step 1 — Capture-cite on the official 10.**  
 One `data-itt-capture-cite` after the official verb. STAR_CITE href for Stories. Deduplicate Reactions. Strip leftover-looking gold next keys. Add capture-cite on GO + Gym Rush. musical.ly honesty ticks. Figma leftover: point at WDM 2016 GUI; keep failed-final pixels.
 
 **Step 2 — Guided two + follow-a-site.**  
-Stories match `/instagram/stories`. GO blurb. Finish `"Pokémon GO is."` Drop YouTube 2016 from `follow-site.js`. Close Facebook 2016→2019 jump (product choice: 2017 door vs 2022 Facebook leftover HTML). Instagram follow-next copy (`itt17-instagram17`). iPhone notes “no jack”. e2e: extend `e2e/follow-site.spec.js` for Facebook + iPhone. Follow-site is **not** on the dest-true allowlist.
+Stories match `/instagram/stories`. GO blurb. Finish `"Pokémon GO is."` Drop YouTube 2016 from `follow-site.js`. Close Facebook 2016→ jump (product choice: 2017 door vs 2022 Facebook leftover HTML). Instagram follow-next copy (`itt17-instagram17`). iPhone notes “no jack”. e2e: extend `e2e/follow-site.spec.js` for Facebook + iPhone. Follow-site is **not** on the dest-true allowlist.
 
 **Step 3 — Leftover dest-true panels on empty dests.**  
 Order: alphago, assistant, dyn, fblive first; then slack, reddit, netflix, youtube, moments. Strip reddit’s `data-storage-key="google"` and Stories next. Strip YouTube popular F2. Dyn leftover:true without leaking `blob()` onto official dests.
@@ -574,7 +574,7 @@ Order: alphago, assistant, dyn, fblive first; then slack, reddit, netflix, youtu
 Drop `mastodon` `thedao` `sierra` `battlefield1` from the href catalog. Fill Douyin, AirPods, Allo, Google Home. Rewrite rails. Catalog stays 19. houseparty / jio / linkedinms / smario: rename Save “Story”; drop leftover Next that opens Instagram Stories.
 
 **Step 5 — Kill folded `-d2` cream.**  
-Keep dest rooms. Prune leftover-official matrix 137 warehouse rows. Optional dest-specific traps on lean-double/triple (Douyin TikTok 2018; Mastodon 2017/2022 mass). Keep leftover keys.
+Keep dest rooms. Prune leftover-official matrix 137 warehouse rows. Optional dest-specific traps on lean-double/triple (Douyin TikTok ; Mastodon 2017/2022 mass). Keep leftover keys.
 
 **Step 6 — Verify.**  
 Empty leftover never writes. Trap never writes. Finish writes `itt16-<slug>-lx` leftover:true. Star `itt16-ig-stories` stays empty. Leftover-2× unique dest **link** click writes nothing on this page. Official dest leftover-2× first paint 0.
@@ -586,7 +586,7 @@ Pack: `npm run test:e2e:dest-true` + `e2e/lean-triple-leftover.spec.js` + `e2e/l
 ## 11. Explicit rejects
 
 - Dest-farm new folders (Figma / The DAO / Mastodon / Peach / Prisma / Disney Emoji Blitz / Edge as gold).
-- Dest-lock 2015–2020 or restore 2018.
+- Dest-lock 2015–2020 or restore .
 - Restore git dest-farm `years/2016/` (132 dests).
 - Restore leftover-3× unique dest-true farms.
 - Leftover write the star.
@@ -666,7 +666,7 @@ This research **did not** re-run dest-true after writing this file.
 - [S18] `js/config/leftover-2x-unique-links.js`; `e2e/leftover-2x-unique-links.matrix.json`; [`docs/LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md)
 - [S19] `e2e/lean-triple-leftover.matrix.json`; `e2e/lean-double-leftover.matrix.json`; `e2e/leftover-official.matrix.json`
 - [S20] `css/itt-leftover-fold.css`; [`docs/DUPLICATE-FLOWS.md`](DUPLICATE-FLOWS.md); [`docs/DUPLICATE-UNIQUE-LINKS.md`](DUPLICATE-UNIQUE-LINKS.md)
-- [S21] [`docs/YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md); `e2e/2016-2018-3x-detail.spec.js`
+- [S21] [`docs/YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md); `e2e/2016--3x-detail.spec.js`
 - [S22] Official dest HTML under `years/2016/sites/` (stories, pokemongo, facebook/reactions, whatsapp/e2e, iphone, vine/goodbye, snapchat/spectacles, musically, windows10, playable/game)
 - [S23] Leftover dest HTML samples: `douyin`, `figma`, `mastodon`, `houseparty`, `jio`, `smario`, `slack`, `reddit`, `youtube`, `alphago`, `dyn`
 - [S24] `js/immersion/year-2016-extras.js` `blob()`; `js/immersion/year-true-leftover.js`; `js/immersion/real-flow.js`

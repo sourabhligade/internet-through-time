@@ -84,12 +84,11 @@ test.describe("follow-a-site", () => {
     await expect(page.frameLocator("iframe#content").locator("body")).toBeVisible();
   });
 
-  test("2007 Facebook follow next skips wiped  and boarded 2009", async ({ page }) => {
+  test("2007 Facebook follow next skips boarded 2009", async ({ page }) => {
     await page.goto("/years/2007/?room=sites/facebook/index.html");
     const next = page.locator("#itt-follow-next");
     await expect(next).toBeVisible({ timeout: 15000 });
     await expect(next).toHaveAttribute("href", /years\/2010\/\?room=sites%2Ffacebook%2Findex\.html/);
-    await expect(next).not.toHaveAttribute("href", /years\//);
     await expect(next).not.toHaveAttribute("href", /years\/2009/);
     await next.click();
     await expect(page).toHaveURL(/years\/2010\/\?room=sites%2Ffacebook%2Findex\.html/);

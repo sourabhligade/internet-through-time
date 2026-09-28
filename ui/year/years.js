@@ -1334,65 +1334,6 @@
   "hasTaskbar": true,
   "maximized": true
 },
-  "2019": {
-  "title": "Chrome habit — 2019",
-  "css": [
-    "win95-netscape.css",
-    "chrome-habit.css",
-    "period-2019.css"
-  ],
-  "bodyClass": "year-2019 os-win10 browser-chrome-habit",
-  "boot": "browser-2019.js",
-  "dir": [
-    {
-      "go": "pages/home.html",
-      "label": "Start"
-    },
-    {
-      "go": "sites/disneyplus/home.html",
-      "label": "Disney+"
-    },
-    {
-      "go": "sites/tiktok/index.html",
-      "label": "TikTok"
-    },
-    {
-      "go": "sites/arcade/index.html",
-      "label": "Arcade"
-    },
-    {
-      "go": "sites/stadia/index.html",
-      "label": "Stadia"
-    },
-    {
-      "go": "pages/about.html",
-      "label": "About"
-    }
-  ],
-  "chrome": "2007",
-  "toolbar": "chrome22",
-  "family": "chrome",
-  "location": "http://home.microsoft.com/intl/web2019/",
-  "prefHome": "http://home.microsoft.com/intl/web2019/",
-  "yearLabel": "2019 · Windows 10 mass · Chrome habit · EdgeHTML residual",
-  "windowTitle": "Welcome to the World Wide Web — Chrome habit",
-  "connectH2": "Network Connections",
-  "connectBtn": "Connect (always-on broadband)",
-  "skipBtn": "Skip connect",
-  "thesis": "Initializing network adapter... Connect (always-on broadband) Skip connect 2019 thesis: Continue watching is the save · a 7-day trial is the trap. Disney+ Continue · TikTok leftover · Arcade · Stadia.",
-  "openLoc": "Open Location:",
-  "aboutHtml": "<p><b>Chrome habit</b></p><p>Museum desktop. Educational historical Web exhibit.</p>",
-  "startBanner": "Windows<b>10</b>",
-  "taskBtn": "Chrome",
-  "icon": "e",
-  "aria": "Chrome habit",
-  "locLabel": "Address",
-  "bookmarksTitle": "Favorites",
-  "mailPh": "you@example.com",
-  "hasTaskbar": true,
-  "maximized": true
-},
-
   "2020": {
   "title": "Chrome habit — 2020",
   "css": [

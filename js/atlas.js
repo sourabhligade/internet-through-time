@@ -52,14 +52,14 @@
   }
 
   function yearHome(year) {
-    if ({ "2017": 1, "2019": 1, "2020": 1, "2021": 1 }[String(year)]) {
+    if ({ "2017": 1, "2020": 1, "2021": 1 }[String(year)]) {
       return "/app/index.html#/year/" + year;
     }
     return "/years/" + year + "/";
   }
 
   function yearRoom(year, rel) {
-    if ({ "2017": 1, "2019": 1, "2020": 1, "2021": 1 }[String(year)]) {
+    if ({ "2017": 1, "2020": 1, "2021": 1 }[String(year)]) {
       return yearHome(year);
     }
     return "years/" + year + "/" + String(rel || "").replace(/^\//, "");

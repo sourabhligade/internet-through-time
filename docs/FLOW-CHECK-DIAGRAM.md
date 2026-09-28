@@ -55,7 +55,7 @@ flowchart LR
     FOR["Forests 1994–2006<br/>dense leftover-2× · leftover-3× stacked workshop"]
     LOCK["Dest-lock lean<br/>2007 · 2010–2012 · 2014 · 2021<br/>official 10 + leftover-3× unique dest-true dests"]
     REV["Dest-lock reverted<br/>2015–2020 dest folders stay"]
-    LEAN["Dest-true lean<br/>2013 · 2018 · 2022"]
+    LEAN["Dest-true lean<br/>2013 ·  · 2022"]
   end
   BOARD["2009 boarded<br/>plaque · not a visitor door"]
   WIPE["2023–2025<br/>no years/YYYY/ tree"]
@@ -66,7 +66,7 @@ flowchart LR
 | Forest | 1994–2006 | 10 files | **Workshop stacked** — not unique dest-true 9 | Links + dest-true official dest I/O. Do not dest-farm unique leftover-3×n |
 | Dest-lock lean | 2007, 2010–2012, 2014, 2021 | 10 | 9 / 9 / 9 / 9 / 9 / **5 stop** | Do not dest-lock revert dest-farm dests |
 | Dest-lock reverted | 2015–2020 | 10 | 9 / 9 / leftover-20 (2017) / 3 / 9 / 9 | Dest folders stay. Unique dest-true dests dest-disjoint |
-| Dest-true lean | 2013, 2018, 2022 | 10 | 9 / **3 stop** / 9 | 2018 GDPR Manage is the I/O model |
+| Dest-true lean | 2013, , 2022 | 10 | 9 / **3 stop** / 9 |  GDPR Manage is the I/O model |
 | Boarded | 2009 | plaque | catalogs not visitor | Do not restore as a playable door |
 | Wiped | 2023–2025 | no tree | — | Do not restore |
 
@@ -119,7 +119,7 @@ flowchart TD
 | Official dest empty/complete | `e2e/all-years-official-10-real.spec.js` |
 | Leftover-3× unique dest-true dests | `e2e/leftover-3x-unique.spec.js` |
 | Official dest leftover-2× gone | `e2e/official-leftover-2x.spec.js` |
-| Leftover dests 2016/2018 | `e2e/lean-triple-leftover.spec.js` |
+| Leftover dests 2016/ | `e2e/lean-triple-leftover.spec.js` |
 | Mock scan | `node scripts/audit-mock-flows.js` |
 
 CI does **not** run leftover-3× directory (`3x-links`), leftover-5× live, leftover-4×, or dest-farm theater packs.
@@ -148,8 +148,8 @@ flowchart LR
 | 2015 | 9 | `itt15-periscope` |
 | 2016 | 9 | `itt16-ig-stories` |
 | 2017 | **0 leftover-3× unique dest-true dests** (unique leftover-20) | `itt17-faceid` |
-| 2018 | **3 stop** | `itt18-gdpr` |
-| 2019 | 9 | `itt19-disneyplus` |
+|  | **3 stop** | `itt18-gdpr` |
+|  | 9 | `itt19-disneyplus` |
 | 2020 | 9 | `itt20-zoom` |
 | 2021 | **5 stop** | `itt21-att` |
 | 2022 | 9 amazon…nyt | `itt22-chatgpt` |
@@ -166,7 +166,7 @@ Do not dest-farm leftover dest leftover-3× unique dest-true dests past the stop
 | 2012 | IG Android | filter → Share | — |
 | 2016 | Stories | Add to Story | Reels-as-gold |
 | 2017 | Face ID | Look / swipe | Home button |
-| 2018 | GDPR | **Manage** | **Accept All** |
-| 2019 | Disney+ | **Continue** | Trial |
+|  | GDPR | **Manage** | **Accept All** |
+|  | Disney+ | **Continue** | Trial |
 | 2021 | ATT | **Ask** | **Allow** |
 | 2022 | ChatGPT | Send | GPT-4 / empty |

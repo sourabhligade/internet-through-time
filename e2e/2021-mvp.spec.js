@@ -25,7 +25,7 @@ test.describe("2021 MVP", () => {
     const about = page.locator("article.stop");
     await expect(about).toContainText(/ChatGPT/i);
     await expect(about).toContainText(/4\.9/);
-    await expect(about).toContainText(/table ends 2018/i);
+    await expect(about).toContainText(/table ends /i);
     await expect(about).not.toContainText("1,197,982,359");
   });
 

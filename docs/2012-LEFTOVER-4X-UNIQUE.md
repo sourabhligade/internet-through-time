@@ -154,7 +154,7 @@ Reuse leftover-3× unique engine (`data-pop-go` + `data-pop-key="pop4-<id>"`). D
 - Vine · Stories · iPhone 6 · X · Material.
 - Invent brand pixels.
 - Change guided from 6.
-- Dest-lock 2013 / 2018 / 2022 / forests.
+- Dest-lock 2013 /  / 2022 / forests.
 
 ---
 

@@ -35,7 +35,7 @@
     },
     {
       "id": "memoji",
-      "label": "Memoji 2018 (trap)",
+      "label": "Memoji  (trap)",
       "role": "trap",
       "trap": "later"
     }

@@ -2,7 +2,7 @@
 /** 2017 unique leftover: React door. Empty / trap never write. Leftover never writes Face ID. */
 const { test, expect } = require("@playwright/test");
 
-const DOOR = "/app/index.html#/year/2017";
+const DOOR = "/app/index.html#/year/2017?deep=1";
 const STAR = "itt17-faceid";
 
 const OFFICIAL = [
@@ -47,7 +47,10 @@ async function getKey(page, k) {
 
 async function openStop(page, key) {
   await page.goto(DOOR);
-  await page.locator(".rails li", { has: page.locator("code", { hasText: key }) }).getByRole("button").click();
+  const li = page.locator(".rails li", { has: page.locator("code", { hasText: key }) });
+  const details = li.locator("xpath=ancestor::details[1]");
+  if ((await details.count()) && !(await details.evaluate((el) => el.open))) await details.locator("summary").click();
+  await li.getByRole("button").click();
   return page.locator("article.stop");
 }
 
@@ -55,7 +58,7 @@ async function completeReactStop(page, room) {
   const boxes = room.locator("input[type='checkbox']");
   const n = await boxes.count();
   for (let i = 0; i < n; i++) await boxes.nth(i).check();
-  const field = room.locator("input:not([type='checkbox'])");
+  const field = room.locator("input:not([type='checkbox']):not([data-face-only])");
   if ((await field.count()) > 0) await field.fill("done leftover");
   await room.locator(".actions button").last().click();
 }

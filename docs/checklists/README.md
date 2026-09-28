@@ -2,7 +2,7 @@
 
 One file per year. Tick a line after the link finishes. An empty click stores nothing.
 
-Wiped, no checklist: 2018, 2023–2025. 2005 is restored.
+Wiped, no checklist: , 2023–2025. 2005 is restored.
 
 - [1994](1994.md) — 10 official, 10 leftover, 20 pictures
 - [1995](1995.md) — 10 official, 10 leftover, 27 pictures
@@ -27,7 +27,6 @@ Wiped, no checklist: 2018, 2023–2025. 2005 is restored.
 - [2015](2015.md) — 10 official, 0 leftover, 0 pictures
 - [2016](2016.md) — 10 official, 0 leftover, 0 pictures
 - [2017](2017.md) — 10 official, 0 leftover, 0 pictures
-- [2019](2019.md) — 10 official, 0 leftover, 0 pictures
 - [2020](2020.md) — 10 official, 0 leftover, 0 pictures
 - [2007](2007.md) — 10 official, 0 leftover, 150 pictures
 - [2021](2021.md) — 10 official, 0 leftover, 0 pictures

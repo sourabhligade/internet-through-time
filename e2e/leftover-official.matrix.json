@@ -2122,7 +2122,7 @@
     },
     {
       "year": "2017",
-      "href": "sites/iphone/animoji.html",
+      "href": "sites/animoji/index.html",
       "key": "itt17-animoji-lx",
       "suffix": "animoji-lx",
       "needPick": "",
@@ -2132,7 +2132,7 @@
     },
     {
       "year": "2017",
-      "href": "sites/iphone/animoji.html",
+      "href": "sites/animoji/index.html",
       "key": "itt17-animoji-lx-d2",
       "suffix": "animoji-lx-d2",
       "needPick": "",
@@ -2142,7 +2142,7 @@
     },
     {
       "year": "2017",
-      "href": "sites/iphone/animoji.html",
+      "href": "sites/animoji/index.html",
       "key": "itt17-animoji-lx-d2-d2",
       "suffix": "animoji-lx-d2-d2",
       "needPick": "keep",
@@ -3581,7 +3581,7 @@
       "placeholder": ""
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/chrome/not-secure.html",
       "key": "itt18-ns-d2",
       "suffix": "ns-d2",
@@ -3591,7 +3591,7 @@
       "placeholder": "ns leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/chrome/not-secure.html",
       "key": "itt18-ns-lx",
       "suffix": "ns-lx",
@@ -3601,7 +3601,7 @@
       "placeholder": "ns leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/fortnite/switch.html",
       "key": "itt18-fns-d2",
       "suffix": "fns-d2",
@@ -3611,7 +3611,7 @@
       "placeholder": "fns leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/fortnite/switch.html",
       "key": "itt18-fns-lx",
       "suffix": "fns-lx",
@@ -3621,7 +3621,7 @@
       "placeholder": "fns leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/gdpr/index.html",
       "key": "itt18-gdpr-d2",
       "suffix": "gdpr-d2",
@@ -3631,7 +3631,7 @@
       "placeholder": "gdpr leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/gdpr/index.html",
       "key": "itt18-gdpr-lx",
       "suffix": "gdpr-lx",
@@ -3641,7 +3641,7 @@
       "placeholder": "gdpr leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/github/index.html",
       "key": "itt18-gh3-d2",
       "suffix": "gh3-d2",
@@ -3651,7 +3651,7 @@
       "placeholder": "gh3 leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/github/index.html",
       "key": "itt18-gh3-lx",
       "suffix": "gh3-lx",
@@ -3661,7 +3661,7 @@
       "placeholder": "gh3 leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/github/microsoft.html",
       "key": "itt18-gh-d2",
       "suffix": "gh-d2",
@@ -3671,7 +3671,7 @@
       "placeholder": "gh leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/github/microsoft.html",
       "key": "itt18-gh-lx",
       "suffix": "gh-lx",
@@ -3681,7 +3681,7 @@
       "placeholder": "gh leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/homepod/index.html",
       "key": "itt18-hp-d2",
       "suffix": "hp-d2",
@@ -3691,7 +3691,7 @@
       "placeholder": "hp leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/homepod/index.html",
       "key": "itt18-hp-lx",
       "suffix": "hp-lx",
@@ -3701,7 +3701,7 @@
       "placeholder": "hp leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/instagram/igtv.html",
       "key": "itt18-igtv-d2",
       "suffix": "igtv-d2",
@@ -3711,7 +3711,7 @@
       "placeholder": "igtv leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/instagram/igtv.html",
       "key": "itt18-igtv-lx",
       "suffix": "igtv-lx",
@@ -3721,7 +3721,7 @@
       "placeholder": "igtv leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/playable/game.html",
       "key": "itt18-game-d2",
       "suffix": "game-d2",
@@ -3731,7 +3731,7 @@
       "placeholder": "game leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/playable/game.html",
       "key": "itt18-game-lx",
       "suffix": "game-lx",
@@ -3741,7 +3741,7 @@
       "placeholder": "game leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/spectre/index.html",
       "key": "itt18-sp-d2",
       "suffix": "sp-d2",
@@ -3751,7 +3751,7 @@
       "placeholder": "sp leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/spectre/index.html",
       "key": "itt18-sp-lx",
       "suffix": "sp-lx",
@@ -3761,7 +3761,7 @@
       "placeholder": "sp leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/tiktok/fyp.html",
       "key": "itt18-tt-d2",
       "suffix": "tt-d2",
@@ -3771,7 +3771,7 @@
       "placeholder": "tt leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/tiktok/fyp.html",
       "key": "itt18-tt-lx",
       "suffix": "tt-lx",
@@ -3781,7 +3781,7 @@
       "placeholder": "tt leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/tiktok/index.html",
       "key": "itt18-tt3-d2",
       "suffix": "tt3-d2",
@@ -3791,7 +3791,7 @@
       "placeholder": "tt3 leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/tiktok/index.html",
       "key": "itt18-tt3-lx",
       "suffix": "tt3-lx",
@@ -3801,7 +3801,7 @@
       "placeholder": "tt3 leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/trust/index.html",
       "key": "itt18-hear-d2",
       "suffix": "hear-d2",
@@ -3811,7 +3811,7 @@
       "placeholder": "hear leftover"
     },
     {
-      "year": "2018",
+      "year": "",
       "href": "sites/trust/index.html",
       "key": "itt18-hear-lx",
       "suffix": "hear-lx",
@@ -3821,7 +3821,7 @@
       "placeholder": "hear leftover"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/airpodspro/index.html",
       "key": "itt19-airpodspro-d2",
       "suffix": "airpodspro-d2",
@@ -3831,7 +3831,7 @@
       "placeholder": "airpodspro-d2"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/airpodspro/index.html",
       "key": "itt19-airpodspro-lx",
       "suffix": "airpodspro-lx",
@@ -3841,7 +3841,7 @@
       "placeholder": "airpodspro-lx"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/android10/index.html",
       "key": "itt19-android10-d2",
       "suffix": "android10-d2",
@@ -3851,7 +3851,7 @@
       "placeholder": "android10-d2"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/android10/index.html",
       "key": "itt19-android10-lx",
       "suffix": "android10-lx",
@@ -3861,7 +3861,7 @@
       "placeholder": "android10-lx"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/area51/index.html",
       "key": "itt19-area51-d2",
       "suffix": "area51-d2",
@@ -3871,7 +3871,7 @@
       "placeholder": "area51-d2"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/area51/index.html",
       "key": "itt19-area51-lx",
       "suffix": "area51-lx",
@@ -3881,7 +3881,7 @@
       "placeholder": "area51-lx"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/catalina/index.html",
       "key": "itt19-catalina-d2",
       "suffix": "catalina-d2",
@@ -3891,7 +3891,7 @@
       "placeholder": "catalina-d2"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/catalina/index.html",
       "key": "itt19-catalina-lx",
       "suffix": "catalina-lx",
@@ -3901,7 +3901,7 @@
       "placeholder": "catalina-lx"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/control19/index.html",
       "key": "itt19-control19-d2",
       "suffix": "control19-d2",
@@ -3911,7 +3911,7 @@
       "placeholder": "control19-d2"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/control19/index.html",
       "key": "itt19-control19-lx",
       "suffix": "control19-lx",
@@ -3921,7 +3921,7 @@
       "placeholder": "control19-lx"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/deathstranding/index.html",
       "key": "itt19-deathstranding-d2",
       "suffix": "deathstranding-d2",
@@ -3931,7 +3931,7 @@
       "placeholder": "deathstranding-d2"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/deathstranding/index.html",
       "key": "itt19-deathstranding-lx",
       "suffix": "deathstranding-lx",
@@ -3941,7 +3941,7 @@
       "placeholder": "deathstranding-lx"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/galaxyfold/index.html",
       "key": "itt19-galaxyfold-d2",
       "suffix": "galaxyfold-d2",
@@ -3951,7 +3951,7 @@
       "placeholder": "galaxyfold-d2"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/galaxyfold/index.html",
       "key": "itt19-galaxyfold-lx",
       "suffix": "galaxyfold-lx",
@@ -3961,7 +3961,7 @@
       "placeholder": "galaxyfold-lx"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/outerworlds/index.html",
       "key": "itt19-outerworlds-d2",
       "suffix": "outerworlds-d2",
@@ -3971,7 +3971,7 @@
       "placeholder": "outerworlds-d2"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/outerworlds/index.html",
       "key": "itt19-outerworlds-lx",
       "suffix": "outerworlds-lx",
@@ -3981,7 +3981,7 @@
       "placeholder": "outerworlds-lx"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/pixel4/index.html",
       "key": "itt19-pixel4-d2",
       "suffix": "pixel4-d2",
@@ -3991,7 +3991,7 @@
       "placeholder": "pixel4-d2"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/pixel4/index.html",
       "key": "itt19-pixel4-lx",
       "suffix": "pixel4-lx",
@@ -4001,7 +4001,7 @@
       "placeholder": "pixel4-lx"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/playable/game.html",
       "key": "itt19-playable-d2",
       "suffix": "playable-d2",
@@ -4011,7 +4011,7 @@
       "placeholder": "playable-d2"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/playable/game.html",
       "key": "itt19-playable-lx",
       "suffix": "playable-lx",
@@ -4021,7 +4021,7 @@
       "placeholder": "playable-lx"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/stadia/index.html",
       "key": "itt19-stadia-d2",
       "suffix": "stadia-d2",
@@ -4031,7 +4031,7 @@
       "placeholder": "stadia-d2"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/stadia/index.html",
       "key": "itt19-stadia-lx",
       "suffix": "stadia-lx",
@@ -4041,7 +4041,7 @@
       "placeholder": "stadia-lx"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/wework/index.html",
       "key": "itt19-wework-d2",
       "suffix": "wework-d2",
@@ -4051,7 +4051,7 @@
       "placeholder": "wework-d2"
     },
     {
-      "year": "2019",
+      "year": "",
       "href": "sites/wework/index.html",
       "key": "itt19-wework-lx",
       "suffix": "wework-lx",

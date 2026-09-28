@@ -249,12 +249,12 @@
  "href": "/app/index.html#/year/2017",
  "label": "★ One-thing · iPhone X / Face ID REAL",
  "items": [
- " <a href=\"/app/index.html#/year/2017\">About 2017</a> — 1,766,926,408 · ITU users · bans",
- " <a href=\"/app/index.html#/year/2017\">Face ID / iPhone X</a> — no Home · swipe up",
- " <a href=\"/app/index.html#/year/2017\">Fortnite BR</a> — · free · 100",
- " <a href=\"/app/index.html#/year/2017\">Twitter 280</a> — type past 140",
- " <a href=\"/app/index.html#/year/2017\">Teams GA</a> — 2016 was preview",
- " <a href=\"/app/index.html#/year/2017\">Year flow map</a> "
+ " <a href=\"/app/index.html#/year/2017?stop=about\">About 2017</a> — 1,766,926,408 · ITU users · bans",
+ " <a href=\"/app/index.html#/year/2017?stop=itt17-faceid\">Face ID / iPhone X</a> — no Home · swipe up",
+ " <a href=\"/app/index.html#/year/2017?stop=itt17-fortnite\">Fortnite BR</a> — · free · 100",
+ " <a href=\"/app/index.html#/year/2017?stop=itt17-twitter-280\">Twitter 280</a> — type past 140",
+ " <a href=\"/app/index.html#/year/2017?stop=itt17-teams\">Teams GA</a> — 2016 was preview",
+ " <a href=\"/app/index.html#/year/2017?stop=map\">Year flow map</a> "
  ]
 },
  
@@ -271,28 +271,16 @@
  
  ]
 },
- "2019": {
- "href": "/app/index.html#/year/2019",
- "label": "★ One-thing · Disney+ Continue REAL",
- "items": [
- " <a href=\"/app/index.html#/year/2019\" style=\"color:#1565c0\">About 2019</a> — table ends 2018 · ITU 4.1B / 53.6%",
- " <a href=\"/app/index.html#/year/2019\" style=\"color:#1565c0\">Disney+ Continue</a> — trial never writes",
- " <a href=\"/app/index.html#/year/2019\" style=\"color:#1565c0\">TikTok For You</a> — 2019 US mass",
- " <a href=\"/app/index.html#/year/2019\" style=\"color:#1565c0\">Apple Arcade</a> — $4.99 · 19 Sep",
- " <a href=\"/app/index.html#/year/2019\" style=\"color:#1565c0\">Stadia</a> — 19 Nov Founder’s",
- " <a href=\"/app/index.html#/year/2019\" style=\"color:#1565c0\">Year flow map</a> "
- ]
-},
  "2020": {
  "href": "/app/index.html#/year/2020",
  "label": "★ One-thing · Zoom Leave REAL",
  "items": [
- " <a href=\"/app/index.html#/year/2020\" style=\"color:#1565c0\">About 2020</a> — table ends 2018 · no invented ILS cell",
- " <a href=\"/app/index.html#/year/2020\" style=\"color:#1565c0\">★ Zoom Leave</a> — Stay / empty never writes",
- " <a href=\"/app/index.html#/year/2020\" style=\"color:#1565c0\">Houseparty</a> — not Zoom gold",
- " <a href=\"/app/index.html#/year/2020\" style=\"color:#1565c0\">Classroom</a> — join class",
- " <a href=\"/app/index.html#/year/2020\" style=\"color:#1565c0\">Among Us</a> — not the chip",
- " <a href=\"/app/index.html#/year/2020\" style=\"color:#1565c0\">Year flow map</a> "
+ " <a href=\"/app/index.html#/year/2020?stop=about\" style=\"color:#1565c0\">About 2020</a> — table ends  · no invented ILS cell",
+ " <a href=\"/app/index.html#/year/2020?stop=itt20-zoom\" style=\"color:#1565c0\">★ Zoom Leave</a> — Stay / empty never writes",
+ " <a href=\"/app/index.html#/year/2020?stop=itt20-houseparty\" style=\"color:#1565c0\">Houseparty</a> — not Zoom gold",
+ " <a href=\"/app/index.html#/year/2020?stop=itt20-classroom\" style=\"color:#1565c0\">Classroom</a> — join class",
+ " <a href=\"/app/index.html#/year/2020?stop=itt20-amongus\" style=\"color:#1565c0\">Among Us</a> — not the chip",
+ " <a href=\"/app/index.html#/year/2020?stop=map\" style=\"color:#1565c0\">Year flow map</a> "
  ]
 },
 
@@ -300,19 +288,19 @@
  "href": "/app/index.html#/year/2021",
  "label": "★ Ask App Not to Track",
  "items": [
- " <a href=\"/app/index.html#/year/2021\" style=\"color:#1565c0\">About 2021</a> — table ends 2018 · ITU 4.9B / 63%",
- " <a href=\"/app/index.html#/year/2021\" style=\"color:#1565c0\">★ ATT Ask</a> — Ask App Not to Track · Allow never writes",
- " <a href=\"/app/index.html#/year/2021\" style=\"color:#1565c0\">Signal</a> — 15 May delay",
- " <a href=\"/app/index.html#/year/2021\" style=\"color:#1565c0\">Copilot waitlist</a> — not ChatGPT",
- " <a href=\"/app/index.html#/year/2021\" style=\"color:#1565c0\">Meta rename</a> — app still Facebook",
- " <a href=\"/app/index.html#/year/2021\" style=\"color:#1565c0\">Year flow map</a> "
+ " <a href=\"/app/index.html#/year/2021?stop=about\" style=\"color:#1565c0\">About 2021</a> — table ends  · ITU 4.9B / 63%",
+ " <a href=\"/app/index.html#/year/2021?stop=itt21-att\" style=\"color:#1565c0\">★ ATT Ask</a> — Ask App Not to Track · Allow never writes",
+ " <a href=\"/app/index.html#/year/2021?stop=itt21-signal\" style=\"color:#1565c0\">Signal</a> — 15 May delay",
+ " <a href=\"/app/index.html#/year/2021?stop=itt21-copilot\" style=\"color:#1565c0\">Copilot waitlist</a> — not ChatGPT",
+ " <a href=\"/app/index.html#/year/2021?stop=itt21-meta\" style=\"color:#1565c0\">Meta rename</a> — app still Facebook",
+ " <a href=\"/app/index.html#/year/2021?stop=map\" style=\"color:#1565c0\">Year flow map</a> "
  ]
 },
  "2022": {
  "href": "../sites/chatgpt/index.html",
  "label": "★ ChatGPT Send",
  "items": [
- " <a href=\"about.html\" style=\"color:#1565c0\">About 2022</a> — table ends 2018 · ITU 5.3B / 66%",
+ " <a href=\"about.html\" style=\"color:#1565c0\">About 2022</a> — table ends  · ITU 5.3B / 66%",
  " <a href=\"../sites/chatgpt/index.html\" style=\"color:#1565c0\">★ ChatGPT Send</a> — empty / GPT-4 never writes",
  " <a href=\"../sites/wordle/index.html\" style=\"color:#1565c0\">Wordle</a> — NYT 31 Jan",
  " <a href=\"../sites/twitter/index.html\" style=\"color:#1565c0\">Twitter bird</a> — X is 2023",

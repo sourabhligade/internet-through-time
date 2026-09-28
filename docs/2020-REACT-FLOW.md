@@ -82,7 +82,7 @@ Order:
 1. Freeze the table above. Do not rename `itt20-zoom` and do not add a second key on Zoom.
 2. Build `react/src/year2020.js` and `Year2020.jsx` from that table. Zoom first: Leave writes `itt20-zoom`. Stay writes nothing.
 3. Repeat for stops 2 through 10. One screen at a time. Leave each HTML file in place.
-4. When the research report lands, score each candidate against this file. A row needs a product, one verb, a 2020 date, and one primary URL. Drop 2019 and 2021 dates. Drop anything already in the official ten.
+4. When the research report lands, score each candidate against this file. A row needs a product, one verb, a 2020 date, and one primary URL. Drop  and 2021 dates. Drop anything already in the official ten.
 5. Add at most the accepted leftovers as n 11 upward. One new folder only if the page is not already on disk. Do not dest-farm the five-thousand-site list into folders.
 
 ## Research result — 16 leftovers, not built
@@ -110,4 +110,4 @@ Order:
 
 Dropped: Coinbase, Figma, HBO Max, Notion, Peacock, and Robinhood had no cite row in the five-thousand-site note. Robinhood’s buy limit is 28 Jan 2021. Airbnb stays on the  key. Clubhouse had no 2020 public-launch post. Slack Connect and Skype Meet Now had no company post opened. Quibi, Byte, and Genshin had no primary page opened in this pass.
 
-Holds before any of these become a screen: Messenger Rooms rolled out in some countries that week, not worldwide on 24 Apr. Amazon Live itself started in 2019; the September page is a Prime Day feature. The Chrome cookie day is the Wayback capture time, not a byline printed on the live post. PayPal merchant checkout is early 2021. Only the US buy, hold, and sell date is 2020.
+Holds before any of these become a screen: Messenger Rooms rolled out in some countries that week, not worldwide on 24 Apr. Amazon Live itself started in ; the September page is a Prime Day feature. The Chrome cookie day is the Wayback capture time, not a byline printed on the live post. PayPal merchant checkout is early 2021. Only the US buy, hold, and sell date is 2020.

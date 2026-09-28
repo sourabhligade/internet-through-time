@@ -28,8 +28,8 @@
 | 2015 | 213 | 316 | 195 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
 | 2016 | 66 | 116 | 48 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
 | 2017 | 222 | 258 | 194 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 18/9 |
-| 2018 | 24 | 33 | 11 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 3/9 |
-| 2019 | 170 | 207 | 152 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
+|  | 24 | 33 | 11 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 3/9 |
+|  | 170 | 207 | 152 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
 | 2020 | 39 | 45 | 20 | 0 | 11 | 6 | Y | Y | Y | Y | · | · | Y | Y | · | · | 6/10 | no unique second strip; doors 6/9; mvp |
 | 2021 | 18 | 64 | 3 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | · | · | 5/10 | no unique second strip; doors 3/9; 0/18 dests; mvp |
 | 2022 | 25 | 38 | 6 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 0/9; 0/25 dests |

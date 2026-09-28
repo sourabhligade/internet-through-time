@@ -1,7 +1,7 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
 
-const DOOR = "/app/index.html#/year/2020";
+const DOOR = "/app/index.html#/year/2020?deep=1";
 
 const EXTRAS = [
   { n: 11, name: "Clubhouse", key: "itt20-clubhouse-lx", next: "HBO Max", verb: "Raise hand leftover" },

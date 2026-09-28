@@ -40,7 +40,7 @@ EXTRA_KEEP = {
         "alibabaipo", "applepay", "echo", "flappybird", "game2048", "inbox", "ios8",
         "oculusfb"
     },
-    "2019": {
+    "": {
         "applecard", "ios13", "ipados", "switchlite"
     },
     "2020": {
@@ -65,7 +65,7 @@ UNIQUE_2017 = [
     "sites/musically/index.html",
     "sites/equifax/index.html",
     "sites/playable/game.html",
-    "sites/iphone/animoji.html",
+    "sites/animoji/index.html",
     "sites/ios11/index.html",
     "sites/pubgnote/index.html",
     "sites/cuphead/index.html",

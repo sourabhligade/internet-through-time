@@ -4,7 +4,7 @@
 **Status:** Map first. Deep-research KEEP/DROP year-false uses this list. Not dest-farm. Not leftover-2× warehouse dests.
 **Visitor 100%:** dest-true I/O — empty/trap never write; leftover never writes the star.
 
-Do not dest-farm leftover-20. Do not grow leftover-3× unique past 2018=3 / 2021=5. 2015/2017/2019 warehouse dest folders are not dest-true leftover dests to 3×.
+Do not dest-farm leftover-20. Do not grow leftover-3× unique past =3 / 2021=5. 2015/2017/ warehouse dest folders are not dest-true leftover dests to 3×.
 
 ```mermaid
 flowchart TD
@@ -40,8 +40,8 @@ flowchart TD
 | **2015** | 213 | Periscope Go LIVE | 10 | 9 | 0 | 0 | **19** |
 | **2016** | 106 | IG Stories | 10 | 9 | 74 | 0 | **93** |
 | **2017** | 222 | Face ID | 10 | 0 (leftover-20 instead) | 20 extra | 0 | **30** |
-| **2018** | 44 research · 21 React · 0 HTML | GDPR Manage | 10 | 0 on disk (cap was 3) | 11 KEEP on React · 20 DROP gone | 0 | **21** live React |
-| **2019** | 170 | Disney+ Continue | 10 | 9 | 0 | 0 | **19** |
+| **** | 44 research · 21 React · 0 HTML | GDPR Manage | 10 | 0 on disk (cap was 3) | 11 KEEP on React · 20 DROP gone | 0 | **21** live React |
+| **** | 170 | Disney+ Continue | 10 | 9 | 0 | 0 | **19** |
 | **2020** | 39 | Zoom Leave | 10 | 9 | 1 | 0 | **20** |
 | **2021** | 30 | ATT Ask | 10 | 5 | 15 | 0 | **30** |
 | **2022** | 38 | ChatGPT Send | 10 | 9 | 19 | 0 | **38** |
@@ -304,7 +304,7 @@ Star: `iphone` · Face ID. Dest folders **222**.
 
 Dest-true flows this year: **30**.
 
-## 2018
+## 
 
 Star: `gdpr` · GDPR Manage. Research dest-true rows **44**. Disk: HTML dest folders **0**. React keys **21** (official 10 + leftover KEEP 11). Leftover-3× catalog empty. Hub wiped.
 
@@ -316,7 +316,7 @@ Star: `gdpr` · GDPR Manage. Research dest-true rows **44**. Disk: HTML dest fol
 
 Dest-true flows this year: **44**.
 
-## 2019
+## 
 
 Star: `disneyplus` · Disney+ Continue. Dest folders **170**.
 

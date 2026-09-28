@@ -14,8 +14,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "dev" / "museum-map"
-LOCK_4X = {"2012", "2013", "2016", "2017", "2018", "2019"}
-NO_SECOND = {"2013", "2018"}
+LOCK_4X = {"2012", "2013", "2016", "2017", "", ""}
+NO_SECOND = {"2013", ""}
 BOARDED = ["2009"]
 WIPED = ["2023", "2024", "2025"]
 
@@ -185,7 +185,7 @@ def render(data: dict) -> str:
 <div class="wrap">
 <header>
   <h1>Internet Through Time — disk map</h1>
-  <p class="lede">24 years open · 2009 boarded · 2015 / 2018 wiped · 2023+ wiped · leftover-2× hrefs · incomplete never writes.</p>
+  <p class="lede">24 years open · 2009 boarded · 2015 /  wiped · 2023+ wiped · leftover-2× hrefs · incomplete never writes.</p>
   <p class="banner">Author only. Not linked from the hub. Names come from <code>js/atlas-data.js</code>, <code>js/config/flow-trails.js</code>, and <code>scripts/popular-3x-sites.json</code>.</p>
 </header>
 
@@ -202,7 +202,7 @@ def render(data: dict) -> str:
 <div class="machine">
   <div class="slot ok"><b>leftover-2×</b> <code>*-lx</code> + <code>*-d2</code> on every live dest. Land → trap/empty never write → complete leftover only → Next 200.</div>
   <div class="slot ok"><b>leftover-3× first</b> pop3x. Unused leftover dests. Never official n=1–10.</div>
-  <div class="slot lock"><b>leftover-3× second</b> pop-more. Same rule. 2013 / 2018 stay unnamed — no dest-farm.</div>
+  <div class="slot lock"><b>leftover-3× second</b> pop-more. Same rule. 2013 /  stay unnamed — no dest-farm.</div>
   <div class="slot ok"><b>leftover-3× third</b> pop3-* may sit on official dests.</div>
   <div class="slot lock"><b>leftover-4×</b> lock 0 on {escape(", ".join(sorted(LOCK_4X)))}.</div>
 </div>
@@ -235,9 +235,9 @@ def render(data: dict) -> str:
       <li>hub · atlas · 3× links · all-years smoke</li>
       <li>Gold-A · popular 3× · one-thing</li>
       <li>2005–2010 leftover-4× ·  CUT-DOUBLE + 5×</li>
-      <li>2014 mvp/flows/4× · 2018 mvp/flows</li>
+      <li>2014 mvp/flows/4× ·  mvp/flows</li>
       <li>2022 mvp/flows</li>
-      <li>2016–2018 3× + trail · 2017–2019 deepen</li>
+      <li>2016– 3× + trail · 2017– deepen</li>
     </ul>
     <p class="path">Not this script: leftover-official dest-minutes (~12k) · full 317-spec tree</p>
   </div>
@@ -246,10 +246,10 @@ def render(data: dict) -> str:
 <h2 id="leave">Still leftover by law</h2>
 <div class="row">
   <span class="pill lock">2013 leftover-3× second — no dest-farm</span>
-  <span class="pill lock">2018 leftover-3× second — official 10 + first 3 = 13 dests</span>
+  <span class="pill lock"> leftover-3× second — official 10 + first 3 = 13 dests</span>
   <span class="pill lock">leftover-4× on lock years</span>
   <span class="pill lock">CUT-OPEN 2022+ wiped · 2009 boarded</span>
-  <span class="pill lock">do not restore 2013 / 2018 forests</span>
+  <span class="pill lock">do not restore 2013 /  forests</span>
 </div>
 
 <p class="foot">Generated from live configs. Trust order: years/ → itt_gate.py → DISK-TRUTH. Do not treat this page as a visitor room.</p>

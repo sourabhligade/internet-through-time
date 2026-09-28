@@ -1,12 +1,28 @@
-import { useCallback, useState } from "react";
-import { Link } from "react-router-dom";
+import { useCallback, useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { OfficialStop } from "./OfficialStop.jsx";
 import { YearRails } from "./YearRails.jsx";
 
 export function YearRail({ year, star, trail, also, all, guided, stopByKey, startTitle, startBody, about }) {
   const [view, setView] = useState("start");
   const [label, setLabel] = useState("Starting Point");
+  const location = useLocation();
+  const deep = new URLSearchParams(location.search).get("deep") === "1";
   const stop = stopByKey(view);
+
+  useEffect(() => {
+    const stopId = new URLSearchParams(location.search).get("stop");
+    if (!stopId) return;
+    if (stopId === "about" || stopId === "map") {
+      setView(stopId);
+      setLabel(stopId === "about" ? "About" : "Year flow map");
+      return;
+    }
+    const row = stopByKey(stopId);
+    if (!row) return;
+    setView(stopId);
+    setLabel(row.n + " " + row.name);
+  }, [location.search, stopByKey]);
 
   const openStart = useCallback(() => {
     setView("start");
@@ -46,6 +62,7 @@ export function YearRail({ year, star, trail, also, all, guided, stopByKey, star
   return (
     <div className="door door-2014">
       <header>
+        <a href="../index.html">Museum</a>
         <Link to="/">All React years</Link>
         <strong>{year}</strong>
         <span>{star}</span>
@@ -55,6 +72,7 @@ export function YearRail({ year, star, trail, also, all, guided, stopByKey, star
         guided={guided}
         trail={trail}
         also={also}
+        deep={deep}
         onStart={openStart}
         onGuided={openGuided}
         onOpenStop={openStop}

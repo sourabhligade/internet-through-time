@@ -54,16 +54,12 @@
 /years/2013/pages/home.html
 /years/2013/pages/about.html
 /years/2013/sites/vine/record.html
-/years/2015/
-/years/2015/pages/home.html
-/years/2015/pages/about.html
-/years/2015/sites/periscope/index.html
 /years/2016/
 /years/2016/pages/home.html
 /years/2016/pages/about.html
 /years/2016/sites/instagram/stories.html
+/app/index.html#/year/2015
 /app/index.html#/year/2017
-/app/index.html#/year/2019
 /app/index.html#/year/2020
 /years/1994/sites/goodtimes/index.html
 /years/1994/sites/goodtimes/about.html

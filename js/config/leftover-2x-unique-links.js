@@ -223,7 +223,7 @@
     },
     {
       "id": "sentence",
-      "name": "World\u2019s First Collaborative Sentence"
+      "name": "World’s First Collaborative Sentence"
     },
     {
       "id": "ten",
@@ -573,7 +573,7 @@
     },
     {
       "id": "mirsky",
-      "name": "Mirsky\u2019s Worst of the Web"
+      "name": "Mirsky’s Worst of the Web"
     },
     {
       "id": "movieweb",
@@ -967,7 +967,7 @@
     },
     {
       "id": "aintitcool",
-      "name": "Ain\u2019t It Cool News"
+      "name": "Ain’t It Cool News"
     },
     {
       "id": "abebooks",
@@ -4163,7 +4163,7 @@
     }
   ],
   "2017": [],
-  "2019": [
+  "": [
     {
       "id": "libra",
       "name": "Libra \u00b7"
@@ -4206,11 +4206,11 @@
     },
     {
       "id": "linksawakening",
-      "name": "Link\u2019s Awakening remake"
+      "name": "Link’s Awakening remake"
     },
     {
       "id": "luigismansion3",
-      "name": "Luigi\u2019s Mansion 3"
+      "name": "Luigi’s Mansion 3"
     },
     {
       "id": "macbookpro16",

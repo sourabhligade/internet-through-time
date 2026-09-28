@@ -4,7 +4,7 @@
 **Status:** Recommendation. Not ship law. Live year list is [`DISK-TRUTH.md`](DISK-TRUTH.md). 
 **Canonical year law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) + `scripts/itt_gate.py` `SHIP_YEARS`.
 
-Hub **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022). **2009 boarded.** **2015 wiped.** **2018 wiped.** **2023–2025 wiped.** This file maps the 2026-09-13 audit against that live list: what is on disk, what live web-history museums do, and how to improve *this* museum without dest-farming.
+Hub **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + –2022). **2009 boarded.** **2015 wiped.** ** wiped.** **2023–2025 wiped.** This file maps the 2026-09-13 audit against that live list: what is on disk, what live web-history museums do, and how to improve *this* museum without dest-farming.
 
 ---
 
@@ -26,7 +26,7 @@ Year-locked, clickable rooms in period chrome. Not a screenshot gallery. Not a r
 
 ## 2. Data on disk (audit snapshot)
 
-Hub **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022). **2009 boarded.** **2015 wiped.** **2018 wiped.** **2023–2025 wiped.** Counts below are the 2026-09-13 audit snapshot; live dest-folder counts are in [`DISK-TRUTH.md`](DISK-TRUTH.md).
+Hub **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + –2022). **2009 boarded.** **2015 wiped.** ** wiped.** **2023–2025 wiped.** Counts below are the 2026-09-13 audit snapshot; live dest-folder counts are in [`DISK-TRUTH.md`](DISK-TRUTH.md).
 
 | Layer | Count (2026-09-13 working tree) |
 |---|---|
@@ -43,8 +43,8 @@ Density is harvest history, not “how big the year was”:
 | 2004 | 810 | Forest / warehouse |
 | 1999 / 2000 | 432 / 486 | Forest |
 | 2007 | 246 | Lean door (iPhone Safari) |
-|  / 2012 / 2018 | 98 / 45 / 13 | Lean door (reverted to HEAD) |
-| 2019 / 2021 | 165 / 294 | Lean + leftover dest-farm still on disk |
+|  / 2012 /  | 98 / 45 / 13 | Lean door (reverted to HEAD) |
+|  / 2021 | 165 / 294 | Lean + leftover dest-farm still on disk |
 | 2009 | 78 | Boarded — visitor never enters |
 | 2022+ | — | Wiped |
 
@@ -87,7 +87,7 @@ A 9,588-page museum that is not on a URL is a private corpus.
 
 - [x] Hub leads with **first night**, **follow-a-site**, **one star per year**.
 - [x] Leftover-2× / leftover-3× default **off** (workshop / `?deep=1`). Keep for e2e.
-- [x] Year cards: one clause of meaning. Lean years say dest count + star (`2018 · 13 rooms · GDPR Manage`). Forests say they are dense.
+- [x] Year cards: one clause of meaning. Lean years say dest count + star (` · 13 rooms · GDPR Manage`). Forests say they are dense.
 - [x] Yahoo-directory hub skin stays. Year cards are **numbers only** (era chips hidden).
 
 ### Slice 2 — 2009 is a hole or a door
@@ -120,11 +120,11 @@ Nobody else does Yahoo 1994→2010 in that year’s chrome.
 
 ### Slice 5 — Dest-farm lock (remaining forests)
 
-Same pass as  / 2012 / 2018: dests = `urlMap` ∩ disk, then delete the rest. Shared refs (flow-maps, leftover matrices, unique-manifest, READ-FIRST) in the **same** pass.
+Same pass as  / 2012 / : dests = `urlMap` ∩ disk, then delete the rest. Shared refs (flow-maps, leftover matrices, unique-manifest, READ-FIRST) in the **same** pass.
 
 Order suggestion (largest leftover risk first):
 
-- [x] 2015 wiped · 2017 / 2019 / 2021 are React doors (0 HTML dest folders)
+- [x] 2015 wiped · 2017 /  / 2021 are React doors (0 HTML dest folders)
 - [ ] 2004, , 1999–2003, 2005–2007, 2010
 - [ ] 2009 only after Slice 2
 

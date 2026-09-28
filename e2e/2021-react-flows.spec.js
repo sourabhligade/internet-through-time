@@ -1,7 +1,7 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
 
-const DOOR = "/app/index.html#/year/2021";
+const DOOR = "/app/index.html#/year/2021?deep=1";
 
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);

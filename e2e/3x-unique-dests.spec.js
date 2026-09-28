@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * 3× leftover-2× unique dests: incomplete never writes; complete leftover writes;
- * star stays empty. Samples first dest of every live year plus 2018/2020/2021 last dest.
+ * star stays empty. Samples first dest of every live year plus /2020/2021 last dest.
  */
 const { test, expect } = require("@playwright/test");
 const { revealLeftoverRails } = require("./helpers");
@@ -67,10 +67,10 @@ for (const year of YEARS) {
   });
 }
 
-const rows2018 = manifest["2018"] || [];
-if (rows2018.length) {
-  test("2018 last dest Next is Starting Point after complete", async ({ page }) => {
-    const last = rows2018[rows2018.length - 1];
+const rows = manifest[""] || [];
+if (rows.length) {
+  test(" last dest Next is Starting Point after complete", async ({ page }) => {
+    const last = rows[rows.length - 1];
     await completeFirst(page, last.path);
     const raw = await page.evaluate((k) => localStorage.getItem(k), last.k1);
     expect(raw).toBeTruthy();

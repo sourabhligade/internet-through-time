@@ -1,6 +1,6 @@
 import { memo } from "react";
 
-export const YearRails = memo(function YearRails({ guided, trail, also, onStart, onGuided, onOpenStop }) {
+export const YearRails = memo(function YearRails({ guided, trail, also, deep, onStart, onGuided, onOpenStop }) {
   return (
     <div className="rails">
       <section>
@@ -21,17 +21,20 @@ export const YearRails = memo(function YearRails({ guided, trail, also, onStart,
           ))}
         </ol>
       </section>
-      {also.length ? (
-        <section>
+      {deep && also.length ? (
+        <section className="also-year">
           <h2>Also this year</h2>
-          <ol>
-            {also.map((row) => (
-              <li key={row.whenKey}>
-                <button type="button" onClick={() => onOpenStop(row)}>{row.n} {row.name}</button>
-                <code>{row.whenKey}</code>
-              </li>
-            ))}
-          </ol>
+          <details>
+            <summary>Leftover list</summary>
+            <ol>
+              {also.map((row) => (
+                <li key={row.whenKey}>
+                  <button type="button" onClick={() => onOpenStop(row)}>{row.n} {row.name}</button>
+                  <code>{row.whenKey}</code>
+                </li>
+              ))}
+            </ol>
+          </details>
         </section>
       ) : null}
     </div>

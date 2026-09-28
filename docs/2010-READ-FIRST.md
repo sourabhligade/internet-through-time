@@ -8,7 +8,7 @@
 | [`references/2010/`](references/2010/) | Wikipedia 2010 list · extlinks · CDX · visit log |
 | Parent live year | `years/2009/` · `itt09` |
 
-**Disk truth:** Hub is **24 years open** · **2009 boarded** · **2015 wiped** · **2018 wiped** · **2023–2025 wiped**. 2013 Vine and 2022 ChatGPT are live lean doors. `years/2010/` is a **dest-lock lean door**. Prior 2010 forest is **not** the source of truth. Do not restore it.
+**Disk truth:** Hub is **24 years open** · **2009 boarded** · **2015 wiped** · ** wiped** · **2023–2025 wiped**. 2013 Vine and 2022 ChatGPT are live lean doors. `years/2010/` is a **dest-lock lean door**. Prior 2010 forest is **not** the source of truth. Do not restore it.
 
 ---
 

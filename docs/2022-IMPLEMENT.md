@@ -10,7 +10,7 @@
 
 **Dest map:** [`2022-DEST-MAP.md`](2022-DEST-MAP.md) (live dest folders **25**).  
 **Law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`2022-READ-FIRST.md`](2022-READ-FIRST.md) · I1–I14.  
-**Density sibling:** **2018 first-paint** · **2021 freeze ceiling 98**. **2020 live lean** · Zoom Leave.  
+**Density sibling:** ** first-paint** · **2021 freeze ceiling 98**. **2020 live lean** · Zoom Leave.  
 **Disk now:** dests **25** · HTML **38** · leftover-4× **0**. Do not restore dest-farm to 85.
 
 ---
@@ -147,7 +147,7 @@ Bans: [x] farm [x] 4× [x] 7th li [x] ILS digit [x] X [x] Threads [x] GPT-4 mode
 
 ## Not this pass
 
-- dest-farm lock of 2017/2019/2021  
+- dest-farm lock of 2017//2021  
 - 2009 Like door  
 - 2023+ trees  
 - live OpenAI API (canned 2022 preview replies only)

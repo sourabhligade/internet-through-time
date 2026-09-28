@@ -3,7 +3,7 @@
 **Date:** 2026-09-26
 **Status:** Working checklist vs live disk. Not ship law. Ship law is [`DISK-TRUTH.md`](DISK-TRUTH.md) + `scripts/itt_gate.py` `SHIP_YEARS`.
 **I/O:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14. Lean leftover: [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) D1–D15. Leftover-2× rails: [`LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md) L1–L13. Visitor 100%: dest-true **flows**, not dest-folder count.
-**Live:** 24 doors (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022). 2009 boarded. 2015 / 2018 / 2023–2025 wiped. Leftover-3× unique catalogs empty.
+**Live:** 24 doors (1994–2007 + 2010 + 2012–2014 + 2016–2017 + –2022). 2009 boarded. 2015 /  / 2023–2025 wiped. Leftover-3× unique catalogs empty.
 
 A flow **passes** only if empty / trap never write, a finished visit writes **that** key, leftover never writes the star, and official dest leftover-2× first paint is 0.
 
@@ -20,14 +20,14 @@ Do not dest-farm. Do not grow leftover-3× catalogs. Do not invent period pixels
 | I5 | Trap never writes star | [x] dest-true pack |
 | I6 | Guided Starting Point exactly 6 | [x] `start-data.js` |
 | I9 | No invented brand pixels | [x] `[failed-final]` stays |
-| I11 | About ILS table ends 2018 | [x] no invented June 2019–2025 cell |
+| I11 | About ILS table ends  | [x] no invented June –2025 cell |
 | I13 | Official dests exist | [x] `check-every-flow.py` 475 stops, 0 missing |
 | D6 / L9 | Leftover never writes the star | [x] dest-true leftover specs |
 | L5 | Official dest leftover-2× first paint 0 | [x] playable years (2009 boarded only) |
 | leftover-3× unique catalog | Empty | [x] `ITT.leftover3xUnique = {}` |
 | Mock-flow DEST_FIELD / WEAK_REAL / HASH_CTA | 0 | [x] audit-mock-flows OK |
 | 5× | Only  live + 2009 boarded | [x] 10 `data-5x-save` pages |
-| Unique leftover-20 | Only 2017 and 2019 trails | [x] other years 0 leftover-trail 20 |
+| Unique leftover-20 | Only 2017 and  trails | [x] other years 0 leftover-trail 20 |
 
 ---
 
@@ -57,8 +57,8 @@ Do not dest-farm. Do not grow leftover-3× catalogs. Do not invent period pixels
 | **2015** | live lean HTML | HTML | Periscope Go LIVE | 10 | 0 | 9 | 50 | readme-only |
 | **2016** | live lean HTML | HTML | Instagram Stories | 10 | 0 | 19 | 57 | readme-only |
 | **2017** | react lean | React | Face ID | 10 | 20 | 0 | 0 | readme-only |
-| **2018** | wiped hub · React hall | off hub · React | GDPR Manage | 10 | 11 KEEP | 0 | 0 | readme-only |
-| **2019** | react lean | React | Disney+ Continue | 10 | 20 | 13 | 0 | readme-only |
+| **** | wiped hub · React hall | off hub · React | GDPR Manage | 10 | 11 KEEP | 0 | 0 | readme-only |
+| **** | react lean | React | Disney+ Continue | 10 | 20 | 13 | 0 | readme-only |
 | **2020** | react lean | React | Zoom Leave | 10 | 0 | 0 | 0 | readme-only |
 | **2021** | react lean | React | ATT Ask | 10 | 0 | 0 | 0 | readme-only |
 | **2022** | live lean HTML | HTML | ChatGPT Send | 10 | 0 | 0 | 25 | readme-only |
@@ -1530,7 +1530,7 @@ None. Official trail ends at n=10. Do not dest-farm leftover-20.
 - [x] Empty / trap never write the star
 - [x] Leftover never writes the star
 - [x] Official trail n=1–10
-- [x] Unique leftover-20 on this year only (plus 2017/2019 pair)
+- [x] Unique leftover-20 on this year only (plus 2017/ pair)
 - [x] No 5× pack
 - [x] Period assets readme-only · `[failed-final]` stays
 
@@ -1578,7 +1578,7 @@ I/O for each official stop: empty never writes · trap never writes · finished 
 
 I/O: empty never writes · trap never writes · finished visit writes leftover only · star stays empty.
 
-Spec: `e2e/2017-2019-leftover-20.spec.js` + `e2e/2017-unique-flows.spec.js` (React). Browser hand-click of 37 leftover rooms besides AirPods 2 / Cuphead / Animoji is still open on [`OPEN-CHECKLIST.md`](OPEN-CHECKLIST.md) step 1.
+Spec: `e2e/2017--leftover-20.spec.js` + `e2e/2017-unique-flows.spec.js` (React). Browser hand-click of 37 leftover rooms besides AirPods 2 / Cuphead / Animoji is still open on [`OPEN-CHECKLIST.md`](OPEN-CHECKLIST.md) step 1.
 
 ### leftover-2× unique dest links
 
@@ -1592,21 +1592,21 @@ Empty catalog. Do not dest-farm a rail.
 
 ---
 
-## 2018
+## 
 
-**Wiped hub.** React hall off-hub: GDPR Manage `itt18-gdpr` + leftover KEEP 11. Do not restore `years/2018/` or period assets. Do not dest-farm leftover-3×.
+**Wiped hub.** React hall off-hub: GDPR Manage `itt18-gdpr` + leftover KEEP 11. Do not restore `years//` or period assets. Do not dest-farm leftover-3×.
 
 - [x] No hub card
 - [x] No HTML year tree
 - [x] React hall exists off-hub and stays off-hub
-- [x] Official 10 + leftover KEEP 11 (`ALSO_2018`)
+- [x] Official 10 + leftover KEEP 11 (`ALSO_`)
 - [x] Leftover-3× catalog empty
-- [x] `e2e/2018-leftover-keep.spec.js` 15 passed
+- [x] `e2e/-leftover-keep.spec.js` 15 passed
 
-## 2019
+## 
 
 **Class:** react lean  
-**Door:** `/app/index.html#/year/2019`  
+**Door:** `/app/index.html#/year/`  
 **Star:** Disney+ Continue `itt19-disneyplus`  
 **Dest folders:** 0  
 **React keys:** 64 (official 10 + leftover 54). 19 cabinet fillers dropped.  
@@ -1623,7 +1623,7 @@ Empty catalog. Do not dest-farm a rail.
 - [x] Empty / trap never write the star
 - [x] Leftover never writes the star
 - [x] Official trail n=1–10
-- [x] Unique leftover-20 on this year only (plus 2017/2019 pair)
+- [x] Unique leftover-20 on this year only (plus 2017/ pair)
 - [x] No 5× pack
 - [x] Period assets readme-only · `[failed-final]` stays
 
@@ -1671,7 +1671,7 @@ I/O for each official stop: empty never writes · trap never writes · finished 
 
 I/O: empty never writes · trap never writes · finished visit writes leftover only · star stays empty.
 
-Spec: `e2e/2017-2019-leftover-20.spec.js` + `e2e/2019-mvp.spec.js` (React). Leftover KEEP **54** on `ALSO_2019` (20 leftover-20 + 34 extra dest KEEP). 19 cabinet fillers dropped.
+Spec: `e2e/2017--leftover-20.spec.js` + `e2e/-mvp.spec.js` (React). Leftover KEEP **54** on `ALSO_` (20 leftover-20 + 34 extra dest KEEP). 19 cabinet fillers dropped.
 
 ### leftover-2× unique dest links
 
@@ -1685,7 +1685,7 @@ Spec: `e2e/2017-2019-leftover-20.spec.js` + `e2e/2019-mvp.spec.js` (React). Left
 
 ### Specs that cover this year
 
-- dest-true: `2019-mvp.spec.js` in GitHub pack
+- dest-true: `-mvp.spec.js` in GitHub pack
 - leftover-20 React rail · leftover-2× unique dests 13 React-only
 - `all-years-official-10-real.spec.js` skips HTML-less years; MVP covers the star
 
@@ -1881,16 +1881,16 @@ Empty catalog. Do not dest-farm a rail.
 ## Standing do-not
 
 - Do not un-board 2009
-- Do not restore 2018 or 2023–2025
-- Do not dest-lock 2015–2018 again · do not dest-lock forests / 2013 / 2022
+- Do not restore  or 2023–2025
+- Do not dest-lock 2015– again · do not dest-lock forests / 2013 / 2022
 - Do not grow leftover-3× catalogs
-- Do not add unique leftover-20 maps except 2017 and 2019 already in `flow-trails.js`
+- Do not add unique leftover-20 maps except 2017 and  already in `flow-trails.js`
 - Do not dest-farm forest dests from FIVE-K-SITE-WALK
 - Do not invent a logo, a cite, or a 5,000-site ranking
 
 ## Still open (from OPEN-CHECKLIST)
 
-- [x] Commit / push this working tree (React-door atlas, dest-true 2017/2019 MVP, leftover-20 React I/O, UNDONE dest recount)
-- [x] 2017 / 2019 leftover-20 I/O on the React rail — `e2e/2017-2019-leftover-20.spec.js` + `e2e/2017-unique-flows.spec.js` **75 passed** 2026-09-26 (empty / trap never write · leftover never writes the star)
+- [x] Commit / push this working tree (React-door atlas, dest-true 2017/ MVP, leftover-20 React I/O, UNDONE dest recount)
+- [x] 2017 /  leftover-20 I/O on the React rail — `e2e/2017--leftover-20.spec.js` + `e2e/2017-unique-flows.spec.js` **75 passed** 2026-09-26 (empty / trap never write · leftover never writes the star)
 - [x] [`UNDONE.md`](UNDONE.md) dest counts rechecked vs disk 2026-09-26
 

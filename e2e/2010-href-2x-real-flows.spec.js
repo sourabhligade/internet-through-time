@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * 2010–2019 href-2× leftover walks — dests on disk only.
+ * 2010– href-2× leftover walks — dests on disk only.
  * Trap / empty never write. Complete leftover writes leftover key, not the star.
  * Mass hops on gold resolve 200 and have a leftover machine.
  */
@@ -139,7 +139,7 @@ async function completeLeftover(page, href, year, suffix, star) {
   }
 }
 
-test.describe("2010–2019 href-2× gold hops are live leftover dests", () => {
+test.describe("2010– href-2× gold hops are live leftover dests", () => {
   for (const y of YEARS) {
     test(`${y.year} gold 2×/3× hops 200 + leftover machine`, async ({ page }) => {
       test.skip(!fs.existsSync(path.join(ROOT, "years", y.year, "index.html")), y.year + " wiped");
@@ -165,7 +165,7 @@ test.describe("2010–2019 href-2× gold hops are live leftover dests", () => {
   }
 });
 
-test.describe("2010–2019 leftover dests are real full flows", () => {
+test.describe("2010– leftover dests are real full flows", () => {
   for (const y of YEARS) {
     for (const dest of y.leftover) {
       const file = path.join(ROOT, dest.href.replace(/^\//, ""));

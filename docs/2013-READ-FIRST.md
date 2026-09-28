@@ -1,7 +1,7 @@
 # 2013 — READ FIRST
 
 **Date:** 2026-09-08  
-**Status:** **LIVE lean door** (CUT-OPEN). Star = Vine 6s `itt13-vine-posts`. Hub **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022). **2009 boarded.** **2015 wiped.** **2018 wiped.** **2023–2025 wiped.** Do not `git checkout` an old 2013 forest.  
+**Status:** **LIVE lean door** (CUT-OPEN). Star = Vine 6s `itt13-vine-posts`. Hub **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + –2022). **2009 boarded.** **2015 wiped.** ** wiped.** **2023–2025 wiped.** Do not `git checkout` an old 2013 forest.  
 **Prefix:** `itt13-*`  
 **Official 10 keys already live in `flow-trails.js` — dest paths must match.**  
 **Leftover:** 2× ×2 on every dest HTML. Leftover 3× first (Ask.fm · Whisper · YouTube) + second (Chrome · Medium) + third. Leftover 4× **0**.

@@ -202,12 +202,12 @@
       "btn": "Ask leftover"
     }
   ],
-  "2019": [
+  "": [
     {
       "id": "instagram",
       "name": "Instagram",
-      "title": "Instagram leftover — 2019",
-      "why": "2019 leftover-3× second. Unique dest. Not the chip.",
+      "title": "Instagram leftover — ",
+      "why": " leftover-3× second. Unique dest. Not the chip.",
       "verb": "Filter leftover",
       "ph": "instagram",
       "btn": "Filter leftover"
@@ -215,8 +215,8 @@
     {
       "id": "nyt",
       "name": "NYT leftover",
-      "title": "NYT leftover leftover — 2019",
-      "why": "2019 leftover-3× second. Unique dest. Not the chip.",
+      "title": "NYT leftover leftover — ",
+      "why": " leftover-3× second. Unique dest. Not the chip.",
       "verb": "Headline leftover",
       "ph": "nyt",
       "btn": "Headline leftover"
@@ -224,8 +224,8 @@
     {
       "id": "oculusquest",
       "name": "Oculus Quest",
-      "title": "Oculus Quest leftover — 2019",
-      "why": "2019 leftover-3× second. Unique dest. Not the chip.",
+      "title": "Oculus Quest leftover — ",
+      "why": " leftover-3× second. Unique dest. Not the chip.",
       "verb": "Quest leftover",
       "ph": "oculusquest",
       "btn": "Quest leftover"

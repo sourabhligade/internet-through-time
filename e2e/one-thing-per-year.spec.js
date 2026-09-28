@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * One-thing-per-year integration pack — incomplete no write · complete writes.
- * @see docs/ONE-THING-PER-YEAR-INTEGRATION-1994-2018.md
+ * @see docs/ONE-THING-PER-YEAR-INTEGRATION-1994-.md
  */
 const fs = require("fs");
 const path = require("path");
@@ -278,29 +278,6 @@ const THINGS = [
       await room.locator("input[type='checkbox']").first().check();
       await room.locator("input:not([type='checkbox'])").fill("Look");
       await room.getByRole("button", { name: "Swipe up", exact: true }).click();
-    },
-  },
-  {
-    year: "2019",
-    react: true,
-    path: "/app/index.html#/year/2019",
-    key: "itt19-disneyplus",
-    incomplete: async (page) => {
-      await page.getByRole("button", { name: "1 Disney+ Continue" }).click();
-      await page.locator("article.stop").getByRole("button", { name: "Continue", exact: true }).click();
-    },
-    complete: async (page) => {
-      await page.getByRole("button", { name: "1 Disney+ Continue" }).click();
-      const room = page.locator("article.stop");
-      const boxes = room.locator("input[type='checkbox']");
-      await boxes.nth(0).check();
-      await boxes.nth(1).check();
-      await room.getByRole("button", { name: "Adult" }).click();
-      await room.getByRole("button", { name: "The Mandalorian" }).click();
-      await room.getByRole("button", { name: "Frozen 2" }).click();
-      await room.getByRole("button", { name: "Kids" }).click();
-      await room.getByRole("button", { name: "Adult" }).click();
-      await room.getByRole("button", { name: "Continue", exact: true }).click();
     },
   },
   {

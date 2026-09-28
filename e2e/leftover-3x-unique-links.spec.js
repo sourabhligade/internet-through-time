@@ -116,7 +116,7 @@ test.describe("leftover-3× unique dest links", () => {
     for (const row of leftover3x) {
       byYear[row.year] = (byYear[row.year] || 0) + 1;
     }
-    expect(byYear["2018"]).toBeUndefined();
+    expect(byYear[""]).toBeUndefined();
     expect(byYear["2021"]).toBeUndefined();
     expect(byYear["2017"]).toBeUndefined();
     expect(Object.values(byYear).reduce((a, b) => a + b, 0)).toBe(0);

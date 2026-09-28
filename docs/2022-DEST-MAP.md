@@ -135,7 +135,7 @@ Each: 2022 leftover **room** (Open leftover) + leftover-2× ×2. Keys = first 8 
 | [x] Epic | `sites/epic/` | epic-lx / epic-d2 | store leftover | |
 | [x] Roblox | `sites/roblox/` | roblox-lx / roblox-d2 | play leftover | |
 | [x] Hulu | `sites/hulu/` | hulu-lx / hulu-d2 | watch leftover | |
-| [x] Disney+ | `sites/disneyplus/` | disneypl-lx / disneypl-d2 | Continue is **2019** gold | |
+| [x] Disney+ | `sites/disneyplus/` | disneypl-lx / disneypl-d2 | Continue is **** gold | |
 | [x] HBO Max | `sites/hbomax/` | hbomax-lx / hbomax-d2 | watch leftover · Max rename later | |
 | [x] Kick | `sites/kick/` | kick-lx / kick-d2 | 2022 stream leftover | |
 

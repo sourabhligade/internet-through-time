@@ -1,11 +1,27 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { OfficialStop } from "./OfficialStop.jsx";
 import { ALL_2020, ALSO_2020, GUIDED_2020, stopByKey2020, TRAIL_2020 } from "./year2020.js";
 
 export function Year2020() {
   const [view, setView] = useState("start");
   const [label, setLabel] = useState("Starting Point");
+  const location = useLocation();
+  const deep = new URLSearchParams(location.search).get("deep") === "1";
+
+  useEffect(() => {
+    const stopId = new URLSearchParams(location.search).get("stop");
+    if (!stopId) return;
+    if (stopId === "about" || stopId === "map") {
+      setView(stopId);
+      setLabel(stopId === "about" ? "About" : "Year flow map");
+      return;
+    }
+    const row = stopByKey2020(stopId);
+    if (!row) return;
+    setView(stopId);
+    setLabel(row.n + " " + row.name);
+  }, [location.search]);
 
   function openStart() {
     setView("start");
@@ -42,6 +58,7 @@ export function Year2020() {
   return (
     <div className="door door-2014">
       <header>
+        <a href="../index.html">Museum</a>
         <Link to="/">All React years</Link>
         <strong>2020</strong>
         <span>Zoom Leave</span>
@@ -79,7 +96,7 @@ export function Year2020() {
             ))}
           </ol>
         </section>
-        <section>
+        {deep ? <section>
           <h2>Also this year</h2>
           <ol>
             {ALSO_2020.map((row) => (
@@ -97,7 +114,7 @@ export function Year2020() {
               </li>
             ))}
           </ol>
-        </section>
+        </section> : null}
       </div>
       {view === "start" ? <Start2020 onOpen={openGuided} /> : null}
       {view === "about" ? <About2020 /> : null}
@@ -113,7 +130,7 @@ function Start2020({ onOpen }) {
       <p className="kicker">2020</p>
       <h1>Zoom Leave</h1>
       <p>The meeting is the room. Mute, then chat, then Leave. Empty never writes. Disney+ Continue is last year.</p>
-      <p>Table ends 2018. No invented ILS cell. Win10 mass. Chrome habit.</p>
+      <p>Table ends . No invented ILS cell. Win10 mass. Chrome habit.</p>
       <ol>
         {GUIDED_2020.map(([name, target]) => (
           <li key={target}>
@@ -133,7 +150,7 @@ function About2020() {
       <h1>About 2020</h1>
       <p>The session is a meeting. Leave is the save. Stay writes nothing.</p>
       <p>Houseparty, Discord, Teams, Classroom, Netflix, TikTok, Among Us, and Animal Crossing are the other official rooms. They do not write the Zoom key.</p>
-      <p>The June website table used elsewhere in the museum ends in 2018. This year does not invent a new cell.</p>
+      <p>The June website table used elsewhere in the museum ends in . This year does not invent a new cell.</p>
     </article>
   );
 }

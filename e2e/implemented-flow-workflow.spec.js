@@ -1,11 +1,11 @@
 // @ts-check
-/** Visitor workflow for every 2017 and 2019 stop we wired, plus the 2005 rail. */
+/** Visitor workflow for every 2017 and  stop we wired, plus the 2005 rail. */
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
 
 const ROOT = path.join(__dirname, "..");
-const STAR = { 2017: "itt17-faceid", 2019: "itt19-disneyplus" };
+const STAR = { 2017: "itt17-faceid" };
 
 function yearStops(year) {
   const text = fs.readFileSync(path.join(ROOT, "js/config/flow-trails.js"), "utf8");
@@ -50,7 +50,7 @@ async function finishLeftover(page, href) {
   await page.locator("[data-uf17-save]").click();
 }
 
-for (const year of ["2017", "2019"]) {
+for (const year of ["2017"]) {
   test(`${year} shell shows the year window`, async ({ page }) => {
     await page.goto(`/years/${year}/`);
     await expect(page.locator("iframe#content")).toBeVisible();

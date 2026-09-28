@@ -1,14 +1,14 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2007 / 2010 / 2012–2014 / 2016–2017 / 2019–2022 lean doors live. 2009 boarded. 2023+ wiped. Hallway ends at 2022. Do not invent rooms.
+ * 2007 / 2010 / 2012–2014 / 2016–2017 / –2022 lean doors live. 2009 boarded. 2023+ wiped. Hallway ends at 2022. Do not invent rooms.
  */
 (function (global) {
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
   var OPEN = [
- "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2010", "2012", "2013", "2014", "2016", "2017", "2019", "2020", "2021", "2022"
+ "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2010", "2012", "2013", "2014", "2016", "2017", "2020", "2021", "2022"
   ];
 
   ITT.AtlasData = {
@@ -20,12 +20,12 @@
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
       { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
  { id: "phone", label: "Phone eats the web", blurb: "App Store · Chrome · G1 → Instagram iOS → Circles. Vine 6s is the 2013 door.", years: ["2010", "2012", "2013"] },
-      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Stories, Face ID, Disney+, Zoom Leave, Meta rename, ChatGPT Send.", years: ["2014", "2016", "2017", "2019", "2020", "2021", "2022"] }
+      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Stories, Face ID, Disney+, Zoom Leave, Meta rename, ChatGPT Send.", years: ["2014", "2016", "2017", "2020", "2021", "2022"] }
     ],
 
     leanYears: [
  "2007", "2010", "2012",
-      "2013", "2014", "2016", "2017", "2019", "2020", "2021", "2022"
+      "2013", "2014", "2016", "2017", "2020", "2021", "2022"
     ],
 
     notThisYear: {
@@ -50,8 +50,7 @@
       "2014": "Messenger is the trap. Install is the save.",
       "2016": "Snapchat invented the 24-hour slide.",
       "2017": "Look to unlock. Fortnite is.",
-      "2019": "2018 is wiped. Zoom Leave is 2020. Reels are not this year.",
-      "2020": "Disney+ Continue is 2019. ATT Ask is 2021. ChatGPT is 2022. No case-count dashboard.",
+      "2020": "ATT Ask is 2021. ChatGPT is 2022. No case-count dashboard.",
 
       "2021": "Apps keep their names. Win11 is leftover. ChatGPT dest never."},
 
@@ -78,7 +77,6 @@
       "2014": "Nineteen billion dollars. Install is the save. Messenger is the trap.",
       "2016": "The slide lasted twenty-four hours. Snapchat invented the format. People walked into lamp posts.",
       "2017": "There was no Home button. You looked. You swiped up. Two hundred and eighty characters.",
-      "2019": "You subscribed. The Mouse became a stream. $6.99. The Mandalorian Chapter 1.",
 
       "2021": "The company was renamed. Facebook, Instagram, WhatsApp, and Messenger kept their names."
     },
@@ -357,17 +355,6 @@
         ],
         game: { label: "Storm Circle", href: "/app/index.html#/year/2017" }
       },
-      "2019": {
-        era: "Continue watching",
-        thesis: "Profiles become the door. A weeklong trial is the trap. Continue watching is the save.",
-        gold: { label: "Disney+ Continue", href: "/app/index.html#/year/2019", key: "itt19-disneyplus" },
-        guided: [
-          { label: "TikTok For You", href: "/app/index.html#/year/2019" },
-          { label: "Apple Arcade", href: "/app/index.html#/year/2019" },
-          { label: "Stadia Founder's", href: "/app/index.html#/year/2019" }
-        ],
-        game: { label: "Continue Row", href: "/app/index.html#/year/2019" }
-      },
       "2020": {
         era: "Leave meeting",
         thesis: "The meeting is the room. Mute, then chat, then Leave. Empty never writes.",
@@ -420,8 +407,7 @@
           { year: "2003", href: "years/2003/sites/yahoo/index.html", note: "portal leftover" },
           { year: "2004", href: "years/2004/sites/yahoo/index.html", note: "Web 2.0 year" },
           { year: "2005", href: "years/2005/sites/yahoo/index.html", note: "still #1" },
-          { year: "2006", href: "years/2006/sites/yahoo/index.html", note: "Twttr year" },
-                    { year: "2019", href: "/app/index.html#/year/2019", note: "Continue year" }
+          { year: "2006", href: "years/2006/sites/yahoo/index.html", note: "Twttr year" }
         ]
       },
       {
@@ -451,7 +437,6 @@
           { year: "2005", href: "years/2005/sites/maps/index.html", note: "Maps leftover" },
           { year: "2006", href: "years/2006/sites/google/index.html", note: "YouTube deal year" },
                     { year: "2010", href: "years/2010/sites/google/index.html", note: "lean" },
-          { year: "2019", href: "/app/index.html#/year/2019", note: "Continue year" },
           { year: "2021", href: "/app/index.html#/year/2021", note: "ATT year" }
         ]
       },

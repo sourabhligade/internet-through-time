@@ -292,21 +292,6 @@ const STAR = {
       await page.locator("[data-faceid-unlock]").click();
     },
   },
-  "itt19-disneyplus": {
-    incomplete: async (page) => {
-      await page.locator("[data-dplus-continue]").click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-dplus-req]").nth(0).check();
-      await page.locator("[data-dplus-req]").nth(1).check();
-      await page.locator('[data-dplus-profile="adult"]').click();
-      await page.locator("[data-dplus-add]").nth(0).click();
-      await page.locator("[data-dplus-add]").nth(1).click();
-      await page.locator('[data-dplus-profile="kids"]').click();
-      await page.locator('[data-dplus-profile="adult"]').click();
-      await page.locator("[data-dplus-continue]").click();
-    },
-  },
   "itt20-zoom": {
     incomplete: async (page) => {
       await page.locator("[data-zoom-leave]").click();
@@ -723,8 +708,8 @@ async function runDest(page, d) {
 
 test.describe("official 10 · every dest REAL", () => {
   test("every live official dest has a named whenKey and a file", () => {
-    // 2019–2021 are React doors. Their official saves are in the year mvp specs.
-    expect(DESTS.length, "official dests").toBeGreaterThanOrEqual(21 * 10);
+    // –2021 are React doors. Their official saves are in the year mvp specs.
+    expect(DESTS.length, "official dests").toBeGreaterThanOrEqual(19 * 10);
     const empty = DESTS.filter((d) => !d.whenKey);
     expect(empty, "empty whenKeys").toEqual([]);
   });

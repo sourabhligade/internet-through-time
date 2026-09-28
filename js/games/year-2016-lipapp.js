@@ -35,7 +35,7 @@
     },
     {
       "id": "tt",
-      "label": "TikTok 2018 (trap)",
+      "label": "TikTok  (trap)",
       "role": "trap",
       "trap": "later name"
     }

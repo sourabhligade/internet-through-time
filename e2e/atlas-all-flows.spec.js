@@ -11,19 +11,19 @@ const trio = require("../scripts/popular-3x3-sites.json");
 const OPEN = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003",
   "2004", "2005", "2006", "2007","2010", "2012",
-  "2013", "2014", "2016", "2017", "2019", "2020", "2021", "2022"
+  "2013", "2014", "2016", "2017", "", "2020", "2021", "2022"
 ];
 const WIPED = ["2015", "2023", "2024", "2025"];
 const LEAN = [
   "2007", "2010", "2012",
-  "2013", "2014", "2016", "2017", "2019", "2020", "2021", "2022"
+  "2013", "2014", "2016", "2017", "", "2020", "2021", "2022"
 ];
 const WINGS = {
   gray: ["1994", "1995", "1996"],
   bubble: ["1997", "1998", "1999", "2000"],
   rebuild: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"],
   phone: ["2010", "2012", "2013"],
-  stream: ["2014", "2016", "2017", "2019", "2020", "2021", "2022"]
+  stream: ["2014", "2016", "2017", "", "2020", "2021", "2022"]
 };
 /** @type {Record<string, RegExp>} */
 const GOLD = {
@@ -49,7 +49,7 @@ const GOLD = {
 
   "2016": /Instagram Stories/i,
   "2017": /Face ID|iPhone X/i,
-  "2019": /Disney\+/i,
+  "": /Disney\+/i,
   "2020": /Zoom|Leave/i,
   "2021": /ATT|Ask/i,
   "2022": /ChatGPT/i
@@ -253,7 +253,7 @@ test.describe("atlas hallway — all flows", () => {
     expect(nightHrefs.length).toBeGreaterThanOrEqual(5);
     for (const h of nightHrefs) await expectLive(page, h, "first-night");
 
-    await expect(page.locator('#atlas-spine [data-atlas-year="2019"]')).not.toHaveClass(/wiped/);
+    await expect(page.locator('#atlas-spine [data-atlas-year=""]')).not.toHaveClass(/wiped/);
     await expect(page.locator('#atlas-spine [data-atlas-year="2020"]')).not.toHaveClass(/wiped/);
     await expect(page.locator('#atlas-spine [data-atlas-year="2021"]')).not.toHaveClass(/wiped/);
     await expect(page.locator('#atlas-spine [data-atlas-year="2021"]')).toBeVisible();
@@ -278,12 +278,12 @@ test.describe("atlas hallway — all flows", () => {
     await expect(page.locator("#atlas-find-results")).toContainText(/No match/i);
   });
 
-  test("hash #year-2019 is live", async ({ page }) => {
-    await page.goto("/atlas/#year-2019");
+  test("hash #year- is live", async ({ page }) => {
+    await page.goto("/atlas/#year-");
     const panel = page.locator("#atlas-year");
-    await expect(page.locator('#atlas-spine [data-atlas-year="2019"]')).toHaveClass(/selected/);
-    await expect(page.locator('#atlas-spine [data-atlas-year="2019"]')).not.toHaveClass(/wiped/);
+    await expect(page.locator('#atlas-spine [data-atlas-year=""]')).toHaveClass(/selected/);
+    await expect(page.locator('#atlas-spine [data-atlas-year=""]')).not.toHaveClass(/wiped/);
     await expect(panel).toContainText(/Disney\+|Continue/i);
-    await expect(panel.locator("a", { hasText: /Enter 2019/ })).toBeVisible();
+    await expect(panel.locator("a", { hasText: /Enter / })).toBeVisible();
   });
 });

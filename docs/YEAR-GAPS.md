@@ -1,10 +1,10 @@
 # Year gaps — verified 2026-09-15
 
-**Live (2026-09-27):** Hub **24 years open**. **2015 wiped.** **2018 wiped.** **2017 / 2019–2021 are React doors** (0 HTML dest folders). Leftover-3× unique catalogs are **empty**. This file is a 2026-09-15 audit snapshot. Current dest-folder counts and doors: [`DISK-TRUTH.md`](DISK-TRUTH.md).
+**Live (2026-09-27):** Hub **24 years open**. **2015 wiped.** ** wiped.** **2017 / –2021 are React doors** (0 HTML dest folders). Leftover-3× unique catalogs are **empty**. This file is a 2026-09-15 audit snapshot. Current dest-folder counts and doors: [`DISK-TRUTH.md`](DISK-TRUTH.md).
 
 **Recheck 2026-09-20:** official 10 files exist for **2012 / 2013 / 2014** (`data-official-need` 10/10). §2 “trail 9 / Apple Pay missing” below is **historical**. **2022 dest folders 25** (not 19). Do not dest-farm to match old counts.
 
-**Implemented this pass:** 2012 trail n=10 (FB 1B already on disk) · 2013 trail n=10 (Touch ID already on disk) · 2014 trail n=10 (chat already on disk + new Apple Pay literacy dest, no checkout) · A CSS on 2007/2010//2012/2013/2021 · 2020 official dests 2–10 have `data-official-need` · 2017 WhatsApp bookmark/hint removed · checklist A3/A9 · 2019-READ-FIRST 38 dests · UNDONE dest counts.
+**Implemented this pass:** 2012 trail n=10 (FB 1B already on disk) · 2013 trail n=10 (Touch ID already on disk) · 2014 trail n=10 (chat already on disk + new Apple Pay literacy dest, no checkout) · A CSS on 2007/2010//2012/2013/2021 · 2020 official dests 2–10 have `data-official-need` · 2017 WhatsApp bookmark/hint removed · checklist A3/A9 · -READ-FIRST 38 dests · UNDONE dest counts.
 
 **Method (this file is only what the commands below proved):**
 
@@ -18,7 +18,7 @@
 8. `pages/home.html`, `about.html`, `map.html` checked for 1994–2022.
 9. Cross-read: `DISK-TRUTH.md`, `UNDONE.md`, `FLOW-IMPLEMENT-CHECKLIST.md` A3/A9, `LEFTOVER-3X-UNIQUE-CRITERIA.md` U9, year `*-READ-FIRST.md`, `2017-UNIQUE-FLOWS.md`, `2014-READ-FIRST.md` official-10 table.
 
-**Not a gap:** forests 1994–2006 leftover-2× on every dest (DISK-TRUTH). 2009 boarded. 2015 and 2018 wiped. 2023–2025 no tree. Leftover-3× unique catalogs are empty. Start-data stars + 6 items all resolve. About / home / map exist every live year.
+**Not a gap:** forests 1994–2006 leftover-2× on every dest (DISK-TRUTH). 2009 boarded. 2015 and  wiped. 2023–2025 no tree. Leftover-3× unique catalogs are empty. Start-data stars + 6 items all resolve. About / home / map exist every live year.
 
 ---
 
@@ -34,8 +34,8 @@
 | 2015 | **wiped** (2026-09-27) | — | off hub | — |
 | 2016 | **57** | **10** | IG Stories | none (catalog empty) |
 | 2017 | **React door** · 0 HTML dest folders | **10** | Face ID | leftover-20 on React rail |
-| 2018 | **wiped hub** · React hall off-hub | **10** | GDPR | leftover KEEP 11 on React rail |
-| 2019 | **React door** · 0 HTML dest folders | **10** | Disney+ | leftover-20 on React rail |
+|  | **wiped hub** · React hall off-hub | **10** | GDPR | leftover KEEP 11 on React rail |
+|  | **React door** · 0 HTML dest folders | **10** | Disney+ | leftover-20 on React rail |
 | 2020 | **React door** · 0 HTML dest folders | **10** | Zoom Leave | leftover extras in `year2020.js` |
 | 2021 | **React door** · 0 HTML dest folders | **10** | ATT Ask | leftover 3 on React rail |
 | 2022 | **25** | **10** | ChatGPT | none (catalog empty) |
@@ -87,15 +87,15 @@ Trail n=8. Checklist A3 `[x]` is **false** for 2014.
 
 `leftover-3x-unique.json` has **no `"2017"` key**. `2017-UNIQUE-FLOWS.md` §4: 10 official + 20 unique leftover dests. All 20 leftover folders exist (`ios11`, `pubgnote`, `cuphead`, … `hollowknight`). Not a missing dest. Gap is: leftover-3× unique e2e pack does not cover 2017 (by design of that map).
 
-### 2019 dest count
+###  dest count
 
-Dest-lock reverted: dest folders **170**. DISK-TRUTH / 2019-READ-FIRST dest-lock **reverted**.
+Dest-lock reverted: dest folders **170**. DISK-TRUTH / -READ-FIRST dest-lock **reverted**.
 
 ---
 
 ## 3. Official dests with a verb and no required field
 
-Lean-year HTML that has `data-official-verb` and **no** `data-official-need` (counted 2026-09-15; **stale vs Phase 1 2026-09-20** — lean doors 2010 / 2012 / 2016 / 2017 / 2019 / 2020 / 2021 / 2022 are **10/10** `data-official-need` on disk):
+Lean-year HTML that has `data-official-verb` and **no** `data-official-need` (counted 2026-09-15; **stale vs Phase 1 2026-09-20** — lean doors 2010 / 2012 / 2016 / 2017 /  / 2020 / 2021 / 2022 are **10/10** `data-official-need` on disk):
 
 | Year | Count | Examples |
 |------|------:|----------|
@@ -104,7 +104,7 @@ Lean-year HTML that has `data-official-verb` and **no** `data-official-need` (co
 | 2012 | 5 | wikipedia/sopa, pinterest, facebook, facebook/ipo, iphone/maps |
 | 2016 | 7 | pokemongo, windows10/end, vine/goodbye, facebook/reactions, iphone, snapchat/spectacles, whatsapp/e2e |
 | 2017 | 6 | vine/gone, wannacry, teams, switch, equifax, fortnite |
-| 2019 | 10 | arcade, windows10, stadia, chrome, playable/game, appletv, iphone11, tiktok, … |
+|  | 10 | arcade, windows10, stadia, chrome, playable/game, appletv, iphone11, tiktok, … |
 | **2020** | **9** | houseparty, discord, teams, classroom, netflix, tiktok, amongus, animalcrossing, playable/game — **only Zoom has `data-official-need`** |
 | 2021 | 10 | windows11, windows10, copilot, meta, flash, facebook, chrome, playable/game, … |
 
@@ -121,7 +121,7 @@ This is dest-true **thinness**, not a 404. 2020-READ-FIRST does not require a fi
 | 2007, 2010, 2012 | **9 each** — matches U9 (face visible) |
 | 2013 | **10** |
 | 2021 | **5** |
-| 2014, 2015, 2016, 2018, 2019, 2020, 2022 | **0** — all inside `details.itt-also-year` (clutter A fold). **Conflicts with U9** if the leftover dest is a leftover-3× unique dest. |
+| 2014, 2015, 2016, , , 2020, 2022 | **0** — all inside `details.itt-also-year` (clutter A fold). **Conflicts with U9** if the leftover dest is a leftover-3× unique dest. |
 
 Not a missing dest. It is a **law collision** (clutter A vs leftover-3× unique U9).
 
@@ -139,13 +139,13 @@ Current matrix dests by year (0 missing files):
 | 2010 | 1 |
 | 2013 | 45 |
 | 2017 | 2 |
-| 2019 | 19 |
+|  | 19 |
 | 2020 | 29 |
 | 2022 | 69 |
 
-**No rows** for , 2012, 2014, 2015, 2016, 2018, 2021. Those years’ leftover dests are leftover-3× unique (tested in `leftover-3x-unique.spec.js`), not leftover-2× dest-true. Not a 404. leftover-2× dest-true pack does not walk them.
+**No rows** for , 2012, 2014, 2015, 2016, , 2021. Those years’ leftover dests are leftover-3× unique (tested in `leftover-3x-unique.spec.js`), not leftover-2× dest-true. Not a 404. leftover-2× dest-true pack does not walk them.
 
-2019 rows = 19 extra leftover dests (`cnil`, `ftc`, `ios13`, …). Each still has **two** `data-lo-panel` (lx + d2). First panel is first paint. That is factory clone leftover-2×, not dest-unique leftover (U2).
+ rows = 19 extra leftover dests (`cnil`, `ftc`, `ios13`, …). Each still has **two** `data-lo-panel` (lx + d2). First panel is first paint. That is factory clone leftover-2×, not dest-unique leftover (U2).
 
 ---
 
@@ -162,8 +162,8 @@ These `page.goto` paths **do not exist** on disk. Specs `test.skip` when `destOn
 | `year-2010-plus-3x-unique.spec.js` | `/years/2010/sites/instant/index.html` |
 | `2012-flows.spec.js` | `/years/2012/sites/vinewait/index.html` |
 | `2014-4x-flows.spec.js` | `/years/2014/sites/oculus/index.html` (Serial dest also gone) |
-| `2013-2018-leftover-dest-true.spec.js` | `/years/2019/sites/fortnite/index.html` **on disk** (dest-lock reverted) |
-| `2017-2019-deepen-theater.spec.js` | 2017 Zoom leftover dest is `zoom17` **on disk** |
+| `2013--leftover-dest-true.spec.js` | `/years//sites/fortnite/index.html` **on disk** (dest-lock reverted) |
+| `2017--deepen-theater.spec.js` | 2017 Zoom leftover dest is `zoom17` **on disk** |
 
 `js/config/2017.js` `locationHints` `sites/whatsapp/index.html` **exists** after dest-lock revert.
 
@@ -177,11 +177,11 @@ These `page.goto` paths **do not exist** on disk. Specs `test.skip` when `destOn
 
 `period-YYYY.css` contains the A hide list (`itt-layer-assess` / playable / felt-trail) and `layers.js` skips assess inject for:
 
-**2014, 2015, 2016, 2017, 2018, 2019, 2020, 2022.**
+**2014, 2015, 2016, 2017, , , 2020, 2022.**
 
 Not in that list: **2007, 2010, 2012, 2013, 2021.**
 
-GitHub **#11–#14** (2018 / 2017 / 2016 / 2015): A CSS + leftover-3× Also-fold is **already on this tree**. Dest-lock 2015–2018 **reverted**. Tickets close as shipped, not dest-lock.
+GitHub **#11–#14** ( / 2017 / 2016 / 2015): A CSS + leftover-3× Also-fold is **already on this tree**. Dest-lock 2015– **reverted**. Tickets close as shipped, not dest-lock.
 
 ---
 
@@ -194,8 +194,8 @@ GitHub **#11–#14** (2018 / 2017 / 2016 / 2015): A CSS + leftover-3× Also-fold
 | **2014** | Official trail **8**. **Apple Pay dest missing.** WhatsApp `chat.html` exists, not on trail. leftover-4× e2e still names Oculus/Serial (deleted). |
 | **2007, 2010, ** | No A CSS. leftover-3× unique dests first paint (U9-legal). 2010 e2e still lists dest-lock dests (skipped). |
 | **2017** | Dead `locationHints` → `sites/whatsapp/index.html`. No leftover-3× unique map (20 unique leftover dests exist). 6 official dests have no `data-official-need`. |
-| **2018** | leftover-3× unique = 3 (I/O stop). A already applied. |
-| **2019** | Dest-lock reverted: dest folders **170**. |
+| **** | leftover-3× unique = 3 (I/O stop). A already applied. |
+| **** | Dest-lock reverted: dest folders **170**. |
 | **2020** | Official dests 2–10 have **no required field**. 29 leftover dests still show leftover-2× first paint. |
 | **2021** | leftover-3× unique = 5 (stop). No A CSS. leftover-3× first paint on 5 dests. |
 | **2022** | Start `#itt-exhibit-foot` layout still contested in the visitor browser (light/dark + mid-pane). Dest set complete. |

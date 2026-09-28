@@ -168,11 +168,11 @@
           var st = document.createElement("link");
           st.id = "itt-dest-page-css";
           st.rel = "stylesheet";
-          var href = "../../../css/itt-dest-page.css?v=20260927dest4";
+          var href = "../../../css/itt-dest-page.css?v=20260928dest6";
           try {
             var path = location.pathname || "";
             var yi = path.indexOf("/years/");
-            if (yi !== -1) href = path.slice(0, yi) + "/css/itt-dest-page.css?v=20260927dest4";
+            if (yi !== -1) href = path.slice(0, yi) + "/css/itt-dest-page.css?v=20260928dest6";
           } catch (eHref) { /* */ }
           st.href = href;
           (document.head || document.documentElement).appendChild(st);

@@ -21,8 +21,7 @@ STAR = {
     "2014": ("WhatsApp Install", "itt14-wa-install"),
     "2015": ("Periscope Go LIVE", "itt15-periscope"),
     "2016": ("IG Stories", "itt16-ig-stories"),
-    "2018": ("GDPR Manage", "itt18-gdpr"),
-    "2019": ("Disney+ Continue", "itt19-disneyplus"),
+    "": ("Disney+ Continue", "itt19-disneyplus"),
     "2021": ("ATT Ask", "itt21-att"),
     "2020": ("Zoom Leave", "itt20-zoom"),
 }
@@ -65,12 +64,12 @@ UNIQUE = {
         "second": ["youtube", "alphago", "assistant"],
         "third": ["dyn", "fblive", "moments"],
     },
-    "2018": {
+    "": {
         "first": ["reddit", "youtube", "wikipedia"],
         "second": [],
         "third": [],
     },
-    "2019": {
+    "": {
         "first": ["amazon", "facebook", "google"],
         "second": ["instagram", "nyt", "oculusquest"],
         "third": ["twitter", "yahoo", "youtube"],
@@ -519,9 +518,9 @@ def main() -> None:
         {"2010", "2012", "2014", "2015"},
     )
     rewrite_matrix(
-        ROOT / "e2e" / "2016-2019-leftover-3x.matrix.json",
+        ROOT / "e2e" / "2016--leftover-3x.matrix.json",
         all_rows,
-        {"2016", "2017", "2018", "2019"},
+        {"2016", "2017", "", ""},
     )
     (ROOT / "e2e" / "leftover-3x-unique.matrix.json").write_text(
         json.dumps(all_rows, indent=2) + "\n", encoding="utf-8"

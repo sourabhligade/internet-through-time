@@ -2,7 +2,7 @@
  * Shared year-extras kit — storage, feedback, literacy gates.
  * Year files own product boots only. Load before year-*-extras.js.
  *
- *   var YX = ITT.YearExtras.forYear("2019");
+ *   var YX = ITT.YearExtras.forYear("");
  *   YX.key("disneyplus") → itt19-disneyplus
  */
 (function (global) {
@@ -87,7 +87,7 @@
       revealNextFlow(doc);
     }
 
-    /** Dest-fill help/faq/legal pages — skip product bootAll (2018 lag). */
+    /** Dest-fill help/faq/legal pages — skip product bootAll ( lag). */
     function isFillerPage(doc) {
       return ITT.YearExtras.isFillerPage(doc);
     }

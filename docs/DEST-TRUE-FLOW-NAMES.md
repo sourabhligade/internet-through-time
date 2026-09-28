@@ -659,7 +659,7 @@
 | 29 | Getting Over It | `gettingoverit` | leftover-20 extra | **KEEP** |
 | 30 | Hollow Knight | `hollowknight` | leftover-20 extra | **KEEP** |
 
-## 2018 · star GDPR Manage · 44 dest-true flows
+##  · star GDPR Manage · 44 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
@@ -708,7 +708,7 @@
 | 43 | Stream leftover | `espnplus` | leftover dest | **KEEP** |
 | 44 | Go live leftover | `caffeine` | leftover dest | **KEEP** |
 
-## 2019 · star Disney+ Continue · 19 dest-true flows
+##  · star Disney+ Continue · 19 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
 |---|-----------|------|-------|---------|
@@ -1318,54 +1318,54 @@
 | 2017 | `cloudbleed` | leftover-20 extra | Cloudbleed |
 | 2017 | `gettingoverit` | leftover-20 extra | Getting Over It |
 | 2017 | `hollowknight` | leftover-20 extra | Hollow Knight |
-| 2018 | `tiktok` | official 10 | TikTok For You |
-| 2018 | `trust` | official 10 | Hearing |
-| 2018 | `instagram` | official 10 | IGTV |
-| 2018 | `chrome` | official 10 | Chrome 68 |
-| 2018 | `homepod` | official 10 | HomePod |
-| 2018 | `spectre` | official 10 | Spectre |
-| 2018 | `fortnite` | official 10 | Fortnite on Switch |
-| 2018 | `github` | official 10 | GitHub $7.5B |
-| 2018 | `facebook` | leftover dest | Scroll leftover |
-| 2018 | `twitter` | leftover dest | Tweet leftover |
-| 2018 | `amazon` | leftover dest | Browse leftover |
-| 2018 | `google` | leftover dest | Search leftover |
-| 2018 | `yahoo` | leftover dest | Portal leftover |
-| 2018 | `baidu` | leftover dest | Search leftover |
-| 2018 | `yandex` | leftover dest | Search leftover |
-| 2018 | `netflix` | leftover dest | Play leftover |
-| 2018 | `snapchat` | leftover dest | Snap leftover |
-| 2018 | `discord` | leftover dest | Join leftover |
-| 2018 | `gplusgone` | leftover dest | Sunset leftover |
-| 2018 | `androidpie` | leftover dest | Gesture leftover |
-| 2018 | `ios12` | leftover dest | Screen Time leftover |
-| 2018 | `spotify` | leftover dest | Play leftover |
-| 2018 | `twitch` | leftover dest | Watch leftover |
-| 2018 | `whatsapp` | leftover dest | Chat leftover |
-| 2018 | `linkedin` | leftover dest | Connect leftover |
-| 2018 | `pinterest` | leftover dest | Pin leftover |
-| 2018 | `steam` | leftover dest | Library leftover |
-| 2018 | `wechat` | leftover dest | Chat leftover |
-| 2018 | `tinder` | leftover dest | Swipe leftover |
-| 2018 | `uber` | leftover dest | Ride leftover |
-| 2018 | `airbnb` | leftover dest | Book leftover |
-| 2018 | `pubg` | leftover dest | Drop leftover |
-| 2018 | `rdr2` | leftover dest | Ride leftover |
-| 2018 | `mojave` | leftover dest | Update leftover |
-| 2018 | `onedot` | leftover dest | Resolve leftover |
-| 2018 | `epicstore` | leftover dest | Install leftover |
-| 2018 | `nso` | leftover dest | Subscribe leftover |
-| 2018 | `espnplus` | leftover dest | Stream leftover |
-| 2018 | `caffeine` | leftover dest | Go live leftover |
-| 2019 | `disneyplus` | official 10 | Disney+ Continue |
-| 2019 | `tiktok` | official 10 | TikTok For You |
-| 2019 | `arcade` | official 10 | Apple Arcade |
-| 2019 | `appletv` | official 10 | Apple TV+ |
-| 2019 | `stadia` | official 10 | Stadia |
-| 2019 | `iphone` | official 10 | iPhone 11 |
-| 2019 | `airpodspro` | official 10 | AirPods Pro |
-| 2019 | `nyt` | leftover-3× unique | Headline leftover |
-| 2019 | `yahoo` | leftover-3× unique | Portal leftover |
+|  | `tiktok` | official 10 | TikTok For You |
+|  | `trust` | official 10 | Hearing |
+|  | `instagram` | official 10 | IGTV |
+|  | `chrome` | official 10 | Chrome 68 |
+|  | `homepod` | official 10 | HomePod |
+|  | `spectre` | official 10 | Spectre |
+|  | `fortnite` | official 10 | Fortnite on Switch |
+|  | `github` | official 10 | GitHub $7.5B |
+|  | `facebook` | leftover dest | Scroll leftover |
+|  | `twitter` | leftover dest | Tweet leftover |
+|  | `amazon` | leftover dest | Browse leftover |
+|  | `google` | leftover dest | Search leftover |
+|  | `yahoo` | leftover dest | Portal leftover |
+|  | `baidu` | leftover dest | Search leftover |
+|  | `yandex` | leftover dest | Search leftover |
+|  | `netflix` | leftover dest | Play leftover |
+|  | `snapchat` | leftover dest | Snap leftover |
+|  | `discord` | leftover dest | Join leftover |
+|  | `gplusgone` | leftover dest | Sunset leftover |
+|  | `androidpie` | leftover dest | Gesture leftover |
+|  | `ios12` | leftover dest | Screen Time leftover |
+|  | `spotify` | leftover dest | Play leftover |
+|  | `twitch` | leftover dest | Watch leftover |
+|  | `whatsapp` | leftover dest | Chat leftover |
+|  | `linkedin` | leftover dest | Connect leftover |
+|  | `pinterest` | leftover dest | Pin leftover |
+|  | `steam` | leftover dest | Library leftover |
+|  | `wechat` | leftover dest | Chat leftover |
+|  | `tinder` | leftover dest | Swipe leftover |
+|  | `uber` | leftover dest | Ride leftover |
+|  | `airbnb` | leftover dest | Book leftover |
+|  | `pubg` | leftover dest | Drop leftover |
+|  | `rdr2` | leftover dest | Ride leftover |
+|  | `mojave` | leftover dest | Update leftover |
+|  | `onedot` | leftover dest | Resolve leftover |
+|  | `epicstore` | leftover dest | Install leftover |
+|  | `nso` | leftover dest | Subscribe leftover |
+|  | `espnplus` | leftover dest | Stream leftover |
+|  | `caffeine` | leftover dest | Go live leftover |
+|  | `disneyplus` | official 10 | Disney+ Continue |
+|  | `tiktok` | official 10 | TikTok For You |
+|  | `arcade` | official 10 | Apple Arcade |
+|  | `appletv` | official 10 | Apple TV+ |
+|  | `stadia` | official 10 | Stadia |
+|  | `iphone` | official 10 | iPhone 11 |
+|  | `airpodspro` | official 10 | AirPods Pro |
+|  | `nyt` | leftover-3× unique | Headline leftover |
+|  | `yahoo` | leftover-3× unique | Portal leftover |
 | 2020 | `discord` | official 10 | Discord leftover |
 | 2020 | `teams` | official 10 | Teams leftover |
 | 2020 | `classroom` | official 10 | Classroom leftover |

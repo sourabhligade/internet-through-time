@@ -30,8 +30,8 @@
     "2015": { machine: "Windows 7 residual · Chrome habit", star: "Periscope Go LIVE", starHref: "sites/periscope/index.html", game: "" },
     "2016": { machine: "Windows 10 rising · Chrome habit", star: "Instagram Stories", starHref: "sites/instagram/stories.html", game: "" },
     "2017": { machine: "Windows 10 · Chrome habit", star: "Face ID", starHref: "sites/iphone/x.html", game: "" },
-    "2018": { machine: "Windows 10 · Chrome habit", star: "GDPR Manage", starHref: "sites/gdpr/index.html", game: "" },
-    "2019": { machine: "Windows 10 · Chrome habit", star: "Disney+ Continue", starHref: "sites/disneyplus/home.html", game: "" },
+    "": { machine: "Windows 10 · Chrome habit", star: "GDPR Manage", starHref: "sites/gdpr/index.html", game: "" },
+    "": { machine: "Windows 10 · Chrome habit", star: "Disney+ Continue", starHref: "sites/disneyplus/home.html", game: "" },
     "2020": { machine: "Windows 10 · Chrome habit", star: "Zoom Leave", starHref: "sites/zoom/meeting.html", game: "" },
     "2021": { machine: "Windows 10 · Chrome habit", star: "ATT Ask", starHref: "sites/att/index.html", game: "" }
   };
@@ -118,7 +118,7 @@
   function legendHtml(y, here) {
     var webHref = hrefFor(y, "pages/home.html");
     var gameRel =
-      String(y) === "2018" || String(y) === "2013" || String(y) === "2014"
+      String(y) === "" || String(y) === "2013" || String(y) === "2014"
         ? "sites/playable/game.html"
         : "sites/playable/index.html";
     var gameHref = hrefFor(y, gameRel);
@@ -236,7 +236,7 @@
       path = "";
     }
     if (!/\/pages\/home\.html$/.test(path)) return;
-    if (["2007", "2010", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"].indexOf(String(y)) !== -1) return;
+    if (["2007", "2010", "2012", "2013", "2014", "2015", "2016", "2017", "", "", "2020", "2021", "2022"].indexOf(String(y)) !== -1) return;
     if (doc.getElementById("itt-layer-assess")) return;
     var meta = META[y] || {};
     var links = webLinks(y);

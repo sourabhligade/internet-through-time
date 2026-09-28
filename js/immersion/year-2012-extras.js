@@ -436,7 +436,7 @@
     bootField(doc, "[data-tumblr-go]", "[data-tumblr-post]", "[data-tumblr-status]", "tumblr");
     bootField(doc, "[data-bf-go]", "[data-bf-list]", "[data-bf-status]", "buzzfeed");
     bootSnap(doc);
-    bootPop3Trap(doc, "[data-rd12-trap]", "2018 redesign is the trap. Never writes.");
+    bootPop3Trap(doc, "[data-rd12-trap]", " redesign is the trap. Never writes.");
     bootGuess(doc);
   }
 

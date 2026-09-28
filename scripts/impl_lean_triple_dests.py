@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Legal 2015–2020 3× leftover dests: 2016 +32 cap, 2018 +13 cap.
+"""Legal 2015–2020 3× leftover dests: 2016 +32 cap,  +13 cap.
 
 Famous year-true leftover dests only. Cap is not a quota. Never overwrite.
 Never leftover-3× unique. Never official keys or the star.
-2015 / 2017 / 2019 / 2020 dest-farm banned — not in DESTS.
+2015 / 2017 /  / 2020 dest-farm banned — not in DESTS.
 """
 from __future__ import annotations
 
@@ -57,7 +57,7 @@ DESTS: dict[int, list[tuple[str, str, str, str, str]]] = {
         ("taobao", "Taobao", "Shop leftover", "Hosting.com 2016 global top-10 mass.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
         ("ebay", "eBay", "Bid leftover", "eBay 2016 year-mass.", "https://en.wikipedia.org/wiki/EBay"),
         ("etsy", "Etsy", "Shop leftover", "Etsy 2016 year-mass.", "https://en.wikipedia.org/wiki/Etsy"),
-        ("mastodon", "Mastodon", "Toot leftover", "Mastodon public October 2016. Mass is 2017/2022 trap.", "https://blog.joinmastodon.org/2018/10/mastodons-2-year-anniversary/"),
+        ("mastodon", "Mastodon", "Toot leftover", "Mastodon public October 2016. Mass is 2017/2022 trap.", "https://blog.joinmastodon.org//10/mastodons-2-year-anniversary/"),
         ("ringer", "The Ringer", "Read leftover", "The Ringer launched 2016.", "https://en.wikipedia.org/wiki/The_Ringer_(website)"),
         ("athletic", "The Athletic", "Subscribe leftover", "The Athletic launched January 2016 Chicago.", "https://en.wikipedia.org/wiki/The_Athletic"),
         ("peach", "Peach", "Share leftover", "Peach released 7 Jan 2016.", "https://en.wikipedia.org/wiki/Peach_(app)"),
@@ -68,25 +68,25 @@ DESTS: dict[int, list[tuple[str, str, str, str, str]]] = {
         ("miitomo", "Miitomo", "Mii leftover", "Miitomo JP 17 Mar / US 31 Mar 2016.", "https://en.wikipedia.org/wiki/Miitomo"),
         ("iana", "IANA", "Transition leftover", "IANA stewardship transition 1 Oct 2016.", "https://en.wikipedia.org/wiki/IANA_stewardship_transition"),
     ],
-    2018: [
-        ("spotify", "Spotify", "Play leftover", "Spotify 2018 year-mass.", "https://en.wikipedia.org/wiki/Spotify"),
-        ("twitch", "Twitch", "Watch leftover", "Twitch 2018 year-mass.", "https://en.wikipedia.org/wiki/Twitch_(service)"),
-        ("whatsapp", "WhatsApp", "Chat leftover", "WhatsApp 2018 year-mass.", "https://en.wikipedia.org/wiki/WhatsApp"),
-        ("linkedin", "LinkedIn", "Connect leftover", "LinkedIn 2018 year-mass.", "https://en.wikipedia.org/wiki/LinkedIn"),
-        ("pinterest", "Pinterest", "Pin leftover", "Pinterest 2018 year-mass.", "https://en.wikipedia.org/wiki/Pinterest"),
-        ("steam", "Steam", "Library leftover", "Steam 2018 year-mass.", "https://en.wikipedia.org/wiki/Steam_(service)"),
-        ("wechat", "WeChat", "Chat leftover", "WeChat 2018 year-mass.", "https://en.wikipedia.org/wiki/WeChat"),
-        ("tinder", "Tinder", "Swipe leftover", "Tinder 2018 year-mass.", "https://en.wikipedia.org/wiki/Tinder_(app)"),
-        ("uber", "Uber", "Ride leftover", "Uber 2018 year-mass.", "https://en.wikipedia.org/wiki/Uber"),
-        ("airbnb", "Airbnb", "Book leftover", "Airbnb 2018 year-mass.", "https://en.wikipedia.org/wiki/Airbnb"),
-        ("pubg", "PUBG", "Drop leftover", "PUBG 2018 battle-royale mass.", "https://en.wikipedia.org/wiki/PlayerUnknown%27s_Battlegrounds"),
-        ("rdr2", "Red Dead Redemption 2", "Ride leftover", "Red Dead Redemption 2 launched 26 Oct 2018.", "https://en.wikipedia.org/wiki/Red_Dead_Redemption_2"),
-        ("mojave", "macOS Mojave", "Update leftover", "macOS Mojave released 24 Sep 2018.", "https://en.wikipedia.org/wiki/MacOS_Mojave"),
-        ("onedot", "1.1.1.1", "Resolve leftover", "Cloudflare 1.1.1.1 public DNS 1 Apr 2018.", "https://blog.cloudflare.com/announcing-1111/"),
-        ("epicstore", "Epic Games Store", "Install leftover", "Epic Games Store launched 6 Dec 2018. Fortnite dest is official.", "https://en.wikipedia.org/wiki/Epic_Games_Store"),
-        ("nso", "Nintendo Switch Online", "Subscribe leftover", "Nintendo Switch Online launched 18 Sep 2018.", "https://en.wikipedia.org/wiki/Nintendo_Switch_Online"),
-        ("espnplus", "ESPN+", "Stream leftover", "ESPN+ launched 12 Apr 2018.", "https://en.wikipedia.org/wiki/ESPN%2B"),
-        ("caffeine", "Caffeine", "Go live leftover", "Caffeine launched 2018. Discord dest is leftover dest.", "https://en.wikipedia.org/wiki/Caffeine_(service)"),
+    : [
+        ("spotify", "Spotify", "Play leftover", "Spotify  year-mass.", "https://en.wikipedia.org/wiki/Spotify"),
+        ("twitch", "Twitch", "Watch leftover", "Twitch  year-mass.", "https://en.wikipedia.org/wiki/Twitch_(service)"),
+        ("whatsapp", "WhatsApp", "Chat leftover", "WhatsApp  year-mass.", "https://en.wikipedia.org/wiki/WhatsApp"),
+        ("linkedin", "LinkedIn", "Connect leftover", "LinkedIn  year-mass.", "https://en.wikipedia.org/wiki/LinkedIn"),
+        ("pinterest", "Pinterest", "Pin leftover", "Pinterest  year-mass.", "https://en.wikipedia.org/wiki/Pinterest"),
+        ("steam", "Steam", "Library leftover", "Steam  year-mass.", "https://en.wikipedia.org/wiki/Steam_(service)"),
+        ("wechat", "WeChat", "Chat leftover", "WeChat  year-mass.", "https://en.wikipedia.org/wiki/WeChat"),
+        ("tinder", "Tinder", "Swipe leftover", "Tinder  year-mass.", "https://en.wikipedia.org/wiki/Tinder_(app)"),
+        ("uber", "Uber", "Ride leftover", "Uber  year-mass.", "https://en.wikipedia.org/wiki/Uber"),
+        ("airbnb", "Airbnb", "Book leftover", "Airbnb  year-mass.", "https://en.wikipedia.org/wiki/Airbnb"),
+        ("pubg", "PUBG", "Drop leftover", "PUBG  battle-royale mass.", "https://en.wikipedia.org/wiki/PlayerUnknown%27s_Battlegrounds"),
+        ("rdr2", "Red Dead Redemption 2", "Ride leftover", "Red Dead Redemption 2 launched 26 Oct .", "https://en.wikipedia.org/wiki/Red_Dead_Redemption_2"),
+        ("mojave", "macOS Mojave", "Update leftover", "macOS Mojave released 24 Sep .", "https://en.wikipedia.org/wiki/MacOS_Mojave"),
+        ("onedot", "1.1.1.1", "Resolve leftover", "Cloudflare 1.1.1.1 public DNS 1 Apr .", "https://blog.cloudflare.com/announcing-1111/"),
+        ("epicstore", "Epic Games Store", "Install leftover", "Epic Games Store launched 6 Dec . Fortnite dest is official.", "https://en.wikipedia.org/wiki/Epic_Games_Store"),
+        ("nso", "Nintendo Switch Online", "Subscribe leftover", "Nintendo Switch Online launched 18 Sep .", "https://en.wikipedia.org/wiki/Nintendo_Switch_Online"),
+        ("espnplus", "ESPN+", "Stream leftover", "ESPN+ launched 12 Apr .", "https://en.wikipedia.org/wiki/ESPN%2B"),
+        ("caffeine", "Caffeine", "Go live leftover", "Caffeine launched . Discord dest is leftover dest.", "https://en.wikipedia.org/wiki/Caffeine_(service)"),
     ],
 }
 

@@ -242,7 +242,6 @@ test.describe("leftover official · disk + trail", () => {
       "itt16-ig-stories",
       "itt17-faceid",
       "itt18-gdpr",
-      "itt19-disneyplus",
       "itt20-zoom",
     ]);
     const wiped = new Set(["2025"]);

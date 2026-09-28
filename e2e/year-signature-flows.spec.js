@@ -787,10 +787,10 @@ test.describe('year-signature 2017', () => {
   });
 });
 
-test.describe('year-signature 2019', () => {
+test.describe('year-signature ', () => {
   test('Disney+ Who’s watching REAL → itt19-disneyplus', async ({ page }) => {
-    skipIfWiped('2019');
-    await enterYear(page, '2019');
+    skipIfWiped('');
+    await enterYear(page, '');
     await page.evaluate(() => {
       try {
         localStorage.removeItem('itt19-disneyplus');
@@ -798,7 +798,7 @@ test.describe('year-signature 2019', () => {
         /* */
       }
     });
-    await goImmersion(page, '2019', 'sites/disneyplus/home.html');
+    await goImmersion(page, '', 'sites/disneyplus/home.html');
     const frame = contentFrame(page);
     await frame.locator('[data-dplus-continue]').click();
     expect(await page.evaluate(() => localStorage.getItem('itt19-disneyplus'))).toBeFalsy();

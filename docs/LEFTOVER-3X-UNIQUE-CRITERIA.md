@@ -8,7 +8,7 @@
 **Template:** [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) — 30 unique dests, 30 unique verbs, 30 unique keys.  
 **I/O:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).  
 **Mock:** `scripts/audit-mock-flows.js` — `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` fail.  
-**Years:** ship years **1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022**. ** wiped.** **2009 boarded.** **2023–2025 wiped.**
+**Years:** ship years **1994–2007 + 2010 + 2012–2014 + 2016–2017 + –2022**. ** wiped.** **2009 boarded.** **2023–2025 wiped.**
 
 Leftover-3× here means **first / second / third leftover dests**, not three machines on one dest. Counting `pop` + `pop2` + `pop3` on Pizza Hut is **not** unique.
 
@@ -47,7 +47,7 @@ A leftover-3× flow **fails** if any row is N. One miss is a fail.
 | **U8** | Trap | Official-as-gold / neighbor year never writes leftover | Trap = save |
 | **U9** | Fold | Official dest leftover-3× hidden unless `?deep=1` · leftover dest face visible without `?deep=1` · Starting Point leftover-3× not first paint | Yellow leftover-3× on GDPR first paint · leftover dest face folded |
 | **U10** | No invented pixels | failed-final / capture-cite | AI brand mark |
-| **U11** | Year lock | That year’s products only | 2018 TikTok US as 2017 leftover · ChatGPT dest in 2021 · Reels as 2018 gold |
+| **U11** | Year lock | That year’s products only |  TikTok US as 2017 leftover · ChatGPT dest in 2021 · Reels as  gold |
 | **M1** | Not `DEST_FIELD` | No factory dest-field plaque as the leftover-3× save | Period note + theater check + `data-dest-field` + Save |
 | **M2** | Not `WEAK_REAL` | ≥2 required ticks · save is not “I saw / I watched” | `data-min-req` < 2 |
 | **M3** | Not `HASH_CTA` | Action has a `data-*` hook | `href="#"` action word |
@@ -73,7 +73,7 @@ Do **not** dest-farm to hit the count. Prefer dests **already on disk**. If a ye
 
 2017 already has **30 unique dests** (10 official + 20 leftover). That map wins for 2017 leftover uniqueness. Leftover-3× first/third on 2017 that reuse official dests or those 20 leftover dests **fail U1 / U4**. Do not add a second leftover museum on top of the 30.
 
-Second strip is **not named** as unique dests (`e2e/2013-2018-leftover-dest-true.spec.js`: “Second leftover-3× strip is not named”). Stacked `pop2` is workshop.
+Second strip is **not named** as unique dests (`e2e/2013--leftover-dest-true.spec.js`: “Second leftover-3× strip is not named”). Stacked `pop2` is workshop.
 
 ---
 
@@ -95,8 +95,8 @@ Catalogs: `scripts/popular-3x-sites.json` (first) · `scripts/popular-3x3-sites.
 | **2015** | 213 | 3 | 3 | 3 | **Pass 9** · instagram / spotify / netflix · meerkat / applemusicsub / win10get · vine / echo / youtube |
 | **2016** | 32 | 3 | 3 | 3 | **Pass 9** · slack / reddit / netflix · youtube / alphago / assistant · dyn / fblive / moments |
 | **2017** | 222 | — | — | — | **Not leftover-3×.** Unique leftover-20 already shipped. Do not add a second leftover-3× unique dest-true map. |
-| **2018** | 13 | **3** | 0 | 0 | **First 3 only** · reddit / youtube / wikipedia. Cannot pass 9 without new dests. **Stop.** |
-| **2019** | 170 | 3 | 3 | 3 | **Pass 9** · amazon / facebook / google · instagram / nyt / oculusquest · twitter / yahoo / youtube |
+| **** | 13 | **3** | 0 | 0 | **First 3 only** · reddit / youtube / wikipedia. Cannot pass 9 without new dests. **Stop.** |
+| **** | 170 | 3 | 3 | 3 | **Pass 9** · amazon / facebook / google · instagram / nyt / oculusquest · twitter / yahoo / youtube |
 | **2020** | 38 | 3 | 3 | 3 | **Pass 9** · amazon / facebook / google · instagram / youtube / slack · reddit / wikipedia / nyt · live lean door (Zoom Leave) |
 | **2021** | 15 | 3 | 2 | 0 | **5 leftover dests** · amazon / google / instagram · twitter / youtube. Cannot pass 9. **Stop.** |
 | **2022** | 19 | 3 | 3 | 3 | **Pass 9** · amazon / google / instagram · facebook / youtube / reddit · wikipedia / netflix / nyt · dest-true dests on disk · map [`2022-LEFTOVER-3X-UNIQUE.md`](2022-LEFTOVER-3X-UNIQUE.md) |
@@ -113,7 +113,7 @@ Do not pick the dests in this file unless a later implement pass is named.
 |------|:--:|------|
 | 2013 | **Yes — shipped 9** | first `askfm` `whisper` `youtube` · second `chrome` `medium` `yikyak` · third `reddit` `facebook` `twitter` |
 | 2017 | Use the **existing 20** leftover dests. Do not add leftover-3× dests. | [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) §4.2 |
-| 2018 | **No** | 13 dests = official 10 folders + first 3. Third is official. Stop. |
+|  | **No** | 13 dests = official 10 folders + first 3. Third is official. Stop. |
 | 2021 | **No** | 5 leftover dest folders shipped as leftover-3× first 3 + second 2. Stop. |
 | 2022 | **Yes — shipped 9** | dest-true dests already on disk. Unique leftover-20 is not this pass. Map [`2022-LEFTOVER-3X-UNIQUE.md`](2022-LEFTOVER-3X-UNIQUE.md). |
 | Forests 1994–2006 | Capacity yes. Unique leftover-3×n **not the forest job.** | Forests stay dense. Stacked first+second+third is workshop. Do not dest-lock forests. |
@@ -136,7 +136,7 @@ Visitor leftover dest (not official, not Starting Point):
 
 **Fail look:** three cream boxes on one dest (1994 Pizza Hut). Dashed leftover-2× `lx`/`d2` under leftover-3× (2013 Ask.fm) is leftover-2× warehouse, not a second leftover-3× dest.
 
-Official dest leftover-3× stays workshop (`?deep=1`). 2018 GDPR first paint is the cookie banner, not a cream leftover-3× box.
+Official dest leftover-3× stays workshop (`?deep=1`).  GDPR first paint is the cookie banner, not a cream leftover-3× box.
 
 Starting Point leftover-3× strips (`.itt-pop3x`) fold into **Also this year**. Not first paint.
 
@@ -152,11 +152,11 @@ Do not skip ahead to dest-farm. Do not invent dests.
 | **1** | Treat stacked `pop`/`pop2`/`pop3` and official-dest leftover-3× as workshop | **Done** · forests stay stacked workshop |
 | **2** | 2017 leftover uniqueness stays the 30 dests | **Done** · leftover-3× not a second map |
 | **3** | 2013 unique leftover-3×n = 9 dests | **Done** · first `askfm` `whisper` `youtube` · second `chrome` `medium` `yikyak` · third `reddit` `facebook` `twitter` |
-| **4** | 2018 first 3 stay leftover dests. Third stays official workshop. **Do not add dests** | **Done** · 13 dest folders unchanged |
+| **4** |  first 3 stay leftover dests. Third stays official workshop. **Do not add dests** | **Done** · 13 dest folders unchanged |
 | **5** | 2021 leftover dests that exist (5) · 2022 leftover-3× unique dest-true dests **9** on disk | **Done** · no invented dests · map [`2022-LEFTOVER-3X-UNIQUE.md`](2022-LEFTOVER-3X-UNIQUE.md) |
 | **6** | Mock gate stays red on `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` | **0** fail · PACK warn |
 | **7** | e2e unique leftover dest empty never writes · complete writes **that** leftover key · never star | **Done** · `e2e/leftover-3x-unique.spec.js` |
-| **H** | Dest-lock only where already allowed | Not 2013 / 2018 / 2022 · not forests · not 2009 |
+| **H** | Dest-lock only where already allowed | Not 2013 /  / 2022 · not forests · not 2009 |
 
 Implement leftover-3× unique dests **only when named**. Criteria is not a license to add rooms.
 
@@ -168,8 +168,8 @@ Implement leftover-3× unique dests **only when named**. Criteria is not a licen
 - Use `*-d2` / `lx` / leftover-2× warehouse as leftover-3× unique flows.
 - Count official dest leftover-3× (`?deep=1`) as leftover dests.
 - Write a 2022 unique leftover-20 dest list in this file. Leftover-3× unique dest-true dests 9 already ship.
-- Add dests to 2018 or 2021 to “make 9.”
-- Dest-lock 2013 / 2018 / 2022.
+- Add dests to  or 2021 to “make 9.”
+- Dest-lock 2013 /  / 2022.
 - Dest-lock forests 1994–2006.
 - Restore 2009 as playable · restore 2023+.
 - Invent brand pixels.

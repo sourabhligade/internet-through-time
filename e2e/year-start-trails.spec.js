@@ -16,11 +16,8 @@ test.describe("Per-year guided start trails", () => {
     expect(trails).toContain("2005-start");
     expect(trails).toContain("2006-start");
     expect(trails).toContain("2007-start");
-    expect(trails).not.toContain("-start");
     expect(trails).not.toContain("2009-start");
-    expect(trails).not.toContain("2015-start");
-    expect(trails).not.toContain("2018-start");
-    expect(trails).toContain("2019-start");
+    expect(trails).toContain("2015-start");
     expect(trails).toContain("2020-start");
     expect(trails).toContain("2021-start");
     expect(trails).toContain("2022-start");

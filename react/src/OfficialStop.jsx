@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ProductFace } from "./ProductFace.jsx";
 
 export function OfficialStop({ stop, onNext }) {
   const needsField = stop.field !== false;
@@ -51,6 +52,7 @@ export function OfficialStop({ stop, onNext }) {
       <h1>{stop.name}</h1>
       <p><code>{stop.whenKey}</code></p>
       <p>{stop.fact}</p>
+      {stop.leftover ? null : <ProductFace id={stop.whenKey} />}
       <p className="failed" data-itt-capture-cite>[failed-final] Period mark stays on the static room. This screen does not invent one.</p>
       {needsField ? (
         <label className="field">

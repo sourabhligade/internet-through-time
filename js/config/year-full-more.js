@@ -70,9 +70,5 @@
       { id: "botwplate", slot: "c", title: "Wild Plate", engine: "platform", key: "itt17-game-botwplate", inspire: "Zelda BotW · 3 Mar 2017", trap: "Official sheikah" },
       { id: "cuprun", slot: "d", title: "Cup Run", engine: "rhythm", key: "itt17-game-cuprun", inspire: "Cuphead · 29 Sep 2017", trap: "Official cup" }
     ],
-    "2018": [
-      { id: "celestecl", slot: "c", title: "Ice Climb", engine: "platform", key: "itt18-game-celestecl", inspire: "Celeste · 25 Jan 2018", trap: "Official Madeline" },
-      { id: "gowaxe", slot: "d", title: "Axe Recall", engine: "corridor", key: "itt18-game-gowaxe", inspire: "God of War · 20 Apr 2018", trap: "Official Leviathan" }
-    ],
     };
 })(typeof window !== "undefined" ? window : this);

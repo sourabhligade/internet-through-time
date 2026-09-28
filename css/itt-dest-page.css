@@ -98,15 +98,31 @@ html.itt-dest-top body.has-itt-wayfind {
   padding-bottom: 0 !important;
 }
 
-/* 2022 period CSS hides the foot on dest pages. A top-window dest
- * has no year shell, so this foot is the way back. */
-html.itt-dest-top[data-itt-year="2022"] body:not(.itt-start-page) #itt-exhibit-foot {
+/* Period skins hide the foot and the trail on dest pages. A top-window
+ * dest has no year shell, so both stay: trail, then one footer. */
+html.itt-dest-top body:not(.itt-start-page) #itt-exhibit-foot,
+html.itt-dest-top body:not(.itt-start-page) [data-itt-flow-trail] {
   display: block !important;
 }
 
 /* In-page crumbs that repeat the footer Starting Point. */
 html.itt-dest-top .crumb:has(a[href*="pages/home"]) {
   display: none;
+}
+
+[data-late-face].product-face {
+  margin: 12px auto;
+  padding: 12px;
+  border: 2px solid #222;
+  background: #fff;
+  max-width: 40em;
+  font: 14px Georgia, serif;
+  color: #111;
+}
+
+[data-late-face] .product-kicker {
+  margin: 0 0 6px;
+  font-weight: 700;
 }
 
 #itt-exhibit-foot {

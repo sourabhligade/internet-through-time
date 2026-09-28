@@ -42,8 +42,7 @@ function starKey(year) {
     2014: "itt14-wa-install",
     2015: "itt15-periscope",
     2016: "itt16-ig-stories",
-    2017: "itt17-faceid",
-    2019: "itt19-disneyplus"};
+    2017: "itt17-faceid"};
   return map[year] || "";
 }
 

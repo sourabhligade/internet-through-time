@@ -13,7 +13,7 @@ const fs = require('fs');
 const path = require('path');
 const { enterYear, goImmersion, contentFrame } = require('./helpers');
 
-/** Skip describes that target years not present on disk (hub is 1994–2018). */
+/** Skip describes that target years not present on disk (hub is 1994–). */
 function yearOnDisk(year) {
   try {
     return fs.existsSync(path.join(__dirname, '..', 'years', String(year), 'index.html'));

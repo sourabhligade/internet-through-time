@@ -321,7 +321,7 @@ const SIGNATURE = {
       await frame.locator('[data-faceid-unlock]').click();
     },
   },
-  '2019': {
+  '': {
     path: 'sites/disneyplus/home.html',
     keySuffix: 'disneyplus',
     body: /Disney\+|\$6\.99|Nov(ember)?\s*12/i,

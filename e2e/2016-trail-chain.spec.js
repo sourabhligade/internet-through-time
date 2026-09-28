@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Walk official 1→2→… dests on 2016–2018.
+ * Walk official 1→2→… dests on 2016–.
  * Complete each stop, Next must appear and land on the next dest,
  * and the previous dest must stay clickable (the mid-trail break).
  */

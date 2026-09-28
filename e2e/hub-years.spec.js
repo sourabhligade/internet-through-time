@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 
 
 const OPEN = [
- '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2010', '2012', '2013', '2014', '2016', '2017', '2019', '2020', '2021', '2022'
+ '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2010', '2012', '2013', '2014', '2015', '2016', '2017', '2020', '2021', '2022'
 ];
 const BOARDED = ['2009', '2023', '2024', '2025'];
 const LOCKED = [];
@@ -12,6 +12,13 @@ test.describe('hub + year shells', () => {
   test('hub lists playable years; 2026+ off disk', async ({ page }) => {
     await page.goto('/');
     for (const y of OPEN) {
+      if (y === "2015") {
+        await expect(page.locator('a.year-card.available[data-year="2015"]')).toHaveAttribute(
+          "href",
+          /app\/index\.html#\/year\/2015/
+        );
+        continue;
+      }
       if (y === "2017") {
         await expect(page.locator('a.year-card.available[data-year="2017"]')).toHaveAttribute(
           "href",
@@ -23,13 +30,6 @@ test.describe('hub + year shells', () => {
         await expect(page.locator('a.year-card.available[data-year="2021"]')).toHaveAttribute(
           "href",
           /app\/index\.html#\/year\/2021/
-        );
-        continue;
-      }
-      if (y === "2019") {
-        await expect(page.locator('a.year-card.available[data-year="2019"]')).toHaveAttribute(
-          "href",
-          /app\/index\.html#\/year\/2019/
         );
         continue;
       }
@@ -49,14 +49,11 @@ test.describe('hub + year shells', () => {
  await expect(page.locator('body')).toContainText(/24 years open/i);
     await expect(page.locator('body')).not.toContainText(/27 years open/i);
     await expect(page.locator('body')).not.toContainText(/2021[–-]2025 boarded/i);
-    await expect(page.locator('a.year-card[href*="years/2018"]')).toHaveCount(0);
-    await expect(page.locator('a.year-card.available[href*="years/2015"]')).toHaveCount(0);
-    await expect(page.locator('.year-gap[title="2015 off hub"]')).toBeVisible();
-    await expect(page.locator('a.year-card.available[data-year="2019"]')).toHaveAttribute(
+    await expect(page.locator('a.year-card.available[data-year="2015"]')).toHaveAttribute(
       "href",
-      /app\/index\.html#\/year\/2019/
+      /app\/index\.html#\/year\/2015/
     );
-    await expect(page.locator('.year-card.y2019.available')).toBeVisible();
+    await expect(page.locator('a.year-card[data-year=""]')).toHaveCount(0);
     await expect(page.locator('a.year-card.available[data-year="2020"]')).toHaveAttribute(
       "href",
       /app\/index\.html#\/year\/2020/
@@ -81,6 +78,7 @@ test.describe('hub + year shells', () => {
         y2006: mp.isLiveYear('2006'),
         y2007: mp.isLiveYear('2007'),
         y2009: mp.isLiveYear('2009'),
+        y: mp.isLiveYear(''),
         y2020: mp.isLiveYear('2020'),
         y2021: mp.isLiveYear('2021'),
         y2022: mp.isLiveYear('2022'),
@@ -100,7 +98,9 @@ test.describe('hub + year shells', () => {
     expect(live.y2023).toBe(false);
     expect(live.y2024).toBe(false);
     expect(live.y2025).toBe(false);
-    expect(live.trails).toEqual(expect.arrayContaining(['2019-start', '2020-start', '2021-start', '2022-start']));
+    expect(live.y).toBe(false);
+    expect(live.trails).toEqual(expect.arrayContaining(['2020-start', '2021-start', '2022-start']));
+    expect(live.trails).not.toEqual(expect.arrayContaining(['-start']));
     expect(live.trails).not.toEqual(expect.arrayContaining(['2023-start', '2024-start', '2025-start']));
   });
 
@@ -123,7 +123,7 @@ test.describe('hub + year shells', () => {
 
   test('hub year cards use period class skins + data-year', async ({ page }) => {
     await page.goto('/');
-    const reactDoor = new Set(["2017", "2019", "2020", "2021"]);
+    const reactDoor = new Set(["2015", "2017", "2020", "2021"]);
     for (const y of OPEN) {
       const card = reactDoor.has(y)
         ? page.locator(`a.year-card.available.y${y}[data-year="${y}"]`)
@@ -145,11 +145,11 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.y2013.locked')).toHaveCount(0);
     await expect(page.locator('.y2014.available')).toBeVisible();
     await expect(page.locator('.y2014.locked')).toHaveCount(0);
-    await expect(page.locator('.y2015')).toHaveCount(0);
+    await expect(page.locator('.y2015.available')).toBeVisible();
     await expect(page.locator('.y2016')).toBeVisible();
     await expect(page.locator('.y2017')).toBeVisible();
-    await expect(page.locator('.y2018')).toHaveCount(0);
-    await expect(page.locator('.y2019.available')).toBeVisible();
+    await expect(page.locator('.y')).toHaveCount(0);
+    await expect(page.locator('.y')).toHaveCount(0);
     await expect(page.locator('.y2020.available')).toBeVisible();
     await expect(page.locator('.y2021.available')).toBeVisible();
     await expect(page.locator('.y2022.available')).toBeVisible();
@@ -173,20 +173,18 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('#resume-link, #resume-wrap')).toHaveCount(0);
   });
 
-  test('hub decade timeline rails · 2009 and 2018 are gaps', async ({ page }) => {
+  test('hub decade timeline rails · 2009 and  are gaps', async ({ page }) => {
     await page.goto('/');
     await expect(page.locator('section.decade')).toHaveCount(4);
     await expect(page.locator('#decade-1990s a.year-card.available')).toHaveCount(6);
     await expect(page.locator('#decade-2000s a.year-card.available')).toHaveCount(8);
  await expect(page.locator('#decade-2010s a.year-card.available')).toHaveCount(7);
     await expect(page.locator('#decade-2020s a.year-card.available')).toHaveCount(3);
-    await expect(page.locator('.year-gap')).toHaveCount(3);
+    await expect(page.locator('.year-gap')).toHaveCount(1);
     await expect(page.locator('#decade-2000s .year-gap')).toContainText(/2009/);
     await expect(page.locator('#decade-2000s .year-gap')).toContainText(/boarded/i);
-    await expect(page.locator('#decade-2010s .year-gap[title="2015 off hub"]')).toBeVisible();
-    await expect(page.locator('#decade-2010s .year-gap[title="2018 off hub"]')).toBeVisible();
+    await expect(page.locator('#decade-2010s .year-gap[title="2015 off hub"]')).toHaveCount(0);
     await expect(page.locator('a.year-card[href*="years/2009"]')).toHaveCount(0);
-    await expect(page.locator('a.year-card[href*="years/2018"]')).toHaveCount(0);
     await expect(page.locator('a.era-jump-chip')).toHaveCount(0);
     await page.locator('.decade-jump a[href="#decade-2010s"]').click();
     await expect(page.locator('#decade-2010s')).toBeInViewport();
@@ -202,15 +200,15 @@ test.describe('hub + year shells', () => {
         await expect(page.locator("article.stop ol > li")).toHaveCount(6);
         return;
       }
-      if (year === "2017") {
-        await page.goto("/app/index.html#/year/2017");
-        await expect(page.getByRole("heading", { name: "Face ID" })).toBeVisible();
+      if (year === "2015") {
+        await page.goto("/app/index.html#/year/2015");
+        await expect(page.getByRole("heading", { name: "Periscope Go LIVE" })).toBeVisible();
         await expect(page.locator("article.stop ol > li")).toHaveCount(6);
         return;
       }
-      if (year === "2019") {
-        await page.goto("/app/index.html#/year/2019");
-        await expect(page.getByRole("heading", { name: "Disney+ Continue" })).toBeVisible();
+      if (year === "2017") {
+        await page.goto("/app/index.html#/year/2017");
+        await expect(page.getByRole("heading", { name: "Face ID" })).toBeVisible();
         await expect(page.locator("article.stop ol > li")).toHaveCount(6);
         return;
       }

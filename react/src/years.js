@@ -1,4 +1,4 @@
-/** Lean doors from 2014 on. 2018 and 2023–2025 stay wiped. */
+/** Lean doors from 2014 on. 2023–2025 stay wiped. */
 export const REACT_YEARS = [
   {
     year: "2014",
@@ -15,6 +15,20 @@ export const REACT_YEARS = [
     ],
   },
 
+  {
+    year: "2015",
+    star: "Periscope Go LIVE",
+    blurb: "Type a title, then Go LIVE. An ended broadcast writes nothing.",
+    home: "#/year/2015",
+    steps: [
+      ["About 2015", "#/year/2015"],
+      ["Periscope Go LIVE", "#/year/2015"],
+      ["Apple Music", "#/year/2015"],
+      ["Windows 10", "#/year/2015"],
+      ["Reddit redesign", "#/year/2015"],
+      ["Year flow map", "#/year/2015"],
+    ],
+  },
   {
     year: "2016",
     star: "Instagram Stories",
@@ -41,34 +55,6 @@ export const REACT_YEARS = [
       ["Twitter 280", "#/year/2017"],
       ["Teams", "#/year/2017"],
       ["Year flow map", "#/year/2017"],
-    ],
-  },
-  {
-    year: "2018",
-    star: "GDPR Manage",
-    blurb: "Off the main hub. Manage is the save. Accept All writes nothing.",
-    home: "#/year/2018",
-    steps: [
-      ["About 2018", "#/year/2018"],
-      ["GDPR Manage", "#/year/2018"],
-      ["TikTok For You", "#/year/2018"],
-      ["Hearing", "#/year/2018"],
-      ["IGTV", "#/year/2018"],
-      ["Year flow map", "#/year/2018"],
-    ],
-  },
-  {
-    year: "2019",
-    star: "Disney+ Continue",
-    blurb: "Continue watching is the save. A trial is the trap.",
-    home: "#/year/2019",
-    steps: [
-      ["About 2019", "#/year/2019"],
-      ["Disney+ Continue", "#/year/2019"],
-      ["TikTok", "#/year/2019"],
-      ["Apple Arcade", "#/year/2019"],
-      ["Stadia", "#/year/2019"],
-      ["Year flow map", "#/year/2019"],
     ],
   },
   {

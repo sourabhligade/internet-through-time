@@ -20,7 +20,7 @@
   "items": [
     {
       "id": "br",
-      "label": "Browse: Today\u2019s 99\u00a2 shelf",
+      "label": "Browse: Today’s 99\u00a2 shelf",
       "order": 0
     },
     {

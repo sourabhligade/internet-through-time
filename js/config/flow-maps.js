@@ -53,9 +53,9 @@
                               "do": "Opened Computers hub \u2192 itt94-yahoo-wander"
                     },
                     {
-                              "name": "F5 What\u2019s New / NCSA",
+                              "name": "F5 What’s New / NCSA",
                               "href": "sites/ncsa/index.html",
-                              "do": "Opened a dated What\u2019s New item \u2192 itt94-whatsnew"
+                              "do": "Opened a dated What’s New item \u2192 itt94-whatsnew"
                     },
                     {
                               "name": "Star CSotD guestbook",
@@ -149,11 +149,6 @@
                               "name": "N16 View Source",
                               "href": "pages/handbook.html",
                               "do": "4\u00d7 \u2192 itt94-viewsrc"
-                    },
-                    {
-                              "name": "N17 Images-off",
-                              "href": "pages/handbook.html",
-                              "do": "4\u00d7 \u2192 itt94-img-off"
                     },
                     {
                               "name": "N18 CERN",
@@ -409,7 +404,7 @@
           { "name": "Internet Speculative Fiction Database", "href": "sites/isfdb/index.html", "do": "leftover-2× unique dest href · one dest once" },
           { "name": "Medscape", "href": "sites/medscape/index.html", "do": "leftover-2× unique dest href · one dest once" },
           { "name": "Mercury Center Web", "href": "sites/mercury/index.html", "do": "leftover-2× unique dest href · one dest once" },
-          { "name": "Mirsky\\u2019s Worst of the Web", "href": "sites/mirsky/index.html", "do": "leftover-2× unique dest href · one dest once" },
+          { "name": "Mirsky\’s Worst of the Web", "href": "sites/mirsky/index.html", "do": "leftover-2× unique dest href · one dest once" },
           { "name": "Movieweb", "href": "sites/movieweb/index.html", "do": "leftover-2× unique dest href · one dest once" },
           { "name": "Music Boulevard", "href": "sites/musicblvd/index.html", "do": "leftover-2× unique dest href · one dest once" },
           { "name": "Nick.com", "href": "sites/nick/index.html", "do": "leftover-2× unique dest href · one dest once" },
@@ -1160,7 +1155,7 @@
                               "do": "netscape.org vs mozilla.org both checked \u2192 itt98-mozilla"
                     },
                     {
-                              "name": "Star I\u2019m Feeling Lucky",
+                              "name": "Star I’m Feeling Lucky",
                               "href": "sites/google/lucky.html",
                               "do": "locked star \u00b7 empty never writes"
                     }
@@ -2396,7 +2391,7 @@ ITT.flowMaps["2005"] = {
           { name: "5 Vine gone", href: "sites/vine/gone.html", do: "archive → itt17-vine-gone → Switch" },
           { name: "6 Nintendo Switch", href: "sites/switch/index.html", do: "$299.99 buy this year → itt17-switch → WannaCry" },
           { name: "7 WannaCry", href: "sites/wannacry/index.html", do: "literacy · no payload → itt17-wannacry → musical.ly" },
-          { name: "8 musical.ly", href: "sites/musically/index.html", do: "caption · merge is 2018 → itt17-musically → Equifax" },
+          { name: "8 musical.ly", href: "sites/musically/index.html", do: "caption · merge is  → itt17-musically → Equifax" },
           { name: "9 Equifax freeze", href: "sites/equifax/index.html", do: "no SSN → itt17-equifax → Storm Circle" },
           { name: "10 Storm Circle", href: "sites/playable/game.html", do: "score → itt17-game-stormcircle → Face ID" }
         ]
@@ -2421,7 +2416,7 @@ ITT.flowMaps["2005"] = {
         label: "Side · rejoin official",
         do: "Never a second star",
         sites: [
-          { name: "Animoji", href: "sites/iphone/animoji.html", do: "needs Face ID → itt17-animoji → Fortnite" },
+          { name: "Animoji", href: "sites/animoji/index.html", do: "needs Face ID → itt17-animoji → Fortnite" },
           { name: "Famous", href: "sites/playable/famous.html", do: "cabinet · gold is Storm Circle" }
         ]
       }
@@ -2469,10 +2464,10 @@ ITT.flowMaps["2007"] = {
 
 
 
-  ITT.flowMaps["2019"] = {
+  ITT.flowMaps[""] = {
     thesis: "Who’s watching is the door. A 7-day trial is the trap. Continue is the save.",
     shell: "Win10 mass · Chrome habit · Edge Chromium preview residual",
-    year: "2019",
+    year: "",
     how: [
       "Disney+: trial never writes · Adult + Kids + two titles → Continue → itt19-disneyplus",
       "TikTok: caption + COPPA honesty → itt19-tiktok",

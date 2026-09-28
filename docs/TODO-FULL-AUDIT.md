@@ -14,7 +14,7 @@
 Four classes of year, then the work:
 
 1. **Empty** — no `years/YYYY/` tree. Only 2023–2025.
-2. **Not museum-grade** — boarded, wiped, or dest-farm warehouse (I/O law: a year that looks full because it has 200 leftover dests has failed I/O). Model year is **2018 GDPR Manage**.
+2. **Not museum-grade** — boarded, wiped, or dest-farm warehouse (I/O law: a year that looks full because it has 200 leftover dests has failed I/O). Model year is ** GDPR Manage**.
 3. **Can be improved** — every playable year still has look, leftover dest quality, stale MD, or e2e-depth holes. Official 10 `data-official-need` is already **280/280** on playable years.
 4. **Planned in MD, unimplemented or stale** — every `[ ]`, “not written”, Partial, untested, and dest-count claim that disagrees with disk.
 
@@ -35,7 +35,7 @@ Branch `museum/1994-2020-lean`.
 - [x] Leftover dest drop + year-false maps + restored dests + dest-lock `EXTRA_KEEP` + e2e folder counts are on the working tree (commit with the rest of this implement pass).
 - [x] Stale dest-count rows in §8 struck / YEAR-E2E-POTENTIAL regenerated.
 
-Hub **24 years** 1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022. **2009 boarded.** **2015 wiped.** **2018 wiped.** **2023–2025 wiped.** Serve: `python3 -m http.server 8080 --bind 127.0.0.1`. Dest-true CI pack is in `package.json` `test:e2e:dest-true`, not full `npm test`.
+Hub **24 years** 1994–2007 + 2010 + 2012–2014 + 2016–2017 + –2022. **2009 boarded.** **2015 wiped.** ** wiped.** **2023–2025 wiped.** Serve: `python3 -m http.server 8080 --bind 127.0.0.1`. Dest-true CI pack is in `package.json` `test:e2e:dest-true`, not full `npm test`.
 
 ---
 
@@ -51,10 +51,10 @@ Visitor 100 implement order phases 0–5 are `[x]` in [`VISITOR-100-FLOWS.md`](V
 | Official dest leftover-2× `data-lo-panel` on official 10 | **0** on playable years (1998 Snap unwrapped this session) |
 | Empty / trap never writes star | dest-true pack |
 | Leftover never writes star | dest-true pack · leftover dest specs |
-| Leftover-3× unique dest-true dests | 2007/2010–2016/2019–2020/2022 = 9 · 2018 = **3 stop** · 2021 = **5 stop** · 2012 leftover-4× unique chrome / twitter / soundcloud stay · 2017 leftover-20 extras stay |
-| Leftover dest KEEP on disk | 2007=14 · 2010=10 · =20 · 2012=11 · 2014=7 · 2016=34 · 2018=11 · 2020=1 · 2021=3 · 2022=6. All KEEP leftover dest folders exist. |
+| Leftover-3× unique dest-true dests | 2007/2010–2016/–2020/2022 = 9 ·  = **3 stop** · 2021 = **5 stop** · 2012 leftover-4× unique chrome / twitter / soundcloud stay · 2017 leftover-20 extras stay |
+| Leftover dest KEEP on disk | 2007=14 · 2010=10 · =20 · 2012=11 · 2014=7 · 2016=34 · =11 · 2020=1 · 2021=3 · 2022=6. All KEEP leftover dest folders exist. |
 | Leftover dest DROP on disk | **0**. 128 gone in `b668e225d`. 13 gone this working tree. Angry Birds + Tesla restored because later research KEEP’d them. |
-| Dest-lock | Still on 2007 / 2010 /  / 2012 / 2014 / 2021. **Reverted** 2015–2020. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. |
+| Dest-lock | Still on 2007 / 2010 /  / 2012 / 2014 / 2021. **Reverted** 2015–2020. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. |
 | GitHub issues #2–#14 | Closed. No open issues or PRs at last check. |
 | Mock-flow audit | DEST_FIELD / WEAK_REAL / HASH_CTA / PACK = 0 |
 | Year configs | 29 files parse. urlMap keys exist on disk. |
@@ -69,7 +69,7 @@ Leftover dest KEEP slugs still on disk (do not delete):
 | 2012 | tinder, duolingo, coursera, udacity, edx, nexus7, jellybean, ios6, googleplay, kindlefirehd, coinbase |
 | 2014 | alibabaipo, oculusfb, inbox, echo, flappybird, game2048, ios8 |
 | 2016 | douyin, airpods, pixel, nougat, allo, duo, googlehome, oculusrift, psvr, overwatch, doom2016, uncharted4, nomanssky, clashroyale, panamapapers, figma, thedao, ethereum, ios10, sierra, daydream, battlefield1, letsencrypt, tesla, mastodon, ringer, athletic, peach, tay, zcash, prisma, vive, miitomo, iana |
-| 2018 | gplusgone, androidpie, ios12, pubg, rdr2, mojave, onedot, epicstore, nso, espnplus, caffeine |
+|  | gplusgone, androidpie, ios12, pubg, rdr2, mojave, onedot, epicstore, nso, espnplus, caffeine |
 | 2020 | clubhouse |
 | 2021 | nft, coinbaseipo, epicapple |
 | 2022 | temu, stablediff, midjourney, dalle2, ios16, m2 |
@@ -80,9 +80,9 @@ Leftover dest KEEP slugs still on disk (do not delete):
 
 These are not a backlog.
 
-- [ ] **Do not dest-farm leftover-20 dests** on 2013 / 2014 / 2015 / 2018–2022. Leftover-20 exists only on **2017**. Source: [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) Phase 6 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) “unique leftover-20 map not written”.
-- [ ] **Do not grow leftover-3× unique** past **2018 = 3** or **2021 = 5**. Criteria files that say “cannot hit 9 without new dests” are describing the stop, not a quota to fill.
-- [ ] **Do not dest-lock** 2015–2020, forests 1994–2006, 2013, 2018, or 2022 again. [`PRODUCT-IMPROVE.md`](PRODUCT-IMPROVE.md) Slice 5 still has `[ ]` dest-farm lock of 2019/2021/2017/2015 then forests — **later museum law forbids that box**. Do not treat Slice 5 as implement work.
+- [ ] **Do not dest-farm leftover-20 dests** on 2013 / 2014 / 2015 / –2022. Leftover-20 exists only on **2017**. Source: [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) Phase 6 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) “unique leftover-20 map not written”.
+- [ ] **Do not grow leftover-3× unique** past ** = 3** or **2021 = 5**. Criteria files that say “cannot hit 9 without new dests” are describing the stop, not a quota to fill.
+- [ ] **Do not dest-lock** 2015–2020, forests 1994–2006, 2013, , or 2022 again. [`PRODUCT-IMPROVE.md`](PRODUCT-IMPROVE.md) Slice 5 still has `[ ]` dest-farm lock of /2021/2017/2015 then forests — **later museum law forbids that box**. Do not treat Slice 5 as implement work.
 - [ ] **Do not dest-lock 2017** 222 → 30 (`2017-UNIQUE-FLOWS.md` Phase H). Optional in that file; later law says do not dest-lock 2017 again. 192 leftover dest-farm dests stay unlinked.
 - [ ] **Do not restore 2023–2025.** No tree. No hub card. Rebuild only if named later.
 - [ ] **Do not dest-lock revert 2021 to 294 dests.** Thin lean door is the product. ATT Ask + leftover-3× unique 5.
@@ -91,7 +91,7 @@ These are not a backlog.
 - [ ] **Do not delete leftover-3× unique dests** scored DROP in the map (2007 wiki / maps / stumble / digg · 2015 applemusicsub / win10get). Law keeps leftover-3× unique dest-disjoint leftovers.
 - [ ] **Do not delete 2017 leftover-20 extras** `slack17` / `instagram17` / `creditfrz` even though year-false scored them DROP. Leftover-20 extras are dest-true leftover-20 dests, not leftover dest class. Last apply skipped them.
 - [ ] **Do not invent brand pixels.** Period harvest is capture or failed-final.
-- [ ] Lean-triple **F1–F10** fail look (`LEAN-TRIPLE-2015-2020-CHECKLIST.md`): 2015 ~639 dests, 2016 forest 192, 2017 leftover-20 dest-farm toward 666, 2018 leftover-3× unique past 3, 2019 ~510, 2020 ~117, guided > 6, official leftover-2× first paint, leftover writes star, invented ILS after 2018. Stay false.
+- [ ] Lean-triple **F1–F10** fail look (`LEAN-TRIPLE-2015-2020-CHECKLIST.md`): 2015 ~639 dests, 2016 forest 192, 2017 leftover-20 dest-farm toward 666,  leftover-3× unique past 3,  ~510, 2020 ~117, guided > 6, official leftover-2× first paint, leftover writes star, invented ILS after . Stay false.
 - [ ] `2010-LEFTOVER-3X-UNIQUE.md` six `[ ]` boxes: leftover-official pack stays amazon leftover-2× only · dest-lock dests stay skipped · do not dest-farm dest-lock dests · do not stack leftover-3× dest-farm machines on leftover-3× unique dests · do not treat yahoo / kickstarter / amazon leftover-2× as leftover-3× unique · do not dest-lock revert 2010 forest. Keep-closed law.
 
 ---
@@ -141,14 +141,14 @@ Disk: **222 dest folders / 258 HTML**. Star: Face ID `itt17-faceid` (iPhone X). 
 - [ ] Do not dest-farm leftover dests so 2017 “looks full.” 192 leftover dest-farm dests stay unlinked (`2017-UNIQUE-FLOWS` Phase 5 `[x]`).
 - [ ] Do not dest-lock 222 → 30 unless a later message reopens Phase H **and** later dest-lock ban is explicitly lifted.
 
-### 5.4 2019 dest-farm warehouse
+### 5.4  dest-farm warehouse
 
-Disk: **170 dest folders / 207 HTML**. Star: Disney+ Continue `itt19-disneyplus`. Official 10 need 10/10. Leftover dest KEEP: **0**. Leftover-3× unique: 9 (Chrome / Win10 residual leftover-3× unique is DO-NOT-APPLY). Period: 0. Named e2e: **mvp + flows only** (no densify, no trail-real-flows). `2019-2020-DEST-DENSITY.md` still says dest folders **38**.
+Disk: **170 dest folders / 207 HTML**. Star: Disney+ Continue `itt19-disneyplus`. Official 10 need 10/10. Leftover dest KEEP: **0**. Leftover-3× unique: 9 (Chrome / Win10 residual leftover-3× unique is DO-NOT-APPLY). Period: 0. Named e2e: **mvp + flows only** (no densify, no trail-real-flows). `-2020-DEST-DENSITY.md` still says dest folders **38**.
 
-- [ ] Do not dest-lock 2019 again.
-- [ ] Do not dest-farm leftover-20 on 2019.
-- [ ] Strike `2019-2020-DEST-DENSITY.md` counts 38 / 38 / 85 to live 170 / 39 / 25, or mark the file historical.
-- [ ] Optional: add 2019 densify + trail-real-flows specs only if they assert dest-true I/O, not HTTP 200.
+- [ ] Do not dest-lock  again.
+- [ ] Do not dest-farm leftover-20 on .
+- [ ] Strike `-2020-DEST-DENSITY.md` counts 38 / 38 / 85 to live 170 / 39 / 25, or mark the file historical.
+- [ ] Optional: add  densify + trail-real-flows specs only if they assert dest-true I/O, not HTTP 200.
 
 ### 5.5 2023–2025 wiped
 
@@ -212,20 +212,20 @@ Disk: **54 dest folders / 62 HTML**. Star: Vine 6s `itt13-vine-posts` (dest-true
 - [ ] Fix stale e2e skips that treat 2013 as wiped (`2013-mvp.spec.js`, `2013-flows.spec.js`, `2013-densify.spec.js`, `2013-trail-real-flows.spec.js`, `year-games-lean-engines.spec.js`, `year-full-more-play.spec.js` WIPED_2013). 2013 is a live lean door.
 - [ ] `YEAR-GAPS.md` official trail 9 — strike (10/10 on disk).
 
-### Dest-lock-reverted lean leftover dest years 2016, 2018, 2020, 2022
+### Dest-lock-reverted lean leftover dest years 2016, , 2020, 2022
 
 | Year | Folders / HTML | Star | Lx KEEP | U3 | Named pack | Dest-true CI extra | Improve todos |
 |------|---------------:|------|--------:|--:|------------|-------------------|---------------|
 | 2016 | **66** / 116 | IG Stories | **34/34** | 9 | all 4 | lean-triple leftover dests | `2016-READ-FIRST.md` dest folders **32** → **66**. Tesla Autopilot restored. Reels is a trap not gold. Period 0. Best leftover dest KEEP year. |
-| 2018 | **24** / 33 | GDPR Manage | 11/11 | **3 stop** | mvp+flows; **no densify, no trail** | `2018-flows.spec.js` + lean-triple | **I/O model.** `2018-READ-FIRST.md` dest folders **13** → **24**. Accept All never writes. Do not grow leftover-3× unique past 3. Period 0. |
+|  | **24** / 33 | GDPR Manage | 11/11 | **3 stop** | mvp+flows; **no densify, no trail** | `-flows.spec.js` + lean-triple | **I/O model.** `-READ-FIRST.md` dest folders **13** → **24**. Accept All never writes. Do not grow leftover-3× unique past 3. Period 0. |
 | 2020 | 39 / 45 | Zoom Leave | 1 (clubhouse) | 9 | **mvp only** | `2020-mvp.spec.js` | Thinnest named e2e. `2020-READ-FIRST.md` 38 → 39. Official n=6 Netflix leftover-as-official stays (year-false DROP in map, dest stays). Period 0. |
 | 2022 | **25** / 38 | ChatGPT Send | 6 | 9 | mvp+flows; no densify/trail | `2022-mvp.spec.js` + `2022-flows.spec.js` | `2022-DEST-MAP.md` / `2022-IMPLEMENT.md` **85 dests FINISHED** — strike to **25**. GPT-4 / X are traps. Leftover-2× dest-farm dests not restored. Period 0. |
 
-- [ ] Strike dest-count claims listed in the table (2016 32, 2018 13, 2020 38, 2022 85).
-- [ ] Optional period harvest 2016 / 2018 / 2020 / 2022 or keep failed-final.
-- [ ] Optional 2018 densify+trail, 2020 flows/densify/trail, 2022 densify+trail — dest-true I/O only.
+- [ ] Strike dest-count claims listed in the table (2016 32,  13, 2020 38, 2022 85).
+- [ ] Optional period harvest 2016 /  / 2020 / 2022 or keep failed-final.
+- [ ] Optional  densify+trail, 2020 flows/densify/trail, 2022 densify+trail — dest-true I/O only.
 
-Warehouses 2015 / 2017 / 2019 are §5, not this table.
+Warehouses 2015 / 2017 /  are §5, not this table.
 
 ---
 
@@ -267,18 +267,18 @@ Every dest-count claim below was read from the file and compared to live `years/
 | `docs/DEST-TRUE-FLOW-MAP.md` dest-folder column | Older snapshot (2010 44, 2022 38, …) | 2010=30 · 2022=25 · see §6 tables | [ ] Recount dest-folder column from disk. |
 | `docs/YEAR-GAPS.md` §2 | 2012 trail 9 · 2013 trail 9 · 2014 Apple Pay missing · A3 false | Official 10/10 files, need 10/10 | [ ] Strike §2 holes. Keep the method section if still true. |
 | `docs/YEAR-GAPS.md` 2022 dest folders | 19 | 25 | [ ] Strike. |
-| `docs/YEAR-E2E-POTENTIAL.md` | Generated table: 2007 dests 23 · 2010 22 · 2014 18 · 2015 26 · 2016 21 · 2018 13 · 2021 15 · 2022 19 · “CI smoke-only” · floor V5 leftover-2× on every dest 0/28 | 33 / 30 / 25 / 213 / 66 / 24 / 18 / 25. Dest-true pack is 16 specs. Lean leftover-2×=0 on official dests is **law**, so V5 must not be a pass for lean years. | [ ] Re-run `python3 scripts/year-e2e-potential.py --md` after dest counts stabilize, or mark the V5 column as forest-only. |
+| `docs/YEAR-E2E-POTENTIAL.md` | Generated table: 2007 dests 23 · 2010 22 · 2014 18 · 2015 26 · 2016 21 ·  13 · 2021 15 · 2022 19 · “CI smoke-only” · floor V5 leftover-2× on every dest 0/28 | 33 / 30 / 25 / 213 / 66 / 24 / 18 / 25. Dest-true pack is 16 specs. Lean leftover-2×=0 on official dests is **law**, so V5 must not be a pass for lean years. | [ ] Re-run `python3 scripts/year-e2e-potential.py --md` after dest counts stabilize, or mark the V5 column as forest-only. |
 | `docs/UNDONE.md` dest-lock table | 2007/2010–12/2014/2021 = 46/44/62/48/36/30 · 2016=65 · 2022=38 | 33/30/48/32/25/18 · 2016=66 · 2022=25 | [ ] Recount. Tree line still says pushed `0ed638bb5`. |
 | `docs/UNDONE.md` §4.4 GitHub #8–#10 | Still open | Issues #2–#14 closed | [ ] Strike open-issue table. |
-| `docs/FLOW-UNIMPLEMENTED-AND-UNUSED.md` §4.1 | 2017=222, 2019=165, 2021=294, 2007=246 · leftover-official 11,336 · GitHub #8–#10 open · e2e 332 specs | 2019=170 · 2021=18 · 2007=33 · issues closed · 328 specs | [ ] Rewrite §4 against this file. Date on that file is 2026-09-14. |
+| `docs/FLOW-UNIMPLEMENTED-AND-UNUSED.md` §4.1 | 2017=222, =165, 2021=294, 2007=246 · leftover-official 11,336 · GitHub #8–#10 open · e2e 332 specs | =170 · 2021=18 · 2007=33 · issues closed · 328 specs | [ ] Rewrite §4 against this file. Date on that file is 2026-09-14. |
 | `docs/FLOW-IMPLEMENT-CHECKLIST.md` A9 | 2022 dest folders 19 | 25 | [ ] Strike. |
 | `docs/2005-READ-FIRST.md` | dest folders 111 | 351 | [ ] Strike. |
 | `docs/2007-READ-FIRST.md` | dest folders 23 | 33 | [ ] Strike. |
 | `docs/2016-READ-FIRST.md` | dest folders 32 | 66 | [ ] Strike. |
 | `docs/2017-UNIQUE-FLOWS.md` G9 | 2016 stays 32 dests | 66 | [ ] Strike. |
-| `docs/2018-READ-FIRST.md` | dest folders 13 | 24 | [ ] Strike. |
-| `docs/2019-READ-FIRST.md` | dest-lock reverted 170 (true) and also “Dest folders 38” in clone notes | 170 | [ ] Strike the 38 clone note. |
-| `docs/2019-2020-DEST-DENSITY.md` | Implemented 2019=38 · 2020=38 · 2022=85 · 2017 peer 40 | 170 / 39 / 25 / 222 | [ ] Mark historical or rewrite to live. Status line “Implemented on disk 2026-09-15” is a density plan, not current dest-lock-reverted counts. |
+| `docs/-READ-FIRST.md` | dest folders 13 | 24 | [ ] Strike. |
+| `docs/-READ-FIRST.md` | dest-lock reverted 170 (true) and also “Dest folders 38” in clone notes | 170 | [ ] Strike the 38 clone note. |
+| `docs/-2020-DEST-DENSITY.md` | Implemented =38 · 2020=38 · 2022=85 · 2017 peer 40 | 170 / 39 / 25 / 222 | [ ] Mark historical or rewrite to live. Status line “Implemented on disk 2026-09-15” is a density plan, not current dest-lock-reverted counts. |
 | `docs/2020-READ-FIRST.md` | 38 dest folders | 39 | [ ] Strike. |
 | `docs/2021-READ-FIRST.md` / VISITOR-100 2021 dests | 15 dest-lock lean | 18 | [ ] Strike. Do not add dests to “match 15.” |
 | `docs/2022-DEST-MAP.md` | dest folders 85 · leftover dests 75 · HTML 95 | 25 dest folders · 38 HTML | [ ] Strike counts. Official 10 table `[x]` can stay if those 10 dests still exist. |
@@ -295,7 +295,7 @@ Every dest-count claim below was read from the file and compared to live `years/
 
 Dest-true CI pack (16 files, do not expand unless named):
 
-`hub-years.spec.js` · `year-start-trails.spec.js` · `visitor-door.spec.js` · `flow-check-pipeline.spec.js` · `one-thing-per-year.spec.js` · `all-years-official-10-real.spec.js` · `leftover-3x-unique.spec.js` · `official-leftover-2x.spec.js` · `lean-triple-leftover.spec.js` · `year-true-packs.spec.js` · `2016-2018-3x-detail.spec.js` · `2018-flows.spec.js` · `2020-mvp.spec.js` · `2021-mvp.spec.js` · `2022-mvp.spec.js` · `2022-flows.spec.js`
+`hub-years.spec.js` · `year-start-trails.spec.js` · `visitor-door.spec.js` · `flow-check-pipeline.spec.js` · `one-thing-per-year.spec.js` · `all-years-official-10-real.spec.js` · `leftover-3x-unique.spec.js` · `official-leftover-2x.spec.js` · `lean-triple-leftover.spec.js` · `year-true-packs.spec.js` · `2016--3x-detail.spec.js` · `-flows.spec.js` · `2020-mvp.spec.js` · `2021-mvp.spec.js` · `2022-mvp.spec.js` · `2022-flows.spec.js`
 
 **63 / 328** specs contain `test.skip` / `describe.skip`. Classes from skip-line text:
 
@@ -313,8 +313,8 @@ Named pack holes (no `{year}-densify` / `{year}-trail-real-flows` / sometimes no
 | Year | Has mvp | flows | densify | trail | Todo |
 |------|---------|-------|---------|-------|------|
 | 2009 | yes | no | no | no | Boarded. Do not add a playable pack unless Slice 2B is named. |
-| 2018 | yes | yes | no | no | Optional dest-true densify/trail. Dest-true CI already has 2018-flows. |
-| 2019 | yes | yes | no | no | Warehouse. Optional dest-true only. |
+|  | yes | yes | no | no | Optional dest-true densify/trail. Dest-true CI already has -flows. |
+|  | yes | yes | no | no | Warehouse. Optional dest-true only. |
 | 2020 | yes | no | no | no | Optional dest-true flows. Dest-true CI has 2020-mvp. |
 | 2021 | yes | no | no | no | Optional dest-true flows. Dest-true CI has 2021-mvp. |
 | 2022 | yes | yes | no | no | Optional dest-true densify/trail. Dest-true CI has 2022-mvp + 2022-flows. |
@@ -379,14 +379,14 @@ Slice 1–4 are `[x]`. Slice 5 dest-farm lock is a **stop** (§3).
 Do not dest-farm. Do not invent dests. Do not grow leftover-3× unique past the stops.
 
 1. **Commit** uncommitted leftover dest drop + maps + restored Angry Birds / Tesla + folder asserts (`DISK-TRUTH`, matrices, `EXTRA_KEEP`).
-2. **Strike stale MD dest counts** in §8 (same or next commit). `YEAR-GAPS` 2012/2013/2014 holes, `2022-IMPLEMENT` 85, `2019-2020-DEST-DENSITY` 38, READ-FIRST 23/32/13/15/111, `YEAR-E2E-POTENTIAL` regenerate or mark V5 forest-only, `UNDONE` / `FLOW-UNIMPLEMENTED` open-issue and dest-count tables, `YEAR-FALSE` header “map only”.
+2. **Strike stale MD dest counts** in §8 (same or next commit). `YEAR-GAPS` 2012/2013/2014 holes, `2022-IMPLEMENT` 85, `-2020-DEST-DENSITY` 38, READ-FIRST 23/32/13/15/111, `YEAR-E2E-POTENTIAL` regenerate or mark V5 forest-only, `UNDONE` / `FLOW-UNIMPLEMENTED` open-issue and dest-count tables, `YEAR-FALSE` header “map only”.
 3. **Fix stale 2013 wiped skips** in e2e (§6 2013).
 4. **Storm Circle gym e2e** if named (§5.3).
 5. **Period harvest –2022** if named (§10).
 6. **Forest pack DROP 12 dests** if named (§7).
 7. **2009 Like door / postcard / non-US dest / period-friction / public URL** if named (§11).
 
-Never: leftover-20 dest-farm, leftover-3× unique past 2018=3 / 2021=5, dest-lock 2015–2020 / forests / 2013 / 2022, restore 2023–2025, restore 2022 to 85 dests, delete official 10, delete leftover-3× unique dests, delete 2017 leftover-20 extras, push.
+Never: leftover-20 dest-farm, leftover-3× unique past =3 / 2021=5, dest-lock 2015–2020 / forests / 2013 / 2022, restore 2023–2025, restore 2022 to 85 dests, delete official 10, delete leftover-3× unique dests, delete 2017 leftover-20 extras, push.
 
 ---
 
@@ -419,14 +419,14 @@ First-level dirs under `years/YYYY/sites/` as of this file:
 | 2015 | 213 | dest-lock reverted warehouse |
 | 2016 | 66 | dest-lock reverted + leftover dest KEEP |
 | 2017 | 222 | dest-lock reverted warehouse + leftover-20 |
-| 2018 | 24 | dest-lock reverted lean (I/O model) |
-| 2019 | 170 | dest-lock reverted warehouse |
+|  | 24 | dest-lock reverted lean (I/O model) |
+|  | 170 | dest-lock reverted warehouse |
 | 2020 | 39 | dest-lock reverted lean |
 | 2021 | 18 | dest-lock lean |
 | 2022 | 25 | dest-true lean |
 | 2023–2025 | none | wiped |
 
-E2e folder-count asserts that must match after the uncommitted commit: `e2e/lean-double-leftover.spec.js` WANT_FOLDERS · `e2e/lean-triple-leftover.spec.js` 2016=66 / 2018=24 · `e2e/2010-2015-3x-cut.spec.js` 2010=30 / =48 / 2012=32 / 2014=25 · `e2e/2015-2020-3x-2x-cut.spec.js` 2015=213 / 2016=66 / 2017=222 / 2019=170 · warehouses 2015/2017/2019/2020 stay (no dest-farm).
+E2e folder-count asserts that must match after the uncommitted commit: `e2e/lean-double-leftover.spec.js` WANT_FOLDERS · `e2e/lean-triple-leftover.spec.js` 2016=66 / =24 · `e2e/2010-2015-3x-cut.spec.js` 2010=30 / =48 / 2012=32 / 2014=25 · `e2e/2015-2020-3x-2x-cut.spec.js` 2015=213 / 2016=66 / 2017=222 / =170 · warehouses 2015/2017//2020 stay (no dest-farm).
 
 ---
 

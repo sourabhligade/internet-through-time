@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Every year game 1994–2018: load flow + basic interactivity + accessibility smoke.
+ * Every year game 1994–: load flow + basic interactivity + accessibility smoke.
  * Runs inside year shell iframe (enterYear + goImmersion).
  */
 const { test, expect } = require('@playwright/test');
@@ -28,7 +28,7 @@ const FLOW = {
   '2010': { id: 'slingnest', primary: '#play-start, [data-game-start]', flow: 'click-start' },
   '': { id: 'letterswap', primary: '[data-game-start]', flow: 'click-start' },
   '2017': { id: 'stormcircle', primary: '[data-game-start]', flow: 'click-start' },
-  '2018': { id: 'consentdash', primary: '[data-game-start]', flow: 'click-start' },
+  '': { id: 'consentdash', primary: '[data-game-start]', flow: 'click-start' },
 };
 
 /**

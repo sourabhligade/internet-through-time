@@ -26,7 +26,7 @@
 | Leftover-3× | first 3 (Reddit · YouTube · Wikipedia) + third 3 (Instagram · Google · Facebook) · gold dest never leftover-3× |
 | Leftover-4× | **0** |
 | HTML cap | **≤90** |
-| Scale | ILS June table **ends 2018** · ITU **5.3B / 66%** on About |
+| Scale | ILS June table **ends ** · ITU **5.3B / 66%** on About |
 | Pixels | never invent brand art · `[failed-final]` |
 | Neighbors | `itt21-att` / `itt23-*` stay empty |
 
@@ -34,7 +34,7 @@
 
 | Fact | Cite |
 |------|------|
-| ILS June websites | **no 2022 cell** · last cell 2018 **1,630,322,579** |
+| ILS June websites | **no 2022 cell** · last cell  **1,630,322,579** |
 | ITU 2022 | **5.3 billion users / 66%** (landing only — PDF not fetched in deep-research) |
 | ChatGPT | OpenAI [Introducing ChatGPT](https://openai.com/index/chatgpt/) **30 Nov 2022** · free research preview · Send writes · Plus / GPT-4 are 2023 |
 | Wordle | NYT [acquires Wordle](https://investors.nytco.com/news-and-events/press-releases/news-details/2022/The-New-York-Times-Company-acquires-Wordle/default.aspx) **31 Jan 2022** leftover · game public Oct 2021 |

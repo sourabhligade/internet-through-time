@@ -19,9 +19,9 @@ Fill thin lean doors up to the cap in the criteria, with leftover dests that wer
 |---|---|---|
 | Double leftover dests | 2007, 2010, 2012, 2014, 2016, 2021, 2022 | New leftover dests, one writer each, dest-disjoint |
 | Holes only | 2013, 2020 | A row only when a cite names a real hole |
-| Stop | Forests 1994–2006 and , boarded 2009, dense 2015 / 2017 / 2019, wiped 2023–2025 | No new dests |
+| Stop | Forests 1994–2006 and , boarded 2009, dense 2015 / 2017 / , wiped 2023–2025 | No new dests |
 
-**2018 conflict.** The criteria still lists 2018 as a thin door (GDPR Manage, aim 26). Live disk has no 2018 tree. Do not restore it in this pass unless a later note says the wipe was a mistake.
+** conflict.** The criteria still lists  as a thin door (GDPR Manage, aim 26). Live disk has no  tree. Do not restore it in this pass unless a later note says the wipe was a mistake.
 
 ---
 
@@ -38,7 +38,7 @@ Recount before any HTML. Caps below are the criteria aims, not a quota. Counts a
 | 2013 | 47 | 54 | 7 | Holes only |
 | 2014 | 25 | 36 | 11 | Double |
 | 2016 | 53 | 64 | 11 | Double |
-| 2018 | 0 (wiped) | 26 | — | Stop until the wipe is reopened on purpose |
+|  | 0 (wiped) | 26 | — | Stop until the wipe is reopened on purpose |
 | 2020 | 22 | 38 | — | Holes only. Live tree is already under the old 38. Do not fill it back up |
 | 2021 | 18 | 30 | 12 | Double |
 | 2022 | 24 | 38 | 14 | Double |
@@ -53,7 +53,7 @@ Official 10 does not grow. 2012 leftover-4× (Chrome, Twitter, SoundCloud) stays
 
 1. Read [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) D1–D15 and §5 taken slugs.
 2. Read [`DISK-TRUTH.md`](DISK-TRUTH.md). Where the 20 Sep scorecard disagrees with the tree, the tree wins.
-3. Freeze the stop list: forests, 2009, 2015, 2017, 2019, 2023–2025, and 2018 while it stays wiped.
+3. Freeze the stop list: forests, 2009, 2015, 2017, , 2023–2025, and  while it stays wiped.
 4. Freeze do-not-propose rows in criteria §14 (neighbor gold, dest-lock skips, traps).
 
 **Done when:** A year is labeled Double, Holes, or Stop, and taken slugs for that year are listed.
@@ -91,7 +91,7 @@ For each Double year, open a primary or labeled secondary rank. Use the envelope
 - Period company blog, newsroom, or SEC filing
 - Wayback capture, or an honest `[failed-final]` if the capture is gone
 
-Internet Live Stats June website counts end in 2018. Do not invent a later June cell.
+Internet Live Stats June website counts end in . Do not invent a later June cell.
 
 ### Step 1.3 — Candidate row
 
@@ -162,7 +162,7 @@ For each KEEP dest, in order:
 2. Mock gate: `DEST_FIELD`, `WEAK_REAL`, and `HASH_CTA` stay 0 on the new dests.
 3. Recount official stops. They are still 10 (2012, 2013, and 2014 stay at their current shorter trails until a separate pass says otherwise).
 4. Leftover-3× catalogs stay empty. 2012 leftover-4× stays the three named dests.
-5. Hub still says 25 years. 2009 stays boarded. 2015 and 2018 stay wiped.
+5. Hub still says 25 years. 2009 stays boarded. 2015 and  stay wiped.
 
 **Done when:** Those checks pass on every year that received a new dest, and Stop years are unchanged.
 
@@ -174,7 +174,7 @@ For each KEEP dest, in order:
 
 - A year with no more cited, dest-disjoint, year-true sites stops under the cap.
 - Do not dest-farm to raise a percentage.
-- Do not restore 2009, 2018, or 2023–2025 from this map.
+- Do not restore 2009, , or 2023–2025 from this map.
 - Do not commit until a named commit pass.
 
 ---

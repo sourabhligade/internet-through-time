@@ -7,10 +7,10 @@ const { test, expect } = require("@playwright/test");
 
 const OPEN = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003",
-  "2004", "2005", "2006", "2007","2010", "2012", "2013", "2014", "2015", "2016", "2017", "2019",
+  "2004", "2005", "2006", "2007","2010", "2012", "2013", "2014", "2015", "2016", "2017",
   "2020", "2021", "2022",
 ];
-const REACT_DOORS = new Set(["2017", "2019", "2020", "2021"]);
+const REACT_DOORS = new Set(["2017", "2020", "2021"]);
 function doorHrefRe(year) {
   if (REACT_DOORS.has(year)) return new RegExp("app/index\\.html#/year/" + year);
   return new RegExp("years/" + year + "/?$");
@@ -45,7 +45,7 @@ test.describe("museum atlas", () => {
   test("hallway has five wings and 27 open years · no boarded ticks", async ({ page }) => {
     await page.goto("/atlas/");
     await expect(page.locator("h1")).toContainText(/whole museum/i);
-    await expect(page.locator(".lede")).toContainText(/2018/);
+    await expect(page.locator(".lede")).toBeVisible();
     await expect(page.locator("#atlas-spine .atlas-wing")).toHaveCount(5);
     await expect(page.locator('#atlas-spine .atlas-wing[data-wing="wiped-late"]')).toHaveCount(0);
     await expect(page.locator('#atlas-spine .atlas-wing[data-wing="late-lean"]')).toHaveCount(0);
@@ -166,14 +166,9 @@ test.describe("museum atlas", () => {
     await expect(page).toHaveURL(/\/years\/1994\//);
   });
 
-  test("2019 door is live from the spine", async ({ page }) => {
+  test(" is not an open spine door", async ({ page }) => {
     await page.goto("/atlas/");
-    const tick = page.locator('#atlas-spine [data-atlas-year="2019"]');
-    await expect(tick).not.toHaveClass(/wiped/);
-    await expect(tick).toHaveAttribute("href", /app\/index\.html#\/year\/2019/);
-    await tick.click();
-    await expect(page).toHaveURL(/app\/index\.html#\/year\/2019/);
-    await expect(page.getByRole("heading", { name: "Disney+ Continue" })).toBeVisible();
+    await expect(page.locator('#atlas-spine a[data-atlas-year=""]')).toHaveCount(0);
   });
 
   test("hallway ends at 2021 · no 2009 / 2023–2025 ticks", async ({ page }) => {

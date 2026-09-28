@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * 2016–2018 leftover 3× — REAL multi-step, not fill+go plaques.
+ * 2016– leftover 3× — REAL multi-step, not fill+go plaques.
  * Star / guided 6 stay locked. Keys remain ittYY-pop-<slug>.
  */
 const { test, expect } = require("@playwright/test");

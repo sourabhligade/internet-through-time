@@ -28,7 +28,7 @@ FOUR_X_REQUIRED = {
     "2005", "2006", "2007","2009", "2010",
     "2014", "2021", "2022",
 }
-FOUR_X_BANNED = {"2012", "2016", "2017", "2019"}
+FOUR_X_BANNED = {"2012", "2016", "2017", ""}
 LEFTOVER_18 = {"2001", "2002", "2003"}
 PACK_FAMILIES = ("mvp", "flows", "densify", "trail-real-flows")
 
@@ -208,8 +208,8 @@ def ci_deep(year: str, ci: str) -> bool:
         return True
     ranges = (
         ("2005", "2010", "2005-2010"),
-        ("2016", "2017", "2016-2018"),
-        ("2017", "2019", "2017-2019"),
+        ("2016", "2017", "2016-"),
+        ("2017", "", "2017-"),
     )
     for a, b, token in ranges:
         if a <= year <= b and token in ci:

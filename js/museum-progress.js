@@ -18,7 +18,7 @@
   var PASSPORT_KEY = "itt-passport";
   var NIGHT_KEY = "itt-first-night";
   var VERSION = 1;
-  var WIPED = { "2009": 1, "2011": 1, "2015": 1, "2018": 1, "2023": 1, "2024": 1, "2025": 1 };
+  var WIPED = { "2009": 1, "2011": 1, "2023": 1, "2024": 1, "2025": 1 };
 
   /** First night · signature arc */
   var FIRST_NIGHT = [
@@ -170,21 +170,18 @@
       { path: "sites/whatsapp/index.html", label: "WhatsApp Install", blurb: "$19B. Install is the save. Messenger is the trap.", match: "/whatsapp/" },
       { path: "sites/heartbleed/index.html", label: "Heartbleed", blurb: "Rotate the leftover. CVE-2014-0160.", match: "/heartbleed/" }),
 
+    "2015": yearVisitTour("2015",
+      { path: "app/index.html#/year/2015?stop=itt15-periscope", label: "Periscope Go LIVE", blurb: "Type a title, then Go LIVE.", match: "stop=itt15-periscope" },
+      { path: "app/index.html#/year/2015?stop=itt15-music", label: "Apple Music", blurb: "June 2015. Play is the save.", match: "stop=itt15-music" }),
     "2016": yearVisitTour("2016",
       { path: "sites/instagram/stories.html", label: "Instagram Stories", blurb: "24h slide. Snapchat deserve the credit.", match: "/instagram/stories" },
       { path: "sites/pokemongo/index.html", label: "Pokémon GO", blurb: "Outdoor AR. Empty / trap never write. Not the chip.", match: "/pokemongo/" }),
     "2017": yearVisitTour("2017",
       { path: "sites/iphone/x.html", label: "Face ID / iPhone X", blurb: "No Home. Look. Swipe up.", match: "/iphone/x" },
       { path: "sites/fortnite/index.html", label: "Fortnite BR", blurb: "Free. 100. Drop leftover.", match: "/fortnite/" }),
-    "2018": yearVisitTour("2018",
-      { path: "sites/gdpr/index.html", label: "GDPR Manage", blurb: "Accept All never writes. Manage does.", match: "/gdpr/" },
-      { path: "sites/tiktok/fyp.html", label: "TikTok For You", blurb: "Aug 2 merge. Tap. Reorder.", match: "/tiktok/" }),
     "2007": yearVisitTour("2007",
       { path: "sites/iphone/index.html", label: "iPhone Safari", blurb: "Empty / App Store / Chrome never write. Go does.", match: "/iphone/" },
       { path: "sites/streetview/index.html", label: "Street View leftover", blurb: "29 May leftover. Not the chip.", match: "/streetview/" }),
-    "2019": yearVisitTour("2019",
-      { path: "sites/disneyplus/home.html", label: "Disney+ Continue", blurb: "Trial never writes. Continue does.", match: "/disneyplus/" },
-      { path: "sites/tiktok/index.html", label: "TikTok For You", blurb: "2019 US mass. Caption. COPPA.", match: "/tiktok/" }),
     "2020": yearVisitTour("2020",
       { path: "sites/zoom/meeting.html", label: "Zoom Leave", blurb: "Stay / empty never writes. Leave does.", match: "/zoom/" },
       { path: "sites/houseparty/index.html", label: "Houseparty leftover", blurb: "Not Zoom gold.", match: "/houseparty/" }),
@@ -407,7 +404,13 @@
 
   function stepHref(step, trailId) {
     if (!step) return "/index.html#passport";
-    if ({ "2017": 1, "2019": 1, "2020": 1, "2021": 1 }[step.year]) {
+    if (step.year === "2015" && step.path === "pages/about.html") {
+      return "/app/index.html#/year/2015?stop=about";
+    }
+    if (step.path && step.path.indexOf("#/year/") !== -1) {
+      return "/" + String(step.path).replace(/^\//, "");
+    }
+    if ({ "2015": 1, "2017": 1, "2020": 1, "2021": 1 }[step.year]) {
       return "/app/index.html#/year/" + step.year;
     }
     var tid = trailId || (getNight().trail || "first-night");
@@ -659,7 +662,7 @@
 
   function isLiveYear(year) {
     year = String(year || "");
-    if (!/^(199[4-9]|200[0-7]|2009|201[0-9]|202[0-2])$/.test(year)) return false;
+    if (!/^(199[4-9]|200[0-7]|2009|201[0-7]|202[0-2])$/.test(year)) return false;
     return !WIPED[year];
   }
 

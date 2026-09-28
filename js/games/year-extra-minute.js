@@ -1,5 +1,5 @@
 /**
- * Minute-detail leftover extras (1994–2018).
+ * Minute-detail leftover extras (1994–).
  * Host: [data-year-game][data-minute-extra]
  * Kinds: pick · seq · form · search · hold · burst · buffer · wizard
  * Incomplete never writes. Traps never write.

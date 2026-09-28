@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * CUT-OPEN leftover dest-true: leftover-3× first + leftover-2× on 2013 / 2018.
+ * CUT-OPEN leftover dest-true: leftover-3× first + leftover-2× on 2013 / .
  * Second leftover-3× strip is not named.
  */
 const { test, expect } = require("@playwright/test");
@@ -93,22 +93,22 @@ test.describe("2013 leftover dest-true", () => {
   });
 });
 
-test.describe.skip("2018 leftover dest-true removed with the year", () => {
+test.describe.skip(" leftover dest-true removed with the year", () => {
   test("Reddit leftover-3× dest-true", async ({ page }) => {
-    await page.goto("/years/2018/sites/reddit/index.html");
+    await page.goto("/years//sites/reddit/index.html");
     await completePop(page, "reddit", "itt18-pop-reddit", "itt18-gdpr", "reddit leftover");
   });
   test("YouTube leftover-3× dest-true", async ({ page }) => {
-    await page.goto("/years/2018/sites/youtube/index.html");
+    await page.goto("/years//sites/youtube/index.html");
     await completePop(page, "youtube", "itt18-pop-youtube", "itt18-gdpr", "youtube leftover");
   });
   test("Wikipedia leftover-3× dest-true", async ({ page }) => {
-    await page.goto("/years/2018/sites/wikipedia/index.html");
+    await page.goto("/years//sites/wikipedia/index.html");
     await completePop(page, "wikipedia", "itt18-pop-wikipedia", "itt18-gdpr", "wikipedia leftover");
   });
   test("GDPR leftover-2× lx never writes gold", async ({ page }) => {
     test.skip(true, "official dest leftover-2× panels = 0; leftover dest leftover-3× is the unique face");
-    await page.goto("/years/2018/sites/gdpr/index.html");
+    await page.goto("/years//sites/gdpr/index.html");
     await page.evaluate(() => {
       localStorage.removeItem("itt18-gdpr-lx");
       localStorage.removeItem("itt18-gdpr");
@@ -128,7 +128,7 @@ test.describe.skip("2018 leftover dest-true removed with the year", () => {
   });
 });
 
-test.describe("leftover-2× dest-minute sample 2016 / 2017 / 2019", () => {
+test.describe("leftover-2× dest-minute sample 2016 / 2017 / ", () => {
   test("2016 Dyn leftover-2×", async ({ page }) => {
     test.skip(true, "Dyn is unique leftover-3× dest-true; leftover-2× warehouse is not the visitor face");
     await page.goto("/years/2016/sites/dyn/index.html");
@@ -167,12 +167,12 @@ test.describe("leftover-2× dest-minute sample 2016 / 2017 / 2019", () => {
     await expect.poll(() => getKey(page, "itt17-teams-lx")).toBeTruthy();
     expect(await getKey(page, "itt17-faceid")).toBeFalsy();
   });
-  test("2019 Fortnite leftover-2×", async ({ page }) => {
+  test(" Fortnite leftover-2×", async ({ page }) => {
     const fs = require("fs");
     const path = require("path");
-    test.skip(!fs.existsSync(path.join(__dirname, "..", "years/2019/sites/fortnite/index.html")), "old 2019 fortnite dest gone");
-    test.skip(!destOnDisk('/years/2019/sites/fortnite/index.html'), 'dest-lock');
-    await page.goto("/years/2019/sites/fortnite/index.html");
+    test.skip(!fs.existsSync(path.join(__dirname, "..", "years//sites/fortnite/index.html")), "old  fortnite dest gone");
+    test.skip(!destOnDisk('/years//sites/fortnite/index.html'), 'dest-lock');
+    await page.goto("/years//sites/fortnite/index.html");
     await page.evaluate(() => {
       localStorage.removeItem("itt19-fn-lx");
       localStorage.removeItem("itt19-disneyplus");
@@ -218,12 +218,12 @@ test.describe("leftover-2× dest-minute sample 2016 / 2017 / 2019", () => {
     await expect.poll(() => getKey(page, "itt15-apple-lx-d2")).toBeTruthy();
     expect(await getKey(page, "itt15-periscope")).toBeFalsy();
   });
-  test("2019 iPhone about leftover-2× lx then d2 · gold empty", async ({ page }) => {
+  test(" iPhone about leftover-2× lx then d2 · gold empty", async ({ page }) => {
     test.skip(true, "official dest leftover-2× panels = 0; leftover dest leftover-3× is the unique face");
     const fs = require("fs");
     const path = require("path");
-    test.skip(!fs.existsSync(path.join(__dirname, "..", "years/2019/sites/iphone/about.html")), "old 2019 iphone about dest gone");
-    await page.goto("/years/2019/sites/iphone/about.html");
+    test.skip(!fs.existsSync(path.join(__dirname, "..", "years//sites/iphone/about.html")), "old  iphone about dest gone");
+    await page.goto("/years//sites/iphone/about.html");
     await page.evaluate(() => {
       localStorage.removeItem("itt19-iphone-ab-lx");
       localStorage.removeItem("itt19-iphone-ab-d2");

@@ -191,13 +191,13 @@ CITED_ADD: dict[str, list[str]] = {
         "googlelens", "googlepay", "highsierra", "horizonzd", "imacpro", "injustice2",
         "ipadpro105", "ipadpro129", "iphone8plus",
     ],
-    "2018": [
+    "": [
         "gplusgone", "androidpie", "ios12", "pubg", "rdr2", "mojave", "onedot",
         "epicstore", "nso", "espnplus", "caffeine", "reddit", "youtube", "wikipedia",
         "instagram", "chrome", "fortnite", "gdpr", "github", "homepod", "spectre",
         "tiktok", "trust", "playable",
     ],
-    "2019": [
+    "": [
         "apex", "airpods2", "android10", "applewatch5", "astralchain", "bloodstained",
         "borderlands3", "catalina", "control19", "crashteamracing", "daysgone",
         "deathstranding", "discoelysium", "dmc5", "fireemblem3h", "galaxyfold",

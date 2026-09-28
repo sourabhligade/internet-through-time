@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * 2017–2019 leftover deepen theaters — first click is the period verb.
+ * 2017– leftover deepen theaters — first click is the period verb.
  * 4× leftover pack still walked by 2x-links-all-years.spec.js.
  */
 const { test, expect } = require("@playwright/test");
@@ -79,14 +79,14 @@ test("2017 Zoom leftover dest is not 2020 mass", async ({ page }) => {
   });
 });
 
-test("2019 is live lean", async ({ page }) => {
+test(" is live lean", async ({ page }) => {
   const fs = require("fs");
   const path = require("path");
-  expect(fs.existsSync(path.join(__dirname, "..", "react", "src", "year2019.js"))).toBe(true);
+  expect(fs.existsSync(path.join(__dirname, "..", "react", "src", "year.js"))).toBe(true);
   await page.goto("/");
-  await expect(page.locator("a.year-card.available[data-year='2019']")).toHaveAttribute(
+  await expect(page.locator("a.year-card.available[data-year='']")).toHaveAttribute(
     "href",
-    /app\/index\.html#\/year\/2019/
+    /app\/index\.html#\/year\//
   );
 });
 

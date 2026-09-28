@@ -15,8 +15,8 @@ leftover-3x-unique-links.spec.js
 official-leftover-2x.spec.js
 lean-triple-leftover.spec.js
 year-true-packs.spec.js
-2016-2018-3x-detail.spec.js
-2018-flows.spec.js
+2016--3x-detail.spec.js
+-flows.spec.js
 2020-mvp.spec.js
 2021-mvp.spec.js
 2022-mvp.spec.js

@@ -30,7 +30,7 @@
 | Fact | Cite |
 |------|------|
 | ILS June **2006** | **85,507,314** sites · **+32%** · **1,160,335,280** users · **13.6** users/site · launched **Twttr** — [Internet Live Stats](https://www.internetlivestats.com/total-number-of-websites/) |
-| ILS June table | **ends 2018**. 2006 cell is legal. Never invent 2019–2025 June rows. |
+| ILS June table | **ends **. 2006 cell is legal. Never invent –2025 June rows. |
 | First tweet | **21 Mar 2006** · jack · *just setting up my twttr* |
 | Twitter public | **15 Jul 2006** |
 | News Feed | **5 Sep 2006** · Facebook |
@@ -54,7 +54,7 @@
 
 ## Hard bans
 
-iPhone · Street View as default Maps · Chrome · Vista as default shell · 280-character default · For You algorithm · News Feed as the star · 7th guided step · invented brand pixels · live Twitter API · live YouTube CDN · invent an ILS June cell after 2018.
+iPhone · Street View as default Maps · Chrome · Vista as default shell · 280-character default · For You algorithm · News Feed as the star · 7th guided step · invented brand pixels · live Twitter API · live YouTube CDN · invent an ILS June cell after .
 
 ## What this pass did / did not
 

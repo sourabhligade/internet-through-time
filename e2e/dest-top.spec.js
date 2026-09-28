@@ -35,17 +35,22 @@ test.describe("dest-as-tab footer", () => {
       await expect(page.getByRole("link", { name: /Year menu/i })).toHaveCount(1);
       const layout = await page.evaluate(() => {
         const foot = document.getElementById("itt-exhibit-foot");
+        const trail = document.querySelector("[data-itt-flow-trail]");
         const html = getComputedStyle(document.documentElement);
         const body = getComputedStyle(document.body);
+        const footTop = foot ? foot.getBoundingClientRect().top : 0;
+        const trailBottom = trail ? trail.getBoundingClientRect().bottom : footTop;
         return {
           htmlMin: html.minHeight,
           bodyMin: body.minHeight,
           footPos: foot ? getComputedStyle(foot).position : "",
+          footAfterTrail: !trail || footTop + 1 >= trailBottom,
         };
       });
       expect(layout.htmlMin).toBe("0px");
       expect(layout.bodyMin).toBe("0px");
       expect(layout.footPos === "static" || layout.footPos === "relative").toBeTruthy();
+      expect(layout.footAfterTrail).toBeTruthy();
     });
     }
   }

@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Link, Navigate, Route, Routes, useParams } from "react-router-dom";
 import { Year2014 } from "./Year2014.jsx";
+import { Year2015 } from "./Year2015.jsx";
 import { Year2017 } from "./Year2017.jsx";
-import { Year2018 } from "./Year2018.jsx";
-import { Year2019 } from "./Year2019.jsx";
 import { Year2020 } from "./Year2020.jsx";
 import { Year2021 } from "./Year2021.jsx";
 import { REACT_YEARS, yearById } from "./years.js";
@@ -13,9 +12,8 @@ export function App() {
     <Routes>
       <Route path="/" element={<Hall />} />
       <Route path="/year/2014" element={<Year2014 />} />
+      <Route path="/year/2015" element={<Year2015 />} />
       <Route path="/year/2017" element={<Year2017 />} />
-      <Route path="/year/2018" element={<Year2018 />} />
-      <Route path="/year/2019" element={<Year2019 />} />
       <Route path="/year/2020" element={<Year2020 />} />
       <Route path="/year/2021" element={<Year2021 />} />
       <Route path="/year/:year" element={<YearDoor />} />
@@ -30,8 +28,8 @@ function Hall() {
       <p className="kicker">React shell · 2014 and later</p>
       <h1>Internet Through Time</h1>
       <p className="lede">
-        These nine doors are the React app. 1994–2013 stay on the static
-        museum at port 8080. 2018 and 2023–2025 stay wiped. Each door opens
+        These doors are the React app. 1994–2013 stay on the static
+        museum at port 8080. 2023–2025 stay wiped. Each door opens
         the existing year rooms.
       </p>
       <ul className="cards">

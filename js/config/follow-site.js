@@ -32,7 +32,7 @@
         stop("2010", "sites/yahoo/index.html", "lean"),
         stop("2012", "sites/yahoo/index.html", "IPO year"),
         stop("2015", "sites/yahoo/index.html", "Go LIVE year"),
-        stop("2019", "sites/yahoo/index.html", "Continue year")
+        stop("", "sites/yahoo/index.html", "Continue year")
       ]
     },
     amazon: {
@@ -54,7 +54,7 @@
         stop("2012", "sites/amazon/index.html", "IPO year"),
         stop("2015", "sites/amazon/index.html", "Go LIVE year"),
         stop("2017", "sites/amazon/index.html", "Face ID year"),
-        stop("2019", "sites/amazon/index.html", "Continue year"),
+        stop("", "sites/amazon/index.html", "Continue year"),
         stop("2021", "sites/amazon/index.html", "ATT year"),
         stop("2022", "sites/amazon/index.html", "ChatGPT year")
       ]
@@ -75,7 +75,7 @@
         stop("2010", "sites/google/index.html", "lean"),
         stop("2012", "sites/google/index.html", "IPO year"),
         stop("2015", "sites/googlephotos/index.html", "Photos locker"),
-        stop("2019", "sites/google/index.html", "Continue year"),
+        stop("", "sites/google/index.html", "Continue year"),
         stop("2021", "sites/google/index.html", "ATT year"),
         stop("2022", "sites/google/index.html", "ChatGPT year")
       ]
@@ -123,7 +123,7 @@
         stop("2014", "sites/twitter/index.html", "Install year"),
         stop("2015", "sites/twitter/index.html", "Go LIVE year"),
         stop("2017", "sites/twitter/280.html", "280"),
-        stop("2019", "sites/twitter/index.html", "Continue year"),
+        stop("", "sites/twitter/index.html", "Continue year"),
         stop("2021", "sites/twitter/index.html", "ATT year"),
         stop("2022", "sites/twitter/index.html", "bird leftover")
       ]
@@ -138,7 +138,7 @@
         stop("2015", "sites/instagram/index.html", "Go LIVE year"),
         stop("2016", "sites/instagram/stories.html", "Stories"),
         stop("2017", "sites/instagram/index.html", "leftover Instagram on this door · itt17-instagram17"),
-        stop("2019", "sites/instagram/index.html", "Continue year"),
+        stop("", "sites/instagram/index.html", "Continue year"),
         stop("2021", "sites/instagram/index.html", "ATT year"),
         stop("2022", "sites/instagram/index.html", "ChatGPT year")
       ]
@@ -178,7 +178,7 @@
  var SKIP_YEARS = {
  "2009": 1,
  "2015": 1,
- "2018": 1,
+ "": 1,
  "2023": 1,
  "2024": 1,
  "2025": 1

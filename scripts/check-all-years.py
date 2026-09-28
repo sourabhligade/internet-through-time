@@ -120,7 +120,7 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/teams/index.html",
         "sites/playable/game.html"
     ],
-    "2018": [
+    "": [
         "pages/home.html",
         "pages/about.html",
         "sites/gdpr/index.html",
@@ -129,7 +129,7 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/instagram/igtv.html",
         "sites/playable/game.html"
     ],
-    "2019": [
+    "": [
         "pages/home.html",
         "pages/about.html",
         "sites/disneyplus/home.html",
@@ -257,8 +257,9 @@ def check_year(year: str, http_base: str | None) -> dict:
             result["warnings"].append("research markers incomplete")
 
     react_src = {
+        "2015": ROOT / "react/src/year2015.js",
         "2017": ROOT / "react/src/year2017.js",
-        "2019": ROOT / "react/src/year2019.js",
+        "": ROOT / "react/src/year.js",
         "2020": ROOT / "react/src/year2020.js",
         "2021": ROOT / "react/src/year2021.js",
     }.get(year)

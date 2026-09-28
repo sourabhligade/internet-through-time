@@ -141,7 +141,7 @@ def check_urlmaps() -> None:
     import json
     import subprocess
 
-    react_doors = {"2017", "2019", "2020", "2021"}
+    react_doors = {"2015", "2017", "", "2020", "2021"}
     for year in SHIP_YEARS:
         if year in react_doors:
             ok(f"{year} urlMap skipped (React door, no year HTML)")

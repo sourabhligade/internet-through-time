@@ -45,7 +45,7 @@
 
  "2007": "<p class=\"itt-felt-trail\">Go, do not App Store: <a href=\"../sites/iphone/index.html\">iPhone Safari</a>. Empty / App Store / Chrome never write.</p>",
 
- "2019": "<p class=\"itt-felt-trail\">Continue watching: <a href=\"/app/index.html#/year/2019\">Disney+</a>. Trial never writes.</p>",
+ "": "<p class=\"itt-felt-trail\">Continue watching: <a href=\"/app/index.html#/year/\">Disney+</a>. Trial never writes.</p>",
 
 
 

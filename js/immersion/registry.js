@@ -241,6 +241,8 @@
     "2006": [
       "immersion/year-2006-extras.js",
       "immersion/twitter.js",
+      "immersion/docs.js",
+      "immersion/aws.js",
       "immersion/youtube.js",
       "immersion/maps.js",
       "immersion/facebook.js",
@@ -352,17 +354,6 @@
       "immersion/no-mock-culture-ack.js",
       "immersion/no-mock-common.js",
       "immersion/year-2017-extras.js",
-      "immersion/one-thing-machines.js"
-    ],
-    "2019": [
-      "immersion/no-mock-gfc.js",
-      "immersion/no-mock-sopa.js",
-      "immersion/no-mock-uber.js",
-      "immersion/no-mock-wave.js",
-      "immersion/no-mock-fb-connect.js",
-      "immersion/no-mock-culture-ack.js",
-      "immersion/no-mock-common.js",
-      "immersion/year-2019-extras.js",
       "immersion/one-thing-machines.js"
     ],
     "2007": [

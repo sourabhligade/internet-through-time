@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * 2012–2019 official 10 dest-true.
+ * 2012– official 10 dest-true.
  * Gold dests: dest-specific incomplete never writes, complete writes star.
  * Official leftover: leftover-official dest-true · leftover never writes star.
  * Guided stays 6.  live. 2020 Zoom Leave live.
@@ -144,7 +144,7 @@ test.describe("wiped years stay boarded", () => {
     for (const y of ["2023", "2024", "2025"]) {
       expect(fs.existsSync(path.join(root, "years", y, "index.html"))).toBe(false);
     }
-    expect(fs.existsSync(path.join(root, "years", "2019", "index.html"))).toBe(false);
+    expect(fs.existsSync(path.join(root, "years", "", "index.html"))).toBe(false);
     expect(fs.existsSync(path.join(root, "years", "2021", "index.html"))).toBe(false);
     expect(fs.existsSync(path.join(root, "years", "2014", "index.html"))).toBe(true);
     expect(fs.existsSync(path.join(root, "years", "2022", "index.html"))).toBe(true);

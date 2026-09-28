@@ -32,7 +32,7 @@ A year with only a readme under `assets/period/` does not get a drawn logo. It w
 | 2015 | 0 | Readme only. Do not draw a logo. |
 | 2016 | 0 | Readme only. Do not draw a logo. |
 | 2017 | 0 | Readme only. Do not draw a logo. |
-| 2019 | 0 | Readme only. Do not draw a logo. |
+|  | 0 | Readme only. Do not draw a logo. |
 | 2020 | 0 | Readme only. Do not draw a logo. |
 | 2021 | 0 | Readme only. Do not draw a logo. |
 | 2022 | 0 | Readme only. Do not draw a logo. |
@@ -486,20 +486,20 @@ Images: none. `assets/period/2017/` is a readme only. Do not draw a logo for thi
 - [ ] 9 · Equifax freeze `itt17-equifax` — http://127.0.0.1:8080/years/2017/sites/equifax/index.html
 - [ ] 10 · Storm Circle `itt17-game-stormcircle` — http://127.0.0.1:8080/years/2017/sites/playable/game.html
 
-### 2019
+### 
 
-Images: none. `assets/period/2019/` is a readme only. Do not draw a logo for this year.
+Images: none. `assets/period//` is a readme only. Do not draw a logo for this year.
 
-- [ ] 1 · Disney+ Continue `itt19-disneyplus` — http://127.0.0.1:8080/years/2019/sites/disneyplus/home.html
-- [ ] 2 · TikTok For You `itt19-tiktok` — http://127.0.0.1:8080/years/2019/sites/tiktok/index.html
-- [ ] 3 · Apple Arcade `itt19-arcade` — http://127.0.0.1:8080/years/2019/sites/arcade/index.html
-- [ ] 4 · Apple TV+ `itt19-appletv` — http://127.0.0.1:8080/years/2019/sites/appletv/index.html
-- [ ] 5 · Stadia `itt19-stadia` — http://127.0.0.1:8080/years/2019/sites/stadia/index.html
-- [ ] 6 · iPhone 11 `itt19-iphone11` — http://127.0.0.1:8080/years/2019/sites/iphone/iphone11.html
-- [ ] 7 · AirPods Pro `itt19-airpods-pro` — http://127.0.0.1:8080/years/2019/sites/airpodspro/index.html
-- [ ] 8 · Chrome habit `itt19-chrome` — http://127.0.0.1:8080/years/2019/sites/chrome/index.html
-- [ ] 9 · Windows 10 residual `itt19-win10` — http://127.0.0.1:8080/years/2019/sites/windows10/index.html
-- [ ] 10 · Continue Row `itt19-game-continuerow` — http://127.0.0.1:8080/years/2019/sites/playable/game.html
+- [ ] 1 · Disney+ Continue `itt19-disneyplus` — http://127.0.0.1:8080/years//sites/disneyplus/home.html
+- [ ] 2 · TikTok For You `itt19-tiktok` — http://127.0.0.1:8080/years//sites/tiktok/index.html
+- [ ] 3 · Apple Arcade `itt19-arcade` — http://127.0.0.1:8080/years//sites/arcade/index.html
+- [ ] 4 · Apple TV+ `itt19-appletv` — http://127.0.0.1:8080/years//sites/appletv/index.html
+- [ ] 5 · Stadia `itt19-stadia` — http://127.0.0.1:8080/years//sites/stadia/index.html
+- [ ] 6 · iPhone 11 `itt19-iphone11` — http://127.0.0.1:8080/years//sites/iphone/iphone11.html
+- [ ] 7 · AirPods Pro `itt19-airpods-pro` — http://127.0.0.1:8080/years//sites/airpodspro/index.html
+- [ ] 8 · Chrome habit `itt19-chrome` — http://127.0.0.1:8080/years//sites/chrome/index.html
+- [ ] 9 · Windows 10 residual `itt19-win10` — http://127.0.0.1:8080/years//sites/windows10/index.html
+- [ ] 10 · Continue Row `itt19-game-continuerow` — http://127.0.0.1:8080/years//sites/playable/game.html
 
 ### 2020
 

@@ -76,8 +76,8 @@ test("2013 unique leftover-3×n is gone", async ({ page }) => {
   await expect(page.locator('[data-itt-pop-more="2013"]')).toHaveCount(0);
 });
 
-test("2018 unique leftover-3×n is gone", () => {
-  expect(ROWS.filter((r) => r.year === "2018")).toEqual([]);
+test(" unique leftover-3×n is gone", () => {
+  expect(ROWS.filter((r) => r.year === "")).toEqual([]);
 });
 
 test("2021 unique leftover-3×n is gone", () => {

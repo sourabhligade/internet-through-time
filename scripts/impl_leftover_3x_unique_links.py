@@ -5,7 +5,7 @@
 Dests already on disk. KEEP original leftover-3× unique dests.
 Leftover-3× unique dest-true dests stay. Official dest leftover-3× first paint 0.
 Do not dest-farm dest folders. Do not grow leftover-3× unique dest-true dests
-past 2018=3 / 2021=5. Skip 2017 leftover-20, forests, 2009, 2023–2025.
+past =3 / 2021=5. Skip 2017 leftover-20, forests, 2009, 2023–2025.
 Do not write dest-true leftover dest I/O.
 Cite: docs/LEFTOVER-3X-UNIQUE-LINKS.md
 """
@@ -58,8 +58,8 @@ KEEP: dict[str, list[str]] = {
         "slack", "reddit", "netflix", "youtube", "alphago", "assistant", "dyn",
         "fblive", "moments",
     ],
-    "2018": ["reddit", "youtube", "wikipedia"],
-    "2019": [
+    "": ["reddit", "youtube", "wikipedia"],
+    "": [
         "amazon", "facebook", "google", "instagram", "nyt", "oculusquest",
         "twitter", "yahoo", "youtube",
     ],
@@ -106,8 +106,8 @@ CITED_ADD: dict[str, list[str]] = {
         "douyin", "airpods", "allo", "daydream", "ethereum", "figma", "googlehome",
         "ios10", "letsencrypt",
     ],
-    "2018": ["gplusgone", "epicstore", "ios12"],
-    "2019": [
+    "": ["gplusgone", "epicstore", "ios12"],
+    "": [
         "apex", "airpods2", "android10", "applewatch5", "catalina", "galaxyfold",
         "ios13", "ipados", "sekiro",
     ],
@@ -130,8 +130,8 @@ WANT_AFTER = {
     "2014": 18,
     "2015": 18,
     "2016": 18,
-    "2018": 6,
-    "2019": 18,
+    "": 6,
+    "": 18,
     "2020": 18,
     "2021": 10,
     "2022": 18,

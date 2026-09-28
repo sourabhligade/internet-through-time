@@ -385,54 +385,6 @@
       ]
     },
     {
-      "year": ,
-      "yy": "08",
-      "mode": "panel",
-      "star": "sites/github/issue.html",
-      "flows": [
-        {
-          "suffix": "appstore",
-          "room": "sites/appstore/index.html",
-          "next": "sites/chrome/index.html",
-          "key": "itt08-appstore",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "chrome",
-          "room": "sites/chrome/index.html",
-          "next": "sites/android/index.html",
-          "key": "itt08-chrome",
-          "ok": true,
-          "checks": 3
-        },
-        {
-          "suffix": "g1",
-          "room": "sites/android/index.html",
-          "next": "sites/hulu/index.html",
-          "key": "itt08-g1",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "hulu",
-          "room": "sites/hulu/index.html",
-          "next": "sites/dropbox/index.html",
-          "key": "itt08-hulu",
-          "ok": true,
-          "checks": 2
-        },
-        {
-          "suffix": "db",
-          "room": "sites/dropbox/index.html",
-          "next": "sites/github/issue.html",
-          "key": "itt08-db",
-          "ok": true,
-          "checks": 2
-        }
-      ]
-    },
-    {
       "year": 2009,
       "yy": "09",
       "mode": "panel",
@@ -637,7 +589,7 @@
     "2015": "sites/apple/watch.html",
     "2016": "sites/instagram/stories.html",
     "2017": "sites/iphone/x.html",
-    "2018": "sites/gdpr/index.html",
-    "2019": "sites/disneyplus/home.html"
+    "": "sites/gdpr/index.html",
+    "": "sites/disneyplus/home.html"
   }
 }

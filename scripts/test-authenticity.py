@@ -837,7 +837,7 @@ def test_link_audit_covers_late_years() -> None:
     sys.path.insert(0, str(ROOT / "scripts"))
     from itt_gate import SHIP_YEARS  # noqa: E402
 
-    need = {"1998", "1999", "2001", "2002", "2003", "2018"}
+    need = {"1998", "1999", "2001", "2002", "2003"}
     shipped = set(SHIP_YEARS)
     missing = sorted(y for y in need if (ROOT / "years" / y).is_dir() and y not in shipped)
     if missing:
@@ -2074,45 +2074,6 @@ def test_2017_signature() -> None:
     ok("2017-signature")
 
 
-def test_2018_signature() -> None:
-    if not (ROOT / "years/2018").exists():
-        ok("2018-signature-skip")
-        return
-    missing = []
-    for rel in (
-        "pages/home.html",
-        "pages/about.html",
-        "sites/gdpr/index.html",
-        "sites/tiktok/fyp.html",
-        "sites/trust/index.html",
-        "sites/playable/game.html",
-    ):
-        if not (ROOT / "years/2018" / rel).is_file():
-            missing.append(rel)
-    if missing:
-        fail("2018-signature", "missing: " + ", ".join(missing))
-        return
-    shell = read(ROOT / "years/2018/index.html")
-    if 'data-itt-year="2018"' not in shell:
-        fail("2018-signature", "shell year")
-        return
-    if "itt18" not in read(ROOT / "js/config/2018.js"):
-        fail("2018-signature", "itt18")
-        return
-    about = read(ROOT / "years/2018/pages/about.html")
-    if "1,630,322,579" not in about:
-        fail("2018-signature", "scale")
-        return
-    if "GDPR" not in about or "Reels" not in about:
-        fail("2018-signature", "bans")
-        return
-    banner = read(ROOT / "years/2018/sites/gdpr/index.html")
-    if "data-gdpr-accept-all" not in banner or "data-gdpr-save" not in banner:
-        fail("2018-signature", "gdpr hooks")
-        return
-    ok("2018-signature")
-
-
 def test_2016_urlmap_complete() -> None:
     if not (ROOT / "years/2016").exists():
         ok("2016-urlmap-complete-skip")
@@ -2179,7 +2140,7 @@ def test_immersion_registry_complete() -> None:
     for year in (
         "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002",
         "2003", "2004", "2005", "2006", "2007","2009", "2010",
-        "2012", "2013", "2014", "2015", "2016", "2017", "2018",
+        "2012", "2013", "2014", "2015", "2016", "2017",
     ):
         # Only require registry entry when the year tree is on disk (wiped years skip)
         if not (ROOT / "years" / year).is_dir():
@@ -2408,7 +2369,6 @@ def main() -> int:
         test_2016_signature,
         test_2016_urlmap_complete,
         test_2017_signature,
-        test_2018_signature,
         test_immersion_registry_complete,
         test_year_stubs_use_shared_boot,
         test_p1_immersion_hooks,

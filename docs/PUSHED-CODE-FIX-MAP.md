@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-26  
 **Commit:** `cbbd243a6` on `museum/1994-2020-lean`  
-**Scope:** Major bugs on the shipped museum. Incomplete years (2014 React dual door, period pixels +, short official trails, wiped 2018) stay out of this list.
+**Scope:** Major bugs on the shipped museum. Incomplete years (2014 React dual door, period pixels +, short official trails, wiped ) stay out of this list.
 
 Ship law stays [`DISK-TRUTH.md`](DISK-TRUTH.md). Live 5× stays  + boarded 2009.
 
@@ -14,21 +14,21 @@ Each row is a live break or a test that still walks deleted HTML. Fix column is 
 
 ---
 
-## 1. Dest-true never walks 2017 or 2019 official 10
+## 1. Dest-true never walks 2017 or  official 10
 
-`e2e/all-years-official-10-real.spec.js` skips a year when `years/{y}/index.html` is gone. 2017 and 2019 are React doors. Dest-true includes 2020-mvp and 2021-mvp, not 2017-mvp or 2019-mvp.
+`e2e/all-years-official-10-real.spec.js` skips a year when `years/{y}/index.html` is gone. 2017 and  are React doors. Dest-true includes 2020-mvp and 2021-mvp, not 2017-mvp or -mvp.
 
-**Fix:** Point `e2e/2017-mvp.spec.js` at `/app/index.html#/year/2017` (hub card, guided six, Face ID empty/trap/complete). Add `2017-mvp` and `2019-mvp` to `package.json` `test:e2e:dest-true`.
+**Fix:** Point `e2e/2017-mvp.spec.js` at `/app/index.html#/year/2017` (hub card, guided six, Face ID empty/trap/complete). Add `2017-mvp` and `-mvp` to `package.json` `test:e2e:dest-true`.
 
 **Verify:** `unset CI; unset BASE_URL; npm run test:e2e:dest-true`
 
-## 2. `2017-2019-leftover-20` opens the 2019 door for 2017 keys
+## 2. `2017--leftover-20` opens the  door for 2017 keys
 
-The React branch always `goto`s `/app/index.html#/year/2019`. 2017 leftover keys live on the 2017 rail. Cuphead / unique leftover still `goto` deleted `/years/2017/sites/...` HTML.
+The React branch always `goto`s `/app/index.html#/year/`. 2017 leftover keys live on the 2017 rail. Cuphead / unique leftover still `goto` deleted `/years/2017/sites/...` HTML.
 
 **Fix:** Open `/app/index.html#/year/{year}`. Click the rail button whose `code` is that leftover key. Empty verb, trap, then two ticks + field + verb. Star stays empty. Drop `data-uf17-*` HTML.
 
-**Verify:** `npx playwright test e2e/2017-2019-leftover-20.spec.js --workers=2`
+**Verify:** `npx playwright test e2e/2017--leftover-20.spec.js --workers=2`
 
 ## 3. `2017-unique-flows` still loads Face ID HTML
 
@@ -57,11 +57,11 @@ Official n=1 is GitHub issue (`itt08-github`). Official n=2 is App Store (`itt08
 
 `enterYear(page, "2017")` plus `#ott-guided-2017` and `iphone/x` href. Hub card is `/app/index.html#/year/2017`.
 
-**Fix:** Same shape as `2019-mvp.spec.js`.
+**Fix:** Same shape as `-mvp.spec.js`.
 
-## 7. `2012-2019-official-10` asserts 2019 and 2021 HTML exist
+## 7. `2012--official-10` asserts  and 2021 HTML exist
 
-`years/2019/index.html` and `years/2021/index.html` are gone. 2017 leftover keys in that file use `-lx` suffixes the React module does not write.
+`years//index.html` and `years/2021/index.html` are gone. 2017 leftover keys in that file use `-lx` suffixes the React module does not write.
 
 **Fix:** Assert those HTML trees are absent. Drop the 2017 HTML leftover block (the `existsSync` year filter already skips 2017).
 
@@ -73,15 +73,15 @@ Test title is “2007 hub card is open”. Body expects `a.year-card[href*="year
 
 ## 9. Start data for React years still uses HTML hrefs
 
-`ui/year/start-data.js` and `ui/year/start-extra.js` for 2017 / 2019 / 2020 / 2021 point at `../sites/iphone/x.html`, Disney+, Zoom, ATT HTML. Those year shells are gone. 2018 extra still points at GDPR HTML (year wiped — leave wiped, drop the extra).
+`ui/year/start-data.js` and `ui/year/start-extra.js` for 2017 /  / 2020 / 2021 point at `../sites/iphone/x.html`, Disney+, Zoom, ATT HTML. Those year shells are gone.  extra still points at GDPR HTML (year wiped — leave wiped, drop the extra).
 
-**Fix:** Point 2017/2019/2020/2021 extras at `/app/index.html#/year/YYYY`. Remove the 2018 start-extra row.
+**Fix:** Point 2017//2020/2021 extras at `/app/index.html#/year/YYYY`. Remove the  start-extra row.
 
 ## 10. 2016 READ-FIRST disagrees with disk
 
-File still says hub **28** years, dest folders **66**, and 2018 GDPR as a live lean door. Disk: 26 doors, 57 dest folders, 2015 / 2018 wiped.
+File still says hub **28** years, dest folders **66**, and  GDPR as a live lean door. Disk: 26 doors, 57 dest folders, 2015 /  wiped.
 
-**Fix:** 26 doors, 57 dests, 2015 / 2018 wiped.
+**Fix:** 26 doors, 57 dests, 2015 /  wiped.
 
 ## 11. OPEN-CHECKLIST still names GitHub `20b7730ca`
 
@@ -95,7 +95,7 @@ Pushed SHA is `cbbd243a6`. Step 8 commit box is still open.
 
 **Fix:** Skip those years when `years/{y}/index.html` is missing, or point signature Face ID / Disney+ at the React door. Do not restore HTML folders.
 
-## 13. `2016-2018-trail-chain` walks 2017 HTML
+## 13. `2016--trail-chain` walks 2017 HTML
 
 Same skip: no `years/2017/index.html`.
 
@@ -105,7 +105,7 @@ Same skip: no `years/2017/index.html`.
 
 **Fix:** Leave warehouse freeze files red unless a named pack is retargeted. Dest-true leftover-2× catalog is the live number.
 
-## 15. `js/config/2017.js` (and 2019–2021) still map `museum.local/years/2017/`
+## 15. `js/config/2017.js` (and –2021) still map `museum.local/years/2017/`
 
 Year HTML config is leftover. Authenticity already skips React years.
 
@@ -136,6 +136,6 @@ HTML Animoji needed Face ID saved + a face pick + two ticks. React Animoji is le
 3. 2017-mvp React + dest-true allowlist
 4. leftover-20 React year door
 5. unique-flows React leftover
-6. 2006-mvp, 2012-2019-official-10 asserts
+6. 2006-mvp, 2012--official-10 asserts
 7. 2016 READ-FIRST + OPEN-CHECKLIST SHA
 8. Run dest-true, leftover-20, unique-flows, follow-site, check-every-flow

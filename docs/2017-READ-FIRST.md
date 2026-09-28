@@ -1,7 +1,7 @@
 # 2017 — READ FIRST (from-scratch rebuild)
 
 **Date:** 2026-08-18  
-**Disk truth:** Hub is **24 years open**. 2017 is a **live React door** (Face ID star). HTML dest folders **0**. **2009 boarded.** **2015 wiped.** **2018 wiped.** **2020 live lean** · Zoom Leave. 2013 Vine is a live lean door · **2022 ChatGPT live.**  
+**Disk truth:** Hub is **24 years open**. 2017 is a **live React door** (Face ID star). HTML dest folders **0**. **2009 boarded.** **2015 wiped.** ** wiped.** **2020 live lean** · Zoom Leave. 2013 Vine is a live lean door · **2022 ChatGPT live.**  
 **Prefix:** `itt17`  
 **Clone shape from:** live `years/2016/` (lean door · ~25 HTML · Instagram Stories star). **Do not** restore git `HEAD` / `52df8ae3` `years/2017/` (108-page forest) or the older 43-HTML lean tree. **Do not** restore `/tmp/itt-2017-*`.
 
@@ -29,13 +29,13 @@
 | Role | Product | Why |
 |------|---------|-----|
 | **Star / one-thing** | **iPhone X / Face ID** | Sep 12 Newsroom. No Home button. Swipe up. $999. Pre-order Oct 27 · stores **Nov 3**. The 2017 unlock. Key `itt17-faceid`. |
-| **P0 living room** | **Fortnite Battle Royale** Sep 26 | Free. 100 players. Battle bus. PC / PS4 / Xbox. **Not** on Switch (2018). Not the chip. `itt17-fortnite`. |
+| **P0 living room** | **Fortnite Battle Royale** Sep 26 | Free. 100 players. Battle bus. PC / PS4 / Xbox. **Not** on Switch (). Not the chip. `itt17-fortnite`. |
 | **P0 composer** | **Twitter 280** Nov 7 | English + most languages. **CJK stays 140.** Empty / under-140 never writes the 280 key. `itt17-twitter-280`. |
 | **P0 goodbye** | **Vine is gone** Jan 17 | 2016 only *announced* the wind-down. 2017 is the day the app is an archive. `itt17-vine-gone`. |
 | **P0 office** | **Microsoft Teams GA** Mar 14 | 2016 was preview. Chat workspace in Office 365. `itt17-teams`. |
 | **P0 handheld** | **Nintendo Switch** Mar 3 | **$299.99**. Announce was Oct 20 **2016**. This year is the **buy**. `itt17-switch`. |
 | **P0 patch weather** | **WannaCry** May 12 | NHS / 150+ countries. Literacy. **No payload.** Not a 5× plaque. `itt17-wannacry`. |
-| **P1** | Equifax Sep 7 (~143M day-of) · Snap IPO Mar 2 ($17 / $24) · Bitcoin ~$20k Dec · musical.ly acquired Nov 9 (merge is **2018**) · FB 2B Jun 27 · Yahoo 3B Oct 3 · Title II repeal Dec 14 · Echo Show · YouTube TV $35 · iOS 11 · Pixel 2 · Flash EOL *announce* · NotPetya · KRACK | Seeds. Not a second star. |
+| **P1** | Equifax Sep 7 (~143M day-of) · Snap IPO Mar 2 ($17 / $24) · Bitcoin ~$20k Dec · musical.ly acquired Nov 9 (merge is ****) · FB 2B Jun 27 · Yahoo 3B Oct 3 · Title II repeal Dec 14 · Echo Show · YouTube TV $35 · iOS 11 · Pixel 2 · Flash EOL *announce* · NotPetya · KRACK | Seeds. Not a second star. |
 
 ## Do
 
@@ -52,7 +52,7 @@
 
 - Restore deleted `years/2017/` forest or the 43-HTML leftover lean tree.  
 - Move the chip to Fortnite, Netflix My List, or Bitcoin.  
-- Ship **TikTok** US mass (musical.ly still exists; merge **Aug 2 2018**), **Reels**, **IGTV**, **Meta**, **GDPR** (May 25 2018), **Chromium Edge**, **HomePod in stores** (ships Feb 2018), **Spectre / Meltdown** (public Jan 3 2018), **Cambridge Analytica** (Mar 2018), **Fortnite on Switch** (2018), **Marshmello concert** (2019), **iPhone XS** as default, **X rebrand**.  
+- Ship **TikTok** US mass (musical.ly still exists; merge **Aug 2 **), **Reels**, **IGTV**, **Meta**, **GDPR** (May 25 ), **Chromium Edge**, **HomePod in stores** (ships Feb ), **Spectre / Meltdown** (public Jan 3 ), **Cambridge Analytica** (Mar ), **Fortnite on Switch** (), **Marshmello concert** (), **iPhone XS** as default, **X rebrand**.  
 - Invent Apple Face ID / Epic / Nintendo brand pixels.  
 - Ship a WannaCry / NotPetya / KRACK exploit or an Equifax SSN form.  
 - Treat AirPower as a product that shipped (announced with X, never sold).  

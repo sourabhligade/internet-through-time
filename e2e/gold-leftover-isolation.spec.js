@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Gold leftover isolation — every live year 1994–2019.
+ * Gold leftover isolation — every live year 1994–.
  * Completing leftover on the star dest writes the leftover key only.
  * It must not write the year star. Leftover key must not equal the star suffix.
  */
@@ -35,7 +35,6 @@ const GOLD = [
 
   { year: "2016", dest: "sites/instagram/stories.html", star: "itt16-ig-stories" },
   { year: "2017", dest: "sites/iphone/x.html", star: "itt17-faceid" },
-  { year: "2019", dest: "sites/disneyplus/index.html", star: "itt19-disneyplus" },
 ];
 
 async function getKey(page, key) {

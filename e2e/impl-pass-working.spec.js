@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Working probe of the implement pass — leftover-trail writers, dest-true official,
- *  extras, 2022 dest-first, 2019 one-key, year-lock chrome.
+ *  extras, 2022 dest-first,  one-key, year-lock chrome.
  */
 const { test, expect } = require("@playwright/test");
 const { destOnDisk } = require("./helpers");
@@ -48,9 +48,9 @@ for (const row of FOREST) {
   });
 }
 
-test("2019 reddit leftover is one key · empty never writes · complete leftover only", async ({ page }) => {
-  test.skip(!destOnDisk("/years/2019/sites/reddit/index.html"), "2019 HTML dest gone");
-  await leftoverComplete(page, "/years/2019/sites/reddit/index.html", "reddit-lx", "itt19-disneyplus");
+test(" reddit leftover is one key · empty never writes · complete leftover only", async ({ page }) => {
+  test.skip(!destOnDisk("/years//sites/reddit/index.html"), " HTML dest gone");
+  await leftoverComplete(page, "/years//sites/reddit/index.html", "reddit-lx", "itt19-disneyplus");
   expect(await getKey(page, "itt19-reddit-d2")).toBeFalsy();
 });
 

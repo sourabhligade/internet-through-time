@@ -33,7 +33,7 @@
       var _link = document.createElement("link");
       _link.id = "itt-dest-page-css";
       _link.rel = "stylesheet";
- _link.href = _base + "/css/itt-dest-page.css?v=20260927dest4";
+ _link.href = _base + "/css/itt-dest-page.css?v=20260928dest6";
       (document.head || document.documentElement).appendChild(_link);
       if (!document.querySelector('meta[name="color-scheme"]')) {
         var _cs = document.createElement("meta");
@@ -516,7 +516,8 @@
  "immersion/shared-alerts.js",
  "immersion/shared-tour.js",
  "immersion/shared-nav.js",
- "immersion/shared-live.js"
+ "immersion/shared-live.js",
+ "immersion/late-face.js"
  ];
  var out = [];
  var seen = {};

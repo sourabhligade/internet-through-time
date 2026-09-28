@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Museum door — docs/FLOW-CHECK-DIAGRAM.md §4 + docs/DISK-TRUTH.md.
- * Hub 24 years (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022). 2005 restored. 2015 wiped. 2018 wiped. 2009 boarded. 2023–2025 wiped.
+ * Hub 24 years (1994–2007 + 2010 + 2012–2017 + 2020–2022). 2005 restored. 2015 is a React door with no HTML tree.  off hub.  wiped. 2009 boarded. 2023–2025 wiped.
  * Links first, then dest-true I/O. Dest-folder count is not a pass.
  */
 const fs = require("fs");
@@ -12,7 +12,7 @@ const { destOnDisk, expectYearBoarded } = require("./helpers");
 const ROOT = path.join(__dirname, "..");
 const SHIP = [];
 for (let y = 1994; y <= 2022; y++) {
- if ((y > 2007 && y < 2009) || y === 2009 || y === 2015 || y === 2018 || (y > 2010 && y < 2012)) continue;
+ if ((y > 2007 && y < 2009) || y === 2009 || (y > 2017 && y < 2020) || (y > 2010 && y < 2012)) continue;
   SHIP.push(String(y));
 }
 const BOARDED = ["2009", "2023", "2024", "2025"];
@@ -45,16 +45,15 @@ async function getKey(page, key) {
 }
 
 test.describe("visitor door", () => {
- test("hub lists 24 years including 2022 and 2005 · no 2015 · no 2018 · no 2009 · no 2023+", async ({ page }) => {
+ test("hub lists 24 years including 2022, 2015, and 2005 · no 2009 · no 2023+", async ({ page }) => {
  expect(SHIP).toHaveLength(24);
     await page.goto("/");
  await expect(page.locator("body")).toContainText(/24 years open/i);
     await expect(page.locator("body")).not.toContainText(/27 years open/i);
     await expect(page.locator("a.year-card[href*='years/2005']")).toBeVisible();
     await expect(page.locator("a.year-card.available[href*='years/2015']")).toHaveCount(0);
-    await expect(page.locator('.year-gap[title="2015 off hub"]')).toBeVisible();
-    await expect(page.locator("a.year-card[href*='years/2018']")).toHaveCount(0);
-    const reactDoor = new Set(["2017", "2019", "2020", "2021"]);
+    await expect(page.locator('a.year-card.available[data-year="2015"]')).toBeVisible();
+    const reactDoor = new Set(["2015", "2017", "2020", "2021"]);
     for (const y of SHIP) {
       if (reactDoor.has(y)) {
         await expect(page.locator(`a.year-card.available[data-year="${y}"]`)).toHaveAttribute(
@@ -80,11 +79,12 @@ test.describe("visitor door", () => {
     await expectYearBoarded(page, "2025");
   });
 
-  test("2015 wiped · no HTML tree · no hub card", async ({ page }) => {
+  test("2015 React door · no HTML tree · hub card", async ({ page }) => {
     expect(fs.existsSync(path.join(ROOT, "years", "2015"))).toBe(false);
+    expect(fs.existsSync(path.join(ROOT, "react", "src", "year2015.js"))).toBe(true);
     await page.goto("/");
     await expect(page.locator("a.year-card.available[href*='years/2015']")).toHaveCount(0);
-    await expect(page.locator('.year-gap[title="2015 off hub"]')).toBeVisible();
+    await expect(page.locator('a.year-card.available[data-year="2015"]')).toBeVisible();
   });
 
   test("every ship year has shell, Starting Point, About, Map, dest-unique official n files", () => {
@@ -92,7 +92,7 @@ test.describe("visitor door", () => {
     const missing = [];
     /** @type {Record<string, number>} */
     const officialCap = { "2004": 8, "2012": 9, "2013": 9, "2014": 9 };
-    const reactDoor = new Set(["2017", "2019", "2020", "2021"]);
+    const reactDoor = new Set(["2015", "2017", "2020", "2021"]);
     for (const y of SHIP) {
       if (reactDoor.has(y)) {
         if (!fs.existsSync(path.join(ROOT, "react", "src", "year" + y + ".js"))) {

@@ -4,8 +4,8 @@ const { test, expect } = require("@playwright/test");
 
 
 const YEARS = [];
-for (let y = 1994; y <= 2019; y++) {
- if (y === 2007 || (y > 2007 && y < 2009) || y === 2009 || y === 2013 || y === 2015 || y === 2018 || (y > 2010 && y < 2012)) continue;
+for (let y = 1994; y <= 2017; y++) {
+ if (y === 2007 || (y > 2007 && y < 2009) || y === 2009 || y === 2013 || y === 2015 || (y > 2017 && y < 2020) || (y > 2010 && y < 2012)) continue;
   YEARS.push(String(y));
 }
 
@@ -32,8 +32,6 @@ const ENGINES = {
   2015: ["pong", "snake"],
   2016: ["memory", "breakout"],
   2017: ["snake", "tetris"],
-  2018: ["memory", "pong"],
-  2019: ["snake", "breakout"],
 };
 
 function prefix(year) {

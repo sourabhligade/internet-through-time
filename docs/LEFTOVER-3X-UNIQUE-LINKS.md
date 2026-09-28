@@ -1,6 +1,6 @@
 # Leftover-3× unique dest links — 2× map
 
-**Removed.** Leftover-3× unique links are gone. No rails, no 107-dest set, no 2018=3 or 2021=5 cap. The text below is the old map.
+**Removed.** Leftover-3× unique links are gone. No rails, no 107-dest set, no =3 or 2021=5 cap. The text below is the old map.
 
 **Date:** 2026-09-22  
 **Status:** Removed. Was: leftover-3× unique dest links on leftover dest HTML. Official dest first paint 0. The old set was 107. The 2014 / 2020 / 2021 / 2022 caps were filled 2026-09-22 with official dest **hrefs** already on disk (T6). No new dest folders. Deep-research-2 **partial** (Hosting.com / Wikipedia category membership unverified). Leftover dest KEEP dest-disjoint cite walks 2007–2014 and 2015–2022 **KEEP**. Leftover dest DROP dests stay gone and must not be restored.  
@@ -16,7 +16,7 @@
 
 ## 1. One-line law
 
-**2× unique dest slugs in leftover-3× unique dest rails. One dest once. Dest folders already on disk. KEEP original leftover-3× unique dests. Leftover-3× unique dest-true dests stay. Do not dest-farm dest folders. Do not grow leftover-3× unique dest-true dests past 2018=3 / 2021=5. 2017 leftover-20 stays. Forests skip leftover-3× unique dest-true dests. Official dest leftover-3× first paint stays 0.**
+**2× unique dest slugs in leftover-3× unique dest rails. One dest once. Dest folders already on disk. KEEP original leftover-3× unique dests. Leftover-3× unique dest-true dests stay. Do not dest-farm dest folders. Do not grow leftover-3× unique dest-true dests past =3 / 2021=5. 2017 leftover-20 stays. Forests skip leftover-3× unique dest-true dests. Official dest leftover-3× first paint stays 0.**
 
 Leftover-3× unique dest **links** are **hrefs**, not dest folders. Leftover-3× unique dest-true dests (keep / trap / field / leftover Go) do **not** 2× in this pass.
 
@@ -46,7 +46,7 @@ A year **fails** if any row is N.
 | **T4** | Dest on disk | Every add href is `years/YYYY/sites/<slug>/index.html` already | Invent dest · restore DROP dests |
 | **T5** | Official dest leftover-3× | Official dest leftover-3× first paint **0** unless `?deep=1` | Yellow leftover-3× unique dest rail on GDPR first paint |
 | **T6** | Official dest as href | Official dest may be a leftover-3× unique dest **link** target | Official dest listed as leftover-3× unique dest-true dest |
-| **T7** | Leftover-3× unique dest-true dests stop | 2018 leftover-3× unique dest-true dests stay **3** · 2021 stay **5** | Grow leftover-3× unique dest-true dests to 9 on 2018/2021 |
+| **T7** | Leftover-3× unique dest-true dests stop |  leftover-3× unique dest-true dests stay **3** · 2021 stay **5** | Grow leftover-3× unique dest-true dests to 9 on /2021 |
 | **T8** | Leftover-20 | Only 2017. Skip leftover-3× unique dests on 2017 | leftover-3× unique dests on 2017 leftover-20 |
 | **T9** | Star | Leftover never writes the year star | leftover-3× unique dest **links** write gold |
 | **T10** | Dest-true leftover dest I/O | Leftover-3× unique dest-true dest counts stay · leftover dest KEEP dest-true leftover dest I/O stays | New leftover dest dest-true leftover dest I/O machines from leftover-3× unique dest **links** |
@@ -67,9 +67,9 @@ Alphabetical dests-on-disk fill is **out**. ADD dests must be famous that year *
 | Source | URL | What it gave |
 |--------|-----|----------------|
 | Hosting.com June visits 1995–2022 | https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/ | Top 10 per year. Skip porn ranks. leftover-3× unique dests already include many Hosting.com dests as leftover-3× unique dest-true dests. |
-| Leftover dest KEEP lean-double | [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) | 2007 / 2010–2012 / 2014 / 2016 / 2018 / 2021 / 2022 leftover dest KEEP dests on disk dest-disjoint. |
-| Extra dest KEEP | [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md) | KEEP **166** dests with cites. Dest-disjoint leftover dest KEEP. 2013 extra dest KEEP **34** · 2015 extra dest KEEP **31** · 2019 extra dest KEEP **54**. |
-| Leftover-3× unique dest-true dests | [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md) · `e2e/leftover-3x-unique.matrix.json` | KEEP original leftover-3× unique dests. 2018=**3** · 2021=**5** · 2017 leftover-20. |
+| Leftover dest KEEP lean-double | [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) | 2007 / 2010–2012 / 2014 / 2016 /  / 2021 / 2022 leftover dest KEEP dests on disk dest-disjoint. |
+| Extra dest KEEP | [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md) | KEEP **166** dests with cites. Dest-disjoint leftover dest KEEP. 2013 extra dest KEEP **34** · 2015 extra dest KEEP **31** ·  extra dest KEEP **54**. |
+| Leftover-3× unique dest-true dests | [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md) · `e2e/leftover-3x-unique.matrix.json` | KEEP original leftover-3× unique dests. =**3** · 2021=**5** · 2017 leftover-20. |
 | Cybercultural year essays | https://cybercultural.com/p/internet-2010/ · 2007 · 2012 | Year mass: iPhone 2007 · Instagram 2010 · Google+ · IG Android 2012. |
 | Web Design Museum year galleries | https://www.webdesignmuseum.org/gallery/year-1995 | Period exhibits. Failed-final stays honest. |
 | 2017 leftover-20 | [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) | Skip leftover-3× unique dests on 2017 leftover-20. |
@@ -90,7 +90,7 @@ Verified leftover dest KEEP dest-disjoint ADD dests (independently checked):
 | 2014 | leftover dest KEEP dest-disjoint **7**: `alibabaipo` `oculusfb` `inbox` `echo` `flappybird` `game2048` `ios8` | leftover dest dests on disk dest-disjoint leftover dest KEEP dest-true dests are these 7. Dest folders **25** = leftover-3× unique dests 9 + official dests 9 + leftover dest KEEP dest-disjoint 7 |
 | 2021 | leftover dest KEEP dest-disjoint **3**: `nft` `coinbaseipo` `epicapple` | Coinbase IPO Apr 2021. Dest folders **18** = leftover-3× unique dests 5 + official dests 10 + leftover dest KEEP dest-disjoint 3. leftover-3× unique dest-true dests stay **5** |
 
-Leftover dest KEEP dest-disjoint ADD dests in leftover-3× unique dest **links** §6 (2007 hackernews…pownce · 2010 hulu…ibooks ·  ios5…codecademy · 2012 tinder…googleplay · 2013 extra dest KEEP · 2015 extra dest KEEP · 2016 leftover dest KEEP · 2018 gplusgone epicstore ios12 · 2019 extra dest KEEP · 2020 clubhouse hbomax peacock · 2022 temu…m2) stay leftover dest KEEP dests on disk dest-disjoint. Extra dest KEEP ADD dests (2013 / 2015 / 2019) stay cited in [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md).
+Leftover dest KEEP dest-disjoint ADD dests in leftover-3× unique dest **links** §6 (2007 hackernews…pownce · 2010 hulu…ibooks ·  ios5…codecademy · 2012 tinder…googleplay · 2013 extra dest KEEP · 2015 extra dest KEEP · 2016 leftover dest KEEP ·  gplusgone epicstore ios12 ·  extra dest KEEP · 2020 clubhouse hbomax peacock · 2022 temu…m2) stay leftover dest KEEP dests on disk dest-disjoint. Extra dest KEEP ADD dests (2013 / 2015 / ) stay cited in [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md).
 
 ---
 
@@ -109,8 +109,8 @@ Metric: **unique dest slugs in leftover-3× unique dest rails** (hrefs). Leftove
 | 2015 | 50 | 9 | 28 | **18** | 9 | **9** |
 | 2016 | 57 | 9 | 34 | **18** | 9 | **9** |
 | 2017 | 68 | 0 leftover-20 | leftover-20 extras 20 | **stop leftover-20** | 0 | leftover-20 **20** |
-| 2018 | 24 | **3** | 11 | **6** leftover-3× unique dest **links** | 3 | **3** |
-| 2019 | 73 | 9 | 49 | **18** | 9 | **9** |
+|  | 24 | **3** | 11 | **6** leftover-3× unique dest **links** | 3 | **3** |
+|  | 73 | 9 | 49 | **18** | 9 | **9** |
 | 2020 | 22 | 9 | 3 | **18** | 9 | **9** |
 | 2021 | 18 | **5** | 3 | **10** leftover-3× unique dest **links** | 5 | **5** |
 | 2022 | 25 | 9 | 6 | **18** | 9 | **9** |
@@ -150,8 +150,8 @@ Do not drop these leftover-3× unique dest-true dests. leftover-3× unique dest 
 | 2014 | `snapchat` `instagram` `uber` | `twitter` `musically14` `truecrypt` | `facebook` `wikipedia` `youtube` | `itt14-wa-install` |
 | 2015 | `instagram` `spotify` `netflix` | `meerkat` `applemusicsub` `win10get` | `vine` `echo` `youtube` | `itt15-periscope` |
 | 2016 | `slack` `reddit` `netflix` | `youtube` `alphago` `assistant` | `dyn` `fblive` `moments` | `itt16-ig-stories` |
-| 2018 | `reddit` `youtube` `wikipedia` | — | — | `itt18-gdpr` |
-| 2019 | `amazon` `facebook` `google` | `instagram` `nyt` `oculusquest` | `twitter` `yahoo` `youtube` | `itt19-disneyplus` |
+|  | `reddit` `youtube` `wikipedia` | — | — | `itt18-gdpr` |
+|  | `amazon` `facebook` `google` | `instagram` `nyt` `oculusquest` | `twitter` `yahoo` `youtube` | `itt19-disneyplus` |
 | 2020 | `amazon` `facebook` `google` | `instagram` `youtube` `slack` | `reddit` `wikipedia` `nyt` | `itt20-zoom` |
 | 2021 | `amazon` `google` `instagram` | `twitter` `youtube` | — | `itt21-att` |
 | 2022 | `amazon` `google` `instagram` | `facebook` `youtube` `reddit` | `wikipedia` `netflix` `nyt` | `itt22-chatgpt` |
@@ -230,23 +230,23 @@ Cites: Douyin 2016 · Houseparty Feb 2016 · Super Mario Run 15 Dec 2016.
 
 Leftover-20 unique dests stay **20**. Do not leftover-3× unique dests. Map [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md).
 
-### 2018 — leftover-3× unique dest **links** after 6 · ADD 3 · leftover-3× unique dest-true dests stay **3** · star `itt18-gdpr`
+###  — leftover-3× unique dest **links** after 6 · ADD 3 · leftover-3× unique dest-true dests stay **3** · star `itt18-gdpr`
 
 KEEP original leftover-3× unique dests: `reddit` · `youtube` · `wikipedia`
 
 ADD leftover dest KEEP dest-disjoint: `gplusgone` · `epicstore` · `ios12`  
-Cites: Google+ consumer shutdown 8 Oct 2018 · leftover dest KEEP leftover dest-true stays dest-true leftover dest.
+Cites: Google+ consumer shutdown 8 Oct  · leftover dest KEEP leftover dest-true stays dest-true leftover dest.
 
 Leftover dest KEEP leftover dest-true stays dest-true leftover dest: `androidpie` · `caffeine` · `espnplus` · `mojave` · `nso` · `onedot` · `pubg` · `rdr2`
 
-Official dest leftover-3× first paint **0**: http://127.0.0.1:8080/years/2018/sites/gdpr/index.html
+Official dest leftover-3× first paint **0**: http://127.0.0.1:8080/years//sites/gdpr/index.html
 
-### 2019 — leftover-3× unique dest **links** after 18 · ADD 9 · leftover-3× unique dest-true dests stay 9 · star `itt19-disneyplus`
+###  — leftover-3× unique dest **links** after 18 · ADD 9 · leftover-3× unique dest-true dests stay 9 · star `itt19-disneyplus`
 
 KEEP original leftover-3× unique dests: `amazon` · `facebook` · `google` · `instagram` · `nyt` · `oculusquest` · `twitter` · `yahoo` · `youtube`
 
 ADD extra dest KEEP dest-disjoint: `apex` · `airpods2` · `android10` · `applewatch5` · `catalina` · `galaxyfold` · `ios13` · `ipados` · `sekiro`  
-Cites: Apex Legends 4 Feb 2019 · Android 10 3 Sep 2019.
+Cites: Apex Legends 4 Feb  · Android 10 3 Sep .
 
 ### 2020 — leftover-3× unique dest **links** after 18 · ADD 9 · leftover-3× unique dest-true dests stay 9 · star `itt20-zoom`
 
@@ -306,20 +306,20 @@ Dest HTML leftover-3× unique dest **links** implemented 2026-09-21. Dest-true l
 |------|---------------|-----|
 | 2007 | iPhone Safari | http://127.0.0.1:8080/years/2007/sites/iphone/index.html |
 | 2010 | Instagram | http://127.0.0.1:8080/years/2010/sites/instagram/index.html |
-| 2018 | GDPR Manage | http://127.0.0.1:8080/years/2018/sites/gdpr/index.html |
+|  | GDPR Manage | http://127.0.0.1:8080/years//sites/gdpr/index.html |
 | 2022 | ChatGPT Send | http://127.0.0.1:8080/years/2022/sites/chatgpt/index.html |
 
-Leftover dest leftover-3× unique dest-true dest check: http://127.0.0.1:8080/years/2007/sites/wiki/index.html · http://127.0.0.1:8080/years/2018/sites/reddit/index.html · http://127.0.0.1:8080/years/2022/sites/amazon/index.html
+Leftover dest leftover-3× unique dest-true dest check: http://127.0.0.1:8080/years/2007/sites/wiki/index.html · http://127.0.0.1:8080/years//sites/reddit/index.html · http://127.0.0.1:8080/years/2022/sites/amazon/index.html
 
 ---
 
 ## 9. Stops
 
 - [ ] Do not dest-farm dest folders.
-- [ ] Do not grow leftover-3× unique dest-true dests past **2018=3** / **2021=5**.
+- [ ] Do not grow leftover-3× unique dest-true dests past **=3** / **2021=5**.
 - [ ] Do not leftover-3× unique dests on **2017** leftover-20.
 - [ ] Do not leftover-3× unique dest-true dests on forests 1994–2006.
-- [ ] Do not dest-lock 2015–2020 / forests / 2013 / 2018 / 2022 again.
+- [ ] Do not dest-lock 2015–2020 / forests / 2013 /  / 2022 again.
 - [ ] Do not un-board **2009**.
 - [ ] Do not restore **2023–2025**.
 - [ ] Do not stamp leftover-3× unique dest rails on official dest HTML first paint.

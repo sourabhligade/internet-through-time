@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
- * Mock-flow classifier — 25 ship years (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022).
- * 2009 boarded. 2015 / 2018 / 2023–2025 wiped.
+ * Mock-flow classifier — HTML years only.
+ * 2015 is a React door with no year tree, so this scan skips it.
+ * 2009 boarded. 2011 /  / 2023–2025 wiped.
  *
  * Previous "no-mock" work kept failing because dest-field plaques
  * (scripts/build-5x-real-dests.py) satisfy the REAL e2e contract
@@ -27,7 +28,8 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2009", "2011", "2015", "2018", "2023", "2024", "2025"]);
+// 2015 stays in this skip set because it has no HTML tree. The hub door is React.
+const WIPED = new Set(["2009", "2011", "2015", "", "2023", "2024", "2025"]);
 const YEARS = [];
 for (let y = 1994; y <= 2025; y++) {
   const s = String(y);
@@ -517,7 +519,7 @@ if (WANT_JSON) {
     JSON.stringify({ summary, fail: fails.length, issues }, null, 2) + "\n"
   );
 } else {
-  console.log("audit-mock-flows — 24 years open (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022) · 2009 boarded · 2015 / 2018 / 2023–2025 wiped");
+  console.log("audit-mock-flows — HTML years · 2015 React door skipped (no tree) · 2009 boarded · 2011 /  / 2023–2025 wiped");
   console.log(
     "  DEST_FIELD " +
       summary.DEST_FIELD +

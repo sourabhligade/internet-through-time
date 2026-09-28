@@ -150,6 +150,14 @@
     wrap.innerHTML = bits.join("");
     var host = doc.querySelector(".itt-phone") || doc.body;
     host.appendChild(wrap);
+    /* Dest-as-tab: one footer under the trail, not above it. */
+    try {
+      var root = doc.documentElement;
+      if (root && (root.className || "").indexOf("itt-dest-top") !== -1 && doc.body) {
+        var foot = doc.getElementById("itt-exhibit-foot");
+        if (foot) doc.body.appendChild(foot);
+      }
+    } catch (eFoot) { /* */ }
     foldDestAlso(doc);
     try {
       if (ITT.bootRevealNext) ITT.bootRevealNext(doc);

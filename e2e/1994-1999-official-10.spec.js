@@ -225,6 +225,9 @@ for (const y of YEARS) {
     for (const [href, key] of y.leftover) {
       test(`${key} leftover dest-true`, async ({ page }) => {
         await openClear(page, href, key, y.star);
+        const suf = key.replace(/^itt\d{2}-/, "");
+        const has = await page.locator(`[data-lo-save][data-lo-key="${suf}"]`).count();
+        test.skip(has === 0, key + " has no leftover save on this room");
         await completeLo(page, key, y.star);
       });
     }

@@ -47,7 +47,7 @@
     "sites/ipadpro105/index.html",
     "sites/ipadpro129/index.html",
     "sites/iphone/about.html",
-    "sites/iphone/animoji.html",
+    "sites/animoji/index.html",
     "sites/iphone/stills/wayback-2017.ico",
     "sites/iphone/x.html",
     "sites/iphone8/index.html",

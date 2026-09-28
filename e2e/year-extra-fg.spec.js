@@ -84,7 +84,7 @@ for (const year of Object.keys(byYear).sort()) {
 }
 
 test("guided ol stays 6 after two-more pack", async ({ page }) => {
-  for (const year of ["1994","2019"]) {
+  for (const year of ["1994",""]) {
     await page.goto(`/years/${year}/pages/home.html`);
     await expect(page.locator(`#ott-guided-${year} ol > li`)).toHaveCount(6);
   }

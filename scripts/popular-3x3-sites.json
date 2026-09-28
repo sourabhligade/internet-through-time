@@ -1183,13 +1183,13 @@
       "fg": "#fff"
     }
   ],
-  "2018": [],
-  "2019": [
+  "": [],
+  "": [
     {
       "id": "twitter",
       "name": "Twitter",
-      "title": "Twitter leftover — 2019",
-      "why": "2019 leftover-3× third. Unique dest. Not the chip.",
+      "title": "Twitter leftover — ",
+      "why": " leftover-3× third. Unique dest. Not the chip.",
       "verb": "Tweet leftover",
       "ph": "twitter",
       "btn": "Tweet leftover"
@@ -1197,8 +1197,8 @@
     {
       "id": "yahoo",
       "name": "Yahoo leftover",
-      "title": "Yahoo leftover leftover — 2019",
-      "why": "2019 leftover-3× third. Unique dest. Not the chip.",
+      "title": "Yahoo leftover leftover — ",
+      "why": " leftover-3× third. Unique dest. Not the chip.",
       "verb": "Portal leftover",
       "ph": "yahoo",
       "btn": "Portal leftover"
@@ -1206,8 +1206,8 @@
     {
       "id": "youtube",
       "name": "YouTube",
-      "title": "YouTube leftover — 2019",
-      "why": "2019 leftover-3× third. Unique dest. Not the chip.",
+      "title": "YouTube leftover — ",
+      "why": " leftover-3× third. Unique dest. Not the chip.",
       "verb": "Watch leftover",
       "ph": "youtube",
       "btn": "Watch leftover"

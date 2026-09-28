@@ -1,7 +1,7 @@
 # Year-by-year research → implement steps
 
 **Date:** 2026-09-20
-**Status:** Extra dest DROP applied (539 gone · 166 KEEP stay). Year-false MISS 0. Extra dest KEEP leftover dest-true I/O implemented (gmusic · pandora · ios9 index). Leftover-20 trails that are already wired: 2017 and 2019 stops 11–30. Do not add a 31st stop. Do not dest-farm a leftover-20 on any other year. 2018 stays off the hub: React hall leftover KEEP 11, HTML tree gone, leftover-3× catalog empty.
+**Status:** Extra dest DROP applied (539 gone · 166 KEEP stay). Year-false MISS 0. Extra dest KEEP leftover dest-true I/O implemented (gmusic · pandora · ios9 index). Leftover-20 trails that are already wired: 2017 and  stops 11–30. Do not add a 31st stop. Do not dest-farm a leftover-20 on any other year.  stays off the hub: React hall leftover KEEP 11, HTML tree gone, leftover-3× catalog empty.
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) · [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md) · [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md) · [`DEST-TRUE-FLOW-NAMES.md`](DEST-TRUE-FLOW-NAMES.md).
 
 Visitor 100% is dest-true I/O on dests already on disk, not dest-folder count. Empty / trap never write. Leftover never writes the year star. KEEP leftover dests only if famous that year and cited. Miss the cap rather than invent.
@@ -23,12 +23,12 @@ Each year has the same 8 implement steps. Flip `[x]` only after disk + e2e. Stop
 
 1. Confirm year kind (forest / dest-lock lean / dest-lock reverted / boarded / wiped).
 2. Official 10 dest-true I/O (`data-official-need` 280/280 playable). Empty / trap never write the star.
-3. Leftover-3× unique dest-true dests (caps: most 9 · 2018=3 · 2021=5 · 2017=0 leftover-20 instead).
+3. Leftover-3× unique dest-true dests (caps: most 9 · =3 · 2021=5 · 2017=0 leftover-20 instead).
 4. Year-false KEEP leftover dests stay. Year-false DROP leftover dests already gone. Official 10 DROPs stay on disk (museum law).
 5. Extra dest DROP already applied (clone leftover dest leftover / year-false / dest-farm). Replacement is a dest already on disk.
 6. Extra dest KEEP leftover dest-true I/O (`data-lo-panel` + `data-itt-dest-true` + keep pick + 2 req + field). Not leftover-3× unique. Not official 10.
 7. Recheck dest-folder count vs DISK-TRUTH. Href retargets 0 broken.
-8. Stops: do not dest-farm leftover-20 except 2017 · do not grow leftover-3× unique past 2018=3 / 2021=5 · do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again · do not un-board 2009 · do not restore 2023–2025 · do not invent brand pixels.
+8. Stops: do not dest-farm leftover-20 except 2017 · do not grow leftover-3× unique past =3 / 2021=5 · do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again · do not un-board 2009 · do not restore 2023–2025 · do not invent brand pixels.
 
 Named lists live in the source files. This file is the implement order, not a second KEEP/DROP table.
 
@@ -59,8 +59,8 @@ Named lists live in the source files. This file is the implement order, not a se
 | 2015 | dest-lock reverted | 50 | KEEP 11 · DROP 2 · DO-NOT-APPLY 6 · MISS 0 | 31 | 163 | 9 | 0 | all KEEP leftover I/O |
 | 2016 | dest-lock reverted | 57 | KEEP 47 · DROP 40 · DO-NOT-APPLY 6 · MISS 0 | 4 | 9 | 9 | 34 | all KEEP leftover I/O |
 | 2017 | dest-lock reverted leftover-20 | 68 | KEEP 26 · DROP 3 · DO-NOT-APPLY 1 · MISS 0 | 39 | 154 | 0 (leftover-20) | 0 (leftover-20 extras 20) | all KEEP leftover I/O |
-| 2018 | wiped hub · React hall | 0 HTML | KEEP 20 · DROP 20 · DO-NOT-APPLY 4 · MISS 0 | 0 | 0 | 0 (catalog empty) | 11 (React `ALSO_2018`) | leftover KEEP I/O on React rail |
-| 2019 | dest-lock reverted · React hall | 0 HTML | KEEP 8 · DROP 0 · DO-NOT-APPLY 11 · MISS 0 | 54 | 97 | 0 (catalog empty) | 54 (React `ALSO_2019`; 19 cabinets dropped) | leftover KEEP I/O on React rail |
+|  | wiped hub · React hall | 0 HTML | KEEP 20 · DROP 20 · DO-NOT-APPLY 4 · MISS 0 | 0 | 0 | 0 (catalog empty) | 11 (React `ALSO_`) | leftover KEEP I/O on React rail |
+|  | dest-lock reverted · React hall | 0 HTML | KEEP 8 · DROP 0 · DO-NOT-APPLY 11 · MISS 0 | 54 | 97 | 0 (catalog empty) | 54 (React `ALSO_`; 19 cabinets dropped) | leftover KEEP I/O on React rail |
 | 2020 | dest-lock reverted | 22 | KEEP 9 · DROP 1 · DO-NOT-APPLY 10 · MISS 0 | 2 | 17 | 9 | 1 | all KEEP leftover I/O |
 | 2021 | dest-lock lean stop-5 | 18 | KEEP 9 · DROP 13 · DO-NOT-APPLY 8 · MISS 0 | 0 | 0 | 5 | 3 | no extra KEEP (DROP only / leftover dest KEEP leftover I/O) |
 | 2022 | dest-true lean | 25 | KEEP 13 · DROP 15 · DO-NOT-APPLY 10 · MISS 0 | 0 | 0 | 9 | 6 | no extra KEEP (DROP only / leftover dest KEEP leftover I/O) |
@@ -68,7 +68,7 @@ Named lists live in the source files. This file is the implement order, not a se
 | 2024 | wiped | 0 (no tree) | wiped | 0 | 0 | 0 | 0 | STOP wiped |
 | 2025 | wiped | 0 (no tree) | wiped | 0 | 0 | 0 | 0 | STOP wiped |
 
-Hub **24 years** 1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022. **2009 boarded.** **2015 wiped.** **2018 wiped.** **2023–2025 wiped.**
+Hub **24 years** 1994–2007 + 2010 + 2012–2014 + 2016–2017 + –2022. **2009 boarded.** **2015 wiped.** ** wiped.** **2023–2025 wiped.**
 
 ## 1994
 
@@ -92,14 +92,14 @@ No extra dest KEEP. DROP 2 clone leftover dest leftover folders already gone.
 
 ### Implement steps
 
-- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt94-csotd`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique JSON is not this year's job (forest leftover-2× / leftover dest leftover packs).
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (2 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 156 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 1995
 
@@ -123,14 +123,14 @@ No extra dest KEEP. DROP 1 clone leftover dest leftover folders already gone.
 
 ### Implement steps
 
-- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt95-ssl-checkout`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique JSON is not this year's job (forest leftover-2× / leftover dest leftover packs).
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (1 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 152 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 1996
 
@@ -154,14 +154,14 @@ No extra dest KEEP. DROP 2 clone leftover dest leftover folders already gone.
 
 ### Implement steps
 
-- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt96-portal-wars`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique JSON is not this year's job (forest leftover-2× / leftover dest leftover packs).
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (2 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 152 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 1997
 
@@ -185,14 +185,14 @@ No extra dest KEEP. DROP 4 clone leftover dest leftover folders already gone.
 
 ### Implement steps
 
-- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt97-pointcast`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique JSON is not this year's job (forest leftover-2× / leftover dest leftover packs).
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (4 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 163 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 1998
 
@@ -216,14 +216,14 @@ No extra dest KEEP. DROP 4 clone leftover dest leftover folders already gone.
 
 ### Implement steps
 
-- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt98-lucky`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique JSON is not this year's job (forest leftover-2× / leftover dest leftover packs).
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (4 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 149 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 1999
 
@@ -247,14 +247,14 @@ No extra dest KEEP. DROP 6 clone leftover dest leftover folders already gone.
 
 ### Implement steps
 
-- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt99-aim`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique JSON is not this year's job (forest leftover-2× / leftover dest leftover packs).
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (6 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 426 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 2000
 
@@ -278,14 +278,14 @@ No extra dest KEEP. DROP 7 clone leftover dest leftover folders already gone.
 
 ### Implement steps
 
-- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt00-mapquest`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique JSON is not this year's job (forest leftover-2× / leftover dest leftover packs).
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (7 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 477 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 2001
 
@@ -309,14 +309,14 @@ No extra dest KEEP. DROP 4 clone leftover dest leftover folders already gone.
 
 ### Implement steps
 
-- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt01-wiki`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique JSON is not this year's job (forest leftover-2× / leftover dest leftover packs).
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (4 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 257 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 2002
 
@@ -340,14 +340,14 @@ No extra dest KEEP. DROP 10 clone leftover dest leftover folders already gone.
 
 ### Implement steps
 
-- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt02-stumble`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique JSON is not this year's job (forest leftover-2× / leftover dest leftover packs).
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (10 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 224 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 2003
 
@@ -371,14 +371,14 @@ No extra dest KEEP. DROP 7 clone leftover dest leftover folders already gone.
 
 ### Implement steps
 
-- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt03-photobucket`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique JSON is not this year's job (forest leftover-2× / leftover dest leftover packs).
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (7 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 199 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 2004
 
@@ -402,14 +402,14 @@ No extra dest KEEP. DROP 10 clone leftover dest leftover folders already gone.
 
 ### Implement steps
 
-- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt04-thefacebook-networks`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique JSON is not this year's job (forest leftover-2× / leftover dest leftover packs).
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (10 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 800 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 2005
 
@@ -433,14 +433,14 @@ No extra dest KEEP. DROP 11 clone leftover dest leftover folders already gone.
 
 ### Implement steps
 
-- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt05-yt-uploads`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique JSON is not this year's job (forest leftover-2× / leftover dest leftover packs).
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (11 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 339 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 2006
 
@@ -464,14 +464,14 @@ No extra dest KEEP. DROP 10 clone leftover dest leftover folders already gone.
 
 ### Implement steps
 
-- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: forest. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt06-tweets`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique JSON is not this year's job (forest leftover-2× / leftover dest leftover packs).
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (10 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Forest leftover dest-true packs leftover I/O already (year-true-packs). Extra dest KEEP = 0.
 - [x] 7 Dest-folder count 366 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 2007
 
@@ -493,14 +493,14 @@ No extra dest KEEP. DROP 10 clone leftover dest leftover folders already gone.
 
 ### Implement steps
 
-- [x] 1 Year kind locked: dest-lock lean. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: dest-lock lean. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt07-iphone`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique dest-true dests (9). Incomplete never writes leftover. Leftover never writes the star.
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 No extra dest DROP on this year.
 - [x] 6 Leftover dest KEEP leftover dest-true I/O already on leftover dest KEEP dests. No extra dest KEEP this year.
 - [x] 7 Dest-folder count 33 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 2009
 
@@ -539,14 +539,14 @@ No extra dest KEEP. DROP 1 clone leftover dest leftover folders already gone.
 
 ### Implement steps
 
-- [x] 1 Year kind locked: dest-lock lean. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: dest-lock lean. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt10-ig-posts`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique dest-true dests (9). Incomplete never writes leftover. Leftover never writes the star.
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (1 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Leftover dest KEEP leftover dest-true I/O already on leftover dest KEEP dests. No extra dest KEEP this year.
 - [x] 7 Dest-folder count 29 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 
 
@@ -575,14 +575,14 @@ KEEP extra dest leftover I/O:
 
 ### Implement steps
 
-- [x] 1 Year kind locked: dest-lock lean. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: dest-lock lean. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt11-gplus`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique dest-true dests (9). Incomplete never writes leftover. Leftover never writes the star.
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (7 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Extra dest KEEP leftover dest-true I/O on every KEEP dest (2): keep pick · 2 ticks · field · trap never writes · leftover never writes `itt11-gplus`.
 - [x] 7 Dest-folder count 41 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 This pass leftover I/O (extra dest KEEP that were missing dest-true leftover I/O):
 
@@ -610,14 +610,14 @@ This pass leftover I/O (extra dest KEEP that were missing dest-true leftover I/O
 
 ### Implement steps
 
-- [x] 1 Year kind locked: dest-lock lean. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: dest-lock lean. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt12-ig-android`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique dest-true dests (9). Incomplete never writes leftover. Leftover never writes the star.
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 No extra dest DROP on this year.
 - [x] 6 Leftover dest KEEP leftover dest-true I/O already on leftover dest KEEP dests. No extra dest KEEP this year.
 - [x] 7 Dest-folder count 32 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 2013
 
@@ -678,14 +678,14 @@ KEEP extra dest leftover I/O:
 
 ### Implement steps
 
-- [x] 1 Year kind locked: lean Vine. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: lean Vine. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt13-vine-posts`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique dest-true dests (9). Incomplete never writes leftover. Leftover never writes the star.
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (2 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Extra dest KEEP leftover dest-true I/O on every KEEP dest (34): keep pick · 2 ticks · field · trap never writes · leftover never writes `itt13-vine-posts`.
 - [x] 7 Dest-folder count 52 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 2014
 
@@ -707,14 +707,14 @@ KEEP extra dest leftover I/O:
 
 ### Implement steps
 
-- [x] 1 Year kind locked: dest-lock lean. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: dest-lock lean. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt14-wa-install`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique dest-true dests (9). Incomplete never writes leftover. Leftover never writes the star.
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 No extra dest DROP on this year.
 - [x] 6 Leftover dest KEEP leftover dest-true I/O already on leftover dest KEEP dests. No extra dest KEEP this year.
 - [x] 7 Dest-folder count 25 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 2015
 
@@ -772,14 +772,14 @@ KEEP extra dest leftover I/O:
 
 ### Implement steps
 
-- [x] 1 Year kind locked: dest-lock reverted. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: dest-lock reverted. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt15-periscope`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique dest-true dests (9). Incomplete never writes leftover. Leftover never writes the star.
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (163 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Extra dest KEEP leftover dest-true I/O on every KEEP dest (31): keep pick · 2 ticks · field · trap never writes · leftover never writes `itt15-periscope`.
 - [x] 7 Dest-folder count 50 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 This pass leftover I/O (extra dest KEEP dest door missing `index.html`):
 
@@ -817,14 +817,14 @@ KEEP extra dest leftover I/O:
 
 ### Implement steps
 
-- [x] 1 Year kind locked: dest-lock reverted. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: dest-lock reverted. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt16-ig-stories`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique dest-true dests (9). Incomplete never writes leftover. Leftover never writes the star.
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (9 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Extra dest KEEP leftover dest-true I/O on every KEEP dest (4): keep pick · 2 ticks · field · trap never writes · leftover never writes `itt16-ig-stories`.
 - [x] 7 Dest-folder count 57 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 2017
 
@@ -860,7 +860,7 @@ KEEP extra dest leftover I/O:
 | `googlelens` | Google Lens 2017. | dest-true leftover I/O |
 | `googlepay` | Google Pay 2017. | dest-true leftover I/O |
 | `highsierra` | macOS High Sierra 25 Sep 2017. | dest-true leftover I/O |
-| `homepodann` | HomePod announced 2017 (ships 2018). 2017 event KEEP. | dest-true leftover I/O |
+| `homepodann` | HomePod announced 2017 (ships ). 2017 event KEEP. | dest-true leftover I/O |
 | `horizonzd` | Horizon Zero Dawn 2017. | dest-true leftover I/O |
 | `hqtrivia` | HQ Trivia 2017. | leftover I/O (workshop) |
 | `imacpro` | iMac Pro announced 2017. | dest-true leftover I/O |
@@ -890,22 +890,22 @@ KEEP extra dest leftover I/O:
 
 ### Implement steps
 
-- [x] 1 Year kind locked: dest-lock reverted leftover-20. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: dest-lock reverted leftover-20. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt17-faceid`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique JSON is not this year's job (forest leftover-2× / leftover dest leftover packs).
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (154 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Extra dest KEEP leftover dest-true I/O on every KEEP dest (39): keep pick · 2 ticks · field · trap never writes · leftover never writes `itt17-faceid`.
 - [x] 7 Dest-folder count 68 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
-## 2018
+## 
 
-**Kind:** Wiped hub · React hall off-hub. GDPR Manage. Leftover KEEP 11 on `ALSO_2018`. Leftover-3× catalog empty. HTML tree gone.
+**Kind:** Wiped hub · React hall off-hub. GDPR Manage. Leftover KEEP 11 on `ALSO_`. Leftover-3× catalog empty. HTML tree gone.
 
 **Star:** `gdpr` · GDPR Manage · `itt18-gdpr`. Empty / trap never write this key. Leftover never writes this key.
 
-**Dest folders on disk:** 0 (`years/2018/` absent). React keys **21**.
+**Dest folders on disk:** 0 (`years//` absent). React keys **21**.
 
 **Official 10:** gdpr · tiktok · trust · instagram · chrome · homepod · spectre · fortnite · github · playable
 
@@ -919,22 +919,22 @@ KEEP extra dest leftover I/O:
 
 ### Implement steps
 
-- [x] 1 Year kind locked: wiped hub · React hall. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: wiped hub · React hall. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on the React door. Star `itt18-gdpr`. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique dest-true dests stay **0**. Do not rebuild reddit / youtube / wikipedia dest folders.
-- [x] 4 Year-false KEEP leftover dests live on React `ALSO_2018`. Year-false DROP leftover dests stay gone. Playable DO-NOT-APPLY.
+- [x] 4 Year-false KEEP leftover dests live on React `ALSO_`. Year-false DROP leftover dests stay gone. Playable DO-NOT-APPLY.
 - [x] 5 No extra dest DROP on this year.
 - [x] 6 Leftover dest KEEP leftover dest-true I/O on React n=11–21 (`-lx` keys). No extra dest KEEP this year.
-- [x] 7 Dest-folder count **0** matches DISK-TRUTH. React leftover KEEP 11. HTML links to `years/2018/` stay unrestored.
+- [x] 7 Dest-folder count **0** matches DISK-TRUTH. React leftover KEEP 11. HTML links to `years//` stay unrestored.
 - [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique dest-farm · no invented brand pixels · no hub card unless named.
 
-## 2019
+## 
 
-**Kind:** Dest-lock reverted · React hall. Official 10 dest-true. Leftover-3× catalogs are empty. Extra dest KEEP leftover I/O on `ALSO_2019`. Trail stops 11–30 are the 20 leftover-20 flows. 19 museum cabinet fillers (`extra a` … `more`) are dropped.
+**Kind:** Dest-lock reverted · React hall. Official 10 dest-true. Leftover-3× catalogs are empty. Extra dest KEEP leftover I/O on `ALSO_`. Trail stops 11–30 are the 20 leftover-20 flows. 19 museum cabinet fillers (`extra a` … `more`) are dropped.
 
 **Star:** `disneyplus` · Disney+ Continue · `itt19-disneyplus`. Empty / trap never write this key. Leftover never writes this key.
 
-**Dest folders on disk:** 0 (`years/2019/` absent). React keys **64** (official 10 + leftover 54).
+**Dest folders on disk:** 0 (`years//` absent). React keys **64** (official 10 + leftover 54).
 
 **Official 10:** disneyplus · tiktok · arcade · appletv · stadia · iphone · airpodspro · chrome · windows10 · playable
 
@@ -950,71 +950,71 @@ KEEP extra dest leftover I/O:
 
 | Slug | Cite (from extra dest research) | Leftover I/O |
 |------|---------------------------------|--------------|
-| `airpods2` | AirPods 2 2019. Dest-disjoint official AirPods Pro dest. | dest-true leftover I/O |
-| `android10` | Android 10 3 Sep 2019. | dest-true leftover I/O |
-| `anthem19` | Anthem 2019. | dest-true leftover I/O |
-| `apex` | Apex Legends 4 Feb 2019. | dest-true leftover I/O |
-| `applecard` | Apple Card Aug 2019. | dest-true leftover I/O |
-| `applewatch5` | Apple Watch Series 5 2019. | dest-true leftover I/O |
-| `area51` | Storm Area 51 2019. | leftover I/O (workshop) |
-| `astralchain` | Astral Chain 2019. | dest-true leftover I/O |
-| `bloodstained` | Bloodstained 2019. | dest-true leftover I/O |
-| `borderlands3` | Borderlands 3 2019. | dest-true leftover I/O |
-| `catalina` | macOS Catalina 7 Oct 2019. | dest-true leftover I/O |
-| `control19` | Control 27 Aug 2019. | dest-true leftover I/O |
-| `crashteamracing` | CTR Nitro-Fueled 2019. | dest-true leftover I/O |
-| `daysgone` | Days Gone 2019. | dest-true leftover I/O |
-| `deathstranding` | Death Stranding 8 Nov 2019. | dest-true leftover I/O |
-| `discoelysium` | Disco Elysium 15 Oct 2019. | dest-true leftover I/O |
-| `dmc5` | Devil May Cry 5 2019. | dest-true leftover I/O |
-| `fireemblem3h` | Fire Emblem Three Houses 2019. | dest-true leftover I/O |
-| `galaxyfold` | Galaxy Fold 2019. | dest-true leftover I/O |
-| `galaxynote10` | Galaxy Note 10 2019. | dest-true leftover I/O |
-| `galaxys10` | Galaxy S10 2019. | dest-true leftover I/O |
-| `geforcenow` | GeForce Now 2019. | dest-true leftover I/O |
-| `hidelikes` | Instagram hide likes 2019 tests. Dest-disjoint leftover-3× unique instagram. | leftover I/O (workshop) |
-| `huawei` | US Huawei ban 2019. | leftover I/O (workshop) |
-| `ios13` | iOS 13 19 Sep 2019. | dest-true leftover I/O |
-| `ipad7` | iPad 7th gen 2019. | dest-true leftover I/O |
-| `ipadmini5` | iPad mini 5 2019. | dest-true leftover I/O |
-| `ipados` | iPadOS 2019. | dest-true leftover I/O |
-| `jedifallenorder` | Jedi Fallen Order 2019. | dest-true leftover I/O |
-| `kingdomhearts3` | Kingdom Hearts III 2019. | dest-true leftover I/O |
-| `libra` | Facebook Libra 18 Jun 2019. Dest-disjoint leftover-3× unique facebook dest. | leftover I/O (workshop) |
-| `linksawakening` | Link's Awakening Switch 2019. | dest-true leftover I/O |
-| `luigismansion3` | Luigi's Mansion 3 2019. | dest-true leftover I/O |
-| `macbookpro16` | 16-inch MacBook Pro 2019. | dest-true leftover I/O |
-| `macpro19` | Mac Pro 2019. | dest-true leftover I/O |
-| `mariomaker2` | Super Mario Maker 2 2019. | dest-true leftover I/O |
-| `metroexodus` | Metro Exodus 2019. | dest-true leftover I/O |
-| `mixer19` | Mixer shutdown 22 Jul 2019 / Microsoft. | dest-true leftover I/O |
-| `mk11` | Mortal Kombat 11 2019. | dest-true leftover I/O |
-| `modernwarfare19` | Call of Duty Modern Warfare 2019. | dest-true leftover I/O |
-| `nsmbudeluxe` | New Super Mario Bros. U Deluxe 2019. | dest-true leftover I/O |
-| `outerwilds` | Outer Wilds 30 May 2019. | dest-true leftover I/O |
-| `outerworlds` | The Outer Worlds 2019. | dest-true leftover I/O |
-| `pixel3a` | Pixel 3a 2019. | dest-true leftover I/O |
-| `pixel4` | Pixel 4 2019. | dest-true leftover I/O |
-| `residentevil2` | Resident Evil 2 remake 2019. | dest-true leftover I/O |
-| `ringfit` | Ring Fit Adventure 2019. | dest-true leftover I/O |
-| `sekiro` | Sekiro 22 Mar 2019. | dest-true leftover I/O |
-| `switchlite` | Switch Lite 20 Sep 2019. | dest-true leftover I/O |
-| `tetris99` | Tetris 99 2019. | dest-true leftover I/O |
-| `untitledgoose` | Untitled Goose Game 20 Sep 2019. | dest-true leftover I/O |
-| `wework` | WeWork IPO collapse 2019. | leftover I/O (workshop) |
-| `xcloud` | xCloud preview 2019. | dest-true leftover I/O |
-| `yoshicrafted` | Yoshi's Crafted World 2019. | dest-true leftover I/O |
+| `airpods2` | AirPods 2 . Dest-disjoint official AirPods Pro dest. | dest-true leftover I/O |
+| `android10` | Android 10 3 Sep . | dest-true leftover I/O |
+| `anthem19` | Anthem . | dest-true leftover I/O |
+| `apex` | Apex Legends 4 Feb . | dest-true leftover I/O |
+| `applecard` | Apple Card Aug . | dest-true leftover I/O |
+| `applewatch5` | Apple Watch Series 5 . | dest-true leftover I/O |
+| `area51` | Storm Area 51 . | leftover I/O (workshop) |
+| `astralchain` | Astral Chain . | dest-true leftover I/O |
+| `bloodstained` | Bloodstained . | dest-true leftover I/O |
+| `borderlands3` | Borderlands 3 . | dest-true leftover I/O |
+| `catalina` | macOS Catalina 7 Oct . | dest-true leftover I/O |
+| `control19` | Control 27 Aug . | dest-true leftover I/O |
+| `crashteamracing` | CTR Nitro-Fueled . | dest-true leftover I/O |
+| `daysgone` | Days Gone . | dest-true leftover I/O |
+| `deathstranding` | Death Stranding 8 Nov . | dest-true leftover I/O |
+| `discoelysium` | Disco Elysium 15 Oct . | dest-true leftover I/O |
+| `dmc5` | Devil May Cry 5 . | dest-true leftover I/O |
+| `fireemblem3h` | Fire Emblem Three Houses . | dest-true leftover I/O |
+| `galaxyfold` | Galaxy Fold . | dest-true leftover I/O |
+| `galaxynote10` | Galaxy Note 10 . | dest-true leftover I/O |
+| `galaxys10` | Galaxy S10 . | dest-true leftover I/O |
+| `geforcenow` | GeForce Now . | dest-true leftover I/O |
+| `hidelikes` | Instagram hide likes  tests. Dest-disjoint leftover-3× unique instagram. | leftover I/O (workshop) |
+| `huawei` | US Huawei ban . | leftover I/O (workshop) |
+| `ios13` | iOS 13 19 Sep . | dest-true leftover I/O |
+| `ipad7` | iPad 7th gen . | dest-true leftover I/O |
+| `ipadmini5` | iPad mini 5 . | dest-true leftover I/O |
+| `ipados` | iPadOS . | dest-true leftover I/O |
+| `jedifallenorder` | Jedi Fallen Order . | dest-true leftover I/O |
+| `kingdomhearts3` | Kingdom Hearts III . | dest-true leftover I/O |
+| `libra` | Facebook Libra 18 Jun . Dest-disjoint leftover-3× unique facebook dest. | leftover I/O (workshop) |
+| `linksawakening` | Link's Awakening Switch . | dest-true leftover I/O |
+| `luigismansion3` | Luigi's Mansion 3 . | dest-true leftover I/O |
+| `macbookpro16` | 16-inch MacBook Pro . | dest-true leftover I/O |
+| `macpro19` | Mac Pro . | dest-true leftover I/O |
+| `mariomaker2` | Super Mario Maker 2 . | dest-true leftover I/O |
+| `metroexodus` | Metro Exodus . | dest-true leftover I/O |
+| `mixer19` | Mixer shutdown 22 Jul  / Microsoft. | dest-true leftover I/O |
+| `mk11` | Mortal Kombat 11 . | dest-true leftover I/O |
+| `modernwarfare19` | Call of Duty Modern Warfare . | dest-true leftover I/O |
+| `nsmbudeluxe` | New Super Mario Bros. U Deluxe . | dest-true leftover I/O |
+| `outerwilds` | Outer Wilds 30 May . | dest-true leftover I/O |
+| `outerworlds` | The Outer Worlds . | dest-true leftover I/O |
+| `pixel3a` | Pixel 3a . | dest-true leftover I/O |
+| `pixel4` | Pixel 4 . | dest-true leftover I/O |
+| `residentevil2` | Resident Evil 2 remake . | dest-true leftover I/O |
+| `ringfit` | Ring Fit Adventure . | dest-true leftover I/O |
+| `sekiro` | Sekiro 22 Mar . | dest-true leftover I/O |
+| `switchlite` | Switch Lite 20 Sep . | dest-true leftover I/O |
+| `tetris99` | Tetris 99 . | dest-true leftover I/O |
+| `untitledgoose` | Untitled Goose Game 20 Sep . | dest-true leftover I/O |
+| `wework` | WeWork IPO collapse . | leftover I/O (workshop) |
+| `xcloud` | xCloud preview . | dest-true leftover I/O |
+| `yoshicrafted` | Yoshi's Crafted World . | dest-true leftover I/O |
 
 ### Implement steps
 
-- [x] 1 Year kind locked: dest-lock reverted. Do not dest-lock 2015–2020 again. 2019 stops 11–30 are the wired leftover trail. Do not add a 31st. 2018 stays wiped.
+- [x] 1 Year kind locked: dest-lock reverted. Do not dest-lock 2015–2020 again.  stops 11–30 are the wired leftover trail. Do not add a 31st.  stays wiped.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt19-disneyplus`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique dest-true dests (9). Incomplete never writes leftover. Leftover never writes the star.
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (97 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Extra dest KEEP leftover dest-true I/O on every KEEP dest (54): keep pick · 2 ticks · field · trap never writes · leftover never writes `itt19-disneyplus`.
 - [x] 7 Dest-folder count 73 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 2020
 
@@ -1043,14 +1043,14 @@ KEEP extra dest leftover I/O:
 
 ### Implement steps
 
-- [x] 1 Year kind locked: dest-lock reverted. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: dest-lock reverted. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt20-zoom`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique dest-true dests (9). Incomplete never writes leftover. Leftover never writes the star.
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 Extra dest DROP applied (17 dest folders gone). Hrefs retargeted to dests already on disk. Do not restore DROP dests.
 - [x] 6 Extra dest KEEP leftover dest-true I/O on every KEEP dest (2): keep pick · 2 ticks · field · trap never writes · leftover never writes `itt20-zoom`.
 - [x] 7 Dest-folder count 22 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 2021
 
@@ -1072,14 +1072,14 @@ KEEP extra dest leftover I/O:
 
 ### Implement steps
 
-- [x] 1 Year kind locked: dest-lock lean stop-5. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: dest-lock lean stop-5. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt21-att`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique dest-true dests (5 stop). Incomplete never writes leftover. Leftover never writes the star.
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 No extra dest DROP on this year.
 - [x] 6 Leftover dest KEEP leftover dest-true I/O already on leftover dest KEEP dests. No extra dest KEEP this year.
 - [x] 7 Dest-folder count 18 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 2022
 
@@ -1101,14 +1101,14 @@ KEEP extra dest leftover I/O:
 
 ### Implement steps
 
-- [x] 1 Year kind locked: dest-true lean. Do not dest-lock forests / 2013 / 2018 / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
+- [x] 1 Year kind locked: dest-true lean. Do not dest-lock forests / 2013 /  / 2022 / 2015–2020 again. Do not dest-farm leftover-20 except 2017.
 - [x] 2 Official 10 dest-true I/O on disk. Star `itt22-chatgpt`. `data-official-need` filled. Empty / trap never write the star.
 - [x] 3 Leftover-3× unique dest-true dests (9). Incomplete never writes leftover. Leftover never writes the star.
 - [x] 4 Year-false KEEP leftover dests stay. Year-false DROP leftover dest leftover dests already gone. Official 10 DROPs stay. Playable DO-NOT-APPLY.
 - [x] 5 No extra dest DROP on this year.
 - [x] 6 Leftover dest KEEP leftover dest-true I/O already on leftover dest KEEP dests. No extra dest KEEP this year.
 - [x] 7 Dest-folder count 25 matches DISK-TRUTH / e2e WANT_FOLDERS. Links audit 0 broken after extra dest DROP.
-- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past 2018=3 / 2021=5 · no invented brand pixels.
+- [x] 8 Stops stay stops: no leftover-20 dest-farm · no leftover-3× unique growth past =3 / 2021=5 · no invented brand pixels.
 
 ## 2023
 

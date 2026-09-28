@@ -6,7 +6,7 @@
 **Trail:** `js/config/flow-trails.js` year `"2014"`. Nine stops. There is no stop 10. Stop 9 returns to WhatsApp.
 **Star:** `itt14-wa-install` on `sites/whatsapp/index.html`.
 
-2014 is the first year in the React app. 2015 and later still use the generic shell. 2018 stays wiped.
+2014 is the first year in the React app. 2015 and later still use the generic shell.  stays wiped.
 
 ## Existing flow
 

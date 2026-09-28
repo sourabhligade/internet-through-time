@@ -52,7 +52,7 @@ Default replacement: `mastodon` (leftover dest KEEP Mastodon). Override per row 
 | 7 | `pogoabout` | `mastodon` | **DROP** | Leftover dest leftover. Replace `mastodon`. |
 | 8 | `reactabout` | `mastodon` | **DROP** | Leftover dest leftover. Replace `mastodon`. |
 | 9 | `smario` | `mastodon` | **KEEP** | Super Mario Run iOS 15 Dec 2016 (GameSpot / IGN). Dest-disjoint. Extra dest stays. |
-| 10 | `spectabout` | `mastodon` | **DROP** | Spectre is 2018 official dest. Year-false leftover dest leftover. Replace `mastodon`. |
+| 10 | `spectabout` | `mastodon` | **DROP** | Spectre is  official dest. Year-false leftover dest leftover. Replace `mastodon`. |
 | 11 | `storyabout` | `mastodon` | **DROP** | Leftover dest leftover. Replace `mastodon`. |
 | 12 | `superbowl` | `mastodon` | **DROP** | Leftover dest leftover. Replace `mastodon`. |
 | 13 | `win10end` | `mastodon` | **DROP** | Windows 10 is 2015/2016 official dest. Clone leftover dest. Replace `mastodon`. |
@@ -615,7 +615,7 @@ Default replacement: `slack17` (leftover-20 extra Slack). Override per row if re
 | 73 | `hidive` | `slack17` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 74 | `highsierra` | `slack17` | **KEEP** | macOS High Sierra 25 Sep 2017. |
 | 75 | `homemax` | `slack17` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 76 | `homepodann` | `slack17` | **KEEP** | HomePod announced 2017 (ships 2018). 2017 event KEEP. |
+| 76 | `homepodann` | `slack17` | **KEEP** | HomePod announced 2017 (ships ). 2017 event KEEP. |
 | 77 | `horizonzd` | `slack17` | **KEEP** | Horizon Zero Dawn 2017. |
 | 78 | `hqtrivia` | `slack17` | **KEEP** | HQ Trivia 2017. |
 | 79 | `hulu17` | `slack17` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
@@ -734,65 +734,65 @@ Default replacement: `slack17` (leftover-20 extra Slack). Override per row if re
 | 192 | `youtubetv` | `slack17` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 193 | `zoom17` | `slack17` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 
-## 2019 — 151 extra dests
+##  — 151 extra dests
 
-Pass 4 warehouse. Keep leftover-3× unique dests (`amazon` `facebook` `google` `twitter` `yahoo` `youtube`). `amazon19` drops. Dest-lock 2019 again if applied.
+Pass 4 warehouse. Keep leftover-3× unique dests (`amazon` `facebook` `google` `twitter` `yahoo` `youtube`). `amazon19` drops. Dest-lock  again if applied.
 
 Default replacement: `youtube` (leftover-3× unique YouTube). Override per row if research names a better dest-true dest on disk.
 
 | # | Drop dest | Default replace | Verdict | Cite / reason |
 |--:|-----------|-----------------|--------:|---------------|
-| 1 | `airpods2` | `youtube` | **KEEP** | AirPods 2 2019. Dest-disjoint official AirPods Pro dest. |
+| 1 | `airpods2` | `youtube` | **KEEP** | AirPods 2 . Dest-disjoint official AirPods Pro dest. |
 | 2 | `amazon19` | `youtube` | **DROP** | Clone leftover dest of leftover-3× unique / official dest. leftover-3× unique amazon/facebook/google/twitter/yahoo/youtube stay. Replace youtube leftover-3× unique. |
 | 3 | `amazonfreevee` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 4 | `android10` | `youtube` | **KEEP** | Android 10 3 Sep 2019. |
-| 5 | `anthem19` | `youtube` | **KEEP** | Anthem 2019. |
-| 6 | `apex` | `youtube` | **KEEP** | Apex Legends 4 Feb 2019. |
+| 4 | `android10` | `youtube` | **KEEP** | Android 10 3 Sep . |
+| 5 | `anthem19` | `youtube` | **KEEP** | Anthem . |
+| 6 | `apex` | `youtube` | **KEEP** | Apex Legends 4 Feb . |
 | 7 | `apple` | `youtube` | **DROP** | Clone leftover dest of leftover-3× unique / official dest. leftover-3× unique amazon/facebook/google/twitter/yahoo/youtube stay. Replace youtube leftover-3× unique. |
-| 8 | `applecard` | `youtube` | **KEEP** | Apple Card Aug 2019. |
+| 8 | `applecard` | `youtube` | **KEEP** | Apple Card Aug . |
 | 9 | `applemusic19` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 10 | `applenews` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 11 | `applewatch5` | `youtube` | **KEEP** | Apple Watch Series 5 2019. |
-| 12 | `area51` | `youtube` | **KEEP** | Storm Area 51 2019. |
-| 13 | `astralchain` | `youtube` | **KEEP** | Astral Chain 2019. |
+| 11 | `applewatch5` | `youtube` | **KEEP** | Apple Watch Series 5 . |
+| 12 | `area51` | `youtube` | **KEEP** | Storm Area 51 . |
+| 13 | `astralchain` | `youtube` | **KEEP** | Astral Chain . |
 | 14 | `backrooms` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 15 | `baidu19` | `youtube` | **DROP** | Clone leftover dest of leftover-3× unique / official dest. leftover-3× unique amazon/facebook/google/twitter/yahoo/youtube stay. Replace youtube leftover-3× unique. |
 | 16 | `bbc` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 17 | `bbc19` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 18 | `betplus` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 19 | `bing` | `youtube` | **DROP** | Clone leftover dest of leftover-3× unique / official dest. leftover-3× unique amazon/facebook/google/twitter/yahoo/youtube stay. Replace youtube leftover-3× unique. |
-| 20 | `bloodstained` | `youtube` | **KEEP** | Bloodstained 2019. |
-| 21 | `borderlands3` | `youtube` | **KEEP** | Borderlands 3 2019. |
+| 20 | `bloodstained` | `youtube` | **KEEP** | Bloodstained . |
+| 21 | `borderlands3` | `youtube` | **KEEP** | Borderlands 3 . |
 | 22 | `canvas19` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 23 | `canyoupet` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 24 | `catalina` | `youtube` | **KEEP** | macOS Catalina 7 Oct 2019. |
+| 24 | `catalina` | `youtube` | **KEEP** | macOS Catalina 7 Oct . |
 | 25 | `cnil` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 26 | `cnn` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 27 | `control19` | `youtube` | **KEEP** | Control 27 Aug 2019. |
-| 28 | `crashteamracing` | `youtube` | **KEEP** | CTR Nitro-Fueled 2019. |
+| 27 | `control19` | `youtube` | **KEEP** | Control 27 Aug . |
+| 28 | `crashteamracing` | `youtube` | **KEEP** | CTR Nitro-Fueled . |
 | 29 | `crunchyroll19` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 30 | `daysgone` | `youtube` | **KEEP** | Days Gone 2019. |
-| 31 | `deathstranding` | `youtube` | **KEEP** | Death Stranding 8 Nov 2019. |
-| 32 | `discoelysium` | `youtube` | **KEEP** | Disco Elysium 15 Oct 2019. |
+| 30 | `daysgone` | `youtube` | **KEEP** | Days Gone . |
+| 31 | `deathstranding` | `youtube` | **KEEP** | Death Stranding 8 Nov . |
+| 32 | `discoelysium` | `youtube` | **KEEP** | Disco Elysium 15 Oct . |
 | 33 | `discord` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 34 | `dispatch19` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 35 | `dispo` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 36 | `dmc5` | `youtube` | **KEEP** | Devil May Cry 5 2019. |
+| 36 | `dmc5` | `youtube` | **KEEP** | Devil May Cry 5 . |
 | 37 | `drive19` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 38 | `dudewithsign` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 39 | `ebay` | `youtube` | **DROP** | Clone leftover dest of leftover-3× unique / official dest. leftover-3× unique amazon/facebook/google/twitter/yahoo/youtube stay. Replace youtube leftover-3× unique. |
 | 40 | `edgerc` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 41 | `facebook19` | `youtube` | **DROP** | Clone leftover dest of leftover-3× unique / official dest. leftover-3× unique amazon/facebook/google/twitter/yahoo/youtube stay. Replace youtube leftover-3× unique. |
 | 42 | `facebookgaming` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 43 | `fireemblem3h` | `youtube` | **KEEP** | Fire Emblem Three Houses 2019. |
+| 43 | `fireemblem3h` | `youtube` | **KEEP** | Fire Emblem Three Houses . |
 | 44 | `fortnite` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 45 | `fortnitewc` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 46 | `frndlytv` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 47 | `ftc` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 48 | `galaxyfold` | `youtube` | **KEEP** | Galaxy Fold 2019. |
-| 49 | `galaxynote10` | `youtube` | **KEEP** | Galaxy Note 10 2019. |
-| 50 | `galaxys10` | `youtube` | **KEEP** | Galaxy S10 2019. |
-| 51 | `geforcenow` | `youtube` | **KEEP** | GeForce Now 2019. |
+| 48 | `galaxyfold` | `youtube` | **KEEP** | Galaxy Fold . |
+| 49 | `galaxynote10` | `youtube` | **KEEP** | Galaxy Note 10 . |
+| 50 | `galaxys10` | `youtube` | **KEEP** | Galaxy S10 . |
+| 51 | `geforcenow` | `youtube` | **KEEP** | GeForce Now . |
 | 52 | `gemini19` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 53 | `gimlet` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 54 | `github` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
@@ -801,42 +801,42 @@ Default replacement: `youtube` (leftover-3× unique YouTube). Override per row i
 | 57 | `googletravel` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 58 | `gplus` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 59 | `hbomaxann` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 60 | `hidelikes` | `youtube` | **KEEP** | Instagram hide likes 2019 tests. Dest-disjoint leftover-3× unique instagram. |
+| 60 | `hidelikes` | `youtube` | **KEEP** | Instagram hide likes  tests. Dest-disjoint leftover-3× unique instagram. |
 | 61 | `hivesocial` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 62 | `hopin` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 63 | `huawei` | `youtube` | **KEEP** | US Huawei ban 2019. |
+| 63 | `huawei` | `youtube` | **KEEP** | US Huawei ban . |
 | 64 | `hulu` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 65 | `hulu19` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 66 | `imdb` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 67 | `inbox` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 68 | `instagram19` | `youtube` | **DROP** | Clone leftover dest of leftover-3× unique / official dest. leftover-3× unique amazon/facebook/google/twitter/yahoo/youtube stay. Replace youtube leftover-3× unique. |
-| 69 | `ios13` | `youtube` | **KEEP** | iOS 13 19 Sep 2019. |
-| 70 | `ipad7` | `youtube` | **KEEP** | iPad 7th gen 2019. |
-| 71 | `ipadmini5` | `youtube` | **KEEP** | iPad mini 5 2019. |
-| 72 | `ipados` | `youtube` | **KEEP** | iPadOS 2019. |
+| 69 | `ios13` | `youtube` | **KEEP** | iOS 13 19 Sep . |
+| 70 | `ipad7` | `youtube` | **KEEP** | iPad 7th gen . |
+| 71 | `ipadmini5` | `youtube` | **KEEP** | iPad mini 5 . |
+| 72 | `ipados` | `youtube` | **KEEP** | iPadOS . |
 | 73 | `iphone11pro` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 74 | `jedifallenorder` | `youtube` | **KEEP** | Jedi Fallen Order 2019. |
+| 74 | `jedifallenorder` | `youtube` | **KEEP** | Jedi Fallen Order . |
 | 75 | `jiomart` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 76 | `kingdomhearts3` | `youtube` | **KEEP** | Kingdom Hearts III 2019. |
+| 76 | `kingdomhearts3` | `youtube` | **KEEP** | Kingdom Hearts III . |
 | 77 | `lexico` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 78 | `libra` | `youtube` | **KEEP** | Facebook Libra 18 Jun 2019. Dest-disjoint leftover-3× unique facebook dest. |
+| 78 | `libra` | `youtube` | **KEEP** | Facebook Libra 18 Jun . Dest-disjoint leftover-3× unique facebook dest. |
 | 79 | `linkedin` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 80 | `linksawakening` | `youtube` | **KEEP** | Link's Awakening Switch 2019. |
+| 80 | `linksawakening` | `youtube` | **KEEP** | Link's Awakening Switch . |
 | 81 | `lookaround` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 82 | `luigismansion3` | `youtube` | **KEEP** | Luigi's Mansion 3 2019. |
-| 83 | `macbookpro16` | `youtube` | **KEEP** | 16-inch MacBook Pro 2019. |
-| 84 | `macpro19` | `youtube` | **KEEP** | Mac Pro 2019. |
+| 82 | `luigismansion3` | `youtube` | **KEEP** | Luigi's Mansion 3 . |
+| 83 | `macbookpro16` | `youtube` | **KEEP** | 16-inch MacBook Pro . |
+| 84 | `macpro19` | `youtube` | **KEEP** | Mac Pro . |
 | 85 | `mangaplus` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 86 | `maps19` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 87 | `mariomaker2` | `youtube` | **KEEP** | Super Mario Maker 2 2019. |
+| 87 | `mariomaker2` | `youtube` | **KEEP** | Super Mario Maker 2 . |
 | 88 | `meet19` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 89 | `metroexodus` | `youtube` | **KEEP** | Metro Exodus 2019. |
+| 89 | `metroexodus` | `youtube` | **KEEP** | Metro Exodus . |
 | 90 | `microsoft` | `youtube` | **DROP** | Clone leftover dest of leftover-3× unique / official dest. leftover-3× unique amazon/facebook/google/twitter/yahoo/youtube stay. Replace youtube leftover-3× unique. |
 | 91 | `minecraftearth` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 92 | `minecraftmonday` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 93 | `mixer19` | `youtube` | **KEEP** | Mixer shutdown 22 Jul 2019 / Microsoft. |
-| 94 | `mk11` | `youtube` | **KEEP** | Mortal Kombat 11 2019. |
-| 95 | `modernwarfare19` | `youtube` | **KEEP** | Call of Duty Modern Warfare 2019. |
+| 93 | `mixer19` | `youtube` | **KEEP** | Mixer shutdown 22 Jul  / Microsoft. |
+| 94 | `mk11` | `youtube` | **KEEP** | Mortal Kombat 11 . |
+| 95 | `modernwarfare19` | `youtube` | **KEEP** | Call of Duty Modern Warfare . |
 | 96 | `msn` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 97 | `nesthub` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 98 | `nestmini` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
@@ -845,51 +845,51 @@ Default replacement: `youtube` (leftover-3× unique YouTube). Override per row i
 | 101 | `nickplus` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 102 | `nitter` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 103 | `nordlocker` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 104 | `nsmbudeluxe` | `youtube` | **KEEP** | New Super Mario Bros. U Deluxe 2019. |
+| 104 | `nsmbudeluxe` | `youtube` | **KEEP** | New Super Mario Bros. U Deluxe . |
 | 105 | `nyt19` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 106 | `outerwilds` | `youtube` | **KEEP** | Outer Wilds 30 May 2019. |
-| 107 | `outerworlds` | `youtube` | **KEEP** | The Outer Worlds 2019. |
+| 106 | `outerwilds` | `youtube` | **KEEP** | Outer Wilds 30 May . |
+| 107 | `outerworlds` | `youtube` | **KEEP** | The Outer Worlds . |
 | 108 | `paypal` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 109 | `peacockann` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 110 | `photos19` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 111 | `pinterest` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 112 | `pixel3a` | `youtube` | **KEEP** | Pixel 3a 2019. |
-| 113 | `pixel4` | `youtube` | **KEEP** | Pixel 4 2019. |
+| 112 | `pixel3a` | `youtube` | **KEEP** | Pixel 3a . |
+| 113 | `pixel4` | `youtube` | **KEEP** | Pixel 4 . |
 | 114 | `podcasts19` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 115 | `pokemonss` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 116 | `prime19` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 117 | `quince19` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 118 | `reddit` | `youtube` | **DROP** | Clone leftover dest of leftover-3× unique / official dest. leftover-3× unique amazon/facebook/google/twitter/yahoo/youtube stay. Replace youtube leftover-3× unique. |
 | 119 | `reddit19` | `youtube` | **DROP** | Clone leftover dest of leftover-3× unique / official dest. leftover-3× unique amazon/facebook/google/twitter/yahoo/youtube stay. Replace youtube leftover-3× unique. |
-| 120 | `residentevil2` | `youtube` | **KEEP** | Resident Evil 2 remake 2019. |
-| 121 | `ringfit` | `youtube` | **KEEP** | Ring Fit Adventure 2019. |
-| 122 | `sekiro` | `youtube` | **KEEP** | Sekiro 22 Mar 2019. |
+| 120 | `residentevil2` | `youtube` | **KEEP** | Resident Evil 2 remake . |
+| 121 | `ringfit` | `youtube` | **KEEP** | Ring Fit Adventure . |
+| 122 | `sekiro` | `youtube` | **KEEP** | Sekiro 22 Mar . |
 | 123 | `slack` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 124 | `snapchat` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 125 | `spotify` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 126 | `stirr` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 127 | `storygraph` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 128 | `substack19` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 129 | `switchlite` | `youtube` | **KEEP** | Switch Lite 20 Sep 2019. |
-| 130 | `tetris99` | `youtube` | **KEEP** | Tetris 99 2019. |
+| 129 | `switchlite` | `youtube` | **KEEP** | Switch Lite 20 Sep . |
+| 130 | `tetris99` | `youtube` | **KEEP** | Tetris 99 . |
 | 131 | `tumblr` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 132 | `tumblrwp` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 133 | `twitch` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 134 | `twitch19` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 135 | `twitter19` | `youtube` | **DROP** | Clone leftover dest of leftover-3× unique / official dest. leftover-3× unique amazon/facebook/google/twitter/yahoo/youtube stay. Replace youtube leftover-3× unique. |
 | 136 | `uber` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 137 | `untitledgoose` | `youtube` | **KEEP** | Untitled Goose Game 20 Sep 2019. |
+| 137 | `untitledgoose` | `youtube` | **KEEP** | Untitled Goose Game 20 Sep . |
 | 138 | `vgc` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 139 | `weverse` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 140 | `wework` | `youtube` | **KEEP** | WeWork IPO collapse 2019. |
+| 140 | `wework` | `youtube` | **KEEP** | WeWork IPO collapse . |
 | 141 | `whatsapp` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 142 | `wikipedia` | `youtube` | **DROP** | Clone leftover dest of leftover-3× unique / official dest. leftover-3× unique amazon/facebook/google/twitter/yahoo/youtube stay. Replace youtube leftover-3× unique. |
 | 143 | `wikipedia19` | `youtube` | **DROP** | Clone leftover dest of leftover-3× unique / official dest. leftover-3× unique amazon/facebook/google/twitter/yahoo/youtube stay. Replace youtube leftover-3× unique. |
 | 144 | `wowclassic` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 145 | `xcloud` | `youtube` | **KEEP** | xCloud preview 2019. |
+| 145 | `xcloud` | `youtube` | **KEEP** | xCloud preview . |
 | 146 | `yahoo19` | `youtube` | **DROP** | Clone leftover dest of leftover-3× unique / official dest. leftover-3× unique amazon/facebook/google/twitter/yahoo/youtube stay. Replace youtube leftover-3× unique. |
 | 147 | `yandex19` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 148 | `yoshicrafted` | `youtube` | **KEEP** | Yoshi's Crafted World 2019. |
+| 148 | `yoshicrafted` | `youtube` | **KEEP** | Yoshi's Crafted World . |
 | 149 | `youtube19` | `youtube` | **DROP** | Clone leftover dest of leftover-3× unique / official dest. leftover-3× unique amazon/facebook/google/twitter/yahoo/youtube stay. Replace youtube leftover-3× unique. |
 | 150 | `youtubemusic` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 151 | `zoom10m` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |

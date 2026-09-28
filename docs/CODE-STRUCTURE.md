@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-20  
 **Law:** Year differences live in **config + dest HTML**. Shared behavior lives **once**. See [`ARCHITECTURE.md`](ARCHITECTURE.md).  
-**Do not** dest-farm leftover-20, dest-lock forests, or grow leftover-3× unique past 2018=3 / 2021=5 while cleaning.
+**Do not** dest-farm leftover-20, dest-lock forests, or grow leftover-3× unique past =3 / 2021=5 while cleaning.
 
 ## Target layout
 

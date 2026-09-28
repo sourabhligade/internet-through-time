@@ -1,6 +1,6 @@
 # All flows
 
-Not ship law. Read from `js/config/flow-trails.js` on 2026-09-23 after 2005 and 2018 were wiped. A destination room lists every stop. Starting Point lists only n=1–10.
+Not ship law. Read from `js/config/flow-trails.js` on 2026-09-23 after 2005 and  were wiped. A destination room lists every stop. Starting Point lists only n=1–10.
 
 Official stops are n=1–10. Leftover stops are n above 10. An empty click stores nothing. A finished visit stores that row’s key.
 
@@ -472,7 +472,7 @@ These are not extra trail stops. Empty Save writes nothing. Finished Save writes
 | 9 | Equifax freeze | `itt17-equifax` | `sites/equifax/index.html` |
 | 10 | Storm Circle | `itt17-game-stormcircle` | `sites/playable/game.html` |
 
-### 2019 · 10 stops · official 10 · leftover 0
+###  · 10 stops · official 10 · leftover 0
 
 | n | Name | Key | Href |
 |---:|---|---|---|
@@ -549,4 +549,4 @@ These are not extra trail stops. Empty Save writes nothing. Finished Save writes
 
 **415** trail stops across 27 year blocks in the file.
 
-Wiped, no trail: 2005, 2018, 2023–2025. Boarded, trail still on disk: 2009.
+Wiped, no trail: 2005, , 2023–2025. Boarded, trail still on disk: 2009.

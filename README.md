@@ -1,6 +1,6 @@
 # The Internet Through Time
 
-Historical reconstruction of the World Wide Web — year by year. Hub **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022). **2009 boarded** (tree stays on disk · year-shell is a plaque · no year card). **2015 wiped.** **2018 wiped.** **2020 is live lean** · Zoom Leave. **2022 is live lean** · ChatGPT Send. **2023–2025 wiped.** 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2013 star = Vine 6s. 2014 star = WhatsApp Install. 2019 star = Disney+ Continue subscribe. 2021 star = ATT Ask. 2022 star = ChatGPT Send.
+Historical reconstruction of the World Wide Web — year by year. Hub **24 years open** (1994–2007 + 2010 + 2012–2017 + 2020–2022). ** wiped.** **2009 boarded** (tree stays on disk · year-shell is a plaque · no year card). **2015 is a React door** · Periscope Go LIVE · no HTML tree. ** wiped.** **2020 is live lean** · Zoom Leave. **2022 is live lean** · ChatGPT Send. **2023–2025 wiped.** 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2013 star = Vine 6s. 2014 star = WhatsApp Install. 2015 star = Periscope Go LIVE. 2021 star = ATT Ask. 2022 star = ChatGPT Send.
 
 **Not** a modern redesign. **Not** “retro inspired.” Each year aims for museum-grade accuracy based on archived screenshots, browser documentation, and period HTML capabilities.
 
@@ -91,16 +91,14 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2012/` | Win7 · IE 9 · Instagram Android · Facebook IPO · SOPA · Chrome &gt; IE · **lean** |
 | `/years/2013/` | **Live lean door** — Vine 6s `itt13-vine-posts` · leftover 2× ×2 · leftover 3× first + third |
 | `/years/2014/` | **Live lean door** — WhatsApp Install `itt14-wa-install` · leftover 2× + leftover 4× |
-| `/years/2015/` | **wiped** · off hub |
+| `/app/index.html#/year/2015` | **Live lean door** — Periscope Go LIVE `itt15-periscope` · no HTML tree · React |
 | `/years/2016/` | Instagram Stories · Pokémon GO leftover · Reactions · WhatsApp E2E · **lean** |
 | `/app/index.html#/year/2017` | Face ID / iPhone X · Fortnite leftover · Twitter 280 · Teams GA · **lean · React** |
-| `/app/index.html#/year/2018` | **Wiped hub** — no HTML tree · React hall off-hub · GDPR Manage `itt18-gdpr` · leftover KEEP 11 · leftover-3× **0**. Do not restore `years/2018/`. |
-| `/app/index.html#/year/2019` | **Live lean door** — Disney+ Continue · React |
 | `/app/index.html#/year/2020` | **Live lean door** — Zoom Leave `itt20-zoom` · React |
 | `/app/index.html#/year/2021` | **Live lean door** — ATT Ask `itt21-att` · React |
 | `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
 
-**Lean doors:** 2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022. Hub is **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2019–2022). **2009 boarded.** **2015 wiped.** **2018 wiped.** **2020 is live lean** · Zoom Leave. **2022 is live lean** · ChatGPT Send. **2023–2025 wiped.** 2013 star = Vine 6s. 2019 star = Disney+ Continue. 2021 star = ATT Ask. 2022 star = ChatGPT Send.
+**Lean doors:** 2007 + 2010 + 2012–2017 + 2020–2022. Hub is **24 years open** (1994–2007 + 2010 + 2012–2017 + 2020–2022). **2009 boarded.** **2015 is a React door** · Periscope Go LIVE · no HTML tree. ** wiped.** ** wiped.** **2020 is live lean** · Zoom Leave. **2022 is live lean** · ChatGPT Send. **2023–2025 wiped.** 2013 star = Vine 6s. 2015 star = Periscope Go LIVE. 2021 star = ATT Ask. 2022 star = ChatGPT Send.
 
 **Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md).  
 **Architecture:** [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).  

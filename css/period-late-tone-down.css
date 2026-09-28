@@ -1,7 +1,7 @@
 /**
  * Late-period tone-down (2015+)
  * Softens Material-style museum chrome (itt15/16/19) toward flatter, quieter UI.
- * Imported last by period-2015 / 2016 / 2019. Does not invent brand pixels.
+ * Imported last by period-2015 / 2016 / . Does not invent brand pixels.
  */
 
 /* ── Shared shell: flatter card ── */
@@ -619,7 +619,7 @@
   border: 1px solid #999;
 }
 
-/* 2019 phone frame: simpler bezel */
+/*  phone frame: simpler bezel */
 .itt19-phone-frame {
   border-radius: 8px;
   background: #333;
@@ -648,19 +648,19 @@
 /* Home pages still using table + trail cards: quiet kickers */
 html[data-itt-year="2015"] .itt15-home-trails,
 html[data-itt-year="2016"] .itt16-home-trails,
-html[data-itt-year="2019"] .itt19-home-trails {
+html[data-itt-year=""] .itt19-home-trails {
   gap: 8px;
 }
 
 /* Starting Point home pages (inline styles often use #0a246a) */
 html[data-itt-year="2015"] h1,
 html[data-itt-year="2016"] h1,
-html[data-itt-year="2019"] h1 {
+html[data-itt-year=""] h1 {
   color: #222 !important;
   font-weight: bold;
 }
 html[data-itt-year="2015"] a.itt15-tour-btn,
 html[data-itt-year="2016"] a.itt16-tour-btn,
-html[data-itt-year="2019"] a.itt19-tour-btn {
+html[data-itt-year=""] a.itt19-tour-btn {
   color: #0000cc;
 }

@@ -1,12 +1,12 @@
 // @ts-check
 /**
- * Leftover-3× for 2018 / 2021 — dest-true · not mock. 2020 leftover-3× unique is leftover-3x-unique.spec.js.
+ * Leftover-3× for  / 2021 — dest-true · not mock. 2020 leftover-3× unique is leftover-3x-unique.spec.js.
  */
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
 const { revealLeftoverRails } = require("./helpers");
-const ROWS = require("./2018-2022-leftover-3x.matrix.json");
+const ROWS = require("./-2022-leftover-3x.matrix.json");
 const ROOT = path.join(__dirname, "..");
 function destOnDisk(href) {
   return fs.existsSync(path.join(ROOT, String(href || "").replace(/^\//, "")));
@@ -46,7 +46,7 @@ async function openDoor(page, row) {
   return panel;
 }
 
-test.describe("2018–2021 leftover-3× home strips", () => {
+test.describe("–2021 leftover-3× home strips", () => {
   for (const year of YEARS) {
     test(`${year} leftover-3× warehouse is not first paint`, async ({ page }) => {
       const fs = require("fs");
@@ -66,7 +66,7 @@ test.describe("2018–2021 leftover-3× home strips", () => {
   }
 });
 
-for (const row of ROWS.filter((row) => String(row.year) !== "2018")) {
+for (const row of ROWS.filter((row) => String(row.year) !== "")) {
   test.describe(`${row.year} leftover-3× ${row.kind} ${row.id}`, () => {
     test.beforeEach(() => {
       test.skip(!destOnDisk(row.href), row.year + " boarded");

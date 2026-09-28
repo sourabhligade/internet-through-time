@@ -1,11 +1,27 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { OfficialStop } from "./OfficialStop.jsx";
 import { ALL_2021, ALSO_2021, GUIDED_2021, STUBS_2021, stopByKey2021, TRAIL_2021 } from "./year2021.js";
 
 export function Year2021() {
   const [view, setView] = useState("start");
   const [label, setLabel] = useState("Starting Point");
+  const location = useLocation();
+  const deep = new URLSearchParams(location.search).get("deep") === "1";
+
+  useEffect(() => {
+    const stopId = new URLSearchParams(location.search).get("stop");
+    if (!stopId) return;
+    if (stopId === "about" || stopId === "map") {
+      setView(stopId);
+      setLabel(stopId === "about" ? "About" : "Year flow map");
+      return;
+    }
+    const row = stopByKey2021(stopId);
+    if (!row) return;
+    setView(stopId);
+    setLabel(row.n + " " + row.name);
+  }, [location.search]);
 
   function openStart() {
     setView("start");
@@ -43,6 +59,7 @@ export function Year2021() {
   return (
     <div className="door door-2014">
       <header>
+        <a href="../index.html">Museum</a>
         <Link to="/">All React years</Link>
         <strong>2021</strong>
         <span>ATT Ask</span>
@@ -67,7 +84,7 @@ export function Year2021() {
             ))}
           </ol>
         </section>
-        <section>
+        {deep ? <section>
           <h2>Also this year</h2>
           <ol>
             {ALSO_2021.map((row) => (
@@ -82,7 +99,7 @@ export function Year2021() {
               </li>
             ))}
           </ol>
-        </section>
+        </section> : null}
       </div>
       {view === "start" ? <Start2021 onOpen={openGuided} /> : null}
       {view === "about" ? <About2021 /> : null}
@@ -104,7 +121,7 @@ function Start2021({ onOpen }) {
       <p className="kicker">2021</p>
       <h1>Ask App Not to Track</h1>
       <p>26 April 2021. iOS 14.5. Ask App Not to Track is the save. Allow never writes.</p>
-      <p>Signal. Copilot waitlist is not ChatGPT. The table ends 2018. ITU 4.9 billion / 63%.</p>
+      <p>Signal. Copilot waitlist is not ChatGPT. The table ends . ITU 4.9 billion / 63%.</p>
       <ol>
         {GUIDED_2021.map(([name, target]) => (
           <li key={target}><button type="button" onClick={() => onOpen(name, target)}>{name}</button></li>
@@ -118,7 +135,7 @@ function About2021() {
   return (
     <article className="stop">
       <h1>About 2021</h1>
-      <p>The table ends 2018. There is no June ILS cell for this year. ITU is 4.9 billion / 63%.</p>
+      <p>The table ends . There is no June ILS cell for this year. ITU is 4.9 billion / 63%.</p>
       <p>ChatGPT is not a 2021 destination. Allow never writes. Ask App Not to Track is the save.</p>
     </article>
   );

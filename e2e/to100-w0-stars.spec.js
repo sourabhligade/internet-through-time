@@ -1,5 +1,5 @@
 // @ts-check
-/** W0 — 2015/2016/2019 one-thing chips on Starting Point */
+/** W0 — 2015/2016/ one-thing chips on Starting Point */
 const { test, expect } = require("@playwright/test");
 
 const fs = require("fs");
@@ -9,7 +9,7 @@ function yearOnDisk(year) {
 }
 
 const CHIPS = [
-  { year: "2019", href: /disneyplus/, label: /Disney/i },
+  { year: "", href: /disneyplus/, label: /Disney/i },
 ];
 
 for (const row of CHIPS) {

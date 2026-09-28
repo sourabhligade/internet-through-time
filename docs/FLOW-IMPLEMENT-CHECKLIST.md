@@ -16,8 +16,8 @@ Boxes flip to `[x]` only after disk + e2e (or a named skip with reason).
 - [x] A2 Guided Starting Point is exactly 6 (`#ott-guided-YYYY ol > li`) — `year-home-densify` every live year
 - [x] A3 Official 10 dests exist (`flow-trails.js` n=1–10 on disk) — 2012 FB 1B · 2013 Touch ID · 2014 chat + Apple Pay now on trail (2026-09-15)
 - [x] A4 Starting Point first paint has no leftover warehouse — leftover-3× home + dest-face Starting Point test
-- [x] A5 Empty / trap / 0 ticks never writes star — `one-thing-per-year` incomplete + 2018 Accept All
-- [x] A6 Leftover never writes the star key — dest-face complete + 2018 leftover-2× never gold
+- [x] A5 Empty / trap / 0 ticks never writes star — `one-thing-per-year` incomplete +  Accept All
+- [x] A6 Leftover never writes the star key — dest-face complete +  leftover-2× never gold
 - [x] A7 Official dest leftover-2× / leftover-3× hidden (gold-only) — dest-face official lycos + `year-3x3-all` official dest skips
 - [x] A8 Leftover dest leftover-3× dest face **visible** without `?deep=1` — dest-face 2010 chrome / 2012 reddit / 2013 reddit
 - [x] A9 No 2023+ year tree — `years/2023`–`years/2025` wiped. **2022 is live lean** (ChatGPT Send · dest folders 25).
@@ -26,19 +26,19 @@ Boxes flip to `[x]` only after disk + e2e (or a named skip with reason).
 ## B. I/O I1–I14 (2016–2021 + 2013)
 
 - [x] I1 Star chip / guided #2 / year-start / atlas same dest — start-data + one-thing dests
-- [x] I2 Hub year → shell → Starting Point → star in one click from chip — 2013/2018 mvp hub card
+- [x] I2 Hub year → shell → Starting Point → star in one click from chip — 2013/ mvp hub card
 - [x] I3 Verb in the frame (Look / Manage / Continue / Leave / Ask / Hold) — one-thing complete writes
 - [x] I4 Incomplete never writes star — one-thing incomplete
-- [x] I5 Named trap never writes star — 2018 Accept All · one-thing traps
-- [x] I6 Guided exactly 6 — year-home-densify + 2018-flows
+- [x] I5 Named trap never writes star —  Accept All · one-thing traps
+- [x] I6 Guided exactly 6 — year-home-densify + -flows
 - [x] I7 Workshop fold on official dest + Starting Point — dest-face official + home lean
 - [x] I8 Star has capture-cite or failed-final — leftover-official paintOfficialCite / paintStarCite
 - [x] I9 No invented brand pixels — failed-final law; no new period assets
-- [x] I10 Year-locked chrome (not 2022+) — 2018 mvp Chrome habit
-- [x] I11 About dual-cite / ILS table ends 2018 — 2018 mvp about June ILS; year-home about densify
+- [x] I10 Year-locked chrome (not 2022+) —  mvp Chrome habit
+- [x] I11 About dual-cite / ILS table ends  —  mvp about June ILS; year-home about densify
 - [x] I12 Neighbor year keys never written — leftover dest-face never writes star; leftover-3× isolation in dest-true specs
 - [x] I13 Official 10 hrefs 200 — year-home-densify official 10
-- [x] I14 e2e mvp + write/no-write for the star — one-thing 2013 + 2016–2021 + 2018-flows Manage
+- [x] I14 e2e mvp + write/no-write for the star — one-thing 2013 + 2016–2021 + -flows Manage
 
 ## C. Safe delete (unused)
 
@@ -83,7 +83,7 @@ Boxes flip to `[x]` only after disk + e2e (or a named skip with reason).
 ## F. Explicitly not this pass (criteria forbid)
 
 - [x] F1 Dest-farm lock — optional; delete dests only in a named lock commit
-- [x] F2 Unique leftover-20 maps for 2013–2016 / 2018–2021 — no plan files; do not invent dests
+- [x] F2 Unique leftover-20 maps for 2013–2016 / –2021 — no plan files; do not invent dests
 - [x] F3 Period assets + — 0 files; do not invent brand pixels
 - [x] F4 18 leftover 2017 cites — failed-final on purpose
 - [x] F5 2009 Like as a live door — plaque is shipped
@@ -107,7 +107,7 @@ Boxes flip to `[x]` only after disk + e2e (or a named skip with reason).
 | Pack | Result |
 |------|--------|
 | `e2e/leftover-dest-3x-face.spec.js` + one-thing I14 + 1994–2009 lean home | **23 passed** |
-| `year-3x3-all` + year-home-densify + follow-site + 2009/2013/2018 mvp + 2018-flows | **143 passed · 170 skipped · 0 failed** |
+| `year-3x3-all` + year-home-densify + follow-site + 2009/2013/ mvp + -flows | **143 passed · 170 skipped · 0 failed** |
 
 Engine: `js/immersion/leftover-official.js` `isDestTrueLeftoverFace` · `css/itt-leftover-fold.css` · `js/immersion/registry.js` NoMock parts.
 

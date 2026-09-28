@@ -1,8 +1,8 @@
 // @ts-check
 /**
- * Legal 2015–2020 3× leftover dests — 2016 / 2018 leftover dests only.
+ * Legal 2015–2020 3× leftover dests — 2016 /  leftover dests only.
  * Empty / trap never write. Complete writes leftover. Never star.
- * Not leftover-3× unique. Not leftover-20. 2015 wiped. 2017/2019/2020 dest folders stay.
+ * Not leftover-3× unique. Not leftover-20. 2015 is a React door with no HTML tree. 2017//2020 dest folders stay.
  */
 const fs = require("fs");
 const path = require("path");
@@ -31,23 +31,17 @@ function uniqueIds(year) {
   return ids;
 }
 
-test("2015 wiped · 2017 dest folders stay · 2019 / 2020 are React doors", () => {
+test("2015, 2017, and 2020 are React doors", () => {
   expect(fs.existsSync(path.join(ROOT, "years", "2015"))).toBe(false);
+  expect(fs.existsSync(path.join(ROOT, "react", "src", "year2015.js"))).toBe(true);
   expect(fs.existsSync(path.join(ROOT, "years", "2017"))).toBe(false);
   expect(fs.existsSync(path.join(ROOT, "react", "src", "year2017.js"))).toBe(true);
-  expect(fs.existsSync(path.join(ROOT, "years", "2019"))).toBe(false);
   expect(fs.existsSync(path.join(ROOT, "years", "2020"))).toBe(false);
-  expect(fs.existsSync(path.join(ROOT, "react", "src", "year2019.js"))).toBe(true);
   expect(fs.existsSync(path.join(ROOT, "react", "src", "year2020.js"))).toBe(true);
 });
 
-test("2016 dest folders 57 · 2018 year tree is gone", () => {
+test("2016 dest folders 57", () => {
   expect(destFolders(2016).length).toBe(57);
-  expect(fs.existsSync(path.join(ROOT, "years", "2018"))).toBe(false);
-});
-
-test("2018 leftover-3× unique is gone", () => {
-  expect(uniqueIds("2018")).toHaveLength(0);
 });
 
 test("triple leftover dests dest-disjoint leftover-3× unique", () => {

@@ -3,7 +3,7 @@
 **Date:** 2026-09-16  
 **Status:** Implemented 2026-09-16. Dest-locked clone dests = 0. 2013 leftover 2× ×2 and forests untouched.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Replacement model:** [`years/2019/sites/cnil/index.html`](../years/2019/sites/cnil/index.html) — **one dest, one leftover writer**.  
+**Replacement model:** [`years//sites/cnil/index.html`](../years//sites/cnil/index.html) — **one dest, one leftover writer**.  
 **Leftover-3× dest face:** [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md) U1–U9.  
 **Do not dest-farm. Do not invent dests. Do not invent brand pixels.**
 
@@ -36,9 +36,9 @@ A clone is two leftover writers on the same dest (`lx` + `d2`, leftover-3× + le
 | 1994–2006 | Forests. Leftover-2× on dests is DISK-TRUTH. |
 | 2013 | READ-FIRST: leftover 2× ×2 on every dest. Never dest-locked. |
 | 2009 | Boarded plaque. |
-| , 2014, 2018, 2019, 2021 | Already **0** clone dests. |
+| , 2014, , , 2021 | Already **0** clone dests. |
 | 2015–2020 | Dest-lock **reverted**. Leftover dest leftover-2× is dest-farm leftover-2× (not this strip). |
-| 2019 leftover dests (19) | Already one leftover writer each. Model, not target. |
+|  leftover dests (19) | Already one leftover writer each. Model, not target. |
 
 ---
 
@@ -63,7 +63,7 @@ Official-10 **trail files** leftover-2× panels: **0** except **2012 Medium / Pa
 
 ## 4. Replacement shapes (copy these, do not invent a third)
 
-### R1 — leftover dest leftover-2× (2019 CNIL)
+### R1 — leftover dest leftover-2× ( CNIL)
 
 Use when the dest is **not** leftover-3× unique and **not** official.
 
@@ -234,7 +234,7 @@ one-thing 2012 IG Android still pass
 |------|------|------|------|--------|-------|
 | 2007 | `sites/yahoo/index.html` | extra leftover dest | `itt07-yahoo-dp` dest-true panel | `yahoo-d2` panel + Next to d2 | R1 |
 | 2010 | `sites/amazon/index.html` | extra leftover dest | `itt10-amazon-lx` dest-true panel | `amazon-d2` panel | R1 |
-| 2012 | `sites/yahoo/index.html` | extra leftover dest | one leftover dest-true face (`yeslo-yahoo` **or** convert to leftover-2× `yahoo-lx` 2019 shape) | `yeslo2-yahoo` · `yeslo3-yahoo` | R1 preferred |
+| 2012 | `sites/yahoo/index.html` | extra leftover dest | one leftover dest-true face (`yeslo-yahoo` **or** convert to leftover-2× `yahoo-lx`  shape) | `yeslo2-yahoo` · `yeslo3-yahoo` | R1 preferred |
 | 2016 | `sites/dyn/index.html` | leftover-3× unique third | cream leftover-3× `itt16-pop3-dyn` | `dyn-lx` · `dyn-lx-d2` · `dyn` leftover-2× · `yeslo` / `yeslo2` / `yeslo3` · `ITT-LO-OFFICIAL` | R2 |
 | 2017 | `sites/youtube/index.html` | extra leftover dest (not unique-20) | leftover-3× dest-true `data-pop-go` if dest-true, else one leftover-2× `yt` | leftover-2× `yt-2` + details warehouse | R2 if leftover-3× face exists, else R1 |
 | 2017 | `sites/instagram/index.html` | extra leftover dest | one leftover-2× `instagram-lx` | `instagram-d2` + details | R1 |
@@ -261,7 +261,7 @@ one-thing stars still write/no-write
 | `e2e/leftover-official.spec.js` | No logic change if matrix is dest-true. Forests still filtered. |
 | `e2e/leftover-3x-unique.spec.js` | No dest list change. Recheck 2020 9 dests + 2016 dyn still dest-true leftover-3× first paint. |
 | `e2e/leftover-4x-unique.spec.js` | 2012 chrome / twitter / soundcloud untouched. Recheck. |
-| `e2e/leftover-dest-3x-face.spec.js` | Recheck 2019 amazon leftover-3× dest face (not this strip). |
+| `e2e/leftover-dest-3x-face.spec.js` | Recheck  amazon leftover-3× dest face (not this strip). |
 | `e2e/one-thing-per-year.spec.js` | Stars untouched. Recheck 2007 / 2010 / 2012 / 2016 / 2017 / 2020. |
 | `scripts/audit-mock-flows.js` | Must not class remaining leftover dest faces as `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA`. |
 | `docs/DISK-TRUTH.md` | Dest-locked leftover dest leftover-2× = **one writer**. Forests + 2013 stay two. Official dest leftover-2× = 0 including 2012 Medium / Path / Flipboard. 2014 dest folders **18**. |
@@ -325,12 +325,12 @@ A mechanical pass is allowed: delete `details.itt-also-year` leftover-2× blocks
 - Dest-lock forests 1994–2006.
 - Strip leftover-3× unique dest-true cream faces.
 - Strip 2017 unique leftover dest dest-true verbs (`data-uf17-*`).
-- Add dests to 2018 / 2021 “to make leftover-3× 9.”
+- Add dests to  / 2021 “to make leftover-3× 9.”
 - Keep `*-d2` as a second unique leftover dest.
 - Fold leftover warehouse on official dests (`details` is still leftover warehouse).
 - Invent dests or brand pixels.
 - Restore a git forest.
-- Treat 2019 leftover dests as clones (they already have one writer).
+- Treat  leftover dests as clones (they already have one writer).
 - Change guided 6 or official 10 hrefs.
 
 ---
@@ -341,9 +341,9 @@ A mechanical pass is allowed: delete `details.itt-also-year` leftover-2× blocks
 |------------|------|
 | [`DISK-TRUTH.md`](DISK-TRUTH.md) | Playable years · dest-lock counts |
 | [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md) | Leftover-3× dest-true face |
-| [`2019-2020-DEST-DENSITY.md`](2019-2020-DEST-DENSITY.md) | 2019/2020 dest set · one dest one role |
+| [`-2020-DEST-DENSITY.md`](-2020-DEST-DENSITY.md) | /2020 dest set · one dest one role |
 | [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) | 2017 30 unique dests stay |
-| `years/2019/sites/cnil/index.html` | R1 replacement |
+| `years//sites/cnil/index.html` | R1 replacement |
 | `js/immersion/leftover-official.js` | leftover-2× empty never writes |
 | `js/immersion/leftover-3x-unique.js` | leftover-3× Starting Point only |
 | `e2e/leftover-official.matrix.json` | leftover-2× dest-true rows |

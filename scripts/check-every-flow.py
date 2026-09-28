@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""Fast check of every year trail. No browser. React years 2017, 2019–2021 have no HTML."""
+"""Fast check of every year trail. No browser. React years 2017, –2021 have no HTML."""
 import os
 import re
 from collections import defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-REACT_YEARS = {"2014", "2017", "2019", "2020", "2021"}
+REACT_YEARS = {"2014", "2017", "", "2020", "2021"}
 
 
 def react_keys():
     found = defaultdict(set)
-    for year in ("2014", "2017", "2019", "2020", "2021"):
+    for year in ("2014", "2017", "", "2020", "2021"):
         path = os.path.join(ROOT, "react", "src", "year%s.js" % year)
         text = open(path, encoding="utf-8").read()
         for key in re.findall(r'"(itt\d{2}-[^"]+)"', text):
@@ -73,7 +73,7 @@ def main():
             print("  %s n=%s %s %s" % (stop["year"], stop["n"], stop["whenKey"], stop["href"]))
         raise SystemExit(1)
     # React doors must cover every trail key for the years whose HTML was removed.
-    for year in ("2017", "2019", "2020", "2021"):
+    for year in ("2017", "", "2020", "2021"):
         trail = {s["whenKey"] for s in by_year[year]}
         absent = sorted(trail - keys[year])
         if absent:

@@ -25,7 +25,6 @@ STARS = {
     2012: ("itt12-ig-android", "Vine 6s"),
     2014: ("itt14-wa-install", "Watch"),
     2016: ("itt16-ig-stories", "Reels"),
-    2018: ("itt18-gdpr", "Accept All"),
     2020: ("itt20-zoom", "ChatGPT dest"),
     2021: ("itt21-att", "Allow"),
     2022: ("itt22-chatgpt", "GPT-4"),
@@ -130,7 +129,7 @@ DESTS: dict[int, list[tuple[str, str, str, str, str]]] = {
         ("ios8", "iOS 8", "Update leftover", "iOS 8 released 17 Sep 2014.", "https://en.wikipedia.org/wiki/IOS_8"),
     ],
     2016: [
-        ("douyin", "Douyin", "For You leftover", "Douyin launched 20 Sep 2016. TikTok 2018 brand is a trap.", "https://en.wikipedia.org/wiki/TikTok"),
+        ("douyin", "Douyin", "For You leftover", "Douyin launched 20 Sep 2016. TikTok  brand is a trap.", "https://en.wikipedia.org/wiki/TikTok"),
         ("wikipedia", "Wikipedia", "Edit leftover", "Hosting.com 2016 top-10 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
         ("twitter", "Twitter", "Tweet leftover", "Hosting.com 2016 top-10 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
         ("amazon", "Amazon", "Browse leftover", "Hosting.com 2016 top-10 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
@@ -163,20 +162,20 @@ DESTS: dict[int, list[tuple[str, str, str, str, str]]] = {
         ("applepay", "Apple Pay", "Tap leftover", "Apple Pay 2016 year-mass.", "https://en.wikipedia.org/wiki/Apple_Pay"),
         ("panamapapers", "Panama Papers", "Leak leftover", "Panama Papers 3 Apr 2016.", "https://en.wikipedia.org/wiki/Panama_Papers"),
     ],
-    2018: [
-        ("facebook", "Facebook", "Scroll leftover", "Hosting.com 2018 top-10 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("twitter", "Twitter", "Tweet leftover", "Hosting.com 2018 top-10 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("amazon", "Amazon", "Browse leftover", "Hosting.com 2018 top-10 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("google", "Google", "Search leftover", "Hosting.com 2018 #1 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("yahoo", "Yahoo", "Portal leftover", "Hosting.com 2018 top-10 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("baidu", "Baidu", "Search leftover", "Hosting.com 2018 global top-10 mass.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("yandex", "Yandex", "Search leftover", "Hosting.com 2018 global top-10 mass.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("netflix", "Netflix", "Play leftover", "Netflix 2018 year-mass.", "https://en.wikipedia.org/wiki/Netflix"),
-        ("snapchat", "Snapchat", "Snap leftover", "Snapchat 2018 year-mass.", "https://en.wikipedia.org/wiki/Snapchat"),
-        ("discord", "Discord", "Join leftover", "Discord 2018 year-mass.", "https://en.wikipedia.org/wiki/Discord"),
-        ("gplusgone", "Google+", "Sunset leftover", "Google+ consumer shutdown announced 8 Oct 2018.", "https://en.wikipedia.org/wiki/Google%2B"),
-        ("androidpie", "Android Pie", "Gesture leftover", "Android 9 Pie 6 Aug 2018.", "https://en.wikipedia.org/wiki/Android_Pie"),
-        ("ios12", "iOS 12", "Screen Time leftover", "iOS 12 released 17 Sep 2018.", "https://en.wikipedia.org/wiki/IOS_12"),
+    : [
+        ("facebook", "Facebook", "Scroll leftover", "Hosting.com  top-10 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
+        ("twitter", "Twitter", "Tweet leftover", "Hosting.com  top-10 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
+        ("amazon", "Amazon", "Browse leftover", "Hosting.com  top-10 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
+        ("google", "Google", "Search leftover", "Hosting.com  #1 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
+        ("yahoo", "Yahoo", "Portal leftover", "Hosting.com  top-10 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
+        ("baidu", "Baidu", "Search leftover", "Hosting.com  global top-10 mass.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
+        ("yandex", "Yandex", "Search leftover", "Hosting.com  global top-10 mass.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
+        ("netflix", "Netflix", "Play leftover", "Netflix  year-mass.", "https://en.wikipedia.org/wiki/Netflix"),
+        ("snapchat", "Snapchat", "Snap leftover", "Snapchat  year-mass.", "https://en.wikipedia.org/wiki/Snapchat"),
+        ("discord", "Discord", "Join leftover", "Discord  year-mass.", "https://en.wikipedia.org/wiki/Discord"),
+        ("gplusgone", "Google+", "Sunset leftover", "Google+ consumer shutdown announced 8 Oct .", "https://en.wikipedia.org/wiki/Google%2B"),
+        ("androidpie", "Android Pie", "Gesture leftover", "Android 9 Pie 6 Aug .", "https://en.wikipedia.org/wiki/Android_Pie"),
+        ("ios12", "iOS 12", "Screen Time leftover", "iOS 12 released 17 Sep .", "https://en.wikipedia.org/wiki/IOS_12"),
     ],
     2020: [
         ("clubhouse", "Clubhouse", "Raise hand leftover", "Clubhouse launched March 2020 invite-only audio rooms.", "https://en.wikipedia.org/wiki/Clubhouse_(app)"),
@@ -343,7 +342,7 @@ def main() -> None:
     lock_years = {"2007", "2010", "2012", "2014", "2021", "2022"}
     caps = {2007: 46, 2010: 44, 2012: 48, 2014: 36, 2016: 64, 2020: 39, 2021: 30, 2022: 38}
     for year, rows in DESTS.items():
-        if year == 2018:
+        if year == :
             continue
         existing = disk_slugs(year)
         added_year = 0

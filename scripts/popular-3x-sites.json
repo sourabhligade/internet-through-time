@@ -1183,12 +1183,12 @@
       "fg": "#fff"
     }
   ],
-  "2018": [
+  "": [
     {
       "id": "reddit",
       "name": "Reddit",
-      "title": "Reddit leftover — 2018",
-      "why": "2018 leftover-3× first. Unique dest. Not the chip.",
+      "title": "Reddit leftover — ",
+      "why": " leftover-3× first. Unique dest. Not the chip.",
       "verb": "Open leftover",
       "ph": "reddit",
       "btn": "Open leftover"
@@ -1196,8 +1196,8 @@
     {
       "id": "youtube",
       "name": "YouTube",
-      "title": "YouTube leftover — 2018",
-      "why": "2018 leftover-3× first. Unique dest. Not the chip.",
+      "title": "YouTube leftover — ",
+      "why": " leftover-3× first. Unique dest. Not the chip.",
       "verb": "Watch leftover",
       "ph": "youtube",
       "btn": "Watch leftover"
@@ -1205,8 +1205,8 @@
     {
       "id": "wikipedia",
       "name": "Wikipedia",
-      "title": "Wikipedia leftover — 2018",
-      "why": "2018 leftover-3× first. Unique dest. Not the chip.",
+      "title": "Wikipedia leftover — ",
+      "why": " leftover-3× first. Unique dest. Not the chip.",
       "verb": "Read leftover",
       "ph": "wikipedia",
       "btn": "Read leftover"
@@ -1676,12 +1676,12 @@
       "fg": "#fff"
     }
   ],
-  "2019": [
+  "": [
     {
       "id": "amazon",
       "name": "Amazon leftover",
-      "title": "Amazon leftover leftover — 2019",
-      "why": "2019 leftover-3× first. Unique dest. Not the chip.",
+      "title": "Amazon leftover leftover — ",
+      "why": " leftover-3× first. Unique dest. Not the chip.",
       "verb": "Cart leftover",
       "ph": "amazon",
       "btn": "Cart leftover"
@@ -1689,8 +1689,8 @@
     {
       "id": "facebook",
       "name": "Facebook",
-      "title": "Facebook leftover — 2019",
-      "why": "2019 leftover-3× first. Unique dest. Not the chip.",
+      "title": "Facebook leftover — ",
+      "why": " leftover-3× first. Unique dest. Not the chip.",
       "verb": "Feed leftover",
       "ph": "facebook",
       "btn": "Feed leftover"
@@ -1698,8 +1698,8 @@
     {
       "id": "google",
       "name": "Google",
-      "title": "Google leftover — 2019",
-      "why": "2019 leftover-3× first. Unique dest. Not the chip.",
+      "title": "Google leftover — ",
+      "why": " leftover-3× first. Unique dest. Not the chip.",
       "verb": "Search leftover",
       "ph": "google",
       "btn": "Search leftover"

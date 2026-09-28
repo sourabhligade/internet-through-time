@@ -17,11 +17,13 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
-const WIPED = new Set(["2009", "2018", "2023", "2024", "2025"]);
+const SKIP = new Set(["2008", "2009", "2011", "", "2023", "2024", "2025"]);
+const REACT = new Set(["2015", "2017", "", "2020", "2021"]);
 const YEARS = [];
-for (let y = 1994; y <= 2025; y++) {
-  if (WIPED.has(String(y))) continue;
-  YEARS.push(String(y));
+for (let y = 1994; y <= 2022; y++) {
+  const s = String(y);
+  if (SKIP.has(s) || REACT.has(s)) continue;
+  YEARS.push(s);
 }
 const BASE = (process.env.BASE_URL || "http://127.0.0.1:8080").replace(/\/$/, "");
 
@@ -153,10 +155,14 @@ try {
       const n = await page.locator(`a.year-card.available[href*="years/${y}"]`).count();
       if (!n) missing.push(y);
     }
+    for (const y of REACT) {
+      const n = await page.locator(`a.year-card.available[href*="year/${y}"]`).count();
+      if (!n) missing.push(y);
+    }
     if (missing.length) fail("hub-cards", `missing available cards: ${missing.join(",")}`);
-    else ok("hub-cards", `${YEARS.length} playable years (2009 boarded · 2018 wiped · 2023–2025 wiped)`);
+    else ok("hub-cards", `${YEARS.length + REACT.size} playable years`);
     const copy = await page.locator("body").innerText();
-    if (!/27 years open/i.test(copy)) fail("hub-copy", "expected 27 years open");
+    if (!/25 years open/i.test(copy)) fail("hub-copy", "expected 25 years open");
     else ok("hub-copy");
     const h1 = await page.locator("h1").first().innerText();
     if (!/Internet Through Time/i.test(h1)) fail("hub-era-chip", "missing product h1");

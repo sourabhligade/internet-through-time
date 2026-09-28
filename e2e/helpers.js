@@ -6,7 +6,7 @@ const path = require("path");
 /** Boarded from the visitor UI. 2009 is a plaque (tree stays). 2023+ have no tree. */
 const BOARDED_YEARS = new Set(["2009", "2023", "2024", "2025"]);
 /** Wiped years: no hub card, no HTML tree. */
-const WIPED_YEARS = new Set(["2011", "2015", "2018", "2023", "2024", "2025"]);
+const WIPED_YEARS = new Set(["2011", "2023", "2024", "2025"]);
 
 /** True when years/YYYY/... is on disk (dest-lock deletes workshop dests). */
 function destOnDisk(href) {
@@ -25,9 +25,18 @@ function yearHtmlOnDisk(year) {
  * @param {string} year
  * @param {string} key
  */
+async function clickRailKey(page, key) {
+  const li = page.locator(".rails li", { has: page.locator("code", { hasText: key }) });
+  const details = li.locator("xpath=ancestor::details[1]");
+  if ((await details.count()) && !(await details.evaluate((el) => el.open))) {
+    await details.locator("summary").click();
+  }
+  await li.getByRole("button").click();
+}
+
 async function openReactStop(page, year, key) {
-  await page.goto("/app/index.html#/year/" + year);
-  await page.locator(".rails li", { has: page.locator("code", { hasText: key }) }).getByRole("button").click();
+  await page.goto("/app/index.html#/year/" + year + "?deep=1");
+  await clickRailKey(page, key);
   return page.locator("article.stop");
 }
 
@@ -40,14 +49,14 @@ async function completeReactStop(page, room) {
   const boxes = room.locator("input[type='checkbox']");
   const n = await boxes.count();
   for (let i = 0; i < n; i++) await boxes.nth(i).check();
-  const field = room.locator("input:not([type='checkbox'])");
+  const field = room.locator("input:not([type='checkbox']):not([data-face-only])");
   if ((await field.count()) > 0) await field.fill("done leftover");
   await room.locator(".actions button").last().click();
 }
 
 function isLiveYear(year) {
   const y = String(year);
-  if (!/^(199[4-9]|200[0-7]|201[0234679]|202[0-2])$/.test(y)) return false;
+  if (!/^(199[4-9]|200[0-7]|201[0234567]|202[0-2])$/.test(y)) return false;
   return !BOARDED_YEARS.has(y) && !WIPED_YEARS.has(y);
 }
 
@@ -784,6 +793,7 @@ module.exports = {
   WIPED_YEARS,
   destOnDisk,
   yearHtmlOnDisk,
+  clickRailKey,
   openReactStop,
   completeReactStop,
   isLiveYear,

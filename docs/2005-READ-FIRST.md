@@ -41,7 +41,7 @@
 | Fact | Cite |
 |------|------|
 | ILS June **2005** | **64,780,617** sites · **+26%** · **1,027,580,990** users · **16** users/site · launched **YouTube, Reddit** — [Internet Live Stats](https://www.internetlivestats.com/total-number-of-websites/) opened this pass |
-| ILS June table | **ends 2018**. 2005 cell is legal. Never invent 2019–2025 June rows. |
+| ILS June table | **ends **. 2005 cell is legal. Never invent –2025 June rows. |
 | Netcraft **June 2005** | **64,808,485** hostnames — [June 2005 survey](http://news.netcraft.com/archives/2005/06/01/june_2005_web_server_survey.html) (WA). Dual-cite with ILS June. |
 | Netcraft **December 2005** | **74,353,258** hostnames · Apache **69.97%** · Microsoft **20.92%** — [Dec 2005 survey](http://news.netcraft.com/archives/2005/12/02/december_2005_web_server_survey.html). Print as **December**, not June. |
 | Visits June 2005 | Yahoo **#1** 6.20B · Google 2.98B · MSN 1.73B · MySpace **enters top 10** at #9 — [Hosting.com](https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/) opened this pass |
@@ -81,7 +81,7 @@
 
 ## Hard bans
 
-Treat YouTube as Google-owned · Twitter / Twttr · Facebook open / News Feed · Chrome · iPhone / App Store · Vista as default shell · Street View as default Maps · dating-form as the gold UI · Pandora as the star · 7th guided step · invented brand pixels · live video CDN / live map tiles · 5,000 dest folders · invent an ILS June cell after 2018.
+Treat YouTube as Google-owned · Twitter / Twttr · Facebook open / News Feed · Chrome · iPhone / App Store · Vista as default shell · Street View as default Maps · dating-form as the gold UI · Pandora as the star · 7th guided step · invented brand pixels · live video CDN / live map tiles · 5,000 dest folders · invent an ILS June cell after .
 
 ## What this research pass did / did not
 

@@ -1,7 +1,7 @@
 # 2021 — READ FIRST
 
 **Date:** 2026-09-27  
-**Status:** **LIVE React door.** HTML dest folders **0**. Star `itt21-att`. Do not dest-farm. Do not dest-lock revert to 294 dests. Hub **24 years open**. **2015 wiped.** **2018 wiped.**  
+**Status:** **LIVE React door.** HTML dest folders **0**. Star `itt21-att`. Do not dest-farm. Do not dest-lock revert to 294 dests. Hub **24 years open**. **2015 wiped.** ** wiped.**  
 **Parent:** 2020 Zoom Leave `itt20-zoom`. **2022 is live lean** (ChatGPT Send).  
 **Look:** [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) Phase 4. Leftover-3× unique dest-true dests **5**. Map stop.
 
@@ -25,7 +25,7 @@
 | Official dest leftover-2× | **0** first paint |
 | Leftover-3× unique dest-true dests | **0** · catalogs empty · do not grow a 5-dest strip |
 | Leftover-4× | **0** |
-| 5k | walk envelope · ILS June table **ends 2018** · do not invent June 2021 websites |
+| 5k | walk envelope · ILS June table **ends ** · do not invent June 2021 websites |
 | Scale | ITU **4.9B / 63%** on About · [failed-final] ITU Facts and Figures 2021 not independently fetched · not websites |
 | Pixels | never invent brand art · `[failed-final]` |
 | Neighbors | `itt20-zoom` stays empty · **2022 live** ChatGPT Send |
@@ -34,7 +34,7 @@
 
 | Fact | Cite |
 |------|------|
-| ILS June websites | **no 2021 cell** · last cell 2018 **1,630,322,579** |
+| ILS June websites | **no 2021 cell** · last cell  **1,630,322,579** |
 | ITU 2021 | **4.9 billion users / 63%** · [failed-final] not independently fetched |
 | ATT | iOS 14.5 Ask vs Allow · Apple Support · 26 Apr 2021 ship day is press |
 | Signal leftover | 15 May 2021 is **WhatsApp’s** delayed privacy-policy deadline, not a Signal launch |

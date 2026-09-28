@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Add 2019 leftover dests (~38) and rebuild 2020 (~38). Dest-true. No invented pixels."""
+"""Add  leftover dests (~38) and rebuild 2020 (~38). Dest-true. No invented pixels."""
 from __future__ import annotations
 
 import json
@@ -197,9 +197,9 @@ def rewrite_rooms(year: str) -> None:
 def main() -> None:
     star19 = "Disney+ Continue"
     for slug, name, verb in Y19_EXTRA:
-        write_dest("2019", slug, name, verb, star19)
-        print("2019 dest", slug)
-    rewrite_rooms("2019")
+        write_dest("", slug, name, verb, star19)
+        print(" dest", slug)
+    rewrite_rooms("")
 
     # 2020 tree
     ydir = ROOT / "years" / "2020"
@@ -242,7 +242,7 @@ def main() -> None:
         encoding="utf-8",
     )
     (ROOT / "css/period-2020.css").write_text(
-        '@import url("period-2019.css");\n'
+        '@import url("period-.css");\n'
         ".year-2020.os-win10 { --itt-desktop-bg: #0078d7; }\n"
         'html[data-itt-year="2020"] body.itt-start-page { background: #f3f3f3 !important; color: #111 !important; }\n',
         encoding="utf-8",

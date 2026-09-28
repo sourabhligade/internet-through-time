@@ -149,8 +149,8 @@
     },
     acceptAll: function (year) {
       var y = parseInt(year, 10) || 2013;
-      if (y >= 2018) {
-        return "Accept all is what people clicked in 2018. Finish Manage → preferences → Save to complete this room.";
+      if (y > 2017) {
+        return "Accept all is what people clicked. Finish Manage, then preferences, then Save to complete this room.";
       }
       return "That path is what people clicked, but it does not finish this room. Complete the remaining steps.";
     },
