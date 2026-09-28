@@ -79,17 +79,6 @@ test("2017 Zoom leftover dest is not 2020 mass", async ({ page }) => {
   });
 });
 
-test(" is live lean", async ({ page }) => {
-  const fs = require("fs");
-  const path = require("path");
-  expect(fs.existsSync(path.join(__dirname, "..", "react", "src", "year.js"))).toBe(true);
-  await page.goto("/");
-  await expect(page.locator("a.year-card.available[data-year='']")).toHaveAttribute(
-    "href",
-    /app\/index\.html#\/year\//
-  );
-});
-
 test("2017 guided list stays 6 · deepen strip is outside", async ({ page }) => {
   await page.goto("/app/index.html#/year/2017");
   await expect(page.locator("article.stop ol > li")).toHaveCount(6);

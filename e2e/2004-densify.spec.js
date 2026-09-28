@@ -34,7 +34,7 @@ test.describe('2004 densify', () => {
 
   test('home chips real paths', async ({ page }) => {
     await page.goto('/years/2004/pages/home.html');
-    const links = page.locator('.itt-product-chips a, .itt-start a[href*="sites/"]');
+    const links = page.locator('a[href*="sites/"]');
     const n = await links.count();
     expect(n).toBeGreaterThan(0);
     for (let i = 0; i < Math.min(n, 10); i++) {

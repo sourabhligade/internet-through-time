@@ -182,13 +182,6 @@
     "2007": yearVisitTour("2007",
       { path: "sites/iphone/index.html", label: "iPhone Safari", blurb: "Empty / App Store / Chrome never write. Go does.", match: "/iphone/" },
       { path: "sites/streetview/index.html", label: "Street View leftover", blurb: "29 May leftover. Not the chip.", match: "/streetview/" }),
-    "2020": yearVisitTour("2020",
-      { path: "sites/zoom/meeting.html", label: "Zoom Leave", blurb: "Stay / empty never writes. Leave does.", match: "/zoom/" },
-      { path: "sites/houseparty/index.html", label: "Houseparty leftover", blurb: "Not Zoom gold.", match: "/houseparty/" }),
-
-    "2021": yearVisitTour("2021",
-      { path: "sites/att/index.html", label: "ATT Ask", blurb: "Star. Allow never writes.", match: "/att/" },
-      { path: "sites/signal/index.html", label: "Signal leftover", blurb: "15 May delay leftover.", match: "/signal/" }),
     "2022": yearVisitTour("2022",
       { path: "sites/chatgpt/index.html", label: "ChatGPT Send", blurb: "Empty / GPT-4 never write. Send does.", match: "/chatgpt/" },
       { path: "sites/wordle/index.html", label: "Wordle leftover", blurb: "NYT leftover. Not ChatGPT gold.", match: "/wordle/" }),
@@ -410,7 +403,7 @@
     if (step.path && step.path.indexOf("#/year/") !== -1) {
       return "/" + String(step.path).replace(/^\//, "");
     }
-    if ({ "2015": 1, "2017": 1, "2020": 1, "2021": 1 }[step.year]) {
+    if ({ "2015": 1, "2017": 1 }[step.year]) {
       return "/app/index.html#/year/" + step.year;
     }
     var tid = trailId || (getNight().trail || "first-night");
@@ -662,7 +655,7 @@
 
   function isLiveYear(year) {
     year = String(year || "");
-    if (!/^(199[4-9]|200[0-7]|2009|201[0-7]|202[0-2])$/.test(year)) return false;
+    if (!/^(199[4-9]|200[0-7]|2009|201[0-7]|2022)$/.test(year)) return false;
     return !WIPED[year];
   }
 

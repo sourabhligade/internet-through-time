@@ -22,7 +22,6 @@ STAR = {
     "2015": ("Periscope Go LIVE", "itt15-periscope"),
     "2016": ("IG Stories", "itt16-ig-stories"),
     "": ("Disney+ Continue", "itt19-disneyplus"),
-    "2021": ("ATT Ask", "itt21-att"),
     "2020": ("Zoom Leave", "itt20-zoom"),
 }
 
@@ -73,11 +72,6 @@ UNIQUE = {
         "first": ["amazon", "facebook", "google"],
         "second": ["instagram", "nyt", "oculusquest"],
         "third": ["twitter", "yahoo", "youtube"],
-    },
-    "2021": {
-        "first": ["amazon", "google", "instagram"],
-        "second": ["twitter", "youtube"],
-        "third": [],
     },
     "2020": {
         "first": ["amazon", "facebook", "google"],

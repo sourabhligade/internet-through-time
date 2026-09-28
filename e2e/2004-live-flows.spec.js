@@ -18,6 +18,7 @@ test.describe('2004 live flows', () => {
   test('gmail login to inbox compose path', async ({ page }) => {
     await page.goto('/years/2004/sites/gmail/index.html');
     await page.waitForSelector('[data-gmail-login]', { timeout: 15000 });
+    await page.fill('[data-gmail-login] [name="email"]', 'ada@museum.edu');
     await page.fill('[data-gmail-login] [name="pass"]', 'secret');
     await page.locator('[data-gmail-login] button[type="submit"]').click();
     await expect(page).toHaveURL(/inbox\.html/, { timeout: 10000 });
@@ -49,6 +50,8 @@ test.describe('2004 live flows', () => {
   test('thefacebook login and add friend', async ({ page }) => {
     await page.goto('/years/2004/sites/facebook/index.html');
     await page.waitForSelector('[data-fb-login]', { timeout: 15000 });
+    await page.fill('[data-fb-login] [name="email"]', 'ada@harvard.edu');
+    await page.fill('[data-fb-login] [name="pass"]', 'secret');
     await page.locator('[data-fb-login] button[type="submit"]').click();
     await expect(page).toHaveURL(/profile\.html/, { timeout: 10000 });
     await page.goto('/years/2004/sites/facebook/friends.html');

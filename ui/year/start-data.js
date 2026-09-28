@@ -271,31 +271,6 @@
  
  ]
 },
- "2020": {
- "href": "/app/index.html#/year/2020",
- "label": "★ One-thing · Zoom Leave REAL",
- "items": [
- " <a href=\"/app/index.html#/year/2020?stop=about\" style=\"color:#1565c0\">About 2020</a> — table ends  · no invented ILS cell",
- " <a href=\"/app/index.html#/year/2020?stop=itt20-zoom\" style=\"color:#1565c0\">★ Zoom Leave</a> — Stay / empty never writes",
- " <a href=\"/app/index.html#/year/2020?stop=itt20-houseparty\" style=\"color:#1565c0\">Houseparty</a> — not Zoom gold",
- " <a href=\"/app/index.html#/year/2020?stop=itt20-classroom\" style=\"color:#1565c0\">Classroom</a> — join class",
- " <a href=\"/app/index.html#/year/2020?stop=itt20-amongus\" style=\"color:#1565c0\">Among Us</a> — not the chip",
- " <a href=\"/app/index.html#/year/2020?stop=map\" style=\"color:#1565c0\">Year flow map</a> "
- ]
-},
-
- "2021": {
- "href": "/app/index.html#/year/2021",
- "label": "★ Ask App Not to Track",
- "items": [
- " <a href=\"/app/index.html#/year/2021?stop=about\" style=\"color:#1565c0\">About 2021</a> — table ends  · ITU 4.9B / 63%",
- " <a href=\"/app/index.html#/year/2021?stop=itt21-att\" style=\"color:#1565c0\">★ ATT Ask</a> — Ask App Not to Track · Allow never writes",
- " <a href=\"/app/index.html#/year/2021?stop=itt21-signal\" style=\"color:#1565c0\">Signal</a> — 15 May delay",
- " <a href=\"/app/index.html#/year/2021?stop=itt21-copilot\" style=\"color:#1565c0\">Copilot waitlist</a> — not ChatGPT",
- " <a href=\"/app/index.html#/year/2021?stop=itt21-meta\" style=\"color:#1565c0\">Meta rename</a> — app still Facebook",
- " <a href=\"/app/index.html#/year/2021?stop=map\" style=\"color:#1565c0\">Year flow map</a> "
- ]
-},
  "2022": {
  "href": "../sites/chatgpt/index.html",
  "label": "★ ChatGPT Send",

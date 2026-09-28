@@ -159,26 +159,6 @@
     "title": "Gmail Invite",
     "next": "/years/2004/sites/playable/game.html"
   },
-      {
-    "year": "2009",
-    "role": "f",
-    "path": "/years/2009/sites/playable/extra-f.html",
-    "key": "itt09-game-like2",
-    "id": "like2",
-    "kind": "parlor",
-    "title": "Like Two",
-    "next": "/years/2009/sites/playable/extra-g.html"
-  },
-  {
-    "year": "2009",
-    "role": "g",
-    "path": "/years/2009/sites/playable/extra-g.html",
-    "key": "itt09-game-bingnote",
-    "id": "bingnote",
-    "kind": "quiz",
-    "title": "Bing Note",
-    "next": "/years/2009/sites/playable/game.html"
-  },
   {
     "year": "2010",
     "role": "f",
@@ -220,26 +200,6 @@
     "next": "/years/2012/sites/playable/game.html"
   },
   {
-    "year": "2013",
-    "role": "f",
-    "path": "/years/2013/sites/playable/extra-f.html",
-    "key": "itt13-game-vineloop2",
-    "id": "vineloop2",
-    "kind": "parlor",
-    "title": "Vine Loop 2",
-    "next": "/years/2013/sites/playable/extra-g.html"
-  },
-  {
-    "year": "2013",
-    "role": "g",
-    "path": "/years/2013/sites/playable/extra-g.html",
-    "key": "itt13-game-snap24",
-    "id": "snap24",
-    "kind": "hold",
-    "title": "Snap 24",
-    "next": "/years/2013/sites/playable/game.html"
-  },
-  {
     "year": "2016",
     "role": "f",
     "path": "/years/2016/sites/playable/extra-f.html",
@@ -258,25 +218,5 @@
     "kind": "parlor",
     "title": "Poke Hunt",
     "next": "/years/2016/sites/playable/game.html"
-  },
-  {
-    "year": "2017",
-    "role": "f",
-    "path": "/years/2017/sites/playable/extra-f.html",
-    "key": "itt17-game-facehold",
-    "id": "facehold",
-    "kind": "hold",
-    "title": "Face Hold",
-    "next": "/years/2017/sites/playable/extra-g.html"
-  },
-  {
-    "year": "2017",
-    "role": "g",
-    "path": "/years/2017/sites/playable/extra-g.html",
-    "key": "itt17-game-tweet280",
-    "id": "tweet280",
-    "kind": "parlor",
-    "title": "Tweet 280",
-    "next": "/years/2017/sites/playable/game.html"
   }
 ]

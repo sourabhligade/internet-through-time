@@ -99,14 +99,14 @@ const YEARS = [
 ];
 
 const DEST_HTML_FREEZE = {
-  1994: { dests: 53, html: 277 },
-  1995: { dests: 51, html: 247 },
-  1996: { dests: 52, html: 199 },
-  1997: { dests: 56, html: 183 },
-  1998: { dests: 52, html: 202 },
-  1999: { dests: 48, html: 219 },
-  2000: { dests: 54, html: 209 },
-  2009: { dests: 68, html: 139 },
+  1994: { dests: 158, html: 380 },
+  1995: { dests: 153, html: 349 },
+  1996: { dests: 153, html: 296 },
+  1997: { dests: 166, html: 265 },
+  1998: { dests: 151, html: 290 },
+  1999: { dests: 429, html: 577 },
+  2000: { dests: 501, html: 631 },
+  2009: { dests: 78, html: 150 },
 };
 
 async function getKey(page, key) {

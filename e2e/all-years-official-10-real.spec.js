@@ -64,6 +64,7 @@ const STAR = {
       await page.evaluate(() => {
         try { sessionStorage.setItem("itt94-csotd-wandered", "1"); } catch (e) { /* */ }
       });
+      await page.locator("[data-csotd-link]").click();
       await page.fill("[name='gbname']", "Glenn residual");
       await page.fill("[name='gbnote']", "Modem worthy.");
       await page.locator("form[data-csotd-gb] [data-official-verb]").click();

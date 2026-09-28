@@ -478,7 +478,6 @@ At each leftover dest: scroll to **Also this year · leftover-2× unique dests**
 | **2** | 2000 cited ADD | click **Lycos** on that rail → http://127.0.0.1:8080/years/2000/sites/lycos/index.html | Dest on disk · leftover dest leftover-2× unique dest rail stays |
 | **3** | 2007 leftover dest KEEP | http://127.0.0.1:8080/years/2007/sites/hackernews/index.html | Unique dest hrefs **32** (self skipped) · `friendfeed` present |
 | **4** | 2007 click | **FriendFeed leftover** → http://127.0.0.1:8080/years/2007/sites/friendfeed/index.html | Dest on disk |
-| **5** |  leftover dest KEEP | http://127.0.0.1:8080/years//sites/gplusgone/index.html | Unique dest hrefs · leftover-3× unique dests stay **3** (`reddit` `youtube` `wikipedia` as href targets) |
 | **6** | 2022 leftover dest KEEP | http://127.0.0.1:8080/years/2022/sites/temu/index.html | Unique dest hrefs · leftover dest KEEP `midjourney` `dalle2` present |
 | **7** | 2010 leftover dest KEEP | http://127.0.0.1:8080/years/2010/sites/flipboard/index.html | Unique dests **29** cap = dests on disk |
 | **8** | 2013 extra dest KEEP | http://127.0.0.1:8080/years/2013/sites/bitcoin/index.html | Unique dests **47** (dests with `index.html`) |
@@ -493,7 +492,6 @@ No **Also this year · leftover-2× unique dests** on official dest HTML. Offici
 | **10** | 1995 star dest | http://127.0.0.1:8080/years/1995/sites/amazon/index.html | leftover-2× rail **0** · `data-official-key` present |
 | **11** | 2007 star dest | http://127.0.0.1:8080/years/2007/sites/iphone/index.html | leftover-2× rail **0** |
 | **12** | 2010 star dest | http://127.0.0.1:8080/years/2010/sites/instagram/index.html | leftover-2× rail **0** |
-| **13** |  star dest | http://127.0.0.1:8080/years//sites/gdpr/index.html | leftover-2× rail **0** · GDPR Manage is dest-true official dest I/O |
 | **14** | 2022 star dest | http://127.0.0.1:8080/years/2022/sites/chatgpt/index.html | leftover-2× rail **0** |
 | **15** | 2022 Starting Point | http://127.0.0.1:8080/years/2022/pages/home.html | leftover-2× unique dest rail **0** on start page (warehouse folded) |
 
@@ -504,7 +502,6 @@ Same leftover dest as A. Leftover dest-true panel is the dashed box **above** th
 | Step | Open | Empty | Trap | Keep writes |
 |------|------|-------|------|-------------|
 | **16** | http://127.0.0.1:8080/years/2007/sites/hackernews/index.html | Submit leftover with nothing checked | **App Store as gold (trap)** | `hackernews-lx` / `itt07-hackernews-lx` not iPhone star |
-| **17** | http://127.0.0.1:8080/years//sites/gplusgone/index.html | Sunset leftover empty | **Accept All as gold (trap)** | `gplusgone-lx` / `itt18-gplusgone-lx` not GDPR star |
 | **18** | http://127.0.0.1:8080/years/2022/sites/temu/index.html | Shop leftover empty | **GPT-4 as gold (trap)** | `temu-lx` / `itt22-temu-lx` not ChatGPT star |
 | **19** | http://127.0.0.1:8080/years/1995/sites/excite/index.html | leftover dest KEEP dest-true panel | trap never writes | leftover dest key not 1995 Amazon star |
 

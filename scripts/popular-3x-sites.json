@@ -1704,34 +1704,5 @@
       "ph": "google",
       "btn": "Search leftover"
     }
-  ],
-  "2021": [
-    {
-      "id": "amazon",
-      "name": "Amazon leftover",
-      "title": "Amazon leftover leftover — 2021",
-      "why": "2021 leftover-3× first. Unique dest. Not the chip.",
-      "verb": "Cart leftover",
-      "ph": "amazon",
-      "btn": "Cart leftover"
-    },
-    {
-      "id": "google",
-      "name": "Google",
-      "title": "Google leftover — 2021",
-      "why": "2021 leftover-3× first. Unique dest. Not the chip.",
-      "verb": "Search leftover",
-      "ph": "google",
-      "btn": "Search leftover"
-    },
-    {
-      "id": "instagram",
-      "name": "Instagram",
-      "title": "Instagram leftover — 2021",
-      "why": "2021 leftover-3× first. Unique dest. Not the chip.",
-      "verb": "Filter leftover",
-      "ph": "instagram",
-      "btn": "Filter leftover"
-    }
   ]
 }

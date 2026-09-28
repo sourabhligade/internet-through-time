@@ -8,9 +8,7 @@ function yearOnDisk(year) {
   return fs.existsSync(path.join(__dirname, "..", "years", String(year), "index.html"));
 }
 
-const CHIPS = [
-  { year: "", href: /disneyplus/, label: /Disney/i },
-];
+const CHIPS = [];
 
 for (const row of CHIPS) {
   test(`${row.year} Starting Point has one-thing chip`, async ({ page }) => {

@@ -17,7 +17,6 @@ LEAN = {
     "2010",
     "2012",
     "2014",
-    "2021",
     "2022",
 }
 
@@ -45,9 +44,6 @@ EXTRA_KEEP = {
     },
     "2020": {
         "clubhouse", "hbomax", "peacock"
-    },
-    "2021": {
-        "coinbaseipo", "epicapple", "nft"
     },
     "2022": {
         "dalle2", "ios16", "m2", "midjourney", "stablediff", "temu"

@@ -162,7 +162,6 @@ These `page.goto` paths **do not exist** on disk. Specs `test.skip` when `destOn
 | `year-2010-plus-3x-unique.spec.js` | `/years/2010/sites/instant/index.html` |
 | `2012-flows.spec.js` | `/years/2012/sites/vinewait/index.html` |
 | `2014-4x-flows.spec.js` | `/years/2014/sites/oculus/index.html` (Serial dest also gone) |
-| `2013--leftover-dest-true.spec.js` | `/years//sites/fortnite/index.html` **on disk** (dest-lock reverted) |
 | `2017--deepen-theater.spec.js` | 2017 Zoom leftover dest is `zoom17` **on disk** |
 
 `js/config/2017.js` `locationHints` `sites/whatsapp/index.html` **exists** after dest-lock revert.

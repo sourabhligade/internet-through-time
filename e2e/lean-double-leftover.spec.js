@@ -59,13 +59,8 @@ test("lean-double leftover dests dest-disjoint leftover-3× unique", () => {
   }
 });
 
-test(" and 2021 leftover-3× unique are gone", () => {
-  expect(uniqueIds("")).toHaveLength(0);
+test("2021 leftover-3× unique is gone", () => {
   expect(uniqueIds("2021")).toHaveLength(0);
-});
-
-test(" stays wiped", () => {
-  expect(fs.existsSync(path.join(ROOT, "years", ""))).toBe(false);
 });
 
 test("dest folder counts match lean-double disk", () => {

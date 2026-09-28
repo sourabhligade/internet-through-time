@@ -78,7 +78,7 @@
         saveJSON(key("gplus-circles-ack"), {
           multiStep: true,
           real: true,
-          year: "",
+          year: year(),
           name: n,
           ts: Date.now()
         });

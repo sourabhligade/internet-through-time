@@ -159,26 +159,6 @@
     "title": "Orkut Note",
     "next": "/years/2004/sites/playable/game.html"
   },
-      {
-    "year": "2009",
-    "role": "h",
-    "path": "/years/2009/sites/playable/extra-h.html",
-    "key": "itt09-game-farm2",
-    "id": "farm2",
-    "kind": "parlor",
-    "title": "Farm Two",
-    "next": "/years/2009/sites/playable/extra-i.html"
-  },
-  {
-    "year": "2009",
-    "role": "i",
-    "path": "/years/2009/sites/playable/extra-i.html",
-    "key": "itt09-game-win7note",
-    "id": "win7note",
-    "kind": "quiz",
-    "title": "Win7 Note",
-    "next": "/years/2009/sites/playable/game.html"
-  },
   {
     "year": "2010",
     "role": "h",
@@ -220,26 +200,6 @@
     "next": "/years/2012/sites/playable/game.html"
   },
   {
-    "year": "2013",
-    "role": "h",
-    "path": "/years/2013/sites/playable/extra-h.html",
-    "key": "itt13-game-post2",
-    "id": "post2",
-    "kind": "parlor",
-    "title": "Post Two",
-    "next": "/years/2013/sites/playable/extra-i.html"
-  },
-  {
-    "year": "2013",
-    "role": "i",
-    "path": "/years/2013/sites/playable/extra-i.html",
-    "key": "itt13-game-flatnote",
-    "id": "flatnote",
-    "kind": "quiz",
-    "title": "Flat Note",
-    "next": "/years/2013/sites/playable/game.html"
-  },
-  {
     "year": "2016",
     "role": "h",
     "path": "/years/2016/sites/playable/extra-h.html",
@@ -258,25 +218,5 @@
     "kind": "quiz",
     "title": "React Note",
     "next": "/years/2016/sites/playable/game.html"
-  },
-  {
-    "year": "2017",
-    "role": "h",
-    "path": "/years/2017/sites/playable/extra-h.html",
-    "key": "itt17-game-look2",
-    "id": "look2",
-    "kind": "parlor",
-    "title": "Look Two",
-    "next": "/years/2017/sites/playable/extra-i.html"
-  },
-  {
-    "year": "2017",
-    "role": "i",
-    "path": "/years/2017/sites/playable/extra-i.html",
-    "key": "itt17-game-clipnote",
-    "id": "clipnote",
-    "kind": "quiz",
-    "title": "Clip Note",
-    "next": "/years/2017/sites/playable/game.html"
   }
 ]

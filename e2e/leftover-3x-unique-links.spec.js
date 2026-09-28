@@ -116,7 +116,6 @@ test.describe("leftover-3× unique dest links", () => {
     for (const row of leftover3x) {
       byYear[row.year] = (byYear[row.year] || 0) + 1;
     }
-    expect(byYear[""]).toBeUndefined();
     expect(byYear["2021"]).toBeUndefined();
     expect(byYear["2017"]).toBeUndefined();
     expect(Object.values(byYear).reduce((a, b) => a + b, 0)).toBe(0);
@@ -165,17 +164,6 @@ test.describe("leftover-3× unique dest links", () => {
     await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
     await expect(page.locator("[data-itt-lo3x]")).toHaveCount(0);
     await page.goto("/years/2007/sites/iphone/index.html");
-    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
-  });
-
-  test("2021 leftover dest leftover-3× unique dest amazon · ATT leftover-3× unique dest links 0", async ({
-    page,
-  }) => {
-    await page.goto("/app/index.html#/year/2021");
-    await page.getByRole("button", { name: "Amazon", exact: true }).click();
-    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
-    await expect(page.locator("[data-itt-lo3x]")).toHaveCount(0);
-    await page.getByRole("button", { name: "1 ATT Ask" }).click();
     await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
   });
 

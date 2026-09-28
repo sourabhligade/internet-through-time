@@ -3,7 +3,6 @@
 **Date:** 2026-09-16  
 **Status:** Implemented 2026-09-16. Dest-locked clone dests = 0. 2013 leftover 2× ×2 and forests untouched.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Replacement model:** [`years//sites/cnil/index.html`](../years//sites/cnil/index.html) — **one dest, one leftover writer**.  
 **Leftover-3× dest face:** [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md) U1–U9.  
 **Do not dest-farm. Do not invent dests. Do not invent brand pixels.**
 

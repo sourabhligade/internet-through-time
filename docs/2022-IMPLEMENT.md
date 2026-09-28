@@ -157,4 +157,3 @@ Bans: [x] farm [x] 4× [x] 7th li [x] ILS digit [x] X [x] Threads [x] GPT-4 mode
 ## Local
 
 - [http://127.0.0.1:8080/years/2022/?nav2](http://127.0.0.1:8080/years/2022/?nav2)
-- Parent: [http://127.0.0.1:8080/years/2021/](http://127.0.0.1:8080/years/2021/)

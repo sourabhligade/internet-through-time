@@ -490,31 +490,11 @@ Images: none. `assets/period/2017/` is a readme only. Do not draw a logo for thi
 
 Images: none. `assets/period//` is a readme only. Do not draw a logo for this year.
 
-- [ ] 1 · Disney+ Continue `itt19-disneyplus` — http://127.0.0.1:8080/years//sites/disneyplus/home.html
-- [ ] 2 · TikTok For You `itt19-tiktok` — http://127.0.0.1:8080/years//sites/tiktok/index.html
-- [ ] 3 · Apple Arcade `itt19-arcade` — http://127.0.0.1:8080/years//sites/arcade/index.html
-- [ ] 4 · Apple TV+ `itt19-appletv` — http://127.0.0.1:8080/years//sites/appletv/index.html
-- [ ] 5 · Stadia `itt19-stadia` — http://127.0.0.1:8080/years//sites/stadia/index.html
-- [ ] 6 · iPhone 11 `itt19-iphone11` — http://127.0.0.1:8080/years//sites/iphone/iphone11.html
-- [ ] 7 · AirPods Pro `itt19-airpods-pro` — http://127.0.0.1:8080/years//sites/airpodspro/index.html
-- [ ] 8 · Chrome habit `itt19-chrome` — http://127.0.0.1:8080/years//sites/chrome/index.html
-- [ ] 9 · Windows 10 residual `itt19-win10` — http://127.0.0.1:8080/years//sites/windows10/index.html
-- [ ] 10 · Continue Row `itt19-game-continuerow` — http://127.0.0.1:8080/years//sites/playable/game.html
 
 ### 2020
 
 Images: none. `assets/period/2020/` is a readme only. Do not draw a logo for this year.
 
-- [ ] 1 · Zoom Leave `itt20-zoom` — http://127.0.0.1:8080/years/2020/sites/zoom/meeting.html
-- [ ] 2 · Houseparty leftover `itt20-houseparty` — http://127.0.0.1:8080/years/2020/sites/houseparty/index.html
-- [ ] 3 · Discord leftover `itt20-discord` — http://127.0.0.1:8080/years/2020/sites/discord/index.html
-- [ ] 4 · Teams leftover `itt20-teams` — http://127.0.0.1:8080/years/2020/sites/teams/index.html
-- [ ] 5 · Classroom leftover `itt20-classroom` — http://127.0.0.1:8080/years/2020/sites/classroom/index.html
-- [ ] 6 · Netflix leftover `itt20-netflix` — http://127.0.0.1:8080/years/2020/sites/netflix/index.html
-- [ ] 7 · TikTok leftover `itt20-tiktok` — http://127.0.0.1:8080/years/2020/sites/tiktok/index.html
-- [ ] 8 · Among Us leftover `itt20-amongus` — http://127.0.0.1:8080/years/2020/sites/amongus/index.html
-- [ ] 9 · Animal Crossing leftover `itt20-acnh` — http://127.0.0.1:8080/years/2020/sites/animalcrossing/index.html
-- [ ] 10 · Year game leftover `itt20-game-leave` — http://127.0.0.1:8080/years/2020/sites/playable/game.html
 
 ### 2007
 
@@ -535,16 +515,6 @@ Images: 150 in `assets/period/2007/`.
 
 Images: none. `assets/period/2021/` is a readme only. Do not draw a logo for this year.
 
-- [ ] 1 · ATT Ask `itt21-att` — http://127.0.0.1:8080/years/2021/sites/att/index.html
-- [ ] 2 · Signal `itt21-signal` — http://127.0.0.1:8080/years/2021/sites/signal/index.html
-- [ ] 3 · Copilot waitlist `itt21-copilot` — http://127.0.0.1:8080/years/2021/sites/copilot/index.html
-- [ ] 4 · Meta rename `itt21-meta` — http://127.0.0.1:8080/years/2021/sites/meta/index.html
-- [ ] 5 · Windows 11 `itt21-win11` — http://127.0.0.1:8080/years/2021/sites/windows11/index.html
-- [ ] 6 · Flash brick `itt21-flash-brick` — http://127.0.0.1:8080/years/2021/sites/flash/index.html
-- [ ] 7 · Chrome habit `itt21-chrome` — http://127.0.0.1:8080/years/2021/sites/chrome/index.html
-- [ ] 8 · Windows 10 residual `itt21-win10` — http://127.0.0.1:8080/years/2021/sites/windows10/index.html
-- [ ] 9 · Facebook `itt21-pop-facebook` — http://127.0.0.1:8080/years/2021/sites/facebook/index.html
-- [ ] 10 · Five Letter `itt21-game-five` — http://127.0.0.1:8080/years/2021/sites/playable/game.html
 
 ### 2022
 

@@ -20,8 +20,8 @@ test.describe("2006 flows", () => {
     expect(n).toBeLessThanOrEqual(10);
   });
 
-  test("leftover 2× panel exists on gold dest", async ({ page }) => {
+  test("gold dest is the star and has no leftover panel", async ({ page }) => {
     await page.goto("/years/2006/sites/twitter/index.html");
-    await expect(page.locator("[data-lo-panel] [data-lo-save]").first()).toBeVisible();
+    await expect(page.locator("[data-lo-panel]")).toHaveCount(0);
   });
 });

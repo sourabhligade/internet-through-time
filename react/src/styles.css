@@ -16,6 +16,19 @@ a {
   color: inherit;
 }
 
+.year-only {
+  display: block;
+  width: 280px;
+  margin: 18vh auto;
+  padding: 18px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(12, 12, 14, 0.45);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
 .hall {
   max-width: 920px;
   margin: 0 auto;

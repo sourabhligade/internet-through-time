@@ -32,8 +32,7 @@
     "2017": { machine: "Windows 10 · Chrome habit", star: "Face ID", starHref: "sites/iphone/x.html", game: "" },
     "": { machine: "Windows 10 · Chrome habit", star: "GDPR Manage", starHref: "sites/gdpr/index.html", game: "" },
     "": { machine: "Windows 10 · Chrome habit", star: "Disney+ Continue", starHref: "sites/disneyplus/home.html", game: "" },
-    "2020": { machine: "Windows 10 · Chrome habit", star: "Zoom Leave", starHref: "sites/zoom/meeting.html", game: "" },
-    "2021": { machine: "Windows 10 · Chrome habit", star: "ATT Ask", starHref: "sites/att/index.html", game: "" }
+    "2020": { machine: "Windows 10 · Chrome habit", star: "Zoom Leave", starHref: "sites/zoom/meeting.html", game: "" }
   };
 
   function yearOf() {
@@ -61,7 +60,7 @@
     if (n <= 1997) return "b";
     if (n <= 2000) return "c";
     if (n <= 2007) return "d";
-    if (n <= 2021) return "e";
+    if (n <= 2020) return "e";
     return "f";
   }
 
@@ -236,7 +235,7 @@
       path = "";
     }
     if (!/\/pages\/home\.html$/.test(path)) return;
-    if (["2007", "2010", "2012", "2013", "2014", "2015", "2016", "2017", "", "", "2020", "2021", "2022"].indexOf(String(y)) !== -1) return;
+    if (["2007", "2010", "2012", "2013", "2014", "2015", "2016", "2017", "", "", "2022"].indexOf(String(y)) !== -1) return;
     if (doc.getElementById("itt-layer-assess")) return;
     var meta = META[y] || {};
     var links = webLinks(y);

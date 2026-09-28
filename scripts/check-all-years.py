@@ -138,15 +138,6 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/stadia/index.html",
         "sites/playable/game.html"
     ],
-    "2021": [
-        "pages/home.html",
-        "pages/about.html",
-        "sites/att/index.html",
-        "sites/signal/index.html",
-        "sites/copilot/index.html",
-        "sites/meta/index.html",
-        "sites/playable/game.html"
-    ]
 }
 
 # Optional research markers (year can be "research-only" without tree)
@@ -259,9 +250,7 @@ def check_year(year: str, http_base: str | None) -> dict:
     react_src = {
         "2015": ROOT / "react/src/year2015.js",
         "2017": ROOT / "react/src/year2017.js",
-        "": ROOT / "react/src/year.js",
         "2020": ROOT / "react/src/year2020.js",
-        "2021": ROOT / "react/src/year2021.js",
     }.get(year)
     if not on_disk and react_src is not None:
         hub = (ROOT / "index.html").read_text(errors="ignore")

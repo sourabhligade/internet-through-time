@@ -115,10 +115,10 @@ async function completeLeftoverDest(page, href, suffix, star, year) {
 test.describe("leftover-2× unique dest links", () => {
   test("catalog: one dest slug once · dests have index.html · no 123-reg", () => {
     for (const row of matrix) {
-      if (!fs.existsSync(path.join(ROOT, "years", String(row.year), "index.html")) && !new Set(["2017", "2020", "2021"]).has(String(row.year))) continue;
+      if (!fs.existsSync(path.join(ROOT, "years", String(row.year), "index.html")) && !new Set(["2017"]).has(String(row.year))) continue;
       expect(new Set(row.dests).size, row.year + " unique dests").toBe(row.dests.length);
       expect(row.n).toBe(row.dests.length);
-      const reactDoor = new Set(["2017", "2020", "2021"]);
+      const reactDoor = new Set(["2017"]);
       for (const slug of row.dests) {
         expect(WAREHOUSE.has(slug), row.year + " " + slug + " warehouse").toBe(false);
         if (reactDoor.has(String(row.year))) {
@@ -137,7 +137,6 @@ test.describe("leftover-2× unique dest links", () => {
     for (const row of leftover3x) {
       byYear[row.year] = (byYear[row.year] || 0) + 1;
     }
-    expect(byYear[""]).toBeUndefined();
     expect(byYear["2021"]).toBeUndefined();
     expect(Object.values(byYear).reduce((a, b) => a + b, 0)).toBe(0);
   });

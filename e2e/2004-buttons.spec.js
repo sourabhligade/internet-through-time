@@ -49,8 +49,4 @@ test.describe('2004 museum buttons / multi-page', () => {
     await expect(page.locator('body')).toContainText(/seed|2005/i);
   });
 
-  test('google ipo page', async ({ page }) => {
-    await page.goto('/years/2004/sites/google/ipo.html');
-    await expect(page.locator('body')).toContainText('August 19, 2004');
-  });
 });

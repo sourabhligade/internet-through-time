@@ -316,18 +316,14 @@ html[data-itt-year="2020"]:not([data-official-key]) .itt-pop3x-flow[data-itt-des
   font-weight: 600;
 }
 
-/* 2021–2022 system / chat column */
-html[data-itt-year="2021"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
+/* 2022 system / chat column */
 html[data-itt-year="2022"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
-html[data-itt-year="2021"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]),
 html[data-itt-year="2022"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]) {
   background: #f7f7f8 !important;
   color: #0d0d0d !important;
   font-family: ui-sans-serif, system-ui, "Segoe UI", Arial, sans-serif !important;
 }
-html[data-itt-year="2021"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true],
 html[data-itt-year="2022"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true],
-html[data-itt-year="2021"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true],
 html[data-itt-year="2022"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] {
   background: #fff !important;
   border: 1px solid #e5e5e5 !important;
@@ -336,9 +332,7 @@ html[data-itt-year="2022"]:not([data-official-key]) .itt-pop3x-flow[data-itt-des
   color: #0d0d0d !important;
   padding: 16px !important;
 }
-html[data-itt-year="2021"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true] button,
 html[data-itt-year="2022"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true] button,
-html[data-itt-year="2021"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] button,
 html[data-itt-year="2022"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] button {
   background: #10a37f;
   border: 0;

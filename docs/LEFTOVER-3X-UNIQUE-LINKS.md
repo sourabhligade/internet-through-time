@@ -239,7 +239,6 @@ Cites: Google+ consumer shutdown 8 Oct  · leftover dest KEEP leftover dest-true
 
 Leftover dest KEEP leftover dest-true stays dest-true leftover dest: `androidpie` · `caffeine` · `espnplus` · `mojave` · `nso` · `onedot` · `pubg` · `rdr2`
 
-Official dest leftover-3× first paint **0**: http://127.0.0.1:8080/years//sites/gdpr/index.html
 
 ###  — leftover-3× unique dest **links** after 18 · ADD 9 · leftover-3× unique dest-true dests stay 9 · star `itt19-disneyplus`
 
@@ -306,10 +305,8 @@ Dest HTML leftover-3× unique dest **links** implemented 2026-09-21. Dest-true l
 |------|---------------|-----|
 | 2007 | iPhone Safari | http://127.0.0.1:8080/years/2007/sites/iphone/index.html |
 | 2010 | Instagram | http://127.0.0.1:8080/years/2010/sites/instagram/index.html |
-|  | GDPR Manage | http://127.0.0.1:8080/years//sites/gdpr/index.html |
 | 2022 | ChatGPT Send | http://127.0.0.1:8080/years/2022/sites/chatgpt/index.html |
 
-Leftover dest leftover-3× unique dest-true dest check: http://127.0.0.1:8080/years/2007/sites/wiki/index.html · http://127.0.0.1:8080/years//sites/reddit/index.html · http://127.0.0.1:8080/years/2022/sites/amazon/index.html
 
 ---
 

@@ -17,7 +17,7 @@ const THINGS = [
     path: "/years/1994/sites/csotd/index.html",
     key: "itt94-csotd",
     incomplete: async (page) => {
-      await page.locator("form[data-csotd-gb] input[type='submit']").click();
+      await page.locator("form[data-csotd-gb] [data-official-verb]").click();
     },
     complete: async (page) => {
       await page.waitForFunction(
@@ -32,7 +32,7 @@ const THINGS = [
       );
       await page.fill("[name='gbname']", "Glenn residual");
       await page.fill("[name='gbnote']", "Modem worthy.");
-      await page.locator("form[data-csotd-gb] input[type='submit']").click();
+      await page.locator("form[data-csotd-gb] [data-official-verb]").click();
     },
   },
   {
@@ -295,44 +295,6 @@ const THINGS = [
     },
   },
 
-  {
-    year: "2020",
-    react: true,
-    path: "/app/index.html#/year/2020",
-    key: "itt20-zoom",
-    incomplete: async (page) => {
-      await page.getByRole("button", { name: "1 Zoom Leave" }).click();
-      await page.locator("article.stop").getByRole("button", { name: "Stay" }).click();
-    },
-    complete: async (page) => {
-      await page.getByRole("button", { name: "1 Zoom Leave" }).click();
-      const room = page.locator("article.stop");
-      const reqs = room.locator("input[type='checkbox']");
-      const n = await reqs.count();
-      for (let i = 0; i < n; i++) await reqs.nth(i).check();
-      await room.getByPlaceholder("chat leftover").fill("brb leftover");
-      await room.getByRole("button", { name: "Leave", exact: true }).click();
-    },
-  },
-  {
-    year: "2021",
-    react: true,
-    path: "/app/index.html#/year/2021",
-    key: "itt21-att",
-    incomplete: async (page) => {
-      await page.getByRole("button", { name: "1 ATT Ask" }).click();
-      await page.locator("article.stop").getByRole("button", { name: "Allow", exact: true }).click();
-    },
-    complete: async (page) => {
-      await page.getByRole("button", { name: "1 ATT Ask" }).click();
-      const room = page.locator("article.stop");
-      const reqs = room.locator("input[type='checkbox']");
-      const n = await reqs.count();
-      for (let i = 0; i < n; i++) await reqs.nth(i).check();
-      await room.getByPlaceholder("Museum App").fill("Museum App");
-      await room.getByRole("button", { name: "Ask App Not to Track", exact: true }).click();
-    },
-  },
   {
     year: "2022",
     path: "/years/2022/sites/chatgpt/index.html",

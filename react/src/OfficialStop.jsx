@@ -27,7 +27,7 @@ export function OfficialStop({ stop, onNext }) {
       return;
     }
     const payload = stop.leftover
-      ? { real: true, leftover: true, year: stop.year || "2020", ts: Date.now() }
+      ? { real: true, leftover: true, year: stop.year || "2022", ts: Date.now() }
       : {
           multiStep: true,
           real: true,

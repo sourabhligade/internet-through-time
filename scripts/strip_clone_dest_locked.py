@@ -304,7 +304,7 @@ def prune_matrix() -> None:
     p = ROOT / "e2e" / "leftover-official.matrix.json"
     data = json.loads(p.read_text(encoding="utf-8"))
     dests = data["dests"]
-    drop_years_d2 = {"2007", "2010", "2012", "2016", "2017", "2020"}
+    drop_years_d2 = {"2007", "2010", "2012", "2016", "2017"}
     lo3x_2020_href = {f"sites/{s}/index.html" for s in LO3X_2020}
     keep = []
     dropped = 0

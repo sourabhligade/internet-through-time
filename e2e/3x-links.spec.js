@@ -12,7 +12,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-for (let y = 1994; y <= 2021; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2022; y++) { if (y !== 2021) YEARS.push(String(y)); }
 
 function yearOnDisk(year) {
   return fs.existsSync(path.join(ROOT, "years", year, "pages", "home.html"));
@@ -30,7 +30,7 @@ test.describe("3× links every implemented year", () => {
       await page.goto(`/years/${year}/pages/home.html`);
       await expect(page.locator(`#ott-guided-${year} ol li`)).toHaveCount(6);
       await expect(page.locator("[data-ott-one-thing]").first()).toBeVisible();
-      const LEAN = new Set(["2007", "2010", "2012", "2013", "2014", "2016", "2017", "", "", "2020", "2021"]);
+      const LEAN = new Set(["2007", "2010", "2012", "2013", "2014", "2016", "2017", "", ""]);
       if (LEAN.has(year) || year === "2009") {
         await expect(page.locator("[data-itt-pop3x]:visible, [data-itt-3x-links]:visible")).toHaveCount(0);
         return;

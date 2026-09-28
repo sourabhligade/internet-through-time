@@ -210,11 +210,6 @@ CITED_ADD: dict[str, list[str]] = {
         "instagram", "amazon", "amongus", "animalcrossing", "classroom", "discord",
         "houseparty", "netflix", "playable",
     ],
-    "2021": [
-        "nft", "coinbaseipo", "epicapple", "google", "youtube", "facebook", "twitter",
-        "instagram", "amazon", "att", "chrome", "copilot", "flash", "meta", "playable",
-        "signal", "windows10", "windows11",
-    ],
     "2022": [
         "temu", "stablediff", "midjourney", "dalle2", "ios16", "m2", "google",
         "youtube", "facebook", "twitter", "wikipedia", "reddit", "instagram", "amazon",

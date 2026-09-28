@@ -56,7 +56,7 @@ async function completeReactStop(page, room) {
 
 function isLiveYear(year) {
   const y = String(year);
-  if (!/^(199[4-9]|200[0-7]|201[0234567]|202[0-2])$/.test(y)) return false;
+  if (!/^(199[4-9]|200[0-7]|201[0234567]|2022)$/.test(y)) return false;
   return !BOARDED_YEARS.has(y) && !WIPED_YEARS.has(y);
 }
 
@@ -84,7 +84,7 @@ async function expectYearBoarded(page, year) {
     return;
   }
   await expect(page).toHaveURL(/\/(index\.html)?$/);
-  await expect(page.locator("body")).toContainText(/24 years open|27 years open|28 years open|boarded/i);
+  await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
   await expect(page.locator("#dirbar")).toHaveCount(0);
 }
 

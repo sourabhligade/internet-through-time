@@ -239,36 +239,6 @@
     "title": "Puck Slap",
     "next": "/years/2004/sites/playable/game.html"
   },
-        {
-    "year": "2009",
-    "role": "c",
-    "path": "/years/2009/sites/playable/extra-c.html",
-    "key": "itt09-game-roofrun",
-    "id": "roofrun",
-    "kind": "runner",
-    "title": "Roof Run",
-    "next": "/years/2009/sites/playable/extra-d.html"
-  },
-  {
-    "year": "2009",
-    "role": "d",
-    "path": "/years/2009/sites/playable/extra-d.html",
-    "key": "itt09-game-orclimb",
-    "id": "orclimb",
-    "kind": "runner",
-    "title": "Orpheus Climb",
-    "next": "/years/2009/sites/playable/extra-e.html"
-  },
-  {
-    "year": "2009",
-    "role": "e",
-    "path": "/years/2009/sites/playable/extra-e.html",
-    "key": "itt09-game-wiltclock",
-    "id": "wiltclock",
-    "kind": "hold",
-    "title": "Wilt Clock",
-    "next": "/years/2009/sites/playable/game.html"
-  },
   {
     "year": "2010",
     "role": "c",
@@ -330,36 +300,6 @@
     "next": "/years/2012/sites/playable/game.html"
   },
   {
-    "year": "2013",
-    "role": "c",
-    "path": "/years/2013/sites/playable/extra-c.html",
-    "key": "itt13-game-loopspare",
-    "id": "loopspare",
-    "kind": "parlor",
-    "title": "Loop Spare",
-    "next": "/years/2013/sites/playable/extra-d.html"
-  },
-  {
-    "year": "2013",
-    "role": "d",
-    "path": "/years/2013/sites/playable/extra-d.html",
-    "key": "itt13-game-storyhold",
-    "id": "storyhold",
-    "kind": "hold",
-    "title": "Story Hold",
-    "next": "/years/2013/sites/playable/extra-e.html"
-  },
-  {
-    "year": "2013",
-    "role": "e",
-    "path": "/years/2013/sites/playable/extra-e.html",
-    "key": "itt13-game-flattap",
-    "id": "flattap",
-    "kind": "quiz",
-    "title": "Flat Tap",
-    "next": "/years/2013/sites/playable/game.html"
-  },
-  {
     "year": "2014",
     "role": "c",
     "path": "/years/2014/sites/playable/extra-c.html",
@@ -418,35 +358,5 @@
     "kind": "hold",
     "title": "Slide Expire",
     "next": "/years/2016/sites/playable/game.html"
-  },
-  {
-    "year": "2017",
-    "role": "c",
-    "path": "/years/2017/sites/playable/extra-c.html",
-    "key": "itt17-game-clipdesk",
-    "id": "clipdesk",
-    "kind": "idle",
-    "title": "Clip Desk",
-    "next": "/years/2017/sites/playable/extra-d.html"
-  },
-  {
-    "year": "2017",
-    "role": "d",
-    "path": "/years/2017/sites/playable/extra-d.html",
-    "key": "itt17-game-hintguess",
-    "id": "hintguess",
-    "kind": "draw",
-    "title": "Hint Guess",
-    "next": "/years/2017/sites/playable/extra-e.html"
-  },
-  {
-    "year": "2017",
-    "role": "e",
-    "path": "/years/2017/sites/playable/extra-e.html",
-    "key": "itt17-game-pondtier",
-    "id": "pondtier",
-    "kind": "idle",
-    "title": "Pond Tier",
-    "next": "/years/2017/sites/playable/game.html"
   }
 ]

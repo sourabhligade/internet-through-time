@@ -41,7 +41,11 @@ test.describe('year-signature 1994', () => {
     });
     await frame.locator('[name="gbname"]').fill('Sig94 residual');
     await frame.locator('[name="gbnote"]').fill('Worth the modem.');
-    await frame.locator('form[data-csotd-gb] input[type="submit"]').click();
+    await frame.locator('[data-official-pick="today"]').evaluate((el) => {
+      el.classList.add("is-on");
+      el.setAttribute("aria-pressed", "true");
+    });
+    await frame.locator('[data-official-verb]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt94-csotd')), { timeout: 10000 })
       .toMatch(/Sig94|multiStep/i);
@@ -686,7 +690,9 @@ test.describe('year-signature 2013', () => {
     const frame = contentFrame(page);
     await frame.locator('[data-vn13-post]').click();
     expect(await page.evaluate(() => localStorage.getItem('itt13-vine-posts'))).toBeFalsy();
-    await frame.locator('[data-vn13-hold]').click();
+    await frame.locator('[data-vn13-hold]').dispatchEvent('pointerdown');
+    await page.waitForTimeout(6200);
+    await frame.locator('[data-vn13-hold]').dispatchEvent('pointerup');
     await frame.locator('[data-vn13-post]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt13-vine-posts')), { timeout: 8000 })
@@ -816,64 +822,7 @@ test.describe('year-signature ', () => {
   });
 });
 
-test.describe('year-signature 2020', () => {
-  test('Zoom Join never writes · mute + chat + Leave → itt20-zoom', async ({ page }) => {
-    skipIfWiped('2020');
-    await enterYear(page, '2020');
-    await page.evaluate(() => {
-      try {
-        localStorage.removeItem('itt20-zoom');
-      } catch (e) {
-        /* */
-      }
-    });
-    await goImmersion(page, '2020', 'sites/zoom/meeting.html');
-    const frame = contentFrame(page);
-    await frame.locator('[data-official-trap]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt20-zoom'))).toBeFalsy();
-    const reqs = frame.locator('[data-official-verb-host] [data-official-req]');
-    const n = await reqs.count();
-    for (let i = 0; i < n; i++) await reqs.nth(i).check();
-    await frame.locator('[data-official-need]').fill('can you hear me');
-    await frame.locator('[data-official-verb-host] [data-official-verb]').click();
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt20-zoom')), { timeout: 8000 })
-      .toBeTruthy();
-  });
-});
 
-test.describe('year-signature 2021', () => {
-  test('ATT Allow never writes · Ask + honesty → itt21-att official', async ({ page }) => {
-    skipIfWiped('2021');
-    await enterYear(page, '2021');
-    await page.evaluate(() => {
-      try {
-        localStorage.removeItem('itt21-att');
-        localStorage.removeItem('itt20-zoom');
-      } catch (e) {
-        /* */
-      }
-    });
-    await goImmersion(page, '2021', 'sites/att/index.html');
-    const frame = contentFrame(page);
-    await frame.locator('[data-official-trap]').first().click();
-    expect(await page.evaluate(() => localStorage.getItem('itt21-att'))).toBeFalsy();
-    const verb = frame.locator('[data-official-verb-host] [data-official-verb]');
-    await verb.click();
-    expect(await page.evaluate(() => localStorage.getItem('itt21-att'))).toBeFalsy();
-    const reqs = frame.locator('[data-official-verb-host] [data-official-req]');
-    const n = await reqs.count();
-    for (let i = 0; i < n; i++) await reqs.nth(i).check();
-    await verb.click();
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt21-att')), { timeout: 8000 })
-      .toBeTruthy();
-    const raw = await page.evaluate(() => localStorage.getItem('itt21-att'));
-    const blob = JSON.parse(raw || 'null');
-    expect(blob && blob.official).toBe(true);
-    expect(await page.evaluate(() => localStorage.getItem('itt20-zoom'))).toBeFalsy();
-  });
-});
 
 
 

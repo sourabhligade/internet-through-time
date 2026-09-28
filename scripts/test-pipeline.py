@@ -149,7 +149,7 @@ CI_E2E_ALLOWLIST = (
     "e2e/2017-mvp.spec.js",
     "e2e/-mvp.spec.js",
     "e2e/2020-mvp.spec.js",
-    "e2e/2021-mvp.spec.js",
+
     "e2e/2022-mvp.spec.js",
     "e2e/2022-flows.spec.js",
     "e2e/dest-top.spec.js",
@@ -214,7 +214,7 @@ def test_sitemap_ship_years() -> None:
         if f"/years/{ys}/" in sm:
             fail("sitemap-years", f"{'boarded' if ys in _BOARDED else 'wiped'} {ys} still listed")
             return
-    react_doors = {"2015", "2017", "", "2020", "2021"}
+    react_doors = {"2015", "2017", ""}
     for ys in SHIP_YEARS:
         if ys in react_doors:
             if f"/app/index.html#/year/{ys}" not in sm:

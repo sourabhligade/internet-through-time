@@ -1694,7 +1694,6 @@ Spec: `e2e/2017--leftover-20.spec.js` + `e2e/-mvp.spec.js` (React). Leftover KEE
 ## 2020
 
 **Class:** react lean  
-**Door:** `/app/index.html#/year/2020`  
 **Star:** Zoom Leave `itt20-zoom`  
 **Dest folders:** 0  
 **leftover-2× unique dests:** 0  
@@ -1749,7 +1748,6 @@ Empty catalog. Do not dest-farm a rail.
 ## 2021
 
 **Class:** react lean  
-**Door:** `/app/index.html#/year/2021`  
 **Star:** ATT Ask `itt21-att`  
 **Dest folders:** 0  
 **leftover-2× unique dests:** 0  

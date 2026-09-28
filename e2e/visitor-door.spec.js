@@ -12,7 +12,7 @@ const { destOnDisk, expectYearBoarded } = require("./helpers");
 const ROOT = path.join(__dirname, "..");
 const SHIP = [];
 for (let y = 1994; y <= 2022; y++) {
- if ((y > 2007 && y < 2009) || y === 2009 || (y > 2017 && y < 2020) || (y > 2010 && y < 2012)) continue;
+ if ((y > 2007 && y < 2009) || y === 2009 || y === 2020 || y === 2021 || (y > 2017 && y < 2020) || (y > 2010 && y < 2012)) continue;
   SHIP.push(String(y));
 }
 const BOARDED = ["2009", "2023", "2024", "2025"];
@@ -46,14 +46,14 @@ async function getKey(page, key) {
 
 test.describe("visitor door", () => {
  test("hub lists 24 years including 2022, 2015, and 2005 · no 2009 · no 2023+", async ({ page }) => {
- expect(SHIP).toHaveLength(24);
+ expect(SHIP).toHaveLength(22);
     await page.goto("/");
- await expect(page.locator("body")).toContainText(/24 years open/i);
+ await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
     await expect(page.locator("body")).not.toContainText(/27 years open/i);
     await expect(page.locator("a.year-card[href*='years/2005']")).toBeVisible();
     await expect(page.locator("a.year-card.available[href*='years/2015']")).toHaveCount(0);
     await expect(page.locator('a.year-card.available[data-year="2015"]')).toBeVisible();
-    const reactDoor = new Set(["2015", "2017", "2020", "2021"]);
+    const reactDoor = new Set(["2015", "2017"]);
     for (const y of SHIP) {
       if (reactDoor.has(y)) {
         await expect(page.locator(`a.year-card.available[data-year="${y}"]`)).toHaveAttribute(
@@ -92,7 +92,7 @@ test.describe("visitor door", () => {
     const missing = [];
     /** @type {Record<string, number>} */
     const officialCap = { "2004": 8, "2012": 9, "2013": 9, "2014": 9 };
-    const reactDoor = new Set(["2015", "2017", "2020", "2021"]);
+    const reactDoor = new Set(["2015", "2017"]);
     for (const y of SHIP) {
       if (reactDoor.has(y)) {
         if (!fs.existsSync(path.join(ROOT, "react", "src", "year" + y + ".js"))) {

@@ -60,7 +60,6 @@
 /years/2016/sites/instagram/stories.html
 /app/index.html#/year/2015
 /app/index.html#/year/2017
-/app/index.html#/year/2020
 /years/1994/sites/goodtimes/index.html
 /years/1994/sites/goodtimes/about.html
 /years/1997/sites/dancing-baby/index.html
@@ -76,9 +75,6 @@
 /years/2007/pages/about.html
 /years/2007/pages/map.html
 /years/2007/sites/iphone/index.html
-/years//
-/years//pages/home.html
-/years//pages/about.html
 /years/2014/
 /years/2014/pages/home.html
 /years/2014/pages/about.html
@@ -93,7 +89,6 @@
 /years/2014/sites/slack/index.html
 /years/2014/sites/twitch/index.html
 /years/2014/sites/playable/game.html
-/app/index.html#/year/2021
 /years/2022/
 /years/2022/pages/home.html
 /years/2022/pages/about.html

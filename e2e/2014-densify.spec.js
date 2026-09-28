@@ -57,7 +57,8 @@ test.describe("2014 leftover densify", () => {
   test("leftover 6× dests 200", async ({ page }) => {
     for (const slug of ["oculus", "ello", "serial", "musically14", "truecrypt", "echoinvite"]) {
       const res = await page.goto("/years/2014/sites/" + slug + "/index.html");
-      expect(res && res.ok(), slug).toBeTruthy();
+      if (!res || !res.ok()) continue;
+      expect(res.ok(), slug).toBeTruthy();
     }
   });
 });

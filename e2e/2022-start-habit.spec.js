@@ -24,6 +24,6 @@ test.describe("2022 start habit", () => {
   test("hub card opens 2022", async ({ page }) => {
     await page.goto("/");
     await expect(page.locator('a.year-card.available[href*="years/2022"]')).toBeVisible();
-    await expect(page.locator(".hub-stats")).toContainText("24 years");
+    await expect(page.locator(".hub-stats, .decade-jump")).toHaveCount(0);
   });
 });

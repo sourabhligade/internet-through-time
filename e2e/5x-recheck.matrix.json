@@ -588,8 +588,6 @@
     "2014": "sites/whatsapp/index.html",
     "2015": "sites/apple/watch.html",
     "2016": "sites/instagram/stories.html",
-    "2017": "sites/iphone/x.html",
-    "": "sites/gdpr/index.html",
-    "": "sites/disneyplus/home.html"
+    "2017": "sites/iphone/x.html"
   }
 }

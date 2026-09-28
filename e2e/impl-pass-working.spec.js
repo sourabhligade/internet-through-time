@@ -48,12 +48,6 @@ for (const row of FOREST) {
   });
 }
 
-test(" reddit leftover is one key · empty never writes · complete leftover only", async ({ page }) => {
-  test.skip(!destOnDisk("/years//sites/reddit/index.html"), " HTML dest gone");
-  await leftoverComplete(page, "/years//sites/reddit/index.html", "reddit-lx", "itt19-disneyplus");
-  expect(await getKey(page, "itt19-reddit-d2")).toBeFalsy();
-});
-
 test("2002 KaZaA dest-true official empty never writes · complete writes itt02-kazaa", async ({ page }) => {
   await page.goto("/years/2002/sites/kazaa/index.html");
   await page.evaluate(() => {

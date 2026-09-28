@@ -230,25 +230,5 @@
       "ph": "oculusquest",
       "btn": "Quest leftover"
     }
-  ],
-  "2021": [
-    {
-      "id": "twitter",
-      "name": "Twitter",
-      "title": "Twitter leftover — 2021",
-      "why": "2021 leftover-3× second. Unique dest. Not the chip.",
-      "verb": "Tweet leftover",
-      "ph": "twitter",
-      "btn": "Tweet leftover"
-    },
-    {
-      "id": "youtube",
-      "name": "YouTube",
-      "title": "YouTube leftover — 2021",
-      "why": "2021 leftover-3× second. Unique dest. Not the chip.",
-      "verb": "Watch leftover",
-      "ph": "youtube",
-      "btn": "Watch leftover"
-    }
   ]
 }

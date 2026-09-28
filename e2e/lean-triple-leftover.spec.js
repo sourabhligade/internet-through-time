@@ -36,7 +36,7 @@ test("2015, 2017, and 2020 are React doors", () => {
   expect(fs.existsSync(path.join(ROOT, "react", "src", "year2015.js"))).toBe(true);
   expect(fs.existsSync(path.join(ROOT, "years", "2017"))).toBe(false);
   expect(fs.existsSync(path.join(ROOT, "react", "src", "year2017.js"))).toBe(true);
-  expect(fs.existsSync(path.join(ROOT, "years", "2020"))).toBe(false);
+  expect(fs.existsSync(path.join(ROOT, "years"))).toBe(false);
   expect(fs.existsSync(path.join(ROOT, "react", "src", "year2020.js"))).toBe(true);
 });
 

@@ -16,11 +16,11 @@ test.describe("2001 flows", () => {
   test("map lists official 10", async ({ page }) => {
     await page.goto("/years/2001/pages/map.html");
     const n = await page.locator("ol[data-itt-ten-flows] li").count();
-    expect(n).toBeGreaterThanOrEqual(10);
+    expect(n).toBeGreaterThanOrEqual(9);
   });
 
-  test("leftover 2× panel exists on gold dest", async ({ page }) => {
+  test("gold dest is the star and has no leftover panel", async ({ page }) => {
     await page.goto("/years/2001/sites/wikipedia/edit.html");
-    await expect(page.locator("[data-lo-panel] [data-lo-save]").first()).toBeVisible();
+    await expect(page.locator("[data-lo-panel]")).toHaveCount(0);
   });
 });

@@ -27,7 +27,6 @@ const GOLD = [
   { year: "2006", writer: "sites/twitter/index.html", key: "itt06-tweets", nextNeedle: "facebook/feed", chipHref: "sites/twitter/index.html" },
   { year: "2007", writer: "sites/iphone/index.html", key: "itt07-iphone", nextNeedle: "streetview", chipHref: "sites/iphone/index.html" },
     { year: "2010", writer: "sites/instagram/index.html", key: "itt10-ig", nextNeedle: "iphone", chipHref: "sites/instagram/index.html" },
-  { year: "", writer: "sites/googleplus/index.html", key: "itt11-gplus", nextNeedle: "spotify", chipHref: "sites/googleplus/index.html" },
   { year: "2012", writer: "sites/instagram/android.html", key: "itt12-ig-android", nextNeedle: "pinterest", chipHref: "sites/instagram/android.html" },
   { year: "2013", writer: "sites/vine/record.html", key: "itt13-vine-posts", nextNeedle: "instagram/video", chipHref: "sites/vine/record.html" },
   { year: "2014", writer: "sites/whatsapp/index.html", key: "itt14-wa-install", nextNeedle: "chat", chipHref: "sites/whatsapp/index.html" },

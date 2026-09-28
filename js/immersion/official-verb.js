@@ -86,7 +86,14 @@
     return out;
   }
 
-  function productField(doc, form) {
+  function productField(doc, form, verb) {
+    if (verb && verb.closest) {
+      var panel = verb.closest("[data-pop-panel], [data-official-verb-host], form");
+      if (panel) {
+        var near = panel.querySelector("[data-official-need]");
+        if (near) return near;
+      }
+    }
     var field = doc.querySelector("[data-official-need]");
     if (field && !inSidePanel(field)) return field;
     if (form) {
@@ -120,7 +127,8 @@
     for (p = 0; p < picks.length; p++) {
       if (picks[p].getAttribute("data-official-pick-bound") === "1") continue;
       picks[p].setAttribute("data-official-pick-bound", "1");
-      picks[p].addEventListener("click", function () {
+      picks[p].addEventListener("click", function (ev) {
+        if (ev && ev.preventDefault) ev.preventDefault();
         var all = doc.querySelectorAll("[data-official-pick]");
         var j;
         for (j = 0; j < all.length; j++) {
@@ -183,7 +191,7 @@
           }
         }
         var form = this.form || (this.closest && this.closest("form"));
-        var field = productField(doc, form);
+        var field = productField(doc, form, this);
         var v = field ? String(field.value || "").replace(/^\s+|\s+$/g, "") : "";
         var minNeed = 2;
         if (field) {

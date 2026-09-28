@@ -116,6 +116,8 @@
         /* Both property + listener: shell chrome and Playwright force-click paths */
         form.onsubmit = onBidSubmit;
         form.addEventListener("submit", onBidSubmit, false);
+        var bidVerb = form.querySelector("[data-official-verb]");
+        if (bidVerb) bidVerb.addEventListener("click", onBidSubmit, false);
       }
 
       if (config.features && config.features.auction) initAuction();

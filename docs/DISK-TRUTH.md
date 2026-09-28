@@ -28,12 +28,12 @@ Hub **24 years open** (1994–2007 + 2010 + 2012–2017 + 2020–2022). ** wiped
 | **2017** | Live lean **React door** · Face ID · `years/2017/` HTML gone · React keys **30** (official 10 + leftover 20) · leftover-3× unique **0** · leftover 4× **0** · hub `/app/index.html#/year/2017` |
 | **** | **Wiped** · no HTML tree · no hub card · no React door · no trail |
 | **** | **Wiped** · no HTML tree · no hub card · no React door · no trail |
-| **2020** | **Live lean React door** · Zoom Leave `itt20-zoom` · `years/2020/` HTML gone · official 10 + leftover extras in `year2020.js` · leftover-3× unique **0** · leftover dest KEEP Clubhouse · leftover 4× **0** · hub `/app/index.html#/year/2020` |
-| **2021** | **Live lean React door** · ATT Ask `itt21-att` · `years/2021/` HTML gone · official 10 + leftover 3 in `year2021.js` · leftover-3× unique **0** · leftover-4× **0** · Win10 + Chrome habit · hub `/app/index.html#/year/2021` |
+| **2020** | **Removed** · no HTML tree · no hub card · no React door · no trail |
+| **2021** | **Removed** · no HTML tree · no hub card · no React door · no trail |
 | **2022** | **Live lean door** · ChatGPT Send `itt22-chatgpt` · dest-true official 10 + leftover dests · leftover-3× unique **0** · dest folders **25** · leftover-2× dest-farm dests not restored · leftover 4× **0** · Win10 + Chrome habit |
 | **2023–2025** | **Wiped** · no tree · no year card · no atlas tick |
 
-Lean doors: **2007 + 2010 + 2012–2017 + 2020–2022**.  Dest-lock applied 2026-09-15 on 2007/2010–2012/2014/2021. **2016 HTML dest folders** 57. **2015** is a hub React door (Periscope, no HTML tree). **2017 / –2021** are hub React doors (0 HTML dest folders). **** is wiped (no tree, no door). **2013 / 2022** dest-true lean. **2009 boarded.** **2023–2025 wiped.** Forests 1994–2006 stay dense. 
+Lean doors: **2007 + 2010 + 2012–2017 + 2020 + 2022**.  Dest-lock applied 2026-09-15 on 2007/2010–2012/2014. **2016 HTML dest folders** 57. **2015** is a hub React door (Periscope, no HTML tree). **2017 / 2020** are hub React doors (0 HTML dest folders). **2021 removed** (no tree, no door). **** is wiped (no tree, no door). **2013 / 2022** dest-true lean. **2009 boarded.** **2023–2025 wiped.** Forests 1994–2006 stay dense. 
 Games wing (`games/`) is separate and live.
 
 Rebuild a wiped year only when named. Do not `git checkout` an old forest. Live tree + this file win. Stale implement notebooks were removed.

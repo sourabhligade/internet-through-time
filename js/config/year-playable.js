@@ -273,17 +273,5 @@
       famous: "Leave Room leftover",
       accent: "#2d8cff"
     },
-    "2021": {
-      id: "five",
-      title: "Five Letter leftover",
-      href: "game.html",
-      key: "itt21-game-five",
-      inspire: "Wordle-class leftover — Wordle-as-2021-mass never writes gold",
-      blurb: "Start leftover. Wordle-as-2021-mass is the trap.",
-      why: "2021 leftover cabinet. The star is still ATT Ask.",
-      era: "The phone asks first. ChatGPT dest never.",
-      famous: "Five Letter leftover",
-      accent: "#1565c0"
-    }
     };
 })(typeof window !== "undefined" ? window : this);

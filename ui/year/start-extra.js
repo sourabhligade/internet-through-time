@@ -49,8 +49,6 @@
 
 
 
- "2020": "<p class=\"itt-felt-trail\">Mute, chat, Leave: <a href=\"/app/index.html#/year/2020\">Zoom Leave</a>. Stay / empty never writes.</p>",
 
- "2021": "<p class=\"itt-felt-trail\">Ask App Not to Track: <a href=\"/app/index.html#/year/2021\">ATT</a>— Allow never writes.</p>"
 };
 })(typeof window !== "undefined" ? window: this);

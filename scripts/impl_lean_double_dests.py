@@ -26,7 +26,6 @@ STARS = {
     2014: ("itt14-wa-install", "Watch"),
     2016: ("itt16-ig-stories", "Reels"),
     2020: ("itt20-zoom", "ChatGPT dest"),
-    2021: ("itt21-att", "Allow"),
     2022: ("itt22-chatgpt", "GPT-4"),
 }
 
@@ -161,41 +160,6 @@ DESTS: dict[int, list[tuple[str, str, str, str, str]]] = {
         ("paypal", "PayPal", "Send leftover", "PayPal 2016 year-mass.", "https://en.wikipedia.org/wiki/PayPal"),
         ("applepay", "Apple Pay", "Tap leftover", "Apple Pay 2016 year-mass.", "https://en.wikipedia.org/wiki/Apple_Pay"),
         ("panamapapers", "Panama Papers", "Leak leftover", "Panama Papers 3 Apr 2016.", "https://en.wikipedia.org/wiki/Panama_Papers"),
-    ],
-    : [
-        ("facebook", "Facebook", "Scroll leftover", "Hosting.com  top-10 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("twitter", "Twitter", "Tweet leftover", "Hosting.com  top-10 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("amazon", "Amazon", "Browse leftover", "Hosting.com  top-10 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("google", "Google", "Search leftover", "Hosting.com  #1 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("yahoo", "Yahoo", "Portal leftover", "Hosting.com  top-10 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("baidu", "Baidu", "Search leftover", "Hosting.com  global top-10 mass.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("yandex", "Yandex", "Search leftover", "Hosting.com  global top-10 mass.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("netflix", "Netflix", "Play leftover", "Netflix  year-mass.", "https://en.wikipedia.org/wiki/Netflix"),
-        ("snapchat", "Snapchat", "Snap leftover", "Snapchat  year-mass.", "https://en.wikipedia.org/wiki/Snapchat"),
-        ("discord", "Discord", "Join leftover", "Discord  year-mass.", "https://en.wikipedia.org/wiki/Discord"),
-        ("gplusgone", "Google+", "Sunset leftover", "Google+ consumer shutdown announced 8 Oct .", "https://en.wikipedia.org/wiki/Google%2B"),
-        ("androidpie", "Android Pie", "Gesture leftover", "Android 9 Pie 6 Aug .", "https://en.wikipedia.org/wiki/Android_Pie"),
-        ("ios12", "iOS 12", "Screen Time leftover", "iOS 12 released 17 Sep .", "https://en.wikipedia.org/wiki/IOS_12"),
-    ],
-    2020: [
-        ("clubhouse", "Clubhouse", "Raise hand leftover", "Clubhouse launched March 2020 invite-only audio rooms.", "https://en.wikipedia.org/wiki/Clubhouse_(app)"),
-    ],
-    2021: [
-        ("yahoo", "Yahoo", "Portal leftover", "Hosting.com 2021 top-10 · missing dest.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("baidu", "Baidu", "Search leftover", "Hosting.com 2021 global top-10 mass.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("yandex", "Yandex", "Search leftover", "Hosting.com 2021 global top-10 mass.", "https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/"),
-        ("wikipedia", "Wikipedia", "Edit leftover", "Wikipedia 2021 year-mass.", "https://en.wikipedia.org/wiki/Wikipedia"),
-        ("reddit", "Reddit", "Upvote leftover", "Reddit 2021 year-mass.", "https://en.wikipedia.org/wiki/Reddit"),
-        ("netflix", "Netflix", "Play leftover", "Netflix 2021 year-mass.", "https://en.wikipedia.org/wiki/Netflix"),
-        ("tiktok", "TikTok", "For You leftover", "TikTok 2021 year-mass.", "https://en.wikipedia.org/wiki/TikTok"),
-        ("discord", "Discord", "Join leftover", "Discord 2021 year-mass.", "https://en.wikipedia.org/wiki/Discord"),
-        ("twitch", "Twitch", "Watch leftover", "Twitch 2021 year-mass.", "https://en.wikipedia.org/wiki/Twitch_(service)"),
-        ("github", "GitHub", "Push leftover", "GitHub 2021 year-mass.", "https://en.wikipedia.org/wiki/GitHub"),
-        ("nft", "NFT", "Mint leftover", "NFT 2021 mass market.", "https://en.wikipedia.org/wiki/Non-fungible_token"),
-        ("coinbaseipo", "Coinbase IPO", "Direct list leftover", "Coinbase direct listing 14 Apr 2021.", "https://en.wikipedia.org/wiki/Coinbase"),
-        ("epicapple", "Epic v Apple", "Sideload leftover", "Epic v. Apple trial 2021.", "https://en.wikipedia.org/wiki/Epic_Games_v._Apple"),
-        ("m1", "M1 Mac", "Chip leftover", "M1 Macs 2021 mass (announced 2020).", "https://en.wikipedia.org/wiki/Apple_M1"),
-        ("clubhouse21", "Clubhouse", "Room leftover", "Clubhouse 2021 audio-room mass (launched 2020).", "https://en.wikipedia.org/wiki/Clubhouse_(app)"),
     ],
     2022: [
         ("temu", "Temu", "Shop leftover", "Temu launched September 2022.", "https://en.wikipedia.org/wiki/Temu"),
@@ -339,11 +303,9 @@ def main() -> None:
     collisions = []
     matrix = []
     extra: dict[str, set[str]] = {}
-    lock_years = {"2007", "2010", "2012", "2014", "2021", "2022"}
-    caps = {2007: 46, 2010: 44, 2012: 48, 2014: 36, 2016: 64, 2020: 39, 2021: 30, 2022: 38}
+    lock_years = {"2007", "2010", "2012", "2014", "2022"}
+    caps = {2007: 46, 2010: 44, 2012: 48, 2014: 36, 2016: 64, 2020: 39, 2022: 38}
     for year, rows in DESTS.items():
-        if year == :
-            continue
         existing = disk_slugs(year)
         added_year = 0
         cap = caps.get(year)

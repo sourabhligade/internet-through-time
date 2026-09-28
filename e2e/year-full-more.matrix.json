@@ -143,24 +143,6 @@
     "path": "/years/2004/sites/playable/more-d.html",
     "next": "/years/2004/sites/playable/game.html"
   },
-      {
-    "year": "2009",
-    "slot": "c",
-    "id": "craftmine",
-    "key": "itt09-game-craftmine",
-    "engine": "craft",
-    "path": "/years/2009/sites/playable/more-c.html",
-    "next": "/years/2009/sites/playable/more-d.html"
-  },
-  {
-    "year": "2009",
-    "slot": "d",
-    "id": "lolcs",
-    "key": "itt09-game-lolcs",
-    "engine": "gather",
-    "path": "/years/2009/sites/playable/more-d.html",
-    "next": "/years/2009/sites/playable/game.html"
-  },
   {
     "year": "2010",
     "slot": "c",
@@ -198,24 +180,6 @@
     "next": "/years/2012/sites/playable/game.html"
   },
   {
-    "year": "2013",
-    "slot": "c",
-    "id": "flap2013",
-    "key": "itt13-game-flap2013",
-    "engine": "flap",
-    "path": "/years/2013/sites/playable/more-c.html",
-    "next": "/years/2013/sites/playable/more-d.html"
-  },
-  {
-    "year": "2013",
-    "slot": "d",
-    "id": "cookieclk",
-    "key": "itt13-game-cookieclk",
-    "engine": "idle",
-    "path": "/years/2013/sites/playable/more-d.html",
-    "next": "/years/2013/sites/playable/game.html"
-  },
-  {
     "year": "2016",
     "slot": "c",
     "id": "owpayload",
@@ -232,23 +196,5 @@
     "engine": "craft",
     "path": "/years/2016/sites/playable/more-d.html",
     "next": "/years/2016/sites/playable/game.html"
-  },
-  {
-    "year": "2017",
-    "slot": "c",
-    "id": "botwplate",
-    "key": "itt17-game-botwplate",
-    "engine": "platform",
-    "path": "/years/2017/sites/playable/more-c.html",
-    "next": "/years/2017/sites/playable/more-d.html"
-  },
-  {
-    "year": "2017",
-    "slot": "d",
-    "id": "cuprun",
-    "key": "itt17-game-cuprun",
-    "engine": "rhythm",
-    "path": "/years/2017/sites/playable/more-d.html",
-    "next": "/years/2017/sites/playable/game.html"
   }
 ]

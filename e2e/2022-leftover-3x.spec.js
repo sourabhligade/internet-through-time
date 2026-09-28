@@ -6,15 +6,13 @@ const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
 const { revealLeftoverRails } = require("./helpers");
-const ROWS = require("./-2022-leftover-3x.matrix.json");
+const ROWS = require("./2022-leftover-3x.matrix.json");
 const ROOT = path.join(__dirname, "..");
 function destOnDisk(href) {
   return fs.existsSync(path.join(ROOT, String(href || "").replace(/^\//, "")));
 }
 
-const WANT = {
-  2021: { first: 9, more: 9, third: 9 },
-};
+const WANT = {};
 
 const YEARS = Object.keys(WANT);
 

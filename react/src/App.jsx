@@ -3,8 +3,6 @@ import { Link, Navigate, Route, Routes, useParams } from "react-router-dom";
 import { Year2014 } from "./Year2014.jsx";
 import { Year2015 } from "./Year2015.jsx";
 import { Year2017 } from "./Year2017.jsx";
-import { Year2020 } from "./Year2020.jsx";
-import { Year2021 } from "./Year2021.jsx";
 import { REACT_YEARS, yearById } from "./years.js";
 
 export function App() {
@@ -14,8 +12,6 @@ export function App() {
       <Route path="/year/2014" element={<Year2014 />} />
       <Route path="/year/2015" element={<Year2015 />} />
       <Route path="/year/2017" element={<Year2017 />} />
-      <Route path="/year/2020" element={<Year2020 />} />
-      <Route path="/year/2021" element={<Year2021 />} />
       <Route path="/year/:year" element={<YearDoor />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

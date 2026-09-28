@@ -4218,7 +4218,6 @@
     }
   ],
   "2020": [],
-  "2021": [],
   "2022": [
     { "id": "temu", "name": "Temu" },
     { "id": "stablediff", "name": "Stable Diffusion" },
