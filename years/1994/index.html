@@ -11,6 +11,11 @@
 <style>
 /* Keep 1994 chrome rows and desktop icons from stacking (cache-proof). */
 html[data-itt-year="1994"] .desktop { padding: 6px 8px 8px 92px !important; }
+@media (max-width: 640px) {
+  html[data-itt-year="1994"] .desktop { padding: 6px 8px 8px 8px !important; }
+  html[data-itt-year="1994"] .desktop-icons { display: none !important; }
+  html[data-itt-year="1994"] #browser { width: 100% !important; max-width: none !important; margin: 0 !important; }
+}
 html[data-itt-year="1994"] .exit-bar,
 html[data-itt-year="1994"] #itt-layer-legend,
 html[data-itt-year="1994"] #itt-shell-nav-legend,

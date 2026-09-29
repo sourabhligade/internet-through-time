@@ -52,7 +52,7 @@
         return "Saved in this browser.";
       },
       shellCoach:
-        "Museum reconstruction of this year’s browser. Content is the large pane. Year menu returns to the hub. Links stay inside this window.",
+        "This is a museum desktop. The big window is the period web. Starting Point is the all-years list. Toolbar Home is this year’s landing.",
       gameFocus: "Click the puzzle, then use arrows or the D-pad."
     },
     xp: {
@@ -72,7 +72,7 @@
         return "Saved in this browser.";
       },
       shellCoach:
-        "Windows-era museum shell. Starting Point = year map · Year menu = all years · Back = previous page in this year.",
+        "This is a museum desktop. The big window is the period web. Starting Point is the all-years list. Toolbar Home is this year’s landing.",
       gameFocus: "Focus the game (click it), then play."
     },
     web2: {
@@ -92,7 +92,7 @@
         return "Saved in this browser.";
       },
       shellCoach:
-        "Museum year shell — not a live login. The iframe is the 2000s web. Exit top-left returns to the lobby.",
+        "This is a museum desktop. The big window is the period web. Starting Point is the all-years list. Toolbar Home is this year’s landing.",
       gameFocus: "Click the stage for controls."
     },
     app: {
@@ -112,7 +112,7 @@
         return "Saved in this browser.";
       },
       shellCoach:
-        "Museum reconstruction. Starting Point maps the year · Year menu exits · scores stay on this device only.",
+        "This is a museum desktop. The big window is the period web. Starting Point is the all-years list. Toolbar Home is this year’s landing.",
       gameFocus: "Tap the board, then use keys or on-screen buttons."
     },
     modern: {
@@ -132,7 +132,7 @@
         return "Saved in this browser.";
       },
       shellCoach:
-        "Museum desktop for this year. Big window = reconstructed web. ← Year menu leaves. Yellow boxes on pages are exhibit maps, not ads.",
+        "This is a museum desktop. The big window is the period web. Starting Point is the all-years list. Toolbar Home is this year’s landing.",
       gameFocus: "Click the game panel for focus (arrow keys need it)."
     }
   };

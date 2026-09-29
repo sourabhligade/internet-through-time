@@ -19,7 +19,7 @@ const FACE = {
   "itt16-iphone7": ["phone", "iPhone 7", "The jack is gone. Confirm the 2016 phone. Face ID writes nothing."],
   "itt16-vine-end": ["loop", "Vine", "A 6-second loop that is closing. A new loop writes nothing."],
   "itt16-spectacles": ["glasses", "Spectacles", "Pair the glasses. A plain Snap writes nothing."],
-  "itt16-musically": ["lips", "musical.ly", "Fifteen seconds. TikTok For You writes nothing. That is ."],
+  "itt16-musically": ["lips", "musical.ly", "Fifteen seconds. TikTok For You writes nothing. That mass is 2018."],
   "itt16-win10-end": ["window", "Windows 10", "The free upgrade is closing. “Still free” writes nothing."],
   "itt16-game-gymrush": ["game", "Gym Rush", "The year toy. A score of 0 writes nothing."],
   "itt17-faceid": ["phone", "Face ID", "Look, then swipe up. A Home-button tap writes nothing."],
@@ -29,7 +29,7 @@ const FACE = {
   "itt17-vine-gone": ["loop", "Vine", "The app is already closed. Posting writes nothing."],
   "itt17-switch": ["game", "Switch", "The home menu. “No console” writes nothing."],
   "itt17-wannacry": ["lock", "WannaCry", "Patch. A payload writes nothing."],
-  "itt17-musically": ["lips", "musical.ly", "The 2017 app. TikTok US mass is ."],
+  "itt17-musically": ["lips", "musical.ly", "The 2017 app. TikTok's US mass is 2018."],
   "itt17-equifax": ["lock", "Equifax", "Place a freeze. Ignore writes nothing. No SSN."],
   "itt17-game-stormcircle": ["game", "Storm Circle", "The year toy. Face ID stays the star."],
   "itt20-zoom": ["grid", "Zoom", "Mute, a chat line, then Leave. Stay writes nothing."],
@@ -97,7 +97,6 @@ export function ProductFace({ id, text, onText, maxLength }) {
       {kind === "balance" ? <p className="balance">0.00 · frozen</p> : null}
       {kind === "bird" ? <p className="bird">bird still here</p> : null}
       <p>{line}</p>
-      <p className="failed" data-itt-capture-cite>[failed-final] No invented brand pixel.</p>
     </div>
   );
 }

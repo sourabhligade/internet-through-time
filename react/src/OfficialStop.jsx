@@ -57,7 +57,6 @@ export function OfficialStop({ stop, onNext }) {
     <article className="stop">
       <p className="kicker">{stop.leftover ? "Leftover " + stop.n : "Official " + stop.n}</p>
       <h1>{stop.name}</h1>
-      <p><code>{stop.whenKey}</code></p>
       <p>{stop.fact}</p>
       {stop.leftover ? null : (
         <ProductFace
@@ -67,7 +66,6 @@ export function OfficialStop({ stop, onNext }) {
           maxLength={faceOwns ? fieldMax + 1 : undefined}
         />
       )}
-      <p className="failed" data-itt-capture-cite>[failed-final] Period mark stays on the static room. This screen does not invent one.</p>
       {needsField && !faceOwns ? (
         <label className="field">
           Need

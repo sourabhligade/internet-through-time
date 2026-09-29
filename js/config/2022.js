@@ -50,8 +50,8 @@
 
   var urlMap = {
     "index.html": "http://museum.local/index.html",
-    "pages/home.html": "http://home.microsoft.com/intl/web2022/",
-    "pages/about.html": "http://home.microsoft.com/intl/web2022/about.html",
+    "pages/home.html": "https://www.google.com/web2022/",
+    "pages/about.html": "https://www.google.com/web2022/about.html",
     "pages/map.html": "http://museum.local/years/2022/map/",
     "pages/whats-new.html": "http://museum.local/pages/whats-new.html"
   };
@@ -80,7 +80,7 @@
       expireDays: 30,
       autoload: true,
       modemDelay: 20,
-      homeUrl: "http://home.microsoft.com/intl/web2022/",
+      homeUrl: "https://www.google.com/web2022/",
       homePath: "pages/home.html",
       showToolbar: true,
       showLocation: true,
@@ -108,7 +108,7 @@
       { title: "Wordle leftover", path: "sites/wordle/index.html" },
       { title: "Twitter bird leftover", path: "sites/twitter/index.html" }
     ],
-    fallbackUrlBase: "http://home.microsoft.com/intl/web2022/",
+    fallbackUrlBase: "https://www.google.com/web2022/",
     locationHints: [
       { re: /chatgpt|prompt|openai/i, path: "sites/chatgpt/index.html" },
       { re: /wordle/i, path: "sites/wordle/index.html" },

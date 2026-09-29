@@ -95,7 +95,9 @@ test.describe("2013 flows", () => {
       localStorage.removeItem("itt13-vine-posts");
     });
     await page.reload();
-    await expect(page.locator("[data-itt-capture-cite]")).toBeVisible();
+    const chip = page.locator("[data-itt-capture-cite]").first();
+    await expect(chip).toBeAttached();
+    await expect(chip).toBeHidden();
     expect(await getKey(page, "itt13-pop-askfm")).toBeFalsy();
     expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
     expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();

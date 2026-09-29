@@ -695,6 +695,7 @@ html[data-itt-year="1994"] .desktop-icons {
   }
   .browser {
     max-width: none;
+    width: 100%;
     border: none;
     box-shadow: none;
   }
@@ -703,8 +704,29 @@ html[data-itt-year="1994"] .desktop-icons {
     height: 36px;
     font-size: 9px;
   }
+  .menubar {
+    flex-wrap: wrap;
+  }
   .dirbar {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .dirbar .dir-btn {
+    min-height: 32px;
+  }
+  html[data-itt-year="1994"] .desktop {
+    padding: 6px 8px 8px 8px !important;
+  }
+  html[data-itt-year="1994"] .desktop-icons {
+    display: none !important;
+  }
+  html[data-itt-year="1994"] #browser {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+  .exit-bar {
+    opacity: 1;
   }
 }
 

@@ -616,8 +616,15 @@ html, body {
     height: 36px;
     font-size: 9px;
   }
+  .menubar {
+    flex-wrap: wrap;
+  }
   .dirbar {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .dirbar .dir-btn {
+    min-height: 32px;
   }
 }
 

@@ -97,7 +97,7 @@ function Hall() {
       <h1>Internet Through Time</h1>
       <p className="lede">
         2015 and 2017 are the React doors. 2014, 2016, and 2022 open on
-        the static museum. 2023–2025 stay wiped.
+        the static museum. 2011, 2018–2021, and 2023–2025 are absent.
       </p>
       <ul className="cards">
         {REACT_YEARS.map((row) => (

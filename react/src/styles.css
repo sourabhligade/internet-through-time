@@ -117,9 +117,9 @@ h1 {
 }
 
 .door header em {
-  margin-left: auto;
-  color: #9aa4b2;
+  color: #f4f1ea;
   font-style: normal;
+  font-weight: 650;
 }
 
 .door button {
@@ -297,4 +297,20 @@ h1 {
   height: 100%;
   border: 0;
   background: #fff;
+}
+
+@media (max-width: 720px) {
+  .rails {
+    max-height: 11rem;
+  }
+  .stop {
+    padding: 16px 16px 28px;
+  }
+  .actions {
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+    padding: 8px 0;
+    background: #dce6f0;
+  }
 }

@@ -3,7 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { OfficialStop } from "./OfficialStop.jsx";
 import { YearRails } from "./YearRails.jsx";
 
-export function YearRail({ year, star, trail, also, all, guided, stopByKey, startTitle, startBody, about }) {
+export function YearRail({ year, star: _star, trail, also, all, guided, stopByKey, startTitle, startBody, about }) {
+  void _star;
   const [view, setView] = useState("start");
   const [label, setLabel] = useState("Starting Point");
   const location = useLocation();
@@ -63,9 +64,8 @@ export function YearRail({ year, star, trail, also, all, guided, stopByKey, star
     <div className="door door-2014">
       <header>
         <a href="../index.html">Museum</a>
-        <Link to="/">All React years</Link>
+        <Link to="/">React doors</Link>
         <strong>{year}</strong>
-        <span>{star}</span>
         <em>{label}</em>
       </header>
       <YearRails
@@ -82,7 +82,6 @@ export function YearRail({ year, star, trail, also, all, guided, stopByKey, star
           <p className="kicker">{year}</p>
           <h1>{startTitle}</h1>
           {startBody.map((line) => <p key={line}>{line}</p>)}
-          <p className="failed" data-itt-capture-cite>[failed-final] Period mark stays on the static room. This screen does not invent one.</p>
           <ol>
             {guided.map(([name, target]) => (
               <li key={target}><button type="button" onClick={() => openGuided(name, target)}>{name}</button></li>

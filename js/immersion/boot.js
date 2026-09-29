@@ -33,8 +33,14 @@
       var _link = document.createElement("link");
       _link.id = "itt-dest-page-css";
       _link.rel = "stylesheet";
- _link.href = _base + "/css/itt-dest-page.css?v=20260928dest6";
+ _link.href = _base + "/css/itt-dest-page.css?v=20260929clip2";
       (document.head || document.documentElement).appendChild(_link);
+      var _builder = document.querySelectorAll(".itt-pixel-failed, .archive-residual");
+      var _bi;
+      for (_bi = 0; _bi < _builder.length; _bi++) {
+        var _bt = (_builder[_bi].textContent || "").replace(/^\s+/, "");
+        if (_bt.indexOf("[failed-final]") === 0) _builder[_bi].setAttribute("data-itt-clip", "1");
+      }
       if (!document.querySelector('meta[name="color-scheme"]')) {
         var _cs = document.createElement("meta");
         _cs.name = "color-scheme";

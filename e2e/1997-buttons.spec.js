@@ -65,7 +65,9 @@ test.describe('1997 chrome buttons live', () => {
   test('Yahoo dest is on disk · Amazon IPO leftover is on disk', async ({ page }) => {
     await page.goto('/years/1997/sites/yahoo/index.html');
     await expect(page.locator('body')).toContainText(/Yahoo/i);
-    await expect(page.locator('body')).toContainText(/failed-final/i);
+    const mark = page.locator('.itt-pixel-failed').first();
+    await expect(mark).toBeAttached();
+    await expect(mark).toBeHidden();
     await page.goto('/years/1997/sites/amazonipo/index.html');
     await expect(page.locator('body')).toContainText(/IPO|May/i);
   });

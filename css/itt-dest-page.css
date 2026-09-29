@@ -146,6 +146,29 @@ body {
   margin-right: 0;
 }
 
+/* Builder mark stays in the DOM. Visitors do not see it.
+   Specificity beats itt-4x.css, which restores padding after this sheet. */
+html body .itt-pixel-failed,
+html body [data-itt-clip],
+html body [data-late-face] > [data-itt-capture-cite] {
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  border-left-width: 0 !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 #itt-exhibit-nav a.itt-nav-home {
   display: inline-block;
   padding: 1px 8px;
