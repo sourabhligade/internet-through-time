@@ -3,6 +3,9 @@ import { ProductFace } from "./ProductFace.jsx";
 
 export function OfficialStop({ stop, onNext }) {
   const needsField = stop.field !== false;
+  const faceOwns = stop.faceField === true;
+  const fieldMin = typeof stop.fieldMin === "number" ? stop.fieldMin : 2;
+  const fieldMax = typeof stop.fieldMax === "number" ? stop.fieldMax : 80;
   const [text, setText] = useState("");
   const [ticks, setTicks] = useState(() => stop.checks.map(() => false));
   const [status, setStatus] = useState("");
@@ -26,6 +29,10 @@ export function OfficialStop({ stop, onNext }) {
       say("Type something first. Empty never writes.");
       return;
     }
+    if (needsField && (typed.length < fieldMin || typed.length > fieldMax)) {
+      say(stop.rangeNote || "Type something first. Empty never writes.");
+      return;
+    }
     const payload = stop.leftover
       ? { real: true, leftover: true, year: stop.year || "2022", ts: Date.now() }
       : {
@@ -35,7 +42,7 @@ export function OfficialStop({ stop, onNext }) {
           official: true,
           ts: Date.now(),
         };
-    if (needsField) payload.q = typed.slice(0, 80);
+    if (needsField) payload.q = typed.slice(0, fieldMax);
     try {
       localStorage.setItem(stop.whenKey, JSON.stringify(payload));
     } catch (err) {
@@ -52,9 +59,16 @@ export function OfficialStop({ stop, onNext }) {
       <h1>{stop.name}</h1>
       <p><code>{stop.whenKey}</code></p>
       <p>{stop.fact}</p>
-      {stop.leftover ? null : <ProductFace id={stop.whenKey} />}
+      {stop.leftover ? null : (
+        <ProductFace
+          id={stop.whenKey}
+          text={text}
+          onText={setText}
+          maxLength={faceOwns ? fieldMax + 1 : undefined}
+        />
+      )}
       <p className="failed" data-itt-capture-cite>[failed-final] Period mark stays on the static room. This screen does not invent one.</p>
-      {needsField ? (
+      {needsField && !faceOwns ? (
         <label className="field">
           Need
           <input

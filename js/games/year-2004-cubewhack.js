@@ -129,7 +129,7 @@
         clearInterval(tick);
         if (YG && score > 0) {
           var b = YG.saveBest("cubewhack", score, { year: "2004" });
-          if (bestEl) bestEl.textContent = String(b.best);
+          if (bestEl && b) bestEl.textContent = String(b.best);
         }
         setStatus("Time! Score " + score);
       }

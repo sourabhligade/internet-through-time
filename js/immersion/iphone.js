@@ -207,9 +207,31 @@
         noAppStore: true,
         ts: Date.now()
       };
+      var wrote = false;
       try {
         localStorage.setItem(key, JSON.stringify(payload));
-      } catch (eS) { /* */ }
+        wrote = true;
+      } catch (eS) {
+        try {
+          if (ITT.debug && ITT.debug.record) {
+            ITT.debug.record({
+              year: "2007",
+              key: key,
+              feature: "iphone",
+              error: eS && eS.name,
+              note: "save blocked"
+            });
+          }
+        } catch (eR) { /* */ }
+      }
+      if (!wrote) {
+        if (st) {
+          st.textContent = "This browser blocked the save.";
+          st.style.color = "#fc6";
+        }
+        ittFeedback("This browser blocked the save.", st);
+        return;
+      }
       try {
         if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
       } catch (eN) {

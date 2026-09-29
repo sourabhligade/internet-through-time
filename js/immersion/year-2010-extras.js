@@ -251,12 +251,12 @@
       setTimeout(function () {
         try {
           var raw = localStorage.getItem(key("ig-posts"));
-          if (!raw) return;
+          if (!raw || raw === before) return;
           localStorage.setItem(key("ig"), raw);
-          if (raw === before) return;
-          n += 1;
-          if (n >= 2) {
-            saveJSON(key("ig-2"), blob({ n: n, second: true }));
+          var list = [];
+          try { list = JSON.parse(raw); } catch (eL) { list = []; }
+          if (list && list.length >= 2) {
+            saveJSON(key("ig-2"), blob({ n: list.length, second: true }));
             try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
           }
         } catch (e) { /* */ }

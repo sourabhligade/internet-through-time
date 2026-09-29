@@ -313,9 +313,28 @@
           }
         }
       } catch (eO) { /* */ }
+      var wrote = false;
       try {
         localStorage.setItem(k, JSON.stringify(payload));
-      } catch (eS) { /* */ }
+        wrote = true;
+      } catch (eS) {
+        wrote = false;
+        try {
+          if (ITT.debug && ITT.debug.record) {
+            ITT.debug.record({
+              year: year,
+              key: k,
+              feature: "leftover-official",
+              error: eS && (eS.name || String(eS)),
+              note: "leftover save blocked"
+            });
+          }
+        } catch (eRec) { /* */ }
+      }
+      if (!wrote) {
+        say(st, "This browser blocked the save.", true);
+        return;
+      }
       say(st, "Saved · " + k, false);
       try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
     });

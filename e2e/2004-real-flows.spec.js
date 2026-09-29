@@ -335,6 +335,8 @@ test.describe('2004 real flows — year shell', () => {
     await clearItt04(page, ['itt04-thefacebook']);
     await goInFrame(page, 'sites/facebook/index.html');
     await waitForImmersion(page, '2004');
+    await contentFrame(page).locator('[data-fb-login] [name="email"]').fill('ada@harvard.edu');
+    await contentFrame(page).locator('[data-fb-login] [name="pass"]').fill('secret');
     await contentFrame(page).locator('[data-fb-login] button[type="submit"]').click();
     await expect(contentFrame(page).locator('[data-fb-name]')).toBeVisible({ timeout: 15000 });
 

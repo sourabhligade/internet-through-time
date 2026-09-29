@@ -24,6 +24,10 @@
         public: "2010-05-19",
         ended: "2010-08-04"
       });
+      if (!full) {
+        G.feedback("This browser blocked the save.", st, { error: true });
+        return;
+      }
       G.feedback("Wave funeral literacy · " + full, st);
       G.markUsed();
     });

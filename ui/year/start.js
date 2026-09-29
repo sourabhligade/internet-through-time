@@ -403,7 +403,10 @@
 
   function flowsHtml(year) {
     var trails = (ITT.flowTrails && ITT.flowTrails[year]) || [];
-    if (!trails.length) return "";
+    if (!trails.length) {
+      if (ITT._flowTrailsMissing) return '<p class="ott-flows-missing">Flow list did not load.</p>';
+      return "";
+    }
     var lis = "";
     var i;
     var t;
@@ -440,6 +443,15 @@
       done();
     };
     s.onerror = function () {
+      try {
+        console.error("ITT flow-trails failed to load", src);
+      } catch (eLog) { /* */ }
+      try {
+        if (ITT.debug && ITT.debug.record) {
+          ITT.debug.record({ feature: "flow-trails", error: "load", note: src });
+        }
+      } catch (eRec) { /* */ }
+      ITT._flowTrailsMissing = src;
       done();
     };
     (document.head || document.documentElement).appendChild(s);

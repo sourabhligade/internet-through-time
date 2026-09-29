@@ -385,6 +385,10 @@
           year: year,
           merge: { multiStep: true, kind: kind, flow: gid }
         });
+        if (!blob) {
+          status("This browser blocked the save.");
+          return;
+        }
         saved = true;
         step("save");
         paint();

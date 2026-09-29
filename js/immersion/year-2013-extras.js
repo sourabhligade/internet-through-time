@@ -40,7 +40,10 @@
         feedback("Tick both honesties first. Incomplete never writes.", st, { error: true });
         return;
       }
-      saveJSON(key(suffix), blob(extra || {}));
+      if (!saveJSON(key(suffix), blob(extra || {}))) {
+        feedback("This browser blocked the save.", st, { error: true });
+        return;
+      }
       feedback("Saved · " + key(suffix), st);
       reveal(doc);
     });
@@ -379,7 +382,10 @@
         feedback("Type " + need + " first. Incomplete never writes.", st, { error: true });
         return;
       }
-      saveJSON(key(suffix), blob({ typed: need, leftover: true }));
+      if (!saveJSON(key(suffix), blob({ typed: need, leftover: true }))) {
+        feedback("This browser blocked the save.", st, { error: true });
+        return;
+      }
       feedback("Saved · " + key(suffix), st);
       reveal(doc);
     });

@@ -18,7 +18,10 @@
   var PASSPORT_KEY = "itt-passport";
   var NIGHT_KEY = "itt-first-night";
   var VERSION = 1;
-  var WIPED = { "2009": 1, "2011": 1, "2023": 1, "2024": 1, "2025": 1 };
+  /** 2009 keeps a tree and a plaque. It is not a hub door. */
+  var BOARDED = { "2009": 1 };
+  /** No tree and no hub card. */
+  var WIPED = { "2011": 1, "2023": 1, "2024": 1, "2025": 1 };
 
   /** First night · signature arc */
   var FIRST_NIGHT = [
@@ -656,7 +659,7 @@
   function isLiveYear(year) {
     year = String(year || "");
     if (!/^(199[4-9]|200[0-7]|2009|201[0-7]|2022)$/.test(year)) return false;
-    return !WIPED[year];
+    return !WIPED[year] && !BOARDED[year];
   }
 
   function escapeHtml(s) {

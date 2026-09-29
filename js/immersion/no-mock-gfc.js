@@ -40,13 +40,16 @@
       ) {
         return;
       }
-      G.saveJSON(k, {
+      if (!G.saveJSON(k, {
         enabled: true,
         stack: "opensocial",
         multiStep: true,
         real: true,
         ts: Date.now()
-      });
+      })) {
+        G.feedback("This browser blocked the save.", st, { error: true });
+        return;
+      }
       show();
       G.feedback("Friend Connect REAL · " + k, st);
       G.markUsed();

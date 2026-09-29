@@ -52,15 +52,20 @@
     );
   }
 
+  function isReactDoor(year) {
+    return !!{ "2015": 1, "2017": 1 }[String(year)];
+  }
+
   function yearHome(year) {
-    if ({ "2017": 1 }[String(year)]) {
-      return "/app/index.html#/year/" + year;
-    }
+    if (isReactDoor(year)) return "/app/index.html#/year/" + year;
     return "/years/" + year + "/";
   }
 
   function yearRoom(year, rel) {
-    if ({ "2017": 1 }[String(year)]) {
+    if (isReactDoor(year)) {
+      var room = String(rel || "");
+      if (room.indexOf("pages/about") === 0) return yearHome(year) + "?stop=about";
+      if (room.indexOf("pages/map") === 0) return yearHome(year) + "?stop=map";
       return yearHome(year);
     }
     return "years/" + year + "/" + String(rel || "").replace(/^\//, "");
@@ -166,11 +171,13 @@
  }
 
  function mapBranches(year) {
+ if (isReactDoor(year)) return [];
  var maps = window.ITT && ITT.flowMaps && ITT.flowMaps[year];
  return (maps && maps.branches) || [];
  }
 
  function popularOf(year) {
+ if (isReactDoor(year)) return [];
  var maps = window.ITT && ITT.flowMaps && ITT.flowMaps[year];
  var branches = (maps && maps.branches) || [];
  var i, b;
@@ -184,6 +191,7 @@
   function gamesOf(year) {
     var out = [];
     var rec = (data.years && data.years[year]) || {};
+    if (isReactDoor(year)) return rec.game ? [rec.game] : [];
     var play = window.ITT && ITT.yearPlayableGames && ITT.yearPlayableGames[year];
     var extras = window.ITT && ITT.yearExtraGames && ITT.yearExtraGames[year];
     var i;
@@ -211,10 +219,12 @@
   }
 
   function twoXOf(year) {
+    if (isReactDoor(year)) return [];
     return extra2x[year] || [];
   }
 
   function trio3Of(year) {
+    if (isReactDoor(year)) return [];
     return pop3x3[year] || [];
   }
 
@@ -455,6 +465,17 @@
         html += "<li>" + a(path, s.name || "stop");
         if (s.nextLabel) html += " <span class='muted'>→ " + esc(s.nextLabel) + "</span>";
         html += "</li>";
+      });
+      html += "</ol></details>";
+    } else if (rec.reactStops && rec.reactStops.length) {
+      html +=
+        '<details class="atlas-layer" open><summary>Official in-year trail (React door) <span class="n">' +
+        rec.reactStops.length +
+        "</span></summary><ol class='ten'>";
+      rec.reactStops.forEach(function (s) {
+        var label = (s && (s.name || s.label)) || "stop";
+        var stopHref = (s && s.href) || (s && s.key ? yearHome(year) + "?stop=" + s.key : yearHome(year));
+        html += "<li>" + a(stopHref, label) + "</li>";
       });
       html += "</ol></details>";
     }
@@ -834,7 +855,8 @@
         if (!t || !t.getAttribute) return;
         var y = t.getAttribute("data-atlas-year");
         if (!isOpen(y) || isGap(y)) return;
-        window.location.href = "/years/" + y + "/";
+        if (e.preventDefault) e.preventDefault();
+        window.location.href = yearHome(y);
       });
     }
     var find = $("atlas-find");

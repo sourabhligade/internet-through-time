@@ -15,12 +15,12 @@ leftover-3x-unique-links.spec.js
 official-leftover-2x.spec.js
 lean-triple-leftover.spec.js
 year-true-packs.spec.js
-2016--3x-detail.spec.js
--flows.spec.js
-2020-mvp.spec.js
-2021-mvp.spec.js
+2016-3x-detail.spec.js
+2017-mvp.spec.js
 2022-mvp.spec.js
 2022-flows.spec.js
+dest-top.spec.js
+follow-site.spec.js
 ```
 
 Shared dest-true I/O: `dest-true-io.js` (`getKey`, `clickOfficialVerb`). Year helpers: `helpers.js`.

@@ -1,10 +1,8 @@
 # Product improve map
 
-**Date:** 2026-09-27 
-**Status:** Recommendation. Not ship law. Live year list is [`DISK-TRUTH.md`](DISK-TRUTH.md). 
-**Canonical year law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) + `scripts/itt_gate.py` `SHIP_YEARS`.
-
-Hub **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + –2022). **2009 boarded.** **2015 wiped.** ** wiped.** **2023–2025 wiped.** This file maps the 2026-09-13 audit against that live list: what is on disk, what live web-history museums do, and how to improve *this* museum without dest-farming.
+**Date:** 2026-09-27
+**Status:** Historical recommendation. Not ship law. Live year list is [`DISK-TRUTH.md`](DISK-TRUTH.md).
+**Canonical year law (2026-09-29):** hub **22** years (1994–2007 + 2010 + 2012–2017 + 2022). 2015 and 2017 are React doors. 2009 is boarded. 2011, 2018–2021, and 2023–2025 are absent. Counts below are an older snapshot.
 
 ---
 
@@ -16,7 +14,7 @@ Year-locked, clickable rooms in period chrome. Not a screenshot gallery. Not a r
 |---|---|---|---|---|
 | Curated year + OS + browser | Any URL + date | Screenshots / video | Period browser + archive | Restored ruins (GeoCities, MySpace Music) |
 | Star / leftover / incomplete-never-writes | No year law | Look, don’t use | Rendering is the exhibit | Wander neighborhoods |
-| 26 playable years | 800B+ pages | Thousands of captures | Emulation | Millions of lost pages |
+| 22 open years | 800B+ pages | Thousands of captures | Emulation | Millions of lost pages |
 
 **Advantage:** meaning. 2005 does not give you the iPhone. Accept All never writes. Follow Yahoo through years in that year’s chrome.
 
@@ -26,7 +24,7 @@ Year-locked, clickable rooms in period chrome. Not a screenshot gallery. Not a r
 
 ## 2. Data on disk (audit snapshot)
 
-Hub **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + –2022). **2009 boarded.** **2015 wiped.** ** wiped.** **2023–2025 wiped.** Counts below are the 2026-09-13 audit snapshot; live dest-folder counts are in [`DISK-TRUTH.md`](DISK-TRUTH.md).
+The counts in this section are the 2026-09-13 snapshot. That snapshot is not the live list. Live law is the 22-door header above and [`DISK-TRUTH.md`](DISK-TRUTH.md): 2015 and 2017 are React doors, 2009 is boarded, and 2011, 2018–2021, and 2023–2025 are absent.
 
 | Layer | Count (2026-09-13 working tree) |
 |---|---|
@@ -78,12 +76,12 @@ Do these in order. Do not dest-farm to “look complete.” Do not add 2022+ to 
 
 A 9,588-page museum that is not on a URL is a private corpus.
 
-- [x] `museum/1994-2020-lean` pushed. Hub **26** cards. 2022 is a live lean door.
+- [x] `museum/1994-2020-lean` pushed. The 2026-09-13 snapshot said 26 hub cards. The live hub is 22. 2022 is a live lean door.
 - [x] Deploy configs: `netlify.toml` publish `.`, `vercel.json` trailingSlash + year page rewrites, `.github/workflows/pages.yml` is **workflow_dispatch only**. Repo root is the document root.
 - [ ] Unlock GitHub Actions billing or stop claiming CI (not verified this pass).
 - [ ] Enable GitHub Pages / Netlify / Vercel public URL — user credentials / Settings → Pages. Do not flip Pages on from this pass.
 
-### Slice 1 — Visitor product is 26 doors + 5 walks
+### Slice 1 — Visitor product is 22 open doors + the walks
 
 - [x] Hub leads with **first night**, **follow-a-site**, **one star per year**.
 - [x] Leftover-2× / leftover-3× default **off** (workshop / `?deep=1`). Keep for e2e.
@@ -92,7 +90,7 @@ A 9,588-page museum that is not on a URL is a private corpus.
 
 ### Slice 2 — 2009 is a hole or a door
 
-2009 is GeoCities death + Like. restorativland’s gallery *is* that wound. Boarding 78 dests reads as a bug between  and 2010.
+2009 is GeoCities death + Like. restorativland’s gallery *is* that wound. Boarding 78 dests reads as a gap between 2008 and 2010.
 
 Pick one:
 
@@ -124,7 +122,7 @@ Same pass as  / 2012 / : dests = `urlMap` ∩ disk, then delete the rest. Shared
 
 Order suggestion (largest leftover risk first):
 
-- [x] 2015 wiped · 2017 /  / 2021 are React doors (0 HTML dest folders)
+- [x] Snapshot called 2015 wiped and treated later years as React doors. Live law: 2015 and 2017 are the React doors. 2011 and 2018–2021 are absent.
 - [ ] 2004, , 1999–2003, 2005–2007, 2010
 - [ ] 2009 only after Slice 2
 
@@ -138,7 +136,7 @@ Order suggestion (largest leftover risk first):
 
 ## 5. If only three things
 
-1. Publish the 26-year hub.
+1. Publish the 22-year hub.
 2. Lead with first night + follow-a-site + one star; fold leftover machines.
 3. Dated capture on every star dest; label lean vs dense.
 

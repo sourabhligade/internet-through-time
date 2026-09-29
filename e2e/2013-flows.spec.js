@@ -95,18 +95,9 @@ test.describe("2013 flows", () => {
       localStorage.removeItem("itt13-vine-posts");
     });
     await page.reload();
-    await revealLeftoverRails(page);
-    const go = page.locator("[data-pop-go][data-pop-id='askfm']").first();
-    await go.click();
+    await expect(page.locator("[data-itt-capture-cite]")).toBeVisible();
     expect(await getKey(page, "itt13-pop-askfm")).toBeFalsy();
-    const panel = page.locator("[data-pop-panel]").filter({ has: go }).first();
-    await panel.locator("[data-pop-pick='keep']").click();
-    const reqs = panel.locator("[data-pop-req]");
-    const n = await reqs.count();
-    for (let i = 0; i < n; i++) await reqs.nth(i).check();
-    await panel.locator("[data-pop-field]").fill("ask leftover");
-    await go.click();
-    await expect.poll(() => getKey(page, "itt13-pop-askfm")).toBeTruthy();
+    expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
     expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
   });
 

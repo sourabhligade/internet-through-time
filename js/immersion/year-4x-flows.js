@@ -173,9 +173,21 @@
       }
 
       var payload = blob(doc, extra);
+      var wrote = false;
       try {
         localStorage.setItem(k, JSON.stringify(payload));
-      } catch (eS) { /* */ }
+        wrote = true;
+      } catch (eS) {
+        try {
+          if (ITT.debug && ITT.debug.record) {
+            ITT.debug.record({ key: k, feature: "year-4x", error: eS && eS.name, note: "save blocked" });
+          }
+        } catch (eR) { /* */ }
+      }
+      if (!wrote) {
+        say(st, "This browser blocked the save.", true);
+        return;
+      }
       say(st, "Done · " + k);
       paintResult(payload);
       revealPanelNext();

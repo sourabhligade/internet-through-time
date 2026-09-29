@@ -57,8 +57,19 @@
     function saveJSON(k, v) {
       try {
         localStorage.setItem(k, JSON.stringify(v));
+        return true;
       } catch (e) {
-        /* */
+        try {
+          if (ITT.debug && ITT.debug.record) {
+            ITT.debug.record({
+              key: k,
+              feature: "year-extras",
+              error: e && (e.name || String(e)),
+              note: "save blocked"
+            });
+          }
+        } catch (eRec) { /* */ }
+        return false;
       }
     }
 

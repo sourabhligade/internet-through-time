@@ -60,15 +60,15 @@
       if (saved) return;
       sc = Math.max(1, sc | 0);
       score = sc;
-      saved = true;
       running = false;
       api = api || YG();
+      var wrote = false;
       if (api && api.saveBest) {
-        api.saveBest(gid, score, {
+        wrote = !!api.saveBest(gid, score, {
           year: year,
           merge: { real: true, multiStep: true, fullMore: true, engine: engine }
         });
-        if (api.markStep) api.markStep("save", host);
+        if (wrote && api.markStep) api.markStep("save", host);
       } else {
         try {
           localStorage.setItem(
@@ -86,9 +86,17 @@
               engine: engine
             })
           );
-        } catch (eS) { /* */ }
+          wrote = true;
+        } catch (eS) {
+          wrote = false;
+        }
       }
       paintHud();
+      if (!wrote) {
+        status("This browser blocked the save.");
+        return;
+      }
+      saved = true;
       status("Saved · " + prefixFor(year) + "-game-" + gid + " · " + score);
       try {
         var next = host.querySelector("[data-next-flow]");

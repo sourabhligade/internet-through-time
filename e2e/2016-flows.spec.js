@@ -44,9 +44,11 @@ test.describe("2016 flows", () => {
     await page.evaluate(() => localStorage.removeItem("itt16-fb-react"));
     await page.reload();
     await page.locator("[data-fb-like]").click();
+    expect(await getKey(page, "itt16-fb-react")).toBeFalsy();
+    await page.locator('[data-fb-react="love"]').click();
     await expect.poll(async () => getKey(page, "itt16-fb-react"), { timeout: 8000 }).toBeTruthy();
     const blob = JSON.parse((await getKey(page, "itt16-fb-react")) || "{}");
-    expect(blob.face).toBe("like");
+    expect(blob.face).toBe("love");
   });
 
   test("E2E one tick never writes", async ({ page }) => {
@@ -135,17 +137,19 @@ test.describe("2016 flows", () => {
     await page.goto("/years/2016/sites/reddit/index.html");
     await page.evaluate(() => localStorage.removeItem("itt16-pop-reddit"));
     await page.reload();
-    const go = page.locator('[data-pop-go][data-pop-id="reddit"]:not([data-pop-key])').first();
+    const go = page.locator('[data-lo-save][data-lo-key="reddit-lx"]').first();
     await go.click();
-    expect(await getKey(page, "itt16-pop-reddit")).toBeFalsy();
-    await page.locator("[data-pop-field]").first().fill("front page");
+    expect(await getKey(page, "itt16-reddit-lx")).toBeFalsy();
+    await page.locator("[data-lo-field]").first().fill("front page");
     await go.click();
-    expect(await getKey(page, "itt16-pop-reddit")).toBeFalsy();
-    await page.locator("[data-pop-pick]").first().click();
-    await page.locator("[data-pop-req]").first().check();
-    await page.locator("[data-pop-field]").first().fill("front page");
+    expect(await getKey(page, "itt16-reddit-lx")).toBeFalsy();
+    await page.locator('[data-lo-pick="keep"]').first().click();
+    const reqs = page.locator("[data-lo-req]");
+    const nReq = await reqs.count();
+    for (let i = 0; i < nReq; i++) await reqs.nth(i).check();
+    await page.locator("[data-lo-field]").first().fill("front page");
     await go.click();
-    await expect.poll(async () => getKey(page, "itt16-pop-reddit"), { timeout: 8000 }).toBeTruthy();
+    await expect.poll(async () => getKey(page, "itt16-reddit-lx"), { timeout: 8000 }).toBeTruthy();
     await expect(page.locator('[data-next-flow] a[href*="netflix"]').first()).toBeVisible();
   });
 });

@@ -37,6 +37,10 @@
         hours: 24,
         facts: facts
       });
+      if (!full) {
+        G.feedback("This browser blocked the save.", st, { error: true });
+        return;
+      }
       G.feedback("SOPA blackout literacy · " + full, st);
       G.markUsed();
     });

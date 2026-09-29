@@ -23,7 +23,7 @@ test.describe('2010 leftover trail', () => {
     await page.locator('[data-ig-caption]').fill('dinner');
     await page.locator('[data-ig-share]').click();
     await expect.poll(() => getKey(page, 'itt10-ig-posts')).toBeTruthy();
-    await expect(page.locator('[data-next-flow] a[href*="iphone"]')).toBeVisible();
+    await expect(page.locator('[data-next-flow] a[href*="iphone"]').first()).toBeVisible();
   });
 
   test('iPhone 4 acks reveal next iPad', async ({ page }) => {

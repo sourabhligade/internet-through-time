@@ -28,6 +28,10 @@
       }
     }
     var full = G.saveReal("fb-connect", { connected: true });
+    if (!full) {
+      G.feedback("This browser blocked the save.", st, { error: true });
+      return;
+    }
     G.feedback("Facebook Connect REAL · Connected · " + full, st);
     G.markUsed();
     try {

@@ -1115,6 +1115,26 @@
   {
     "year": "2012",
     "dests": [
+      "buzzfeed",
+      "chrome",
+      "drawsomething",
+      "facebook",
+      "flipboard",
+      "googledrive",
+      "instagram",
+      "iphone",
+      "medium",
+      "path",
+      "pinterest",
+      "reddit",
+      "snapchat",
+      "soundcloud",
+      "surface",
+      "twitter",
+      "uber",
+      "wikipedia",
+      "windows8",
+      "youtube",
       "tinder",
       "duolingo",
       "coursera",
@@ -1125,9 +1145,10 @@
       "ios6",
       "googleplay",
       "kindlefirehd",
-      "coinbase"
+      "coinbase",
+      "playable"
     ],
-    "n": 11
+    "n": 32
   },
   {
     "year": "2013",

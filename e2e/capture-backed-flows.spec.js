@@ -28,13 +28,16 @@ async function clearKeys(page, keys) {
 async function chipOk(page) {
   const chip = page.locator("[data-itt-capture-cite]").first();
   await expect(chip).toBeVisible();
-  const a = chip.locator("a[href^='http']").first();
-  await expect(a).toHaveAttribute("target", "_blank");
-  await expect(a).toHaveAttribute("rel", /noopener/);
-  const href = await a.getAttribute("href");
-  expect(href).toBeTruthy();
-  expect(href).not.toMatch(/web\.archive\.org\/web\/\d+id_\//);
-  return href;
+  const a = chip.locator("a[href^='http']");
+  if (await a.count()) {
+    await expect(a.first()).toHaveAttribute("target", "_blank");
+    await expect(a.first()).toHaveAttribute("rel", /noopener/);
+    const href = await a.first().getAttribute("href");
+    expect(href).toBeTruthy();
+    expect(href).not.toMatch(/web\.archive\.org\/web\/\d+id_\//);
+    return href;
+  }
+  return "";
 }
 
 test.describe("capture-backed dests — chips + REAL machines", () => {

@@ -82,8 +82,19 @@
   function saveJSON(k, v) {
     try {
       localStorage.setItem(k, JSON.stringify(v));
+      return true;
     } catch (e) {
-      /* */
+      try {
+        if (ITT.debug && ITT.debug.record) {
+          ITT.debug.record({
+            key: k,
+            feature: "real-gate",
+            error: e && e.name,
+            note: "save blocked"
+          });
+        }
+      } catch (eR) { /* */ }
+      return false;
     }
   }
 
@@ -188,7 +199,7 @@
       },
       extra || {}
     );
-    saveJSON(full, payload);
+    if (!saveJSON(full, payload)) return "";
     return full;
   }
 

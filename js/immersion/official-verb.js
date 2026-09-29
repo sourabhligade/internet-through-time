@@ -32,6 +32,24 @@
   }
 
   function say(st, msg, err) {
+    if (!st) {
+      try {
+        st = document.querySelector("[data-official-status], [data-itt-action-status]");
+      } catch (eQ) {
+        st = null;
+      }
+    }
+    if (!st) {
+      try {
+        st = document.createElement("p");
+        st.setAttribute("data-official-status", "1");
+        var verb = document.querySelector("[data-official-verb]");
+        if (verb && verb.parentNode) verb.parentNode.appendChild(st);
+        else if (document.body) document.body.appendChild(st);
+      } catch (eM) {
+        return;
+      }
+    }
     if (!st) return;
     st.textContent = msg;
     try {
@@ -158,11 +176,18 @@
       /* Capture so we write the official key before a product machine
          clears the field ( Dropbox). residual-real still blocks first. */
       verbs[i].addEventListener("click", function (ev) {
-        /* Only stop navigation. Forms with an existing period machine
-           (no action / action="#") must still fire submit. */
-        var typ = (this.getAttribute("type") || "").toLowerCase();
+        var el = this;
+        /* Refusal must not GET-reload an action-less form. Success still
+           lets submit fire so a period machine can run. */
+        function hold() {
+          var typ = (el.getAttribute("type") || "").toLowerCase();
+          if ((typ === "submit" || typ === "image") && ev && ev.preventDefault) ev.preventDefault();
+        }
+        /* Only stop navigation up front when the action is a real URL.
+           Forms with no action / action="#" must still fire submit on success. */
+        var typ = (el.getAttribute("type") || "").toLowerCase();
         if ((typ === "submit" || typ === "image") && ev && ev.preventDefault) {
-          var form = this.form || (this.closest && this.closest("form"));
+          var form = el.form || (el.closest && el.closest("form"));
           var action = form ? String(form.getAttribute("action") || "").replace(/^\s+|\s+$/g, "") : "";
           if (action && action !== "#") ev.preventDefault();
         }
@@ -176,6 +201,7 @@
         if (!honestyOnly) {
           for (r = 0; r < reqs.length; r++) {
             if (!reqs[r].checked) {
+              hold();
               say(st, "Tick honesty first. Incomplete never writes.", true);
               return;
             }
@@ -186,6 +212,7 @@
           var picked = doc.querySelector('[data-official-pick="' + needPick + '"]');
           var on = picked && (/\bis-on\b/.test(picked.className || "") || picked.getAttribute("aria-pressed") === "true");
           if (!on) {
+            hold();
             say(st, "Pick first. Incomplete never writes.", true);
             return;
           }
@@ -203,10 +230,12 @@
           productReady = doc.documentElement.getAttribute("data-official-product-ready") || "";
         } catch (ePr) { /* */ }
         if (productReady === "0") {
+          hold();
           say(st, "Do the dest first. Incomplete never writes.", true);
           return;
         }
         if (field && v.length < minNeed) {
+          hold();
           say(
             st,
             minNeed > 2
@@ -226,6 +255,7 @@
               if (boxes[b].checked) ticked++;
             }
             if (ticked < 2) {
+              hold();
               say(st, "Tick honesty first. Incomplete never writes.", true);
               return;
             }
@@ -240,9 +270,29 @@
           ts: Date.now()
         };
         if (v) payload.q = v.slice(0, 80);
+        var wrote = false;
         try {
           localStorage.setItem(key, JSON.stringify(payload));
-        } catch (eS) { /* */ }
+          wrote = true;
+        } catch (eS) {
+          wrote = false;
+          try {
+            if (ITT.debug && ITT.debug.record) {
+              ITT.debug.record({
+                year: year,
+                key: key,
+                feature: "official-verb",
+                error: eS && (eS.name || String(eS)),
+                note: "official save blocked"
+              });
+            }
+          } catch (eRec) { /* */ }
+        }
+        if (!wrote) {
+          hold();
+          say(st, "This browser blocked the save.", true);
+          return;
+        }
         say(st, "Saved · " + key, false);
         try {
           if (ITT.revealNextFlow) ITT.revealNextFlow(doc);

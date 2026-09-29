@@ -204,14 +204,19 @@
   }
   function finish() {
     if (saved) return;
-    saved = true;
     running = false;
+    var wrote = score <= 0;
     if (score > 0 && YG && YG.saveBest) {
-      YG.saveBest("gemcascade", score, {
+      wrote = !!YG.saveBest("gemcascade", score, {
         year: "2004",
         merge: { real: true, multiStep: true, movesLeft: moves }
       });
     }
+    if (score > 0 && !wrote) {
+      setStatus("This browser blocked the save.");
+      return;
+    }
+    saved = true;
     if (YG && YG.markStep) YG.markStep("save", host);
     paintBest();
     setStatus(

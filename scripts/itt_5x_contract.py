@@ -53,7 +53,8 @@ ALLOW_PLAQUE: frozenset[tuple[int, str]] = frozenset(
     }
 )
 # No year tree. 2009 is boarded (tree stays) — skipped in check() separately.
-WIPED_YEARS: frozenset[int] = frozenset({2008, 2011, 2015, 2023, 2024, 2025})
+# 2015 is the React door. 2018 and 2019 are absent, same as 2011.
+WIPED_YEARS: frozenset[int] = frozenset({2008, 2011, 2015, 2018, 2019, 2023, 2024, 2025})
 BOARDED_YEARS: frozenset[int] = frozenset({2009})
 
 POP_PANEL_2020 = ()

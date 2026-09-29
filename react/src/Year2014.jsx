@@ -1,3 +1,4 @@
+/** Not mounted. The 2014 visitor door is /years/2014/. App.jsx sends #/year/2014 there. */
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { OfficialStop } from "./OfficialStop.jsx";

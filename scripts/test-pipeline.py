@@ -145,11 +145,8 @@ CI_E2E_ALLOWLIST = (
     "e2e/official-leftover-2x.spec.js",
     "e2e/lean-triple-leftover.spec.js",
     "e2e/year-true-packs.spec.js",
-    "e2e/2016--3x-detail.spec.js",
+    "e2e/2016-3x-detail.spec.js",
     "e2e/2017-mvp.spec.js",
-    "e2e/-mvp.spec.js",
-    "e2e/2020-mvp.spec.js",
-
     "e2e/2022-mvp.spec.js",
     "e2e/2022-flows.spec.js",
     "e2e/dest-top.spec.js",

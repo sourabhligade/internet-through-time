@@ -155,6 +155,9 @@ CITED_ADD: dict[str, list[str]] = {
         "kinect", "cityville", "ibooks", "playable",
     ],
     "2012": [
+        "buzzfeed", "chrome", "drawsomething", "facebook", "flipboard", "googledrive",
+        "instagram", "iphone", "medium", "path", "pinterest", "reddit", "snapchat",
+        "soundcloud", "surface", "twitter", "uber", "wikipedia", "windows8", "youtube",
         "tinder", "duolingo", "coursera", "udacity", "edx", "nexus7", "jellybean",
         "ios6", "googleplay", "kindlefirehd", "coinbase", "playable",
     ],

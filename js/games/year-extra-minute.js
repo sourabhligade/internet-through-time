@@ -156,12 +156,18 @@
         traps: traps,
         goods: goods
       };
+      var wrote = false;
       try {
         localStorage.setItem(k, JSON.stringify(blob));
-      } catch (eSave) { /* */ }
-      if (yg && yg.saveBest) {
-        yg.saveBest(gid, scoreNow, { year: year, merge: merge });
+        wrote = true;
+      } catch (eSave) {
+        wrote = false;
       }
+      if (yg && yg.saveBest) {
+        var best = yg.saveBest(gid, scoreNow, { year: year, merge: merge });
+        wrote = !!best || wrote;
+      }
+      return wrote;
     }
 
     function finish() {
@@ -193,9 +199,12 @@
         setStatus("Not every step yet. Incomplete never writes.");
         return;
       }
-      saved = true;
       score = Math.max(1, 10 + goods - traps);
-      persist(score);
+      if (!persist(score)) {
+        setStatus("This browser blocked the save.");
+        return;
+      }
+      saved = true;
       step("save");
       paintBest();
       paintHud();

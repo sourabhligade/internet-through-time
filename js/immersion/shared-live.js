@@ -258,7 +258,15 @@
           if (step >= steps) {
             window.clearInterval(timer);
             var rec = { file: file, product: product, at: new Date().toLocaleString(), sizeMb: sizeMb };
-            saveJSON(key, rec);
+            if (saveJSON(key, rec) === false) {
+              panel.innerHTML = wrapDialog("Download", "This browser blocked the save.");
+              try {
+                if (ITT.debug && ITT.debug.record) {
+                  ITT.debug.record({ key: key, feature: "shared-live", note: "download save blocked" });
+                }
+              } catch (eD) { /* */ }
+              return;
+            }
             var savePath = era === "web2" ? "C:\\Documents and Settings\\…\\Desktop\\" : "C:\\TEMP\\";
             panel.innerHTML = wrapDialog(
               era === "web2" ? "Download complete" : "Download Complete",
@@ -381,7 +389,16 @@
                 real: true,
                 year: "2001"
               });
-              saveJSON(storageKey("wiki-pages"), pages.slice(0, 20));
+              if (saveJSON(storageKey("wiki-pages"), pages.slice(0, 20)) === false) {
+                if (st) st.textContent = "This browser blocked the save.";
+                api.actionFeedback("This browser blocked the save.", { status: st, flash: false });
+                try {
+                  if (ITT.debug && ITT.debug.record) {
+                    ITT.debug.record({ year: "2001", key: storageKey("wiki-pages"), feature: "shared-live", note: "wiki save blocked" });
+                  }
+                } catch (eW) { /* */ }
+                return;
+              }
               api.markTourUsed();
               if (st) st.textContent = "Saved · open History to see this edit.";
               api.actionFeedback("Saved locally · open History.", { status: st, flash: true });
@@ -436,7 +453,21 @@
             }
             var log = loadJSON(storageKey("trackbacks"), []) || [];
             log.unshift({ url: url, excerpt: excerpt, at: new Date().toLocaleString() });
-            saveJSON(storageKey("trackbacks"), log.slice(0, 30));
+            if (saveJSON(storageKey("trackbacks"), log.slice(0, 30)) === false) {
+              var blockedOut = document.getElementById("tb-out") || form.querySelector("[data-trackback-out]");
+              if (!blockedOut) {
+                blockedOut = ensureStatusAfter(form);
+                blockedOut.id = "tb-out";
+              }
+              blockedOut.style.display = "block";
+              blockedOut.innerHTML = wrapDialog("TrackBack", "This browser blocked the save.");
+              try {
+                if (ITT.debug && ITT.debug.record) {
+                  ITT.debug.record({ key: storageKey("trackbacks"), feature: "shared-live", note: "trackback save blocked" });
+                }
+              } catch (eT) { /* */ }
+              return;
+            }
             var out = document.getElementById("tb-out") || form.querySelector("[data-trackback-out]");
             if (!out) {
               out = ensureStatusAfter(form);

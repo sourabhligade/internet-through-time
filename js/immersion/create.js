@@ -64,7 +64,31 @@
           if (f.needs && !f.needs(config)) continue;
           f.init(api);
         } catch (err) {
-          console.error("ITT immersion feature failed:", f.id, err);
+          var yFail = "";
+          var pathFail = "";
+          try {
+            yFail = (document.documentElement && document.documentElement.getAttribute("data-itt-year")) || "";
+          } catch (eY) {
+            yFail = "";
+          }
+          try {
+            pathFail = location.pathname || "";
+          } catch (eP) {
+            pathFail = "";
+          }
+          console.error("ITT immersion feature failed:", f.id, yFail, pathFail, err);
+          try {
+            if (ITT.debug && ITT.debug.record) {
+              ITT.debug.record({
+                year: yFail,
+                feature: f && f.id,
+                error: err && (err.name || String(err)),
+                note: pathFail
+              });
+            }
+          } catch (eD) {
+            /* */
+          }
         }
       }
       ITT._immersionFeaturesInited = features.length;

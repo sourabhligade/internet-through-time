@@ -213,9 +213,27 @@
         honest: reqs.need ? true : undefined,
         ts: Date.now()
       };
+      var wrote = false;
       try {
         localStorage.setItem(k, JSON.stringify(payload));
-      } catch (eS) { /* */ }
+        wrote = true;
+      } catch (eS) {
+        try {
+          if (ITT.debug && ITT.debug.record) {
+            ITT.debug.record({
+              year: year,
+              key: k,
+              feature: "year-popular-3x",
+              error: eS && eS.name,
+              note: "save blocked"
+            });
+          }
+        } catch (eR) { /* */ }
+      }
+      if (!wrote) {
+        say(YX, st, "This browser blocked the save.", true);
+        return;
+      }
       say(YX, st, "Saved · " + k);
       try {
         if (ITT.revealNextFlow) ITT.revealNextFlow(doc);

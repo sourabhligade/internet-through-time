@@ -41,7 +41,10 @@
         feedback("Tick both literacy boxes first. Incomplete never writes.", st, { error: true });
         return;
       }
-      saveJSON(key(suffix), blob(extra || {}));
+      if (!saveJSON(key(suffix), blob(extra || {}))) {
+        feedback("This browser blocked the save.", st, { error: true });
+        return;
+      }
       feedback("Saved · " + key(suffix), st);
       reveal(doc);
     });
@@ -218,7 +221,10 @@
       }
       var o = extra ? extra() : {};
       o.q = v.slice(0, 80);
-      saveJSON(key(suffix), blob(o));
+      if (!saveJSON(key(suffix), blob(o))) {
+        feedback("This browser blocked the save.", st, { error: true });
+        return;
+      }
       feedback("Saved · " + key(suffix), st);
       reveal(doc);
     });

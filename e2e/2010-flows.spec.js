@@ -5,7 +5,7 @@
  */
 const { test, expect } = require('@playwright/test');
 
-const { enterYear, completeRealGate, destOnDisk, twoStepClick, leftoverOfficialDest } = require('./helpers');
+const { enterYear, completeRealGate, destOnDisk, twoStepClick, leftoverOfficialDest, killOverlays } = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -23,9 +23,31 @@ async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
 }
 
+async function officialSave(page, href, goldKey) {
+  await page.goto(href);
+  const verb = page.locator("[data-official-verb]").first();
+  await verb.waitFor({ timeout: 20000 });
+  const key = await page.locator("html").getAttribute("data-official-key");
+  await page.evaluate((ks) => ks.forEach((k) => k && localStorage.removeItem(k)), [key, goldKey]);
+  const trap = page.locator("[data-official-trap]");
+  if (await trap.count()) await trap.first().click();
+  expect(await getKey(page, key)).toBeFalsy();
+  await verb.click();
+  expect(await getKey(page, key)).toBeFalsy();
+  const reqs = page.locator("[data-official-req]");
+  const n = await reqs.count();
+  for (let i = 0; i < n; i++) await reqs.nth(i).check();
+  const field = page.locator("[data-official-need]");
+  if (await field.count()) await field.first().fill("museum");
+  await verb.click();
+  await expect.poll(() => getKey(page, key)).toBeTruthy();
+  if (goldKey) expect(await getKey(page, goldKey)).toBeFalsy();
+}
+
 test.describe('2010 flows A–T', () => {
   test('A hub card → Win7 / IE8 shell → Starting Point', async ({ page }) => {
     await page.goto('/');
+    await killOverlays(page);
     const card = page.locator('a.year-card.available.y2010[href*="years/2010"]');
     await expect(card).toBeVisible();
     await card.click();
@@ -70,16 +92,16 @@ test.describe('2010 flows A–T', () => {
     await expect.poll(() => getKey(page, 'itt10-ig')).toBeTruthy();
   });
 
-  test('D iPad dest-true leftover-official never writes gold', async ({ page }) => {
+  test('D iPad dest-true official never writes gold', async ({ page }) => {
     await page.goto("/years/2010/sites/ipad/index.html");
     await expect(page.locator("body")).toContainText(/\$499|no camera|iPad 2/i);
-    await leftoverOfficialDest(page, "/years/2010/sites/ipad/order.html", "ipad-lx", "itt10-ig");
+    await officialSave(page, "/years/2010/sites/ipad/order.html", "itt10-ig");
   });
 
-  test('E iPhone 4 dest-true leftover-official never writes gold', async ({ page }) => {
+  test('E iPhone 4 dest-true official never writes gold', async ({ page }) => {
     await page.goto("/years/2010/sites/iphone/index.html");
     await expect(page.locator("body")).toContainText(/FaceTime|Wi-Fi only|iPhone 4/i);
-    await leftoverOfficialDest(page, "/years/2010/sites/iphone/index.html", "iphone4-lx", "itt10-ig");
+    await officialSave(page, "/years/2010/sites/iphone/index.html", "itt10-ig");
   });
 
   test('F Open Graph Like on CNN then IMDb writes itt10-fb-og', async ({ page }) => {
@@ -412,8 +434,8 @@ test.describe('2010 new leftover dests + existing-room flows', () => {
     await expect.poll(() => getKey(page, 'itt10-ig-2')).toMatch(/second|"n":2|real/i);
   });
 
-  test('iPad order leftover dest-true never writes gold', async ({ page }) => {
-    await leftoverOfficialDest(page, "/years/2010/sites/ipad/order.html", "ipad-ord", "itt10-ig");
+  test('iPad order official dest-true never writes gold', async ({ page }) => {
+    await officialSave(page, "/years/2010/sites/ipad/order.html", "itt10-ig");
   });
 
   for (const path of [

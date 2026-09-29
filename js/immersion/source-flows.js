@@ -38,6 +38,16 @@
       localStorage.setItem(k, JSON.stringify(v));
       return true;
     } catch (e) {
+      try {
+        if (ITT.debug && ITT.debug.record) {
+          ITT.debug.record({
+            key: k,
+            feature: "source-flows",
+            error: e && e.name,
+            note: "save blocked"
+          });
+        }
+      } catch (eR) { /* */ }
       return false;
     }
   }
@@ -162,8 +172,10 @@
         var row = { name: name, note: note, file: file, ts: Date.now() };
         entries.unshift(row);
         entries = entries.slice(0, 20);
-        saveJSON(logKey, entries);
-        saveJSON(key, blob({ name: name, file: file, wandered: true, year: "1994" }));
+        if (!saveJSON(logKey, entries) || !saveJSON(key, blob({ name: name, file: file, wandered: true, year: "1994" }))) {
+          feedback("This browser blocked the save.", st, true);
+          return;
+        }
         stamp();
         if (last) last.textContent = "Last call: " + name + " · " + file;
         renderLog();
@@ -218,7 +230,10 @@
           feedback("Check: the HTML stays the same. That is the 2003 lesson.", st, true);
           return;
         }
-        saveJSON(key, blob({ theme: picked, htmlUnchanged: true, year: "2003", launch: "2003-05" }));
+        if (!saveJSON(key, blob({ theme: picked, htmlUnchanged: true, year: "2003", launch: "2003-05" }))) {
+          feedback("This browser blocked the save.", st, true);
+          return;
+        }
         stamp();
         if (savedEl) savedEl.textContent = "Saved favorite: " + picked;
         feedback("Garden favorite saved · itt03-zengarden", st);
@@ -272,7 +287,10 @@
           year: "2013",
           notGeocities: true
         });
-        saveJSON(key, state);
+        if (!saveJSON(key, state)) {
+          feedback("This browser blocked the save.", st, true);
+          return;
+        }
         stamp();
         paint(state);
         feedback("Published residual · itt13-neocities", st);
@@ -319,12 +337,15 @@
           feedback("Check: this website is 1998. The files are older.", st, true);
           return;
         }
-        saveJSON(key, blob({
+        if (!saveJSON(key, blob({
           file: picked,
           launched: "1998-05",
           year: "1998",
           archiveNotBbs: true
-        }));
+        }))) {
+          feedback("This browser blocked the save.", st, true);
+          return;
+        }
         stamp();
         if (savedEl) savedEl.textContent = "Shelved: " + picked;
         feedback("Archived in this browser · itt98-textfiles", st);
@@ -379,13 +400,16 @@
           feedback("Cite a story you actually opened.", st, true);
           return;
         }
-        saveJSON(key, blob({
+        if (!saveJSON(key, blob({
           cite: citeId,
           read: countRead(),
           year: "2004",
           launched: "2004",
           author: "hertzfeld"
-        }));
+        }))) {
+          feedback("This browser blocked the save.", st, true);
+          return;
+        }
         stamp();
         var shown2 = host.querySelector("[data-folk-saved]");
         if (shown2) shown2.textContent = "Cited: " + citeId;
@@ -437,13 +461,16 @@
           feedback("Check: this is the 2005 canvassing, not the 1990–95 quote DB.", st, true);
           return;
         }
-        saveJSON(key, blob({
+        if (!saveJSON(key, blob({
           quote: quoteId,
           aged: aged,
           year: "2005",
           canvassing: "2005",
           notEarlyNinetiesDb: true
-        }));
+        }))) {
+          feedback("This browser blocked the save.", st, true);
+          return;
+        }
         stamp();
         var shown2 = host.querySelector("[data-elon-saved]");
         if (shown2) shown2.textContent = "Judged: " + quoteId + " · " + aged;

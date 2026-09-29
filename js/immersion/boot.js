@@ -439,7 +439,31 @@
             if (f.needs && !f.needs(cfg)) continue;
             f.init(api);
           } catch (err) {
-            console.error("ITT immersion late feature failed:", f.id, err);
+            var yLate = "";
+            var pathLate = "";
+            try {
+              yLate = (document.documentElement && document.documentElement.getAttribute("data-itt-year")) || "";
+            } catch (eY) {
+              yLate = "";
+            }
+            try {
+              pathLate = location.pathname || "";
+            } catch (eP) {
+              pathLate = "";
+            }
+            console.error("ITT immersion late feature failed:", f.id, yLate, pathLate, err);
+            try {
+              if (ITT.debug && ITT.debug.record) {
+                ITT.debug.record({
+                  year: yLate,
+                  feature: f && f.id,
+                  error: err && (err.name || String(err)),
+                  note: pathLate
+                });
+              }
+            } catch (eD) {
+              /* */
+            }
           }
         }
         ITT._immersionFeaturesInited = features.length;
@@ -447,7 +471,12 @@
     }
 
     var needUtil = !(ITT.util);
-    var chain = needUtil ? loadScript(base + "lib/util.js") : Promise.resolve();
+    var chain = loadScript(base + "debug-ring.js").catch(function () {
+      return null;
+    });
+    chain = chain.then(function () {
+      return needUtil ? loadScript(base + "lib/util.js") : Promise.resolve();
+    });
 
     chain
       .then(function () {
@@ -577,6 +606,16 @@
                   })
                   .catch(function (err) {
                     console.error("ITT immersion deferred features failed:", err);
+                    try {
+                      if (ITT.debug && ITT.debug.record) {
+                        ITT.debug.record({
+                          year: year,
+                          feature: "immersion-boot",
+                          error: err && (err.name || String(err)),
+                          note: "deferred features failed"
+                        });
+                      }
+                    } catch (eRec) { /* ring is local and optional */ }
                   });
               };
               if (typeof requestIdleCallback === "function") {
@@ -597,6 +636,16 @@
       })
       .catch(function (err) {
         console.error("ITT immersion bootstrap failed:", err);
+        try {
+          if (ITT.debug && ITT.debug.record) {
+            ITT.debug.record({
+              year: year,
+              feature: "immersion-boot",
+              error: err && (err.name || String(err)),
+              note: "bootstrap failed"
+            });
+          }
+        } catch (eRec) { /* ring is local and optional */ }
       });
   }
 

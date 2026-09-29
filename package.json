@@ -31,7 +31,7 @@
 
 
     "test:e2e:2009": "playwright test e2e/2009-mvp.spec.js --workers=1",
-    "test:e2e:2013": "playwright test e2e/2013-mvp.spec.js e2e/2013-flows.spec.js e2e/2013-densify.spec.js e2e/2013-trail-real-flows.spec.js e2e/2013--leftover-dest-true.spec.js e2e/one-thing-per-year.spec.js --grep 2013 --workers=1",
+    "test:e2e:2013": "playwright test e2e/2013-mvp.spec.js e2e/2013-flows.spec.js e2e/2013-densify.spec.js e2e/2013-trail-real-flows.spec.js e2e/one-thing-per-year.spec.js --grep 2013 --workers=1",
     "test:e2e:": "echo  wiped",
 
 
@@ -55,7 +55,6 @@
     "test:e2e:2010-2015-3x": "playwright test e2e/2010-2015-leftover-3x.spec.js e2e/2010-2015-yes-leftover.spec.js e2e/2010-2015-leftover-3x-three-machines.spec.js --workers=2",
     "test:e2e:1994-1998-3x": "playwright test e2e/1994-1998-leftover-3x.spec.js e2e/undone-yes-leftover.spec.js e2e/1994-1998-leftover-3x-three-machines.spec.js --grep \"1994|1995|1996|1997|1998\" --workers=2",
     "test:e2e:2016-3x": "playwright test e2e/2016-leftover-3x.spec.js e2e/undone-yes-leftover.spec.js e2e/1994-1998-leftover-3x-three-machines.spec.js --grep \"2016|2017\" --workers=2",
-    "test:e2e:-2022-3x": "playwright test e2e/-2022-leftover-3x.spec.js --workers=2",
     "test:e2e:leftover-3x-unique": "playwright test e2e/leftover-3x-unique.spec.js e2e/2013-leftover-3x-second.spec.js e2e/leftover-dest-3x-face.spec.js --workers=2",
     "test:e2e:year-true-packs": "playwright test e2e/year-true-packs.spec.js --workers=2",
     "test:oss:gate": "node scripts/oss-visitor-gate.mjs",

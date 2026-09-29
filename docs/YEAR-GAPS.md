@@ -1,6 +1,6 @@
 # Year gaps — verified 2026-09-15
 
-**Live (2026-09-27):** Hub **24 years open**. **2015 wiped.** ** wiped.** **2017 / –2021 are React doors** (0 HTML dest folders). Leftover-3× unique catalogs are **empty**. This file is a 2026-09-15 audit snapshot. Current dest-folder counts and doors: [`DISK-TRUTH.md`](DISK-TRUTH.md).
+**Live law (2026-09-29):** Hub **22 years**. 2015 and 2017 are React doors with no HTML tree. 2009 is boarded. 2011, 2018–2021, and 2023–2025 are absent. This file is a 2026-09-15 audit snapshot. Current doors: [`DISK-TRUTH.md`](DISK-TRUTH.md).
 
 **Recheck 2026-09-20:** official 10 files exist for **2012 / 2013 / 2014** (`data-official-need` 10/10). §2 “trail 9 / Apple Pay missing” below is **historical**. **2022 dest folders 25** (not 19). Do not dest-farm to match old counts.
 

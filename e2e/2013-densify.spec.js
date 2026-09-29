@@ -28,7 +28,9 @@ test.describe("2013 leftover densify", () => {
     await page.locator("[data-vn13-trap]").click();
     await page.locator("[data-vn13-post]").click();
     expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
-    await page.locator("[data-vn13-hold]").click();
+    await page.locator("[data-vn13-hold]").dispatchEvent("pointerdown");
+    await page.waitForTimeout(6200);
+    await page.locator("[data-vn13-hold]").dispatchEvent("pointerup");
     await page.locator("[data-vn13-post]").click();
     await expect.poll(() => getKey(page, "itt13-vine-posts")).toBeTruthy();
   });

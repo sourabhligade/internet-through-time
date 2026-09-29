@@ -17,7 +17,23 @@
     return o;
   }
   function saveJSON(k, o) {
-    try { localStorage.setItem(k, JSON.stringify(o)); } catch (e) { /* */ }
+    try {
+      localStorage.setItem(k, JSON.stringify(o));
+      return true;
+    } catch (e) {
+      try {
+        if (ITT.debug && ITT.debug.record) {
+          ITT.debug.record({
+            year: "2006",
+            key: k,
+            feature: "year-2006-extras",
+            error: e && e.name,
+            note: "save blocked"
+          });
+        }
+      } catch (eR) { /* */ }
+      return false;
+    }
   }
   function val(doc, sel) {
     var el = doc.querySelector(sel);
@@ -78,12 +94,15 @@
         say(st, "Still 140 in 2006. Over 140 never writes.", true);
         return;
       }
-      saveJSON(key("tweets"), blob({
+      if (!saveJSON(key("tweets"), blob({
         text: t.slice(0, 140),
         chars: t.length,
         sms: "40404",
         limit: 140
-      }));
+      }))) {
+        say(st, "This browser blocked the save.", true);
+        return;
+      }
       if (tl) {
         tl.innerHTML = '<div class="tw-item"><b>you</b> ' + t.slice(0, 140) +
           ' <span style="color:#888;font-size:11px">· just now · 40404</span></div>' + tl.innerHTML;
@@ -123,7 +142,10 @@
         say(st, "See the feed or set one privacy first.", true);
         return;
       }
-      saveJSON(key("feed"), blob({ privacy: picked === "privacy", see: true }));
+      if (!saveJSON(key("feed"), blob({ privacy: picked === "privacy", see: true }))) {
+        say(st, "This browser blocked the save.", true);
+        return;
+      }
       say(st, "Feed ·" + key("feed"));
       reveal(doc);
     });
@@ -162,7 +184,10 @@
         say(st, "Click a clip in the list first. Empty Watch never writes.", true);
         return;
       }
-      saveJSON(key("yt"), blob({ watch: true, independent: true }));
+      if (!saveJSON(key("yt"), blob({ watch: true, independent: true }))) {
+        say(st, "This browser blocked the save.", true);
+        return;
+      }
       say(st, "Watch theater · independent until Oct · " + key("yt"));
       reveal(doc);
     });
@@ -180,7 +205,10 @@
       });
     }
     btn.addEventListener("click", function () {
-      saveJSON(key("time-you"), blob({ open: true, issue: "2006-you" }));
+      if (!saveJSON(key("time-you"), blob({ open: true, issue: "2006-you" }))) {
+        say(st, "This browser blocked the save.", true);
+        return;
+      }
       say(st, "Issue theater · " + key("time-you"));
       reveal(doc);
     });
@@ -210,7 +238,10 @@
             say(st, "Type the leftover first. Empty never writes.", true);
             return;
           }
-          saveJSON(key(suf), blob({ text: t.slice(0, 80), verb: suf }));
+          if (!saveJSON(key(suf), blob({ text: t.slice(0, 80), verb: suf }))) {
+            say(st, "This browser blocked the save.", true);
+            return;
+          }
           say(st, "Saved · " + key(suf));
           reveal(doc);
         });
@@ -251,7 +282,10 @@
           if (scoreEl) scoreEl.textContent = String(score);
         }
         if (Object.keys(hills).length >= 2) {
-          saveJSON(key("game-sled"), blob({ hills: Object.keys(hills), score: score, gameId: "sled", best: score }));
+          if (!saveJSON(key("game-sled"), blob({ hills: Object.keys(hills), score: score, gameId: "sled", best: score }))) {
+            saySled("This browser blocked the save.", true);
+            return;
+          }
           saySled("TrailSled · " + key("game-sled"));
           reveal(doc);
         } else {

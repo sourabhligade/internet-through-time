@@ -34,9 +34,21 @@
         if (st) st.textContent = "Empty never writes.";
         return;
       }
+      var wrote = false;
       try {
         localStorage.setItem("itt01-wiki", JSON.stringify({ multiStep: true, real: true, year: "2001", ts: Date.now(), body: t.slice(0, 200) }));
-      } catch (eS) { /* */ }
+        wrote = true;
+      } catch (eS) {
+        try {
+          if (ITT.debug && ITT.debug.record) {
+            ITT.debug.record({ year: "2001", key: "itt01-wiki", feature: "wikipedia", error: eS && eS.name, note: "save blocked" });
+          }
+        } catch (eR) { /* */ }
+      }
+      if (!wrote) {
+        if (st) st.textContent = "This browser blocked the save.";
+        return;
+      }
       if (st) st.textContent = "Saved in this browser.";
       try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
     });

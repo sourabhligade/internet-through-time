@@ -1,6 +1,6 @@
 # The Internet Through Time
 
-Historical reconstruction of the World Wide Web — year by year. Hub **22 years open** (1994–2007 + 2010 + 2012–2017 + 2022). ** wiped.** **2009 boarded** (tree stays on disk · year-shell is a plaque · no year card). **2015 is a React door** · Periscope Go LIVE · no HTML tree. ** wiped.** **2020 removed.** **2022 is live lean** · ChatGPT Send. **2023–2025 wiped.** 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2013 star = Vine 6s. 2014 star = WhatsApp Install. 2015 star = Periscope Go LIVE. 2021 star = ATT Ask. 2022 star = ChatGPT Send.
+Historical reconstruction of the World Wide Web — year by year. Hub **22 years open** (1994–2007 + 2010 + 2012–2017 + 2022). **2009 boarded** (tree stays on disk · year-shell is a plaque · no year card). **2015 and 2017 are React doors** (no HTML tree). **2011, 2018, 2019, 2020, and 2021 are absent.** **2023–2025 wiped.** 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2013 star = Vine 6s. 2014 star = WhatsApp Install. 2015 star = Periscope Go LIVE. 2017 star = Face ID. 2022 star = ChatGPT Send.
 
 **Not** a modern redesign. **Not** “retro inspired.” Each year aims for museum-grade accuracy based on archived screenshots, browser documentation, and period HTML capabilities.
 
@@ -86,7 +86,7 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/years/2005/` | YouTube upload · leftover 2× + leftover 4× · XP+IE6 · **live** |
 | `/years/2006/` | Twttr update · leftover 2× + leftover 4× · XP+IE6 · **live** |
 | `/years/2007/` | Lean door — iPhone Safari `itt07-iphone` · leftover 2× + leftover 4× · XP+IE6 |
-| `/years/2009/` | **Boarded** — tree stays · year-shell redirects to hub · no year card |
+| `/years/2009/` | **Boarded** — tree stays · year-shell is a plaque · no year card |
 | `/years/2010/` | Win7 · IE 8 · Instagram iOS · leftover 2× + leftover 4× · **lean** |
 | `/years/2012/` | Win7 · IE 9 · Instagram Android · Facebook IPO · SOPA · Chrome &gt; IE · **lean** |
 | `/years/2013/` | **Live lean door** — Vine 6s `itt13-vine-posts` · leftover 2× ×2 · leftover 3× first + third |
@@ -96,7 +96,7 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/app/index.html#/year/2017` | Face ID / iPhone X · Fortnite leftover · Twitter 280 · Teams GA · **lean · React** |
 | `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
 
-**Lean doors:** 2007 + 2010 + 2012–2017 + 2022. Hub is **22 years open** (1994–2007 + 2010 + 2012–2017 + 2022). **2009 boarded.** **2015 is a React door** · Periscope Go LIVE · no HTML tree. ** wiped.** ** wiped.** **2020 removed.** **2021 removed.** **2022 is live lean** · ChatGPT Send. **2023–2025 wiped.** 2013 star = Vine 6s. 2015 star = Periscope Go LIVE. 2022 star = ChatGPT Send.
+**Lean doors:** 2007 + 2010 + 2012–2017 + 2022. Hub is **22 years open** (1994–2007 + 2010 + 2012–2017 + 2022). **2009 boarded.** **2015 is a React door** · Periscope Go LIVE · no HTML tree. **2018 absent.** **2019 absent.** **2020 removed.** **2021 removed.** **2022 is live lean** · ChatGPT Send. **2023–2025 wiped.** 2013 star = Vine 6s. 2015 star = Periscope Go LIVE. 2022 star = ChatGPT Send.
 
 **Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md).  
 **Architecture:** [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).  

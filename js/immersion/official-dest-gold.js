@@ -40,10 +40,28 @@
     var k;
     if (extra) for (k in extra) if (Object.prototype.hasOwnProperty.call(extra, k)) payload[k] = extra[k];
     var key = keyOf(year, suffix);
+    var wrote = false;
     try {
-      if (a && a.saveJSON) a.saveJSON(key, payload);
-      else localStorage.setItem(key, JSON.stringify(payload));
-    } catch (eS) { /* */ }
+      if (a && a.saveJSON) wrote = a.saveJSON(key, payload) !== false;
+      else {
+        localStorage.setItem(key, JSON.stringify(payload));
+        wrote = true;
+      }
+    } catch (eS) {
+      wrote = false;
+      try {
+        if (ITT.debug && ITT.debug.record) {
+          ITT.debug.record({
+            year: year,
+            key: key,
+            feature: "official-dest-gold",
+            error: eS && (eS.name || String(eS)),
+            note: "gold save blocked"
+          });
+        }
+      } catch (eRec) { /* */ }
+    }
+    if (!wrote) return "";
     try {
       if (ITT.revealNextFlow) ITT.revealNextFlow(document);
     } catch (eN) { /* */ }
@@ -66,6 +84,8 @@
     var st = doc.querySelector("[data-official-status]") || form.querySelector("[data-official-status]");
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
+      /* PayPal Send: official-verb owns the key and the one sentence. */
+      if (form.getAttribute("data-paypal-send") !== null && form.querySelector("[data-official-verb]")) return;
       var year = yearOf(doc);
       var got = read(form, doc);
       if (!got.ok) {
@@ -73,6 +93,10 @@
         return;
       }
       var key = saveGold(year, suffix, got.extra || {});
+      if (!key) {
+        feedback("This browser blocked the save.", st, true);
+        return;
+      }
       feedback("Saved · " + key, st);
     });
   }
@@ -113,8 +137,8 @@
             persistSeen(arr);
             var st = doc.querySelector("[data-official-status], [data-sj-status], [data-drudge-status]");
             if (arr.length >= need) {
-              saveGold(yearOf(doc) || year, goldSuffix, { ids: arr.slice(0, 8) });
-              feedback(need + " dests · saved", st);
+              var gk = saveGold(yearOf(doc) || year, goldSuffix, { ids: arr.slice(0, 8) });
+              feedback(gk ? need + " dests · saved" : "This browser blocked the save.", st, !gk);
             } else {
               feedback(arr.length + "/" + need + " (writes after " + need + ")", st, true);
             }

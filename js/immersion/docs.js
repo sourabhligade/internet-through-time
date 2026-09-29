@@ -39,7 +39,23 @@
     }
   }
   function save(doc) {
-    localStorage.setItem(storageKey(), JSON.stringify(doc));
+    try {
+      localStorage.setItem(storageKey(), JSON.stringify(doc));
+      return true;
+    } catch (e) {
+      try {
+        if (ITT.debug && ITT.debug.record) {
+          ITT.debug.record({
+            year: "2006",
+            key: storageKey(),
+            feature: "docs",
+            error: e && e.name,
+            note: "save blocked"
+          });
+        }
+      } catch (eR) { /* */ }
+      return false;
+    }
   }
   function defaultDoc() {
     return {
@@ -100,8 +116,12 @@
           doc.querySelector("[data-docs-body]");
         data.title = (t && (t.value != null ? t.value : t.textContent)) || data.title;
         data.body = (b && (b.value != null ? b.value : b.textContent)) || data.body;
-        save(data);
         var st = doc.querySelector("[data-docs-status]");
+        if (!save(data)) {
+          if (st) st.textContent = "This browser blocked the save.";
+          ittFeedback("This browser blocked the save.", st);
+          return;
+        }
         if (st) {
           st.textContent = "Saved in this browser · collaborators can “see” edits (theater).";
           ittFeedback(st.textContent, st);

@@ -140,8 +140,8 @@ test.describe('2004 hard flows', () => {
   test('thefacebook campus honesty', async ({ page }) => {
     await goInFrame(page, 'sites/facebook/about.html');
     await waitForImmersion(page, '2004');
-    const body = await contentFrame(page).locator('body').innerText();
-    expect(body).toContain('February 4, 2004');
+    await expect(contentFrame(page).locator('.fb-body')).toContainText('February 4, 2004');
+    const body = await contentFrame(page).locator('.fb-body').innerText();
     expect(body).toMatch(/Harvard|college|Thefacebook/i);
     expect(body).toMatch(/Not yet|News Feed|open registration/i);
   });

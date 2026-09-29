@@ -89,7 +89,22 @@
   }
 
   function saveJSON(k, v) {
-    localStorage.setItem(k, JSON.stringify(v));
+    try {
+      localStorage.setItem(k, JSON.stringify(v));
+      return true;
+    } catch (e) {
+      try {
+        if (ITT.debug && ITT.debug.record) {
+          ITT.debug.record({
+            key: k,
+            feature: "real-flow",
+            error: e && e.name,
+            note: "save blocked"
+          });
+        }
+      } catch (eR) { /* */ }
+      return false;
+    }
   }
 
   function countChecked(doc, sel) {
@@ -205,7 +220,10 @@
             product: btn.getAttribute("data-ott-product") || undefined,
             ts: Date.now()
           };
-          saveJSON(full, payload);
+          if (!saveJSON(full, payload)) {
+            feedback("This browser blocked the save.", st, { error: true });
+            return;
+          }
           var yOk = yearOf();
           var msgOk =
             btn.getAttribute("data-ok-msg") ||
@@ -305,14 +323,17 @@
           }
           var suffix = form.getAttribute("data-storage-key") || "form-save";
           var full = storageKey(suffix);
-          saveJSON(full, {
+          if (!saveJSON(full, {
             multiStep: true,
             real: true,
             fields: fields,
             checks: minReq ? countChecked(form, "[data-req]") : undefined,
             year: yearOf(),
             ts: Date.now()
-          });
+          })) {
+            feedback("This browser blocked the save.", st, { error: true });
+            return;
+          }
           feedback("Saved in this browser.", st);
           markUsed(form.getAttribute("data-tour-id") || undefined);
           try {

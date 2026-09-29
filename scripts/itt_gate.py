@@ -13,9 +13,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 # Hub-open years. Branch museum/1994-2020-lean.
-# Hub 23 years open (1994–2007 + 2010 + 2012–2017 + 2020 + 2022). 2021 removed.
-# 2009 boarded (tree stays, year-shell is a boarded room, no hub card).
-# Wiped years are _WIPED (no tree). 2005 is restored.
+# Hub 22 years open (1994–2007 + 2010 + 2012–2017 + 2022).
+# 2015 and 2017 are React doors (no years/YYYY tree). 2014, 2016, and 2022 are HTML.
+# 2009 boarded (tree stays, year-shell is a plaque, no hub card).
+# 2011 and 2018–2021 and 2023–2025 are absent. 2005 is restored.
 _BOARDED = {"2009"}
 _WIPED = {"2011", "2023", "2024", "2025"}
 # Back-compat: older scripts imported _WIPED as “not a hub year”.

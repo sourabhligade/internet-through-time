@@ -1,6 +1,7 @@
 # Flow-check diagram
 
 **Date:** 2026-09-20  
+**Live check updated:** 2026-09-29. Sections 1–4 are the 22-door walk. Sections 5–6 are the 2026-09-20 snapshot and still name years that are not doors.  
 **Status:** Check map. Not dest-farm.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md).  
 **Dest-true I/O:** [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md).  
@@ -10,40 +11,30 @@
 
 ---
 
-## 1. Museum door (every playable year)
+## 1. Museum door (22 open years)
+
+Open doors: 1994–2007, 2010, 2012–2017, 2022. 2015 and 2017 are React doors (`/app/index.html#/year/YYYY`). 2014, 2016, and 2022 are HTML doors. 2009 is a boarded plaque, not a card. 2011, 2018, 2019, 2020, and 2021 are absent. 2023–2025 are wiped.
 
 ```mermaid
 flowchart TD
-  HUB["Hub index.html<br/>28 year cards"] --> YEAR["Year-shell index.html"]
-  YEAR --> SP["Starting Point pages/home.html<br/>guided ol = 6"]
-  SP --> STAR["Star dest n=1<br/>dest-true verb"]
-  STAR --> O2["Official dest n=2"]
-  O2 --> O3["n=3"]
-  O3 --> O4["n=4"]
-  O4 --> O5["n=5"]
-  O5 --> O6["n=6"]
-  O6 --> O7["n=7"]
-  O7 --> O8["n=8"]
-  O8 --> O9["n=9"]
-  O9 --> O10["n=10 year game / Queue"]
-  SP -. folded .-> ALSO["Also this year<br/>leftover dest leftover-2× warehouse"]
-  SP -. folded .-> LO3X["Leftover-3× unique dest-true dests<br/>first 3 + second 3 + third 3"]
-  ALSO -.-> SP
-  LO3X --> F1["First leftover dest"]
-  F1 --> F2["Second leftover dest"]
-  F2 --> F3["Third leftover dest"]
-  F3 --> S1["Second-strip leftover dest"]
-  S1 --> S2
-  S2 --> S3
-  S3 --> T1["Third-strip leftover dest"]
-  T1 --> T2
-  T2 --> T3
-  T3 --> SP
+  HUB["Hub index.html<br/>22 year cards"] --> KIND{"Card kind"}
+  KIND -->|HTML| YEAR["/years/YYYY/"]
+  KIND -->|React 2015 or 2017| REACT["/app/index.html#/year/YYYY"]
+  YEAR --> ROOM["Room click"]
+  REACT --> ROOM
+  ROOM --> EMPTY["Empty or trap"]
+  ROOM --> DONE["Finished click"]
+  ROOM --> BLOCK["localStorage setItem throws"]
+  EMPTY --> NOKEY["No key"]
+  DONE --> KEY["This dest key"]
+  BLOCK --> MSG["This browser blocked the save."]
 ```
 
-**Link check:** hub href · year-shell · Starting Point · About · Map · star file · official 10 files · leftover-3× unique dest-true dest files.
+**HTML official caps:** 2004 ends at 8. 2012, 2013, and 2014 end at 9. Other open HTML years in `js/config/flow-trails.js` list 10. 2015 and 2017 are not in that file.
 
-**Flow check:** dest-true I/O on star + leftover dest leftover-3× unique dest-true dests (diagram 3).
+**Link check:** hub card · HTML year-shell or React door · star. Do not require `years/2015/` or `years/2017/`.
+
+**Flow check:** empty never writes · trap never writes · a finished click writes this dest’s key · a blocked `setItem` does not say Saved.
 
 ---
 
@@ -51,24 +42,22 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-  subgraph PLAY["Playable 28"]
-    FOR["Forests 1994–2006<br/>dense leftover-2× · leftover-3× stacked workshop"]
-    LOCK["Dest-lock lean<br/>2007 · 2010–2012 · 2014 · 2021<br/>official 10 + leftover-3× unique dest-true dests"]
-    REV["Dest-lock reverted<br/>2015–2020 dest folders stay"]
-    LEAN["Dest-true lean<br/>2013 ·  · 2022"]
+  subgraph PLAY["22 open doors"]
+    HTML["HTML doors<br/>1994–2007 · 2010 · 2012–2014 · 2016 · 2022"]
+    REACT["React doors<br/>2015 · 2017"]
   end
-  BOARD["2009 boarded<br/>plaque · not a visitor door"]
-  WIPE["2023–2025<br/>no years/YYYY/ tree"]
+  BOARD["2009 boarded plaque"]
+  ABSENT["2011 · 2018 · 2019 · 2020 · 2021 absent"]
+  WIPE["2023–2025 wiped"]
 ```
 
-| Class | Years | Official 10 | Leftover-3× unique dest-true dests | Check |
-|-------|-------|-------------|-----------------------------------|-------|
-| Forest | 1994–2006 | 10 files | **Workshop stacked** — not unique dest-true 9 | Links + dest-true official dest I/O. Do not dest-farm unique leftover-3×n |
-| Dest-lock lean | 2007, 2010–2012, 2014, 2021 | 10 | 9 / 9 / 9 / 9 / 9 / **5 stop** | Do not dest-lock revert dest-farm dests |
-| Dest-lock reverted | 2015–2020 | 10 | 9 / 9 / leftover-20 (2017) / 3 / 9 / 9 | Dest folders stay. Unique dest-true dests dest-disjoint |
-| Dest-true lean | 2013, , 2022 | 10 | 9 / **3 stop** / 9 |  GDPR Manage is the I/O model |
-| Boarded | 2009 | plaque | catalogs not visitor | Do not restore as a playable door |
-| Wiped | 2023–2025 | no tree | — | Do not restore |
+| Class | Years | Check |
+|-------|-------|-------|
+| HTML door | 1994–2007, 2010, 2012–2014, 2016, 2022 | `/years/YYYY/` returns 200. Official list stops at the cap above. |
+| React door | 2015, 2017 | Hub and atlas open `/app/index.html#/year/YYYY`. No HTML tree. |
+| Boarded | 2009 | Plaque at `/years/2009/`. No hub card. No atlas tick. |
+| Absent | 2011, 2018, 2019, 2020, 2021 | No card, no tree, no React door. |
+| Wiped | 2023–2025 | No tree. Do not restore. |
 
 ---
 
@@ -101,12 +90,11 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-  A["1. Hub: 28 cards. No 2009. No 2023+."] --> B["2. Year-shell → Starting Point. Guided 6."]
-  B --> C["3. Star dest-true verb. Empty / trap never write. Complete writes star key."]
-  C --> D["4. Official dests n=2–10. Files exist. data-official-need. Empty never writes."]
-  D --> E["5. Leftover-3× unique dest-true dests if year law asks.<br/>9 / 3 / 5 / 0. Dest-disjoint official 10."]
-  E --> F["6. Leftover dest leftover-2× warehouse folded Also this year. Official dest leftover-2× first paint = 0."]
-  F --> G["7. Mock-flow DEST_FIELD / WEAK_REAL / HASH_CTA = 0."]
+  A["1. Hub: 22 cards. No 2009. No 2011. No 2018–2021. No 2023+."] --> B["2. HTML door or React door. 2015 and 2017 are React."]
+  B --> C["3. Star verb. Empty / trap never write. Complete writes star key."]
+  C --> D["4. HTML official stops through the cap. 2004=8. 2012–2014=9."]
+  D --> E["5. Leftover only where that year still has a rail. Do not dest-farm."]
+  E --> F["6. Blocked setItem says: This browser blocked the save."]
 ```
 
 **Packs:**
@@ -127,6 +115,8 @@ CI does **not** run leftover-3× directory (`3x-links`), leftover-5× live, left
 ---
 
 ## 5. Leftover-3× unique dest-true dests (dest-disjoint)
+
+**Snapshot 2026-09-20. Not the live walk.** The table below still names 2011, 2018, 2019, 2020, and 2021. Those years are not doors. Do not walk them and do not restore them. Section 6 is the same snapshot. The live check is sections 1–4.
 
 ```mermaid
 flowchart LR

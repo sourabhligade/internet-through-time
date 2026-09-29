@@ -58,8 +58,13 @@ async function completeReactStop(page, room) {
   const boxes = room.locator("input[type='checkbox']");
   const n = await boxes.count();
   for (let i = 0; i < n; i++) await boxes.nth(i).check();
-  const field = room.locator("input:not([type='checkbox']):not([data-face-only])");
-  if ((await field.count()) > 0) await field.fill("done leftover");
+  const tweet = room.locator("[data-tweet-field]");
+  if ((await tweet.count()) > 0) {
+    await tweet.fill("a".repeat(141));
+  } else {
+    const field = room.locator("input:not([type='checkbox']):not([data-face-only])");
+    if ((await field.count()) > 0) await field.fill("done leftover");
+  }
   await room.locator(".actions button").last().click();
 }
 

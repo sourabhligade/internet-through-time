@@ -91,7 +91,11 @@ const SIGNATURE = {
       });
       await frame.locator('[name="gbname"]').fill('Handoff residual');
       await frame.locator('[name="gbnote"]').fill('Worth the modem.');
-      await frame.locator('form[data-csotd-gb] input[type="submit"]').click();
+      await frame.locator('[data-official-pick="today"]').evaluate((el) => {
+        el.classList.add('is-on');
+        el.setAttribute('aria-pressed', 'true');
+      });
+      await frame.locator('[data-official-verb]').click();
     },
   },
   '1995': {

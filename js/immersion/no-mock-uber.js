@@ -76,6 +76,10 @@
         city: selected.city,
         cheaper: selected.kind === "uberx"
       });
+      if (!full) {
+        G.feedback("This browser blocked the save.", st, { error: true });
+        return;
+      }
       G.feedback(
         (selected.kind === "uberx" ? "UberX" : "Black car") + " request REAL · " + full,
         st

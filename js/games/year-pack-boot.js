@@ -80,14 +80,19 @@
       );
       return;
     }
-    saved = true;
     score = 10 + n;
+    var wrote = false;
     if (YG && YG.saveBest) {
-      YG.saveBest(gid, score, {
+      wrote = !!YG.saveBest(gid, score, {
         year: year,
         merge: { taps: n, real: true, multiStep: true }
       });
     }
+    if (!wrote) {
+      setStatus("This browser blocked the save.");
+      return;
+    }
+    saved = true;
     paintBest();
     step("save");
     setStatus("Saved · itt" + String(year).slice(2) + "-game-" + gid + ".");

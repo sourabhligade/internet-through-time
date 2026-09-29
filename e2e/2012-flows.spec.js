@@ -80,11 +80,13 @@ test.describe('2012 flows', () => {
     await page.goto('/years/2012/sites/medium/index.html');
     await clearKeys(page, ['itt12-pop-medium']);
     await page.reload();
-    const go = page.locator('[data-pop-go][data-medium-save]').first();
+    const go = page.locator('[data-official-verb]').first();
     await go.click();
     expect(await getKey(page, 'itt12-pop-medium')).toBeFalsy();
-    await page.locator('[data-pop-field]').first().fill('museum draft');
-    await page.locator('[data-pop-req]').first().check();
+    await page.locator('[data-official-need]').first().fill('museum draft');
+    const reqs = page.locator('[data-official-req]');
+    const nReq = await reqs.count();
+    for (let i = 0; i < nReq; i++) await reqs.nth(i).check();
     await go.click();
     await expect.poll(() => getKey(page, 'itt12-pop-medium')).toBeTruthy();
   });

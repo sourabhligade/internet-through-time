@@ -129,6 +129,10 @@
     var n = G.countChecked(doc, checkSel);
     var extra = Object.assign({ checks: n }, spec.extra || {});
     var full = G.saveReal(suffix, extra);
+    if (!full) {
+      G.feedback("This browser blocked the save.", st, { error: true });
+      return;
+    }
     G.feedback("Saved in this browser.", st);
     G.markUsed();
     try {

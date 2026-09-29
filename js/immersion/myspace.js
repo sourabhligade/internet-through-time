@@ -356,9 +356,29 @@
             ts: Date.now(),
             slots: slots
           };
+          var wroteTop8 = false;
           try {
             localStorage.setItem(top8Key, JSON.stringify(blob));
-          } catch (eW) { /* */ }
+            wroteTop8 = true;
+          } catch (eW) {
+            try {
+              if (ITT.debug && ITT.debug.record) {
+                ITT.debug.record({
+                  key: top8Key,
+                  feature: "myspace",
+                  error: eW && eW.name,
+                  note: "save blocked"
+                });
+              }
+            } catch (eR) { /* */ }
+          }
+          if (!wroteTop8) {
+            if (top8St) {
+              top8St.textContent = "This browser blocked the save.";
+              top8St.style.color = "#a00";
+            }
+            return;
+          }
           if (top8St) {
             top8St.textContent = "Saved Top 8 · " + top8Key;
             top8St.style.color = "#060";

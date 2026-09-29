@@ -37,9 +37,21 @@
           if (st) st.textContent = "Stumble first. Empty never writes.";
           return;
         }
+        var wrote = false;
         try {
           localStorage.setItem("itt02-stumble", JSON.stringify({ multiStep: true, real: true, year: "2002", ts: Date.now(), topic: last }));
-        } catch (eS) { /* */ }
+          wrote = true;
+        } catch (eS) {
+          try {
+            if (ITT.debug && ITT.debug.record) {
+              ITT.debug.record({ year: "2002", key: "itt02-stumble", feature: "stumbleupon", error: eS && eS.name, note: "save blocked" });
+            }
+          } catch (eR) { /* */ }
+        }
+        if (!wrote) {
+          if (st) st.textContent = "This browser blocked the save.";
+          return;
+        }
         if (st) st.textContent = "Saved in this browser.";
         try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
       });

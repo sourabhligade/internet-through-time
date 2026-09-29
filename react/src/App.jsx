@@ -1,32 +1,103 @@
-import { useState } from "react";
+import { Component, useEffect } from "react";
 import { Link, Navigate, Route, Routes, useParams } from "react-router-dom";
-import { Year2014 } from "./Year2014.jsx";
 import { Year2015 } from "./Year2015.jsx";
 import { Year2017 } from "./Year2017.jsx";
 import { REACT_YEARS, yearById } from "./years.js";
+
+const STATIC_YEARS = { 2014: 1, 2016: 1, 2022: 1 };
 
 export function App() {
   return (
     <Routes>
       <Route path="/" element={<Hall />} />
-      <Route path="/year/2014" element={<Year2014 />} />
-      <Route path="/year/2015" element={<Year2015 />} />
-      <Route path="/year/2017" element={<Year2017 />} />
+      <Route path="/year/2014" element={<StaticYear year="2014" />} />
+      <Route path="/year/2016" element={<StaticYear year="2016" />} />
+      <Route path="/year/2022" element={<StaticYear year="2022" />} />
+      <Route
+        path="/year/2015"
+        element={
+          <DoorError year="2015">
+            <Year2015 />
+          </DoorError>
+        }
+      />
+      <Route
+        path="/year/2017"
+        element={
+          <DoorError year="2017">
+            <Year2017 />
+          </DoorError>
+        }
+      />
       <Route path="/year/:year" element={<YearDoor />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }
 
+class DoorError extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { error: null };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { error };
+  }
+
+  componentDidCatch(error) {
+    console.error("ITT React door failed", this.props.year, error);
+    try {
+      var dbg = window.ITT && window.ITT.debug;
+      if (dbg && dbg.record) {
+        dbg.record({
+          year: this.props.year || "",
+          feature: "react-door",
+          error: error && (error.name || String(error)),
+          note: "react door failed"
+        });
+      }
+    } catch (eRec) { /* ring is local and optional */ }
+  }
+
+  render() {
+    if (this.state.error) {
+      return (
+        <main className="hall">
+          <h1>This door did not open</h1>
+          <p>
+            {this.props.year} hit a script error. The year menu is still
+            there.
+          </p>
+          <p>
+            <a href="../index.html">Museum hub</a>
+          </p>
+        </main>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+function StaticYear({ year }) {
+  useEffect(() => {
+    window.location.assign("/years/" + year + "/");
+  }, [year]);
+  return (
+    <main className="hall">
+      <p>Opening {year} on the static year door.</p>
+    </main>
+  );
+}
+
 function Hall() {
   return (
     <main className="hall">
-      <p className="kicker">React shell · 2014 and later</p>
+      <p className="kicker">React doors · 2015 and 2017</p>
       <h1>Internet Through Time</h1>
       <p className="lede">
-        These doors are the React app. 1994–2013 stay on the static
-        museum at port 8080. 2023–2025 stay wiped. Each door opens
-        the existing year rooms.
+        2015 and 2017 are the React doors. 2014, 2016, and 2022 open on
+        the static museum. 2023–2025 stay wiped.
       </p>
       <ul className="cards">
         {REACT_YEARS.map((row) => (
@@ -39,42 +110,19 @@ function Hall() {
           </li>
         ))}
       </ul>
+      <p>
+        <a href="../index.html">Museum hub</a>
+      </p>
     </main>
   );
 }
 
 function YearDoor() {
   const { year } = useParams();
+  if (STATIC_YEARS[year]) return <StaticYear year={year} />;
   const row = yearById(year);
-  const [src, setSrc] = useState(row ? row.home : "");
-  const [label, setLabel] = useState(row ? "Starting Point" : "");
-
   if (!row) return <Navigate to="/" replace />;
-
-  function open(nextSrc, nextLabel) {
-    setSrc(nextSrc);
-    setLabel(nextLabel);
-  }
-
-  return (
-    <div className="door">
-      <header>
-        <Link to="/">All React years</Link>
-        <strong>{row.year}</strong>
-        <span>{row.star}</span>
-        <em>{label}</em>
-      </header>
-      <nav>
-        <button type="button" onClick={() => open(row.home, "Starting Point")}>
-          Starting Point
-        </button>
-        {row.steps.map(([name, href]) => (
-          <button key={href} type="button" onClick={() => open(href, name)}>
-            {name}
-          </button>
-        ))}
-      </nav>
-      <iframe title={row.year + " " + label} src={src} />
-    </div>
-  );
+  if (year === "2015") return <Navigate to="/year/2015" replace />;
+  if (year === "2017") return <Navigate to="/year/2017" replace />;
+  return <Navigate to="/" replace />;
 }

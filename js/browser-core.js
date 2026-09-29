@@ -18,6 +18,7 @@
   if (qi !== -1) bust = src.slice(qi);
   // Order: pure helpers first, then create (wires + chrome/history)
   var parts = [
+    "debug-ring.js",
     "museum-progress.js",
     "browser/navigate.js",
     "browser/connect.js",

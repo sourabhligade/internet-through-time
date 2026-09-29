@@ -221,6 +221,14 @@ h1 {
   background: #fff;
 }
 .product-face .product-kicker { margin: 0 0 6px; font-weight: 700; }
+.product-face .counter { display: block; margin: 8px 0; }
+.product-face .counter input {
+  display: block;
+  width: min(360px, 100%);
+  margin-top: 4px;
+  padding: 8px;
+  box-sizing: border-box;
+}
 .story-ring {
   width: 64px;
   height: 64px;

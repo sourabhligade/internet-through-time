@@ -90,7 +90,20 @@
       blob.multiStep = true;
       blob.official = true;
     }
-    saveJSON(key, blob);
+    if (!saveJSON(key, blob)) {
+      try {
+        if (global.ITT && ITT.debug && ITT.debug.record) {
+          ITT.debug.record({
+            year: String(year || ""),
+            key: key,
+            feature: "saveBest",
+            error: "storage",
+            note: "game save blocked"
+          });
+        }
+      } catch (eRec) { /* */ }
+      return null;
+    }
     /* Official n=10 whenKey (flow-trails) — score 0 / Start never writes. */
     if (sc > 0) {
       try {
@@ -221,6 +234,10 @@
         extra.merge = { official: true, multiStep: true };
       }
       var blob = saveBest(id, score, extra);
+      if (!blob) {
+        setStatus(null, "This browser blocked the save.");
+        return;
+      }
       var bestEl = document.querySelector("[data-game-best]");
       if (bestEl) bestEl.textContent = String(blob.best);
       setStatus(null, "Run saved · score " + score + " · best " + blob.best);

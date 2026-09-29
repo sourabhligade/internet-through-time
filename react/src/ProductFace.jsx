@@ -63,20 +63,29 @@ const FACE = {
   "itt22-game-prompt": ["game", "Prompt Queue", "The year toy. A score of 0 writes nothing."],
 };
 
-export function ProductFace({ id }) {
+export function ProductFace({ id, text, onText, maxLength }) {
   const row = FACE[id];
   const [live, setLive] = useState(false);
-  const [count, setCount] = useState(0);
   if (!row) return null;
   const [kind, title, line] = row;
+  const typed = String(text || "");
   return (
     <div className={"product-face face-" + kind} data-product-face={kind}>
       <p className="product-kicker">{title}</p>
       {kind === "ring" ? <button type="button" className="story-ring" onClick={() => setLive(true)} aria-label="Story ring">{live ? "posted" : "story"}</button> : null}
       {kind === "counter" ? (
         <label className="counter">
-          {count}/280
-          <input data-face-only maxLength={280} onChange={(event) => setCount(event.target.value.length)} placeholder="141 to 280" />
+          {typed.length}/280
+          <input
+            data-tweet-field
+            maxLength={maxLength || 281}
+            value={typed}
+            onChange={(event) => {
+              if (onText) onText(event.target.value);
+            }}
+            placeholder="141 to 280"
+            autoComplete="off"
+          />
         </label>
       ) : null}
       {kind === "faces" ? <p className="reacts">Like · Love · Haha · Wow · Sad · Angry</p> : null}

@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Museum door — docs/FLOW-CHECK-DIAGRAM.md §4 + docs/DISK-TRUTH.md.
- * Hub 24 years (1994–2007 + 2010 + 2012–2017 + 2020–2022). 2005 restored. 2015 is a React door with no HTML tree.  off hub.  wiped. 2009 boarded. 2023–2025 wiped.
+ * Hub 22 years (1994–2007 + 2010 + 2012–2017 + 2022). 2015 and 2017 are React doors. 2009 boarded. 2011, 2018–2021, and 2023–2025 are absent.
  * Links first, then dest-true I/O. Dest-folder count is not a pass.
  */
 const fs = require("fs");
@@ -45,7 +45,7 @@ async function getKey(page, key) {
 }
 
 test.describe("visitor door", () => {
- test("hub lists 24 years including 2022, 2015, and 2005 · no 2009 · no 2023+", async ({ page }) => {
+ test("hub lists 22 years including 2022, 2015, and 2005 · no 2009 · no 2023+", async ({ page }) => {
  expect(SHIP).toHaveLength(22);
     await page.goto("/");
  await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
