@@ -240,28 +240,50 @@
   }
 
   function bootIgAlias(doc) {
-    /* Mirror instagram.js itt10-ig-posts onto research key itt10-ig.
-       Second successful share writes itt10-ig-2. */
+    /* Mirror official itt10-ig-posts onto itt10-ig. Count finished shares
+       separately: official-verb stores an object, so array length never
+       reaches 2 and itt10-ig-2 would never write. */
     if (!doc.querySelector("[data-ig-share]")) return;
     var share = doc.querySelector("[data-ig-share]");
     var before = null;
+    var n = 0;
+    var filterPicked = false;
+    var filterBtns = doc.querySelectorAll("[data-ig-filter]");
+    var fi;
+    for (fi = 0; fi < filterBtns.length; fi++) {
+      filterBtns[fi].addEventListener("click", function () {
+        filterPicked = true;
+      });
+    }
     function snap() {
       before = null;
       try { before = localStorage.getItem(key("ig-posts")); } catch (e0) { /* */ }
     }
+    function finishedShare() {
+      if (!filterPicked) return false;
+      var capEl = doc.querySelector("[data-ig-caption]");
+      var caption = capEl ? String(capEl.value || "").replace(/^\s+|\s+$/g, "") : "";
+      if (caption.length < 2) return false;
+      var reqs = doc.querySelectorAll("[data-req]");
+      var cn = 0;
+      var ci;
+      for (ci = 0; ci < reqs.length; ci++) if (reqs[ci].checked) cn++;
+      if (reqs.length && cn < reqs.length) return false;
+      return true;
+    }
     /* official-verb writes itt10-ig-posts on click capture. pointerdown is
-       earlier, so the mirror can see that this click changed the key. */
+       earlier, so the mirror can tell this click changed the key. */
     share.addEventListener("pointerdown", snap, true);
     share.addEventListener("click", function () {
       setTimeout(function () {
         try {
           var raw = localStorage.getItem(key("ig-posts"));
-          if (!raw || raw === before) return;
-          localStorage.setItem(key("ig"), raw);
-          var list = [];
-          try { list = JSON.parse(raw); } catch (eL) { list = []; }
-          if (list && list.length >= 2) {
-            saveJSON(key("ig-2"), blob({ n: list.length, second: true }));
+          if (!raw) return;
+          if (raw !== before) localStorage.setItem(key("ig"), raw);
+          if (!finishedShare()) return;
+          n += 1;
+          if (n >= 2) {
+            saveJSON(key("ig-2"), blob({ n: n, second: true }));
             try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
           }
         } catch (e) { /* */ }
