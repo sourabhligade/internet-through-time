@@ -14,7 +14,8 @@
   }
   function load() {
     try {
-      return JSON.parse(localStorage.getItem(storageKey()) || "[]") || [];
+      var parsed = JSON.parse(localStorage.getItem(storageKey()) || "[]");
+      return Array.isArray(parsed) ? parsed : [];
     } catch (e) {
       return [];
     }
@@ -137,6 +138,17 @@
           if (st0) {
             st0.setAttribute("data-locked", "1");
             st0.textContent = "Write a caption first (empty share does not write).";
+          }
+          return;
+        }
+        var prev = null;
+        try { prev = JSON.parse(localStorage.getItem(storageKey()) || "null"); } catch (eP) { prev = null; }
+        /* official-verb writes this same key on click capture. Replacing that
+           object with a post array drops real/year. Keep the official blob. */
+        if (prev && typeof prev === "object" && !Array.isArray(prev)) {
+          if (st0) {
+            st0.setAttribute("data-locked", "1");
+            st0.textContent = "Shared · " + selected;
           }
           return;
         }

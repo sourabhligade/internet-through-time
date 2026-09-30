@@ -3951,26 +3951,6 @@
     { "id": "chromewebstore", "name": "Chrome Web Store leftover" }
   ],
   "2012": [
-    { "id": "buzzfeed", "name": "BuzzFeed" },
-    { "id": "chrome", "name": "Chrome" },
-    { "id": "drawsomething", "name": "Draw Something" },
-    { "id": "facebook", "name": "Facebook" },
-    { "id": "flipboard", "name": "Flipboard" },
-    { "id": "googledrive", "name": "Google Drive" },
-    { "id": "instagram", "name": "Instagram" },
-    { "id": "iphone", "name": "iPhone" },
-    { "id": "medium", "name": "Medium" },
-    { "id": "path", "name": "Path" },
-    { "id": "pinterest", "name": "Pinterest" },
-    { "id": "reddit", "name": "Reddit" },
-    { "id": "snapchat", "name": "Snapchat" },
-    { "id": "soundcloud", "name": "SoundCloud" },
-    { "id": "surface", "name": "Surface" },
-    { "id": "twitter", "name": "Twitter" },
-    { "id": "uber", "name": "Uber" },
-    { "id": "wikipedia", "name": "Wikipedia" },
-    { "id": "windows8", "name": "Windows 8" },
-    { "id": "youtube", "name": "YouTube" },
     { "id": "tinder", "name": "Tinder leftover" },
     { "id": "duolingo", "name": "Duolingo leftover" },
     { "id": "coursera", "name": "Coursera leftover" },
@@ -3981,8 +3961,7 @@
     { "id": "ios6", "name": "iOS 6 leftover" },
     { "id": "googleplay", "name": "Google Play leftover" },
     { "id": "kindlefirehd", "name": "Kindle Fire HD leftover" },
-    { "id": "coinbase", "name": "Coinbase leftover" },
-    { "id": "playable", "name": "Playable" }
+    { "id": "coinbase", "name": "Coinbase leftover" }
   ],
   "2013": [
     {

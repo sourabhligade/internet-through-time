@@ -344,11 +344,13 @@
       "immersion/one-thing-machines.js"
     ],
     "2014": [
+      "immersion/leftover-official.js",
       "immersion/year-2014-extras.js",
       "immersion/one-thing-machines.js"
     ],
 
     "2016": [
+      "immersion/leftover-official.js",
       "immersion/no-mock-gfc.js",
       "immersion/no-mock-sopa.js",
       "immersion/no-mock-uber.js",
@@ -371,6 +373,7 @@
     ],
 
     "2022": [
+      "immersion/leftover-official.js",
       "immersion/no-mock-gfc.js",
       "immersion/no-mock-sopa.js",
       "immersion/no-mock-uber.js",

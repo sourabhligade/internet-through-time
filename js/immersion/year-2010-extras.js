@@ -244,10 +244,15 @@
        Second successful share writes itt10-ig-2. */
     if (!doc.querySelector("[data-ig-share]")) return;
     var share = doc.querySelector("[data-ig-share]");
-    var n = 0;
-    share.addEventListener("click", function () {
-      var before = null;
+    var before = null;
+    function snap() {
+      before = null;
       try { before = localStorage.getItem(key("ig-posts")); } catch (e0) { /* */ }
+    }
+    /* official-verb writes itt10-ig-posts on click capture. pointerdown is
+       earlier, so the mirror can see that this click changed the key. */
+    share.addEventListener("pointerdown", snap, true);
+    share.addEventListener("click", function () {
       setTimeout(function () {
         try {
           var raw = localStorage.getItem(key("ig-posts"));
