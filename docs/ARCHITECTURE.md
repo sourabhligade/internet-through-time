@@ -1,6 +1,6 @@
 # Architecture — Internet Through Time
 
-**Purpose:** Keep the repo aligned as years grow (1994–2007 + 2010 + 2012–2014 + 2016–2017 + –2022 live ·  wiped · 2009 boarded · 2023+ wiped).  
+**Purpose:** Keep the repo aligned as years grow (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2022 live · wiped · 2009 boarded · 2023+ wiped).  
 **Rule of thumb:** *Year differences live in config + content. Shared behavior lives once in `js/`.*  
 **SRP map:** [`CODE-STRUCTURE.md`](CODE-STRUCTURE.md).
 
@@ -10,32 +10,32 @@
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│  Hub                                                    │
-│  index.html · css/hub.css                               │
+│ Hub │
+│ index.html · css/hub.css │
 └─────────────────────────────────────────────────────────┘
 ┌─────────────────────────────────────────────────────────┐
-│  Year SHELL (chrome only)                               │
-│  years/YYYY/index.html                                  │
-│  → util · browser-core · config/YYYY.js · browser-YYYY  │
+│ Year SHELL (chrome only) │
+│ years/YYYY/index.html │
+│ → util · browser-core · config/YYYY.js · browser-YYYY │
 └─────────────────────────────────────────────────────────┘
 ┌─────────────────────────────────────────────────────────┐
-│  Year CONTENT (museum pages)                            │
-│  years/YYYY/pages/** · years/YYYY/sites/**              │
-│  → each page loads js/immersion-YYYY.js (stub only)     │
+│ Year CONTENT (museum pages) │
+│ years/YYYY/pages/** · years/YYYY/sites/** │
+│ → each page loads js/immersion-YYYY.js (stub only) │
 └─────────────────────────────────────────────────────────┘
 ┌─────────────────────────────────────────────────────────┐
-│  Shared YEAR UI (one folder)                            │
-│  ui/year/shell.js · start.js · years.js · start-data.js │
-│  Shared ENGINE (SRP modules — no year forks)            │
-│  js/browser/* · js/immersion/* · js/lib/util.js         │
+│ Shared YEAR UI (one folder) │
+│ ui/year/shell.js · start.js · years.js · start-data.js │
+│ Shared ENGINE (SRP modules — no year forks) │
+│ js/browser/* · js/immersion/* · js/lib/util.js │
 └─────────────────────────────────────────────────────────┘
 ┌─────────────────────────────────────────────────────────┐
-│  Year DATA (config only)                                │
-│  js/config/YYYY.js · js/config/immersion-YYYY.js        │
+│ Year DATA (config only) │
+│ js/config/YYYY.js · js/config/immersion-YYYY.js │
 └─────────────────────────────────────────────────────────┘
 ┌─────────────────────────────────────────────────────────┐
-│  Year ASSETS                                            │
-│  assets/period/YYYY/** · css/period-YYYY.css            │
+│ Year ASSETS │
+│ assets/period/YYYY/** · css/period-YYYY.css │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -69,13 +69,13 @@
 
 ```
 content page
-  └─ immersion-YYYY.js          # sets ITT._immersionYear = "YYYY"
-       └─ immersion/boot.js     # shared loader
-            ├─ lib/util.js
-            ├─ immersion/registry.js    # FEATURES_BY_YEAR
-            ├─ immersion/*.js           # only that year's list
-            ├─ config/immersion-YYYY.js
-            └─ immersion/create.js      # orchestrator → feature.init(api)
+ └─ immersion-YYYY.js # sets ITT._immersionYear = "YYYY"
+ └─ immersion/boot.js # shared loader
+ ├─ lib/util.js
+ ├─ immersion/registry.js # FEATURES_BY_YEAR
+ ├─ immersion/*.js # only that year's list
+ ├─ config/immersion-YYYY.js
+ └─ immersion/create.js # orchestrator → feature.init(api)
 ```
 
 | File | Responsibility |
@@ -92,10 +92,10 @@ content page
 
 ```
 year shell
-  └─ util.js
-  └─ browser-core.js → connect + load-theater + create + year-boot
-  └─ config/YYYY.js
-  └─ browser-YYYY.js → ITT.bootBrowserYear("YYYY")
+ └─ util.js
+ └─ browser-core.js → connect + load-theater + create + year-boot
+ └─ config/YYYY.js
+ └─ browser-YYYY.js → ITT.bootBrowserYear("YYYY")
 ```
 
 ---
@@ -104,9 +104,9 @@ year shell
 
 ```
 years/YYYY/
-  index.html           # shell only (chrome DOM)
-  pages/               # starting point, about, errors
-  sites/<brand>/       # reconstructed sites for THAT year only
+ index.html # shell only (chrome DOM)
+ pages/ # starting point, about, errors
+ sites/<brand>/ # reconstructed sites for THAT year only
 ```
 
 **Why duplicate Amazon across years?** Intentional: each year is a frozen museum room (1995 river-A ≠ 1998 tabs).  
@@ -174,7 +174,7 @@ Avoid full-file copies of period CSS when only a few rules change.
 - [x] Thin year stubs only  
 - [x] Thin browser year stubs + `bootBrowserYear`  
 - [x] `browser/chrome-ui.js` extracted (dialogs / menus / prefs / bookmarks / find) · create.js still owns navigate + connect  
-- [x] Period CSS composition (`@import` deltas) for 1998+ ·  no longer imports 2012 (cycle broken)  
+- [x] Period CSS composition (`@import` deltas) for 1998+ · no longer imports 2012 (cycle broken)  
 - [x] Optional codegen script: `scripts/new-year.py YYYY` scaffolding stubs + empty dirs  
 
 When in doubt: **add data and content, not new engines.**

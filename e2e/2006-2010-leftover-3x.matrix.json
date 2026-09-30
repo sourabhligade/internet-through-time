@@ -460,7 +460,7 @@
     "trap": "live-video-CDN (trap)",
     "beat": "2006 leftover. Twttr is the chip. IE6 / XP. No iPhone. No Chrome. No Street View.",
     "miss": null,
-    "nextId": "ebay",
+    "nextId": "",
     "href": "/years/2006/sites/cnn/index.html"
   },
   {
@@ -508,7 +508,7 @@
     "trap": "eBay-owns-as-2003 / Teams (trap)",
     "beat": "2006 leftover. Twttr is the chip. IE6 / XP. No iPhone. No Chrome. No Street View.",
     "miss": null,
-    "nextId": "netflix",
+    "nextId": "",
     "href": "/years/2006/sites/skype/index.html"
   },
   {
@@ -812,7 +812,7 @@
     "trap": "preview-as-Save (trap)",
     "beat": "2007 leftover. iPhone Safari is the chip. App Store / Chrome / Android G1 are .",
     "miss": "more.html",
-    "nextId": "google",
+    "nextId": "",
     "href": "/years/2007/sites/wiki/index.html"
   },
   {
@@ -860,7 +860,7 @@
     "trap": "thefacebook-as-mass / News-Feed (trap)",
     "beat": "2007 leftover. iPhone Safari is the chip. App Store / Chrome / Android G1 are .",
     "miss": "more.html",
-    "nextId": "google",
+    "nextId": "",
     "href": "/years/2007/sites/myspace/index.html"
   },
   {
@@ -908,7 +908,7 @@
     "trap": "Street-View (trap)",
     "beat": "2007 leftover. iPhone Safari is the chip. App Store / Chrome / Android G1 are .",
     "miss": null,
-    "nextId": "google",
+    "nextId": "",
     "href": "/years/2007/sites/maps/index.html"
   },
   {
@@ -956,7 +956,7 @@
     "trap": "Buy-It-Now-as-only-path (trap)",
     "beat": "2007 leftover. iPhone Safari is the chip. App Store / Chrome / Android G1 are .",
     "miss": null,
-    "nextId": "google",
+    "nextId": "",
     "href": "/years/2007/sites/ebay/index.html"
   },
   {
@@ -1004,7 +1004,7 @@
     "trap": "empty (trap)",
     "beat": "2007 leftover. iPhone Safari is the chip. App Store / Chrome / Android G1 are .",
     "miss": null,
-    "nextId": "google",
+    "nextId": "",
     "href": "/years/2007/sites/stumble/index.html"
   },
   {
@@ -1052,7 +1052,7 @@
     "trap": "shop-as-gold (trap)",
     "beat": "2007 leftover. iPhone Safari is the chip. App Store / Chrome / Android G1 are .",
     "miss": "more.html",
-    "nextId": "google",
+    "nextId": "",
     "href": "/years/2007/sites/wow/index.html"
   },
   {
@@ -1100,7 +1100,7 @@
     "trap": "Instagram (trap)",
     "beat": "2007 leftover. iPhone Safari is the chip. App Store / Chrome / Android G1 are .",
     "miss": "more.html",
-    "nextId": "google",
+    "nextId": "",
     "href": "/years/2007/sites/flickr/index.html"
   },
   {
@@ -1148,7 +1148,7 @@
     "trap": "Reddit-as-star (trap)",
     "beat": "2007 leftover. iPhone Safari is the chip. App Store / Chrome / Android G1 are .",
     "miss": "more.html",
-    "nextId": "google",
+    "nextId": "",
     "href": "/years/2007/sites/reddit/index.html"
   },
   {
@@ -1196,7 +1196,7 @@
     "trap": "Digg-as-star (trap)",
     "beat": "2007 leftover. iPhone Safari is the chip. App Store / Chrome / Android G1 are .",
     "miss": "more.html",
-    "nextId": "google",
+    "nextId": "",
     "href": "/years/2007/sites/digg/index.html"
   },
   {
@@ -1340,7 +1340,7 @@
     "trap": "Chrome-as-2007-default (trap)",
     "beat": "2007 leftover. iPhone Safari is the chip. App Store / Chrome / Android G1 are .",
     "miss": "more.html",
-    "nextId": "xbox",
+    "nextId": "",
     "href": "/years/2007/sites/ie6/index.html"
   },
   {
@@ -2412,7 +2412,7 @@
     "trap": "streaming-as-2002-default (trap)",
     "beat": "2010 leftover. Instagram iOS is the chip. Android IG is 2012. Win7 + IE8 desktop.",
     "miss": null,
-    "nextId": "quora",
+    "nextId": "",
     "href": "/years/2010/sites/netflix/index.html"
   },
   {
@@ -2460,7 +2460,7 @@
     "trap": "empty-post (trap)",
     "beat": "2010 leftover. Instagram iOS is the chip. Android IG is 2012. Win7 + IE8 desktop.",
     "miss": null,
-    "nextId": "quora",
+    "nextId": "",
     "href": "/years/2010/sites/tumblr/index.html"
   },
   {
@@ -2508,7 +2508,7 @@
     "trap": "empty (trap)",
     "beat": "2010 leftover. Instagram iOS is the chip. Android IG is 2012. Win7 + IE8 desktop.",
     "miss": null,
-    "nextId": "quora",
+    "nextId": "",
     "href": "/years/2010/sites/formspring/index.html"
   },
   {
@@ -2556,7 +2556,7 @@
     "trap": "Chrome-as-gold (trap)",
     "beat": "2010 leftover. Instagram iOS is the chip. Android IG is 2012. Win7 + IE8 desktop.",
     "miss": null,
-    "nextId": "quora",
+    "nextId": "",
     "href": "/years/2010/sites/chrome/index.html"
   },
   {
@@ -2604,7 +2604,7 @@
     "trap": "empty (trap)",
     "beat": "2010 leftover. Instagram iOS is the chip. Android IG is 2012. Win7 + IE8 desktop.",
     "miss": null,
-    "nextId": "quora",
+    "nextId": "",
     "href": "/years/2010/sites/wave/index.html"
   },
   {
@@ -2652,7 +2652,7 @@
     "trap": "Play-as- (trap)",
     "beat": "2010 leftover. Instagram iOS is the chip. Android IG is 2012. Win7 + IE8 desktop.",
     "miss": null,
-    "nextId": "quora",
+    "nextId": "",
     "href": "/years/2010/sites/android/index.html"
   },
   {
@@ -2700,7 +2700,7 @@
     "trap": "Reddit-as-star (trap)",
     "beat": "2010 leftover. Instagram iOS is the chip. Android IG is 2012. Win7 + IE8 desktop.",
     "miss": null,
-    "nextId": "quora",
+    "nextId": "",
     "href": "/years/2010/sites/reddit/index.html"
   },
   {
@@ -2748,7 +2748,7 @@
     "trap": "Chrome-as-1999-default (trap)",
     "beat": "2010 leftover. Instagram iOS is the chip. Android IG is 2012. Win7 + IE8 desktop.",
     "miss": null,
-    "nextId": "quora",
+    "nextId": "",
     "href": "/years/2010/sites/google/index.html"
   },
   {
@@ -2796,7 +2796,7 @@
     "trap": "live-charge (trap)",
     "beat": "2010 leftover. Instagram iOS is the chip. Android IG is 2012. Win7 + IE8 desktop.",
     "miss": null,
-    "nextId": "quora",
+    "nextId": "",
     "href": "/years/2010/sites/groupon/index.html"
   },
   {
@@ -2940,7 +2940,7 @@
     "trap": "upload-as-leftover / Reels (trap)",
     "beat": "2010 leftover. Instagram iOS is the chip. Android IG is 2012. Win7 + IE8 desktop.",
     "miss": null,
-    "nextId": "kickstarter",
+    "nextId": "",
     "href": "/years/2010/sites/youtube/index.html"
   }
 ]

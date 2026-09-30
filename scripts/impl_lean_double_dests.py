@@ -18,6 +18,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import dest_lock_lean  # noqa: E402
+from itt_gate import assert_mutable  # noqa: E402
 
 STARS = {
     2007: ("itt07-iphone", "App Store"),
@@ -25,7 +26,6 @@ STARS = {
     2012: ("itt12-ig-android", "Vine 6s"),
     2014: ("itt14-wa-install", "Watch"),
     2016: ("itt16-ig-stories", "Reels"),
-    2020: ("itt20-zoom", "ChatGPT dest"),
     2022: ("itt22-chatgpt", "GPT-4"),
 }
 
@@ -304,7 +304,7 @@ def main() -> None:
     matrix = []
     extra: dict[str, set[str]] = {}
     lock_years = {"2007", "2010", "2012", "2014", "2022"}
-    caps = {2007: 46, 2010: 44, 2012: 48, 2014: 36, 2016: 64, 2020: 39, 2022: 38}
+    caps = {2007: 46, 2010: 44, 2012: 48, 2014: 36, 2016: 64, 2022: 38}
     for year, rows in DESTS.items():
         existing = disk_slugs(year)
         added_year = 0
@@ -341,6 +341,7 @@ def main() -> None:
                 if dest_dir.is_dir():
                     matrix.append(row)
                 continue
+            assert_mutable(year)
             dest_dir.mkdir(parents=True, exist_ok=False)
             (dest_dir / "index.html").write_text(
                 dest_html(year, slug, product, verb, why, cite),
@@ -351,7 +352,7 @@ def main() -> None:
             matrix.append(row)
         extra.setdefault(str(year), set())
 
-    keep_years = {y: extra[y] for y in extra if y in lock_years or y == "2020"}
+    keep_years = {y: extra[y] for y in extra if y in lock_years}
     if keep_years:
         patch_extra_keep(keep_years)
 

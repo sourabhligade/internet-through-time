@@ -7,9 +7,21 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
 
-  var OPEN = [
- "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2010", "2012", "2013", "2014", "2015", "2016", "2017", "2022"
-  ];
+  var OPEN = (function openFromCard() {
+    var years = ITT.YEAR_CARD && ITT.YEAR_CARD.years;
+    var fallback = [
+      "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2010", "2012", "2013", "2014", "2015", "2016", "2017", "2022"
+    ];
+    if (!years) return fallback;
+    var out = [];
+    var y;
+    for (y in years) {
+      if (!Object.prototype.hasOwnProperty.call(years, y)) continue;
+      if (years[y].kind === "html" || years[y].kind === "react") out.push(y);
+    }
+    out.sort();
+    return out;
+  })();
 
   ITT.AtlasData = {
     openYears: OPEN,
@@ -51,7 +63,7 @@
       "2015": "Meerkat was earlier. Periscope is the star.",
       "2016": "Snapchat invented the 24-hour slide.",
       "2017": "Look to unlock. Fortnite is.",
-      "2020": "ChatGPT is 2022. No case-count dashboard."},
+      },
 
     /* L1 nostalgia — visitor postcard only. Open years. Wiped years omit this. */
     remember: {

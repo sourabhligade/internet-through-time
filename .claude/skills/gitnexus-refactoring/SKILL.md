@@ -38,10 +38,10 @@ checkout and reports nothing changed, which reads as a verified refactor.
 ## Workflow
 
 ```
-0. list_repos {}                                  → Bind repo (and worktree)
-1. impact({target: "X", direction: "upstream"})  → Map all dependents
-2. query({search_query: "X"})                            → Find execution flows involving X
-3. context({name: "X"})                           → See all incoming/outgoing refs
+0. list_repos {} → Bind repo (and worktree)
+1. impact({target: "X", direction: "upstream"}) → Map all dependents
+2. query({search_query: "X"}) → Find execution flows involving X
+3. context({name: "X"}) → See all incoming/outgoing refs
 4. Plan update order: interfaces → implementations → callers → tests
 ```
 
@@ -57,7 +57,7 @@ checkout and reports nothing changed, which reads as a verified refactor.
 - [ ] Confirm the previewed file paths are in the bound repository/worktree
 - [ ] Review graph edits (high confidence) and text_search edits (review carefully)
 - [ ] If satisfied: rename({..., dry_run: false}) — apply edits
-- [ ] detect_changes() — verify only expected files changed
+- [ ] detect_changes — verify only expected files changed
 - [ ] Run tests for affected processes
 ```
 
@@ -69,7 +69,7 @@ checkout and reports nothing changed, which reads as a verified refactor.
 - [ ] impact({target, direction: "upstream"}) — find all external callers
 - [ ] Define new module interface
 - [ ] Extract code, update imports
-- [ ] detect_changes() — verify affected scope
+- [ ] detect_changes — verify affected scope
 - [ ] Run tests for affected processes
 ```
 
@@ -82,7 +82,7 @@ checkout and reports nothing changed, which reads as a verified refactor.
 - [ ] impact({target, direction: "upstream"}) — map callers to update
 - [ ] Create new functions/services
 - [ ] Update callers
-- [ ] detect_changes() — verify affected scope
+- [ ] detect_changes — verify affected scope
 - [ ] Run tests for affected processes
 ```
 
@@ -131,33 +131,33 @@ RETURN caller.name, caller.filePath ORDER BY caller.filePath
 
 ## Risk Rules
 
-| Risk Factor         | Mitigation                                |
+| Risk Factor | Mitigation |
 | ------------------- | ----------------------------------------- |
-| Many callers (>5)   | Use rename for automated updates |
-| Cross-area refs     | Use detect_changes after to verify scope  |
-| String/dynamic refs | query to find them               |
-| External/public API | Version and deprecate properly            |
+| Many callers (>5) | Use rename for automated updates |
+| Cross-area refs | Use detect_changes after to verify scope |
+| String/dynamic refs | query to find them |
+| External/public API | Version and deprecate properly |
 | Same name in another indexed repo | Bind `repo`; verify previewed paths before applying |
 
 ## Example: Rename `validateUser` to `authenticateUser`
 
 ```
 0. list_repos {}
-   → total: 2 (my-app, billing-api) — both define validateUser, so bind explicitly
+ → total: 2 (my-app, billing-api) — both define validateUser, so bind explicitly
 
 1. rename({symbol_name: "validateUser", new_name: "authenticateUser", repo: "my-app", dry_run: true})
-   → 12 edits: 10 graph (safe), 2 text_search (review)
-   → Files: validator.ts, login.ts, middleware.ts, config.json...
+ → 12 edits: 10 graph (safe), 2 text_search (review)
+ → Files: validator.ts, login.ts, middleware.ts, config.json...
 
 2. Review text_search edits (config.json: dynamic reference!)
 
 3. rename({symbol_name: "validateUser", new_name: "authenticateUser", repo: "my-app", dry_run: false})
-   → Applied 12 edits across 8 files
+ → Applied 12 edits across 8 files
 
 4. detect_changes({scope: "all", repo: "my-app"})
-   → Affected: LoginFlow, TokenRefresh
-   → Risk: MEDIUM — run tests for these flows
-   Repository: my-app (/abs/path/my-app)  Worktree: same  Index: current
+ → Affected: LoginFlow, TokenRefresh
+ → Risk: MEDIUM — run tests for these flows
+ Repository: my-app (/abs/path/my-app) Worktree: same Index: current
 ```
 
 With a single indexed repository, step 0 returns `total: 1` and the `repo`

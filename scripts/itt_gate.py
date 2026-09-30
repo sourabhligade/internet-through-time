@@ -6,27 +6,30 @@ Smoke and check-all-years used to spawn `node -e` once per year (~40ms each,
 """
 from __future__ import annotations
 
+import json
 import re
 from functools import lru_cache
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Hub-open years. Branch museum/1994-2020-lean.
-# Hub 22 years open (1994–2007 + 2010 + 2012–2017 + 2022).
-# 2015 and 2017 are React doors (no years/YYYY tree). 2014, 2016, and 2022 are HTML.
-# 2009 boarded (tree stays, year-shell is a plaque, no hub card).
-# 2011 and 2018–2021 and 2023–2025 are absent. 2005 is restored.
-_BOARDED = {"2009"}
-_WIPED = {"2011", "2023", "2024", "2025"}
+# One year card. kind html|react are the 22 open doors.
+# boarded: 2009 (tree stays, no hub card). absent includes 2008.
+_YEARS: dict = json.loads((ROOT / "js" / "year-card.json").read_text(encoding="utf-8"))["years"]
+_BOARDED = {y for y, r in _YEARS.items() if r.get("kind") == "boarded"}
+_WIPED = {y for y, r in _YEARS.items() if r.get("kind") == "absent"}
 # Back-compat: older scripts imported _WIPED as “not a hub year”.
 _NOT_SHIP = _BOARDED | _WIPED
 SHIP_YEARS: list[str] = [
-    "1994", "1995", "1996", "1997", "1998", "1999",
-    "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007",
-    "2010", "2012", "2013", "2014", "2015", "2016", "2017",
-    "2022",
+    y for y, r in sorted(_YEARS.items()) if r.get("kind") in ("html", "react")
 ]
+
+
+def assert_mutable(year: str) -> None:
+    """Frozen years stay playable. Generators may not add a dest folder."""
+    rec = _YEARS.get(str(year))
+    if rec and rec.get("frozen"):
+        raise SystemExit(f"{year} is frozen — no new dest folders")
 
 _URLMAP_START = re.compile(r"(?:\burlMap\s*:\s*\{|\bvar\s+urlMap\s*=\s*\{)")
 _URLMAP_KEY = re.compile(r'^\s*"([^"]+)"\s*:', re.M)

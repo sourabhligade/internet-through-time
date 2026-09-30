@@ -12,7 +12,7 @@ const { destOnDisk, expectYearBoarded } = require("./helpers");
 const ROOT = path.join(__dirname, "..");
 const SHIP = [];
 for (let y = 1994; y <= 2022; y++) {
- if ((y > 2007 && y < 2009) || y === 2009 || y === 2020 || y === 2021 || (y > 2017 && y < 2020) || (y > 2010 && y < 2012)) continue;
+ if ((y > 2007 && y < 2009) || y === 2009 || y === 2021 || (y > 2017 && y < 2021) || (y > 2010 && y < 2012)) continue;
   SHIP.push(String(y));
 }
 const BOARDED = ["2009", "2023", "2024", "2025"];

@@ -39,8 +39,8 @@
     "test:e2e:2010": "playwright test e2e/2010-mvp.spec.js e2e/2010-flows.spec.js e2e/2010-densify.spec.js e2e/2010-trail-real-flows.spec.js --workers=1",
     "test:e2e:2012": "playwright test e2e/2012-mvp.spec.js e2e/2012-flows.spec.js e2e/2012-densify.spec.js e2e/2012-trail-real-flows.spec.js e2e/2012-5x-live.spec.js e2e/one-thing-per-year.spec.js --grep 2012 --workers=1",
     "test:e2e:2002": "playwright test e2e/2002-mvp.spec.js e2e/2002-flows.spec.js e2e/2002-densify.spec.js e2e/2002-trail-real-flows.spec.js --workers=1",
-    "test:e2e:2015": "playwright test e2e/2015-mvp.spec.js e2e/2015-flows.spec.js e2e/2015-densify.spec.js e2e/2015-trail-real-flows.spec.js --workers=1",
-    "test:e2e:2015-2020-3x": "playwright test e2e/2015-2020-3x-cut.spec.js --workers=1",
+    "test:e2e:2015": "playwright test e2e/2015-3x-cut.spec.js e2e/2015-3x-2x-cut.spec.js --workers=1",
+    "test:e2e:2015-3x": "playwright test e2e/2015-3x-cut.spec.js --workers=1",
 
     "test:e2e:2005-2010-3x-2x": "playwright test e2e/2005-2010-3x-2x-cut.spec.js --workers=2",
     "test:e2e:2005-2010-every-leftover": "playwright test e2e/2005-2010-every-leftover-flow.spec.js --workers=1",

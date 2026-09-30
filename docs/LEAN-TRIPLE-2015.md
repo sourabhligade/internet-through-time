@@ -1,4 +1,4 @@
-# 2015–2020 triple — criteria only
+# 2015 triple — criteria only
 
 **Date:** 2026-09-20  
 **Status:** Criteria. Not dest-farm. Not leftover-3× unique growth. **Do not implement dest folders from this file.**  
@@ -10,7 +10,7 @@
 
 ## 1. One-line
 
-**Triple dest folders on 2015 / 2017 /  is dest-farm.** Those years are already dest-lock-reverted warehouses. Triple leftover dests only on thin 2016 /  / 2020 leftover dests, dest-disjoint from official 10 ∪ leftover-3× unique ∪ unique leftover-20. Leftover-3× unique stops stay. Unique leftover-20 stays 2017 only. Incomplete never writes. Leftover never writes the star.
+**Triple dest folders on 2015 / 2017 / is dest-farm.** Those years are already dest-lock-reverted warehouses. Triple leftover dests only on thin 2016 / leftover dests, dest-disjoint from official 10 ∪ leftover-3× unique ∪ unique leftover-20. Leftover-3× unique stops stay. Unique leftover-20 stays 2017 only. Incomplete never writes. Leftover never writes the star.
 
 Starting Point still guided **6**. Extra dests live in folded leftover dests, not first-paint dump.
 
@@ -25,12 +25,11 @@ Disk now (2026-09-20). **This table is the look, not the implement map.**
 | **2015** | 213 | **639** | 233 | **699** | 19 | **57** | **Stop.** Warehouse. Dest-farm. |
 | **2016** | 64 | **192** | 101 | **303** | 19 | **57** | Thin leftover dests only. Do not restore 132-dest forest. 192 is denser than origin forest **82**. |
 | **2017** | 222 | **666** | 265 | **795** | 10 + leftover-20 = 30 | **90** | **Stop.** Unique leftover-20 already ships. Do not dest-farm leftover-20. |
-| **** | 26 | **78** | 17 | **51** | 13 | **39** | Leftover dests, **not** leftover-3× unique (stop **3**). GDPR Manage stays the chip. |
-| **** | 170 | **510** | 181 | **543** | 19 | **57** | **Stop.** Warehouse. Dest-farm. |
-| **2020** | 39 | **117** | 11 | **33** | 19 | **57** | Holes only unless a cited COVID-web hole. 117 is dest-farm. |
+|  | 26 | **78** | 17 | **51** | 13 | **39** | Leftover dests, **not** leftover-3× unique (stop **3**). GDPR Manage stays the chip. |
+|  | 170 | **510** | 181 | **543** | 19 | **57** | **Stop.** Warehouse. Dest-farm. |
 | **Sum** | 734 | **2202** | 808 | **2424** | 119 | **357** | Most of 2202 dests would be dest-farm. |
 
-**How it would look if dest-farmed:** Starting Point dumps 200 leftover dests.  looks like 2017. Visitor 100% **fails**. A year that looks full because it has 600 leftover dests has failed I/O.
+**How it would look if dest-farmed:** Starting Point dumps 200 leftover dests. looks like 2017. Visitor 100% **fails**. A year that looks full because it has 600 leftover dests has failed I/O.
 
 ---
 
@@ -38,12 +37,12 @@ Disk now (2026-09-20). **This table is the look, not the implement map.**
 
 ```mermaid
 flowchart TD
-  SP["Starting Point<br/>guided 6 · star · official 10"] --> STAR["Star dest<br/>empty / trap never write"]
-  SP -. folded .-> WH["Also this year warehouse"]
-  SP --> LO["New leftover dests<br/>cream · keep vs trap · field · 2 ticks"]
-  LO --> IO["Empty never writes<br/>leftover never writes the star"]
-  LO -. dest-disjoint .-> OFF["Official 10"]
-  LO -. dest-disjoint .-> U3["Leftover-3× unique stop"]
+ SP["Starting Point<br/>guided 6 · star · official 10"] --> STAR["Star dest<br/>empty / trap never write"]
+ SP -. folded .-> WH["Also this year warehouse"]
+ SP --> LO["New leftover dests<br/>cream · keep vs trap · field · 2 ticks"]
+ LO --> IO["Empty never writes<br/>leftover never writes the star"]
+ LO -. dest-disjoint .-> OFF["Official 10"]
+ LO -. dest-disjoint .-> U3["Leftover-3× unique stop"]
 ```
 
 First paint does **not** triple. The extra dests are leftover dest pages you open from folded leftover / leftover dest crumb. Each leftover dest is one dest / one verb / one leftover key.
@@ -52,10 +51,10 @@ First paint does **not** triple. The extra dests are leftover dest pages you ope
 |---------|-------|-----------------|
 | Guided Starting Point | exactly 6 `<li>` | 18 items |
 | Official 10 | same dest folders · same whenKeys | official 30 |
-| Leftover-3× unique | 2015=9 · 2016=9 · 2017=0 · **=3** · =9 · 2020=9 | 27 unique leftover-3× dests |
-| Unique leftover-20 | **2017 only** | leftover-20 on 2015 /  /  / 2020 |
+| Leftover-3× unique | 2015=9 · 2016=9 · 2017=0 · **=3** · =9 · =9 | 27 unique leftover-3× dests |
+| Unique leftover-20 | **2017 only** | leftover-20 on 2015 / |
 | Star | one chip | leftover dest writes GDPR / Zoom / Stories / Face ID / Disney+ / Periscope |
-|  first paint | GDPR Manage | 78 dest dump |
+| first paint | GDPR Manage | 78 dest dump |
 | Pixels | `[failed-final]` | invented brand marks |
 
 ---
@@ -71,9 +70,8 @@ Triple is from **origin lean dest count**, not from warehouse dest count.
 | 2015 | dest-farm 213 | 213 | — | **0** | 9 stop | **Stop.** |
 | 2016 | 32 | 64 | **96** | **+32** leftover dests | 9 stop | Thin leftover dests. Not a 192 forest. |
 | 2017 | dest-farm 222 | 222 | — | **0** | 0 · leftover-20 already | **Stop.** |
-|  | 13 | 26 | **39** | **+13** leftover dests | **3 stop** | Leftover dests, not leftover-3× unique. |
-|  | dest-farm 170 | 170 | — | **0** | 9 stop | **Stop.** |
-| 2020 | 38 + Clubhouse hole | 39 | holes only | **0** unless a cited hole | 9 stop | **Stop** dest-farm to 117. |
+| | 13 | 26 | **39** | **+13** leftover dests | **3 stop** | Leftover dests, not leftover-3× unique. |
+| | dest-farm 170 | 170 | — | **0** | 9 stop | **Stop.** |
 
 If you instead triple **dest-true flows** without dest-farming leftover-3× unique: each new leftover dest is one leftover dest-true flow (empty never writes · leftover never writes the star).
 
@@ -82,9 +80,8 @@ If you instead triple **dest-true flows** without dest-farming leftover-3× uniq
 | 2015 | 19 | 0 | **19** |
 | 2016 | 19 | +32 leftover dests | **51** |
 | 2017 | 30 | 0 | **30** |
-|  | 13 | +13 leftover dests | **26** |
-|  | 19 | 0 | **19** |
-| 2020 | 19 | 0 | **19** |
+| | 13 | +13 leftover dests | **26** |
+| | 19 | 0 | **19** |
 
 Links grow with leftover dest crumbs (home · next leftover dest). They do **not** dump on Starting Point first paint.
 
@@ -96,9 +93,9 @@ Links grow with leftover dest crumbs (home · next leftover dest). They do **not
 
  leftover dests already on disk: official 10 + leftover-3× unique reddit youtube wikipedia + lean-double leftover dests facebook twitter amazon google yahoo baidu yandex netflix snapchat discord gplusgone androidpie ios12.
 
-2020 leftover dests already on disk include official 10 + leftover-3× unique 9 + Clubhouse hole.
+ leftover dests already on disk include official 10 + leftover-3× unique 9 + Clubhouse hole.
 
-Star traps: 2016 Reels ·  Accept All · 2020 ChatGPT dest.
+Star traps: 2016 Reels · Accept All · ChatGPT dest.
 
 ---
 
@@ -110,8 +107,8 @@ Star traps: 2016 Reels ·  Accept All · 2020 ChatGPT dest.
 | **1** | Cite leftover dests dest-disjoint from §5 | Cited list · drop uncited |
 | **2** | Named implement pass (only if you say so) | Dest HTML + one leftover writer |
 | **3** | e2e empty never writes · leftover never writes star | Named spec green |
-| **H** | Triple dest folders on 2015 / 2017 /  | **Never this pass** |
+| **H** | Triple dest folders on 2015 / 2017 / | **Never this pass** |
 
 Do not write dest HTML from this file. Cap is not a quota.
 
-**Look checklist (if 3× were done):** [`LEAN-TRIPLE-2015-2020-CHECKLIST.md`](LEAN-TRIPLE-2015-2020-CHECKLIST.md).
+**Look checklist (if 3× were done):** [`LEAN-TRIPLE-2015-CHECKLIST.md`](LEAN-TRIPLE-2015-CHECKLIST.md).

@@ -1,0 +1,169 @@
+/** One year card. Canonical data is js/year-card.json. This file is the browser copy. */
+(function (global) {
+  "use strict";
+  var ITT = global.ITT || (global.ITT = {});
+  ITT.YEAR_CARD = {
+  "years": {
+    "1994": {
+      "kind": "html",
+      "href": "years/1994/",
+      "star": "itt94-csotd",
+      "frozen": true
+    },
+    "1995": {
+      "kind": "html",
+      "href": "years/1995/",
+      "star": "itt95-ssl-checkout",
+      "frozen": true
+    },
+    "1996": {
+      "kind": "html",
+      "href": "years/1996/",
+      "star": "itt96-portal-wars",
+      "frozen": true
+    },
+    "1997": {
+      "kind": "html",
+      "href": "years/1997/",
+      "star": "itt97-pointcast",
+      "frozen": true
+    },
+    "1998": {
+      "kind": "html",
+      "href": "years/1998/",
+      "star": "itt98-lucky",
+      "frozen": true
+    },
+    "1999": {
+      "kind": "html",
+      "href": "years/1999/",
+      "star": "itt99-aim",
+      "frozen": true
+    },
+    "2000": {
+      "kind": "html",
+      "href": "years/2000/",
+      "star": "itt00-mapquest",
+      "frozen": true
+    },
+    "2001": {
+      "kind": "html",
+      "href": "years/2001/",
+      "star": "itt01-wiki",
+      "frozen": true
+    },
+    "2002": {
+      "kind": "html",
+      "href": "years/2002/",
+      "star": "itt02-stumble",
+      "frozen": true
+    },
+    "2003": {
+      "kind": "html",
+      "href": "years/2003/",
+      "star": "itt03-photobucket",
+      "frozen": true
+    },
+    "2004": {
+      "kind": "html",
+      "href": "years/2004/",
+      "star": "itt04-thefacebook-networks",
+      "frozen": true
+    },
+    "2005": {
+      "kind": "html",
+      "href": "years/2005/",
+      "star": "itt05-yt-uploads",
+      "frozen": true
+    },
+    "2006": {
+      "kind": "html",
+      "href": "years/2006/",
+      "star": "itt06-tweets",
+      "frozen": true
+    },
+    "2007": {
+      "kind": "html",
+      "href": "years/2007/",
+      "star": "itt07-iphone"
+    },
+    "2008": {
+      "kind": "absent"
+    },
+    "2009": {
+      "kind": "boarded",
+      "star": "itt09-like"
+    },
+    "2010": {
+      "kind": "html",
+      "href": "years/2010/",
+      "star": "itt10-ig-posts"
+    },
+    "2011": {
+      "kind": "absent"
+    },
+    "2012": {
+      "kind": "html",
+      "href": "years/2012/",
+      "star": "itt12-ig-android"
+    },
+    "2013": {
+      "kind": "html",
+      "href": "years/2013/",
+      "star": "itt13-vine-posts"
+    },
+    "2014": {
+      "kind": "html",
+      "href": "years/2014/",
+      "star": "itt14-wa-install",
+      "leanBoot": true,
+      "hashToHtml": true
+    },
+    "2015": {
+      "kind": "react",
+      "href": "app/index.html#/year/2015",
+      "star": "itt15-periscope"
+    },
+    "2016": {
+      "kind": "html",
+      "href": "years/2016/",
+      "star": "itt16-ig-stories",
+      "leanBoot": true,
+      "hashToHtml": true
+    },
+    "2017": {
+      "kind": "react",
+      "href": "app/index.html#/year/2017",
+      "star": "itt17-faceid"
+    },
+    "2018": {
+      "kind": "absent"
+    },
+    "2019": {
+      "kind": "absent"
+    },
+    "2020": {
+      "kind": "absent"
+    },
+    "2021": {
+      "kind": "absent"
+    },
+    "2022": {
+      "kind": "html",
+      "href": "years/2022/",
+      "star": "itt22-chatgpt",
+      "leanBoot": true,
+      "hashToHtml": true
+    },
+    "2023": {
+      "kind": "absent"
+    },
+    "2024": {
+      "kind": "absent"
+    },
+    "2025": {
+      "kind": "absent"
+    }
+  }
+};
+})(typeof window !== "undefined" ? window : this);

@@ -9,11 +9,11 @@ Do not dest-farm leftover-20. Do not grow leftover-3× unique past =3 / 2021=5. 
 ```mermaid
 flowchart TD
  HUB["Hub 25 years"] --> SP["Starting Point guided 6"]
-  SP --> STAR["Star dest n=1"]
-  STAR --> OFF["Official n=2–10"]
-  SP --> U3["Leftover-3× unique dests"]
-  SP --> LX["Leftover dests dest-true"]
-  SP --> PACK["Forest leftover dest-true packs"]
+ SP --> STAR["Star dest n=1"]
+ STAR --> OFF["Official n=2–10"]
+ SP --> U3["Leftover-3× unique dests"]
+ SP --> LX["Leftover dests dest-true"]
+ SP --> PACK["Forest leftover dest-true packs"]
 ```
 
 | Year | Dest folders | Star | Official 10 | Leftover-3× unique | Leftover dests | Pack dests | Dest-true flows |
@@ -33,16 +33,15 @@ flowchart TD
 | **2006** | 378 | Twttr | 9 | 0 | 0 | 2 | **11** |
 | **2007** | 46 | iPhone Safari | 10 | 9 | 23 | 0 | **42** |
 | **2010** | 44 | Instagram iOS | 10 | 9 | 22 | 0 | **41** |
-| **** | 62 | Google+ Hangout | 10 | 9 | 31 | 0 | **50** |
+|  | 62 | Google+ Hangout | 10 | 9 | 31 | 0 | **50** |
 | **2012** | 48 | IG Android | 9 | 9 | 24 | 0 | **42** |
 | **2013** | 54 | Vine 6s | 9 | 9 | 0 | 0 | **18** |
 | **2014** | 36 | WhatsApp Install | 9 | 9 | 18 | 0 | **36** |
 | **2015** | 213 | Periscope Go LIVE | 10 | 9 | 0 | 0 | **19** |
 | **2016** | 106 | IG Stories | 10 | 9 | 74 | 0 | **93** |
 | **2017** | 222 | Face ID | 10 | 0 (leftover-20 instead) | 20 extra | 0 | **30** |
-| **** | 44 research · 21 React · 0 HTML | GDPR Manage | 10 | 0 on disk (cap was 3) | 11 KEEP on React · 20 DROP gone | 0 | **21** live React |
-| **** | 170 | Disney+ Continue | 10 | 9 | 0 | 0 | **19** |
-| **2020** | 39 | Zoom Leave | 10 | 9 | 1 | 0 | **20** |
+|  | 44 research · 21 React · 0 HTML | GDPR Manage | 10 | 0 on disk (cap was 3) | 11 KEEP on React · 20 DROP gone | 0 | **21** live React |
+|  | 170 | Disney+ Continue | 10 | 9 | 0 | 0 | **19** |
 | **2021** | 30 | ATT Ask | 10 | 5 | 15 | 0 | **30** |
 | **2022** | 38 | ChatGPT Send | 10 | 9 | 19 | 0 | **38** |
 
@@ -326,7 +325,7 @@ Star: `disneyplus` · Disney+ Continue. Dest folders **170**.
 
 Dest-true flows this year: **19**.
 
-## 2020
+## 
 
 Star: `zoom` · Zoom Leave. Dest folders **39**.
 

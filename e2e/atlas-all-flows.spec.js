@@ -125,7 +125,6 @@ test.describe("atlas hallway — all flows", () => {
     await page.goto("/atlas/");
     await expect(page.locator('#atlas-spine [data-atlas-year="2021"]')).toHaveCount(0);
     await expect(page.locator('#atlas-spine [data-atlas-year="2022"]')).toBeVisible();
-    await expect(page.locator('#atlas-spine [data-atlas-year="2020"]')).toHaveCount(0);
     for (const y of ["2009", "2023", "2024", "2025"]) {
       await expect(page.locator(`#atlas-spine [data-atlas-year="${y}"]`)).toHaveCount(0);
     }
@@ -257,7 +256,6 @@ test.describe("atlas hallway — all flows", () => {
     expect(nightHrefs.length).toBeGreaterThanOrEqual(5);
     for (const h of nightHrefs) await expectLive(page, h, "first-night");
 
-    await expect(page.locator('#atlas-spine [data-atlas-year="2020"]')).toHaveCount(0);
     await expect(page.locator('#atlas-spine [data-atlas-year="2021"]')).toHaveCount(0);
     await expect(page.locator('#atlas-spine [data-atlas-year="2022"]')).not.toHaveClass(/wiped/);
     for (const y of ["2009", "2023", "2024", "2025"]) {

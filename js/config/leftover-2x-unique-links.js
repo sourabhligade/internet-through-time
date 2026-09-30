@@ -4104,7 +4104,6 @@
     { "id": "snapchat", "name": "Snapchat" },
     { "id": "uber", "name": "Uber" }
   ],
-  "2015": [],
   "2016": [
     {
       "id": "houseparty",
@@ -4183,62 +4182,6 @@
       "name": "Google Home leftover"
     }
   ],
-  "2017": [],
-  "": [
-    {
-      "id": "libra",
-      "name": "Libra \u00b7"
-    },
-    {
-      "id": "huawei",
-      "name": "Huawei \u00b7 Entity List"
-    },
-    {
-      "id": "hidelikes",
-      "name": "Instagram \u00b7 hide likes"
-    },
-    {
-      "id": "wework",
-      "name": "WeWork \u00b7 IPO collapse"
-    },
-    {
-      "id": "area51",
-      "name": "Area 51 \u00b7 raid meme"
-    },
-    {
-      "id": "geforcenow",
-      "name": "GeForce Now"
-    },
-    {
-      "id": "ipad7",
-      "name": "iPad (7th gen)"
-    },
-    {
-      "id": "ipadmini5",
-      "name": "iPad mini (5th)"
-    },
-    {
-      "id": "jedifallenorder",
-      "name": "Jedi: Fallen Order"
-    },
-    {
-      "id": "kingdomhearts3",
-      "name": "Kingdom Hearts III"
-    },
-    {
-      "id": "linksawakening",
-      "name": "Link’s Awakening remake"
-    },
-    {
-      "id": "luigismansion3",
-      "name": "Luigi’s Mansion 3"
-    },
-    {
-      "id": "macbookpro16",
-      "name": "MacBook Pro 16-inch"
-    }
-  ],
-  "2020": [],
   "2022": [
     { "id": "temu", "name": "Temu" },
     { "id": "stablediff", "name": "Stable Diffusion" },

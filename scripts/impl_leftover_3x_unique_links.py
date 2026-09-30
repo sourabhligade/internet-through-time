@@ -58,15 +58,6 @@ KEEP: dict[str, list[str]] = {
         "slack", "reddit", "netflix", "youtube", "alphago", "assistant", "dyn",
         "fblive", "moments",
     ],
-    "": ["reddit", "youtube", "wikipedia"],
-    "": [
-        "amazon", "facebook", "google", "instagram", "nyt", "oculusquest",
-        "twitter", "yahoo", "youtube",
-    ],
-    "2020": [
-        "amazon", "facebook", "google", "instagram", "youtube", "slack", "reddit",
-        "wikipedia", "nyt",
-    ],
     "2022": [
         "amazon", "google", "instagram", "facebook", "youtube", "reddit",
         "wikipedia", "netflix", "nyt",
@@ -105,15 +96,6 @@ CITED_ADD: dict[str, list[str]] = {
         "douyin", "airpods", "allo", "daydream", "ethereum", "figma", "googlehome",
         "ios10", "letsencrypt",
     ],
-    "": ["gplusgone", "epicstore", "ios12"],
-    "": [
-        "apex", "airpods2", "android10", "applewatch5", "catalina", "galaxyfold",
-        "ios13", "ipados", "sekiro",
-    ],
-    "2020": [
-        "clubhouse", "hbomax", "peacock", "animalcrossing", "houseparty", "netflix",
-        "tiktok", "amongus", "discord",
-    ],
     "2022": [
         "temu", "stablediff", "midjourney", "dalle2", "ios16", "m2",
         "wordle", "bereal", "ftx",
@@ -128,9 +110,6 @@ WANT_AFTER = {
     "2014": 18,
     "2015": 18,
     "2016": 18,
-    "": 6,
-    "": 18,
-    "2020": 18,
     "2022": 18,
 }
 

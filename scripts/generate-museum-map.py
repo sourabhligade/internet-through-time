@@ -207,9 +207,6 @@ def render(data: dict) -> str:
   <div class="slot lock"><b>leftover-4×</b> lock 0 on {escape(", ".join(sorted(LOCK_4X)))}.</div>
 </div>
 
-<h2 id="y2020-door">2020 <span>live lean · Zoom Leave</span></h2>
-<p class="lede"><code>years/2020/</code> is a live lean door. Star is Zoom mute → chat → Leave.</p>
-
 <h2 id="golds">Every gold + official 10 <span>exact dest paths</span></h2>
 <div class="grid">{''.join(gold_cards)}</div>
 

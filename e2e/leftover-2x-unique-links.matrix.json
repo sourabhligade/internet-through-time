@@ -1087,32 +1087,6 @@
     "n": 10
   },
   {
-    "year": "2011",
-    "dests": [
-      "chromebook",
-      "honeycomb",
-      "ics",
-      "temple",
-      "skyrim",
-      "nytpaywall",
-      "skypebuy",
-      "grouponipo",
-      "zyngaipo",
-      "googlewallet",
-      "nintendo3ds",
-      "psnhack",
-      "gowalla",
-      "snapchat",
-      "ios5",
-      "imessage",
-      "wechat",
-      "line",
-      "stripe",
-      "codecademy"
-    ],
-    "n": 20
-  },
-  {
     "year": "2012",
     "dests": [
       "buzzfeed",
@@ -1235,11 +1209,6 @@
   },
   {
     "year": "2017",
-    "dests": [],
-    "n": 0
-  },
-  {
-    "year": "2021",
     "dests": [],
     "n": 0
   },

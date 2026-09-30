@@ -8,9 +8,12 @@ from __future__ import annotations
 
 import html
 import re
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+from itt_gate import assert_mutable  # noqa: E402
 
 YEARS = {
     1999: {"need": 288, "prefix": "itt99", "star": "itt99-aim"},
@@ -220,6 +223,7 @@ def main() -> None:
             nxt = row["next"]
             next_label = by_slug[nxt]["product"] if nxt in by_slug else nxt
             dest = disk / slug
+            assert_mutable(year)
             dest.mkdir(parents=True, exist_ok=False)
             (dest / "index.html").write_text(dest_html(year, row, next_label))
             wrote.append(row)

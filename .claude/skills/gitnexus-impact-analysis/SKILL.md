@@ -39,15 +39,15 @@ are not standing in it.
 State the bound identity with your risk report:
 
 ```
-Repository: <name> (<path>)   Worktree: <path>   Index: <commit>, <n> behind HEAD
+Repository: <name> (<path>) Worktree: <path> Index: <commit>, <n> behind HEAD
 ```
 
 ## Workflow
 
 ```
-0. list_repos {}                                           → Bind repo (and worktree)
+0. list_repos {} → Bind repo (and worktree)
 1. impact({target: "X", direction: "upstream"}) or `node .gitnexus/run.cjs impact "X" --direction upstream --repo .`
-2. READ gitnexus://repo/{name}/processes                   → Check affected execution flows
+2. READ gitnexus://repo/{name}/processes → Check affected execution flows
 3. detect_changes({scope: "all"}) or `node .gitnexus/run.cjs detect-changes --scope all --repo .`
 4. Assess risk and report to user, echoing repo/worktree/index identity
 ```
@@ -70,21 +70,21 @@ Repository: <name> (<path>)   Worktree: <path>   Index: <commit>, <n> behind HEA
 
 ## Understanding Output
 
-| Depth | Risk Level       | Meaning                  |
+| Depth | Risk Level | Meaning |
 | ----- | ---------------- | ------------------------ |
-| d=1   | **WILL BREAK**   | Direct callers/importers |
-| d=2   | LIKELY AFFECTED  | Indirect dependencies    |
-| d=3   | MAY NEED TESTING | Transitive effects       |
+| d=1 | **WILL BREAK** | Direct callers/importers |
+| d=2 | LIKELY AFFECTED | Indirect dependencies |
+| d=3 | MAY NEED TESTING | Transitive effects |
 
 ## Risk Assessment
 
-| Affected                       | Risk     |
+| Affected | Risk |
 | ------------------------------ | -------- |
-| <5 symbols, few processes      | LOW      |
-| 5-15 symbols, 2-5 processes    | MEDIUM   |
-| >15 symbols or many processes  | HIGH     |
+| <5 symbols, few processes | LOW |
+| 5-15 symbols, 2-5 processes | MEDIUM |
+| >15 symbols or many processes | HIGH |
 | Critical path (auth, payments) | CRITICAL |
-| **Zero callers found**         | **UNKNOWN** |
+| **Zero callers found** | **UNKNOWN** |
 
 `UNKNOWN` is not a low rung on this scale — it means the walk could not answer.
 An empty caller set is equally consistent with "genuinely unused" and "the
@@ -108,19 +108,19 @@ symbols before enrichment.
 
 ```
 impact({
-  target: "validateUser",
-  repo: "my-app",          // required once >1 repository is indexed
-  direction: "upstream",
-  minConfidence: 0.8,
-  maxDepth: 3
+ target: "validateUser",
+ repo: "my-app", // required once >1 repository is indexed
+ direction: "upstream",
+ minConfidence: 0.8,
+ maxDepth: 3
 })
 
 → d=1 (WILL BREAK):
-  - loginHandler (src/auth/login.ts:42) [CALLS, 100%]
-  - apiMiddleware (src/api/middleware.ts:15) [CALLS, 100%]
+ - loginHandler (src/auth/login.ts:42) [CALLS, 100%]
+ - apiMiddleware (src/api/middleware.ts:15) [CALLS, 100%]
 
 → d=2 (LIKELY AFFECTED):
-  - authRouter (src/routes/auth.ts:22) [CALLS, 95%]
+ - authRouter (src/routes/auth.ts:22) [CALLS, 95%]
 ```
 
 **detect_changes** — git-diff based impact analysis. If MCP is unavailable, use `node .gitnexus/run.cjs detect-changes --scope all --repo .` instead:
@@ -150,17 +150,17 @@ before treating an empty change set as a passed check.
 
 ```
 0. list_repos {}
-   → total: 2 (my-app, billing-api) — both define validateUser, so bind explicitly
+ → total: 2 (my-app, billing-api) — both define validateUser, so bind explicitly
 
 1. impact({target: "validateUser", repo: "my-app", direction: "upstream"}) or `node .gitnexus/run.cjs impact "validateUser" --direction upstream --repo .`
-   → d=1: loginHandler, apiMiddleware (WILL BREAK)
-   → d=2: authRouter, sessionManager (LIKELY AFFECTED)
+ → d=1: loginHandler, apiMiddleware (WILL BREAK)
+ → d=2: authRouter, sessionManager (LIKELY AFFECTED)
 
 2. READ gitnexus://repo/my-app/processes
-   → LoginFlow and TokenRefresh touch validateUser
+ → LoginFlow and TokenRefresh touch validateUser
 
 3. Risk: 2 direct callers, 2 processes = MEDIUM
-   Repository: my-app (/abs/path/my-app)  Worktree: same  Index: current
+ Repository: my-app (/abs/path/my-app) Worktree: same Index: current
 ```
 
 With a single indexed repository, step 0 returns `total: 1` and the `repo`

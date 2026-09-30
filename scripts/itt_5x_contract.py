@@ -10,6 +10,8 @@ import json
 import re
 from pathlib import Path
 
+from itt_gate import _YEARS
+
 ROOT = Path(__file__).resolve().parents[1]
 MATRIX_PATH = ROOT / "e2e" / "5x-recheck.matrix.json"
 
@@ -52,16 +54,17 @@ ALLOW_PLAQUE: frozenset[tuple[int, str]] = frozenset(
         (2012, "sites/wikipedia/sopa.html"),
     }
 )
-# No year tree. 2009 is boarded (tree stays) — skipped in check() separately.
-# 2015 is the React door. 2018 and 2019 are absent, same as 2011.
-WIPED_YEARS: frozenset[int] = frozenset({2008, 2011, 2015, 2018, 2019, 2023, 2024, 2025})
-BOARDED_YEARS: frozenset[int] = frozenset({2009})
-
-POP_PANEL_2020 = ()
+# No HTML tree: absent years and React doors. 2009 is boarded (tree stays).
+WIPED_YEARS: frozenset[int] = frozenset(
+    int(y) for y, r in _YEARS.items() if r.get("kind") in ("absent", "react")
+)
+BOARDED_YEARS: frozenset[int] = frozenset(
+    int(y) for y, r in _YEARS.items() if r.get("kind") == "boarded"
+)
 
 FAMOUS_YEARS = [
     y
-    for y in list(range(1994, 2020))
+    for y in list(range(1994, 2018))
     if y not in {2001, 2002, 2003, 2007, 2009, 2013, 2017}
     and y not in WIPED_YEARS
     and y not in BOARDED_YEARS
@@ -135,13 +138,6 @@ def check() -> list[str]:
                 fails.append(f"plaque required {year}/{room} key={fl.get('key')}")
             if not want and got:
                 fails.append(f"gold dest must stay plaque-free {year}/{room}")
-    for rel in POP_PANEL_2020:
-        p = ROOT / rel
-        if not p.is_file():
-            fails.append(f"missing {rel}")
-            continue
-        if 'data-pop-panel' not in p.read_text(encoding="utf-8", errors="replace"):
-            fails.append(f"2020 third-3× needs data-pop-panel {rel}")
     for year in FAMOUS_YEARS:
         p = ROOT / "years" / str(year) / "sites" / "playable" / "famous.html"
         if not p.is_file():

@@ -236,18 +236,6 @@
       famous: "Gym Rush",
       accent: "#c2185b"
     },
-    "2017": {
-      id: "stormcircle",
-      title: "Storm Circle",
-      href: "game.html",
-      key: "itt17-game-stormcircle",
-      inspire: "Fortnite BR-class storm — not official art; not on Switch",
-      blurb: "Stay inside the circle. Incomplete never writes.",
-      why: "Saturday living rooms. The star is still Face ID.",
-      era: "Face ID. Free storm. 280. Vine is an archive.",
-      famous: "Storm Circle",
-      accent: "#5e35b1"
-    },
     
     "2007": {
       id: "safariq",
@@ -260,18 +248,6 @@
       era: "App Store is highlighted. Go leftover is the real click.",
       famous: "Safari Queue",
       accent: "#0a246a"
-    },
-    "2020": {
-      id: "leaveroom",
-      title: "Leave Room leftover",
-      href: "game.html",
-      key: "itt20-game-leave",
-      inspire: "Zoom Leave-class leftover — mute / chat then leave",
-      blurb: "Year game. Star stays Zoom Leave.",
-      why: "2020 leftover cabinet. The star is still Zoom Leave.",
-      era: "Win10 + Chrome habit. No invented ILS.",
-      famous: "Leave Room leftover",
-      accent: "#2d8cff"
     },
     };
 })(typeof window !== "undefined" ? window : this);

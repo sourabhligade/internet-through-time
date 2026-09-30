@@ -325,23 +325,6 @@ const SIGNATURE = {
       await frame.locator('[data-faceid-unlock]').click();
     },
   },
-  '': {
-    path: 'sites/disneyplus/home.html',
-    keySuffix: 'disneyplus',
-    body: /Disney\+|\$6\.99|Nov(ember)?\s*12/i,
-    act: async (page) => {
-      const frame = contentFrame(page);
-      await expect(frame.locator('[data-dplus-continue]')).toBeVisible({ timeout: 15000 });
-      await frame.locator('[data-dplus-req]').nth(0).check({ force: true });
-      await frame.locator('[data-dplus-req]').nth(1).check({ force: true });
-      await frame.locator('[data-dplus-profile="adult"]').click();
-      await frame.locator('[data-dplus-add]').nth(0).click();
-      await frame.locator('[data-dplus-add]').nth(1).click();
-      await frame.locator('[data-dplus-profile="kids"]').click();
-      await frame.locator('[data-dplus-profile="adult"]').click();
-      await frame.locator('[data-dplus-continue]').click();
-    },
-  },
 };
 
 const YEARS = [

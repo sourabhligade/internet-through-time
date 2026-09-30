@@ -16,10 +16,10 @@ KEEP = famous that year, cited. DROP = year-false, cited. MISS = not evaluated (
 
 ```mermaid
 flowchart TD
-  MAP["699 dest-true flows"] --> K["KEEP cited famous that year"]
-  MAP --> D["DROP year-false"]
-  MAP --> N["DO-NOT-APPLY playable / leftover-3× unique dest-disjoint"]
-  MAP --> M["MISS not evaluated"]
+ MAP["699 dest-true flows"] --> K["KEEP cited famous that year"]
+ MAP --> D["DROP year-false"]
+ MAP --> N["DO-NOT-APPLY playable / leftover-3× unique dest-disjoint"]
+ MAP --> M["MISS not evaluated"]
 ```
 
 ## 1994 · star `csotd`
@@ -359,7 +359,7 @@ KEEP 21 · DROP 14 · DO-NOT-APPLY 7 · MISS 0
 | `paypal` | leftover dest | **DROP** |
 KEEP 19 · DROP 16 · DO-NOT-APPLY 6 · MISS 0
 
-##  · star `googleplus`
+## · star `googleplus`
 
 | Slug | Class | Verdict |
 |------|-------|---------|
@@ -689,7 +689,7 @@ KEEP 47 · DROP 40 · DO-NOT-APPLY 6 · MISS 0
 | `hollowknight` | leftover-20 extra | **KEEP** |
 KEEP 26 · DROP 3 · DO-NOT-APPLY 1 · MISS 0
 
-##  · star `gdpr`
+## · star `gdpr`
 
 | Slug | Class | Verdict |
 |------|-------|---------|
@@ -739,7 +739,7 @@ KEEP 26 · DROP 3 · DO-NOT-APPLY 1 · MISS 0
 | `caffeine` | leftover dest | **KEEP** |
 KEEP 20 · DROP 20 · DO-NOT-APPLY 4 · MISS 0
 
-##  · star `disneyplus`
+## · star `disneyplus`
 
 | Slug | Class | Verdict |
 |------|-------|---------|
@@ -765,7 +765,7 @@ KEEP 20 · DROP 20 · DO-NOT-APPLY 4 · MISS 0
 
 KEEP 8 · DROP 0 · DO-NOT-APPLY 11 · MISS 0
 
-## 2020 · star `zoom`
+## · star `zoom`
 
 | Slug | Class | Verdict |
 |------|-------|---------|
@@ -877,34 +877,26 @@ KEEP 13 · DROP 15 · DO-NOT-APPLY 10 · MISS 0
 | 1994 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2007 | `ie6` | XP/IE6 residual official dest · not leftover dest |
 | 2010 | `playable` | year-game dest · official n=10 · not leftover dest |
-|  | `playable` | year-game dest · official n=10 · not leftover dest |
+| | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2012 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2013 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2014 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2015 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2016 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2017 | `playable` | year-game dest · official n=10 · not leftover dest |
-|  | `playable` | year-game dest · official n=10 · not leftover dest |
-|  | `reddit` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-|  | `wikipedia` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-|  | `youtube` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-|  | `amazon` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-|  | `chrome` | Chrome/Win10 habit residual · not leftover dest to delete without named pass |
-|  | `facebook` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-|  | `google` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-|  | `instagram` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-|  | `playable` | year-game dest · official n=10 · not leftover dest |
-|  | `twitter` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-|  | `windows10` | Chrome/Win10 habit residual · not leftover dest to delete without named pass |
-|  | `youtube` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-| 2020 | `amazon` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-| 2020 | `facebook` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-| 2020 | `google` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-| 2020 | `instagram` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-| 2020 | `playable` | year-game dest · official n=10 · not leftover dest |
-| 2020 | `reddit` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-| 2020 | `wikipedia` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-| 2020 | `youtube` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
+| | `playable` | year-game dest · official n=10 · not leftover dest |
+| | `reddit` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
+| | `wikipedia` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
+| | `youtube` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
+| | `amazon` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
+| | `chrome` | Chrome/Win10 habit residual · not leftover dest to delete without named pass |
+| | `facebook` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
+| | `google` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
+| | `instagram` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
+| | `playable` | year-game dest · official n=10 · not leftover dest |
+| | `twitter` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
+| | `windows10` | Chrome/Win10 habit residual · not leftover dest to delete without named pass |
+| | `youtube` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
 | 2021 | `amazon` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
 | 2021 | `chrome` | Chrome/Win10 habit residual · not leftover dest to delete without named pass |
 | 2021 | `google` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
@@ -926,5 +918,5 @@ KEEP 13 · DROP 15 · DO-NOT-APPLY 10 · MISS 0
 
 Named dest-true flows: KEEP 405 · DROP 191 · DO-NOT-APPLY 103 · MISS **0**. Research continue `year-false-keep-drop` scored every remaining MISS row. Cites live in the workflow scratch report.
 
-Leftover dest DROPs still on disk were deleted 2026-09-20 (13 dest folders: 2007 feedburner/lastfm/clubpenguin · 2010 ios4/nexusone/froyo ·  duolingo/path · 2012 applemaps · 2014 androidl · 2021 m1/clubhouse21 · 2022 musk). Earlier leftover dest DROPs were already gone. Official 10, leftover-3× unique dests, playable year-games, leftover-4× unique chrome/twitter/soundcloud, and 2017 leftover-20 extras stay. Do not dest-farm 2015/2017/ dest folders. Do not invent official 11th dests. Do not strip leftover-3× unique dests from the =3 / 2021=5 stops because they launched earlier.
+Leftover dest DROPs still on disk were deleted 2026-09-20 (13 dest folders: 2007 feedburner/lastfm/clubpenguin · 2010 ios4/nexusone/froyo · duolingo/path · 2012 applemaps · 2014 androidl · 2021 m1/clubhouse21 · 2022 musk). Earlier leftover dest DROPs were already gone. Official 10, leftover-3× unique dests, playable year-games, leftover-4× unique chrome/twitter/soundcloud, and 2017 leftover-20 extras stay. Do not dest-farm 2015/2017/ dest folders. Do not invent official 11th dests. Do not strip leftover-3× unique dests from the =3 / 2021=5 stops because they launched earlier.
 

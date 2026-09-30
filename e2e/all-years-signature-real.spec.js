@@ -306,22 +306,4 @@ test.describe('all-years signature REAL · late web', () => {
     await requireKey(page, 'itt17-faceid', /multiStep|2017-11-03|noHomeButton/i);
   });
 
-  test(' Disney+ continue REAL → itt19-disneyplus', async ({ page }) => {
-    test.skip(!yearOnDisk(''), ' not on disk');
-    await enterYear(page, '');
-    await clearPrefix(page, 'itt19-disneyplus');
-    await goImmersion(page, '', 'sites/disneyplus/home.html');
-    const frame = contentFrame(page);
-    const adult = frame.locator('[data-dplus-profile="adult"]');
-    await expect(adult).toBeVisible({ timeout: 15000 });
-    await frame.locator("[data-dplus-req]").nth(0).check();
-    await frame.locator("[data-dplus-req]").nth(1).check();
-    await adult.click();
-    await frame.locator("[data-dplus-add]").nth(0).click();
-    await frame.locator("[data-dplus-add]").nth(1).click();
-    await frame.locator('[data-dplus-profile="kids"]').click();
-    await frame.locator('[data-dplus-profile="adult"]').click();
-    await frame.locator("[data-dplus-continue]").click();
-    await requireKey(page, 'itt19-disneyplus', /multiStep|real|-11-12/i);
-  });
 });

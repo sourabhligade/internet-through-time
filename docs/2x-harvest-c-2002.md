@@ -97,7 +97,7 @@ amazon audioscrobbler bittorrent blogger blogspot cnet craigslist dailykos daypo
 | 24 | `pastebin` | Pastebin.com | 2002 paste leftover. | https://en.wikipedia.org/wiki/Category:Internet_properties_established_in_2002 | Paste leftover `itt02-pastebin-lx` | Share leftover `itt02-pastebin-d2` | Live leak · GitHub gist as 2002 | `payscale` |
 | 25 | `payscale` | PayScale | 2002 salary leftover. | https://en.wikipedia.org/wiki/Category:Internet_properties_established_in_2002 | Compare leftover `itt02-payscale-lx` | Read leftover `itt02-payscale-d2` | Live résumé · LinkedIn dest as this dest | `hostgator` |
 | 26 | `hostgator` | HostGator | Founded **22 Oct 2002**. Shared leftover. | https://en.wikipedia.org/wiki/HostGator | Sign leftover `itt02-hostgator-lx` | Park leftover `itt02-hostgator-d2` | Live bill · WordPress as 2002 gold | `csnstores` |
-| 27 | `csnstores` | CSN Stores | Shah + Conine **Aug 2002**. racksandstands leftover. Wayfair brand is ****. | https://en.wikipedia.org/wiki/Wayfair | Browse leftover `itt02-csnstores-lx` | Add leftover `itt02-csnstores-d2` | Wayfair  as 2002 gold · live card | `mylife` |
+| 27 | `csnstores` | CSN Stores | Shah + Conine **Aug 2002**. racksandstands leftover. Wayfair brand is . | https://en.wikipedia.org/wiki/Wayfair | Browse leftover `itt02-csnstores-lx` | Add leftover `itt02-csnstores-d2` | Wayfair as 2002 gold · live card | `mylife` |
 | 28 | `mylife` | Reunion.com / MyLife | 2002 people-find leftover. | https://en.wikipedia.org/wiki/Category:Internet_properties_established_in_2002 | Find leftover `itt02-mylife-lx` | Register leftover `itt02-mylife-d2` | Facebook 2004 · Classmates as this dest | `maxpreps` |
 | 29 | `maxpreps` | MaxPreps | 2002 HS-sports leftover. | https://en.wikipedia.org/wiki/Category:Internet_properties_established_in_2002 | Search leftover `itt02-maxpreps-lx` | Read leftover `itt02-maxpreps-d2` | ESPN dest as this dest | `animesuki` |
 | 30 | `animesuki` | AnimeSuki | Commons **2002**. Fansub-index leftover. No live torrent. | https://commons.wikimedia.org/wiki/Category:Internet_properties_established_in_2002 | Browse leftover `itt02-animesuki-lx` | Read leftover `itt02-animesuki-d2` | Live torrent · Crunchyroll as 2002 | `blogcritics` |
@@ -166,9 +166,9 @@ amazon audioscrobbler bittorrent blogger blogspot cnet craigslist dailykos daypo
 
 ## Uniqueness
 
-Every slug above is **absent** from the reserved 2002 list of 78. Cross-year repeats (`slashdot`, `cnn`, `ie6`, `xbox`) are intentional: same product, year-true 2002 verb, **not** on 2002 disk. `playable` / official dests / `stumbleupon` / reserved Board A+B slugs are never in this set.
+Every slug above is from the reserved 2002 list of 78. Cross-year repeats (`slashdot`, `cnn`, `ie6`, `xbox`) are intentional: same product, year-true 2002 verb, **not** on 2002 disk. `playable` / official dests / `stumbleupon` / reserved Board A+B slugs are never in this set.
 
-`ipod2` ≠ reserved `ipod`. `xboxlive` ≠ carry `xbox`. `emule` ≠ reserved `edonkey`. `radiotime` ≠ TuneIn-app 2010 gold. `csnstores` ≠ Wayfair  brand.
+`ipod2` ≠ reserved `ipod`. `xboxlive` ≠ carry `xbox`. `emule` ≠ reserved `edonkey`. `radiotime` ≠ TuneIn-app 2010 gold. `csnstores` ≠ Wayfair brand.
 
 ## Counts
 

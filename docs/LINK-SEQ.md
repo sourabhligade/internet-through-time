@@ -8,8 +8,8 @@ Paste on a leftover dest (`years/YYYY/sites/<slug>/index.html`):
 
 ```html
 <nav data-itt-seq="walk" data-itt-seq-title="A walk">
-  <a href="../ios5/index.html">iOS 5 leftover</a>
-  <a href="../imessage/index.html">iMessage leftover</a>
+ <a href="../ios5/index.html">iOS 5 leftover</a>
+ <a href="../imessage/index.html">iMessage leftover</a>
 </nav>
 ```
 
@@ -21,13 +21,13 @@ Edit `js/config/link-seqs.js`:
 
 ```js
 ITT.linkSeqs["-phones"] = {
-  year: "",
-  title: " phones",
-  dests: [
-    { id: "ios5", name: "iOS 5 leftover" },
-    { id: "imessage", name: "iMessage leftover" }
-  ]
-  // optional on: ["snapchat"] — host pages; default is the dests list
+ year: "",
+ title: " phones",
+ dests: [
+ { id: "ios5", name: "iOS 5 leftover" },
+ { id: "imessage", name: "iMessage leftover" }
+ ]
+ // optional on: ["snapchat"] — host pages; default is the dests list
 };
 ```
 

@@ -18,25 +18,24 @@ Strip applied: drop the dest from leftover-2× unique dest **links** only (`scri
 |-----:|-------------------------:|-------------------------:|-----------------------------:|-------------------------:|----------------------------------------------:|
 | 2007 | 33 | 18 | 9 | **18** | 9 |
 | 2010 | 29 | 18 | 9 | **18** | 9 |
-|  | 38 | 18 | 9 | **16** | 9 |
+| | 38 | 18 | 9 | **16** | 9 |
 | 2012 | 32 | 18 | 9 | **18** | 9 |
 | 2013 | 47 | 18 | 9 | **18** | 9 |
 | 2014 | 25 | 18 | 9 | **18** | 9 |
 | 2015 | 29 | 18 | 9 | **15** | 9 |
 | 2016 | 42 | 18 | 9 | **18** | 9 |
-|  | 20 | 6 | 3 | **6** | 3 |
-|  | 52 | 18 | 9 | **17** | 9 |
-| 2020 | 16 | 18 | 9 | **14** | 9 |
+| | 20 | 6 | 3 | **6** | 3 |
+| | 52 | 18 | 9 | **17** | 9 |
 | 2021 | 18 | 10 | 5 | **10** | 5 |
 | 2022 | 24 | 18 | 9 | **18** | 9 |
 | **sum** | | | **107** | **204** | **107 dest indexes · 162 HTML files** |
 
-After kill (leftover-2× unique dest **links** remaining): 2007=15 · 2010=11 · =22 · 2012=14 · 2013=29 · 2014=7 · 2015=14 · 2016=24 · =14 · =35 · 2020=2 · 2021=8 · 2022=6. leftover-2× unique dest **links** ∩ leftover-3× unique dest **links** = **0**.
+After kill (leftover-2× unique dest **links** remaining): 2007=15 · 2010=11 · =22 · 2012=14 · 2013=29 · 2014=7 · 2015=14 · 2016=24 · =14 · =35 · =2 · 2021=8 · 2022=6. leftover-2× unique dest **links** ∩ leftover-3× unique dest **links** = **0**.
 
  leftover-3× unique dest-true dests on leftover-3× unique dest links: all 9. leftover-2× unique dest links miss `pandora` (extra dest KEEP) from the leftover-3× unique dest **links** list, so 2×∩3× unique dest **links** = 16 not 18.
 2015 leftover-2× unique dest links miss 3 leftover-3× unique dest **link** dests (`pandora` not in 2015 3× links — see year table).
  leftover-2× unique dest links miss 1 leftover-3× unique dest **link** dest.
-2020 leftover-2× unique dest links miss 4 leftover-3× unique dest **link** dests (tiktok is official dest leftover-3× unique dest **link** ADD).
+ leftover-2× unique dest links miss 4 leftover-3× unique dest **link** dests (tiktok is official dest leftover-3× unique dest **link** ADD).
 
 ## Each dest on both link lists
 
@@ -284,7 +283,7 @@ leftover-3× unique dest-true dests (9): `amazon` · `facebook` · `google` · `
 On leftover-3× unique dest **links** only (already dest-disjoint from leftover-2× unique dest **links**): `sekiro`
 - `sekiro` — leftover-3× unique-link ADD
 
-### 2020
+### 
 
 leftover-3× unique dest-true dests (9): `amazon` · `facebook` · `google` · `instagram` · `nyt` · `reddit` · `slack` · `wikipedia` · `youtube`
 
@@ -491,15 +490,15 @@ Every leftover-3× unique dest-true dest `index.html` (and sibling HTML under th
 | `years//sites/twitter/index.html` | 16 |
 | `years//sites/yahoo/index.html` | 16 |
 | `years//sites/youtube/index.html` | 16 |
-| `years/2020/sites/amazon/index.html` | 13 |
-| `years/2020/sites/facebook/index.html` | 13 |
-| `years/2020/sites/google/index.html` | 13 |
-| `years/2020/sites/instagram/index.html` | 13 |
-| `years/2020/sites/nyt/index.html` | 14 |
-| `years/2020/sites/reddit/index.html` | 14 |
-| `years/2020/sites/slack/index.html` | 14 |
-| `years/2020/sites/wikipedia/index.html` | 13 |
-| `years/2020/sites/youtube/index.html` | 13 |
+| `years/sites/amazon/index.html` | 13 |
+| `years/sites/facebook/index.html` | 13 |
+| `years/sites/google/index.html` | 13 |
+| `years/sites/instagram/index.html` | 13 |
+| `years/sites/nyt/index.html` | 14 |
+| `years/sites/reddit/index.html` | 14 |
+| `years/sites/slack/index.html` | 14 |
+| `years/sites/wikipedia/index.html` | 13 |
+| `years/sites/youtube/index.html` | 13 |
 | `years/2021/sites/amazon/index.html` | 9 |
 | `years/2021/sites/google/index.html` | 9 |
 | `years/2021/sites/instagram/c.html` | 9 |
@@ -561,16 +560,15 @@ Official dest leftover unique dest **link** first paint is **0**. These dests ar
 | 2006 | 9 | `aws` · `facebook` · `gmail` · `googledocs` · `ie7` · `roblox` · `twitter` · `wikipedia` · `youtube` |
 | 2007 | 10 | `fbplat` · `gmail` · `ie6` · `iphone` · `kindle` · `playable` · `streetview` · `tumblr` · `twitter` · `youtube` |
 | 2010 | 10 | `facebook` · `farmville` · `foursquare` · `imgur` · `instagram` · `ipad` · `iphone` · `playable` · `twitter` · `youtube` |
-|  | 9 | `airbnb` · `facebook` · `googleplus` · `instagram` · `ipad` · `iphone` · `qwikster` · `spotify` · `twitter` |
+| | 9 | `airbnb` · `facebook` · `googleplus` · `instagram` · `ipad` · `iphone` · `qwikster` · `spotify` · `twitter` |
 | 2012 | 9 | `facebook` · `flipboard` · `instagram` · `iphone` · `medium` · `path` · `pinterest` · `playable` · `wikipedia` |
 | 2013 | 4 | `snowden` · `telegram` · `tumblr` · `windows81` |
 | 2014 | 7 | `applepay` · `iphone` · `material` · `playable` · `slack` · `twitch` · `whatsapp` |
 | 2015 | 5 | `discord` · `googlephotos` · `periscope` · `snapchat` · `windows10` |
 | 2016 | 5 | `iphone` · `musically` · `pokemongo` · `snapchat` · `vine` |
 | 2017 | 6 | `equifax` · `fortnite` · `musically` · `switch` · `teams` · `wannacry` |
-|  | 6 | `gdpr` · `github` · `homepod` · `spectre` · `tiktok` · `trust` |
-|  | 9 | `airpodspro` · `appletv` · `arcade` · `chrome` · `disneyplus` · `playable` · `stadia` · `tiktok` · `windows10` |
-| 2020 | 2 | `classroom` · `playable` |
+| | 6 | `gdpr` · `github` · `homepod` · `spectre` · `tiktok` · `trust` |
+| | 9 | `airpodspro` · `appletv` · `arcade` · `chrome` · `disneyplus` · `playable` · `stadia` · `tiktok` · `windows10` |
 | 2021 | 8 | `att` · `chrome` · `copilot` · `facebook` · `flash` · `playable` · `signal` · `windows10` |
 | 2022 | 6 | `chatgpt` · `mastodon` · `playable` · `tiktok` · `twitter` · `windows11` |
 | **sum** | **223** | |
@@ -599,7 +597,6 @@ Official dest leftover unique dest **link** first paint is **0**. These dests ar
 | Year | n | Dests |
 |-----:|--:|-------|
 | 2014 | 2 | `heartbleed` · `icebucket` |
-| 2020 | 6 | `amongus` · `animalcrossing` · `discord` · `houseparty` · `netflix` · `tiktok` |
 | 2021 | 2 | `meta` · `windows11` |
 | 2022 | 3 | `bereal` · `ftx` · `wordle` |
 | **sum** | **13** | |
@@ -620,15 +617,14 @@ Leftover dest KEEP leftover dest-true I/O stays. leftover-3× unique dest **link
 |-----:|--:|-------|
 | 2007 | 9 | `appletv` · `friendfeed` · `funnyordie` · `hackernews` · `icanhas` · `ipodtouch` · `justintv` · `netflix` · `pownce` |
 | 2010 | 9 | `angry` · `chromewebstore` · `cityville` · `flipboard` · `googlebuzz` · `hulu` · `ibooks` · `kinect` · `minecraft` |
-|  | 9 | `codecademy` · `gmusic` · `imessage` · `ios5` · `line` · `pandora` · `snapchat` · `stripe` · `wechat` |
+| | 9 | `codecademy` · `gmusic` · `imessage` · `ios5` · `line` · `pandora` · `snapchat` · `stripe` · `wechat` |
 | 2012 | 9 | `coursera` · `duolingo` · `edx` · `googleplay` · `ios6` · `jellybean` · `nexus7` · `tinder` · `udacity` |
 | 2013 | 9 | `bitcoin` · `bustle` · `chromecast` · `doordash` · `giphy` · `ios7` · `kahoot` · `kitkat` · `patreon` |
 | 2014 | 7 | `alibabaipo` · `echo` · `flappybird` · `game2048` · `inbox` · `ios8` · `oculusfb` |
 | 2015 | 9 | `androidpay` · `applenews` · `applewatch` · `beats1` · `ethereum` · `ios9` · `ipadpro` · `k8s` · `marshmallow` |
 | 2016 | 9 | `airpods` · `allo` · `daydream` · `douyin` · `ethereum` · `figma` · `googlehome` · `ios10` · `letsencrypt` |
-|  | 3 | `epicstore` · `gplusgone` · `ios12` |
-|  | 9 | `airpods2` · `android10` · `apex` · `applewatch5` · `catalina` · `galaxyfold` · `ios13` · `ipados` · `sekiro` |
-| 2020 | 3 | `clubhouse` · `hbomax` · `peacock` |
+| | 3 | `epicstore` · `gplusgone` · `ios12` |
+| | 9 | `airpods2` · `android10` · `apex` · `applewatch5` · `catalina` · `galaxyfold` · `ios13` · `ipados` · `sekiro` |
 | 2021 | 3 | `coinbaseipo` · `epicapple` · `nft` |
 | 2022 | 6 | `dalle2` · `ios16` · `m2` · `midjourney` · `stablediff` · `temu` |
 | **sum** | **94** | |
@@ -654,14 +650,14 @@ Leftover dest leftover dest-true I/O dests (keep / trap / field) are also leftov
 | 2006 | 35 |
 | 2007 | 5 |
 | 2010 | 1 |
-|  | 20 |
+| | 20 |
 | 2012 | 2 |
 | 2013 | 25 |
 | 2015 | 7 |
 | 2016 | 15 |
 | 2017 | 20 |
-|  | 8 |
-|  | 21 |
+| | 8 |
+| | 21 |
 | **sum** | **713** |
 
 ### R8. Forest leftover dest leftover-3× dests also leftover-2× unique dest **links** (**189** dest indexes)

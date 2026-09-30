@@ -1,4 +1,4 @@
-# 2017 and  — 2× more flows
+# 2017 and — 2× more flows
 
 **Date:** 2026-09-24  
 **Status:** Research record. The trails are already wired. Do not add a 31st stop from this file.  
@@ -49,34 +49,34 @@ Each leftover page links to an official page or Wikipedia. The URLs are in [`201
 
 ---
 
-##  — first 20 from the cited KEEP list
+## — first 20 from the cited KEEP list
 
 Source: [`YEAR-BY-YEAR-RESEARCH-STEPS.md`](YEAR-BY-YEAR-RESEARCH-STEPS.md) §. These 20 are dest-true leftover I/O, not the workshop rows, and all 20 folders exist. They are not official stops and not the leftover-3× nine (Amazon, Facebook, Google, Instagram, NYT, Oculus Quest, Twitter, Yahoo, YouTube). The star stays Disney+, `itt19-disneyplus`.
 
-These 20 are stops 11–30. The other cited  KEEP slugs stay off the trail. This list is not a license to add a 31st stop.
+These 20 are stops 11–30. The other cited KEEP slugs stay off the trail. This list is not a license to add a 31st stop.
 
 | n | Slug | Cite in the year note |
 |--:|------|------------------------|
 | 11 | `airpods2` | AirPods 2, . Not AirPods Pro. |
-| 12 | `android10` | Android 10, 3 Sep  |
-| 13 | `anthem19` | Anthem,  |
-| 14 | `apex` | Apex Legends, 4 Feb  |
-| 15 | `applecard` | Apple Card, Aug  |
-| 16 | `applewatch5` | Apple Watch Series 5,  |
-| 17 | `astralchain` | Astral Chain,  |
-| 18 | `bloodstained` | Bloodstained,  |
-| 19 | `borderlands3` | Borderlands 3,  |
-| 20 | `catalina` | macOS Catalina, 7 Oct  |
-| 21 | `control19` | Control, 27 Aug  |
-| 22 | `crashteamracing` | CTR Nitro-Fueled,  |
-| 23 | `daysgone` | Days Gone,  |
-| 24 | `deathstranding` | Death Stranding, 8 Nov  |
-| 25 | `discoelysium` | Disco Elysium, 15 Oct  |
-| 26 | `dmc5` | Devil May Cry 5,  |
-| 27 | `fireemblem3h` | Fire Emblem: Three Houses,  |
-| 28 | `galaxyfold` | Galaxy Fold,  |
-| 29 | `galaxynote10` | Galaxy Note 10,  |
-| 30 | `galaxys10` | Galaxy S10,  |
+| 12 | `android10` | Android 10, 3 Sep |
+| 13 | `anthem19` | Anthem, |
+| 14 | `apex` | Apex Legends, 4 Feb |
+| 15 | `applecard` | Apple Card, Aug |
+| 16 | `applewatch5` | Apple Watch Series 5, |
+| 17 | `astralchain` | Astral Chain, |
+| 18 | `bloodstained` | Bloodstained, |
+| 19 | `borderlands3` | Borderlands 3, |
+| 20 | `catalina` | macOS Catalina, 7 Oct |
+| 21 | `control19` | Control, 27 Aug |
+| 22 | `crashteamracing` | CTR Nitro-Fueled, |
+| 23 | `daysgone` | Days Gone, |
+| 24 | `deathstranding` | Death Stranding, 8 Nov |
+| 25 | `discoelysium` | Disco Elysium, 15 Oct |
+| 26 | `dmc5` | Devil May Cry 5, |
+| 27 | `fireemblem3h` | Fire Emblem: Three Houses, |
+| 28 | `galaxyfold` | Galaxy Fold, |
+| 29 | `galaxynote10` | Galaxy Note 10, |
+| 30 | `galaxys10` | Galaxy S10, |
 
 34 other KEEP rows stay off this list, including the workshop ones (Area 51, hide likes, Huawei, Libra, WeWork).
 
@@ -84,4 +84,4 @@ These 20 are stops 11–30. The other cited  KEEP slugs stay off the trail. This
 
 ## Next research step
 
-Open a primary page for each 2017 row that is not iOS 11 or Cloudbleed, and for each  row above. Record the title and URL on the row, or drop the row. Do not add a folder and do not edit `flow-trails.js` in that step.
+Open a primary page for each 2017 row that is not iOS 11 or Cloudbleed, and for each row above. Record the title and URL on the row, or drop the row. Do not add a folder and do not edit `flow-trails.js` in that step.

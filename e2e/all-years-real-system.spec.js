@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * REAL-flow system gate — every ship year (1994–2006 + 2010 + 2012–).
+ * REAL-flow system gate — every ship year (1994–2006, 2010, 2012–2017, and 2022).
  *
  * 1) Universal module boots (data-itt-real-flow / data-itt-feat-realFlow)
  * 2) Thesis literacy panel: incomplete writes nothing; complete writes year-prefixed *-thesis-ack
@@ -39,7 +39,6 @@ const YEARS = [
   '2014',
   '2016',
   '2017',
-  '',
 ];
 
 /** @param {string} year */

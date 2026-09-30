@@ -308,16 +308,6 @@
   "1996": [
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/aolportal/index.html",
-      "name": "AOL.com"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/apple/index.html",
-      "name": "Apple"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/archive/index.html",
       "name": "Internet Archive"
     },
@@ -652,11 +642,6 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/apple/index.html",
-      "name": "Apple Computer"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/bbc/index.html",
       "name": "BBC News 1998"
     },
@@ -717,11 +702,6 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/mp3com/index.html",
-      "name": "MP3.com"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/msn/index.html",
       "name": "MSN.com start 1998"
     },
@@ -734,11 +714,6 @@
       "do": "Existing room · 3× link pass",
       "href": "sites/playable/index.html",
       "name": "Skip-Intro Runner"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/realplayer/index.html",
-      "name": "RealPlayer 5"
     },
     {
       "do": "Existing room · 3× link pass",
@@ -762,11 +737,6 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/winamp/index.html",
-      "name": "Winamp 2"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/xoom/index.html",
       "name": "Xoom"
     }
@@ -786,11 +756,6 @@
       "do": "Existing room · 3× link pass",
       "href": "sites/aol/index.html",
       "name": "AOL.com 1999"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/apple/index.html",
-      "name": "Apple Computer"
     },
     {
       "do": "Existing room · 3× link pass",
@@ -1459,11 +1424,6 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/apple/index.html",
-      "name": "Apple Computer"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/askjeeves/index.html",
       "name": "Ask Jeeves!"
     },
@@ -1554,11 +1514,6 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/geocities/index.html",
-      "name": "Yahoo! GeoCities"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/gnutella/index.html",
       "name": "Gnutella"
     },
@@ -1644,11 +1599,6 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/microsoft/index.html",
-      "name": "Microsoft"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/moreover/index.html",
       "name": "Moreover"
     },
@@ -1681,11 +1631,6 @@
       "do": "Existing room · 3× link pass",
       "href": "sites/netcenter/index.html",
       "name": "Netscape Netcenter"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/netflix/index.html",
-      "name": "Netflix"
     },
     {
       "do": "Existing room · 3× link pass",
@@ -1881,11 +1826,6 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/apple/index.html",
-      "name": "Apple Computer"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/ask/index.html",
       "name": "ask"
     },
@@ -2031,11 +1971,6 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/geocities/index.html",
-      "name": "Yahoo! GeoCities"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/gmail/index.html",
       "name": "Welcome to Gmail"
     },
@@ -2166,11 +2101,6 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/microsoft/index.html",
-      "name": "Microsoft"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/milliondollar/index.html",
       "name": "milliondollar"
     },
@@ -2213,11 +2143,6 @@
       "do": "Existing room · 3× link pass",
       "href": "sites/netcenter/index.html",
       "name": "Netscape Netcenter"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/netflix/index.html",
-      "name": "Netflix"
     },
     {
       "do": "Existing room · 3× link pass",
@@ -2288,11 +2213,6 @@
       "do": "Existing room · 3× link pass",
       "href": "sites/reddit/index.html",
       "name": "reddit"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/secondlife/index.html",
-      "name": "secondlife"
     },
     {
       "do": "Existing room · 3× link pass",
@@ -2421,38 +2341,8 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/bing/index.html",
-      "name": "Bing"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/espn/index.html",
       "name": "ESPN"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/tumblr/index.html",
-      "name": "Tumblr"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/groupon/index.html",
-      "name": "Groupon"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/livingsocial/index.html",
-      "name": "LivingSocial"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/gowalla/index.html",
-      "name": "Gowalla"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/color/index.html",
-      "name": "Color"
     },
     {
       "do": "Existing room · 3× link pass",
@@ -2461,46 +2351,11 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/hulu/index.html",
-      "name": "Hulu"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/foursquare/index.html",
-      "name": "Foursquare"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/quora/index.html",
-      "name": "Quora"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/kickstarter/index.html",
-      "name": "Kickstarter"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/evernote/index.html",
-      "name": "Evernote"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/imgur/index.html",
-      "name": "Imgur"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/huffpost/index.html",
       "name": "HuffPost"
     }
   ],
   "2012": [
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/amazon/index.html",
-      "name": "Amazon"
-    },
     {
       "do": "Existing room · 3× link pass",
       "href": "sites/buzzfeed/index.html",
@@ -2518,33 +2373,8 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/drivebox/index.html",
-      "name": "Drive"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/gmail/index.html",
-      "name": "Gmail"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/google/index.html",
-      "name": "Google"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/googledrive/index.html",
       "name": "Google Drive"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/googleplus/index.html",
-      "name": "Google+ residual"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/igabout/index.html",
-      "name": "IG about"
     },
     {
       "do": "Existing room · 3× link pass",
@@ -2555,41 +2385,6 @@
       "do": "Existing room · 3× link pass",
       "href": "sites/iphone/index.html",
       "name": "iPhone 5"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/ipoabout/index.html",
-      "name": "IPO about"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/kindlefire/index.html",
-      "name": "Kindle Fire"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/lyft/index.html",
-      "name": "Lyft seed"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/netflix/index.html",
-      "name": "Netflix"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/nexus/index.html",
-      "name": "Nexus"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/pinabout/index.html",
-      "name": "Pinterest about"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/play/index.html",
-      "name": "Google Play / Nexus"
     },
     {
       "do": "Existing room · 3× link pass",
@@ -2623,27 +2418,7 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/trello/index.html",
-      "name": "Trello"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/tumblr/index.html",
-      "name": "Tumblr"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/tumblr12/index.html",
-      "name": "Tumblr"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/twitter/index.html",
-      "name": "Twitter"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/twnote12/index.html",
       "name": "Twitter"
     },
     {
@@ -2653,23 +2428,8 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/vinewait/index.html",
-      "name": "Vine wait"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/waze/index.html",
-      "name": "Waze"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/wikipedia/index.html",
       "name": "Wikipedia"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/windows-phone/index.html",
-      "name": "Windows Phone"
     },
     {
       "do": "Existing room · 3× link pass",
@@ -2678,35 +2438,15 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/yahoo/index.html",
-      "name": "Yahoo"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/yahoo-marissa/index.html",
-      "name": "Yahoo / Mayer"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/youtube/index.html",
       "name": "YouTube"
     },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/ytnote12/index.html",
-      "name": "YouTube"
-    }
   ],
   "2013": [
     {
       "do": "Existing room · 3× link pass",
       "href": "sites/askfm/index.html",
       "name": "Ask.fm"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/bitcoin13/index.html",
-      "name": "Bitcoin"
     },
     {
       "do": "Existing room · 3× link pass",
@@ -2725,28 +2465,8 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/instagram/about.html",
-      "name": "IG Video"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/ios7about/index.html",
-      "name": "iOS 7"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/iphone/5c.html",
-      "name": "iPhone 5c"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/medium/index.html",
       "name": "Medium"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/ouya/index.html",
-      "name": "OUYA"
     },
     {
       "do": "Existing room · 3× link pass",
@@ -2755,28 +2475,8 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/playable/index.html",
-      "name": "2013 playable"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/reddit/index.html",
       "name": "reddit"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/snapabout/index.html",
-      "name": "Snap about"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/snapchat/about.html",
-      "name": "Stories"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/teleabout/index.html",
-      "name": "Telegram"
     },
     {
       "do": "Existing room · 3× link pass",
@@ -2785,33 +2485,8 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/touchabout/index.html",
-      "name": "Touch ID"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/tumblr/index.html",
       "name": "Yahoo × Tumblr"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/tumblr13/index.html",
-      "name": "Tumblr Yahoo"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/twitteripo/index.html",
-      "name": "Twitter IPO"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/vine/index.html",
-      "name": "Vine feed"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/vineabout/index.html",
-      "name": "Vine about"
     },
     {
       "do": "Existing room · 3× link pass",
@@ -2825,16 +2500,6 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/xboxone/index.html",
-      "name": "Xbox One"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/yikyak13/index.html",
-      "name": "Yik Yak"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/youtube/index.html",
       "name": "YouTube"
     }
@@ -2842,38 +2507,8 @@
   "2014": [
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/alipay/index.html",
-      "name": "Alipay"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/echoinvite/index.html",
-      "name": "Echo invite 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/ello/index.html",
-      "name": "Ello 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/giphy/index.html",
-      "name": "Giphy"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/instagram/index.html",
       "name": "Instagram"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/iphone6about/index.html",
-      "name": "iPhone 6"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/materialabout/index.html",
-      "name": "Material"
     },
     {
       "do": "Existing room · 3× link pass",
@@ -2882,23 +2517,8 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/oculus/index.html",
-      "name": "Oculus 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/payabout/index.html",
-      "name": "Apple Pay"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/playable/index.html",
       "name": "Playable"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/serial/index.html",
-      "name": "Serial 6×"
     },
     {
       "do": "Existing room · 3× link pass",
@@ -2907,18 +2527,8 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/slackabout/index.html",
-      "name": "Slack"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/snapchat/index.html",
       "name": "Snapchat"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/swarm/index.html",
-      "name": "Swarm"
     },
     {
       "do": "Existing room · 3× link pass",
@@ -2932,170 +2542,13 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/twitchabout/index.html",
-      "name": "Twitch"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/uber/index.html",
       "name": "Uber"
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/waabout/index.html",
-      "name": "WhatsApp about"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/wikipedia/index.html",
       "name": "Wikipedia"
-    }
-  ],
-  "2015": [
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/adblock/index.html",
-      "name": "Adblock"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/agario/index.html",
-      "name": "Agar.io 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/amppage/index.html",
-      "name": "AMP"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/apple/about.html",
-      "name": "apple hop"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/applemusicsub/index.html",
-      "name": "Apple Music"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/discordabout/index.html",
-      "name": "Discord"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/discoverabout/index.html",
-      "name": "Discover"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/echo/index.html",
-      "name": "Amazon Echo"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/edgeabout/index.html",
-      "name": "Edge"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/fblive/index.html",
-      "name": "Facebook Live"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/instagram/index.html",
-      "name": "Instagram"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/instant/index.html",
-      "name": "Instant Articles 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/ios9/blockers.html",
-      "name": "iOS 9"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/leabout/index.html",
-      "name": "Let's Encrypt"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/meerkat/index.html",
-      "name": "Meerkat"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/meerkatlive/index.html",
-      "name": "Meerkat"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/netflix/index.html",
-      "name": "Netflix"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/peach/index.html",
-      "name": "Peach"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/periabout/index.html",
-      "name": "Periscope about"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/photosabout/index.html",
-      "name": "Photos"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/playable/index.html",
-      "name": "2015 playables"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/secret/index.html",
-      "name": "Secret 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/snapchat/index.html",
-      "name": "Snapchat"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/spotify/index.html",
-      "name": "Spotify"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/swiftoss/index.html",
-      "name": "Swift OSS 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/titleii/index.html",
-      "name": "Title II 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/watchabout/index.html",
-      "name": "Watch"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/waweb/index.html",
-      "name": "WhatsApp Web 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/win10get/index.html",
-      "name": "Get Windows 10"
     }
   ],
   "2016": [
@@ -3108,11 +2561,6 @@
       "do": "Existing room · 3× link pass",
       "href": "sites/assistant/index.html",
       "name": "Assistant 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/e2eabout/index.html",
-      "name": "E2E"
     },
     {
       "do": "Existing room · 3× link pass",
@@ -3131,18 +2579,8 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/inbox/index.html",
-      "name": "Inbox 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/instagram/about.html",
       "name": "Stories"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/iphone7about/index.html",
-      "name": "iPhone 7"
     },
     {
       "do": "Existing room · 3× link pass",
@@ -3171,16 +2609,6 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/pogoabout/index.html",
-      "name": "GO"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/reactabout/index.html",
-      "name": "Reactions"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/reddit/index.html",
       "name": "reddit"
     },
@@ -3201,21 +2629,6 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/spectabout/index.html",
-      "name": "Spectacles"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/storyabout/index.html",
-      "name": "Stories about"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/superbowl/index.html",
-      "name": "Super Bowl"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/vine/index.html",
       "name": "Vine"
     },
@@ -3226,591 +2639,10 @@
     },
     {
       "do": "Existing room · 3× link pass",
-      "href": "sites/win10end/index.html",
-      "name": "Win10 end"
-    },
-    {
-      "do": "Existing room · 3× link pass",
       "href": "sites/youtube/index.html",
       "name": "YouTube"
     }
   ],
-  "2017": [
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/airpods17/index.html",
-      "name": "AirPods"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/amazon/index.html",
-      "name": "Amazon"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/android8/index.html",
-      "name": "Android Oreo"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/applepark/index.html",
-      "name": "Apple Park"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/bch/index.html",
-      "name": "Bitcoin Cash"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/bitcoinath/index.html",
-      "name": "Bitcoin"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/bitmoji/index.html",
-      "name": "Bitmoji"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/cloudbleed/index.html",
-      "name": "Cloudbleed"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/cmebtc/index.html",
-      "name": "CME Bitcoin"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/coreml/index.html",
-      "name": "Core ML"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/creditfrz/index.html",
-      "name": "Credit freeze"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/discord17/index.html",
-      "name": "Discord"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/echoshow/index.html",
-      "name": "Echo Show"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/equifaxabout/index.html",
-      "name": "Equifax"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/faceabout/index.html",
-      "name": "Face ID"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/facebook2b/index.html",
-      "name": "Facebook 2 billion"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/flashend/index.html",
-      "name": "Flash EOL announce 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/fnstw/index.html",
-      "name": "Save the World"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/homepodann/index.html",
-      "name": "HomePod announce"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/hqtrivia/index.html",
-      "name": "HQ Trivia"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/ios11/index.html",
-      "name": "iOS 11"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/ios11ar/index.html",
-      "name": "ARKit 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/iphone/about.html",
-      "name": "Face ID"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/iphone8/index.html",
-      "name": "iPhone 8"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/krack/index.html",
-      "name": "KRACK 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/musically17/index.html",
-      "name": "musical.ly"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/nnrepeal/index.html",
-      "name": "Title II repeal 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/notpetya/index.html",
-      "name": "NotPetya"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/odyssey/index.html",
-      "name": "Odyssey"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/pixel2/index.html",
-      "name": "Pixel 2 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/pixelbook/index.html",
-      "name": "Pixelbook"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/playable/index.html",
-      "name": "2017 playables"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/pubgnote/index.html",
-      "name": "PUBG"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/reddit/index.html",
-      "name": "reddit"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/signal17/index.html",
-      "name": "Signal"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/slack17/index.html",
-      "name": "Slack"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/snapipo/index.html",
-      "name": "Snap IPO"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/t280about/index.html",
-      "name": "280"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/telegram17/index.html",
-      "name": "Telegram"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/vault7/index.html",
-      "name": "Vault 7"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/wannaabout/index.html",
-      "name": "WannaCry"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/watch3/index.html",
-      "name": "Watch Series 3"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/xboxonex/index.html",
-      "name": "Xbox One X"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/yahoo3b/index.html",
-      "name": "Yahoo 3 billion"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/youtube/index.html",
-      "name": "YouTube"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/youtubetv/index.html",
-      "name": "YouTube TV 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/zoom17/index.html",
-      "name": "Zoom"
-    }
-  ],
-  "": [
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/github/index.html",
-      "name": "GitHub"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/reddit/index.html",
-      "name": "reddit"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/tiktok/index.html",
-      "name": "TikTok"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/wikipedia/index.html",
-      "name": "Wikipedia"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/youtube/index.html",
-      "name": "YouTube"
-    }
-  ],
-  "2020": [
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/acnh/index.html",
-      "name": "ACNH"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/among/c.html",
-      "name": "Continuity 29"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/amongus/index.html",
-      "name": "Among Us"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/amz/index.html",
-      "name": "Continuity 3"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/astro/index.html",
-      "name": "Astronomical"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/brave/index.html",
-      "name": "Continuity 38"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/clubhouse/index.html",
-      "name": "Clubhouse"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/cont/index.html",
-      "name": "Continuity 39"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/discord/index.html",
-      "name": "Discord"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/disneyplus/index.html",
-      "name": "Disney+"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/epic/index.html",
-      "name": "Epic v Apple"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/exposure/index.html",
-      "name": "Exposure Notification"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/facebook/index.html",
-      "name": "Facebook"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/fallguys/index.html",
-      "name": "Fall Guys"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/ff/index.html",
-      "name": "Continuity 37"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/figma/index.html",
-      "name": "Continuity 19"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/fleets/index.html",
-      "name": "Fleets"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/fn/index.html",
-      "name": "Continuity 28"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/github/index.html",
-      "name": "Continuity 20"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/gmail/index.html",
-      "name": "Continuity 11"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/google/index.html",
-      "name": "Continuity 10"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/hbomax/index.html",
-      "name": "HBO Max"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/icloud/index.html",
-      "name": "Continuity 34"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/ig/index.html",
-      "name": "Continuity 7"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/ios14/index.html",
-      "name": "iOS 14"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/iphone12/index.html",
-      "name": "iPhone 12"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/kindle/index.html",
-      "name": "Continuity 33"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/li/index.html",
-      "name": "Continuity 21"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/maps/index.html",
-      "name": "Continuity 12"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/markets/about.html",
-      "name": "WTI literacy"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/meet/index.html",
-      "name": "Meet"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/mixer/index.html",
-      "name": "Mixer"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/nfx/index.html",
-      "name": "Continuity 5"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/nintendo/index.html",
-      "name": "Continuity 27"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/notion/index.html",
-      "name": "Continuity 18"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/patreon/index.html",
-      "name": "Continuity 32"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/peacock/index.html",
-      "name": "Peacock"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/playable/index.html",
-      "name": "Playables"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/pp/index.html",
-      "name": "Continuity 13"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/ps/index.html",
-      "name": "Continuity 25"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/ps5/index.html",
-      "name": "PS5"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/quest2/index.html",
-      "name": "Quest 2"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/quibi/index.html",
-      "name": "Quibi"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/reddit/index.html",
-      "name": "Continuity 4"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/roblox/index.html",
-      "name": "Continuity 30"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/safari/index.html",
-      "name": "Continuity 36"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/schrems/index.html",
-      "name": "Schrems II"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/slack/index.html",
-      "name": "Continuity 14"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/spacehey/index.html",
-      "name": "SpaceHey"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/spotify/index.html",
-      "name": "Continuity 6"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/ss/index.html",
-      "name": "Continuity 31"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/steam/index.html",
-      "name": "Continuity 23"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/stimulus/index.html",
-      "name": "Get My Payment"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/teams/index.html",
-      "name": "Teams"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/tt/c.html",
-      "name": "Continuity 9"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/twitch/index.html",
-      "name": "Continuity 22"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/twitter/index.html",
-      "name": "Continuity 8"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/wiki/c.html",
-      "name": "Continuity 2"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/wikipedia/index.html",
-      "name": "Wikipedia"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/xbox/index.html",
-      "name": "Continuity 26"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/youtube/index.html",
-      "name": "YouTube Shorts"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/zoom/index.html",
-      "name": "Zoom Join"
-    }
-  ]
 };
   Object.keys(extra).forEach(function (y) {
     var m = ITT.flowMaps && ITT.flowMaps[y];

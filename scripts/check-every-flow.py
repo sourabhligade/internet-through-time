@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
-"""Fast check of every year trail. No browser. React years 2017, –2021 have no HTML."""
+"""Fast check of every year trail. No browser. React doors come from the year card."""
+import json
 import os
 import re
 from collections import defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-REACT_YEARS = {"2014", "2017", ""}
+_CARD = json.loads(open(os.path.join(ROOT, "js", "year-card.json"), encoding="utf-8").read())["years"]
+REACT_YEARS = {y for y, r in _CARD.items() if r.get("kind") == "react"}
 
 
 def react_keys():
     found = defaultdict(set)
-    for year in ("2014", "2017", ""):
+    for year in sorted(REACT_YEARS):
         path = os.path.join(ROOT, "react", "src", "year%s.js" % year)
         text = open(path, encoding="utf-8").read()
         for key in re.findall(r'"(itt\d{2}-[^"]+)"', text):
@@ -72,10 +74,10 @@ def main():
         for stop in missing:
             print("  %s n=%s %s %s" % (stop["year"], stop["n"], stop["whenKey"], stop["href"]))
         raise SystemExit(1)
-    # React doors must cover every trail key for the years whose HTML was removed.
-    for year in ("2017", ""):
-        trail = {s["whenKey"] for s in by_year[year]}
-        absent = sorted(trail - keys[year])
+    # React doors must cover every trail key still listed for that year.
+    for year in sorted(REACT_YEARS):
+        trail = {s["whenKey"] for s in by_year.get(year, [])}
+        absent = sorted(trail - keys.get(year, set()))
         if absent:
             print(year, "trail keys not in React", absent)
             raise SystemExit(1)

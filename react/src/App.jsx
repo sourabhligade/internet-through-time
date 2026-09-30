@@ -2,34 +2,19 @@ import { Component, useEffect } from "react";
 import { Link, Navigate, Route, Routes, useParams } from "react-router-dom";
 import { Year2015 } from "./Year2015.jsx";
 import { Year2017 } from "./Year2017.jsx";
-import { REACT_YEARS, yearById } from "./years.js";
+import { REACT_YEARS, cardList, hashHtmlYears } from "./years.js";
+import card from "../../js/year-card.json";
 
-const STATIC_YEARS = { 2014: 1, 2016: 1, 2022: 1 };
+const DOORS = {
+  2015: Year2015,
+  2017: Year2017,
+};
 
 export function App() {
   return (
     <Routes>
       <Route path="/" element={<Hall />} />
-      <Route path="/year/2014" element={<StaticYear year="2014" />} />
-      <Route path="/year/2016" element={<StaticYear year="2016" />} />
-      <Route path="/year/2022" element={<StaticYear year="2022" />} />
-      <Route
-        path="/year/2015"
-        element={
-          <DoorError year="2015">
-            <Year2015 />
-          </DoorError>
-        }
-      />
-      <Route
-        path="/year/2017"
-        element={
-          <DoorError year="2017">
-            <Year2017 />
-          </DoorError>
-        }
-      />
-      <Route path="/year/:year" element={<YearDoor />} />
+      <Route path="/year/:year" element={<YearSwitch />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
@@ -91,13 +76,17 @@ function StaticYear({ year }) {
 }
 
 function Hall() {
+  const reactYears = REACT_YEARS.map((row) => row.year).join(", ");
+  const staticYears = hashHtmlYears().join(", ");
+  const boarded = cardList("boarded").join(", ");
+  const absent = cardList("absent").join(", ");
   return (
     <main className="hall">
-      <p className="kicker">React doors · 2015 and 2017</p>
+      <p className="kicker">React doors · {reactYears}</p>
       <h1>Internet Through Time</h1>
       <p className="lede">
-        2015 and 2017 are the React doors. 2014, 2016, and 2022 open on
-        the static museum. 2011, 2018–2021, and 2023–2025 are absent.
+        {reactYears} are the React doors. {staticYears} open on the static
+        museum. {boarded} is boarded. {absent} are absent.
       </p>
       <ul className="cards">
         {REACT_YEARS.map((row) => (
@@ -117,12 +106,17 @@ function Hall() {
   );
 }
 
-function YearDoor() {
+function YearSwitch() {
   const { year } = useParams();
-  if (STATIC_YEARS[year]) return <StaticYear year={year} />;
-  const row = yearById(year);
-  if (!row) return <Navigate to="/" replace />;
-  if (year === "2015") return <Navigate to="/year/2015" replace />;
-  if (year === "2017") return <Navigate to="/year/2017" replace />;
+  const rec = card.years[year];
+  if (rec && rec.hashToHtml) return <StaticYear year={year} />;
+  const Door = DOORS[year];
+  if (Door && rec && rec.kind === "react") {
+    return (
+      <DoorError year={year}>
+        <Door />
+      </DoorError>
+    );
+  }
   return <Navigate to="/" replace />;
 }

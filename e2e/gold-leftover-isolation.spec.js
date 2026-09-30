@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Gold leftover isolation — every live year 1994–.
+ * Gold leftover isolation — every live year on the hub.
  * Completing leftover on the star dest writes the leftover key only.
  * It must not write the year star. Leftover key must not equal the star suffix.
  */
@@ -46,8 +46,7 @@ test.describe("gold leftover isolation · every live year", () => {
       expect(isLiveYear(g.year), g.year + " live").toBe(true);
       expect(fs.existsSync(path.join(ROOT, "years", g.year, g.dest)), g.dest).toBe(true);
     }
-    expect(GOLD.some((g) => g.year === "2020"), "2020 official leftover-2× is 0").toBe(false);
-  });
+    });
 
   for (const g of GOLD) {
     test(`${g.year} leftover on ${g.dest} never writes ${g.star}`, async ({ page }) => {

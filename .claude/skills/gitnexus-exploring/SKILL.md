@@ -28,11 +28,11 @@ the bound repository and index freshness alongside your explanation.
 ## Workflow
 
 ```
-1. list_repos {} or READ gitnexus://repos                          → Discover indexed repos
-2. READ gitnexus://repo/{name}/context             → Codebase overview, check staleness
-3. query({search_query: "<what you want to understand>"})  → Find related execution flows
-4. context({name: "<symbol>"})            → Deep dive on specific symbol
-5. READ gitnexus://repo/{name}/process/{name}      → Trace full execution flow
+1. list_repos {} or READ gitnexus://repos → Discover indexed repos
+2. READ gitnexus://repo/{name}/context → Codebase overview, check staleness
+3. query({search_query: "<what you want to understand>"}) → Find related execution flows
+4. context({name: "<symbol>"}) → Deep dive on specific symbol
+5. READ gitnexus://repo/{name}/process/{name} → Trace full execution flow
 ```
 
 > If step 2 says "Index is stale" → run `node .gitnexus/run.cjs analyze` in terminal.
@@ -52,12 +52,12 @@ the bound repository and index freshness alongside your explanation.
 
 ## Resources
 
-| Resource                                | What you get                                            |
+| Resource | What you get |
 | --------------------------------------- | ------------------------------------------------------- |
-| `gitnexus://repo/{name}/context`        | Stats, staleness warning (~150 tokens)                  |
-| `gitnexus://repo/{name}/clusters`       | All functional areas with cohesion scores (~300 tokens) |
-| `gitnexus://repo/{name}/cluster/{name}` | Area members with file paths (~500 tokens)              |
-| `gitnexus://repo/{name}/process/{name}` | Step-by-step execution trace (~200 tokens)              |
+| `gitnexus://repo/{name}/context` | Stats, staleness warning (~150 tokens) |
+| `gitnexus://repo/{name}/clusters` | All functional areas with cohesion scores (~300 tokens) |
+| `gitnexus://repo/{name}/cluster/{name}` | Area members with file paths (~500 tokens) |
+| `gitnexus://repo/{name}/process/{name}` | Step-by-step execution trace (~200 tokens) |
 
 ## Tools
 
@@ -84,14 +84,14 @@ with a single one.
 ## Example: "How does payment processing work?"
 
 ```
-1. list_repos {}                             → total: 1 (my-app) — bind it
-   READ gitnexus://repo/my-app/context       → 918 symbols, 45 processes
+1. list_repos {} → total: 1 (my-app) — bind it
+ READ gitnexus://repo/my-app/context → 918 symbols, 45 processes
 2. query({search_query: "payment processing"})
-   → CheckoutFlow: processPayment → validateCard → chargeStripe
-   → RefundFlow: initiateRefund → calculateRefund → processRefund
+ → CheckoutFlow: processPayment → validateCard → chargeStripe
+ → RefundFlow: initiateRefund → calculateRefund → processRefund
 3. context({name: "processPayment"})
-   → Incoming: checkoutHandler, webhookHandler
-   → Outgoing: validateCard, chargeStripe, saveTransaction
+ → Incoming: checkoutHandler, webhookHandler
+ → Outgoing: validateCard, chargeStripe, saveTransaction
 4. Read src/payments/processor.ts for implementation details
 5. Answer, noting: Repository my-app, index current
 ```

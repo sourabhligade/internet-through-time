@@ -21,16 +21,15 @@
 | 2006 | 376 | 635 | 368 | 108 | 23 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 18/9; 108/376 dests |
 | 2007 | 33 | 90 | 14 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 6/9; 0/33 dests |
 | 2010 | 30 | 69 | 10 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 6/9; 0/30 dests |
-|  | 48 | 110 | 20 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
+| | 48 | 110 | 20 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
 | 2012 | 32 | 77 | 11 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
 | 2013 | 54 | 62 | 45 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
 | 2014 | 25 | 43 | 7 | 0 | 11 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 6/9; 0/25 dests |
 | 2015 | 213 | 316 | 195 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
 | 2016 | 66 | 116 | 48 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
 | 2017 | 222 | 258 | 194 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 18/9 |
-|  | 24 | 33 | 11 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 3/9 |
-|  | 170 | 207 | 152 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
-| 2020 | 39 | 45 | 20 | 0 | 11 | 6 | Y | Y | Y | Y | · | · | Y | Y | · | · | 6/10 | no unique second strip; doors 6/9; mvp |
+| | 24 | 33 | 11 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 3/9 |
+| | 170 | 207 | 152 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | Y | Y | Y | · | 7/10 | no unique second strip; doors 6/9 |
 | 2021 | 18 | 64 | 3 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | · | · | 5/10 | no unique second strip; doors 3/9; 0/18 dests; mvp |
 | 2022 | 25 | 38 | 6 | 0 | 10 | 6 | Y | Y | Y | Y | · | · | · | Y | Y | · | 6/10 | no unique second strip; doors 0/9; 0/25 dests |
 

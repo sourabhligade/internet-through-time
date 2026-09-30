@@ -23,8 +23,8 @@ fi
 
 branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo unknown)"
 say "  branch: $branch"
-if [[ "$branch" != "main" && "$branch" != "master" && "$branch" != "museum/1994-2020-lean" ]]; then
-  say "  note: CI triggers on main / master / museum/1994-2020-lean"
+if [[ "$branch" != "main" && "$branch" != "master" && "$branch" != museum/* ]]; then
+  say "  note: CI triggers on main / master / museum/*"
 else
   ok "branch $branch is a CI trigger"
 fi

@@ -58,17 +58,9 @@
       { id: "hearthand", slot: "c", title: "Hearth Hand", engine: "cards", key: "itt14-game-hearthand", inspire: "Hearthstone · 11 Mar 2014", trap: "Official card art" },
       { id: "destinytw", slot: "d", title: "Destiny Tower", engine: "corridor", key: "itt14-game-destinytw", inspire: "Destiny · 9 Sep 2014", trap: "Official ghost" }
     ],
-    "2015": [
-      { id: "undertalm", slot: "c", title: "Mercy Bar", engine: "cards", key: "itt15-game-undertalm", inspire: "Undertale · 15 Sep 2015", trap: "Official heart" },
-      { id: "splatink", slot: "d", title: "Splat Ink", engine: "craft", key: "itt15-game-splatink", inspire: "Splatoon · 28 May 2015", trap: "Official squid" }
-    ],
     "2016": [
       { id: "owpayload", slot: "c", title: "Payload Push", engine: "corridor", key: "itt16-game-owpayload", inspire: "Overwatch · 24 May 2016", trap: "Official spray" },
       { id: "stardewpl", slot: "d", title: "Valley Plant", engine: "craft", key: "itt16-game-stardewpl", inspire: "Stardew Valley · 26 Feb 2016", trap: "Official chicken" }
-    ],
-    "2017": [
-      { id: "botwplate", slot: "c", title: "Wild Plate", engine: "platform", key: "itt17-game-botwplate", inspire: "Zelda BotW · 3 Mar 2017", trap: "Official sheikah" },
-      { id: "cuprun", slot: "d", title: "Cup Run", engine: "rhythm", key: "itt17-game-cuprun", inspire: "Cuphead · 29 Sep 2017", trap: "Official cup" }
     ],
     };
 })(typeof window !== "undefined" ? window : this);

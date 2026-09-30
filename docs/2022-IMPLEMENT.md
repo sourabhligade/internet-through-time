@@ -10,7 +10,7 @@
 
 **Dest map:** [`2022-DEST-MAP.md`](2022-DEST-MAP.md) (live dest folders **25**).  
 **Law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`2022-READ-FIRST.md`](2022-READ-FIRST.md) · I1–I14.  
-**Density sibling:** ** first-paint** · **2021 freeze ceiling 98**. **2020 live lean** · Zoom Leave.  
+**Density sibling:** ** first-paint** · **2021 freeze ceiling 98**. · Zoom Leave.  
 **Disk now:** dests **25** · HTML **38** · leftover-4× **0**. Do not restore dest-farm to 85.
 
 ---

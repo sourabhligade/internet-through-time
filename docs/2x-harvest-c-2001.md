@@ -174,7 +174,7 @@ weblogs wikipedia wisenut xbox xp yahoo yahoogroups ytmnd
 
 ## Uniqueness
 
-Every slug above is **absent** from the 2001 reserved list (87 on-disk dests = orig+A+B). Cross-year repeats (`aol`, `homestar`, `kozmo`) are intentional: same product, year-true 2001 verb. `playable` / official dests / the star are never in this set.
+Every slug above is from the 2001 reserved list (87 on-disk dests = orig+A+B). Cross-year repeats (`aol`, `homestar`, `kozmo`) are intentional: same product, year-true 2001 verb. `playable` / official dests / the star are never in this set.
 
 `googleimages` ≠ `google`. `yahoomusic` ≠ `yahoo`. `halo` ≠ `xbox`. `melee` / `luigimansion` / `pikmin` ≠ `gamecube`. `grokster` ≠ `grok`. `windowsmessenger` ≠ `msn`. `idvd` / `freedb` / `flac` / `yahoomusic` ≠ `itunes` Store.
 

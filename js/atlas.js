@@ -52,11 +52,20 @@
     );
   }
 
+  function cardRec(year) {
+    var years = (typeof ITT !== "undefined" && ITT.YEAR_CARD && ITT.YEAR_CARD.years) || null;
+    return years ? years[String(year)] || null : null;
+  }
+
   function isReactDoor(year) {
+    var rec = cardRec(year);
+    if (rec) return rec.kind === "react";
     return !!{ "2015": 1, "2017": 1 }[String(year)];
   }
 
   function yearHome(year) {
+    var rec = cardRec(year);
+    if (rec && rec.href) return "/" + String(rec.href).replace(/^\//, "");
     if (isReactDoor(year)) return "/app/index.html#/year/" + year;
     return "/years/" + year + "/";
   }

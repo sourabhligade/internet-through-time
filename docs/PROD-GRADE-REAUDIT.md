@@ -3,7 +3,7 @@
 **Date:** 2026-09-29
 **Status:** Code items 1, 4, 5, 6, and 7 are in the working tree (2026-09-29). Items 2, 3, and 8 are still open: no commit, no push, no public URL, no walk on a public host. The research body below is the pre-implementation snapshot.
 **Supersedes as a finding list:** [`PROD-GRADE-AUDIT.md`](PROD-GRADE-AUDIT.md). That note’s body is the pre-fix snapshot. Its status line says the local fixes landed and a public URL did not.
-**Evidence this pass:** working tree on `museum/1994-2020-lean`, `HEAD` `20c78cbb2` (same commit as `origin/museum/1994-2020-lean`), 92 dirty paths. `python3 scripts/test-pipeline.py` was run (12 passed, 1 failed). GitHub Pages API `repos/sourabhligade/internet-through-time/pages` returned 404. The 6,786-page crawl was not rerun. `npm run ci` and `npm test` were not run. GitNexus was not queried.
+**Evidence this pass:** working tree on `the working branch`, `HEAD` `20c78cbb2` (same commit as `origin/the working branch`), 92 dirty paths. `python3 scripts/test-pipeline.py` was run (12 passed, 1 failed). GitHub Pages API `repos/sourabhligade/internet-through-time/pages` returned 404. The 6,786-page crawl was not rerun. `npm run ci` and `npm test` were not run. GitNexus was not queried.
 
 Production grade still means one public URL, 22 doors, a finished room, and a save line the visitor can trust. It does not mean accounts, analytics, a dest-farm, or restoring 2011, 2018–2021, or 2023–2025.
 
@@ -30,10 +30,10 @@ Checked in the browser recheck immediately before this note, against http://127.
 | Live-year checks | `e2e/helpers.js` `isLiveYear` and `js/museum-progress.js` `isLiveYear` return that same list. 2009 is boarded. 2011 and 2023–2025 are wiped |
 | HTML doors | 1994, 1998, 2004, 2006, 2010, 2016, 2022 return HTTP 200 |
 | 2009 | `/years/2009/` HTTP 200, title “2009 · boarded”, body says it is not on the year menu |
-| Absent trees | `/years/2011/`, `/years/2015/`, `/years/2018/`, `/years/2020/`, `/years/2021/`, `/years/2023/` are HTTP 404 from Python’s server |
+| Absent trees | `/years/2011/`, `/years/2015/`, `/years/2017/`, `/years/2018/`, `/years/2019/`, `/years/2020/`, `/years/2021/`, and `/years/2023/` are HTTP 404. 2015 and 2017 open at `/app/index.html#/year/YYYY` |
 | React hall | Built `app/assets/index-n8fjF1ps.js` (247,100 bytes) and `index-DaSCaCMJ.css`. Hall text is “React doors · 2015 and 2017”. Links are `#/year/2015`, `#/year/2017`, and the hub |
 | Static redirect | `#/year/2014`, `#/year/2016`, `#/year/2022` land on `/years/YYYY/` |
-| Dead React years | `#/year/2020` and `#/year/2021` land on the hall |
+| Dead React years | `#/year` and `#/year/2021` land on the hall |
 | Stops | `#/year/2015?stop=itt15-periscope` and `#/year/2017?stop=itt17-faceid` open those stops |
 | Repair rooms | 7 empty clicks wrote nothing. 35 finished clicks wrote the room key (the original 28 plus a finished pass on the 7). HotBot and Gmail 2004–2006 then open the next page and the key is still in `localStorage` |
 | Blocked save | Fresh browser, PayPal, `setItem` throws: status “This browser blocked the save.”, `itt99-paypal` absent |
@@ -47,7 +47,7 @@ Checked in the browser recheck immediately before this note, against http://127.
 
 ```
 12 passed, 1 failed
-FAIL  ci-e2e-allowlist: ci.yml/ci.sh missing e2e/2016--3x-detail.spec.js, e2e/-mvp.spec.js, e2e/2020-mvp.spec.js
+FAIL ci-e2e-allowlist: ci.yml/ci.sh missing e2e/2016--3x-detail.spec.js, e2e/-mvp.spec.js, e2e-mvp.spec.js
 ```
 
 The other pipeline checks that ran passed: workflow file present, package scripts, lockfile, `ci.sh` exists, Playwright config, 308 specs, browser parts, sitemap years, year shells, deploy configs, gitignore.
@@ -66,10 +66,10 @@ The other pipeline checks that ran passed: workflow file present, package script
 |---|---|
 | `e2e/2016--3x-detail.spec.js` | No. The file is `e2e/2016-3x-detail.spec.js` |
 | `e2e/-mvp.spec.js` | No |
-| `e2e/2020-mvp.spec.js` | No |
+| `e2e-mvp.spec.js` | No |
 | `e2e/2021-mvp.spec.js` | No |
 
-`scripts/test-pipeline.py` `CI_E2E_ALLOWLIST` still requires `e2e/2016--3x-detail.spec.js`, `e2e/-mvp.spec.js`, and `e2e/2020-mvp.spec.js` to appear in both `ci.yml` and `ci.sh`. `ci.yml` no longer contains them, so the static job fails before Playwright starts. `npm run check` and `npm run test:static` call this same script.
+`scripts/test-pipeline.py` `CI_E2E_ALLOWLIST` still requires `e2e/2016--3x-detail.spec.js`, `e2e/-mvp.spec.js`, and `e2e-mvp.spec.js` to appear in both `ci.yml` and `ci.sh`. `ci.yml` no longer contains them, so the static job fails before Playwright starts. `npm run check` and `npm run test:static` call this same script.
 
 `package.json` `"ci"` is `bash scripts/ci.sh`. README “Pre-deploy checklist” tells a publisher to run `npm run ci`.
 
@@ -79,7 +79,7 @@ The e2e job in Actions can start. The static job cannot pass, and the local CI s
 
 ### 2. One public URL does not exist, and the fixes are not the commit GitHub would publish
 
-`git rev-parse HEAD` and `origin/museum/1994-2020-lean` are both `20c78cbb2` (“Remove 2020 and 2021 and keep a 22-year hub.”). `git status` shows 92 dirty paths, including `ci.yml`, `404.html`, `README.md`, the React bundle swap (`app/assets/index-DKzFvS7B.js` deleted, `index-n8fjF1ps.js` untracked relative to that commit), and the save and debug edits.
+`git rev-parse HEAD` and `origin/the working branch` are both `20c78cbb2` (“Remove 2021 and keep a 22-year hub.”). `git status` shows 92 dirty paths, including `ci.yml`, `404.html`, `README.md`, the React bundle swap (`app/assets/index-DKzFvS7B.js` deleted, `index-n8fjF1ps.js` untracked relative to that commit), and the save and debug edits.
 
 `.github/workflows/pages.yml` is `workflow_dispatch` only. It deletes `docs/`, `e2e/`, `scripts/`, and `node_modules`, writes `.nojekyll`, and uploads the repo root. It deploys the commit Actions checks out, which is `20c78cbb2` until someone commits and pushes.
 
@@ -94,17 +94,17 @@ Python’s `http.server` returns its own “Error response” for a missing `/ye
 Visitor surfaces that match the hub:
 
 - Hub cards, `404.html`, atlas lede, atlas footer, hub meta description.
-- Atlas spine is 21 years and says so: 2015 is a React door on the year menu and is not a tick. 2017 on the hallway opens `/app/index.html#/year/2017`. No 2009, 2015, or 2020 tick. Mobile width 390 did not overflow.
+- Atlas spine is 21 years and says so: 2015 is a React door on the year menu and is not a tick. 2017 on the hallway opens `/app/index.html#/year/2017`. No 2009, 2015, or tick. Mobile width 390 did not overflow.
 
 Surfaces that still teach another museum:
 
 | Place | What it says | What the hub does |
 |---|---|---|
 | `README.md` line 89 | 2009 year-shell redirects to the hub | `/years/2009/` is a plaque titled “2009 · boarded” with links to the year menu, 2007, and 2010 |
-| `README.md` line 99 | Two blank `** wiped.**` sentences between the 2015 sentence and “2020 removed” | 2018 and 2019 are absent. The opening paragraph on line 3 already says that |
-| `docs/FLOW-CHECK-DIAGRAM.md` | Hub of 28 cards, playable class table with 2020 and 2021, star table for GDPR, Disney+, ATT | 22 cards. Those doors are absent |
-| `docs/UNDONE.md`, year `*-READ-FIRST.md`, `docs/OPEN-CHECKLIST.md`, `scripts/generate-museum-map.py` | 24-year hub, 2015 wiped, 2020 live | Historical. Pages publish strips `docs/`. The generator is not a served page |
-| `js/immersion/layers.js` | A `"2020"` layer whose star href is `sites/zoom/meeting.html` | No 2020 tree. Dead config unless some year asks for it |
+| `README.md` line 99 | Two blank `` sentences between the 2015 sentence and “ removed” | 2018 are absent. The opening paragraph on line 3 already says that |
+| `docs/FLOW-CHECK-DIAGRAM.md` | Hub of 28 cards, playable class table with 2021, star table for GDPR, Disney+, ATT | 22 cards. Those doors are absent |
+| `docs/UNDONE.md`, year `*-READ-FIRST.md`, `docs/OPEN-CHECKLIST.md`, `scripts/generate-museum-map.py` | 24-year hub, 2015 wiped live | Historical. Pages publish strips `docs/`. The generator is not a served page |
+| `js/immersion/layers.js` | A `""` layer whose star href is `sites/zoom/meeting.html` | No tree. Dead config unless some year asks for it |
 | `js/config/year-playable.js` | A game blurb whose star is still Zoom Leave | Not a hub card |
 
 `js/config/flow-trails.js` still has a 2009 block with n=1–10. The year is boarded. A trail check that treats every key in that file as a hub door will open 2009 by mistake.
@@ -145,7 +145,7 @@ What a failure records:
 | Deferred pack fails to load (`boot.js` “deferred features failed”) | Those machines never start | `console.error` only. The catch does not call `ITT.debug.record` |
 | Bootstrap chain fails (`boot.js` “immersion bootstrap failed”) | Dest machines never start | `console.error` only. No ring |
 | `debug-ring.js` itself fails to load | No ring | The `loadScript(...debug-ring.js).catch` returns null and continues |
-| `flow-trails.js` `onerror` in `ui/year/start.js` | “Flow list did not load.” | Ring row `feature=flow-trails` if debug is armed, then `done()` still runs |
+| `flow-trails.js` `onerror` in `ui/year/start.js` | “Flow list did not load.” | Ring row `feature=flow-trails` if debug is armed, then `done` still runs |
 | Passport `saveJSON` throws | No false Saved | Comment `private mode`. No ring |
 | Year bootstrap missing util/core/config | `console.error` in `js/browser-YYYY.js` | No ring |
 | CSP violation | Blocked asset | No report endpoint |
@@ -162,7 +162,7 @@ Forests remain the bulk of the HTML. The first audit’s folder counts still des
 
 ## Improve, in order
 
-1. Make `scripts/ci.sh` and `CI_E2E_ALLOWLIST` in `scripts/test-pipeline.py` name the same 18 files as `ci.yml`. Drop `e2e/2016--3x-detail.spec.js`, `e2e/-mvp.spec.js`, `e2e/2020-mvp.spec.js`, and `e2e/2021-mvp.spec.js`. Re-run `python3 scripts/test-pipeline.py` and expect the allowlist check to pass. Do not run the full warehouse as the gate.
+1. Make `scripts/ci.sh` and `CI_E2E_ALLOWLIST` in `scripts/test-pipeline.py` name the same 18 files as `ci.yml`. Drop `e2e/2016--3x-detail.spec.js`, `e2e/-mvp.spec.js`, `e2e-mvp.spec.js`, and `e2e/2021-mvp.spec.js`. Re-run `python3 scripts/test-pipeline.py` and expect the allowlist check to pass. Do not run the full warehouse as the gate.
 2. Commit and push only when asked. Until then, Pages, Netlify, and Vercel cannot see the save line, the debug ring, the React bundle, or the 404 copy.
 3. Publish one URL after 1 and 2. Pages stays manual. Enable the github-pages environment, then `workflow_dispatch`. Confirm the hub returns 200 and the title “The Internet Through Time” on that host, not only on `127.0.0.1`.
 4. Point the React app at `js/debug-ring.js`, or accept that 2015 and 2017 never join the ring. Bootstrap failure and deferred-pack failure in `boot.js` should call `ITT.debug.record` when the ring exists, with year, href, and the script or feature id. Still no network.
@@ -176,9 +176,9 @@ Forests remain the bulk of the HTML. The first audit’s folder counts still des
 | Drop | Why |
 |---|---|
 | Ghost specs in `ci.sh` and `test-pipeline.py` | They fail the job before a real test. The files are gone |
-| Using `docs/FLOW-CHECK-DIAGRAM.md` as the live check | It still says 28 cards and live 2020/2021 |
+| Using `docs/FLOW-CHECK-DIAGRAM.md` as the live check | It still says 28 cards and live 2021 |
 | A remote analytics host or CSP `report-to` collector | Conflicts with `connect-src 'self'` and with local-only progress |
-| Restoring 2011, 2018, 2019, 2020, 2021, 2023, 2024, 2025 | No tree, no card. Rebuild only if a later message names a year |
+| Restoring 2011, 2018, 2021, 2023, 2024, 2025 | No tree, no card. Rebuild only if a later message names a year |
 | Dest-farm so 2007 or 2022 looks like 2004 | Harvest weight, not the visitor door |
 | Un-boarding 2009 | Plaque and tree stay. The hub has no card |
 | Treating `npm test` green as the launch bar | Full warehouse e2e is intentionally red. 308 spec files |

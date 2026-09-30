@@ -144,35 +144,6 @@
       "btn": "Volume leftover"
     }
   ],
-  "2015": [
-    {
-      "id": "meerkat",
-      "name": "Meerkat",
-      "title": "Meerkat leftover — 2015",
-      "why": "2015 leftover-3× second. Unique dest. Not the chip.",
-      "verb": "Go live leftover",
-      "ph": "meerkat",
-      "btn": "Go live leftover"
-    },
-    {
-      "id": "applemusicsub",
-      "name": "Apple Music leftover",
-      "title": "Apple Music leftover leftover — 2015",
-      "why": "2015 leftover-3× second. Unique dest. Not the chip.",
-      "verb": "Trial leftover",
-      "ph": "applemusicsub",
-      "btn": "Trial leftover"
-    },
-    {
-      "id": "win10get",
-      "name": "Get Windows 10",
-      "title": "Get Windows 10 leftover — 2015",
-      "why": "2015 leftover-3× second. Unique dest. Not the chip.",
-      "verb": "GWX leftover",
-      "ph": "win10get",
-      "btn": "GWX leftover"
-    }
-  ],
   "2016": [
     {
       "id": "youtube",
@@ -200,35 +171,6 @@
       "verb": "Ask leftover",
       "ph": "assistant",
       "btn": "Ask leftover"
-    }
-  ],
-  "": [
-    {
-      "id": "instagram",
-      "name": "Instagram",
-      "title": "Instagram leftover — ",
-      "why": " leftover-3× second. Unique dest. Not the chip.",
-      "verb": "Filter leftover",
-      "ph": "instagram",
-      "btn": "Filter leftover"
-    },
-    {
-      "id": "nyt",
-      "name": "NYT leftover",
-      "title": "NYT leftover leftover — ",
-      "why": " leftover-3× second. Unique dest. Not the chip.",
-      "verb": "Headline leftover",
-      "ph": "nyt",
-      "btn": "Headline leftover"
-    },
-    {
-      "id": "oculusquest",
-      "name": "Oculus Quest",
-      "title": "Oculus Quest leftover — ",
-      "why": " leftover-3× second. Unique dest. Not the chip.",
-      "verb": "Quest leftover",
-      "ph": "oculusquest",
-      "btn": "Quest leftover"
     }
   ]
 }

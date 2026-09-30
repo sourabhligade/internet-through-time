@@ -40,7 +40,7 @@ Never retarget to a dest you are deleting in the same pass.
 1. Confirm the slug is in this file’s extra list and **not** in §0.  
 2. `rm -rf years/YYYY/sites/SLUG/`  
 3. Strip `urlMap` keys `sites/SLUG/` from `js/config/YYYY.js`. Lean years: `rewrite_rooms(YYYY)` in `scripts/dest_lock_lean.py`. Forests have no `var rooms` — urlMap only.  
-4. In that year’s remaining HTML only, replace hrefs to `sites/SLUG/` and `../SLUG/` with the replacement from the year table below. Do not rewrite other years (2012 Duolingo stays if you drop  Duolingo).  
+4. In that year’s remaining HTML only, replace hrefs to `sites/SLUG/` and `../SLUG/` with the replacement from the year table below. Do not rewrite other years (2012 Duolingo stays if you drop Duolingo).  
 5. Drop matrix rows whose `href`/`path` is that dest (`e2e/*.json`, `js/config/year-true-packs.json`).  
 6. `python3 scripts/audit-internal-links.py` then dest-true e2e.  
 7. Update dest-folder counts in `DISK-TRUTH.md` + leftover dest e2e `WANT_FOLDERS`.
@@ -59,13 +59,13 @@ Do not dest-farm leftover-20. Do not grow leftover-3× unique past =3 / 2021=5.
 
 Official 10 / leftover-3× unique / leftover dest KEEP stay (angry, minecraft, hulu, …).
 
-###  — drop 9
+### — drop 9
 
 | Drop | Replace hrefs with |
 |------|-------------------|
 | `evernote` `foursquare` `gmusic` `huffpost` `imgur` `kickstarter` `pandora` `quora` `vimeo` | leftover dest KEEP `snapchat` (`years//sites/snapchat/`) |
 
-`imgur` 2010 official dest stays. This is **** imgur leftover dest leftover.
+`imgur` 2010 official dest stays. This is  imgur leftover dest leftover.
 
 ### 2012 — drop 0
 
@@ -81,31 +81,31 @@ Replace all hrefs with leftover-3× unique `twitter` (`years/2013/sites/twitter/
 
 ### 2014 — drop 0
 
-### 2016 — drop 13 leftover dest leftover
+### 2016 — fake labels are already gone
 
-Drop: `e2eabout` `houseparty` `inbox` `iphone7about` `jio` `linkedinms` `pogoabout` `reactabout` `smario` `spectabout` `storyabout` `superbowl` `win10end`
+No folder, and no 3× map row: `e2eabout` `inbox` `iphone7about` `pogoabout` `reactabout` `spectabout` `storyabout` `superbowl` `win10end`. Do not point those labels at Mastodon or Tesla.
 
-Replace hrefs with leftover dest KEEP `mastodon` or `tesla` (`years/2016/sites/mastodon/` · `years/2016/sites/tesla/`). `inbox` 2014 leftover dest KEEP stays (other year).
+Still on disk: `houseparty` `jio` `linkedinms` `smario`. Their Mastodon-labeled Also links are already removed. `inbox` 2014 leftover dest KEEP stays (other year).
 
-###  / 2021 / 2022 / 2007 — drop 0
+### / 2021 / 2022 / 2007 — drop 0
 
 Already leftover dest KEEP + leftover-3× unique only.
 
-### 2020 — drop 19 leftover dest leftover
+### — drop 19 leftover dest leftover
 
 Drop: `airbnb` `chrome` `coinbase` `edge` `figma` `github` `hbomax` `hulu` `iphone` `linkedin` `notion` `peacock` `robinhood` `spotify` `twitch` `twitter` `uber` `whatsapp` `windows10`
 
 `iphone` here is leftover dest leftover, not Zoom star. Zoom official dest stays.
 
-Replace hrefs with leftover dest KEEP `clubhouse` (`years/2020/sites/clubhouse/`) or leftover-3× unique `youtube`.
+Replace hrefs with leftover dest KEEP `clubhouse` (`years/sites/clubhouse/`) or leftover-3× unique `youtube`.
 
 ---
 
 ## 3. Dest-lock-reverted warehouses — drop extra dests = dest-lock again
 
-**2015 extra 194 · 2017 extra ~193 after leftover-20 stay ·  extra 151.**
+**2015 extra 194 · 2017 extra ~193 after leftover-20 stay · extra 151.**
 
-Naming this pass dest-locks 2015 / 2017 /  again. Later museum law forbade dest-lock of 2015–2020. Do it only if a later message names dest-lock.
+Naming this pass dest-locks 2015 / 2017 / again. Later museum law forbade dest-lock of 2015. Do it only if a later message names dest-lock.
 
 ### Always keep on 2017 (leftover-20 extras)
 
@@ -134,7 +134,7 @@ Replace hrefs with leftover-20 extra `slack17` or official `fortnite`.
 
 Full extra = 2017 dest folders minus official 10 minus leftover-20 extras minus playable. ~193 dests. Do not list-delete leftover-20 extras.
 
-###  — drop 151 extra dests
+### — drop 151 extra dests
 
 Keep official 10 + leftover-3× unique 9 (`amazon` `facebook` `google` `instagram` `nyt` `oculusquest` `twitter` `yahoo` `youtube` as leftover-3× unique dests). Leftover dest KEEP = 0.
 
@@ -177,10 +177,10 @@ If the slug **is** official 10 that year, **do not drop** (e.g. 1998 `yahoo` off
 
 ## 5. Pass order (if named)
 
-1. Lean extras with leftover dest KEEP replacements: **2010 kickstarter ·  nine · 2016 thirteen · 2020 nineteen**. Safest.  
+1. Lean extras with leftover dest KEEP replacements: **2010 kickstarter · nine · 2016 thirteen · nineteen**. Safest.  
 2. **2013 leftover-2× dest leftover** (36 dests) → leftover-3× unique twitter/youtube.  
 3. Forest **clone dest folders only** (§4).  
-4. Warehouse dest-lock **only if named**: 2015 clones → 2015 all extra →  clones →  all extra → 2017 extra minus leftover-20.
+4. Warehouse dest-lock **only if named**: 2015 clones → 2015 all extra → clones → all extra → 2017 extra minus leftover-20.
 
 After each pass: links audit 0 broken · dest-true e2e · dest-folder asserts.
 
@@ -191,5 +191,5 @@ After each pass: links audit 0 broken · dest-true e2e · dest-folder asserts.
 - Dest-lock forests (delete leftover-2× dests as a class).  
 - Delete leftover dest KEEP, leftover-3× unique dests, leftover-4× unique chrome/twitter/soundcloud, 2017 leftover-20 extras, official 10, playable.  
 - Replace a dropped dest with a **new** dest folder. Retarget only.  
-- Dest-farm leftover-20 on 2013–2015 / –2022.  
+- Dest-farm leftover-20 on 2013–2015 / 2022.  
 - Grow leftover-3× unique past =3 / 2021=5.

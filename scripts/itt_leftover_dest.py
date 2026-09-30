@@ -95,7 +95,15 @@ def add_location_hints(year: str, hints: list[tuple[str, str]]) -> None:
 
 def write_if_missing(dest: Path, html: str) -> bool:
     """Write dest HTML only when the file does not already exist."""
-    dest.parent.mkdir(parents=True, exist_ok=True)
+    if not dest.parent.exists():
+        parts = dest.parts
+        if "years" in parts:
+            i = parts.index("years")
+            if i + 1 < len(parts):
+                from itt_gate import assert_mutable
+
+                assert_mutable(parts[i + 1])
+        dest.parent.mkdir(parents=True, exist_ok=True)
     if dest.exists():
         return False
     dest.write_text(html, encoding="utf-8")

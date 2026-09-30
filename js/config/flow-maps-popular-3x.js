@@ -6,30 +6,27 @@
   "use strict";
   var ITT = global.ITT || (global.ITT = {});
   var POP = {
-    "2003": ["skype|Skype","delicious|del.icio.us","hi5|hi5","wikipedia|Wikipedia","google|Google","cnn|CNN"],
-    "2002": ["daypop|Daypop","googlenews|Google News","technorati|Technorati","wikipedia|Wikipedia","google|Google","lastfm|Last.fm"],
-    "2001": ["google|Google","yahoo|Yahoo","cnn|CNN","slashdot|Slashdot","blogger|Blogger","microsoft|Microsoft"],
-    "1994": ["pizzahut|Pizza Hut","netmarket|NetMarket","imdb|IMDb","prodigy|Prodigy","pathfinder|Pathfinder","cnn|CNN","apple|Apple","bbc|BBC","microsoft|Microsoft"],
-    "1995": ["espn|ESPNet","cnet|c|net","timewarner|Time Warner","hotbot|HotBot","aol|AOL","apple|Apple","ibm|IBM","infoseek|Infoseek","nyt|NYT"],
-    "1996": ["totalny|TotalNY","pathfinder|Pathfinder","hotbot|HotBot","craigslist|Craigslist","icq|ICQ","espn|ESPN","disney|Disney","archive|Archive","askjeeves|Ask Jeeves"],
-    "1997": ["newscom|News.com","drudgereport|Drudge","hotwired|HotWired","winamp|Winamp","netflix|Netflix","amazon|Amazon","yahoo|Yahoo","cnn|CNN","geocities|GeoCities"],
-    "1998": ["opendiary|Open Diary","icqweb|ICQ Web","broadcastcom|broadcast.com","go|GO","excite|Excite","geocities|GeoCities","aol|AOL","lycos|Lycos","winamp|Winamp"],
-    "1999": ["livejournal|LiveJournal","neopets|Neopets","egroups|eGroups","yahoo|Yahoo","geocities|GeoCities","slashdot|Slashdot","msn|MSN","hampsterdance|Hampster Dance","webvan|Webvan"],
-    "2000": ["half|Half.com","limewire|LimeWire","travelocity|Travelocity","yahoo|Yahoo","geocities|GeoCities","slashdot|Slashdot","msn|MSN","excite|Excite","icq|ICQ"],
-                "2004": ["myspace|MySpace","wikipedia|Wikipedia","yahoo|Yahoo","skype|Skype","livejournal|LiveJournal","friendster|Friendster","cnn|CNN","bbc|BBC","imdb|IMDb"],
-    "2005": ["milliondollar|Million Dollar Homepage","clubpenguin|Club Penguin","kayak|Kayak","myspace|MySpace","wikipedia|Wikipedia","yahoo|Yahoo","dailymotion|DailyMotion","googlevideo|Google Video","earth|Google Earth"],
-    "2006": ["flickr|Flickr","gmail|Gmail","reddit|Reddit","myspace|MySpace","delicious|del.icio.us","digg|Digg","google|Google","yahoo|Yahoo","amazon|Amazon"],
+    "2003": ["skype|Skype", "delicious|del.icio.us", "hi5|hi5", "wikipedia|Wikipedia", "google|Google", "cnn|CNN"],
+    "2002": ["daypop|Daypop", "googlenews|Google News", "technorati|Technorati", "wikipedia|Wikipedia", "google|Google", "lastfm|Last.fm"],
+    "2001": ["google|Google", "yahoo|Yahoo", "cnn|CNN", "slashdot|Slashdot", "blogger|Blogger", "microsoft|Microsoft"],
+    "1994": ["pizzahut|Pizza Hut", "netmarket|NetMarket", "imdb|IMDb", "prodigy|Prodigy", "pathfinder|Pathfinder", "cnn|CNN", "apple|Apple", "bbc|BBC", "microsoft|Microsoft"],
+    "1995": ["espn|ESPNet", "cnet|c|net", "timewarner|Time Warner", "hotbot|HotBot", "aol|AOL", "apple|Apple", "ibm|IBM", "infoseek|Infoseek", "nyt|NYT"],
+    "1996": ["totalny|TotalNY", "pathfinder|Pathfinder", "hotbot|HotBot", "craigslist|Craigslist", "icq|ICQ", "espn|ESPN", "disney|Disney", "archive|Archive", "askjeeves|Ask Jeeves"],
+    "1997": ["newscom|News.com", "drudgereport|Drudge", "hotwired|HotWired", "winamp|Winamp", "netflix|Netflix", "yahoo|Yahoo", "cnn|CNN", "geocities|GeoCities"],
+    "1998": ["opendiary|Open Diary", "icqweb|ICQ Web", "broadcastcom|broadcast.com", "go|GO", "excite|Excite", "geocities|GeoCities", "aol|AOL", "lycos|Lycos"],
+    "1999": ["livejournal|LiveJournal", "neopets|Neopets", "egroups|eGroups", "yahoo|Yahoo", "geocities|GeoCities", "slashdot|Slashdot", "msn|MSN", "hampsterdance|Hampster Dance", "webvan|Webvan"],
+    "2000": ["half|Half.com", "limewire|LimeWire", "yahoo|Yahoo", "geocities|GeoCities", "slashdot|Slashdot", "msn|MSN", "excite|Excite", "icq|ICQ"],
+                "2004": ["myspace|MySpace", "wikipedia|Wikipedia", "yahoo|Yahoo", "skype|Skype", "livejournal|LiveJournal", "friendster|Friendster", "cnn|CNN", "bbc|BBC", "imdb|IMDb"],
+    "2005": ["milliondollar|Million Dollar Homepage", "clubpenguin|Club Penguin", "kayak|Kayak", "myspace|MySpace", "wikipedia|Wikipedia", "yahoo|Yahoo", "dailymotion|DailyMotion", "googlevideo|Google Video", "earth|Google Earth"],
+    "2006": ["flickr|Flickr", "gmail|Gmail", "reddit|Reddit", "myspace|MySpace", "delicious|del.icio.us", "digg|Digg", "google|Google", "yahoo|Yahoo", "amazon|Amazon"],
     "2007": ["wiki|Wikipedia", "myspace|MySpace", "maps|Maps"],
-    "2009": ["omegle|Omegle","chatroulette|Chatroulette","wikipedia|Wikipedia","android|Android","kindle|Kindle","reddit|Reddit","youtube|YouTube","myspace|MySpace","wave|Google Wave"],
+    "2009": ["omegle|Omegle", "chatroulette|Chatroulette", "wikipedia|Wikipedia", "android|Android", "kindle|Kindle", "reddit|Reddit", "youtube|YouTube", "myspace|MySpace", "wave|Google Wave"],
     "2010": ["netflix|Netflix", "tumblr|Tumblr", "formspring|Formspring"],
     "2012": ["drawsomething|Draw Something", "googledrive|Drive", "snapchat|Snapchat"],
     "2013": ["askfm|Ask.fm", "whisper|Whisper", "youtube|YouTube"],
     "2014": ["snapchat|Snapchat", "instagram|Instagram", "uber|Uber"],
-    "2015": ["instagram|Instagram", "spotify|Spotify", "netflix|Netflix"],
     "2016": ["slack|Slack", "reddit|Reddit", "netflix|Netflix"],
-    "2017": ["snapipo|Snap IPO","bitcoinath|Bitcoin","echoshow|Echo Show","reddit|Reddit","youtube|YouTube","hqtrivia|HQ Trivia","notpetya|NotPetya","yahoo3b|Yahoo","discord17|Discord"],
     
-    "2020": ["youtube|YouTube", "wikipedia|Wikipedia", "airbnb|Airbnb leftover"]
   };
 
   function sites(year) {

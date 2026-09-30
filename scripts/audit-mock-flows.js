@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 /**
  * Mock-flow classifier — HTML years only.
- * 2015 is a React door with no year tree, so this scan skips it.
- * 2009 boarded. 2011 /  / 2023–2025 wiped.
+ * React, boarded, and absent years are not in the year card's html kind.
  *
  * Previous "no-mock" work kept failing because dest-field plaques
  * (scripts/build-5x-real-dests.py) satisfy the REAL e2e contract
@@ -28,15 +27,8 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
-// 2015 stays in this skip set because it has no HTML tree. The hub door is React.
-const WIPED = new Set(["2009", "2011", "2015", "", "2023", "2024", "2025"]);
-const YEARS = [];
-for (let y = 1994; y <= 2025; y++) {
-  const s = String(y);
-  if (WIPED.has(s)) continue;
-  if (!/^(199[4-9]|200[0-7]|201[0234679]|202[0-2])$/.test(s)) continue;
-  YEARS.push(s);
-}
+const CARD = JSON.parse(fs.readFileSync(path.join(ROOT, "js", "year-card.json"), "utf8")).years;
+const YEARS = Object.keys(CARD).filter((y) => CARD[y].kind === "html").sort();
 
 const argv = process.argv.slice(2);
 const WANT_JSON = argv.includes("--json");
@@ -519,7 +511,7 @@ if (WANT_JSON) {
     JSON.stringify({ summary, fail: fails.length, issues }, null, 2) + "\n"
   );
 } else {
-  console.log("audit-mock-flows — HTML years · 2015 React door skipped (no tree) · 2009 boarded · 2011 /  / 2023–2025 wiped");
+  console.log("audit-mock-flows — HTML years · 2015 and 2017 React doors skipped (no tree) · 2009 boarded · 2011, 2018–2021, and 2023–2025 wiped");
   console.log(
     "  DEST_FIELD " +
       summary.DEST_FIELD +

@@ -15,16 +15,12 @@ def main() -> int:
     errs = []
     if "residual-placard.js" not in reg:
         errs.append("registry missing residual-placard.js")
-    # Priority extras: either a literal year-2017 hint or the year-NNNN-extras regex
-    # already used by splitFeaturesForPage so Stories/GO/REAL multipage is not deferred.
-    extras_priority = "year-2017-extras.js" in boot or bool(
-        re.search(r"year-\\d\{4\}-extras", boot)
-    )
+    # splitFeaturesForPage keeps year-NNNN-extras ahead of the deferred pack.
+    extras_priority = bool(re.search(r"year-\\d\{4\}-extras", boot))
     if not extras_priority:
-        errs.append("boot.js missing 2017 extras priority hints")
+        errs.append("boot.js missing year-extras priority hint")
     for rel in [
         "js/immersion/residual-placard.js",
-        "js/immersion/year-2017-extras.js",
         "e2e/helpers.js",
     ]:
         if not (ROOT / rel).exists():

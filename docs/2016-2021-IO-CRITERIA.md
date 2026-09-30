@@ -3,7 +3,7 @@
 **Date:** 2026-09-14  
 **Status:** Criteria. Not dest-farm. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Years:** live lean doors **2016 · 2017 ·  ·  · 2021**. **2022 is a later lean door** (`2022-READ-FIRST.md`). **2020 live lean** · Zoom Leave.
+**Years:** live lean doors **2016 · 2017 · 2021**. **2022 is a later lean door** (`2022-READ-FIRST.md`). · Zoom Leave.
 
 I/O here means **how the year feels to use**: first click, period chrome, the star verb, what writes, what never writes. It does **not** mean dest count.
 
@@ -15,7 +15,7 @@ Deep-research on look / heritage peers is a companion pass. This file is the pas
 
 Each year is **one verb in that year’s chrome**. Incomplete never writes. Leftover machines stay in the workshop (`?deep=1`). A year that looks “full” because it has 200 leftover folders has **failed I/O**.
 
-** (13 rooms · GDPR Manage) is the I/O model.** 2017 /  / 2021 dest-farm is the anti-model.
+** (13 rooms · GDPR Manage) is the I/O model.** 2017 / 2021 dest-farm is the anti-model.
 
 ---
 
@@ -34,9 +34,9 @@ A year **passes I/O** only if **all** of these are true. One miss is a fail.
 | I7 | **Workshop fold** | Leftover-2× / 3× / 4× / unique A–C hidden unless `?deep=1` or the drawer | Yellow leftover machines on first paint |
 | I8 | **Capture, not SOURCES** | Star dest has `data-itt-capture-cite` or honest `[failed-final]` | Visitor sent to `SOURCES.md` |
 | I9 | **No invented brand pixels** | Period capture, RECON mark, or failed-final | AI logo / wordmark / screenshot mash |
-| I10 | **Year-locked chrome** | Win10 mass · Chrome habit · Edge residual. Phone products are **rooms**, not January OS | 2022+ chrome, Chromium Edge as default before 2020, iPhone as desktop |
+| I10 | **Year-locked chrome** | Win10 mass · Chrome habit · Edge residual. Phone products are **rooms**, not January OS | 2022+ chrome, Chromium Edge as default before iPhone as desktop |
 | I11 | **About honesty** | Dual-cite scale + hard bans on `pages/about.html` | Invented ILS June cell (table **ends **) |
-| I12 | **Neighbor years stay empty** | `itt15` / `itt22` (and ±1) never written from this year | Face ID writes in 2016, ChatGPT dest in 2021, Reels as  gold |
+| I12 | **Neighbor years stay empty** | `itt15` / `itt22` (and ±1) never written from this year | Face ID writes in 2016, ChatGPT dest in 2021, Reels as gold |
 | I13 | **Official 10 exist** | `flow-trails.js` dest paths are on disk and match | Trail href 404 or leftover plaque standing in |
 | I14 | **e2e covers the verb** | mvp + one real write/no-write spec for the star | mvp copy-only |
 
@@ -50,9 +50,8 @@ Disk counts are **today’s tree**, not targets. Do not grow dests to “catch u
 |------|-----------|-----|---------------|---------------------------|-------|-----------|----------|
 | **2016** | `sites/instagram/stories.html` | `itt16-ig-stories` | 24h slide / Story text + honesty | Empty Story · GO as gold · Reactions as gold | Win10 rising · Chrome habit | TikTok brand · Reels · Meta · Face ID · Chromium Edge | **32 dests** (reverted to origin) · **0 assets** |
 | **2017** | `sites/iphone/x.html` | `itt17-faceid` | Look / no Home / swipe up | Home button as 2017 default · Fortnite as gold | Win10 mass · Chrome habit | GDPR 25 May · TikTok US mass · Reels | **40 dests** · **0 assets** |
-| **** | `sites/gdpr/index.html` | `itt18-gdpr` | **Manage** | **Accept All** · IGTV as gold · Reels | Win10 mass · Chrome habit · EdgeHTML residual | Zoom · Reels · Meta · Disney+ · Chromium Edge as default | **13 dests · 22 HTML** · 0 assets |
-| **** | `sites/disneyplus/home.html` | `itt19-disneyplus` | Continue watching | Trial / join (`index.html`) · “Who’s watching” as Disney press quote | Win10 mass · Chrome habit | Reels · Zoom-as-mass · Meta · Travis Scott | **38 dests** · 0 assets |
-| **2020** | `sites/zoom/meeting.html` | `itt20-zoom` | Mute → chat → **Leave** | **Join** · “300M Zoom users” | Win10 mass · Chrome habit · Edge 79 leftover | ChatGPT · GameStop · June ILS websites digit | **38 dests** · 0 assets |
+|  | `sites/gdpr/index.html` | `itt18-gdpr` | **Manage** | **Accept All** · IGTV as gold · Reels | Win10 mass · Chrome habit · EdgeHTML residual | Zoom · Reels · Meta · Disney+ · Chromium Edge as default | **13 dests · 22 HTML** · 0 assets |
+|  | `sites/disneyplus/home.html` | `itt19-disneyplus` | Continue watching | Trial / join (`index.html`) · “Who’s watching” as Disney press quote | Win10 mass · Chrome habit | Reels · Zoom-as-mass · Meta · Travis Scott | **38 dests** · 0 assets |
 | **2021** | `sites/att/index.html` | `itt21-att` | **Ask App Not to Track** | **Allow** · ChatGPT dest · Wordle-as-2021-mass | Win10 mass · Chrome habit | ChatGPT · Zoom Leave as this dest | **15 dests** · 0 assets |
 
 **Star path rule:** several of these are **not** `index.html`. Year-start / first-night / atlas must use the path in this table. A trail that 404s is an I/O fail (see 2013 Vine `record.html` as the same class of bug).
@@ -67,7 +66,7 @@ Period files under `assets/period/YYYY/` for **2016–2021 = 0**. WDM / oldweb.t
 |---|-----------|------|------|
 | L1 | Star room has a **dated capture cite** or failed-final | Honest | Invented pixels to “look official” |
 | L2 | Phone-year star uses a **phone frame** (Stories, Face ID, ATT, Zoom-on-laptop is the exception) | Frame matches the verb | Desktop form that says “swipe” |
-| L3 | Chrome habit is **Chrome-shaped**, not IE6 leftover with a  URL | `chrome-habit` / period-YYYY | XP gray on GDPR |
+| L3 | Chrome habit is **Chrome-shaped**, not IE6 leftover with a URL | `chrome-habit` / period-YYYY | XP gray on GDPR |
 | L4 | Starting Point above the fold is **thesis + 6 steps + star** | Clean | Unique A/B/C leftover boards in the first screen |
 | L5 | Lean years **read lean** | -sized door | 2017/2021 warehouse pretending to be 2016 |
 
@@ -83,9 +82,8 @@ Locked guided shape (already in `ui/year/start-data.js`):
 |------|---|-----|---|---|---|---|
 | 2016 | About | Stories | Pokémon GO | Reactions | WhatsApp E2E | Map |
 | 2017 | About | Face ID | Fortnite BR | Twitter 280 | Teams GA | Map |
-|  | About | GDPR Manage | TikTok FYP | Hearing | IGTV | Map |
-|  | About | Disney+ Continue | TikTok FYP | Arcade | Stadia | Map |
-| 2020 | About | Zoom Leave | Reels 15s | GPT-3 waitlist | Flash EOL | Map |
+| | About | GDPR Manage | TikTok FYP | Hearing | IGTV | Map |
+| | About | Disney+ Continue | TikTok FYP | Arcade | Stadia | Map |
 | 2021 | About | ATT Ask | Signal leftover | Copilot waitlist | Meta rename leftover | Map |
 
 | # | Criterion | Pass | Fail |
@@ -133,7 +131,7 @@ Do not skip ahead to dest-farm.
 - Move the chip (Stories → GO, Face ID → Fortnite, GDPR → TikTok, Continue → trial, Leave → Join, Ask → Allow).
 - Invent a June Live Stats websites digit after .
 - Print “300 million Zoom **users**” (participants).
-- Quote Disney  press as “Who’s watching.”
+- Quote Disney press as “Who’s watching.”
 - Restore a git forest to fix I/O.
 - Treat leftover matrices / 330 specs as visitor content.
 
@@ -145,9 +143,8 @@ Do not skip ahead to dest-farm.
 |------|:-------:|:-------:|:--------:|:-------:|:-------:|:--------:|:-------:|:-------:|-------|
 | 2016 | — | — | — | — | — | — | — | — | **reverted to origin 2016** (no I/O chrome pass) |
 | 2017 | Y | Y | Y | Y | Y* | Y | Y | Y | dest-farm still on disk; *Vine gone dest-true stripped |
-|  | Y | Y | Y | Y | Y | — | Y | Y | official 10 framed; GDPR now has official-key |
-|  | Y | Y | Y | Y | Y | — | Y | Y | Continue on chip / trail / start-extra |
-| 2020 | Y | Y | Y | Y | Y | — | Y | Y | official dest-true leftover stripped |
+| | Y | Y | Y | Y | Y | — | Y | Y | official 10 framed; GDPR now has official-key |
+| | Y | Y | Y | Y | Y | — | Y | Y | Continue on chip / trail / start-extra |
 | 2021 | Y | Y | Y | Y | Y | Y | Y | Y | one-thing + mvp |
 
 Recheck 2026-09-14: 38 e2e passed (mvp + -flows + one-thing 2016–2021). Stars walked empty/trap/write. Guided 6. Unique A/B/C hidden. About bans hold. **Not Y:** L5 (2017//2021 dest-farm still on disk, folded). 2013 year-start is `vine/record.html`.

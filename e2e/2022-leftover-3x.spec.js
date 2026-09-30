@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Leftover-3× for  / 2021 — dest-true · not mock. 2020 leftover-3× unique is leftover-3x-unique.spec.js.
+ * Leftover-3× for / 2021 — dest-true · not mock. leftover-3× unique is leftover-3x-unique.spec.js.
  */
 const fs = require("fs");
 const path = require("path");

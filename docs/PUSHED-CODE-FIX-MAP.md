@@ -1,10 +1,10 @@
 # Pushed-code fix map
 
 **Date:** 2026-09-26  
-**Commit:** `cbbd243a6` on `museum/1994-2020-lean`  
+**Commit:** `cbbd243a6` on `the working branch`  
 **Scope:** Major bugs on the shipped museum. Incomplete years (2014 React dual door, period pixels +, short official trails, wiped ) stay out of this list.
 
-Ship law stays [`DISK-TRUTH.md`](DISK-TRUTH.md). Live 5× stays  + boarded 2009.
+Ship law stays [`DISK-TRUTH.md`](DISK-TRUTH.md). Live 5× stays + boarded 2009.
 
 ---
 
@@ -14,15 +14,15 @@ Each row is a live break or a test that still walks deleted HTML. Fix column is 
 
 ---
 
-## 1. Dest-true never walks 2017 or  official 10
+## 1. Dest-true never walks 2017 or official 10
 
-`e2e/all-years-official-10-real.spec.js` skips a year when `years/{y}/index.html` is gone. 2017 and  are React doors. Dest-true includes 2020-mvp and 2021-mvp, not 2017-mvp or -mvp.
+`e2e/all-years-official-10-real.spec.js` skips a year when `years/{y}/index.html` is gone. 2017 and are React doors. Dest-true includes -mvp and 2021-mvp, not 2017-mvp or -mvp.
 
 **Fix:** Point `e2e/2017-mvp.spec.js` at `/app/index.html#/year/2017` (hub card, guided six, Face ID empty/trap/complete). Add `2017-mvp` and `-mvp` to `package.json` `test:e2e:dest-true`.
 
 **Verify:** `unset CI; unset BASE_URL; npm run test:e2e:dest-true`
 
-## 2. `2017--leftover-20` opens the  door for 2017 keys
+## 2. `2017--leftover-20` opens the door for 2017 keys
 
 The React branch always `goto`s `/app/index.html#/year/`. 2017 leftover keys live on the 2017 rail. Cuphead / unique leftover still `goto` deleted `/years/2017/sites/...` HTML.
 
@@ -46,7 +46,7 @@ Official and leftover rows `goto` `/years/2017/sites/...`. Those files are gone.
 
 **Verify:** `npx playwright test e2e/follow-site.spec.js` plus a 2005 Yahoo → 2006 Yahoo href assert.
 
-## 5.  Starting Point calls App Store leftover
+## 5. Starting Point calls App Store leftover
 
 Official n=1 is GitHub issue (`itt08-github`). Official n=2 is App Store (`itt08-apps`). `YEAR_STARTS` and `start-extra.js` still say App Store is leftover / not the chip.
 
@@ -59,7 +59,7 @@ Official n=1 is GitHub issue (`itt08-github`). Official n=2 is App Store (`itt08
 
 **Fix:** Same shape as `-mvp.spec.js`.
 
-## 7. `2012--official-10` asserts  and 2021 HTML exist
+## 7. `2012--official-10` asserts and 2021 HTML exist
 
 `years//index.html` and `years/2021/index.html` are gone. 2017 leftover keys in that file use `-lx` suffixes the React module does not write.
 
@@ -73,15 +73,15 @@ Test title is “2007 hub card is open”. Body expects `a.year-card[href*="year
 
 ## 9. Start data for React years still uses HTML hrefs
 
-`ui/year/start-data.js` and `ui/year/start-extra.js` for 2017 /  / 2020 / 2021 point at `../sites/iphone/x.html`, Disney+, Zoom, ATT HTML. Those year shells are gone.  extra still points at GDPR HTML (year wiped — leave wiped, drop the extra).
+`ui/year/start-data.js` and `ui/year/start-extra.js` for 2017 / 2021 point at `../sites/iphone/x.html`, Disney+, Zoom, ATT HTML. Those year shells are gone. extra still points at GDPR HTML (year wiped — leave wiped, drop the extra).
 
-**Fix:** Point 2017//2020/2021 extras at `/app/index.html#/year/YYYY`. Remove the  start-extra row.
+**Fix:** Point 2017//2021 extras at `/app/index.html#/year/YYYY`. Remove the start-extra row.
 
 ## 10. 2016 READ-FIRST disagrees with disk
 
-File still says hub **28** years, dest folders **66**, and  GDPR as a live lean door. Disk: 26 doors, 57 dest folders, 2015 /  wiped.
+File still says hub **28** years, dest folders **66**, and GDPR as a live lean door. Disk: 26 doors, 57 dest folders, 2015 / wiped.
 
-**Fix:** 26 doors, 57 dests, 2015 /  wiped.
+**Fix:** 26 doors, 57 dests, 2015 / wiped.
 
 ## 11. OPEN-CHECKLIST still names GitHub `20b7730ca`
 
@@ -101,15 +101,15 @@ Same skip: no `years/2017/index.html`.
 
 ## 14. Frozen dest counts vs disk
 
-`1994-2000-2009-href-2x` and `2001-2007-href-2x` freeze 2005 dests=117,  dests=105, 2009 dests=68. Leftover-2× 2005 remain is 91. Full warehouse stays expected red; do not treat freeze counts as ship law.
+`1994-2000-2009-href-2x` and `2001-2007-href-2x` freeze 2005 dests=117, dests=105, 2009 dests=68. Leftover-2× 2005 remain is 91. Full warehouse stays expected red; do not treat freeze counts as ship law.
 
 **Fix:** Leave warehouse freeze files red unless a named pack is retargeted. Dest-true leftover-2× catalog is the live number.
 
-## 15. `js/config/2017.js` (and –2021) still map `museum.local/years/2017/`
+## 15. `js/config/2017.js` mapped `museum.local/years/2017/`
 
-Year HTML config is leftover. Authenticity already skips React years.
+The HTML config, immersion stub, and `browser-2017.js` boot are gone. Authenticity skips 2017 while `years/2017` is missing.
 
-**Fix:** Leave the files. Do not restore `years/2017`. Hub and `stepHref` already use `/app/index.html#/year/YYYY`.
+**Fix:** Do not restore `years/2017` or those stubs. Hub and `stepHref` use `/app/index.html#/year/2017`.
 
 ## 16. 2017 leftover-20 Animoji HTML machine is gone
 
@@ -122,7 +122,7 @@ HTML Animoji needed Face ID saved + a face pick + two ticks. React Animoji is le
 ## Out of scope (incomplete years / research)
 
 - 2014 About / Starting Point / map still static HTML beside React official nine
-- Period `assets/period/–2022` readme-only
+- Period `assets/period/2022` readme-only
 - 2004 official 8, 2012–2014 official 9
 - 2016 flow-improve research extras (moment cites, leftover empty dests) wait on a named go-ahead beyond this map
 - Full `e2e/` warehouse (6k tests) stays expected red
@@ -131,7 +131,7 @@ HTML Animoji needed Face ID saved + a face pick + two ticks. React Animoji is le
 
 ## Implement order
 
-1. Follow-a-site Yahoo 2005 +  Starting Point copy (visitor)
+1. Follow-a-site Yahoo 2005 + Starting Point copy (visitor)
 2. Start-extra / start-data React hrefs
 3. 2017-mvp React + dest-true allowlist
 4. leftover-20 React year door

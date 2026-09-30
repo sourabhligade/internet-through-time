@@ -13,7 +13,7 @@ const LEAN = require("./lean-double-leftover.matrix.json");
 const ROOT = path.join(__dirname, "..");
 const SHIP = [];
 for (let y = 1994; y <= 2022; y++) {
- if ((y > 2007 && y < 2009) || y === 2009 || y === 2020 || y === 2021 || (y > 2017 && y < 2020) || (y > 2010 && y < 2012)) continue;
+ if ((y > 2007 && y < 2009) || y === 2009 || y === 2021 || (y > 2017 && y < 2021) || (y > 2010 && y < 2012)) continue;
   SHIP.push(String(y));
 }
 
@@ -25,7 +25,6 @@ const LO3X_STOP = {
   2014: 0,
   2015: 0,
   2016: 0,
-  2020: 0,
   2022: 0,
 };
 

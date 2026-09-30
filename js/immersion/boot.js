@@ -486,6 +486,10 @@
 
     chain
       .then(function () {
+        if (ITT.YEAR_CARD && ITT.YEAR_CARD.years) return Promise.resolve();
+        return loadScript(base + "year-card.js");
+      })
+      .then(function () {
         /* Passport + first-night (shared with hub / year shell) */
         if (!(ITT.MuseumProgress && ITT.MuseumProgress.stamp)) {
           return loadScript(base + "museum-progress.js");

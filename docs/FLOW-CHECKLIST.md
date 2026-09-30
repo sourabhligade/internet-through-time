@@ -25,15 +25,14 @@ A year with only a readme under `assets/period/` does not get a drawn logo. It w
 | 2007 | 150 | Use the files in `assets/period/2007/`. |
 | 2009 | 17 | Use the files in `assets/period/2009/`. |
 | 2010 | 3 | Few captures. Do not fill the year with new art. |
-|  | 0 | Readme only. Do not draw a logo. |
+| | 0 | Readme only. Do not draw a logo. |
 | 2012 | 0 | Readme only. Do not draw a logo. |
 | 2013 | 0 | Readme only. Do not draw a logo. |
 | 2014 | 0 | Readme only. Do not draw a logo. |
 | 2015 | 0 | Readme only. Do not draw a logo. |
 | 2016 | 0 | Readme only. Do not draw a logo. |
 | 2017 | 0 | Readme only. Do not draw a logo. |
-|  | 0 | Readme only. Do not draw a logo. |
-| 2020 | 0 | Readme only. Do not draw a logo. |
+| | 0 | Readme only. Do not draw a logo. |
 | 2021 | 0 | Readme only. Do not draw a logo. |
 | 2022 | 0 | Readme only. Do not draw a logo. |
 
@@ -445,16 +444,16 @@ Images: none. `assets/period/2014/` is a readme only. Do not draw a logo for thi
 
 Images: none. `assets/period/2015/` is a readme only. Do not draw a logo for this year.
 
-- [ ] 1 · Periscope Go LIVE `itt15-periscope` — http://127.0.0.1:8080/years/2015/sites/periscope/index.html
-- [ ] 2 · Google Photos `itt15-googlephotos` — http://127.0.0.1:8080/years/2015/sites/googlephotos/index.html
-- [ ] 3 · Windows 10 `itt15-win10` — http://127.0.0.1:8080/years/2015/sites/windows10/index.html
-- [ ] 4 · Apple Music `itt15-applemusic` — http://127.0.0.1:8080/years/2015/sites/applemusic/index.html
-- [ ] 5 · Edge Spartan `itt15-edge` — http://127.0.0.1:8080/years/2015/sites/edge/index.html
-- [ ] 6 · Watch `itt15-watch` — http://127.0.0.1:8080/years/2015/sites/apple/watch.html
-- [ ] 7 · Snap Discover `itt15-snap-discover` — http://127.0.0.1:8080/years/2015/sites/snapchat/discover.html
-- [ ] 8 · Discord `itt15-discord` — http://127.0.0.1:8080/years/2015/sites/discord/index.html
-- [ ] 9 · Let's Encrypt `itt15-le` — http://127.0.0.1:8080/years/2015/sites/letsencrypt/index.html
-- [ ] 10 · Blob Rush `itt15-game-blobrush` — http://127.0.0.1:8080/years/2015/sites/playable/game.html
+- [ ] 1 · Periscope Go LIVE `itt15-periscope` — http://127.0.0.1:8080/app/index.html#/year/2015
+- [ ] 2 · Google Photos `itt15-googlephotos` — http://127.0.0.1:8080/app/index.html#/year/2015
+- [ ] 3 · Windows 10 `itt15-win10` — http://127.0.0.1:8080/app/index.html#/year/2015
+- [ ] 4 · Apple Music `itt15-applemusic` — http://127.0.0.1:8080/app/index.html#/year/2015
+- [ ] 5 · Edge Spartan `itt15-edge` — http://127.0.0.1:8080/app/index.html#/year/2015
+- [ ] 6 · Watch `itt15-watch` — http://127.0.0.1:8080/app/index.html#/year/2015
+- [ ] 7 · Snap Discover `itt15-snap-discover` — http://127.0.0.1:8080/app/index.html#/year/2015
+- [ ] 8 · Discord `itt15-discord` — http://127.0.0.1:8080/app/index.html#/year/2015
+- [ ] 9 · Let's Encrypt `itt15-le` — http://127.0.0.1:8080/app/index.html#/year/2015
+- [ ] 10 · Blob Rush `itt15-game-blobrush` — http://127.0.0.1:8080/app/index.html#/year/2015
 
 ### 2016
 
@@ -475,26 +474,16 @@ Images: none. `assets/period/2016/` is a readme only. Do not draw a logo for thi
 
 Images: none. `assets/period/2017/` is a readme only. Do not draw a logo for this year.
 
-- [ ] 1 · Face ID / iPhone X `itt17-faceid` — http://127.0.0.1:8080/years/2017/sites/iphone/x.html
-- [ ] 2 · Fortnite BR `itt17-fortnite` — http://127.0.0.1:8080/years/2017/sites/fortnite/index.html
-- [ ] 3 · Twitter 280 `itt17-twitter-280` — http://127.0.0.1:8080/years/2017/sites/twitter/280.html
-- [ ] 4 · Teams GA `itt17-teams` — http://127.0.0.1:8080/years/2017/sites/teams/index.html
-- [ ] 5 · Vine gone `itt17-vine-gone` — http://127.0.0.1:8080/years/2017/sites/vine/gone.html
-- [ ] 6 · Nintendo Switch `itt17-switch` — http://127.0.0.1:8080/years/2017/sites/switch/index.html
-- [ ] 7 · WannaCry `itt17-wannacry` — http://127.0.0.1:8080/years/2017/sites/wannacry/index.html
-- [ ] 8 · musical.ly `itt17-musically` — http://127.0.0.1:8080/years/2017/sites/musically/index.html
-- [ ] 9 · Equifax freeze `itt17-equifax` — http://127.0.0.1:8080/years/2017/sites/equifax/index.html
-- [ ] 10 · Storm Circle `itt17-game-stormcircle` — http://127.0.0.1:8080/years/2017/sites/playable/game.html
-
-### 
-
-Images: none. `assets/period//` is a readme only. Do not draw a logo for this year.
-
-
-### 2020
-
-Images: none. `assets/period/2020/` is a readme only. Do not draw a logo for this year.
-
+- [ ] 1 · Face ID / iPhone X `itt17-faceid` — http://127.0.0.1:8080/app/index.html#/year/2017
+- [ ] 2 · Fortnite BR `itt17-fortnite` — http://127.0.0.1:8080/app/index.html#/year/2017
+- [ ] 3 · Twitter 280 `itt17-twitter-280` — http://127.0.0.1:8080/app/index.html#/year/2017
+- [ ] 4 · Teams GA `itt17-teams` — http://127.0.0.1:8080/app/index.html#/year/2017
+- [ ] 5 · Vine gone `itt17-vine-gone` — http://127.0.0.1:8080/app/index.html#/year/2017
+- [ ] 6 · Nintendo Switch `itt17-switch` — http://127.0.0.1:8080/app/index.html#/year/2017
+- [ ] 7 · WannaCry `itt17-wannacry` — http://127.0.0.1:8080/app/index.html#/year/2017
+- [ ] 8 · musical.ly `itt17-musically` — http://127.0.0.1:8080/app/index.html#/year/2017
+- [ ] 9 · Equifax freeze `itt17-equifax` — http://127.0.0.1:8080/app/index.html#/year/2017
+- [ ] 10 · Storm Circle `itt17-game-stormcircle` — http://127.0.0.1:8080/app/index.html#/year/2017
 
 ### 2007
 
@@ -510,11 +499,6 @@ Images: 150 in `assets/period/2007/`.
 - [ ] 8 · Kindle `itt07-kindle` — http://127.0.0.1:8080/years/2007/sites/kindle/index.html
 - [ ] 9 · XP/IE6 residual `itt07-ie6` — http://127.0.0.1:8080/years/2007/sites/ie6/index.html
 - [ ] 10 · Safari Queue `itt07-game-safariq` — http://127.0.0.1:8080/years/2007/sites/playable/game.html
-
-### 2021
-
-Images: none. `assets/period/2021/` is a readme only. Do not draw a logo for this year.
-
 
 ### 2022
 

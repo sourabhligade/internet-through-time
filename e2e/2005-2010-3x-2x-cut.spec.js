@@ -329,12 +329,12 @@ for (const [year, spec] of Object.entries(LIVE)) {
       }
     });
 
-    test(`About still prints ILS and no invented June  cell`, async ({ page }) => {
+    test(`About still prints ILS and no invented June cell`, async ({ page }) => {
       await page.goto(`/years/${year}/pages/about.html`);
   await revealLeftoverRails(page);
       const body = await page.locator("body").innerText();
       for (const print of spec.ils) expect(body).toContain(print);
-      expect(body).not.toMatch(/June  websites/i);
+      expect(body).not.toMatch(/June\s+\d{4}\s+websites/i);
     });
 
     for (const door of spec.doors) {

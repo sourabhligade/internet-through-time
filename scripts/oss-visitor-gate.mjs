@@ -11,20 +11,19 @@
  */
 import { chromium } from "@playwright/test";
 import { spawn } from "child_process";
+import { readFileSync } from "fs";
 import { createServer } from "net";
 import path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
-const SKIP = new Set(["2008", "2009", "2011", "", "2023", "2024", "2025"]);
-const REACT = new Set(["2015", "2017", "", "2020", "2021"]);
-const YEARS = [];
-for (let y = 1994; y <= 2022; y++) {
-  const s = String(y);
-  if (SKIP.has(s) || REACT.has(s)) continue;
-  YEARS.push(s);
-}
+const CARD = JSON.parse(readFileSync(path.join(ROOT, "js", "year-card.json"), "utf8")).years;
+const SKIP = new Set(
+  Object.keys(CARD).filter((y) => CARD[y].kind === "boarded" || CARD[y].kind === "absent")
+);
+const REACT = new Set(Object.keys(CARD).filter((y) => CARD[y].kind === "react"));
+const YEARS = Object.keys(CARD).filter((y) => CARD[y].kind === "html").sort();
 const BASE = (process.env.BASE_URL || "http://127.0.0.1:8080").replace(/\/$/, "");
 
 const fails = [];
@@ -161,8 +160,8 @@ try {
     }
     if (missing.length) fail("hub-cards", `missing available cards: ${missing.join(",")}`);
     else ok("hub-cards", `${YEARS.length + REACT.size} playable years`);
-    const copy = await page.locator("body").innerText();
-    if (!/25 years open/i.test(copy)) fail("hub-copy", "expected 25 years open");
+    const desc = await page.locator('meta[name="description"]').getAttribute("content");
+    if (!/22 years open/i.test(desc || "")) fail("hub-copy", "expected 22 years open");
     else ok("hub-copy");
     const h1 = await page.locator("h1").first().innerText();
     if (!/Internet Through Time/i.test(h1)) fail("hub-era-chip", "missing product h1");

@@ -81,8 +81,8 @@ These dests are already on disk, not on that year’s trail, and were named by t
 | 2015 | `apple/about.html` |
 | 2016 | `facebook/about.html`, `instagram/about.html`, `whatsapp/about.html`, `windows10/end.html` |
 | 2017 | `iphone/about.html`, `twitter/about.html`, `vine/gone.html` |
-|  | `chrome/not-secure.html`, `fortnite/switch.html`, `instagram/igtv.html`, `playable/game.html` |
-|  | `iphone/about.html` |
+| | `chrome/not-secure.html`, `fortnite/switch.html`, `instagram/igtv.html`, `playable/game.html` |
+| | `iphone/about.html` |
 | 2022 | `iphone/14.html` |
 
 `docs/TODO-FULL-AUDIT.md` defines museum grade as a playable hub door, dest-true official I/O, leftover dests that are famous-that-year or leftover-3× unique / leftover-20, and look that is a capture or an honest failed-final. Boarded, wiped, and dest-farm warehouses are the other class. That definition does not require an `index.html` alias. Official trail stops that already name `record.html`, `ipod.html`, or `14.html` are specified as those files. `scripts/audit-year-flows.py` does not treat “has another HTML file, no index” as a broken year. 2013 Vine’s star path is `sites/vine/record.html`.
@@ -107,7 +107,7 @@ All of these loaded, including `https://cybercultural.com/p/internet-/` and the 
 | Wikipedia | 15 January 2001 |
 | Facebook | 2004 at Harvard. Open registration is in the 2006 essay. The 2005 essay says it was still for students. |
 | Reddit | June 2005 |
-| Netflix | 2007, as DVD rental plus a limited stream. The  essay adds unlimited streaming for disc subscribers. The 1996 essay uses Netflix only as a later analogy. |
+| Netflix | 2007, as DVD rental plus a limited stream. The essay adds unlimited streaming for disc subscribers. The 1996 essay uses Netflix only as a later analogy. |
 
 The 2000 essay did not place any of these eleven brands. That is a gap in that essay, not a claim they had no site.
 
@@ -160,7 +160,7 @@ Apple, Microsoft, Google, eBay, Wikipedia, Netflix, Facebook, and Reddit were no
 
 - Wikipedia’s [list of websites founded before 1995](https://en.wikipedia.org/wiki/List_of_websites_founded_before_1995) was reported to treat apple.com and an early Microsoft corporate site as 1994 sites. That disagrees with the Cybercultural 1994 essay, which places Yahoo and does not place apple.com. Both reports were unverified against each other.
 - Wikipedia’s Netflix article was reported to date the public website to 14 April 1998, which would leave the 1997 Netflix trail stop without a 1997 public site. Internet Live Stats still lists a 1997 launch with no streaming claim.
-- Hosting.com’s June tables were reported to rank Yahoo and GeoCities in the 1997 top 10, and Yahoo, Google, eBay, and Amazon in 2002. Wikipedia and Reddit were reported absent from the 2002 and  top 10s retrieved there.
+- Hosting.com’s June tables were reported to rank Yahoo and GeoCities in the 1997 top 10, and Yahoo, Google, eBay, and Amazon in 2002. Wikipedia and Reddit were reported absent from the 2002 and top 10s retrieved there.
 - The category title “Websites established in 2001” (and the same title for 1999, 2000, 2002, 2003, 2004) was reported missing on English Wikipedia. The live category name reported back is “Internet properties established in” that year. `docs/2x-harvest-c-2003.md` already records the 2003 title as missing.
 - One reader reported that `https://www.webdesignmuseum.org/years/1995` is the live 1995 index and lists Amazon, Yahoo, GeoCities, CNN, the White House, and Apple, while `/gallery/year-1995` is not. Another reader could not open `/gallery/year-1995` (403). Those two reports were not reconciled.
 - Cybercultural’s 2003 essay was reported not to name several brands that `docs/2x-harvest-c-2003.md` cites that URL for (MetaFilter, NeoPets, Homestar Runner, and others in that claim).
@@ -194,7 +194,7 @@ The first draft of this note kept names and dates. This section is the rest of w
 
 Other same-year stand-ins that were looked for and not found: no `lycos` in 1995; no `geocities` in 1997–2000 (`angelfire` and `tripod` are other hosts); no `facebook` or `thefacebook` in 2005; no `reddit` in 2006 or ; no `auctionweb` or `half` standing in for missing `ebay` in 2001, 2002, or 2004.
 
-`years/2014/sites/google`, `years//sites/google`, and `years/2021/sites/wikipedia` are also absent. Those are DROP slugs in [`LEFTOVER-3X-UNIQUE-LINKS.md`](LEFTOVER-3X-UNIQUE-LINKS.md) (2014 `google` with `yahoo`, `amazon`, `netflix`; 2021 `wikipedia`). They are not open trail holes. The 2014 / 2020 / 2021 / 2022 leftover-3× link caps are already filled without new folders.
+`years/2014/sites/google`, `years//sites/google`, and `years/2021/sites/wikipedia` are also absent. Those are DROP slugs in [`LEFTOVER-3X-UNIQUE-LINKS.md`](LEFTOVER-3X-UNIQUE-LINKS.md) (2014 `google` with `yahoo`, `amazon`, `netflix`; 2021 `wikipedia`). They are not open trail holes. The 2014 / 2021 / 2022 leftover-3× link caps are already filled without new folders.
 
 ### 7.2 Which “no index.html” files are the trail (disk)
 
@@ -208,8 +208,8 @@ These trail hrefs already name the file that exists. An `index.html` is not how 
 | 2013 | `sites/vine/record.html` (star; match `/vine/record`), `sites/instagram/video.html`, `sites/snapchat/story.html`, `sites/playable/game.html`, `sites/iphone/ios7.html` |
 | 2016 | `sites/instagram/stories.html`, `sites/facebook/reactions.html`, `sites/whatsapp/e2e.html`, `sites/windows10/end.html` |
 | 2017 | `sites/iphone/x.html`, `sites/twitter/280.html`, `sites/vine/gone.html` |
-|  | `sites/chrome/not-secure.html`, `sites/fortnite/switch.html`, `sites/instagram/igtv.html`, `sites/playable/game.html` |
-|  | `sites/iphone/iphone11.html` |
+| | `sites/chrome/not-secure.html`, `sites/fortnite/switch.html`, `sites/instagram/igtv.html`, `sites/playable/game.html` |
+| | `sites/iphone/iphone11.html` |
 | 2022 | `sites/iphone/14.html` |
 
 These files are in the folder and are **not** the trail page. Pointing an index at them would not fix the trail:
@@ -220,7 +220,7 @@ These files are in the folder and are **not** the trail page. Pointing an index 
 | 2015 | `apple/about.html` | `apple/watch.html` |
 | 2016 | `instagram/about.html`, `facebook/about.html` | `instagram/stories.html`, `facebook/reactions.html` |
 | 2017 | `iphone/about.html`, `twitter/about.html` | `iphone/x.html`, `twitter/280.html` |
-|  | `iphone/about.html` | `iphone/iphone11.html` |
+| | `iphone/about.html` | `iphone/iphone11.html` |
 
 [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) locks the star, guided item, year-start, and atlas to `sites/vine/record.html`, and treats `vine/index.html` as the wrong path (and as a file that does not exist). The same criteria file still lists `touchid.html` as official n=5 in a 10-stop table. Live `flow-trails.js` for 2013 has nine stops and uses `ios7.html`. That disagreement was not cleaned up.
 
@@ -259,7 +259,7 @@ The same pass said Hosting.com’s mid-1990s ranks name MSN.com, not microsoft.c
 | 1997 `netflix` | [Wikipedia: Netflix](https://en.wikipedia.org/wiki/Netflix) dates the public DVD-by-mail site to 14 April 1998. That does not show a 1997 public site. Internet Live Stats still lists Netflix in a 1997 launch column with no streaming sentence. Cybercultural’s 1997 essay does not place Netflix. |
 | 1994 `apple`, 1994 `microsoft` | [List of websites founded before 1995](https://en.wikipedia.org/wiki/List_of_websites_founded_before_1995) was reported to treat apple.com and an early Microsoft corporate site as 1994 sites. The Cybercultural 1994 essay does not. Both reports stand unverified against each other. The same Wikipedia list was reported to include Yahoo and not to give Amazon or GeoCities their own entries. |
 | 1995 `apple` | Web Design Museum’s first-versions exhibition was reported to include an Apple website dated 1995. That exhibition URL returned 403 to the bibliography checker. |
-| 2002 `netflix`, 2006 `reddit`,  `reddit` | No year-dated capture of those sites is in the opened `SOURCES.md` Wayback list. The Reddit capture that did open is 25 July 2005. |
+| 2002 `netflix`, 2006 `reddit`, `reddit` | No year-dated capture of those sites is in the opened `SOURCES.md` Wayback list. The Reddit capture that did open is 25 July 2005. |
 | Amazon IPO cite for the 1997 retarget | Search snippets, not a full fetch, for the 15 May 1997 S-1 (3 million shares at $18, Nasdaq AMZN): `https://www.sec.gov/Archives/edgar/data/1018724/0000891020-97-000868.txt` and [History of Amazon](https://en.wikipedia.org/wiki/History_of_Amazon). |
 
 ### 7.6 Bibliography URLs that do not say what the harvest docs cite them for (unverified)

@@ -10,7 +10,7 @@ The hub is in the shape already chosen: 22 cards, year number only, same thin bo
 
 The same sentence is on every React stop, and the product face adds “[failed-final] No invented brand pixel.” Twitter 280 at 390px shows both, plus the storage key `itt17-twitter-280`, and the Tweet button is below the fold. The header reads “2017 Face ID” while the title is Twitter 280, because the star name stays in the header on every stop.
 
-Two 2017 facts are unfinished sentences: Nintendo Switch says “Fortnite-on-Switch is .” and musical.ly says “Not TikTok US mass ().”
+Two 2017 facts are unfinished sentences: Nintendo Switch says “Fortnite-on-Switch is .” and musical.ly says “Not TikTok US mass .”
 
 The React hall lede says “2023–2025 stay wiped.”
 

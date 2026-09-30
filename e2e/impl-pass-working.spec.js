@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Working probe of the implement pass — leftover-trail writers, dest-true official,
- *  extras, 2022 dest-first,  one-key, year-lock chrome.
+ * 2022 dest-first, one-key, year-lock chrome.
  */
 const { test, expect } = require("@playwright/test");
 const { destOnDisk } = require("./helpers");

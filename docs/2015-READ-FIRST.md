@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-27  
 **Status:** **WIPED.** No hub card. No year tree. Do not restore. Star was Periscope Go LIVE `itt15-periscope`.  
-**Disk truth:** Hub is **24 years open** · **2009 boarded** · **2015 wiped** · ** wiped** · **2020 Zoom Leave live** · **2022 ChatGPT live**. 2013 Vine is a live lean door.  
+**Disk truth:** Hub is **24 years open** · **2009 boarded** · **2015 wiped** · **2022 ChatGPT live**. 2013 Vine is a live lean door.  
 **Prefix:** `itt15`  
 **Clone shape from:** live `years/2014/` (lean door). **Do not** restore `/tmp` or git leftovers.
 

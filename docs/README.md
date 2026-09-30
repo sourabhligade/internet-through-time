@@ -2,7 +2,7 @@
 
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · live `years/` · `scripts/itt_gate.py` `SHIP_YEARS`.
 
-Hub is **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + –2022). **2009 boarded.** **2015 wiped.** ** wiped.** **2023–2025 wiped.**
+Hub is **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2022). **2009 boarded.** **2015 wiped.** **2023–2025 wiped.**
 
 ## Read first
 
@@ -14,7 +14,7 @@ Hub is **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + –20
 5. [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) — same bar for 2013 Vine 6s.
 6. [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) — 30 unique dests (10 official + 20 leftover). No clones.
 7. [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md) — leftover-3× first/second/third must be unique dests, not mock, not stacked machines. Maps: [`2007-LEFTOVER-3X-UNIQUE.md`](2007-LEFTOVER-3X-UNIQUE.md) · [`-LEFTOVER-3X-UNIQUE.md`](-LEFTOVER-3X-UNIQUE.md) (forest workshop) · [`2009-LEFTOVER-3X-UNIQUE.md`](2009-LEFTOVER-3X-UNIQUE.md) (boarded) · [`2010-LEFTOVER-3X-UNIQUE.md`](2010-LEFTOVER-3X-UNIQUE.md) · [`2022-LEFTOVER-3X-UNIQUE.md`](2022-LEFTOVER-3X-UNIQUE.md).
-8. [`CLONE-STRIP-DEST-LOCKED.md`](CLONE-STRIP-DEST-LOCKED.md) — strip leftover clone machines on dest-locked lean dests (38 dests · 2020 first).
+8. [`CLONE-STRIP-DEST-LOCKED.md`](CLONE-STRIP-DEST-LOCKED.md) — strip leftover clone machines on dest-locked lean dests (38 dests · first).
 9. [`UNDONE.md`](UNDONE.md) — what is still incomplete (plans vs code vs e2e). Missing years out of scope.
 9b. [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) — 100% is dest-true flows on dests already on disk, not dest-farm links. Why 2021 looks kaggy. Implement order.
 9c. [`FLOW-CHECK-DIAGRAM.md`](FLOW-CHECK-DIAGRAM.md) — check links then dest-true I/O (empty never writes).
@@ -22,7 +22,7 @@ Hub is **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + –20
 9d. [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) — 5k walk, not 5k dests. Double leftover dests on thin lean doors only. Step 2 implemented 2026-09-20.
 9d-2x. [`LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md) — leftover-2× unique dest **links** implemented. Dest folders already on disk. 2000–2006 original unique dests stay. Official dest leftover-2× first paint 0. Stepwise check walk: that file §10.
 9d-3x. [`LEFTOVER-3X-UNIQUE-LINKS.md`](LEFTOVER-3X-UNIQUE-LINKS.md) — leftover-3× unique dest **links** implemented 2026-09-21. KEEP original leftover-3× unique dests. Leftover-3× unique dest-true dests stay =3 / 2021=5. MISS remainder stands. Official dest leftover-3× unique dest links first paint 0.
-9e. [`LEAN-TRIPLE-2015-2020.md`](LEAN-TRIPLE-2015-2020.md) — 2015–2020 triple look. Criteria. Do not dest-farm 2015/2017/. Do not implement dest folders from that file. Checklist: [`LEAN-TRIPLE-2015-2020-CHECKLIST.md`](LEAN-TRIPLE-2015-2020-CHECKLIST.md).
+9e. [`LEAN-TRIPLE-2015.md`](LEAN-TRIPLE-2015.md) — 2015 triple look. Criteria. Do not dest-farm 2015/2017/. Do not implement dest folders from that file. Checklist: [`LEAN-TRIPLE-2015-CHECKLIST.md`](LEAN-TRIPLE-2015-CHECKLIST.md).
 10. [`FLOW-UNIMPLEMENTED-AND-UNUSED.md`](FLOW-UNIMPLEMENTED-AND-UNUSED.md) — every plan MD, related code, unimplemented leftover, unused/delete list.
 10b. [`TODO-FULL-AUDIT.md`](TODO-FULL-AUDIT.md) — start-to-end todo from the 2026-09-20 full audit (every year, every leftover, every stale MD).
 10c. [`TODO-EXTRA-DEST-REVERT.md`](TODO-EXTRA-DEST-REVERT.md) — extra leftover dest leftover: how to drop and retarget.

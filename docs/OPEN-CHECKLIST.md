@@ -1,9 +1,9 @@
 # Open checklist
 
 **Date:** 2026-09-26  
-**Branch:** `museum/1994-2020-lean`. This commit ships React-door atlas, dest-true 2017/ MVP, leftover-20 React I/O, leftover-3× catalogs empty.  
+**Branch:** `the working branch`. This commit ships React-door atlas, dest-true 2017/ MVP, leftover-20 React I/O, leftover-3× catalogs empty.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) and `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Live museum:** 24 doors (1994–2007, 2010 + 2012–2014, 2016–2017, –2022).  wiped. 2009 is boarded. 2015, , and 2023–2025 are wiped. Leftover-3× catalogs are empty.
+**Live museum:** 24 doors (1994–2007, 2010 + 2012–2014, 2016–2017, 2022). wiped. 2009 is boarded. 2015, and 2023–2025 are wiped. Leftover-3× catalogs are empty.
 
 Do the steps in order. A later step does not start while an earlier step is still open. Nothing here is a commit until step 8, and only if you ask for one.
 
@@ -13,9 +13,9 @@ Checked boxes are already true on disk. Unchecked boxes are the work.
 
 ## Already done (do not redo)
 
-- [x] Hub is 26 doors. 2009 stays boarded. 2015, , and 2023–2025 stay wiped.
-- [x] 2017 and  trails in `js/config/flow-trails.js` are 30 stops each. Stars stay Face ID (`itt17-faceid`) and Disney+ (`itt19-disneyplus`).
-- [x]  leftover keys are one per page, ending in `-lx`. Apple Card is `itt19-applecard-lx`. The second `-d2` writer is gone.
+- [x] Hub is 26 doors. 2009 stays boarded. 2015, and 2023–2025 stay wiped.
+- [x] 2017 and trails in `js/config/flow-trails.js` are 30 stops each. Stars stay Face ID (`itt17-faceid`) and Disney+ (`itt19-disneyplus`).
+- [x] leftover keys are one per page, ending in `-lx`. Apple Card is `itt19-applecard-lx`. The second `-d2` writer is gone.
 - [x] `e2e/2017--leftover-20.spec.js` passed 42 tests. `e2e/2017-unique-flows.spec.js` passed 39. `e2e/implemented-flow-links.spec.js` passed 271. `e2e/lean-double-leftover.spec.js` passed 73.
 - [x] 1994 Cool Site of the Day writes `itt94-csotd` only after today’s pick and a real name.
 - [x] Each open year loads `css/period-YYYY.css`.
@@ -25,9 +25,9 @@ Checked boxes are already true on disk. Unchecked boxes are the work.
 
 ---
 
-## Step 1 — Finish the 2017 and  leftover visits
+## Step 1 — Finish the 2017 and leftover visits
 
-Trails are wired. 2017 and  leftover rooms live on the React doors (`/app/index.html#/year/2017`, `/app/index.html#/year/`). `years/2017/` and `years//` HTML are gone.
+Trails are wired. 2017 and leftover rooms live on the React doors (`/app/index.html#/year/2017`, `/app/index.html#/year/`). `years/2017/` and `years//` HTML are gone.
 
 On every leftover stop below, a visitor check is:
 
@@ -36,7 +36,7 @@ On every leftover stop below, a visitor check is:
 3. A finished visit writes that page’s one key.
 4. The year star stays empty (`itt17-faceid` or `itt19-disneyplus`).
 
-AirPods 2, Cuphead, and Animoji were clicked in the browser. React leftover-20 + unique-flows **75 passed** 2026-09-26: every leftover stop 11–30 on 2017 and  got empty click, trap click, and a finished visit. Stars stayed empty. HTML paths below are trail names; live rooms are the React rail.
+AirPods 2, Cuphead, and Animoji were clicked in the browser. React leftover-20 + unique-flows **75 passed** 2026-09-26: every leftover stop 11–30 on 2017 and got empty click, trap click, and a finished visit. Stars stayed empty. HTML paths below are trail names; live rooms are the React rail.
 
 ### 2017 leftover stops 11–30
 
@@ -71,7 +71,7 @@ Cite check:
 - [x] The other 18 pages each link to an official page or Wikipedia. Those URLs are now in §7. No stop was dropped. No logo was drawn.
 - [x] `[failed-final]` stays only where the brand pixel is missing.
 
-###  leftover stops 11–30
+### leftover stops 11–30
 
 Star stays `itt19-disneyplus`. One `data-lo-key` each. No `-d2` key.
 
@@ -104,16 +104,16 @@ The year table in [`YEAR-BY-YEAR-RESEARCH-STEPS.md`](YEAR-BY-YEAR-RESEARCH-STEPS
 
 § of [`YEAR-BY-YEAR-RESEARCH-STEPS.md`](YEAR-BY-YEAR-RESEARCH-STEPS.md) already says stops 11–30 are these 20 flows. Two older lines in the same file still forbid that:
 
-- [x] Line 4 status now allows the wired 2017 and  stops 11–30 and forbids a 31st.
+- [x] Line 4 status now allows the wired 2017 and stops 11–30 and forbids a 31st.
 - [x] § implement step 1 says the same.
 
-Change those two lines so a 30-stop  trail is allowed, and a 31st stop is not. [`2017--2X-FLOWS-RESEARCH.md`](2017--2X-FLOWS-RESEARCH.md) still says both years have 0 leftover trail stops. Update that header after the visits above are done.
+Change those two lines so a 30-stop trail is allowed, and a 31st stop is not. [`2017--2X-FLOWS-RESEARCH.md`](2017--2X-FLOWS-RESEARCH.md) still says both years have 0 leftover trail stops. Update that header after the visits above are done.
 
 **Done when:** all 40 leftover pages pass the four-point save check, every kept stop has a URL, and the year note matches the 30-stop trail.
 
 ---
 
-## Step 2 — Leave the other 34 cited  leftovers off the trail
+## Step 2 — Leave the other 34 cited leftovers off the trail
 
 These 34 are in the § KEEP table and are not stops 11–30. They stay folders.
 
@@ -154,34 +154,33 @@ These 34 are in the § KEEP table and are not stops 11–30. They stay folders.
 | `xcloud` | Cited leftover, not in the 20. |
 | `yoshicrafted` | Cited leftover, not in the 20. |
 
-- [x] `flow-trails.js` for  is still exactly 30 stops.
+- [x] `flow-trails.js` for is still exactly 30 stops.
 - [x] None of the 34 slugs appear in that array.
 - [x] Workshop five stay off: `area51`, `hidelikes`, `huawei`, `libra`, `wework`.
 
-**Done when:** the  trail is still 30 stops and those 34 slugs are absent from it.
+**Done when:** the trail is still 30 stops and those 34 slugs are absent from it.
 
 ---
 
-## Step 3 — Period pictures, –2022
+## Step 3 — Period pictures, 2022
 
 Counted on disk 2026-09-24. 1994–2009 already have real image sets. 2010 has 3 images.
 
 | Year | Image files now | What to do |
 |------|----------------:|------------|
-|  | 0 | [x] Left the readme. No file and cite to add |
+| | 0 | [x] Left the readme. No file and cite to add |
 | 2012 | 0 | [x] Left the readme |
 | 2013 | 0 | [x] Left the readme |
 | 2014 | 0 | [x] Left the readme |
 | 2015 | 0 | [x] Left the readme |
 | 2016 | 0 | [x] Left the readme |
 | 2017 | 0 | [x] Left the readme |
-|  | no folder | [x] Left wiped. Do not create `assets/period//` |
-|  | 0 | [x] Left the readme |
-| 2020 | 0 | [x] Left the readme |
+| | no folder | [x] Left wiped. Do not create `assets/period//` |
+| | 0 | [x] Left the readme |
 | 2021 | 0 | [x] Left the readme |
 | 2022 | 0 | [x] Left the readme |
 
-- [x] No image file was added. –2017 and –2022 stay readme-only.  has no folder.
+- [x] No image file was added. 2017 and 2022 stay readme-only. has no folder.
 - [x] No brand mark was drawn.
 - [x] A page with no capture keeps `[failed-final]`.
 
@@ -237,8 +236,8 @@ These files are the research. They are not a license to add folders.
 | Class | Years | Rule |
 |-------|-------|------|
 | Double | 2007, 2010, 2012, 2014, 2016, 2021, 2022 | A new leftover dest only with a cite, year-true fame, and a slug that is not already used. One folder, one verb, one key `ittYY-<slug>-lx`. |
-| Holes only | 2013, 2020 | A row only when a cite names a real hole. |
-| Stop | Forests 1994–2006 and , boarded 2009, dense 2015 / 2017 / , wiped  and 2023–2025 | No new destinations. |
+| Holes only | 2013 | A row only when a cite names a real hole. |
+| Stop | Forests 1994–2006 and , boarded 2009, dense 2015 / 2017 / , wiped and 2023–2025 | No new destinations. |
 
 Room under the cap, from the phases file (live folders / cap):
 
@@ -246,19 +245,18 @@ Room under the cap, from the phases file (live folders / cap):
 |------|-----:|----:|-----:|----------------|
 | 2007 | 33 | 46 | 13 | [x] Nothing added |
 | 2010 | 29 | 44 | 15 | [x] Nothing added |
-|  | 41 | 62 | 21 | [x] Nothing added |
+| | 41 | 62 | 21 | [x] Nothing added |
 | 2012 | 32 | 48 | 16 | [x] Nothing added |
 | 2013 | 47 | 54 | 7 | [x] No hole added |
 | 2014 | 25 | 36 | 11 | [x] Nothing added |
 | 2016 | 53 | 64 | 11 | [x] Nothing added |
-|  | 0 | 26 | — | [x] Stay wiped. Research is recorded below. Do not build it |
-| 2020 | 22 | 38 | — | [x] Not filled |
+| | 0 | 26 | — | [x] Stay wiped. Research is recorded below. Do not build it |
 | 2021 | 18 | 30 | 12 | [x] Nothing added |
 | 2022 | 24 | 38 | 14 | [x] Nothing added |
 
 Official 10 does not grow. Leftover-3× catalogs stay empty. Empty never writes. Leftover never writes the year star.
 
-###  research — wiped, do not build
+### research — wiped, do not build
 
 This is the research from [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md). It was missing from the first draft of this checklist. The live tree has no `years/` and no `assets/period/`.
 
@@ -279,7 +277,7 @@ No year-true cite was found for a destination that is not already on these trail
 
 - [x] Leftover-2× rail is the cited 105. 806 folders stay.
 - [x] Digg has no 2005 launch page. Firefox 1.0 and World of Warcraft launched in 2004. Google Earth does not get a one-key keep.
-- [x] QQ recount, 2026-09-25: leftover-2× unique dest links catalog is dest-disjoint official and leftover-trail dests. 2005 remain **91**.  remain **13**. The 14 2005 trail dests and the 13  leftover-trail dests were dropped from `js/config/leftover-2x-unique-links.js`. [`LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md) keeps the rail off official and leftover-trail dests.
+- [x] QQ recount, 2026-09-25: leftover-2× unique dest links catalog is dest-disjoint official and leftover-trail dests. 2005 remain **91**. remain **13**. The 14 2005 trail dests and the 13 leftover-trail dests were dropped from `js/config/leftover-2x-unique-links.js`. [`LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md) keeps the rail off official and leftover-trail dests.
 
 **Done when:** no new forest folder exists because of the walk, and no lean-double folder exists without a cite.
 
@@ -287,16 +285,16 @@ No year-true cite was found for a destination that is not already on these trail
 
 ## Step 7 — Docs that still describe an older museum
 
-Ship law stays [`DISK-TRUTH.md`](DISK-TRUTH.md): 26 doors, 2009 boarded, 2015 wiped,  wiped, leftover-3× catalogs empty.
+Ship law stays [`DISK-TRUTH.md`](DISK-TRUTH.md): 26 doors, 2009 boarded, 2015 wiped, wiped, leftover-3× catalogs empty.
 
-- [x] [`FLOW-UNIMPLEMENTED-AND-UNUSED.md`](FLOW-UNIMPLEMENTED-AND-UNUSED.md) year list is 26 doors.  is the wiped research model.
-- [x] [`UNDONE.md`](UNDONE.md) §1 splits  out as wiped. Live leftover-3× catalogs stay empty.
+- [x] [`FLOW-UNIMPLEMENTED-AND-UNUSED.md`](FLOW-UNIMPLEMENTED-AND-UNUSED.md) year list is 26 doors. is the wiped research model.
+- [x] [`UNDONE.md`](UNDONE.md) §1 splits out as wiped. Live leftover-3× catalogs stay empty.
 - [x] [`2017--2X-FLOWS-RESEARCH.md`](2017--2X-FLOWS-RESEARCH.md) header says 30 stops.
 - [x] [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) §7 lists the page URL for each leftover stop.
-- [x] [`YEAR-BY-YEAR-RESEARCH-STEPS.md`](YEAR-BY-YEAR-RESEARCH-STEPS.md) header and § step 1 allow the wired  stops 11–30 and forbid a 31st.
-- [x] [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) keeps the  research tables and marks them wiped. The scorecard row is 0 on disk, aim 26.
-- [x] Root [`README.md`](../README.md)  row says wiped.
-- [x] [`SOURCES.md`](SOURCES.md) and [`docs/README.md`](README.md) say 25 years and 2015 /  wiped.
+- [x] [`YEAR-BY-YEAR-RESEARCH-STEPS.md`](YEAR-BY-YEAR-RESEARCH-STEPS.md) header and § step 1 allow the wired stops 11–30 and forbid a 31st.
+- [x] [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) keeps the research tables and marks them wiped. The scorecard row is 0 on disk, aim 26.
+- [x] Root [`README.md`](../README.md) row says wiped.
+- [x] [`SOURCES.md`](SOURCES.md) and [`docs/README.md`](README.md) say 25 years and 2015 / wiped.
 
 **Done when:** a reader of those files gets the same year list as the hub.
 
@@ -304,13 +302,13 @@ Ship law stays [`DISK-TRUTH.md`](DISK-TRUTH.md): 26 doors, 2009 boarded, 2015 wi
 
 ## Step 8 — Test, then commit only if asked
 
-- [x] Re-ran `e2e/2017--leftover-20.spec.js` on 2026-09-24: **42 passed**. Each  leftover and each 2017 leftover except Animoji got an empty click, a trap click, and a finished visit. Animoji still requires Face ID saved, a face pick, and two ticks. The year stars stayed empty.
+- [x] Re-ran `e2e/2017--leftover-20.spec.js` on 2026-09-24: **42 passed**. Each leftover and each 2017 leftover except Animoji got an empty click, a trap click, and a finished visit. Animoji still requires Face ID saved, a face pick, and two ticks. The year stars stayed empty.
 - [x] Re-ran `e2e/2017-unique-flows.spec.js` on 2026-09-24. 38 passed on the first run. The next-link test expected the old official hops. Those hrefs now follow the leftover trail, ending at Face ID. That one test was updated and passed.
 - [x] Full suite `npx playwright test --workers=2` finished 2026-09-25 after 2.7h. **6,238** tests: **4,837 passed**, **968 failed**, **433 skipped**. Exit code 1.
 - [x] Counts are the line above. Failures clustered on old leftover-panel specs (`1997-2000-leftover-4x`, `1994-1999-official-10`, `1994-2000-2009-href-2x-real-flows`, `1994-2000-dest-true-leftover-note`). The run loaded those files before the strip assertions were updated, so this result still includes the old 9+9+9 expects.
 - [x] Dest-true pack 2026-09-26: **511 passed, 2 skipped**. GitHub Playwright is this pack (19 files including 2017-mvp and -mvp), not the full tree.
 - [x] Leftover-20 + unique-flows 2026-09-26: **75 passed**.
-- [x] Shipped `cbbd243a6` on ask (2026-09-26). This commit ships React-door atlas, dest-true 2017/ MVP, leftover-20 React I/O, and dest-count docs. Branch `museum/1994-2020-lean`.
+- [x] Shipped `cbbd243a6` on ask (2026-09-26). This commit ships React-door atlas, dest-true 2017/ MVP, leftover-20 React I/O, and dest-count docs. Branch `the working branch`.
 
 **Done when:** the suite result is written in this file, and a commit exists only if you asked for one.
 
@@ -319,9 +317,9 @@ Ship law stays [`DISK-TRUTH.md`](DISK-TRUTH.md): 26 doors, 2009 boarded, 2015 wi
 ## Leave alone unless you name it
 
 - Do not un-board 2009.
-- Do not restore  or 2023–2025.
-- Do not dest-lock 2015– again. Do not dest-lock forests, 2013, or 2022.
+- Do not restore or 2023–2025.
+- Do not dest-lock 2015 again. Do not dest-lock forests, 2013, or 2022.
 - Do not grow leftover-3× catalogs. They are empty on purpose.
-- Do not add a unique leftover-20 map for a year other than the 2017 and  trails already in `flow-trails.js`.
+- Do not add a unique leftover-20 map for a year other than the 2017 and trails already in `flow-trails.js`.
 - Do not build forest destinations from [`FIVE-K-SITE-WALK.md`](FIVE-K-SITE-WALK.md).
 - Do not invent a logo, a cite, or a 5,000-site ranking.

@@ -1,10 +1,10 @@
-/** React doors are 2015 and 2017 only. 2014, 2016, and 2022 stay on /years/YYYY/. */
-export const REACT_YEARS = [
-  {
-    year: "2015",
+import card from "../../js/year-card.json";
+
+/** Hall faces for React doors. The year id comes from the year card. */
+const HALL = {
+  "2015": {
     star: "Periscope Go LIVE",
     blurb: "Type a title, then Go LIVE. An ended broadcast writes nothing.",
-    home: "#/year/2015",
     steps: [
       ["About 2015", "#/year/2015?stop=about"],
       ["Periscope Go LIVE", "#/year/2015?stop=itt15-periscope"],
@@ -14,11 +14,9 @@ export const REACT_YEARS = [
       ["Year flow map", "#/year/2015?stop=map"],
     ],
   },
-  {
-    year: "2017",
+  "2017": {
     star: "Face ID",
     blurb: "iPhone X / Face ID, Fortnite, Twitter 280, Teams.",
-    home: "#/year/2017",
     steps: [
       ["About 2017", "#/year/2017?stop=about"],
       ["Face ID", "#/year/2017?stop=itt17-faceid"],
@@ -28,7 +26,31 @@ export const REACT_YEARS = [
       ["Year flow map", "#/year/2017?stop=map"],
     ],
   },
-];
+};
+
+export const REACT_YEARS = Object.keys(card.years)
+  .filter((year) => card.years[year].kind === "react")
+  .sort()
+  .map((year) => {
+    const face = HALL[year] || {
+      star: card.years[year].star || year,
+      blurb: "React door",
+      steps: [["About " + year, "#/year/" + year + "?stop=about"]],
+    };
+    return { year, home: "#/year/" + year, ...face };
+  });
+
+export function cardList(kind) {
+  return Object.keys(card.years)
+    .filter((year) => card.years[year].kind === kind)
+    .sort();
+}
+
+export function hashHtmlYears() {
+  return Object.keys(card.years)
+    .filter((year) => card.years[year].hashToHtml)
+    .sort();
+}
 
 export function yearById(id) {
   return REACT_YEARS.find((row) => row.year === id) || null;

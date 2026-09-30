@@ -13,21 +13,21 @@
 
 ## 1. Museum door (22 open years)
 
-Open doors: 1994–2007, 2010, 2012–2017, 2022. 2015 and 2017 are React doors (`/app/index.html#/year/YYYY`). 2014, 2016, and 2022 are HTML doors. 2009 is a boarded plaque, not a card. 2011, 2018, 2019, 2020, and 2021 are absent. 2023–2025 are wiped.
+Open doors: 1994–2007, 2010, 2012–2017, 2022. 2015 and 2017 are React doors (`/app/index.html#/year/YYYY`). 2014, 2016, and 2022 are HTML doors. 2009 is a boarded plaque, not a card. 2011, 2018, and 2021 are absent. 2023–2025 are wiped.
 
 ```mermaid
 flowchart TD
-  HUB["Hub index.html<br/>22 year cards"] --> KIND{"Card kind"}
-  KIND -->|HTML| YEAR["/years/YYYY/"]
-  KIND -->|React 2015 or 2017| REACT["/app/index.html#/year/YYYY"]
-  YEAR --> ROOM["Room click"]
-  REACT --> ROOM
-  ROOM --> EMPTY["Empty or trap"]
-  ROOM --> DONE["Finished click"]
-  ROOM --> BLOCK["localStorage setItem throws"]
-  EMPTY --> NOKEY["No key"]
-  DONE --> KEY["This dest key"]
-  BLOCK --> MSG["This browser blocked the save."]
+ HUB["Hub index.html<br/>22 year cards"] --> KIND{"Card kind"}
+ KIND -->|HTML| YEAR["/years/YYYY/"]
+ KIND -->|React 2015 or 2017| REACT["/app/index.html#/year/YYYY"]
+ YEAR --> ROOM["Room click"]
+ REACT --> ROOM
+ ROOM --> EMPTY["Empty or trap"]
+ ROOM --> DONE["Finished click"]
+ ROOM --> BLOCK["localStorage setItem throws"]
+ EMPTY --> NOKEY["No key"]
+ DONE --> KEY["This dest key"]
+ BLOCK --> MSG["This browser blocked the save."]
 ```
 
 **HTML official caps:** 2004 ends at 8. 2012, 2013, and 2014 end at 9. Other open HTML years in `js/config/flow-trails.js` list 10. 2015 and 2017 are not in that file.
@@ -42,13 +42,13 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-  subgraph PLAY["22 open doors"]
-    HTML["HTML doors<br/>1994–2007 · 2010 · 2012–2014 · 2016 · 2022"]
-    REACT["React doors<br/>2015 · 2017"]
-  end
-  BOARD["2009 boarded plaque"]
-  ABSENT["2011 · 2018 · 2019 · 2020 · 2021 absent"]
-  WIPE["2023–2025 wiped"]
+ subgraph PLAY["22 open doors"]
+ HTML["HTML doors<br/>1994–2007 · 2010 · 2012–2014 · 2016 · 2022"]
+ REACT["React doors<br/>2015 · 2017"]
+ end
+ BOARD["2009 boarded plaque"]
+ ABSENT["2011 · 2018 · 2021 absent"]
+ WIPE["2023–2025 wiped"]
 ```
 
 | Class | Years | Check |
@@ -56,7 +56,7 @@ flowchart LR
 | HTML door | 1994–2007, 2010, 2012–2014, 2016, 2022 | `/years/YYYY/` returns 200. Official list stops at the cap above. |
 | React door | 2015, 2017 | Hub and atlas open `/app/index.html#/year/YYYY`. No HTML tree. |
 | Boarded | 2009 | Plaque at `/years/2009/`. No hub card. No atlas tick. |
-| Absent | 2011, 2018, 2019, 2020, 2021 | No card, no tree, no React door. |
+| Absent | 2011, 2018, 2021 | No card, no tree, no React door. |
 | Wiped | 2023–2025 | No tree. Do not restore. |
 
 ---
@@ -65,21 +65,21 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-  OPEN["Open dest"] --> FACE{"Dest-true face first paint?"}
-  FACE -->|official dest| GOLD["data-official-verb<br/>data-official-need<br/>2× data-official-req<br/>data-official-trap"]
-  FACE -->|leftover-3× unique dest-true dest| CREAM["cream data-itt-lo3x<br/>keep vs trap<br/>field · 2 ticks · leftover go 1"]
-  GOLD --> EMPTY["Empty Go / verb"]
-  CREAM --> EMPTY
-  EMPTY --> NW["Never writes"]
-  GOLD --> TRAP["Trap click"]
-  CREAM --> TRAP
-  TRAP --> NW
-  GOLD --> FULL["Need + 2 ticks + dest-true verb"]
-  CREAM --> FULL2["Keep + field + 2 ticks + leftover go"]
-  FULL --> WRITE["Writes THIS dest key only<br/>real · leftover? · year"]
-  FULL2 --> WRITE2["Writes leftover key only<br/>never the star"]
-  WRITE --> NEXT["data-next-flow dest exists"]
-  WRITE2 --> NEXT2["Next leftover dest or Starting Point"]
+ OPEN["Open dest"] --> FACE{"Dest-true face first paint?"}
+ FACE -->|official dest| GOLD["data-official-verb<br/>data-official-need<br/>2× data-official-req<br/>data-official-trap"]
+ FACE -->|leftover-3× unique dest-true dest| CREAM["cream data-itt-lo3x<br/>keep vs trap<br/>field · 2 ticks · leftover go 1"]
+ GOLD --> EMPTY["Empty Go / verb"]
+ CREAM --> EMPTY
+ EMPTY --> NW["Never writes"]
+ GOLD --> TRAP["Trap click"]
+ CREAM --> TRAP
+ TRAP --> NW
+ GOLD --> FULL["Need + 2 ticks + dest-true verb"]
+ CREAM --> FULL2["Keep + field + 2 ticks + leftover go"]
+ FULL --> WRITE["Writes THIS dest key only<br/>real · leftover? · year"]
+ FULL2 --> WRITE2["Writes leftover key only<br/>never the star"]
+ WRITE --> NEXT["data-next-flow dest exists"]
+ WRITE2 --> NEXT2["Next leftover dest or Starting Point"]
 ```
 
 **Fail if:** cloned “Go leftover” plaque · leftover go ≠ 1 on leftover-3× unique dest-true dests · leftover writes star · empty writes · trap writes · dest-farm leftover dest leftover-3× dest-farm extra dests counted as unique dest-true dests.
@@ -90,11 +90,11 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-  A["1. Hub: 22 cards. No 2009. No 2011. No 2018–2021. No 2023+."] --> B["2. HTML door or React door. 2015 and 2017 are React."]
-  B --> C["3. Star verb. Empty / trap never write. Complete writes star key."]
-  C --> D["4. HTML official stops through the cap. 2004=8. 2012–2014=9."]
-  D --> E["5. Leftover only where that year still has a rail. Do not dest-farm."]
-  E --> F["6. Blocked setItem says: This browser blocked the save."]
+ A["1. Hub: 22 cards. No 2009. No 2011. No 2018–2021. No 2023+."] --> B["2. HTML door or React door. 2015 and 2017 are React."]
+ B --> C["3. Star verb. Empty / trap never write. Complete writes star key."]
+ C --> D["4. HTML official stops through the cap. 2004=8. 2012–2014=9."]
+ D --> E["5. Leftover only where that year still has a rail. Do not dest-farm."]
+ E --> F["6. Blocked setItem says: This browser blocked the save."]
 ```
 
 **Packs:**
@@ -116,31 +116,30 @@ CI does **not** run leftover-3× directory (`3x-links`), leftover-5× live, left
 
 ## 5. Leftover-3× unique dest-true dests (dest-disjoint)
 
-**Snapshot 2026-09-20. Not the live walk.** The table below still names 2011, 2018, 2019, 2020, and 2021. Those years are not doors. Do not walk them and do not restore them. Section 6 is the same snapshot. The live check is sections 1–4.
+**Snapshot 2026-09-20. Not the live walk.** The table below still names 2011, 2018, and 2021. Those years are not doors. Do not walk them and do not restore them. Section 6 is the same snapshot. The live check is sections 1–4.
 
 ```mermaid
 flowchart LR
-  subgraph Y["One playable year"]
-    OFF["Official 10 dests<br/>gold only"]
-    U["Leftover-3× unique dest-true dests<br/>one dest / one verb / one key"]
-  end
-  OFF -. never same dest .-> U
+ subgraph Y["One playable year"]
+ OFF["Official 10 dests<br/>gold only"]
+ U["Leftover-3× unique dest-true dests<br/>one dest / one verb / one key"]
+ end
+ OFF -. never same dest .-> U
 ```
 
 | Year | Unique dest-true dests | Star never written by leftover |
 |------|------------------------|--------------------------------|
 | 2007 | 9 wiki…digg | `itt07-iphone` |
 | 2010 | 9 netflix…groupon | `itt10-ig-posts` |
-|  | 9 | `itt11-gplus` |
+| | 9 | `itt11-gplus` |
 | 2012 | 9 + leftover-4× unique 3 | `itt12-ig-android` |
 | 2013 | 9 | Vine record |
 | 2014 | 9 | `itt14-wa-install` |
 | 2015 | 9 | `itt15-periscope` |
 | 2016 | 9 | `itt16-ig-stories` |
 | 2017 | **0 leftover-3× unique dest-true dests** (unique leftover-20) | `itt17-faceid` |
-|  | **3 stop** | `itt18-gdpr` |
-|  | 9 | `itt19-disneyplus` |
-| 2020 | 9 | `itt20-zoom` |
+| | **3 stop** | `itt18-gdpr` |
+| | 9 | `itt19-disneyplus` |
 | 2021 | **5 stop** | `itt21-att` |
 | 2022 | 9 amazon…nyt | `itt22-chatgpt` |
 
@@ -156,7 +155,7 @@ Do not dest-farm leftover dest leftover-3× unique dest-true dests past the stop
 | 2012 | IG Android | filter → Share | — |
 | 2016 | Stories | Add to Story | Reels-as-gold |
 | 2017 | Face ID | Look / swipe | Home button |
-|  | GDPR | **Manage** | **Accept All** |
-|  | Disney+ | **Continue** | Trial |
+| | GDPR | **Manage** | **Accept All** |
+| | Disney+ | **Continue** | Trial |
 | 2021 | ATT | **Ask** | **Allow** |
 | 2022 | ChatGPT | Send | GPT-4 / empty |

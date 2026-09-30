@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Dest-lock lean doors: keep official 10 + guided + unique leftover + leftover-3× dests.
 
-Forests (1994–2006, ) stay. 2009 boarded. 2020 live lean.
+Forests (1994–2006) stay. 2009 boarded.
 Does not invent dests. Same pass rewrites rooms[], sitemap, leftover matrices.
 """
 from __future__ import annotations
@@ -38,12 +38,6 @@ EXTRA_KEEP = {
     "2014": {
         "alibabaipo", "applepay", "echo", "flappybird", "game2048", "inbox", "ios8",
         "oculusfb"
-    },
-    "": {
-        "applecard", "ios13", "ipados", "switchlite"
-    },
-    "2020": {
-        "clubhouse", "hbomax", "peacock"
     },
     "2022": {
         "dalle2", "ios16", "m2", "midjourney", "stablediff", "temu"

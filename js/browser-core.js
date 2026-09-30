@@ -19,6 +19,7 @@
   // Order: pure helpers first, then create (wires + chrome/history)
   var parts = [
     "debug-ring.js",
+    "year-card.js",
     "museum-progress.js",
     "browser/navigate.js",
     "browser/connect.js",

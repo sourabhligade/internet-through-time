@@ -1,6 +1,6 @@
 # The Internet Through Time
 
-Historical reconstruction of the World Wide Web — year by year. Hub **22 years open** (1994–2007 + 2010 + 2012–2017 + 2022). **2009 boarded** (tree stays on disk · year-shell is a plaque · no year card). **2015 and 2017 are React doors** (no HTML tree). **2011, 2018, 2019, 2020, and 2021 are absent.** **2023–2025 wiped.** 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2013 star = Vine 6s. 2014 star = WhatsApp Install. 2015 star = Periscope Go LIVE. 2017 star = Face ID. 2022 star = ChatGPT Send.
+Historical reconstruction of the World Wide Web — year by year. Hub **22 years open** (1994–2007 + 2010 + 2012–2017 + 2022). **2009 boarded** (tree stays on disk · year-shell is a plaque · no year card). **2015 and 2017 are React doors** (no HTML tree). **2011, 2018, and 2021 are absent.** **2023–2025 wiped.** 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2013 star = Vine 6s. 2014 star = WhatsApp Install. 2015 star = Periscope Go LIVE. 2017 star = Face ID. 2022 star = ChatGPT Send.
 
 **Not** a modern redesign. **Not** “retro inspired.” Each year aims for museum-grade accuracy based on archived screenshots, browser documentation, and period HTML capabilities.
 
@@ -40,7 +40,7 @@ npm run check
 npm run github:ready
 ```
 
-CI on GitHub: `.github/workflows/ci.yml` (static job + a **named ship Playwright pack**, not the full `e2e/` tree). Triggers on `main` / `master` / `museum/1994-2020-lean`. `npm test` is the full suite and is **not** what GitHub Actions runs.
+CI on GitHub: `.github/workflows/ci.yml` (static job + a **named ship Playwright pack**, not the full `e2e/` tree). Triggers on `main` / `master` / `the working branch`. `npm test` is the full suite and is **not** what GitHub Actions runs.
 
 **Requirements for production:**
 - Single origin for hub + years (iframe + localStorage + script injection)
@@ -62,7 +62,7 @@ gh repo create internet-through-time --public --source=. --remote=origin --push
 ```
 
 Use `--private` instead of `--public` if you want a private museum first.  
-CI runs automatically on push to `main` or `museum/1994-2020-lean` (static smoke + Playwright).
+CI runs automatically on push to `main` or `the working branch` (static smoke + Playwright).
 
 Then connect **Netlify** or **Vercel** to the same GitHub repo for production CDN.
 
@@ -96,7 +96,7 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 | `/app/index.html#/year/2017` | Face ID / iPhone X · Fortnite leftover · Twitter 280 · Teams GA · **lean · React** |
 | `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
 
-**Lean doors:** 2007 + 2010 + 2012–2017 + 2022. Hub is **22 years open** (1994–2007 + 2010 + 2012–2017 + 2022). **2009 boarded.** **2015 is a React door** · Periscope Go LIVE · no HTML tree. **2018 absent.** **2019 absent.** **2020 removed.** **2021 removed.** **2022 is live lean** · ChatGPT Send. **2023–2025 wiped.** 2013 star = Vine 6s. 2015 star = Periscope Go LIVE. 2022 star = ChatGPT Send.
+**Lean doors:** 2007 + 2010 + 2012–2017 + 2022. Hub is **22 years open** (1994–2007 + 2010 + 2012–2017 + 2022). **2009 boarded.** **2015 is a React door** · Periscope Go LIVE · no HTML tree. **2018 absent.** **2021 removed.** **2022 is live lean** · ChatGPT Send. **2023–2025 wiped.** 2013 star = Vine 6s. 2015 star = Periscope Go LIVE. 2022 star = ChatGPT Send.
 
 **Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md).  
 **Architecture:** [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).  
@@ -106,24 +106,24 @@ Then connect **Netlify** or **Vercel** to the same GitHub repo for production CD
 
 ```
 js/
-  lib/util.js              # shared helpers
-  browser-core.js          # loader → browser/*
-  browser/create.js        # Netscape chrome controller
-  browser/connect.js       # dial-up + modem sound
-  browser/load-theater.js  # progressive-image timing helpers
-  browser/year-boot.js     # bootBrowserYear(year)
-  immersion/registry.js    # FEATURES_BY_YEAR (one place)
-  immersion/boot.js        # shared immersion loader
-  immersion/*.js           # SRP features: amazon, google, excite, …
-  immersion/create.js      # orchestrator only
-  config/<year>.js         # browser data only
-  config/immersion-<year>.js
-  browser-<year>.js        # thin: bootBrowserYear
-  immersion-<year>.js      # thin: set year → boot.js
-years/<year>/              # shell + content HTML
-css/                       # hub + chrome + period styles
-assets/                    # period GIFs
-docs/                      # DISK-TRUTH + year READ-FIRST + Board C lock
+ lib/util.js # shared helpers
+ browser-core.js # loader → browser/*
+ browser/create.js # Netscape chrome controller
+ browser/connect.js # dial-up + modem sound
+ browser/load-theater.js # progressive-image timing helpers
+ browser/year-boot.js # bootBrowserYear(year)
+ immersion/registry.js # FEATURES_BY_YEAR (one place)
+ immersion/boot.js # shared immersion loader
+ immersion/*.js # SRP features: amazon, google, excite, …
+ immersion/create.js # orchestrator only
+ config/<year>.js # browser data only
+ config/immersion-<year>.js
+ browser-<year>.js # thin: bootBrowserYear
+ immersion-<year>.js # thin: set year → boot.js
+years/<year>/ # shell + content HTML
+css/ # hub + chrome + period styles
+assets/ # period GIFs
+docs/ # DISK-TRUTH + year READ-FIRST + Board C lock
 scripts/smoke-production.py
 ```
 

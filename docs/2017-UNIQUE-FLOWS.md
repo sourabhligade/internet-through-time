@@ -65,7 +65,7 @@ A flow **fails** if any row is N.
 | **U13** | Guided 6 | Exact list in G7 | Extra leftover slugs in the `<ol>` |
 | **U14** | Chrome | Win10 + Chrome habit · EdgeHTML residual | XP gray · Chromium Edge as default |
 
-**Hard bans (2017-READ-FIRST):** TikTok US mass · Reels · IGTV · Meta · GDPR 25 May  · Chromium Edge · HomePod in stores · Spectre/Meltdown · Cambridge Analytica · Fortnite on Switch · Marshmello · iPhone XS as default · X rebrand · AirPower as shipped · invented brand pixels · WannaCry/NotPetya/KRACK **exploit** · Equifax **SSN** · invented Live Stats user · #MeToo as rooms · restore a git forest · dest-farm 2016.
+**Hard bans (2017-READ-FIRST):** TikTok US mass · Reels · IGTV · Meta · GDPR 25 May · Chromium Edge · HomePod in stores · Spectre/Meltdown · Cambridge Analytica · Fortnite on Switch · Marshmello · iPhone XS as default · X rebrand · AirPower as shipped · invented brand pixels · WannaCry/NotPetya/KRACK **exploit** · Equifax **SSN** · invented Live Stats user · #MeToo as rooms · restore a git forest · dest-farm 2016.
 
 ---
 

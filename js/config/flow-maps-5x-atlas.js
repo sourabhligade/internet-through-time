@@ -1039,11 +1039,6 @@
     },
     {
       "name": "Help",
-      "href": "sites/aolportal/index.html",
-      "do": "Real dest · 5× densify"
-    },
-    {
-      "name": "Help",
       "href": "sites/auctionweb/index.html",
       "do": "Real dest · 5× densify"
     },
@@ -1145,51 +1140,6 @@
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "Book being digital",
-      "href": "sites/amazon/book-being-digital.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Book contact",
-      "href": "sites/amazon/book-contact.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Book dove",
-      "href": "sites/amazon/book-dove.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Book microserfs",
-      "href": "sites/amazon/book-microserfs.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Cart",
-      "href": "sites/amazon/cart.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Checkout",
-      "href": "sites/amazon/checkout.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Ipo",
-      "href": "sites/amazon/ipo.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Order thanks",
-      "href": "sites/amazon/order-thanks.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Search",
-      "href": "sites/amazon/search.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
       "name": "Think different",
       "href": "sites/apple/think-different.html",
       "do": "Existing dest · 5× atlas"
@@ -1215,68 +1165,8 @@
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "9277",
-      "href": "sites/geocities/Area51/9277/index.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "4100",
-      "href": "sites/geocities/SunsetStrip/4100/index.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Mail",
-      "href": "sites/yahoo/mail.html",
-      "do": "Existing dest · reuse"
-    },
-    {
       "name": "News",
       "href": "sites/yahoo/index.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Recreation",
-      "href": "sites/yahoo/recreation.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Reference",
-      "href": "sites/yahoo/reference.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Regional",
-      "href": "sites/yahoo/regional.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Science",
-      "href": "sites/yahoo/science.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Search",
-      "href": "sites/yahoo/search.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Social science",
-      "href": "sites/yahoo/social_science.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Society",
-      "href": "sites/yahoo/society.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Whats cool",
-      "href": "sites/yahoo/whats-cool.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Whats new",
-      "href": "sites/yahoo/whats-new.html",
       "do": "Existing dest · reuse"
     },
     {
@@ -1317,11 +1207,6 @@
     {
       "name": "Help",
       "href": "sites/altavista/index.html",
-      "do": "Real dest · 5× densify"
-    },
-    {
-      "name": "Help",
-      "href": "sites/amazon/index.html",
       "do": "Real dest · 5× densify"
     },
     {
@@ -1467,11 +1352,6 @@
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "Think different",
-      "href": "sites/apple/think-different.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
       "name": "About",
       "href": "sites/bowienet/about.html",
       "do": "Existing dest · 5× atlas"
@@ -1480,16 +1360,6 @@
       "name": "About",
       "href": "sites/cdnow/about.html",
       "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "9277",
-      "href": "sites/geocities/Area51/9277/index.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "4100",
-      "href": "sites/geocities/SunsetStrip/4100/index.html",
-      "do": "Existing dest · reuse"
     },
     {
       "name": "Mail",
@@ -1579,11 +1449,6 @@
     {
       "name": "Help",
       "href": "sites/amazon/index.html",
-      "do": "Real dest · 5× densify"
-    },
-    {
-      "name": "Help",
-      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
@@ -1694,73 +1559,8 @@
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "9277",
-      "href": "sites/geocities/Area51/9277/index.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "4100",
-      "href": "sites/geocities/SunsetStrip/4100/index.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Mail",
-      "href": "sites/yahoo/mail.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "My",
-      "href": "sites/yahoo/my.html",
-      "do": "Existing dest · reuse"
-    },
-    {
       "name": "News",
       "href": "sites/yahoo/index.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Recreation",
-      "href": "sites/yahoo/recreation.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Reference",
-      "href": "sites/yahoo/reference.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Regional",
-      "href": "sites/yahoo/regional.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Science",
-      "href": "sites/yahoo/science.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Search",
-      "href": "sites/yahoo/search.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Social science",
-      "href": "sites/yahoo/social_science.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Society",
-      "href": "sites/yahoo/society.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Whats cool",
-      "href": "sites/yahoo/whats-cool.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Whats new",
-      "href": "sites/yahoo/whats-new.html",
       "do": "Existing dest · reuse"
     },
     {
@@ -1796,11 +1596,6 @@
     {
       "name": "Help",
       "href": "sites/amazon/index.html",
-      "do": "Real dest · 5× densify"
-    },
-    {
-      "name": "Help",
-      "href": "sites/apple/index.html",
       "do": "Real dest · 5× densify"
     },
     {
@@ -1911,73 +1706,8 @@
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "9277",
-      "href": "sites/geocities/Area51/9277/index.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "4100",
-      "href": "sites/geocities/SunsetStrip/4100/index.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Mail",
-      "href": "sites/yahoo/mail.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "My",
-      "href": "sites/yahoo/my.html",
-      "do": "Existing dest · reuse"
-    },
-    {
       "name": "News",
       "href": "sites/yahoo/index.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Recreation",
-      "href": "sites/yahoo/recreation.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Reference",
-      "href": "sites/yahoo/reference.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Regional",
-      "href": "sites/yahoo/regional.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Science",
-      "href": "sites/yahoo/science.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Search",
-      "href": "sites/yahoo/search.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Social science",
-      "href": "sites/yahoo/social_science.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Society",
-      "href": "sites/yahoo/society.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Whats cool",
-      "href": "sites/yahoo/whats-cool.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Whats new",
-      "href": "sites/yahoo/whats-new.html",
       "do": "Existing dest · reuse"
     },
     {
@@ -2033,31 +1763,6 @@
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "Faq",
-      "href": "sites/apple/ipod/faq.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Howto",
-      "href": "sites/apple/ipod/howto.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Specs",
-      "href": "sites/apple/ipod/specs.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "9277",
-      "href": "sites/geocities/Area51/9277/index.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "4100",
-      "href": "sites/geocities/SunsetStrip/4100/index.html",
-      "do": "Existing dest · reuse"
-    },
-    {
       "name": "Itunes note",
       "href": "sites/itunes-note.html",
       "do": "Existing dest · reuse"
@@ -2065,11 +1770,6 @@
     {
       "name": "Search",
       "href": "sites/napster/search.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Queue",
-      "href": "sites/netflix/queue.html",
       "do": "Existing dest · reuse"
     },
     {
@@ -2083,63 +1783,8 @@
       "do": "Existing dest · reuse"
     },
     {
-      "name": "Article nupedia",
-      "href": "sites/wikipedia/article-nupedia.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Article wiki",
-      "href": "sites/wikipedia/article-wiki.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Article www",
-      "href": "sites/wikipedia/article-www.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Community",
-      "href": "sites/wikipedia/community.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Edit",
-      "href": "sites/wikipedia/edit.html",
-      "do": "Existing dest · reuse"
-    },
-    {
       "name": "Help",
       "href": "sites/wikipedia/index.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "History",
-      "href": "sites/wikipedia/history.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Languages",
-      "href": "sites/wikipedia/languages.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Random",
-      "href": "sites/wikipedia/random.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Recent",
-      "href": "sites/wikipedia/recent.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Special whatlinks",
-      "href": "sites/wikipedia/special-whatlinks.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Welcome",
-      "href": "sites/wikipedia/welcome.html",
       "do": "Existing dest · reuse"
     },
     {
@@ -2153,63 +1798,8 @@
       "do": "Existing dest · reuse"
     },
     {
-      "name": "Mail",
-      "href": "sites/yahoo/mail.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "My",
-      "href": "sites/yahoo/my.html",
-      "do": "Existing dest · reuse"
-    },
-    {
       "name": "News",
       "href": "sites/yahoo/index.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Recreation",
-      "href": "sites/yahoo/recreation.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Reference",
-      "href": "sites/yahoo/reference.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Regional",
-      "href": "sites/yahoo/regional.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Science",
-      "href": "sites/yahoo/science.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Search",
-      "href": "sites/yahoo/search.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Social science",
-      "href": "sites/yahoo/social_science.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Society",
-      "href": "sites/yahoo/society.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Whats cool",
-      "href": "sites/yahoo/whats-cool.html",
-      "do": "Existing dest · reuse"
-    },
-    {
-      "name": "Whats new",
-      "href": "sites/yahoo/whats-new.html",
       "do": "Existing dest · reuse"
     },
     {
@@ -2262,23 +1852,8 @@
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "Ask",
-      "href": "sites/ask/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Browserchoice",
-      "href": "sites/browserchoice/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
       "name": "Chrome",
       "href": "sites/chrome/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Digg",
-      "href": "sites/digg/index.html",
       "do": "Existing dest · 5× atlas"
     },
     {
@@ -2317,11 +1892,6 @@
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "Ie9",
-      "href": "sites/ie9/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
       "name": "Imgur",
       "href": "sites/imgur/index.html",
       "do": "Existing dest · 5× atlas"
@@ -2352,11 +1922,6 @@
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "Pinterest",
-      "href": "sites/pinterest/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
       "name": "Famous",
       "href": "sites/playable/famous.html",
       "do": "Existing dest · 5× atlas"
@@ -2369,11 +1934,6 @@
     {
       "name": "Playable",
       "href": "sites/playable/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Quora",
-      "href": "sites/quora/index.html",
       "do": "Existing dest · 5× atlas"
     },
     {
@@ -2392,28 +1952,8 @@
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "Uber",
-      "href": "sites/uber/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
       "name": "Wave",
       "href": "sites/wave/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Wikileaks",
-      "href": "sites/wikileaks/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Windowsphone",
-      "href": "sites/windowsphone/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Yahoo",
-      "href": "sites/yahoo/index.html",
       "do": "Existing dest · 5× atlas"
     },
     {
@@ -2464,11 +2004,6 @@
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "Android",
-      "href": "sites/android/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
       "name": "Chrome",
       "href": "sites/chrome/index.html",
       "do": "Existing dest · 5× atlas"
@@ -2481,11 +2016,6 @@
     {
       "name": "Ipo",
       "href": "sites/facebook/ipo.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Google",
-      "href": "sites/google/index.html",
       "do": "Existing dest · 5× atlas"
     },
     {
@@ -2506,11 +2036,6 @@
     {
       "name": "Instagram",
       "href": "sites/instagram/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Ipad",
-      "href": "sites/ipad/index.html",
       "do": "Existing dest · 5× atlas"
     },
     {
@@ -2641,48 +2166,13 @@
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "Google",
-      "href": "sites/google/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
       "name": "Healthcare",
       "href": "sites/healthcare/index.html",
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "Status",
-      "href": "sites/healthcare/status.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Instagram",
-      "href": "sites/instagram/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
       "name": "Video",
       "href": "sites/instagram/video.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Ipad",
-      "href": "sites/ipad/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Mini2",
-      "href": "sites/ipad/mini2.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "5c",
-      "href": "sites/iphone/5c.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Iphone",
-      "href": "sites/iphone/index.html",
       "do": "Existing dest · 5× atlas"
     },
     {
@@ -2701,43 +2191,8 @@
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "Famous",
-      "href": "sites/playable/famous.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Game 2",
-      "href": "sites/playable/game-2.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Game 3",
-      "href": "sites/playable/game-3.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Game 4",
-      "href": "sites/playable/game-4.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Game 5",
-      "href": "sites/playable/game-5.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
       "name": "Game",
       "href": "sites/playable/game.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Playable",
-      "href": "sites/playable/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Snapchat",
-      "href": "sites/snapchat/index.html",
       "do": "Existing dest · 5× atlas"
     },
     {
@@ -2751,23 +2206,8 @@
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "Prism",
-      "href": "sites/snowden/prism.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Chat",
-      "href": "sites/telegram/chat.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
       "name": "Telegram",
       "href": "sites/telegram/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Tinder",
-      "href": "sites/tinder/index.html",
       "do": "Existing dest · 5× atlas"
     },
     {
@@ -2776,23 +2216,8 @@
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "Yahoo",
-      "href": "sites/tumblr/yahoo.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
       "name": "Twitter",
       "href": "sites/twitter/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Android",
-      "href": "sites/vine/android.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Vine",
-      "href": "sites/vine/index.html",
       "do": "Existing dest · 5× atlas"
     },
     {
@@ -2828,18 +2253,8 @@
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "Chrome",
-      "href": "sites/chrome/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
       "name": "Facebook",
       "href": "sites/facebook/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Google",
-      "href": "sites/google/index.html",
       "do": "Existing dest · 5× atlas"
     },
     {
@@ -2858,11 +2273,6 @@
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "Ios8",
-      "href": "sites/iphone/ios8.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
       "name": "Pay",
       "href": "sites/iphone/pay.html",
       "do": "Existing dest · 5× atlas"
@@ -2875,26 +2285,6 @@
     {
       "name": "Famous",
       "href": "sites/playable/famous.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Game 2",
-      "href": "sites/playable/game-2.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Game 3",
-      "href": "sites/playable/game-3.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Game 4",
-      "href": "sites/playable/game-4.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Game 5",
-      "href": "sites/playable/game-5.html",
       "do": "Existing dest · 5× atlas"
     },
     {
@@ -2938,143 +2328,6 @@
       "do": "Existing dest · 5× atlas"
     }
   ],
-  "2015": [
-    {
-      "name": "About",
-      "href": "pages/about.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Error 404",
-      "href": "pages/error/404.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Error Unreachable",
-      "href": "pages/error/unreachable.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Home",
-      "href": "pages/home.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Map",
-      "href": "pages/map.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Whats-New",
-      "href": "pages/whats-new.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Apple Watch",
-      "href": "sites/apple/watch.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Applemusic",
-      "href": "sites/applemusic/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Chrome",
-      "href": "sites/chrome/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Discord",
-      "href": "sites/discord/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Edge",
-      "href": "sites/edge/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Facebook",
-      "href": "sites/facebook/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Google",
-      "href": "sites/google/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Googlephotos",
-      "href": "sites/googlephotos/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Instagram",
-      "href": "sites/instagram/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Ios9",
-      "href": "sites/ios9/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Periscope",
-      "href": "sites/periscope/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Playable Famous",
-      "href": "sites/playable/famous.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Playable Game-2",
-      "href": "sites/playable/game-2.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Playable Game-3",
-      "href": "sites/playable/game-3.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Playable Game-4",
-      "href": "sites/playable/game-4.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Playable Game-5",
-      "href": "sites/playable/game-5.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Playable Game",
-      "href": "sites/playable/game.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Playable",
-      "href": "sites/playable/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Twitter",
-      "href": "sites/twitter/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Windows10",
-      "href": "sites/windows10/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Youtube",
-      "href": "sites/youtube/index.html",
-      "do": "Existing dest · 5× atlas"
-    }
-  ],
   "2016": [
     {
       "name": "About",
@@ -3107,11 +2360,6 @@
       "do": "Existing dest · 5× atlas"
     },
     {
-      "name": "Chrome",
-      "href": "sites/chrome/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
       "name": "Dyn",
       "href": "sites/dyn/index.html",
       "do": "Existing dest · 5× atlas"
@@ -3119,16 +2367,6 @@
     {
       "name": "Facebook Reactions",
       "href": "sites/facebook/reactions.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Google",
-      "href": "sites/google/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Instagram",
-      "href": "sites/instagram/index.html",
       "do": "Existing dest · 5× atlas"
     },
     {
@@ -3179,16 +2417,6 @@
     {
       "name": "Pokemongo",
       "href": "sites/pokemongo/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Twitter",
-      "href": "sites/twitter/index.html",
-      "do": "Existing dest · 5× atlas"
-    },
-    {
-      "name": "Whatsapp",
-      "href": "sites/whatsapp/index.html",
       "do": "Existing dest · 5× atlas"
     },
     {

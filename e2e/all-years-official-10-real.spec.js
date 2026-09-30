@@ -709,7 +709,7 @@ async function runDest(page, d) {
 
 test.describe("official 10 · every dest REAL", () => {
   test("every live official dest has a named whenKey and a file", () => {
-    // –2021 are React doors. Their official saves are in the year mvp specs.
+    // React doors are 2015 and 2017. Their official saves are in the year mvp specs.
     expect(DESTS.length, "official dests").toBeGreaterThanOrEqual(19 * 10);
     const empty = DESTS.filter((d) => !d.whenKey);
     expect(empty, "empty whenKeys").toEqual([]);

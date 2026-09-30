@@ -7,20 +7,20 @@
 ## Target layout
 
 ```
-years/YYYY/          dest HTML + pages (content only)
-assets/period/YYYY/  capture pixels or README-PIXELS failed-final
-css/period-YYYY.css  year look
-js/config/YYYY.js    rooms + urlMap (data)
-js/config/immersion-YYYY.js  feature list for that year (data)
-js/browser/          chrome: create, navigate, year-boot
-js/immersion/        dest I/O engines (one job each)
+years/YYYY/ dest HTML + pages (content only)
+assets/period/YYYY/ capture pixels or README-PIXELS failed-final
+css/period-YYYY.css year look
+js/config/YYYY.js rooms + urlMap (data)
+js/config/immersion-YYYY.js feature list for that year (data)
+js/browser/ chrome: create, navigate, year-boot
+js/immersion/ dest I/O engines (one job each)
 js/immersion/boot.js year-agnostic loader (reads data-itt-year or /years/YYYY/)
-ui/year/             Starting Point / shell (canonical)
-js/year-ui/          shims → ui/year/ (atlas still loads start-data here)
-e2e/                 Playwright
-  dest-true CI pack  16 specs in package.json test:e2e:dest-true
-  warehouse specs    leftover densify / leftover-999 — not CI
-docs/DISK-TRUTH.md   live dest-folder counts
+ui/year/ Starting Point / shell (canonical)
+js/year-ui/ shims → ui/year/ (atlas still loads start-data here)
+e2e/ Playwright
+ dest-true CI pack 16 specs in package.json test:e2e:dest-true
+ warehouse specs leftover densify / leftover-999 — not CI
+docs/DISK-TRUTH.md live dest-folder counts
 ```
 
 ## Dest I/O (do not add a third writer)

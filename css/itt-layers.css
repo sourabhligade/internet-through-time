@@ -238,9 +238,7 @@ html[data-itt-layer-band="f"] .itt-la-col {
   border-color: #ccc;
   font-family: "Segoe UI", Arial, sans-serif;
 }
-html[data-itt-year=""] .itt-la-col,
-html[data-itt-year=""] .itt-la-col,
-html[data-itt-year="2020"] .itt-la-col {
+html[data-itt-year=""] .itt-la-col {
   background: #fff;
   color: #202124;
   border: 1px solid #dadce0;
@@ -254,12 +252,8 @@ html[data-itt-year="2022"] .itt-la-col {
   border-radius: 8px;
   font-family: "Segoe UI", Arial, sans-serif;
 }
-html[data-itt-year=""] .itt-la-col .itt-la-hint,
-html[data-itt-year=""] .itt-la-col .itt-la-hint,
-html[data-itt-year="2020"] .itt-la-col .itt-la-hint { color: #5f6368; }
+html[data-itt-year=""] .itt-la-col .itt-la-hint { color: #5f6368; }
 html[data-itt-year=""] .itt-la-col a,
-html[data-itt-year=""] .itt-la-col a,
-html[data-itt-year="2020"] .itt-la-col a,
 html[data-itt-year="2022"] .itt-la-col a {
   color: #1967d2;
   text-decoration: none;
@@ -307,3 +301,4 @@ html[data-itt-layer-band="f"] [data-year-game].itt-game-cabinet {
   border: 1px solid #333;
   background: #151515;
 }
+

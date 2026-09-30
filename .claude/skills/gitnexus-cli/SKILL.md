@@ -19,11 +19,11 @@ node .gitnexus/run.cjs analyze
 
 Run from the project root. This parses all source files, builds the knowledge graph, writes it to `.gitnexus/`, and generates CLAUDE.md / AGENTS.md context files.
 
-| Flag           | Effect                                                           |
+| Flag | Effect |
 | -------------- | ---------------------------------------------------------------- |
-| `--watch`      | Keep a Git repository index current with serialized refreshes    |
-| `--debounce <ms>` | Watch quiet period before refresh (default: 300 ms)            |
-| `--force`      | Force full re-index even if up to date                           |
+| `--watch` | Keep a Git repository index current with serialized refreshes |
+| `--debounce <ms>` | Watch quiet period before refresh (default: 300 ms) |
+| `--force` | Force full re-index even if up to date |
 | `--embeddings` | Enable embedding generation for semantic search (off by default) |
 | `--drop-embeddings` | Drop existing embeddings on rebuild. By default, an `analyze` without `--embeddings` preserves them. |
 | `--pdg` | Build the program-dependence layers used by `explain` and `pdg_query` (taint, CDG, and REACHING_DEF). |
@@ -64,10 +64,10 @@ node .gitnexus/run.cjs clean
 
 Deletes the `.gitnexus/` directory and unregisters the repo from the global registry. Use before re-indexing if the index is corrupt or after removing GitNexus from a project.
 
-| Flag      | Effect                                            |
+| Flag | Effect |
 | --------- | ------------------------------------------------- |
-| `--force` | Skip confirmation prompt                          |
-| `--all`   | Clean all indexed repos, not just the current one |
+| `--force` | Skip confirmation prompt |
+| `--all` | Clean all indexed repos, not just the current one |
 
 ### wiki — Generate documentation from the graph
 
@@ -77,18 +77,18 @@ node .gitnexus/run.cjs wiki
 
 Generates repository documentation from the knowledge graph using an LLM. HTTP providers require an API key (saved to `~/.gitnexus/config.json` on first use). Local CLI providers (`--provider cursor|claude|codex|opencode|grok`) use your existing CLI login.
 
-| Flag                | Effect                                    |
+| Flag | Effect |
 | ------------------- | ----------------------------------------- |
-| `--force`           | Force full regeneration, also required to re-generate an existing wiki in a different language |
+| `--force` | Force full regeneration, also required to re-generate an existing wiki in a different language |
 | `--provider <name>` | LLM provider: minimax, openai, openrouter, azure, custom, cursor, claude, codex, opencode, or grok (default: minimax). Local CLIs (`cursor`, `claude`, `codex`, `opencode`, `grok`) use your existing CLI login and skip `--api-key`. |
-| `--model <model>`   | LLM model (default: MiniMax-M3)           |
-| `--base-url <url>`  | LLM API base URL                          |
-| `--api-key <key>`   | LLM API key                               |
-| `--concurrency <n>` | Parallel LLM calls (default: 3)           |
+| `--model <model>` | LLM model (default: MiniMax-M3) |
+| `--base-url <url>` | LLM API base URL |
+| `--api-key <key>` | LLM API key |
+| `--concurrency <n>` | Parallel LLM calls (default: 3) |
 | `--timeout <seconds>` | LLM request timeout in seconds (default: disabled) |
-| `--retries <n>`     | Max LLM retry attempts per request (default: 3) |
-| `--lang <lang>`     | Output language for generated documentation (e.g. english, chinese, spanish, japanese) |
-| `--gist`            | Publish wiki as a public GitHub Gist      |
+| `--retries <n>` | Max LLM retry attempts per request (default: 3) |
+| `--lang <lang>` | Output language for generated documentation (e.g. english, chinese, spanish, japanese) |
+| `--gist` | Publish wiki as a public GitHub Gist |
 
 ### list — Show all indexed repos
 

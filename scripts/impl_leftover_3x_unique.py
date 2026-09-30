@@ -21,8 +21,6 @@ STAR = {
     "2014": ("WhatsApp Install", "itt14-wa-install"),
     "2015": ("Periscope Go LIVE", "itt15-periscope"),
     "2016": ("IG Stories", "itt16-ig-stories"),
-    "": ("Disney+ Continue", "itt19-disneyplus"),
-    "2020": ("Zoom Leave", "itt20-zoom"),
 }
 
 # Leftover dests already on disk. First 3 / next 3 / last 3 = unique leftover-3×n.
@@ -62,21 +60,6 @@ UNIQUE = {
         "first": ["slack", "reddit", "netflix"],
         "second": ["youtube", "alphago", "assistant"],
         "third": ["dyn", "fblive", "moments"],
-    },
-    "": {
-        "first": ["reddit", "youtube", "wikipedia"],
-        "second": [],
-        "third": [],
-    },
-    "": {
-        "first": ["amazon", "facebook", "google"],
-        "second": ["instagram", "nyt", "oculusquest"],
-        "third": ["twitter", "yahoo", "youtube"],
-    },
-    "2020": {
-        "first": ["amazon", "facebook", "google"],
-        "second": ["instagram", "youtube", "slack"],
-        "third": ["reddit", "wikipedia", "nyt"],
     },
 }
 
@@ -512,9 +495,9 @@ def main() -> None:
         {"2010", "2012", "2014", "2015"},
     )
     rewrite_matrix(
-        ROOT / "e2e" / "2016--leftover-3x.matrix.json",
+        ROOT / "e2e" / "2016-leftover-3x.matrix.json",
         all_rows,
-        {"2016", "2017", "", ""},
+        {"2016", "2017"},
     )
     (ROOT / "e2e" / "leftover-3x-unique.matrix.json").write_text(
         json.dumps(all_rows, indent=2) + "\n", encoding="utf-8"

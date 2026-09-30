@@ -18,7 +18,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "scripts") not in sys.path:
     sys.path.insert(0, str(ROOT / "scripts"))
-from itt_gate import SHIP_YEARS  # noqa: E402
+from itt_gate import SHIP_YEARS, _YEARS  # noqa: E402
 
 FAILS: list[str] = []
 
@@ -141,7 +141,7 @@ def check_urlmaps() -> None:
     import json
     import subprocess
 
-    react_doors = {"2015", "2017", ""}
+    react_doors = {y for y, r in _YEARS.items() if r.get("kind") == "react"}
     for year in SHIP_YEARS:
         if year in react_doors:
             ok(f"{year} urlMap skipped (React door, no year HTML)")

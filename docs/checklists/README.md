@@ -27,7 +27,7 @@ Wiped, no checklist: , 2023–2025. 2005 is restored.
 - [2015](2015.md) — 10 official, 0 leftover, 0 pictures
 - [2016](2016.md) — 10 official, 0 leftover, 0 pictures
 - [2017](2017.md) — 10 official, 0 leftover, 0 pictures
-- [2020](2020.md) — 10 official, 0 leftover, 0 pictures
+- [](.md) — 10 official, 0 leftover, 0 pictures
 - [2007](2007.md) — 10 official, 0 leftover, 150 pictures
 - [2021](2021.md) — 10 official, 0 leftover, 0 pictures
 - [2022](2022.md) — 10 official, 0 leftover, 0 pictures

@@ -35,7 +35,7 @@
     },
     {
       "id": "care",
-      "label": "Care 2020 (trap)",
+      "label": "Care (trap)",
       "role": "trap",
       "trap": "Care is later"
     }

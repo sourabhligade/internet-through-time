@@ -12,8 +12,8 @@ const { killOverlays } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-const WIPED_YEARS = new Set(["2009", "2023", "2024", "2025"]);
-for (let y = 1994; y <= 2022; y++) { if (y === 2021) continue;
+const WIPED_YEARS = new Set(["2009", "2011", "2015", "2017", "2018", "2019", "2020", "2021", "2023", "2024", "2025"]);
+for (let y = 1994; y <= 2022; y++) {
   const s = String(y);
   if (WIPED_YEARS.has(s)) continue;
   YEARS.push(s);
@@ -136,8 +136,8 @@ async function completeMinute(root, page) {
   await root.locator("[data-mx-finish]").click({ force: true });
 }
 
-test.describe("H13 lean cabinets 2016–2017 — game-2…5 minute machines", () => {
-  for (const year of ["2016", "2017"]) {
+test.describe("H13 lean cabinets 2016 — game-2…5 minute machines", () => {
+  for (const year of ["2016"]) {
     for (const file of /** @type {const} */ ([
       "game-2.html",
       "game-3.html",

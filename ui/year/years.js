@@ -1277,63 +1277,6 @@
   "hasTaskbar": true,
   "maximized": true
 },
-  "2017": {
-  "title": "Chrome habit — 2017",
-  "css": [
-    "win95-netscape.css",
-    "chrome-habit.css",
-      "period-2017.css"],
-  "bodyClass": "year-2017 os-win10 browser-chrome-habit",
-  "boot": "browser-2017.js",
-  "dir": [
-    {
-      "go": "pages/home.html",
-      "label": "Start"
-    },
-    {
-      "go": "sites/iphone/x.html",
-      "label": "Face ID"
-    },
-    {
-      "go": "sites/fortnite/index.html",
-      "label": "Fortnite"
-    },
-    {
-      "go": "sites/twitter/280.html",
-      "label": "280"
-    },
-    {
-      "go": "sites/teams/index.html",
-      "label": "Teams"
-    },
-    {
-      "go": "pages/about.html",
-      "label": "About"
-    }
-  ],
-  "chrome": "2007",
-  "toolbar": "ie",
-  "family": "ie",
-  "location": "http://home.microsoft.com/intl/web2017/",
-  "prefHome": "http://home.microsoft.com/intl/web2017/",
-  "yearLabel": "2017 · Windows 10 mass · Chrome habit · EdgeHTML residual",
-  "windowTitle": "Welcome to the World Wide Web — Chrome habit",
-  "connectH2": "Network Connections",
-  "connectBtn": "Connect (always-on broadband)",
-  "skipBtn": "Skip connect",
-  "thesis": "Initializing network adapter... Connect (always-on broadband) Skip connect 2017 thesis: Face ID · free storm · tweets get twice as long. iPhone X / Face ID · Fortnite leftover · Twitter 280 · Teams GA.",
-  "openLoc": "Open Location:",
-  "aboutHtml": "<p><b>Chrome habit</b></p><p>Museum desktop. Educational historical Web exhibit.</p>",
-  "startBanner": "Windows<b>10</b>",
-  "taskBtn": "Chrome",
-  "icon": "e",
-  "aria": "Chrome habit",
-  "locLabel": "Address",
-  "bookmarksTitle": "Favorites",
-  "mailPh": "you@example.com",
-  "hasTaskbar": true,
-  "maximized": true
-},
   "2022": {
   "title": "Chrome habit — 2022",
   "css": [

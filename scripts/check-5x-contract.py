@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static 5× leftover contract — plaques, gold dests, 2020 panels, famous cabinets."""
+"""Static 5× leftover contract — plaques, gold dests, famous cabinets."""
 from __future__ import annotations
 
 import sys

@@ -1,10 +1,10 @@
 # 2005 rebuild plan
 
-Not ship law. `years/2005/` is wiped in the working tree. Git `20b7730ca` on `museum/1994-2020-lean` still has the year folder, the 20-stop trail, 105 leftover-2× link ids, and `assets/period/2005` (162 files: 143 GIF, 4 PNG, 3 JPG, 12 readme text files).
+Not ship law. `years/2005/` is wiped in the working tree. Git `20b7730ca` on `the working branch` still has the year folder, the 20-stop trail, 105 leftover-2× link ids, and `assets/period/2005` (162 files: 143 GIF, 4 PNG, 3 JPG, 12 readme text files).
 
 Do not invent dates, logos, or rooms. A stop whose source cell says **gap** is not ready to write.
 
-Neighbor density this year should match: **20 trail stops** (10 official + 10 leftover) and about **105** “also this year” links, each to a real folder. 2006 has 20 stops and 101 links.  has 20 stops and 109 links. Twenty stops plus 25 new names is not that rail.
+Neighbor density this year should match: **20 trail stops** (10 official + 10 leftover) and about **105** “also this year” links, each to a real folder. 2006 has 20 stops and 101 links. has 20 stops and 109 links. Twenty stops plus 25 new names is not that rail.
 
 An empty click stores nothing. A finished visit stores that stop’s `whenKey`. The star is YouTube upload, `itt05-yt-uploads`.
 
@@ -83,7 +83,7 @@ An empty click stores nothing. A finished visit stores that stop’s `whenKey`. 
 
 ## Phase 3 — Also-this-year rail
 
-**Goal:** About 105 links, matching 2006 (101) and  (109). Restore the 105 ids from Git first. Then add only the new 2005 openings below that are not already one of those ids.
+**Goal:** About 105 links, matching 2006 (101) and (109). Restore the 105 ids from Git first. Then add only the new 2005 openings below that are not already one of those ids.
 
 Restore first:
 
@@ -121,7 +121,7 @@ Add these 22 only if the slug is not already in the restored 105. YouTube’s 15
 
 - [ ] 3.5 New slugs that were not in the 105 each have a folder and an `index.html`
 - [ ] 3.6 Yahoo Music Unlimited is not built. The URL cell is empty
-- [ ] 3.7 Link count is at least 105 and in the same band as 2006 (101) and  (109)
+- [ ] 3.7 Link count is at least 105 and in the same band as 2006 (101) and (109)
 
 ---
 

@@ -25,7 +25,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from itt_gate import SHIP_YEARS, _NOT_SHIP  # noqa: E402
+from itt_gate import SHIP_YEARS, _NOT_SHIP, _YEARS  # noqa: E402
 
 KNOWN_YEARS = list(SHIP_YEARS)
 _WIPED = set(_NOT_SHIP)
@@ -118,24 +118,6 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/fortnite/index.html",
         "sites/twitter/280.html",
         "sites/teams/index.html",
-        "sites/playable/game.html"
-    ],
-    "": [
-        "pages/home.html",
-        "pages/about.html",
-        "sites/gdpr/index.html",
-        "sites/tiktok/fyp.html",
-        "sites/trust/index.html",
-        "sites/instagram/igtv.html",
-        "sites/playable/game.html"
-    ],
-    "": [
-        "pages/home.html",
-        "pages/about.html",
-        "sites/disneyplus/home.html",
-        "sites/tiktok/index.html",
-        "sites/arcade/index.html",
-        "sites/stadia/index.html",
         "sites/playable/game.html"
     ],
 }
@@ -247,11 +229,8 @@ def check_year(year: str, http_base: str | None) -> dict:
         if not research_ok and not on_disk:
             result["warnings"].append("research markers incomplete")
 
-    react_src = {
-        "2015": ROOT / "react/src/year2015.js",
-        "2017": ROOT / "react/src/year2017.js",
-        "2020": ROOT / "react/src/year2020.js",
-    }.get(year)
+    rec = _YEARS.get(year) or {}
+    react_src = ROOT / "react" / "src" / f"year{year}.js" if rec.get("kind") == "react" else None
     if not on_disk and react_src is not None:
         hub = (ROOT / "index.html").read_text(errors="ignore")
         door = "app/index.html#/year/{y}".format(y=year)

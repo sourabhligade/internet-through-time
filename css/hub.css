@@ -1367,18 +1367,6 @@ body {
 .year-card.y .year { color: #0d47a1; }
 .year-card.y .era-chip { background: #1565c0; color: #fff; }
 .year-card.y .motif { background: linear-gradient(135deg, #1565c0, #111); }
-.year-card.y { border-color: #e50914 #404040 #404040 #111; }
-.year-card.y .year-card-inner { background: linear-gradient(180deg, #1a1a1a 0%, #2a2a2a 55%); color: #eee; }
-.year-card.y .year { color: #fff; }
-.year-card.y .era-chip { background: #e50914; color: #fff; }
-.year-card.y .motif { background: linear-gradient(135deg, #e50914, #111); }
-.year-card.y .label, .year-card.y .scale { color: #ccc; }
-.year-card.y2020 { border-color: #0b5cff #404040 #404040 #111; }
-.year-card.y2020 .year-card-inner { background: linear-gradient(180deg, #0b1020 0%, #1a2332 55%); color: #eee; }
-.year-card.y2020 .year { color: #fff; }
-.year-card.y2020 .era-chip { background: #0b5cff; color: #fff; }
-.year-card.y2020 .motif { background: linear-gradient(135deg, #0b5cff, #c62828); }
-.year-card.y2020 .label, .year-card.y2020 .scale { color: #ccc; }
 .year-card.y2022 { border-color: #10a37f #404040 #404040 #111; }
 .year-card.y2022 .year-card-inner { background: linear-gradient(180deg, #f7f7f8 0%, #ececf1 55%); color: #111; }
 .year-card.y2022 .year { color: #0d0d0d; }
@@ -1457,3 +1445,4 @@ button.start-btn {
 .year-2013-start-card {
   margin-bottom: 10px;
 }
+

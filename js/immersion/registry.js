@@ -73,6 +73,20 @@
     return bootOnce;
   };
 
+  /** Save gate + year map. Lean years (year card leanBoot) load this plus EXTRA. */
+  var GATE = [
+    "immersion/shared.js",
+    "immersion/residual-placard.js",
+    "immersion/real-gate.js",
+    "immersion/residual-real.js",
+    "immersion/real-flow.js",
+    "immersion/year-extras-kit.js",
+    "immersion/official-dest-gold.js",
+    "immersion/official-verb.js",
+    "immersion/flow-map.js"
+  ];
+
+  /** Full boot for every HTML year that is not on the lean pilot. Order stays as it shipped. */
   var CORE = [
     "immersion/shared.js",
     "immersion/residual-placard.js",
@@ -345,17 +359,6 @@
       "immersion/year-2016-extras.js",
       "immersion/one-thing-machines.js"
     ],
-    "2017": [
-      "immersion/no-mock-gfc.js",
-      "immersion/no-mock-sopa.js",
-      "immersion/no-mock-uber.js",
-      "immersion/no-mock-wave.js",
-      "immersion/no-mock-fb-connect.js",
-      "immersion/no-mock-culture-ack.js",
-      "immersion/no-mock-common.js",
-      "immersion/year-2017-extras.js",
-      "immersion/one-thing-machines.js"
-    ],
     "2007": [
       "immersion/no-mock-gfc.js",
       "immersion/no-mock-sopa.js",
@@ -367,16 +370,6 @@
       "immersion/one-thing-machines.js"
     ],
 
-    "2020": [
-      "immersion/no-mock-gfc.js",
-      "immersion/no-mock-sopa.js",
-      "immersion/no-mock-uber.js",
-      "immersion/no-mock-wave.js",
-      "immersion/no-mock-fb-connect.js",
-      "immersion/no-mock-culture-ack.js",
-      "immersion/no-mock-common.js",
-      "immersion/one-thing-machines.js"
-    ],
     "2022": [
       "immersion/no-mock-gfc.js",
       "immersion/no-mock-sopa.js",
@@ -392,10 +385,13 @@
 
   ITT.IMMERSION_FEATURES_BY_YEAR = {};
   (function buildYearLists() {
+    var card = (ITT.YEAR_CARD && ITT.YEAR_CARD.years) || {};
     var y;
     for (y in EXTRA) {
       if (!Object.prototype.hasOwnProperty.call(EXTRA, y)) continue;
-      ITT.IMMERSION_FEATURES_BY_YEAR[y] = CORE.concat(EXTRA[y]);
+      var rec = card[y];
+      var base = rec && rec.leanBoot ? GATE : CORE;
+      ITT.IMMERSION_FEATURES_BY_YEAR[y] = base.concat(EXTRA[y]);
     }
   })();
 

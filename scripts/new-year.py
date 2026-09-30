@@ -6,6 +6,7 @@ Usage:
 """
 from __future__ import annotations
 
+import json
 import sys
 from pathlib import Path
 
@@ -30,6 +31,10 @@ def main() -> None:
     if len(sys.argv) != 2 or not sys.argv[1].isdigit() or len(sys.argv[1]) != 4:
         die("usage: python3 scripts/new-year.py YYYY")
     year = sys.argv[1]
+    card = json.loads((ROOT / "js" / "year-card.json").read_text(encoding="utf-8"))["years"]
+    rec = card.get(year)
+    if rec and rec.get("frozen"):
+        die(f"{year} is frozen — no new dest folders")
     ydir = ROOT / "years" / year
     if ydir.exists():
         die(f"years/{year}/ already exists — will not overwrite a live room")

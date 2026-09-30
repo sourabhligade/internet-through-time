@@ -18,10 +18,24 @@
   var PASSPORT_KEY = "itt-passport";
   var NIGHT_KEY = "itt-first-night";
   var VERSION = 1;
-  /** 2009 keeps a tree and a plaque. It is not a hub door. */
-  var BOARDED = { "2009": 1 };
-  /** No tree and no hub card. */
-  var WIPED = { "2011": 1, "2023": 1, "2024": 1, "2025": 1 };
+  function yearRec(year) {
+    var years = ITT.YEAR_CARD && ITT.YEAR_CARD.years;
+    if (!years) return null;
+    return years[String(year || "")] || null;
+  }
+
+  /** Filled from js/year-card.js. Boarded keeps a tree and a plaque. Absent has no door. */
+  var BOARDED = {};
+  var WIPED = {};
+  (function fillYearSets() {
+    var years = (ITT.YEAR_CARD && ITT.YEAR_CARD.years) || {};
+    var y;
+    for (y in years) {
+      if (!Object.prototype.hasOwnProperty.call(years, y)) continue;
+      if (years[y].kind === "boarded") BOARDED[y] = 1;
+      if (years[y].kind === "absent") WIPED[y] = 1;
+    }
+  })();
 
   /** First night · signature arc */
   var FIRST_NIGHT = [
@@ -180,8 +194,8 @@
       { path: "sites/instagram/stories.html", label: "Instagram Stories", blurb: "24h slide. Snapchat deserve the credit.", match: "/instagram/stories" },
       { path: "sites/pokemongo/index.html", label: "Pokémon GO", blurb: "Outdoor AR. Empty / trap never write. Not the chip.", match: "/pokemongo/" }),
     "2017": yearVisitTour("2017",
-      { path: "sites/iphone/x.html", label: "Face ID / iPhone X", blurb: "No Home. Look. Swipe up.", match: "/iphone/x" },
-      { path: "sites/fortnite/index.html", label: "Fortnite BR", blurb: "Free. 100. Drop leftover.", match: "/fortnite/" }),
+      { path: "app/index.html#/year/2017?stop=itt17-faceid", label: "Face ID / iPhone X", blurb: "No Home. Look. Swipe up.", match: "stop=itt17-faceid" },
+      { path: "app/index.html#/year/2017?stop=itt17-fortnite", label: "Fortnite BR", blurb: "Free. 100. Drop leftover.", match: "stop=itt17-fortnite" }),
     "2007": yearVisitTour("2007",
       { path: "sites/iphone/index.html", label: "iPhone Safari", blurb: "Empty / App Store / Chrome never write. Go does.", match: "/iphone/" },
       { path: "sites/streetview/index.html", label: "Street View leftover", blurb: "29 May leftover. Not the chip.", match: "/streetview/" }),
@@ -400,14 +414,19 @@
 
   function stepHref(step, trailId) {
     if (!step) return "/index.html#passport";
-    if (step.year === "2015" && step.path === "pages/about.html") {
-      return "/app/index.html#/year/2015?stop=about";
+    var rec = yearRec(step.year);
+    if (rec && rec.kind === "react") {
+      if (step.path && step.path.indexOf("#/year/") !== -1) {
+        return "/" + String(step.path).replace(/^\//, "");
+      }
+      var base = String(rec.href || ("app/index.html#/year/" + step.year)).replace(/^\//, "");
+      if (step.path === "pages/about.html") {
+        return "/" + base + (base.indexOf("?") < 0 ? "?stop=about" : "");
+      }
+      return "/" + base;
     }
     if (step.path && step.path.indexOf("#/year/") !== -1) {
       return "/" + String(step.path).replace(/^\//, "");
-    }
-    if ({ "2015": 1, "2017": 1 }[step.year]) {
-      return "/app/index.html#/year/" + step.year;
     }
     var tid = trailId || (getNight().trail || "first-night");
     return (
@@ -657,9 +676,25 @@
   }
 
   function isLiveYear(year) {
-    year = String(year || "");
-    if (!/^(199[4-9]|200[0-7]|2009|201[0-7]|2022)$/.test(year)) return false;
-    return !WIPED[year] && !BOARDED[year];
+    var rec = yearRec(year);
+    return !!(rec && (rec.kind === "html" || rec.kind === "react"));
+  }
+
+  function tourHref(year) {
+    var rec = yearRec(year);
+    if (rec && rec.kind === "react" && rec.href) {
+      var href = String(rec.href).replace(/^\//, "");
+      if (href.indexOf("?") < 0) href += "?stop=about";
+      return "/" + href;
+    }
+    return (
+      "/years/" +
+      year +
+      "/?trail=" +
+      year +
+      "-start&room=" +
+      encodeURIComponent("pages/about.html")
+    );
   }
 
   function escapeHtml(s) {
@@ -700,12 +735,8 @@
       html +=
         '<a role="listitem" class="' +
         cls +
-        '" href="/years/' +
-        yy +
-        '/?trail=' +
-        yy +
-        '-start&room=' +
-        encodeURIComponent("pages/about.html") +
+        '" href="' +
+        escapeHtml(tourHref(yy)) +
         '" title="' +
         c +
         " stamp" +
@@ -828,4 +859,23 @@
   };
 
   ITT.Passport = ITT.MuseumProgress;
+
+  function alignHubCards() {
+    if (!global.document || !global.document.querySelectorAll) return;
+    var cards = document.querySelectorAll("a.year-card[data-year]");
+    var i;
+    for (i = 0; i < cards.length; i++) {
+      var el = cards[i];
+      var rec = yearRec(el.getAttribute("data-year"));
+      if (!rec || !rec.href) continue;
+      if (el.getAttribute("href") !== rec.href) el.setAttribute("href", rec.href);
+    }
+  }
+  if (global.document) {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", alignHubCards);
+    } else {
+      alignHubCards();
+    }
+  }
 })(typeof window !== "undefined" ? window : this);

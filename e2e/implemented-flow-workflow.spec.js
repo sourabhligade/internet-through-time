@@ -1,5 +1,5 @@
 // @ts-check
-/** Visitor workflow for every 2017 and  stop we wired, plus the 2005 rail. */
+/** Visitor workflow for every 2017 stop we wired, plus the 2005 rail. */
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");

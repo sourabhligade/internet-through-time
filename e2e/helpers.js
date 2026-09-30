@@ -3,10 +3,20 @@
 const fs = require("fs");
 const path = require("path");
 
-/** Boarded from the visitor UI. 2009 is a plaque (tree stays). 2023+ have no tree. */
-const BOARDED_YEARS = new Set(["2009", "2023", "2024", "2025"]);
-/** Wiped years: no hub card, no HTML tree. */
-const WIPED_YEARS = new Set(["2011", "2023", "2024", "2025"]);
+/** Same record as js/year-card.json. Open doors are kind html or react. */
+const YEAR_CARD = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "..", "js", "year-card.json"), "utf8")
+).years;
+/** Plaque plus 2023–2025 (no tree). 2008 is absent and is not in this set. */
+const BOARDED_YEARS = new Set(
+  Object.keys(YEAR_CARD).filter(
+    (y) => YEAR_CARD[y].kind === "boarded" || (YEAR_CARD[y].kind === "absent" && Number(y) >= 2023)
+  )
+);
+/** Absent doors except 2008, which never had a hub card in this set. */
+const WIPED_YEARS = new Set(
+  Object.keys(YEAR_CARD).filter((y) => YEAR_CARD[y].kind === "absent" && y !== "2008")
+);
 
 /** True when years/YYYY/... is on disk (dest-lock deletes workshop dests). */
 function destOnDisk(href) {
@@ -60,9 +70,8 @@ async function completeReactStop(page, room) {
 }
 
 function isLiveYear(year) {
-  const y = String(year);
-  if (!/^(199[4-9]|200[0-7]|201[0234567]|2022)$/.test(y)) return false;
-  return !BOARDED_YEARS.has(y) && !WIPED_YEARS.has(y);
+  const rec = YEAR_CARD[String(year)];
+  return !!(rec && (rec.kind === "html" || rec.kind === "react"));
 }
 
 /**

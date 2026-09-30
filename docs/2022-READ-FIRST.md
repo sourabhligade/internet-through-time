@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-15  
 **Status:** **LIVE lean door.** Dest-true official 10 · dest folders **25**. Leftover-3× unique catalogs empty. Leftover-2× dest-farm dests not restored. Star `itt22-chatgpt`. Do not dest-farm. Hub **24 years open**.  
-**Parent (live):** 2021 ATT Ask `itt21-att`. **Child:** 2023 wiped. **2020 live lean** · Zoom Leave.  
+**Parent (live):** 2021 ATT Ask `itt21-att`. **Child:** 2023 wiped. · Zoom Leave.  
 **Clone chrome:** 2021 Win10 + Chrome habit.
 
 ## One line
@@ -34,7 +34,7 @@
 
 | Fact | Cite |
 |------|------|
-| ILS June websites | **no 2022 cell** · last cell  **1,630,322,579** |
+| ILS June websites | **no 2022 cell** · last cell **1,630,322,579** |
 | ITU 2022 | **5.3 billion users / 66%** (landing only — PDF not fetched in deep-research) |
 | ChatGPT | OpenAI [Introducing ChatGPT](https://openai.com/index/chatgpt/) **30 Nov 2022** · free research preview · Send writes · Plus / GPT-4 are 2023 |
 | Wordle | NYT [acquires Wordle](https://investors.nytco.com/news-and-events/press-releases/news-details/2022/The-New-York-Times-Company-acquires-Wordle/default.aspx) **31 Jan 2022** leftover · game public Oct 2021 |

@@ -6,24 +6,24 @@
 **Trail:** `js/config/flow-trails.js` year `"2014"`. Nine stops. There is no stop 10. Stop 9 returns to WhatsApp.
 **Star:** `itt14-wa-install` on `sites/whatsapp/index.html`.
 
-2014 is the first year in the React app. 2015 and later still use the generic shell.  stays wiped.
+2014 is the first year in the React app. 2015 and later still use the generic shell. stays wiped.
 
 ## Existing flow
 
 ```mermaid
 flowchart TD
-  hub["Hub card /years/2014/"] --> shell["years/2014/index.html"]
-  shell --> paint["ui/year/ui.js paints the desktop"]
-  paint --> frame["iframe pages/home.html"]
-  frame --> start["paintStart 2014"]
-  start --> six["Guided six"]
-  start --> nine["Official stops n 1 to 9"]
-  six --> room["Static room HTML"]
-  nine --> room
-  room --> boot["immersion-2014.js then boot.js"]
-  boot --> save["official-verb.js"]
-  save --> key["localStorage itt14-..."]
-  key --> next["Next chip nextHref"]
+ hub["Hub card /years/2014/"] --> shell["years/2014/index.html"]
+ shell --> paint["ui/year/ui.js paints the desktop"]
+ paint --> frame["iframe pages/home.html"]
+ frame --> start["paintStart 2014"]
+ start --> six["Guided six"]
+ start --> nine["Official stops n 1 to 9"]
+ six --> room["Static room HTML"]
+ nine --> room
+ room --> boot["immersion-2014.js then boot.js"]
+ boot --> save["official-verb.js"]
+ save --> key["localStorage itt14-..."]
+ key --> next["Next chip nextHref"]
 ```
 
 What each piece does:
@@ -60,11 +60,11 @@ There is no leftover trail after n 9. The guided six is a short door list. It is
 
 ```mermaid
 flowchart TD
-  reactHall["React hall :5173"] --> door["Route /year/2014"]
-  door --> rail["React rail: guided six and official nine"]
-  rail --> frame["iframe of the same static room"]
-  frame --> boot["Same immersion boot and official-verb"]
-  boot --> key["Same localStorage key"]
+ reactHall["React hall :5173"] --> door["Route /year/2014"]
+ door --> rail["React rail: guided six and official nine"]
+ rail --> frame["iframe of the same static room"]
+ frame --> boot["Same immersion boot and official-verb"]
+ boot --> key["Same localStorage key"]
 ```
 
 The React page owns the door and the nine save screens. About, the Starting Point, and the flow map still open the static page in the frame. The HTML rooms stay on disk for the hub.

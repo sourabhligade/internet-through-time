@@ -3,25 +3,25 @@
 Date: 2026-09-29. Checkable map of `docs/UI-FIX-LIST.md`. Status: passes A, B, and C were implemented the same day. The tables below are the findings from before that pass. Open the URLs on http://127.0.0.1:8080. Phone width means 390px.
 
 ```
-hub  (clean — year number only)
+hub (clean — year number only)
  │
  ├─ HTML door
- │    shell chrome
- │         ├─ 1994–2014     phone: directory hidden
- │         ├─ 1994 only     phone: 92px icon gutter, Help menu off-screen
- │         ├─ 2003 only     ten toolbar GIFs 404
- │         ├─ 2000–2004     coach says Starting Point is the year map
- │         ├─ 2010–2013     same wrong coach sentence
- │         ├─ 2016, 2022    directory stays (Win10 CSS)
- │         └─ 2022          address is still home.microsoft.com
- │    then the room
- │         ├─ 1994–2013, 2009, 2010, 2012   [failed-final] is visible
- │         └─ 2014, 2016, 2022              that line is clipped
+ │ shell chrome
+ │ ├─ 1994–2014 phone: directory hidden
+ │ ├─ 1994 only phone: 92px icon gutter, Help menu off-screen
+ │ ├─ 2003 only ten toolbar GIFs 404
+ │ ├─ 2000–2004 coach says Starting Point is the year map
+ │ ├─ 2010–2013 same wrong coach sentence
+ │ ├─ 2016, 2022 directory stays (Win10 CSS)
+ │ └─ 2022 address is still home.microsoft.com
+ │ then the room
+ │ ├─ 1994–2013, 2009, 2010, 2012 [failed-final] is visible
+ │ └─ 2014, 2016, 2022 that line is clipped
  │
- └─ React door  2015 and 2017
-      header shows the star name on every stop
-      rails take the top of a phone
-      stop shows [failed-final], the storage key, and the verb below the fold
+ └─ React door 2015 and 2017
+ header shows the star name on every stop
+ rails take the top of a phone
+ stop shows [failed-final], the storage key, and the verb below the fold
 ```
 
 Atlas and `/404.html` are side doors. They fit. They are not in the fix passes.
@@ -37,7 +37,7 @@ One CSS rule covers the HTML rooms. Do not edit the 4,268 pages.
 | `/app/index.html#/year/2017?stop=itt17-twitter-280` | Two `[failed-final]` lines and `itt17-twitter-280` | `react/src/OfficialStop.jsx` (the `<code>` and the failed paragraph), `react/src/ProductFace.jsx` (the brand-pixel line), `react/src/YearRail.jsx` (the same line on the start screen). |
 | Same URL, 390px | Header reads “2017 Face ID” while the title is Twitter 280. Tweet is below the fold. | Header is `YearRail.jsx`: Museum, All React years, year, `{star}`, `{label}`. Rails are `.rails` in `react/src/styles.css` (`max-height: 32vh` still measured 293px). The door is a `100dvh` grid, so the stop cannot grow the page. |
 | `/app/index.html#/year/2017?stop=itt17-switch` | “Fortnite-on-Switch is .” | `react/src/year2017.js` stop n=6 |
-| `?stop=itt17-musically` | “Not TikTok US mass ().” | same file, stop n=8 |
+| `?stop=itt17-musically` | “Not TikTok US mass .” | same file, stop n=8 |
 | `/app/index.html#/` | “2023–2025 stay wiped.” | `react/src/App.jsx` `Hall` |
 
 After the React edits, rebuild with `cd react && npm run build`. Do not hand-edit `app/assets/`.

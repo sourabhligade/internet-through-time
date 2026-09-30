@@ -245,18 +245,6 @@
  " <a href=\"map.html\">Year flow map</a> "
  ]
 },
- "2017": {
- "href": "/app/index.html#/year/2017",
- "label": "★ One-thing · iPhone X / Face ID REAL",
- "items": [
- " <a href=\"/app/index.html#/year/2017?stop=about\">About 2017</a> — 1,766,926,408 · ITU users · bans",
- " <a href=\"/app/index.html#/year/2017?stop=itt17-faceid\">Face ID / iPhone X</a> — no Home · swipe up",
- " <a href=\"/app/index.html#/year/2017?stop=itt17-fortnite\">Fortnite BR</a> — · free · 100",
- " <a href=\"/app/index.html#/year/2017?stop=itt17-twitter-280\">Twitter 280</a> — type past 140",
- " <a href=\"/app/index.html#/year/2017?stop=itt17-teams\">Teams GA</a> — 2016 was preview",
- " <a href=\"/app/index.html#/year/2017?stop=map\">Year flow map</a> "
- ]
-},
  
  "2007": {
  "href": "../sites/iphone/index.html",

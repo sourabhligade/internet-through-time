@@ -14,40 +14,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-LO3X_2020 = {
-    "amazon",
-    "facebook",
-    "google",
-    "instagram",
-    "youtube",
-    "slack",
-    "reddit",
-    "wikipedia",
-    "nyt",
-}
-
-A1_2020 = {
-    "airbnb",
-    "chrome",
-    "coinbase",
-    "edge",
-    "figma",
-    "github",
-    "hbomax",
-    "hulu",
-    "iphone",
-    "linkedin",
-    "notion",
-    "peacock",
-    "robinhood",
-    "spotify",
-    "twitch",
-    "twitter",
-    "uber",
-    "whatsapp",
-    "windows10",
-}
-
 
 def read(p: Path) -> str:
     return p.read_text(encoding="utf-8")
@@ -63,16 +29,6 @@ def drop_details_also(html: str) -> str:
     return re.sub(
         r"\n?<details class=\"itt-also-year\">[\s\S]*?</details>\n?",
         "\n",
-        html,
-        count=1,
-    )
-
-
-def drop_first_lo_section(html: str) -> str:
-    """Remove the first leftover-2× <section data-lo-panel> (2020 leftover dest shape)."""
-    return re.sub(
-        r"<section data-lo-panel=\"1\" data-itt-dest-true=\"1\" data-itt-year=\"2020\">[\s\S]*?</section>\n*",
-        "",
         html,
         count=1,
     )
@@ -148,46 +104,6 @@ def drop_lo_panels_not_official(html: str) -> str:
         html,
     )
     return html
-
-
-def pass_a_2020() -> None:
-    sites = ROOT / "years" / "2020" / "sites"
-    for slug in sorted(A1_2020):
-        p = sites / slug / "index.html"
-        t = read(p)
-        t = drop_details_also(t)
-        write(p, t)
-
-    for slug in sorted(LO3X_2020):
-        p = sites / slug / "index.html"
-        t = read(p)
-        t = drop_details_also(t)
-        t = drop_first_lo_section(t)
-        write(p, t)
-
-    play = sites / "playable" / "index.html"
-    t = read(play)
-    t = """<!DOCTYPE html>
-<html lang="en" data-itt-year="2020">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Year game leftover — 2020</title>
-<link rel="stylesheet" href="../../../../css/period-2020.css">
-</head>
-<body bgcolor="#f2f2f2" text="#111">
-<div id="itt-nav-slot" class="itt-nav-slot" aria-hidden="true"></div>
-<p class="itt-pixel-failed" data-itt-capture-cite style="font-size:11px;margin:8px 0;font-family:Arial,sans-serif">[failed-final] Period mark · CSS / wordmark only · no invented brand pixels</p>
-<div style="max-width:640px;margin:16px auto;font-family:Segoe UI,Arial,sans-serif;font-size:13px;line-height:1.45">
-<p class="crumb"><a href="../../pages/home.html">Starting Point</a> · <a href="game.html">Year game</a></p>
-<h1>Year game leftover</h1>
-<p>Official dest is <a href="game.html">Leave leftover</a>. This folder is not a leftover-2× warehouse.</p>
-</div>
-<script src="../../../../js/immersion-2020.js"></script>
-</body>
-</html>
-"""
-    write(play, t)
 
 
 def pass_c_2007_yahoo() -> None:
@@ -305,7 +221,6 @@ def prune_matrix() -> None:
     data = json.loads(p.read_text(encoding="utf-8"))
     dests = data["dests"]
     drop_years_d2 = {"2007", "2010", "2012", "2016", "2017"}
-    lo3x_2020_href = {f"sites/{s}/index.html" for s in LO3X_2020}
     keep = []
     dropped = 0
     for row in dests:
@@ -313,12 +228,6 @@ def prune_matrix() -> None:
         key = row.get("key") or ""
         href = row.get("href") or ""
         suffix = row.get("suffix") or ""
-        if y == "2020" and href in lo3x_2020_href:
-            dropped += 1
-            continue
-        if y == "2020" and href == "sites/playable/index.html":
-            dropped += 1
-            continue
         if y in drop_years_d2 and (
             suffix.endswith("-d2")
             or suffix.endswith("-lx-d2")
@@ -346,7 +255,6 @@ def prune_matrix() -> None:
 
 
 def main() -> None:
-    pass_a_2020()
     pass_b_2012_official()
     pass_c_2007_yahoo()
     pass_c_2010_amazon()

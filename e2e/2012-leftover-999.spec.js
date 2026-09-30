@@ -3,7 +3,7 @@
  * 2012 / 2016 / 2017 dest-true leftover-official.
  * The old 9+9+9 pop3x rails were duplicate flows and stay off the home page.
  * Trap / 0 ticks never write. Leftover never writes the year star.
- * 2020–2022 are live lean doors. 2023–2025 wiped.
+ * 2022 are live lean doors. 2023–2025 wiped.
  */
 const fs = require("fs");
 const path = require("path");

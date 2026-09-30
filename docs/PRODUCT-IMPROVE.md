@@ -32,7 +32,7 @@ The counts in this section are the 2026-09-13 snapshot. That snapshot is not the
 | Dest folders | 6,449 |
 | HTML pages | 9,588 |
 | e2e specs | 330 + 19 matrices |
-| Period assets | Strong 1994–2007. **2012 / 2013 / 2015 = 0 files.** 2010 = 4. –2009 thin. |
+| Period assets | Strong 1994–2007. **2012 / 2013 / 2015 = 0 files.** 2010 = 4. 2009 thin. |
 
 Density is harvest history, not “how big the year was”:
 
@@ -41,8 +41,8 @@ Density is harvest history, not “how big the year was”:
 | 2004 | 810 | Forest / warehouse |
 | 1999 / 2000 | 432 / 486 | Forest |
 | 2007 | 246 | Lean door (iPhone Safari) |
-|  / 2012 /  | 98 / 45 / 13 | Lean door (reverted to HEAD) |
-|  / 2021 | 165 / 294 | Lean + leftover dest-farm still on disk |
+| / 2012 / | 98 / 45 / 13 | Lean door (reverted to HEAD) |
+| / 2021 | 165 / 294 | Lean + leftover dest-farm still on disk |
 | 2009 | 78 | Boarded — visitor never enters |
 | 2022+ | — | Wiped |
 
@@ -76,7 +76,7 @@ Do these in order. Do not dest-farm to “look complete.” Do not add 2022+ to 
 
 A 9,588-page museum that is not on a URL is a private corpus.
 
-- [x] `museum/1994-2020-lean` pushed. The 2026-09-13 snapshot said 26 hub cards. The live hub is 22. 2022 is a live lean door.
+- [x] `the working branch` pushed. The 2026-09-13 snapshot said 26 hub cards. The live hub is 22. 2022 is a live lean door.
 - [x] Deploy configs: `netlify.toml` publish `.`, `vercel.json` trailingSlash + year page rewrites, `.github/workflows/pages.yml` is **workflow_dispatch only**. Repo root is the document root.
 - [ ] Unlock GitHub Actions billing or stop claiming CI (not verified this pass).
 - [ ] Enable GitHub Pages / Netlify / Vercel public URL — user credentials / Settings → Pages. Do not flip Pages on from this pass.
@@ -118,18 +118,18 @@ Nobody else does Yahoo 1994→2010 in that year’s chrome.
 
 ### Slice 5 — Dest-farm lock (remaining forests)
 
-Same pass as  / 2012 / : dests = `urlMap` ∩ disk, then delete the rest. Shared refs (flow-maps, leftover matrices, unique-manifest, READ-FIRST) in the **same** pass.
+Same pass as / 2012 / : dests = `urlMap` ∩ disk, then delete the rest. Shared refs (flow-maps, leftover matrices, unique-manifest, READ-FIRST) in the **same** pass.
 
 Order suggestion (largest leftover risk first):
 
 - [x] Snapshot called 2015 wiped and treated later years as React doors. Live law: 2015 and 2017 are the React doors. 2011 and 2018–2021 are absent.
-- [ ] 2004, , 1999–2003, 2005–2007, 2010
+- [ ] 2004, 1999–2003, 2005–2007, 2010
 - [ ] 2009 only after Slice 2
 
 ### Slice 6 — Optional, after the above
 
 - [x] Period-friction toggle (14.4k / wait for GIF). Not the default. Starting Point checkbox · `localStorage itt-period-friction` · `?slow=1`. Overlay then fades.
-- [x] One non-US dest per year where a mass product existed — **not dest-farmed as 28 new dests.** Famous that-year dests already on disk include Orkut 2004, WeChat  leftover dest KEEP, Douyin 2016 leftover dest KEEP. Do not add a dest-farm row per year.
+- [x] One non-US dest per year where a mass product existed — **not dest-farmed as 28 new dests.** Famous that-year dests already on disk include Orkut 2004, WeChat leftover dest KEEP, Douyin 2016 leftover dest KEEP. Do not add a dest-farm row per year.
 - [x] Shareable local postcard (“I finished 1995 Amazon SSL”) — localStorage only. Starting Point **Local postcard**. Empty never claims a finish.
 
 ---

@@ -1024,35 +1024,6 @@
       "btn": "Watch leftover"
     }
   ],
-  "2015": [
-    {
-      "id": "vine",
-      "name": "Vine leftover",
-      "title": "Vine leftover leftover — 2015",
-      "why": "2015 leftover-3× third. Unique dest. Not the chip.",
-      "verb": "6s leftover",
-      "ph": "vine",
-      "btn": "6s leftover"
-    },
-    {
-      "id": "echo",
-      "name": "Echo",
-      "title": "Echo leftover — 2015",
-      "why": "2015 leftover-3× third. Unique dest. Not the chip.",
-      "verb": "Alexa leftover",
-      "ph": "echo",
-      "btn": "Alexa leftover"
-    },
-    {
-      "id": "youtube",
-      "name": "YouTube",
-      "title": "YouTube leftover — 2015",
-      "why": "2015 leftover-3× third. Unique dest. Not the chip.",
-      "verb": "Watch leftover",
-      "ph": "youtube",
-      "btn": "Watch leftover"
-    }
-  ],
   "2016": [
     {
       "id": "dyn",
@@ -1080,137 +1051,6 @@
       "verb": "Moment leftover",
       "ph": "moments",
       "btn": "Moment leftover"
-    }
-  ],
-  "2017": [
-    {
-      "id": "fortnite",
-      "name": "Fortnite",
-      "title": "Fortnite leftover — 2017",
-      "why": "2017 leftover. Face ID is the chip. Vine is gone. No TikTok US mass.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "teams",
-      "name": "Teams",
-      "title": "Teams leftover — 2017",
-      "why": "2017 leftover. Face ID is the chip. Vine is gone. No TikTok US mass.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "switch",
-      "name": "Switch",
-      "title": "Switch leftover — 2017",
-      "why": "2017 leftover. Face ID is the chip. Vine is gone. No TikTok US mass.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "wannacry",
-      "name": "WannaCry",
-      "title": "WannaCry leftover — 2017",
-      "why": "2017 leftover. Face ID is the chip. Vine is gone. No TikTok US mass.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "musically",
-      "name": "musical.ly",
-      "title": "musical.ly leftover — 2017",
-      "why": "2017 leftover. Face ID is the chip. Vine is gone. No TikTok US mass.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "equifax",
-      "name": "Equifax",
-      "title": "Equifax leftover — 2017",
-      "why": "2017 leftover. Face ID is the chip. Vine is gone. No TikTok US mass.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "xboxonex",
-      "name": "Xbox",
-      "title": "Xbox leftover — 2017",
-      "why": "2017 leftover. Face ID is the chip. Vine is gone. No TikTok US mass.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "slack17",
-      "name": "Slack",
-      "title": "Slack leftover — 2017",
-      "why": "2017 leftover. Face ID is the chip. Vine is gone. No TikTok US mass.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    },
-    {
-      "id": "pixelbook",
-      "name": "Pixelbook",
-      "title": "Pixelbook leftover — 2017",
-      "why": "2017 leftover. Face ID is the chip. Vine is gone. No TikTok US mass.",
-      "verb": "Pick leftover then go.",
-      "ph": "leftover",
-      "btn": "Open leftover",
-      "bg": "#111",
-      "fg": "#fff"
-    }
-  ],
-  "": [],
-  "": [
-    {
-      "id": "twitter",
-      "name": "Twitter",
-      "title": "Twitter leftover — ",
-      "why": " leftover-3× third. Unique dest. Not the chip.",
-      "verb": "Tweet leftover",
-      "ph": "twitter",
-      "btn": "Tweet leftover"
-    },
-    {
-      "id": "yahoo",
-      "name": "Yahoo leftover",
-      "title": "Yahoo leftover leftover — ",
-      "why": " leftover-3× third. Unique dest. Not the chip.",
-      "verb": "Portal leftover",
-      "ph": "yahoo",
-      "btn": "Portal leftover"
-    },
-    {
-      "id": "youtube",
-      "name": "YouTube",
-      "title": "YouTube leftover — ",
-      "why": " leftover-3× third. Unique dest. Not the chip.",
-      "verb": "Watch leftover",
-      "ph": "youtube",
-      "btn": "Watch leftover"
     }
   ],
   "2001": [
@@ -1646,35 +1486,6 @@
       "verb": "Digg leftover",
       "ph": "digg",
       "btn": "Digg leftover"
-    }
-  ],
-  "2020": [
-    {
-      "id": "teams",
-      "name": "Teams",
-      "title": "Teams leftover",
-      "why": "2020 leftover third. Not the chip.",
-      "verb": "Join leftover.",
-      "ph": "teams leftover",
-      "btn": "Open leftover"
-    },
-    {
-      "id": "vine",
-      "name": "Vine",
-      "title": "Vine leftover",
-      "why": "2020 leftover third. Vine is not 2020 gold.",
-      "verb": "Loop leftover.",
-      "ph": "vine leftover",
-      "btn": "Open leftover"
-    },
-    {
-      "id": "tiktok",
-      "name": "TikTok",
-      "title": "TikTok leftover",
-      "why": "2020 leftover third. EO leftover.",
-      "verb": "EO leftover.",
-      "ph": "tiktok leftover",
-      "btn": "Open leftover"
     }
   ]
 }

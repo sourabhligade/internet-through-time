@@ -1,10 +1,10 @@
 # Flow plans, code, unimplemented work, unused files
 
 **Date:** 2026-09-14  
-**Tree:** `museum/1994-2020-lean` (working tree dirty; lean Starting Point + leftover fold in progress)  
+**Tree:** `the working branch` (working tree dirty; lean Starting Point + leftover fold in progress)  
 **Status:** Audit report. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) + `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Out of scope:** restoring wiped  and 2023–2025. 2022 is a live door. 2009 stays boarded. Leftover-3× catalogs are empty. This file is not ship law when it still describes 28 open years.
+**Out of scope:** restoring wiped and 2023–2025. 2022 is a live door. 2009 stays boarded. Leftover-3× catalogs are empty. This file is not ship law when it still describes 28 open years.
 
 This file is the full map from:
 
@@ -15,13 +15,13 @@ This file is the full map from:
 - what is unused and worth deleting
 - what looks unused but must stay
 
-It supersedes conversational summaries. It does not replace `DISK-TRUTH.md`. Live year list is 25 doors (2015 and  wiped).
+It supersedes conversational summaries. It does not replace `DISK-TRUTH.md`. Live year list is 25 doors (2015 and wiped).
 
 ---
 
 ## 0. Product law (so the rest is readable)
 
-The museum is year-locked rooms in period chrome. Hub is **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + –2022). **2009 boarded** (tree stays; year-shell is a plaque). **2015 wiped.** ** wiped.** **2023–2025 wiped.**
+The museum is year-locked rooms in period chrome. Hub is **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2022). **2009 boarded** (tree stays; year-shell is a plaque). **2015 wiped.** **2023–2025 wiped.**
 
 Visitor product (I/O):
 
@@ -34,7 +34,7 @@ Visitor product (I/O):
 - do not dest-farm to look complete
 - do not invent brand pixels; failed-final is honest
 
- was the lean-door research model (13 dests · GDPR Manage `itt18-gdpr`). The live tree has no `years/`. Do not restore it. 2017 and  dense dest-farms are the anti-model.
+ was the lean-door research model (13 dests · GDPR Manage `itt18-gdpr`). The live tree has no `years/`. Do not restore it. 2017 and dense dest-farms are the anti-model.
 
 ---
 
@@ -83,7 +83,7 @@ These lock stars and leftover names. They are not unique leftover-20 maps.
 | [`2013-READ-FIRST.md`](2013-READ-FIRST.md) | Star Vine `record.html` · leftover-3× Ask.fm / Whisper / YouTube |
 | [`-READ-FIRST.md`](-READ-FIRST.md) | Star GDPR · leftover TikTok FYP / Hearing / IGTV |
 | [`-READ-FIRST.md`](-READ-FIRST.md) | Star Disney+ Continue · leftover TikTok / Arcade / TV+ / Stadia |
-| [`2020-READ-FIRST.md`](2020-READ-FIRST.md) | Star Zoom Leave · leftover first 3 + third 3 · leftover-4× **0** |
+| [`-READ-FIRST.md`](-READ-FIRST.md) | Star Zoom Leave · leftover first 3 + third 3 · leftover-4× **0** |
 | [`2021-READ-FIRST.md`](2021-READ-FIRST.md) | Star ATT Ask · official 10 list · leftover-2× every dest |
 | [`2007-READ-FIRST.md`](2007-READ-FIRST.md) | **DONE** lean door · dest-true official 10 |
 | [`2005-READ-FIRST.md`](2005-READ-FIRST.md) | **Implemented** YouTube upload door |
@@ -121,7 +121,7 @@ UNDONE is explicit: there is **no** unique leftover dest map for any year except
 - `docs/2016-UNIQUE-FLOWS.md`
 - `docs/-UNIQUE-FLOWS.md`
 - `docs/-UNIQUE-FLOWS.md`
-- `docs/2020-UNIQUE-FLOWS.md`
+- `docs-UNIQUE-FLOWS.md`
 - `docs/2021-UNIQUE-FLOWS.md`
 
 Writing them is new work, not finishing an existing plan.
@@ -150,16 +150,15 @@ Writing them is new work, not finishing an existing plan.
 | 2007 | 46 | 330 | Lean door · dest-lock · leftover dests 46 |
 | 2009 | 78 | 149 | **Boarded** |
 | 2010 | 183 | 223 | Lean + dest-farm |
-|  | 98 | 183 | Lean door |
+| | 98 | 183 | Lean door |
 | 2012 | 45 | 95 | Lean |
 | 2013 | 54 | 62 | Lean door · Vine |
 | 2014 | 114 | 132 | Lean door · WhatsApp |
 | 2015 | 213 | 316 | Lean door + dest-farm |
 | 2016 | 64 | 82 | Lean (origin revert) + leftover dests |
 | 2017 | 222 | 258 | Lean door + dest-farm (30 unique + 193 workshop) |
-|  | 26 | 22 | **I/O model** lean door + leftover dests |
-|  | 165 | 202 | Lean door + dest-farm |
-| 2020 | 39 | 52 | Lean door · Zoom Leave |
+| | 26 | 22 | **I/O model** lean door + leftover dests |
+| | 165 | 202 | Lean door + dest-farm |
 | 2021 | 30 | 380 | Lean door · dest-lock · leftover dests 30 · leftover-3× unique **5** (do not dest-farm to 294) |
 | 2022 | 38 | — | **Live lean** · ChatGPT Send · leftover-3× unique **9** |
 | 2023–2025 | — | — | **Wiped** · no tree |
@@ -170,19 +169,19 @@ Total **11,336** dest rows. Workshop leftover-2×, not unique flows.
 
 | Year | Rows | Year | Rows |
 |------|-----:|------|-----:|
-| 1994 | 540 |  | 1131 |
+| 1994 | 540 | | 1131 |
 | 1995 | 486 | 2009 | 332 |
 | 1996 | 386 | 2010 | 317 |
-| 1997 | 670 |  | 313 |
+| 1997 | 670 | | 313 |
 | 1998 | 744 | 2012 | 314 |
 | 1999 | 802 | 2013 | 36 |
 | 2000 | 802 | 2014 | 96 |
 | 2001 | 194 | 2015 | 269 |
 | 2002 | 162 | 2016 | 223 |
 | 2003 | 174 | 2017 | 332 |
-| 2004 | 676 |  | 30 |
-| 2005 | 890 |  | 44 |
-| 2006 | 960 | 2020 | 30 |
+| 2004 | 676 | | 30 |
+| 2005 | 890 | | 44 |
+| 2006 | 960 | | 30 |
 | 2007 | 329 | 2021 | 54 |
 
 Missing dests in this matrix: **0** (issue #7 closed).
@@ -194,7 +193,7 @@ Missing dests in this matrix: **0** (issue #7 closed).
 | 1994–2002 | 22 / 27 / 50 / 36 / 30 / 52 / 68 / 82 / 93 |
 | 2003 | 11 |
 | 2004–2007 | 161 / 162 / 162 / 162 |
-| –2009 | 16 / 18 |
+| 2009 | 16 / 18 |
 | 2010 | 4 |
 | **–2021** | **0** |
 
@@ -239,16 +238,16 @@ Loaded via `js/immersion/registry.js` CORE and `js/immersion/boot.js`:
 | `js/immersion/year-2006-extras.js` | 2006 |
 | `js/immersion/year-2009-extras.js` | 2009 boarded |
 | `js/immersion/year-2010-extras.js` | 2010 |
-| `js/immersion/year--extras.js` |  |
+| `js/immersion/year--extras.js` | |
 | `js/immersion/year-2012-extras.js` | 2012 |
 | `js/immersion/year-2013-extras.js` | 2013 |
 | `js/immersion/year-2014-extras.js` | 2014 |
 | `js/immersion/year-2015-extras.js` | 2015 |
 | `js/immersion/year-2016-extras.js` | 2016 |
 | `js/immersion/year-2017-extras.js` | **2017 unique flows** (`bootUniqueFlow`, Animoji, iOS 11) |
-| `js/immersion/year--extras.js` |  |
-| `js/immersion/year--extras.js` |  |
-| `js/immersion/year-2020-extras.js` | 2020 |
+| `js/immersion/year--extras.js` | |
+| `js/immersion/year--extras.js` | |
+| `js/immersion/year--extras.js` | |
 
 **Missing:** `js/immersion/year-2021-extras.js`. 2021 EXTRA list is only `no-mock-common.js` + `one-thing-machines.js`.
 
@@ -386,16 +385,16 @@ Official dest leftover-2× `data-lo-panel` on those 10 official files: **0**.
 
 | # | Item | Plan source | Disk now | Do not |
 |---|------|-------------|----------|--------|
-| 1 | **Dest-farm lock (Phase H / GitHub #9)** | UNDONE §8.4 · PRODUCT-IMPROVE Slice 5 · 2017-UNIQUE-FLOWS Phase H · 2016-2021-IO L5/H | 2017=222 (193 workshop) · =165 · 2021=294 · 2015=213 · 2007=246 · forests 1999– · 2004=810 | Dest-farm to “look full.” Must be dests = `urlMap` ∩ disk **same commit** as leftover-official / matrices / READ-FIRST / sitemap |
+| 1 | **Dest-farm lock (Phase H / GitHub #9)** | UNDONE §8.4 · PRODUCT-IMPROVE Slice 5 · 2017-UNIQUE-FLOWS Phase H · 2016-2021-IO L5/H | 2017=222 (193 workshop) · =165 · 2021=294 · 2015=213 · 2007=246 · forests 1999 · 2004=810 | Dest-farm to “look full.” Must be dests = `urlMap` ∩ disk **same commit** as leftover-official / matrices / READ-FIRST / sitemap |
 | 2 | **Leftover dest leftover-3× dest face** | I7 / U9: leftover dest *is* leftover first paint on that dest | `itt-leftover-fold.css` + `leftover-official.js` `isDestTrueLeftoverFace` treat `data-itt-lo3x` as warehouse. Hidden unless `?deep=1`. `year-3x3-all` = 5 pass / 211 skip / 0 fail | Un-fold leftover-3× on **official** dests (`data-official-key`) |
-| 3 | **Unique leftover dest maps** | UNDONE §8.5 · 2013-IO-CRITERIA · 2016-2021-IO | Only 2017 has 30 dests + `year-2017-extras.js` + unique e2e. No maps for 2013–2016, –2021. No `year-2021-extras.js` | Count leftover-official 332 keys as unique flows |
+| 3 | **Unique leftover dest maps** | UNDONE §8.5 · 2013-IO-CRITERIA · 2016-2021-IO | Only 2017 has 30 dests + `year-2017-extras.js` + unique e2e. No maps for 2013–2016, 2021. No `year-2021-extras.js` | Count leftover-official 332 keys as unique flows |
 
 ### 4.2 Optional — not leftover unless chosen
 
 | Item | Plan | Notes |
 |------|------|-------|
-| Unique leftover-20 for 2013–2016, –2021 | None written | New plans required first |
-| Period assets –2021 | UNDONE §8.9 · IO L1 | 0 files. failed-final is the honest lock. Do not invent brand pixels |
+| Unique leftover-20 for 2013–2016, 2021 | None written | New plans required first |
+| Period assets 2021 | UNDONE §8.9 · IO L1 | 0 files. failed-final is the honest lock. Do not invent brand pixels |
 | 18 leftover 2017 capture cites | 2017-UNIQUE-FLOWS §7 | Left **failed-final on purpose** |
 | 2009 Like as a live door | PRODUCT-IMPROVE Slice 2B | Plaque (2A) is shipped |
 | Period-friction toggle | Slice 6 | 14.4k / wait for GIF. Not default |
@@ -408,7 +407,7 @@ Official dest leftover-2× `data-lo-panel` on those 10 official files: **0**.
 
 | Item | Evidence |
 |------|----------|
-| 24 years open · 2009 plaque · 2015 wiped ·  wiped · 2022 live lean · 2023–2025 wiped | Hub, `itt_gate.py`, DISK-TRUTH |
+| 24 years open · 2009 plaque · 2015 wiped · wiped · 2022 live lean · 2023–2025 wiped | Hub, `itt_gate.py`, DISK-TRUTH |
 | 2017 30 unique dests | Disk + 72/72 e2e |
 | Official dest leftover-2× panels = 0 on 2016–2021 official 10 (and sampled earlier official dests) | HTML `data-lo-panel` count |
 | Empty leftover save without field/pick/req/wait | `leftover-official.js` guard |
@@ -434,7 +433,7 @@ UNDONE §8.2 (“re-run year-3x3-all”) is **done** and should be struck in tha
 
 ## 5. E2e — full inventory and what it means
 
-`e2e/` has **332 specs + 19 JSON matrices + helpers.js = 352 files**. Playwright `test()` declarations ≈ **1,553**.
+`e2e/` has **332 specs + 19 JSON matrices + helpers.js = 352 files**. Playwright `test` declarations ≈ **1,553**.
 
 ### 5.1 Helpers and matrices (keep unless dest-farm lock)
 
@@ -448,7 +447,7 @@ UNDONE §8.2 (“re-run year-3x3-all”) is **done** and should be struck in tha
 - `e2e/2010-2015-leftover-3x.matrix.json`
 - `e2e/2010-2015-yes-leftover.matrix.json`
 - `e2e/2016--leftover-3x.matrix.json`
-- `e2e/-2022-leftover-3x.matrix.json`
+- `e2e/2022-leftover-3x.matrix.json`
 - `e2e/2x-links.matrix.json` — 11,923 rows
 - `e2e/3x-unique-manifest.json`
 - `e2e/5x-recheck.matrix.json`
@@ -482,7 +481,7 @@ These now assert **warehouse is not first paint**, not dest-farm strips on home:
 - `e2e/2006-2010-leftover-3x.spec.js`
 - `e2e/2010-2015-leftover-3x.spec.js`
 - `e2e/2016--leftover-3x.spec.js`
-- `e2e/-2022-leftover-3x.spec.js`
+- `e2e/2022-leftover-3x.spec.js`
 - `e2e/2014-densify.spec.js` (home leftover-6×)
 - `e2e/2007-densify.spec.js` (guided 6)
 - `e2e/follow-site.spec.js`
@@ -498,7 +497,7 @@ Verified Playwright (2026-09-14, this session):
 
 `year-3x3-all` skips are correct: leftover-3× on official dests is gold-only / folded.
 
-### 5.4 Empty stubs — 0 `test()` — delete
+### 5.4 Empty stubs — 0 `test` — delete
 
 | File | Lines | Why |
 |------|------:|-----|
@@ -534,7 +533,7 @@ Keep `e2e/2009-mvp.spec.js` (asserts plaque, no hub card).
 - `e2e/2016-unique-flows.spec.js`
 - `e2e/-unique-flows.spec.js`
 - `e2e/-unique-flows.spec.js`
-- `e2e/2020-unique-flows.spec.js`
+- `e2e-unique-flows.spec.js`
 - `e2e/2021-unique-flows.spec.js`
 
 ### 5.8 Every other spec (keep; many overlap official-10 / leftover dest-true)
@@ -632,7 +631,7 @@ So 2015–2021 load an orchestrator that iterates empty `ITT.NoMockParts`. Resid
 
 ### 8.2 `css/year-start-quiet.css`
 
-Only reference: `ui/year/start.js` `ensureCss()` checks `link[href*='year-start-quiet.css']` so it will not inject `start.css` if the old file were already linked. No HTML links it. Dead file.
+Only reference: `ui/year/start.js` `ensureCss` checks `link[href*='year-start-quiet.css']` so it will not inject `start.css` if the old file were already linked. No HTML links it. Dead file.
 
 ### 8.3 SOURCES.md missing links (33)
 

@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT / "scripts") not in sys.path:
     sys.path.insert(0, str(ROOT / "scripts"))
-from itt_gate import SHIP_YEARS, _BOARDED, _WIPED  # noqa: E402
+from itt_gate import SHIP_YEARS, _BOARDED, _WIPED, _YEARS  # noqa: E402
 failures: list[str] = []
 passes = 0
 
@@ -211,7 +211,7 @@ def test_sitemap_ship_years() -> None:
         if f"/years/{ys}/" in sm:
             fail("sitemap-years", f"{'boarded' if ys in _BOARDED else 'wiped'} {ys} still listed")
             return
-    react_doors = {"2015", "2017", ""}
+    react_doors = {y for y, r in _YEARS.items() if r.get("kind") == "react"}
     for ys in SHIP_YEARS:
         if ys in react_doors:
             if f"/app/index.html#/year/{ys}" not in sm:
@@ -261,6 +261,80 @@ def test_deploy_configs() -> None:
     ok("deploy-configs")
 
 
+def test_year_card() -> None:
+    """js/year-card.json is the door list. The browser copy and the hub must match it."""
+    card_path = ROOT / "js" / "year-card.json"
+    js_path = ROOT / "js" / "year-card.js"
+    if not card_path.is_file() or not js_path.is_file():
+        fail("year-card", "missing js/year-card.json or js/year-card.js")
+        return
+    card = json.loads(card_path.read_text(encoding="utf-8"))
+    js = js_path.read_text(encoding="utf-8")
+    if "ITT.YEAR_CARD = " not in js:
+        fail("year-card", "year-card.js does not assign ITT.YEAR_CARD")
+        return
+    raw = js.split("ITT.YEAR_CARD = ", 1)[1]
+    raw = raw.rsplit("\n})(", 1)[0].rstrip().rstrip(";").strip()
+    try:
+        embedded = json.loads(raw)
+    except json.JSONDecodeError as exc:
+        fail("year-card", f"year-card.js is not JSON: {exc}")
+        return
+    if embedded != card:
+        fail("year-card", "year-card.js does not match year-card.json")
+        return
+    years = card.get("years") or {}
+    open_years = [y for y, r in sorted(years.items()) if r.get("kind") in ("html", "react")]
+    if open_years != list(SHIP_YEARS):
+        fail("year-card", "SHIP_YEARS drifted from the card")
+        return
+    if len(open_years) != 22:
+        fail("year-card", f"expected 22 open doors, got {len(open_years)}")
+        return
+    frozen = [y for y, r in years.items() if r.get("frozen")]
+    if sorted(frozen) != [str(y) for y in range(1994, 2007)]:
+        fail("year-card", f"frozen years {sorted(frozen)}")
+        return
+    lean = sorted(y for y, r in years.items() if r.get("leanBoot"))
+    if lean != ["2014", "2016", "2022"]:
+        fail("year-card", f"leanBoot {lean}")
+        return
+    if years.get("2008", {}).get("kind") != "absent":
+        fail("year-card", "2008 must be absent")
+        return
+    if years.get("2009", {}).get("kind") != "boarded":
+        fail("year-card", "2009 must be boarded")
+        return
+    hub = read(ROOT / "index.html")
+    cards = []
+    for tag in re.findall(r'<a class="year-card available\b[^>]*>', hub):
+        href_m = re.search(r'href="([^"]+)"', tag)
+        year_m = re.search(r'data-year="(\d{4})"', tag)
+        if not href_m or not year_m:
+            fail("year-card", "hub card missing href or data-year")
+            return
+        cards.append((year_m.group(1), href_m.group(1)))
+    by_year = {year: href for year, href in cards}
+    if len(by_year) != len(cards):
+        fail("year-card", "duplicate hub year cards")
+        return
+    for year in open_years:
+        href = years[year].get("href")
+        if by_year.get(year) != href:
+            fail("year-card", f"hub {year} href {by_year.get(year)!r} != card {href!r}")
+            return
+    for year, href in by_year.items():
+        if year not in open_years:
+            fail("year-card", f"hub card for non-open year {year}")
+            return
+    for rel in ("index.html", "atlas/index.html", "js/browser-core.js", "js/immersion/boot.js"):
+        text = read(ROOT / rel)
+        if "year-card.js" not in text:
+            fail("year-card", f"{rel} does not load year-card.js")
+            return
+    ok("year-card")
+
+
 def test_gitignore_test_artifacts() -> None:
     gi = read(ROOT / ".gitignore")
     for needle in ("node_modules", "test-results", "playwright-report"):
@@ -286,6 +360,7 @@ def main() -> int:
         test_sitemap_ship_years,
         test_required_year_shells,
         test_deploy_configs,
+        test_year_card,
         test_gitignore_test_artifacts,
     ]
     for t in tests:

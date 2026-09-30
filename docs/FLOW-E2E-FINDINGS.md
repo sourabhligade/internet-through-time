@@ -48,7 +48,7 @@ A page with no save button and no mock text is an ordinary room. It is not a fai
 | Finished click wrote nothing | 21 |
 | Empty click wrote a save | 6 |
 
-The 92 missing links are all in 2015 (8), 2017 (30), 2020 (31), and 2021 (23). Those years are React doors. The trail still points at `years/YYYY/sites/…` files that are not on disk.
+The 92 missing links are all in 2015 (8), 2017 (30) (31), and 2021 (23). Those years are React doors. The trail still points at `years/YYYY/sites/…` files that are not on disk.
 
 ## Criteria, and what to do
 
@@ -151,13 +151,13 @@ These two pages contain mock copy (`coming soon`, `not built`, `this is a mock`,
 
 ## Remove from the HTML trail, point at the React door
 
-2015, 2017, 2020, and 2021 are React doors. `js/config/flow-trails.js` still lists HTML hrefs for them, and those files 404. For each stop, delete the `years/YYYY/…` href and use the React stop:
+2015, 2017, and 2021 are React doors. `js/config/flow-trails.js` still lists HTML hrefs for them, and those files 404. For each stop, delete the `years/YYYY/…` href and use the React stop:
 
 `http://127.0.0.1:8080/app/index.html#/year/YYYY?stop=WHEN_KEY`
 
 The React stops themselves were in the named-flow run. A React stop that already writes on a finished click stays. A React stop whose HTML twin 404s should not stay in the HTML trail.
 
-Counts of missing HTML trail links: 2015 has 8, 2017 has 30, 2020 has 31, 2021 has 23.
+Counts of missing HTML trail links: 2015 has 8, 2017 has 30 has 31, 2021 has 23.
 
 ## Leave alone
 

@@ -20,14 +20,14 @@ Do not dest-farm. Miss the cap rather than invent dests. Catalog + leftover dest
 
 ```mermaid
 flowchart TD
-  disk["429 dest folders on disk"] --> ban["Exclude official 10 + leftover trail 10 + live leftover-2× 69"]
-  ban --> room["340 dest-disjoint candidates"]
-  room --> cites["Year-true cites · dest on disk"]
-  cites --> add["KEEP ADD 69"]
-  live["Live leftover-2× 69"] --> after["After: 138 unique dest hrefs"]
-  add --> after
-  after --> gold["Official dest leftover-2× first paint 0"]
-  after --> star["Leftover never writes AIM star"]
+ disk["429 dest folders on disk"] --> ban["Exclude official 10 + leftover trail 10 + live leftover-2× 69"]
+ ban --> room["340 dest-disjoint candidates"]
+ room --> cites["Year-true cites · dest on disk"]
+ cites --> add["KEEP ADD 69"]
+ live["Live leftover-2× 69"] --> after["After: 138 unique dest hrefs"]
+ add --> after
+ after --> gold["Official dest leftover-2× first paint 0"]
+ after --> star["Leftover never writes AIM star"]
 ```
 
 ---

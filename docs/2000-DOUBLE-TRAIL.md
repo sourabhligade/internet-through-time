@@ -221,7 +221,7 @@ LVMH shop at eluxury.com. Shop opened 19 Jun 2000. A Wayback capture of the host
 The working draft, not a later genome browser anniversary.
 
 - Cite: https://www1.ucsc.edu/news_events/press_releases/archive/00-01/07-00/genome_sequence.htm — “July 6, 2000 … posted their results on a UCSC web site (http://genome.ucsc.edu).”
-- An earlier tools pass dropped the graphical browser because a 2020 anniversary page disagrees about that day. This row is the 6 Jul draft posting only.
+- An earlier tools pass dropped the graphical browser because a anniversary page disagrees about that day. This row is the 6 Jul draft posting only.
 - Gate: a search field. Empty does not write.
 - Not `pubmedcentral`. Not `britannica`.
 
@@ -290,7 +290,7 @@ Use the next reserve row only when a Phase 0 box fails. Do not add a reserve on 
 | `skatejam2000` | Museum card 1 Jun 2000. CDX earliest 200 is 20 Jun 2000. | 20 Jun 2000 | https://www.webdesignmuseum.org/gallery/skatejam2000-2000 | tick |
 | `theatlantic` | September 2000 directory beside the Napster essay. The magazine is older. Only the sidebar is the 2000 page. | Sep 2000 | https://www.theatlantic.com/past/docs/issues/2000/09/mannlinks.htm | tick |
 
-`quickhoney` stays off the reserve until a 2000 page, not the  Dallas Observer interview, is opened. `memento` the film site and `otnemem` must not both be built.
+`quickhoney` stays off the reserve until a 2000 page, not the Dallas Observer interview, is opened. `memento` the film site and `otnemem` must not both be built.
 
 ## Do not build
 

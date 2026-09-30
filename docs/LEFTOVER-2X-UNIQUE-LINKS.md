@@ -19,12 +19,12 @@ Leftover-2× rails are **hrefs**, not dest folders. Dest-true leftover dests (ke
 
 ```mermaid
 flowchart TD
-  NOW["Now: unique dests in leftover-2x rails"] --> STRIP["Strip duplicate hrefs"]
-  STRIP --> KEEP["2000-2006 KEEP original unique dests"]
-  KEEP --> ADD["Add dests already on disk, dest-disjoint, one dest once"]
-  ADD --> AFTER["After: 2x unique dests, cap = dests on disk"]
-  AFTER --> OFF["Official dest HTML leftover-2x first paint = 0"]
-  AFTER --> STAR["Leftover never writes the star"]
+ NOW["Now: unique dests in leftover-2x rails"] --> STRIP["Strip duplicate hrefs"]
+ STRIP --> KEEP["2000-2006 KEEP original unique dests"]
+ KEEP --> ADD["Add dests already on disk, dest-disjoint, one dest once"]
+ ADD --> AFTER["After: 2x unique dests, cap = dests on disk"]
+ AFTER --> OFF["Official dest HTML leftover-2x first paint = 0"]
+ AFTER --> STAR["Leftover never writes the star"]
 ```
 
 ---
@@ -61,15 +61,15 @@ Alphabetical dests-on-disk fill is **out**. ADD dests must be famous that year *
 
 | Source | URL | What it gave |
 |--------|-----|----------------|
-| Hosting.com June visits 1995–2022 | https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/ | Top 10 per year. Skip porn ranks (Xvideos –2022). |
+| Hosting.com June visits 1995–2022 | https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/ | Top 10 per year. Skip porn ranks (Xvideos 2022). |
 | Wikipedia Category Internet properties established in YEAR (API) | https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:Internet_properties_established_in_YEAR | **1994=89 · 1995=175 · 1996=221 · 1997=203 · 1998=189 · 1999=302 · 2000=265 · 2001=208 · 2002=177 · 2003=214**. 2004+ API 429 this pass. |
 | Board C leftover-2× harvest (implemented dests) | [`2x-harvest-c-1999.md`](2x-harvest-c-1999.md) … [`2x-harvest-c-2004.md`](2x-harvest-c-2004.md) | Cited dests **already on disk**. Use as leftover-2× unique dest **links**. |
 | ClickZ / Media Metrix | https://clickz.com/top-50-sites-of-december-2000/57100/ · Sep 1999 properties | 2000 Passport #5 · NBCi #12 · Blue Mountain #13 · Tripod #18 · iWon #20 |
 | Extra dest KEEP | [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md) | KEEP **166** dests with cites. Dest-disjoint leftover dest KEEP. |
 | Leftover dest KEEP lean-double | [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) | 2007/2010–2012/2014/2016//2021/2022 leftover dest KEEP dests on disk. |
-| Cybercultural year essays | https://cybercultural.com/p/internet-2010/ · 2007 ·  · 2012 | Year mass: iPhone 2007 · Instagram 2010 · Google+ · IG Android 2012 |
+| Cybercultural year essays | https://cybercultural.com/p/internet-2010/ · 2007 · 2012 | Year mass: iPhone 2007 · Instagram 2010 · Google+ · IG Android 2012 |
 | Web Design Museum year galleries | https://www.webdesignmuseum.org/gallery/year-1995 | Period exhibits. Failed-final stays honest. |
-| Wikipedia envelope (category sizes, not dest-farm quota) | https://en.wikipedia.org/wiki/Category:Internet_properties_by_year_of_establishment | 2007 **369** · 2010 **286** ·  **320** ·  **91** · 2021 **78** · 2022 **48** |
+| Wikipedia envelope (category sizes, not dest-farm quota) | https://en.wikipedia.org/wiki/Category:Internet_properties_by_year_of_establishment | 2007 **369** · 2010 **286** · **320** · **91** · 2021 **78** · 2022 **48** |
 
 ### Hosting.com June dests on disk, not in leftover-2× unique dests (ADD)
 
@@ -87,14 +87,13 @@ These dests are on disk and missing from leftover-2× unique dest rails. Cite: H
 | 2007 | `myspace` (#4) · `ebay` (#5) | — | Google Yahoo dest folders (dest-lock lean) |
 | 2013 | `facebook` (#2) · `youtube` (#3) · `twitter` (#6) | leftover-3× unique dests | Google Yahoo dest folders |
 | 2014 | `facebook` (#2) · `youtube` (#3) · `wikipedia` (#5) · `twitter` (#6) | leftover-3× unique dests | Google dest folder |
-|  | `youtube` (#2) · `wikipedia` (#5) · `instagram` (#8) | leftover-3× unique dests stay **3** | Google dest folder |
-| 2020 | `google` (#1) · `youtube` (#2) · `facebook` (#3) · `wikipedia` (#5) · `instagram` (#7) | leftover-3× unique dests | — |
+| | `youtube` (#2) · `wikipedia` (#5) · `instagram` (#8) | leftover-3× unique dests stay **3** | Google dest folder |
 | 2021 | `google` (#1) · `youtube` (#2) · `facebook` (#3) · `twitter` (#4) · `instagram` (#5) | leftover-3× unique dests stay **5** | Wikipedia dest folder |
 | 2022 | `google` (#1) · `youtube` (#2) · `facebook` (#3) · `twitter` (#6) · `wikipedia` (#7) · `reddit` (#8) · `instagram` (#9) | leftover-3× unique dests | — |
 
 2004–2006 Hosting.com top 10 dests that exist on disk are **already** in KEEP original unique dests. Do not duplicate them.
 
-Skip Hosting.com porn ranks (Xvideos –2022).
+Skip Hosting.com porn ranks (Xvideos 2022).
 
 ### Cited ADD — 1999–2004 (Board C harvest dests on disk)
 
@@ -132,16 +131,15 @@ Leftover dest KEEP dests already have dest-true leftover I/O. This pass only **h
 |------|-------------|------|
 | 2007 | leftover dest KEEP 14: `hackernews` `friendfeed` `netflix` `appletv` `ipodtouch` `justintv` `icanhas` `funnyordie` `pownce` `androidann` `gears` `iplayer` `amazonmp3` `safari3` · then Hosting.com `myspace` `ebay` | HN Oct 2007 · FriendFeed 2007 · Netflix Watch Instantly 2007 · Justin.tv 2007 · iPhone Safari is the star not leftover · Hosting.com June 2007 MySpace #4 eBay #5 |
 | 2010 | leftover dest KEEP: `flipboard` `minecraft` `hulu` `angry` `googlebuzz` `chromewebstore` `kinect` `cityville` `ibooks` | Cybercultural 2010 Instagram/iPad/Foursquare · Angry Birds Dec 2009 / 2010 mass · Minecraft 2010 · Hulu leftover |
-|  | leftover dest KEEP 19 + extra dest KEEP `gmusic` `pandora` | Google Music 16 Nov  (The Verge) · Pandora IPO Jun  (TechCrunch) · Snapchat  · iMessage iOS 5 |
+| | leftover dest KEEP 19 + extra dest KEEP `gmusic` `pandora` | Google Music 16 Nov (The Verge) · Pandora IPO Jun (TechCrunch) · Snapchat · iMessage iOS 5 |
 | 2012 | leftover dest KEEP: `tinder` `duolingo` `coursera` `udacity` `edx` `nexus7` `jellybean` `ios6` `googleplay` `kindlefirehd` `coinbase` | Cybercultural 2012 IG Android / Pinterest / Facebook IPO · Tinder 2012 · Coursera 2012 |
 | 2013 | extra dest KEEP 34 (first ADD) then leftover-3× unique dests as href targets | [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md) Bitcoin 2013 · Chromecast 24 Jul 2013 · DoorDash 2013 · Hosting.com Facebook #2 YouTube #3 Twitter #6 |
 | 2014 | leftover dest KEEP: `alibabaipo` `oculusfb` `inbox` `echo` `flappybird` `game2048` `ios8` · Hosting.com `facebook` `youtube` `wikipedia` `twitter` | Alibaba IPO 2014 · Flappy Bird 2014 · Echo Nov 2014 · Hosting.com June 2014 |
 | 2015 | extra dest KEEP 15 of 31: `androidpay` `applenews` `applepencil` `applewatch` `beats1` `dx12` `elcapitan` `ethereum` `fblive` `http2` `instantarticles` `ipadpro` + Hosting.com already in KEEP original | Apple Watch 24 Apr 2015 · AMP 7 Oct 2015 · Ethereum 2015 · [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md) |
 | 2016 | leftover dest KEEP 23 (douyin…letsencrypt) | IG Stories is star · Douyin 2016 · Houseparty Feb 2016 · Jio 5 Sep 2016 · Super Mario Run 15 Dec 2016 |
 | 2017 | leftover-20 unique dests not already in KEEP original leftover-2× unique dests: `botw` `cuphead` `gettingoverit` `hangoutschat` `hollowknight` `instagram17` `messengerday` + extra dest KEEP `cardano` `codww2` `destiny2` `galaxys8` … | [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) · extra dest KEEP 39 |
-|  | leftover dest KEEP 11 + leftover-3× unique dests as href targets (`reddit` `youtube` `wikipedia`) + Hosting.com `instagram` | GDPR is star · Google+ shutdown  · leftover-3× unique dests stay **3** |
-|  | extra dest KEEP 27 of 54: `apex` `airpods2` `android10` `applewatch5` … | Apex Legends 4 Feb  · Android 10 3 Sep  · extra dest KEEP 54 |
-| 2020 | leftover dest KEEP `clubhouse` · extra dest KEEP `hbomax` `peacock` · Hosting.com `google` `youtube` `facebook` `wikipedia` `instagram` | HBO Max 27 May 2020 · Peacock 15 Jul 2020 · Clubhouse 2020 |
+| | leftover dest KEEP 11 + leftover-3× unique dests as href targets (`reddit` `youtube` `wikipedia`) + Hosting.com `instagram` | GDPR is star · Google+ shutdown · leftover-3× unique dests stay **3** |
+| | extra dest KEEP 27 of 54: `apex` `airpods2` `android10` `applewatch5` … | Apex Legends 4 Feb · Android 10 3 Sep · extra dest KEEP 54 |
 | 2021 | leftover dest KEEP `nft` `coinbaseipo` `epicapple` · leftover-3× unique dests / Hosting.com as href targets | ATT Ask is star · Coinbase IPO Apr 2021 · leftover-3× unique dests stay **5** |
 | 2022 | leftover dest KEEP `temu` `stablediff` `midjourney` `dalle2` `ios16` `m2` · Hosting.com `google` `youtube` `facebook` `twitter` `wikipedia` `reddit` `instagram` | ChatGPT is star · Hosting.com Nov 2022 Reddit #8 |
 
@@ -157,7 +155,7 @@ Leftover dest KEEP dests already have dest-true leftover I/O. This pass only **h
 | 2005 | 105 | Hosting.com already in KEEP original | **MISS remainder** |
 | 2006 | 116 | Hosting.com already in KEEP original | **MISS remainder** |
 
-Do **not** fill MISS with `123-reg` / `a21-inc` / language-Wikipedia dumps. Next research pass: Board C–style harvest cites for 1994–1998 and 2005– leftover-2× unique dest **links** only (dests already on disk).
+Do **not** fill MISS with `123-reg` / `a21-inc` / language-Wikipedia dumps. Next research pass: Board C–style harvest cites for 1994–1998 and 2005 leftover-2× unique dest **links** only (dests already on disk).
 
 ---
 
@@ -185,16 +183,15 @@ When leftover-2× unique dests now = 0, after = min(2 × unique dest hrefs in th
 | 2007 | 33 | 0 | 0 | **33** | 33 |
 | 2009 | 78 | 62 | 132 | **stop boarded** | 0 |
 | 2010 | 29 | 19 | 29 | **29** | 10 |
-|  | 41 | 19 | 41 | **38** | 19 |
+| | 41 | 19 | 41 | **38** | 19 |
 | 2012 | 32 | 20 | 35 | **32** | 12 |
 | 2013 | 52 | 0 | 0 | **47** | 47 |
 | 2014 | 25 | 0 | 0 | **25** | 25 |
 | 2015 | 50 | 15 | 0 | **30** | 15 |
 | 2016 | 57 | 23 | 41 | **46** | 23 |
 | 2017 | 68 | 26 | 27 | **52** | 26 |
-|  | 24 | 0 | 0 | **20** | 20 |
-|  | 73 | 27 | 0 | **54** | 27 |
-| 2020 | 22 | 0 | 0 | **16** | 16 |
+| | 24 | 0 | 0 | **20** | 20 |
+| | 73 | 27 | 0 | **54** | 27 |
 | 2021 | 18 | 0 | 0 | **18** | 18 |
 | 2022 | 25 | 0 | 0 | **24** | 24 |
 | 2023–2025 | 0 | — | — | **stop wiped** | 0 |
@@ -263,7 +260,7 @@ Add **105**. Cap after **210**. Star `itt05-yt-uploads`.
 
 Add **116**. Cap after **232**. Star `itt06-tweets`.
 
-Forest ADD dests are **cited** dests already on disk (§2b). 1999–2004 Board C harvest fills the cap. 1994–1998 and 2005– MISS remainder rather than alphabetical dests.
+Forest ADD dests are **cited** dests already on disk (§2b). 1999–2004 Board C harvest fills the cap. 1994–1998 and 2005 MISS remainder rather than alphabetical dests.
 
 ---
 
@@ -327,7 +324,7 @@ KEEP original (19): `android` · `chrome` · `facebook` · `farmville` · `forms
 
 ADD leftover dest KEEP: `flipboard` · `minecraft` · `hulu` · `angry` · `googlebuzz` · `chromewebstore` · `kinect` · `cityville` · `ibooks` · then `playable`
 
-###  — after 38 · add 19 · star `itt11-gplus`
+### — after 38 · add 19 · star `itt11-gplus`
 
 KEEP original (19): `airbnb` · `chromebook` · `dropbox` · `facebook` · `gmusic` · `googleplus` · `icloud` · `instagram` · `ipad` · `iphone` · `kindlefire` · `linkedin` · `minecraft` · `pinterest` · `qwikster` · `spotify` · `twitch` · `twitter` · `youtube`
 
@@ -374,7 +371,7 @@ ADD leftover-20 unique dests / extra dest KEEP already on disk: `botw` · `carda
 
 Leftover-3× unique dests stay **0**. Unique leftover-20 dests stay 20 dest folders.
 
-###  — after 20 · add 20 · star `itt18-gdpr`
+### — after 20 · add 20 · star `itt18-gdpr`
 
 KEEP original leftover-2× unique dests: **none**. Leftover-3× unique dests stay **3**: `reddit` · `youtube` · `wikipedia`.
 
@@ -383,7 +380,7 @@ Then dests already on disk as href targets: `chrome` · `fortnite` · `gdpr` · 
 
 Official dest `gdpr` leftover-2× first paint stays **0**. GDPR may be an href target from leftover dest rails.
 
-###  — after 54 · add 27 · star `itt19-disneyplus`
+### — after 54 · add 27 · star `itt19-disneyplus`
 
 KEEP original (27): `airpodspro` · `amazon` · `applecard` · `appletv` · `arcade` · `area51` · `chrome` · `disneyplus` · `facebook` · `google` · `hidelikes` · `huawei` · `instagram` · `ios13` · `ipados` · `iphone` · `libra` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `wework` · `windows10` · `yahoo` · `youtube`
 
@@ -391,7 +388,7 @@ ADD extra dest KEEP already on disk: `airpods2` · `android10` · `anthem19` · 
 
 Do not dest-farm leftover dest leftover-20 dests. Dest folders stay **73**.
 
-### 2020 — after 16 · add 16 · star `itt20-zoom`
+### — after 16 · add 16 · star `itt20-zoom`
 
 KEEP original leftover-2× unique dests: **none**. leftover-3× unique dests stay **9**. leftover dest KEEP: `clubhouse`. Extra dest KEEP: `hbomax` · `peacock`.
 
@@ -422,7 +419,7 @@ Official dest leftover-2× first paint stays **0**. leftover-2× dest-farm dests
 - [ ] Do not dest-farm dest folders.
 - [ ] Do not grow leftover-3× unique past **=3** / **2021=5**.
 - [ ] Do not dest-farm leftover-20 except **2017**.
-- [ ] Do not dest-lock 2015–2020 / forests / 2013 /  / 2022 again.
+- [ ] Do not dest-lock 2015 / forests / 2013 / 2022 again.
 - [ ] Do not un-board **2009**.
 - [ ] Do not restore **2023–2025**.
 - [ ] Do not restore DROP dests.
@@ -452,21 +449,21 @@ Cites for year-true dests: Wikipedia Category Internet properties established in
 
 ```mermaid
 flowchart TD
-  HUB["Hub 127.0.0.1:8080"] --> LO["Leftover dest KEEP dest"]
-  LO --> RAIL["Also this year leftover-2x unique dests"]
-  RAIL --> L1["L1 one dest once · no itt-pop-more"]
-  RAIL --> CLICK["Click unique dest href"]
-  CLICK --> DISK["Dest folder on disk"]
-  LO --> DT["Dest-true leftover dest I/O"]
-  DT --> EMPTY["Empty never writes"]
-  DT --> TRAP["Trap never writes"]
-  DT --> KEEP["Keep writes leftover dest key not star"]
-  LO --> GOLD["Open official dest n=1"]
-  GOLD --> ZERO["Leftover-2x first paint 0"]
-  RAIL --> MISS["MISS remainder years unique dests less than 2x cap"]
+ HUB["Hub 127.0.0.1:8080"] --> LO["Leftover dest KEEP dest"]
+ LO --> RAIL["Also this year leftover-2x unique dests"]
+ RAIL --> L1["L1 one dest once · no itt-pop-more"]
+ RAIL --> CLICK["Click unique dest href"]
+ CLICK --> DISK["Dest folder on disk"]
+ LO --> DT["Dest-true leftover dest I/O"]
+ DT --> EMPTY["Empty never writes"]
+ DT --> TRAP["Trap never writes"]
+ DT --> KEEP["Keep writes leftover dest key not star"]
+ LO --> GOLD["Open official dest n=1"]
+ GOLD --> ZERO["Leftover-2x first paint 0"]
+ RAIL --> MISS["MISS remainder years unique dests less than 2x cap"]
 ```
 
-Live unique dests in leftover-2× rails (matrix): 1994 **88** · 1995 **98** · 1996 **94** · 1997 **62** · 1998 **46** · 1999 **86** · 2000 **92** · 2001 **51** · 2002 **38** · 2003 **36** · 2004 **160** · 2005 **105** · 2006 **116** · 2007 **33** ·  **124** · 2010 **29** ·  **38** · 2012 **32** · 2013 **47** · 2014 **25** · 2015 **29** · 2016 **42** · 2017 **49** ·  **20** ·  **52** · 2020 **16** · 2021 **18** · 2022 **24**. Catalog dests require `index.html`.
+Live unique dests in leftover-2× rails (matrix): 1994 **88** · 1995 **98** · 1996 **94** · 1997 **62** · 1998 **46** · 1999 **86** · 2000 **92** · 2001 **51** · 2002 **38** · 2003 **36** · 2004 **160** · 2005 **105** · 2006 **116** · 2007 **33** · **124** · 2010 **29** · **38** · 2012 **32** · 2013 **47** · 2014 **25** · 2015 **29** · 2016 **42** · 2017 **49** · **20** · **5216** · 2021 **18** · 2022 **24**. Catalog dests require `index.html`.
 
 ### A. Leftover dest leftover-2× unique dest rail (hrefs)
 
@@ -525,7 +522,7 @@ Unique dests in leftover-2× rails are **less than** 2× dests on disk. Pass = n
 |------|------|------|
 | **26** | http://127.0.0.1:8080/years/2009/ | Boarded plaque · not a playable door |
 | **27** | http://127.0.0.1:8080/years/2023/ | Wiped · no tree |
-| **28** | leftover-3× unique dests  stay **3** · 2021 stay **5** · leftover-20 only 2017 | L7 · L8 |
+| **28** | leftover-3× unique dests stay **3** · 2021 stay **5** · leftover-20 only 2017 | L7 · L8 |
 
 ### F. Automated
 
@@ -533,6 +530,6 @@ Unique dests in leftover-2× rails are **less than** 2× dests on disk. Pass = n
 npx playwright test e2e/leftover-2x-unique-links.spec.js
 ```
 
-Covers steps 1, 3, 11, 13, 14 (2000 zombo unique dests · 2007 leftover dest KEEP + iPhone leftover-2× 0 ·  leftover dest KEEP + GDPR leftover-2× 0 · 2022 leftover dest KEEP + ChatGPT leftover-2× 0 · catalog n).
+Covers steps 1, 3, 11, 13, 14 (2000 zombo unique dests · 2007 leftover dest KEEP + iPhone leftover-2× 0 · leftover dest KEEP + GDPR leftover-2× 0 · 2022 leftover dest KEEP + ChatGPT leftover-2× 0 · catalog n).
 
 Fail any step if leftover-2× unique dest rail appears on official dest HTML, leftover dest leftover-2× unique dest list has duplicate dest slugs, leftover dest leftover-2× unique dest list has `123-reg`, leftover dest leftover-2× unique dest rail carries `itt-pop-more`, leftover dest leftover-2× save writes the star, or dest folders were dest-farmed.

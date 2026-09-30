@@ -40,7 +40,6 @@ test.describe('hub + year shells', () => {
       /app\/index\.html#\/year\/2015/
     );
     await expect(page.locator('a.year-card[data-year=""]')).toHaveCount(0);
-    await expect(page.locator('a.year-card[data-year="2020"]')).toHaveCount(0);
     await expect(page.locator('a.year-card[data-year="2021"]')).toHaveCount(0);
     await expect(page.locator('a.year-card.available[href*="years/2022"]')).toBeVisible();
     await expect(page.locator('.year-card.locked.y2022')).toHaveCount(0);
@@ -49,7 +48,7 @@ test.describe('hub + year shells', () => {
     await expect(page.locator(".y2012 .era-chip")).toContainText("32 dests");
   });
 
-  test('passport treats 2020–2022 live and 2009 / 2023–2025 not live', async ({ page }) => {
+  test('passport treats 2022 live and 2009 / 2021 / 2023–2025 not live', async ({ page }) => {
     await page.goto('/');
     const live = await page.evaluate(() => {
       const mp = window.ITT && window.ITT.MuseumProgress;
@@ -59,7 +58,6 @@ test.describe('hub + year shells', () => {
         y2007: mp.isLiveYear('2007'),
         y2009: mp.isLiveYear('2009'),
         y: mp.isLiveYear(''),
-        y2020: mp.isLiveYear('2020'),
         y2021: mp.isLiveYear('2021'),
         y2022: mp.isLiveYear('2022'),
         y2023: mp.isLiveYear('2023'),
@@ -72,7 +70,6 @@ test.describe('hub + year shells', () => {
     expect(live.y2006).toBe(true);
     expect(live.y2007).toBe(true);
     expect(live.y2009).toBe(false);
-    expect(live.y2020).toBe(false);
     expect(live.y2021).toBe(false);
     expect(live.y2022).toBe(true);
     expect(live.y2023).toBe(false);
@@ -80,7 +77,7 @@ test.describe('hub + year shells', () => {
     expect(live.y2025).toBe(false);
     expect(live.y).toBe(false);
     expect(live.trails).toEqual(expect.arrayContaining(['2022-start']));
-    expect(live.trails).not.toEqual(expect.arrayContaining(['2020-start', '2021-start']));
+    expect(live.trails).not.toEqual(expect.arrayContaining(['2021-start']));
     expect(live.trails).not.toEqual(expect.arrayContaining(['-start']));
     expect(live.trails).not.toEqual(expect.arrayContaining(['2023-start', '2024-start', '2025-start']));
   });
@@ -131,7 +128,6 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.y2017')).toBeVisible();
     await expect(page.locator('.y')).toHaveCount(0);
     await expect(page.locator('.y')).toHaveCount(0);
-    await expect(page.locator('.y2020')).toHaveCount(0);
     await expect(page.locator('.y2021')).toHaveCount(0);
     await expect(page.locator('.y2022.available')).toBeVisible();
     await expect(page.locator('.y2022.locked')).toHaveCount(0);
@@ -144,7 +140,6 @@ test.describe('hub + year shells', () => {
     await page.goto('/');
     await expect(page.locator('.compare, .compare-late, .follow-site, #follow-a-site')).toHaveCount(0);
     await expect(page.locator('a.year-card.available[href*="years/2007"]')).toBeVisible();
-    await expect(page.locator('.compare-2020')).toHaveCount(0);
     await expect(page.locator('.compare-2022')).toHaveCount(0);
   });
 
@@ -160,7 +155,7 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('#decade-1990s a.year-card.available')).toHaveCount(6);
     await expect(page.locator('#decade-2000s a.year-card.available')).toHaveCount(8);
  await expect(page.locator('#decade-2010s a.year-card.available')).toHaveCount(7);
-    await expect(page.locator('#decade-2020s a.year-card.available')).toHaveCount(1);
+    await expect(page.locator('#decade-later a.year-card.available')).toHaveCount(1);
     await expect(page.locator('.year-gap')).toHaveCount(0);
     await expect(page.locator('#decade-2010s .year-gap[title="2015 off hub"]')).toHaveCount(0);
     await expect(page.locator('a.year-card[href*="years/2009"]')).toHaveCount(0);

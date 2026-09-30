@@ -793,34 +793,6 @@ test.describe('year-signature 2017', () => {
   });
 });
 
-test.describe('year-signature ', () => {
-  test('Disney+ Who’s watching REAL → itt19-disneyplus', async ({ page }) => {
-    skipIfWiped('');
-    await enterYear(page, '');
-    await page.evaluate(() => {
-      try {
-        localStorage.removeItem('itt19-disneyplus');
-      } catch (e) {
-        /* */
-      }
-    });
-    await goImmersion(page, '', 'sites/disneyplus/home.html');
-    const frame = contentFrame(page);
-    await frame.locator('[data-dplus-continue]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt19-disneyplus'))).toBeFalsy();
-    await frame.locator('[data-dplus-req]').nth(0).check();
-    await frame.locator('[data-dplus-req]').nth(1).check();
-    await frame.locator('[data-dplus-profile="adult"]').click();
-    await frame.locator('[data-dplus-add]').nth(0).click();
-    await frame.locator('[data-dplus-add]').nth(1).click();
-    await frame.locator('[data-dplus-profile="kids"]').click();
-    await frame.locator('[data-dplus-profile="adult"]').click();
-    await frame.locator('[data-dplus-continue]').click();
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt19-disneyplus')), { timeout: 8000 })
-      .toBeTruthy();
-  });
-});
 
 
 

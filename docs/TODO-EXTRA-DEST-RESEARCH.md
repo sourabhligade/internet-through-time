@@ -17,7 +17,7 @@ Default replacement: `path` (leftover dest KEEP Path). Override per row if resea
 |--:|-----------|-----------------|--------:|---------------|
 | 1 | `kickstarter` | `path` | **DROP** | Launch 2009 (kickstarter.com/about). Neighbor gold. Replace `path`. |
 
-##  — 9 extra dests
+## — 9 extra dests
 
 Pass 1. Dest-lock lean. 9 extra dests.
 
@@ -27,37 +27,37 @@ Default replacement: `snapchat` (leftover dest KEEP Snapchat). Override per row 
 |--:|-----------|-----------------|--------:|---------------|
 | 1 | `evernote` | `snapchat` | **DROP** | Evernote . Neighbor gold. Replace `snapchat`. |
 | 2 | `foursquare` | `snapchat` | **DROP** | 2010 official dest. Clone leftover dest. Replace `snapchat`. |
-| 3 | `gmusic` | `snapchat` | **KEEP** | Google Music store launch 16 Nov  (The Verge). Dest-disjoint. Extra dest stays. |
+| 3 | `gmusic` | `snapchat` | **KEEP** | Google Music store launch 16 Nov (The Verge). Dest-disjoint. Extra dest stays. |
 | 4 | `huffpost` | `snapchat` | **DROP** | HuffPost 2005. Neighbor gold. Replace `snapchat`. |
 | 5 | `imgur` | `snapchat` | **DROP** | 2010 official dest. Clone leftover dest. Replace `snapchat`. |
 | 6 | `kickstarter` | `snapchat` | **DROP** | Launch 2009. Neighbor gold. Replace `snapchat`. |
-| 7 | `pandora` | `snapchat` | **KEEP** | Pandora IPO 14–15 Jun  (TechCrunch). Dest-disjoint. Extra dest stays. |
+| 7 | `pandora` | `snapchat` | **KEEP** | Pandora IPO 14–15 Jun (TechCrunch). Dest-disjoint. Extra dest stays. |
 | 8 | `quora` | `snapchat` | **DROP** | Quora 2010. Neighbor gold. Replace `snapchat`. |
 | 9 | `vimeo` | `snapchat` | **DROP** | Vimeo 2004. Neighbor gold. Replace `snapchat`. |
 
-## 2016 — 13 extra dests
+## 2016 — nine names are already absent
 
-Pass 1. Dest-lock reverted. 13 leftover dest leftover.
+Pass 1. Dest-lock reverted. Four rooms stay on disk. The other nine have no folder.
 
-Default replacement: `mastodon` (leftover dest KEEP Mastodon). Override per row if research names a better dest-true dest on disk.
+The nine names with no folder are already absent. Do not point their labels at Mastodon.
 
-| # | Drop dest | Default replace | Verdict | Cite / reason |
-|--:|-----------|-----------------|--------:|---------------|
-| 1 | `e2eabout` | `mastodon` | **DROP** | Leftover dest leftover / about plaque. Replace `mastodon`. |
-| 2 | `houseparty` | `mastodon` | **KEEP** | Houseparty launch Feb 2016 (Wikipedia). Dest-disjoint. Extra dest stays. |
-| 3 | `inbox` | `mastodon` | **DROP** | Google Inbox 2014 leftover dest KEEP already. Clone leftover dest. Replace `mastodon`. |
-| 4 | `iphone7about` | `mastodon` | **DROP** | Official 2016 already has `iphone`. Clone leftover dest. Replace `mastodon`. |
-| 5 | `jio` | `mastodon` | **KEEP** | Reliance Jio 4G 5 Sep 2016 (The Guardian / Android Authority). Dest-disjoint. Extra dest stays. |
-| 6 | `linkedinms` | `mastodon` | **KEEP** | Microsoft acquires LinkedIn 13 Jun 2016, close 8 Dec 2016 (Microsoft blog). Dest-disjoint. Extra dest stays. |
-| 7 | `pogoabout` | `mastodon` | **DROP** | Leftover dest leftover. Replace `mastodon`. |
-| 8 | `reactabout` | `mastodon` | **DROP** | Leftover dest leftover. Replace `mastodon`. |
-| 9 | `smario` | `mastodon` | **KEEP** | Super Mario Run iOS 15 Dec 2016 (GameSpot / IGN). Dest-disjoint. Extra dest stays. |
-| 10 | `spectabout` | `mastodon` | **DROP** | Spectre is  official dest. Year-false leftover dest leftover. Replace `mastodon`. |
-| 11 | `storyabout` | `mastodon` | **DROP** | Leftover dest leftover. Replace `mastodon`. |
-| 12 | `superbowl` | `mastodon` | **DROP** | Leftover dest leftover. Replace `mastodon`. |
-| 13 | `win10end` | `mastodon` | **DROP** | Windows 10 is 2015/2016 official dest. Clone leftover dest. Replace `mastodon`. |
+| # | Name | Verdict | Cite / reason |
+|--:|------|--------:|---------------|
+| 1 | `e2eabout` | **ABSENT** | No folder. The label no longer opens Mastodon. |
+| 2 | `houseparty` | **KEEP** | Houseparty launch Feb 2016 (Wikipedia). Dest-disjoint. Extra dest stays. |
+| 3 | `inbox` | **ABSENT** | No 2016 folder. Google Inbox 2014 leftover dest KEEP already. |
+| 4 | `iphone7about` | **ABSENT** | No folder. Official 2016 already has `iphone`. |
+| 5 | `jio` | **KEEP** | Reliance Jio 4G 5 Sep 2016 (The Guardian / Android Authority). Dest-disjoint. Extra dest stays. |
+| 6 | `linkedinms` | **KEEP** | Microsoft acquires LinkedIn 13 Jun 2016, close 8 Dec 2016 (Microsoft blog). Dest-disjoint. Extra dest stays. |
+| 7 | `pogoabout` | **ABSENT** | No folder. Pokémon GO stays `pokemongo`. |
+| 8 | `reactabout` | **ABSENT** | No folder. Reactions stay on the Facebook room. |
+| 9 | `smario` | **KEEP** | Super Mario Run iOS 15 Dec 2016 (GameSpot / IGN). Dest-disjoint. Extra dest stays. |
+| 10 | `spectabout` | **ABSENT** | No folder. Spectacles stay `sites/snapchat/spectacles.html`. |
+| 11 | `storyabout` | **ABSENT** | No folder. |
+| 12 | `superbowl` | **ABSENT** | No folder. |
+| 13 | `win10end` | **ABSENT** | No folder. Windows 10 stays the official `windows10` room. |
 
-## 2020 — 19 extra dests
+## — 19 extra dests
 
 Pass 1. Dest-lock reverted. 19 leftover dest leftover. `iphone` here is leftover dest leftover, not Zoom.
 
@@ -65,20 +65,20 @@ Default replacement: `clubhouse` (leftover dest KEEP Clubhouse). Override per ro
 
 | # | Drop dest | Default replace | Verdict | Cite / reason |
 |--:|-----------|-----------------|--------:|---------------|
-| 1 | `airbnb` | `clubhouse` | **DROP** | Airbnb leftover dest leftover;  leftover dest KEEP `airbnb` other year. Replace `clubhouse`. |
+| 1 | `airbnb` | `clubhouse` | **DROP** | Airbnb leftover dest leftover; leftover dest KEEP `airbnb` other year. Replace `clubhouse`. |
 | 2 | `chrome` | `clubhouse` | **DROP** | Clone leftover dest leftover-3× unique / 2012 leftover-4× unique. Replace `clubhouse`. |
 | 3 | `coinbase` | `clubhouse` | **DROP** | 2012 leftover dest KEEP already. Clone leftover dest. Replace `clubhouse`. |
 | 4 | `edge` | `clubhouse` | **DROP** | 2015 official dest. Neighbor gold. Replace `clubhouse`. |
 | 5 | `figma` | `clubhouse` | **DROP** | Figma 2016 leftover dest KEEP already. Clone leftover dest. Replace `clubhouse`. |
-| 6 | `github` | `clubhouse` | **DROP** |  official dest. Neighbor gold. Replace `clubhouse`. |
-| 7 | `hbomax` | `clubhouse` | **KEEP** | HBO Max launch 27 May 2020 (WarnerMedia press). Dest-disjoint. Extra dest stays. |
+| 6 | `github` | `clubhouse` | **DROP** | official dest. Neighbor gold. Replace `clubhouse`. |
+| 7 | `hbomax` | `clubhouse` | **KEEP** | HBO Max launch 27 May (WarnerMedia press). Dest-disjoint. Extra dest stays. |
 | 8 | `hulu` | `clubhouse` | **DROP** | Leftover dest leftover / leftover-3× unique other years. Replace `clubhouse`. |
 | 9 | `iphone` | `clubhouse` | **DROP** | Leftover dest leftover, not Zoom. Clone leftover dest. Replace `clubhouse`. |
-| 10 | `linkedin` | `clubhouse` | **DROP** |  leftover-3× unique dest. Neighbor gold. Replace `clubhouse`. |
+| 10 | `linkedin` | `clubhouse` | **DROP** | leftover-3× unique dest. Neighbor gold. Replace `clubhouse`. |
 | 11 | `notion` | `clubhouse` | **DROP** | Leftover dest leftover. Replace `clubhouse`. |
-| 12 | `peacock` | `clubhouse` | **KEEP** | Peacock national launch 15 Jul 2020 (TechCrunch / Forbes). Dest-disjoint. Extra dest stays. |
+| 12 | `peacock` | `clubhouse` | **KEEP** | Peacock national launch 15 Jul (TechCrunch / Forbes). Dest-disjoint. Extra dest stays. |
 | 13 | `robinhood` | `clubhouse` | **DROP** | GameStop squeeze is 2021. Year-false leftover dest leftover. Replace `clubhouse`. |
-| 14 | `spotify` | `clubhouse` | **DROP** |  official dest. Neighbor gold. Replace `clubhouse`. |
+| 14 | `spotify` | `clubhouse` | **DROP** | official dest. Neighbor gold. Replace `clubhouse`. |
 | 15 | `twitch` | `clubhouse` | **DROP** | 2014 official dest. Neighbor gold. Replace `clubhouse`. |
 | 16 | `twitter` | `clubhouse` | **DROP** | Clone leftover dest leftover-3× unique / official other years. Replace `clubhouse`. |
 | 17 | `uber` | `clubhouse` | **DROP** | 2012 leftover-3× unique dest. Neighbor gold. Replace `clubhouse`. |
@@ -734,9 +734,9 @@ Default replacement: `slack17` (leftover-20 extra Slack). Override per row if re
 | 192 | `youtubetv` | `slack17` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 193 | `zoom17` | `slack17` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 
-##  — 151 extra dests
+## — 151 extra dests
 
-Pass 4 warehouse. Keep leftover-3× unique dests (`amazon` `facebook` `google` `twitter` `yahoo` `youtube`). `amazon19` drops. Dest-lock  again if applied.
+Pass 4 warehouse. Keep leftover-3× unique dests (`amazon` `facebook` `google` `twitter` `yahoo` `youtube`). `amazon19` drops. Dest-lock again if applied.
 
 Default replacement: `youtube` (leftover-3× unique YouTube). Override per row if research names a better dest-true dest on disk.
 
@@ -801,7 +801,7 @@ Default replacement: `youtube` (leftover-3× unique YouTube). Override per row i
 | 57 | `googletravel` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 58 | `gplus` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 59 | `hbomaxann` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 60 | `hidelikes` | `youtube` | **KEEP** | Instagram hide likes  tests. Dest-disjoint leftover-3× unique instagram. |
+| 60 | `hidelikes` | `youtube` | **KEEP** | Instagram hide likes tests. Dest-disjoint leftover-3× unique instagram. |
 | 61 | `hivesocial` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 62 | `hopin` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 63 | `huawei` | `youtube` | **KEEP** | US Huawei ban . |
@@ -834,7 +834,7 @@ Default replacement: `youtube` (leftover-3× unique YouTube). Override per row i
 | 90 | `microsoft` | `youtube` | **DROP** | Clone leftover dest of leftover-3× unique / official dest. leftover-3× unique amazon/facebook/google/twitter/yahoo/youtube stay. Replace youtube leftover-3× unique. |
 | 91 | `minecraftearth` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
 | 92 | `minecraftmonday` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |
-| 93 | `mixer19` | `youtube` | **KEEP** | Mixer shutdown 22 Jul  / Microsoft. |
+| 93 | `mixer19` | `youtube` | **KEEP** | Mixer shutdown 22 Jul / Microsoft. |
 | 94 | `mk11` | `youtube` | **KEEP** | Mortal Kombat 11 . |
 | 95 | `modernwarfare19` | `youtube` | **KEEP** | Call of Duty Modern Warfare . |
 | 96 | `msn` | `youtube` | **DROP** | Dest-farm leftover dest leftover. Not leftover dest KEEP. Not leftover-3× unique. Replace default leftover-3× unique / leftover-20 extra. |

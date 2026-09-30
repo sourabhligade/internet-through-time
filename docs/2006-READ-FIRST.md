@@ -30,7 +30,7 @@
 | Fact | Cite |
 |------|------|
 | ILS June **2006** | **85,507,314** sites · **+32%** · **1,160,335,280** users · **13.6** users/site · launched **Twttr** — [Internet Live Stats](https://www.internetlivestats.com/total-number-of-websites/) |
-| ILS June table | **ends **. 2006 cell is legal. Never invent –2025 June rows. |
+| ILS June table | **ends **. 2006 cell is legal. Never invent 2025 June rows. |
 | First tweet | **21 Mar 2006** · jack · *just setting up my twttr* |
 | Twitter public | **15 Jul 2006** |
 | News Feed | **5 Sep 2006** · Facebook |

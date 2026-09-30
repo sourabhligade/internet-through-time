@@ -46,49 +46,36 @@
       "html[data-itt-start-standalone],html[data-itt-start-standalone] body.itt-start-page{" +
       "height:auto!important;min-height:0!important}" +
       "html[data-itt-year=\"2015\"],html[data-itt-year=\"2016\"],html[data-itt-year=\"2017\"]," +
-      "html[data-itt-year=\"\"],html[data-itt-year=\"\"],html[data-itt-year=\"2020\"]," +
       "html[data-itt-year=\"2022\"]{" +
       "color-scheme:only light!important;background:#f8f9fa!important}" +
       "html[data-itt-year=\"2015\"] body.itt-start-page,html[data-itt-year=\"2016\"] body.itt-start-page," +
-      "html[data-itt-year=\"2017\"] body.itt-start-page,html[data-itt-year=\"\"] body.itt-start-page," +
-      "html[data-itt-year=\"\"] body.itt-start-page,html[data-itt-year=\"2020\"] body.itt-start-page," +
+      "html[data-itt-year=\"2017\"] body.itt-start-page," +
       "body.itt-start-page,html[data-itt-year=\"2022\"] body.itt-start-page{" +
       "background:#f8f9fa!important;color:#202124!important;" +
       "font-family:\"Segoe UI\",\"Helvetica Neue\",Arial,sans-serif!important;" +
       "color-scheme:only light!important}" +
       "html[data-itt-year=\"2015\"] #itt-exhibit-nav,html[data-itt-year=\"2016\"] #itt-exhibit-nav," +
-      "html[data-itt-year=\"2017\"] #itt-exhibit-nav,html[data-itt-year=\"\"] #itt-exhibit-nav," +
-      "html[data-itt-year=\"\"] #itt-exhibit-nav,html[data-itt-year=\"2020\"] #itt-exhibit-nav," +
+      "html[data-itt-year=\"2017\"] #itt-exhibit-nav," +
       "#itt-exhibit-nav,html[data-itt-year=\"2022\"] #itt-exhibit-nav," +
       "html[data-itt-year=\"2015\"] body.itt-start-page .itt-nav-slot," +
       "html[data-itt-year=\"2016\"] body.itt-start-page .itt-nav-slot," +
       "html[data-itt-year=\"2017\"] body.itt-start-page .itt-nav-slot," +
-      "html[data-itt-year=\"\"] body.itt-start-page .itt-nav-slot," +
-      "html[data-itt-year=\"\"] body.itt-start-page .itt-nav-slot," +
-      "html[data-itt-year=\"2020\"] body.itt-start-page .itt-nav-slot," +
       "body.itt-start-page .itt-nav-slot," +
       "html[data-itt-year=\"2022\"] body.itt-start-page .itt-nav-slot{display:none!important}" +
       "html[data-itt-year=\"2015\"] body.itt-start-page .itt-year-star a," +
       "html[data-itt-year=\"2016\"] body.itt-start-page .itt-year-star a," +
       "html[data-itt-year=\"2017\"] body.itt-start-page .itt-year-star a," +
-      "html[data-itt-year=\"\"] body.itt-start-page .itt-year-star a," +
-      "html[data-itt-year=\"\"] body.itt-start-page .itt-year-star a," +
-      "html[data-itt-year=\"2020\"] body.itt-start-page .itt-year-star a," +
       "body.itt-start-page .itt-year-star a," +
       "html[data-itt-year=\"2022\"] body.itt-start-page .itt-year-star a," +
       "html[data-itt-year=\"2015\"] .ott-guided,html[data-itt-year=\"2015\"] .ott-flows," +
       "html[data-itt-year=\"2016\"] .ott-guided,html[data-itt-year=\"2016\"] .ott-flows," +
       "html[data-itt-year=\"2017\"] .ott-guided,html[data-itt-year=\"2017\"] .ott-flows," +
-      "html[data-itt-year=\"\"] .ott-guided,html[data-itt-year=\"\"] .ott-flows," +
-      "html[data-itt-year=\"\"] .ott-guided,html[data-itt-year=\"\"] .ott-flows," +
-      "html[data-itt-year=\"2020\"] .ott-guided,html[data-itt-year=\"2020\"] .ott-flows," +
       ".ott-guided,.ott-flows," +
       "html[data-itt-year=\"2022\"] .ott-guided,html[data-itt-year=\"2022\"] .ott-flows{" +
       "background:#fff!important;color:#202124!important;border:1px solid #dadce0!important;" +
       "border-radius:8px!important;box-shadow:0 1px 2px rgba(60,64,67,.12)!important}" +
       "html[data-itt-year=\"2015\"] body.itt-start-page a,html[data-itt-year=\"2016\"] body.itt-start-page a," +
-      "html[data-itt-year=\"2017\"] body.itt-start-page a,html[data-itt-year=\"\"] body.itt-start-page a," +
-      "html[data-itt-year=\"\"] body.itt-start-page a,html[data-itt-year=\"2020\"] body.itt-start-page a," +
+      "html[data-itt-year=\"2017\"] body.itt-start-page a," +
       "body.itt-start-page a,html[data-itt-year=\"2022\"] body.itt-start-page a{" +
       "color:#1967d2!important;text-decoration:none!important}" +
       "#itt-year-start,.ott-guided,.ott-flows,.itt-layer-assess,#itt-first-night-bar," +
@@ -682,3 +669,4 @@
     }
   }
 })(typeof window !== "undefined" ? window : this);
+

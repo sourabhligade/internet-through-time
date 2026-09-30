@@ -77,16 +77,16 @@ This is a **folder add**, not another writer on existing dests.
 
 ```
 Starting Point (years/YYYY/pages/home.html)
-  └─ Board C leftover-2× strip (data-itt-2x-unique-c when wired)
-       └─ dest n /index.html
-            ├─ Minute 1  field ≥2 · both honesty ticks · dest-true keep pick
-            │            → localStorage ittYY-<slug>-lx
-            │              { real:true, leftover:true, multiStep:true, year:"YYYY", ts }
-            ├─ Minute 2  second dest-true verb on SAME dest
-            │            → ittYY-<slug>-d2
-            ├─ Next      dest n+1  (last dest → Starting Point)
-            ├─ Incomplete empty · 0 ticks · skip · NEVER writes
-            └─ Trap      listed trap click · NEVER writes leftover or star
+ └─ Board C leftover-2× strip (data-itt-2x-unique-c when wired)
+ └─ dest n /index.html
+ ├─ Minute 1 field ≥2 · both honesty ticks · dest-true keep pick
+ │ → localStorage ittYY-<slug>-lx
+ │ { real:true, leftover:true, multiStep:true, year:"YYYY", ts }
+ ├─ Minute 2 second dest-true verb on SAME dest
+ │ → ittYY-<slug>-d2
+ ├─ Next dest n+1 (last dest → Starting Point)
+ ├─ Incomplete empty · 0 ticks · skip · NEVER writes
+ └─ Trap listed trap click · NEVER writes leftover or star
 ```
 
 Star key stays **empty** after both leftover minutes.
@@ -383,7 +383,7 @@ Skip `ogrish` · `bet365` · `betsson` · `hollywoodbets`.
 |---|------|-----------|--------------|------|
 | 154 | `steam` | WDM Steam in 2002. Reserved 2003–04, **not** 2002 disk. | Try Steam leftover / Download leftover | Steam Deck as 2002 · live download |
 | 155 | `radiouserland` | Cybercultural 2002 blog-software leftover | Write leftover / Publish leftover | Blogger dest · Stumble as this dest |
-| 156 | `wayfair` | CSN Stores / racksandstands.com **Aug 2002**. Wayfair.com is **1 Sep **. | Browse racks leftover / Add leftover | Wayfair.com  as 2002 gold · live card |
+| 156 | `wayfair` | CSN Stores / racksandstands.com **Aug 2002**. Wayfair.com is **1 Sep **. | Browse racks leftover / Add leftover | Wayfair.com as 2002 gold · live card |
 
 `csnstores` is already an earlier dest — do not merge it with `wayfair`. Two folders, two products (CSN house vs racksandstands first site).
 
@@ -497,9 +497,9 @@ Run after all six years, or after each year if shipping one year at a time.
 ```text
 1999 sites == 144 + 288 == 432
 2000 sites == 162 + 324 == 486
-2001 sites ==  87 + 174 == 261
-2002 sites ==  78 + 156 == 234
-2003 sites ==  69 + 137 == 206
+2001 sites == 87 + 174 == 261
+2002 sites == 78 + 156 == 234
+2003 sites == 69 + 137 == 206
 2004 sites == 270 + 540 == 810
 ```
 
@@ -535,45 +535,45 @@ Clone leftover **panels** from `years/2013/sites/vine/record.html`. Rewrite PROD
 <p class="itt-pixel-failed">[failed-final] PRODUCT mark</p>
 
 <section data-lo-panel="1" data-itt-dest-true="1" data-itt-year="YYYY">
-  <p><b>MINUTE-1 VERB leftover</b> · dest-true · incomplete never writes · <code>ittYY-SLUG-lx</code></p>
-  <label><input type="checkbox" data-lo-req>Year. The chip is not this dest.</label>
-  <label><input type="checkbox" data-lo-req>Empty / trap / 0 ticks never write.</label>
-  <p>
-    <button type="button" data-lo-pick="keep">MINUTE-1 VERB leftover</button>
-    <button type="button" data-lo-pick="trap">TRAP LABEL (trap)</button>
-  </p>
-  <p><label>honesty<br>
-    <input type="text" data-lo-field maxlength="80" placeholder="MINUTE-1 VERB leftover" autocomplete="off">
-  </label></p>
-  <p>
-    <button type="button" data-lo-trap>TRAP LABEL (trap)</button>
-    <button type="button" data-lo-save data-lo-key="SLUG-lx" data-lo-need-pick="keep">MINUTE-1 VERB leftover</button>
-  </p>
-  <p data-lo-status></p>
-  <p hidden data-next-flow data-next-when-key="ittYY-SLUG-lx">
-    <b>Next:</b> <a href="../NEXT-SLUG/index.html">NEXT PRODUCT</a>
-  </p>
+ <p><b>MINUTE-1 VERB leftover</b> · dest-true · incomplete never writes · <code>ittYY-SLUG-lx</code></p>
+ <label><input type="checkbox" data-lo-req>Year. The chip is not this dest.</label>
+ <label><input type="checkbox" data-lo-req>Empty / trap / 0 ticks never write.</label>
+ <p>
+ <button type="button" data-lo-pick="keep">MINUTE-1 VERB leftover</button>
+ <button type="button" data-lo-pick="trap">TRAP LABEL (trap)</button>
+ </p>
+ <p><label>honesty<br>
+ <input type="text" data-lo-field maxlength="80" placeholder="MINUTE-1 VERB leftover" autocomplete="off">
+ </label></p>
+ <p>
+ <button type="button" data-lo-trap>TRAP LABEL (trap)</button>
+ <button type="button" data-lo-save data-lo-key="SLUG-lx" data-lo-need-pick="keep">MINUTE-1 VERB leftover</button>
+ </p>
+ <p data-lo-status></p>
+ <p hidden data-next-flow data-next-when-key="ittYY-SLUG-lx">
+ <b>Next:</b> <a href="../NEXT-SLUG/index.html">NEXT PRODUCT</a>
+ </p>
 </section>
 
 <section data-lo-panel="1" data-itt-dest-true="1" data-itt-year="YYYY">
-  <p><b>MINUTE-2 VERB leftover</b> · dest-true · incomplete never writes · <code>ittYY-SLUG-d2</code></p>
-  <label><input type="checkbox" data-lo-req>Second path. Not the year star.</label>
-  <label><input type="checkbox" data-lo-req>Incomplete never writes.</label>
-  <p>
-    <button type="button" data-lo-pick="keep">MINUTE-2 VERB leftover</button>
-    <button type="button" data-lo-pick="trap">TRAP LABEL (trap)</button>
-  </p>
-  <p><label>honesty<br>
-    <input type="text" data-lo-field maxlength="80" placeholder="MINUTE-2 VERB leftover" autocomplete="off">
-  </label></p>
-  <p>
-    <button type="button" data-lo-trap>TRAP LABEL (trap)</button>
-    <button type="button" data-lo-save data-lo-key="SLUG-d2" data-lo-need-pick="keep">MINUTE-2 VERB leftover</button>
-  </p>
-  <p data-lo-status></p>
-  <p hidden data-next-flow data-next-when-key="ittYY-SLUG-d2">
-    <b>Next:</b> <a href="../NEXT-SLUG/index.html">NEXT PRODUCT</a>
-  </p>
+ <p><b>MINUTE-2 VERB leftover</b> · dest-true · incomplete never writes · <code>ittYY-SLUG-d2</code></p>
+ <label><input type="checkbox" data-lo-req>Second path. Not the year star.</label>
+ <label><input type="checkbox" data-lo-req>Incomplete never writes.</label>
+ <p>
+ <button type="button" data-lo-pick="keep">MINUTE-2 VERB leftover</button>
+ <button type="button" data-lo-pick="trap">TRAP LABEL (trap)</button>
+ </p>
+ <p><label>honesty<br>
+ <input type="text" data-lo-field maxlength="80" placeholder="MINUTE-2 VERB leftover" autocomplete="off">
+ </label></p>
+ <p>
+ <button type="button" data-lo-trap>TRAP LABEL (trap)</button>
+ <button type="button" data-lo-save data-lo-key="SLUG-d2" data-lo-need-pick="keep">MINUTE-2 VERB leftover</button>
+ </p>
+ <p data-lo-status></p>
+ <p hidden data-next-flow data-next-when-key="ittYY-SLUG-d2">
+ <b>Next:</b> <a href="../NEXT-SLUG/index.html">NEXT PRODUCT</a>
+ </p>
 </section>
 
 <script src="../../../../js/immersion-YYYY.js"></script>
@@ -589,11 +589,11 @@ Last dest of each year: both Next hrefs are `../../pages/home.html`.
 
 ```json
 {
-  "real": true,
-  "leftover": true,
-  "multiStep": true,
-  "year": "YYYY",
-  "ts": 1770000000000
+ "real": true,
+ "leftover": true,
+ "multiStep": true,
+ "year": "YYYY",
+ "ts": 1770000000000
 }
 ```
 
@@ -630,7 +630,7 @@ Use these as the mkdir / Next checklist. Minutes stay in the year harvest table.
 - Invent brand pixels.
 - Ship porn / live money / live P2P / live mail / live registrar as gold.
 - Pad 2004 with language-Wikipedia dests.
-- Treat Wayfair.com  as 2002 gold (`wayfair` dest is CSN / racksandstands leftover).
+- Treat Wayfair.com as 2002 gold (`wayfair` dest is CSN / racksandstands leftover).
 - Treat Steam Deck, Chrome, iPhone, Gmail-before-2004, YouTube-before-2005 as year product.
 
 ---

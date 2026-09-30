@@ -33,7 +33,7 @@ function ids2005() {
   return [...text.slice(start, end).matchAll(/"id":\s*"([^"]+)"/g)].map((m) => m[1]);
 }
 
-for (const year of ["2017", ""]) {
+for (const year of ["2017"]) {
   for (const stop of yearStops(year)) {
     test(`${year} n=${stop.n} ${stop.name} link opens`, async ({ page }) => {
       const res = await page.goto(`/years/${year}/${stop.href}`);

@@ -27,12 +27,7 @@
     "2007": { machine: "Windows XP · Internet Explorer 6", star: "iPhone Safari", starHref: "sites/iphone/index.html", game: "" },
     "2013": { machine: "Windows 7 residual · IE 9", star: "Vine 6s", starHref: "sites/vine/record.html", game: "" },
     "2014": { machine: "Windows 7 residual · IE 9", star: "WhatsApp Install", starHref: "sites/whatsapp/index.html", game: "" },
-    "2015": { machine: "Windows 7 residual · Chrome habit", star: "Periscope Go LIVE", starHref: "sites/periscope/index.html", game: "" },
     "2016": { machine: "Windows 10 rising · Chrome habit", star: "Instagram Stories", starHref: "sites/instagram/stories.html", game: "" },
-    "2017": { machine: "Windows 10 · Chrome habit", star: "Face ID", starHref: "sites/iphone/x.html", game: "" },
-    "": { machine: "Windows 10 · Chrome habit", star: "GDPR Manage", starHref: "sites/gdpr/index.html", game: "" },
-    "": { machine: "Windows 10 · Chrome habit", star: "Disney+ Continue", starHref: "sites/disneyplus/home.html", game: "" },
-    "2020": { machine: "Windows 10 · Chrome habit", star: "Zoom Leave", starHref: "sites/zoom/meeting.html", game: "" }
   };
 
   function yearOf() {
@@ -60,7 +55,7 @@
     if (n <= 1997) return "b";
     if (n <= 2000) return "c";
     if (n <= 2007) return "d";
-    if (n <= 2020) return "e";
+    if (n <= 2017) return "e";
     return "f";
   }
 
@@ -235,7 +230,7 @@
       path = "";
     }
     if (!/\/pages\/home\.html$/.test(path)) return;
-    if (["2007", "2010", "2012", "2013", "2014", "2015", "2016", "2017", "", "", "2022"].indexOf(String(y)) !== -1) return;
+    if (["2007", "2010", "2012", "2013", "2014", "2015", "2016", "2017", "2022"].indexOf(String(y)) !== -1) return;
     if (doc.getElementById("itt-layer-assess")) return;
     var meta = META[y] || {};
     var links = webLinks(y);

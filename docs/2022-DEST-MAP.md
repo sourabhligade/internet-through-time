@@ -8,10 +8,10 @@
 
 ```
 Hub 2022
-  → shell (Win10 + Chrome habit · one nav row)
-    → Starting Point (★ chip + guided 6 · warehouse folded)
-      → official 10 (product rooms · leftover-2× panels = 0)
-      → leftover dests (room + leftover-2× ×2 · leftover-3× dest-face on 6)
+ → shell (Win10 + Chrome habit · one nav row)
+ → Starting Point (★ chip + guided 6 · warehouse folded)
+ → official 10 (product rooms · leftover-2× panels = 0)
+ → leftover dests (room + leftover-2× ×2 · leftover-3× dest-face on 6)
 ```
 
 ---
@@ -66,7 +66,7 @@ Room + leftover-2× ×2. Empty / trap never write. Never `itt22-chatgpt`. e2e: l
 | [x] coinbase | coinbase-lx / coinbase-d2 | no live wallet |
 | [x] discord | discord-lx / discord-d2 | |
 | [x] edge | edge-lx / edge-d2 | |
-| [x] github | github-lx / github-d2 | issue gold is  |
+| [x] github | github-lx / github-d2 | issue gold is |
 | [x] layoffs | layoffs-lx / layoffs-d2 | literacy |
 | [x] linkedin | linkedin-lx / linkedin-d2 | |
 | [x] midjourney | midjourn-lx / midjourn-d2 | not ChatGPT gold |
@@ -76,7 +76,7 @@ Room + leftover-2× ×2. Empty / trap never write. Never `itt22-chatgpt`. e2e: l
 | [x] nyt | nyt-lx / nyt-d2 | Wordle dest is official |
 | [x] openai | openai-lx / openai-d2 | Send dest is the star |
 | [x] pinterest | pinteres-lx / pinteres-d2 | |
-| [x] reels | reels-lx / reels-d2 | Reels launched 2020 |
+| [x] reels | reels-lx / reels-d2 | Reels launched |
 | [x] snapchat | snapchat-lx / snapchat-d2 | |
 | [x] spotify | spotify-lx / spotify-d2 | |
 | [x] stablediffusion | stabledi-lx / stabledi-d2 | not ChatGPT gold |
@@ -86,7 +86,7 @@ Room + leftover-2× ×2. Empty / trap never write. Never `itt22-chatgpt`. e2e: l
 | [x] whatsapp | whatsapp-lx / whatsapp-d2 | Install is 2014 gold |
 | [x] windows10 | windows1-lx / windows1-d2 | still mass leftover |
 | [x] youtubeshorts | youtubes-lx / youtubes-d2 | not gold |
-| [x] zoom | zoom-lx / zoom-d2 | Leave is 2020 gold |
+| [x] zoom | zoom-lx / zoom-d2 | Leave is gold |
 
 ---
 
@@ -101,7 +101,7 @@ Each: 2022 leftover **room** (Open leftover) + leftover-2× ×2. Keys = first 8 
 | [x] Outlook | `sites/outlook/` | outlook-lx / outlook-d2 | mail leftover | |
 | [x] Slack | `sites/slack/` | slack-lx / slack-d2 | workspace leftover | |
 | [x] Teams | `sites/teams/` | teams-lx / teams-d2 | chat leftover | |
-| [x] Meet | `sites/meet/` | meet-lx / meet-d2 | join leftover · Zoom Leave is 2020 | |
+| [x] Meet | `sites/meet/` | meet-lx / meet-d2 | join leftover · Zoom Leave is | |
 | [x] Telegram | `sites/telegram/` | telegram-lx / telegram-d2 | chat leftover | |
 | [x] Signal | `sites/signal/` | signal-lx / signal-d2 | 2021 dest leftover · 2022 continuity | |
 | [x] Messenger | `sites/messenger/` | messenge-lx / messenge-d2 | chat leftover | |
@@ -135,7 +135,7 @@ Each: 2022 leftover **room** (Open leftover) + leftover-2× ×2. Keys = first 8 
 | [x] Epic | `sites/epic/` | epic-lx / epic-d2 | store leftover | |
 | [x] Roblox | `sites/roblox/` | roblox-lx / roblox-d2 | play leftover | |
 | [x] Hulu | `sites/hulu/` | hulu-lx / hulu-d2 | watch leftover | |
-| [x] Disney+ | `sites/disneyplus/` | disneypl-lx / disneypl-d2 | Continue is **** gold | |
+| [x] Disney+ | `sites/disneyplus/` | disneypl-lx / disneypl-d2 | Continue is  gold | |
 | [x] HBO Max | `sites/hbomax/` | hbomax-lx / hbomax-d2 | watch leftover · Max rename later | |
 | [x] Kick | `sites/kick/` | kick-lx / kick-d2 | 2022 stream leftover | |
 

@@ -194,25 +194,6 @@ CITED_ADD: dict[str, list[str]] = {
         "googlelens", "googlepay", "highsierra", "horizonzd", "imacpro", "injustice2",
         "ipadpro105", "ipadpro129", "iphone8plus",
     ],
-    "": [
-        "gplusgone", "androidpie", "ios12", "pubg", "rdr2", "mojave", "onedot",
-        "epicstore", "nso", "espnplus", "caffeine", "reddit", "youtube", "wikipedia",
-        "instagram", "chrome", "fortnite", "gdpr", "github", "homepod", "spectre",
-        "tiktok", "trust", "playable",
-    ],
-    "": [
-        "apex", "airpods2", "android10", "applewatch5", "astralchain", "bloodstained",
-        "borderlands3", "catalina", "control19", "crashteamracing", "daysgone",
-        "deathstranding", "discoelysium", "dmc5", "fireemblem3h", "galaxyfold",
-        "galaxynote10", "galaxys10", "geforcenow", "ipad7", "ipadmini5",
-        "jedifallenorder", "kingdomhearts3", "linksawakening", "luigismansion3",
-        "macbookpro16", "applecard",
-    ],
-    "2020": [
-        "clubhouse", "hbomax", "peacock", "google", "youtube", "facebook", "wikipedia",
-        "instagram", "amazon", "amongus", "animalcrossing", "classroom", "discord",
-        "houseparty", "netflix", "playable",
-    ],
     "2022": [
         "temu", "stablediff", "midjourney", "dalle2", "ios16", "m2", "google",
         "youtube", "facebook", "twitter", "wikipedia", "reddit", "instagram", "amazon",

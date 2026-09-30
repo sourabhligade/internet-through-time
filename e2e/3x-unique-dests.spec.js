@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * 3× leftover-2× unique dests: incomplete never writes; complete leftover writes;
- * star stays empty. Samples first dest of every live year plus /2020/2021 last dest.
+ * star stays empty. Samples first dest of every live year plus/2021 last dest.
  */
 const { test, expect } = require("@playwright/test");
 const { revealLeftoverRails } = require("./helpers");
