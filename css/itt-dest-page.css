@@ -15,15 +15,15 @@ html {
   color-scheme: only light;
 }
 
-/* 2011 is exempt. A dark browser paints the root canvas black and only
-   colors the body, so a content-tall body leaves a black band. The fill
-   lives on the 2011 page itself (inline, important) and below. */
-html:not([data-itt-year="2011"]) {
+/* Every dest year, including 2011. The root background paints the
+   canvas, so a content-tall body does not leave a black band. A
+   min-height of 100vh parks an empty band under the footer. */
+html {
   min-height: 0 !important;
   height: auto !important;
 }
 
-html:not([data-itt-year="2011"]) body {
+html body {
   min-height: 0 !important;
   height: auto !important;
 }
@@ -82,8 +82,8 @@ table {
   margin: 0 2px;
 }
 
-html.has-itt-wayfind:not([data-itt-year="2011"]),
-html:not([data-itt-year="2011"]) body.has-itt-wayfind {
+html.has-itt-wayfind,
+html body.has-itt-wayfind {
   min-height: 0 !important;
   height: auto !important;
   scroll-padding-bottom: 64px;
@@ -94,8 +94,6 @@ html[data-itt-year="2011"] body {
   color-scheme: only light !important;
   forced-color-adjust: none !important;
   background: #ece9d8 !important;
-  min-height: 100vh !important;
-  min-height: 100dvh !important;
 }
 html[data-itt-year="2011"] body {
   margin: 0 !important;

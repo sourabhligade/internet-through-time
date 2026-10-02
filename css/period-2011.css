@@ -6,17 +6,13 @@ html[data-itt-year="2011"] #itt-year-start-extra {
   /* First paint stays the guided trail. The map lists the rest. */
 }
 
-/* A dark browser paints the root canvas black and only colors the
-   body. The body was as tall as the form, so the rest of the window
-   was a black band. Cover the window with the body. The footer stays
-   in normal flow under the form. */
+/* A dark browser paints the root canvas from this background.
+   Do not min-height the document. That leaves an empty band under the footer. */
 html[data-itt-year="2011"]:not(:has(#itt-year-ui)),
 html[data-itt-year="2011"]:not(:has(#itt-year-ui)) body {
   color-scheme: only light !important;
   forced-color-adjust: none !important;
   background: #ece9d8 !important;
-  min-height: 100% !important;
-  min-height: 100dvh !important;
 }
 html[data-itt-year="2011"]:not(:has(#itt-year-ui)) body {
   margin: 0 !important;

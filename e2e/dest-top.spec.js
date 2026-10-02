@@ -9,6 +9,7 @@ const { enterYear, goInFrame, contentFrame } = require("./helpers");
 const TABS = [
   { year: "1995", path: "/years/1995/sites/amazon/ssl-checkout.html" },
   { year: "1997", path: "/years/1997/sites/amazonipo/index.html" },
+  { year: "2011", path: "/years/2011/sites/googleplus/index.html" },
 ];
 
 test.describe("dest-as-tab footer", () => {
