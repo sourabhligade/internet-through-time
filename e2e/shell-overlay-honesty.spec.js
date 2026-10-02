@@ -27,8 +27,8 @@ test.describe('shell overlay honesty', () => {
     const overlay = page.locator('#connect-overlay');
     await expect(overlay).toBeHidden();
     const frame = page.frameLocator('#content');
-    await expect(frame.getByRole('link', { name: /WebCrawler/i }).first()).toBeVisible({ timeout: 10000 });
-    await frame.getByRole('link', { name: /WebCrawler/i }).first().click();
+    await expect(frame.getByRole('link', { name: /Yahoo/i }).first()).toBeVisible({ timeout: 10000 });
+    await frame.getByRole('link', { name: /Yahoo/i }).first().click();
     await expect.poll(async () => {
       return page.evaluate(() => {
         try {
@@ -39,7 +39,7 @@ test.describe('shell overlay honesty', () => {
           return '';
         }
       });
-    }, { timeout: 15000 }).toMatch(/webcrawler/i);
+    }, { timeout: 15000 }).toMatch(/yahoo/i);
   });
 
   test('2005 skip leaves iframe clickable', async ({ page }) => {

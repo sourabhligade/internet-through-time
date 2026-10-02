@@ -1,14 +1,17 @@
 # 2016 — READ FIRST (from-scratch rebuild)
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 **Date:** 2026-08-18  
-**Disk truth:** Hub is **24 years open**. `years/2016/` is the **live lean door** (Instagram Stories star). Dest folders **57**. · Zoom Leave. **2022 ChatGPT live.** 2013 Vine and 2021 ATT are live lean doors. **2015 wiped.** is wiped.  
+**Disk truth:** Hub is **22 years open**. `years/2016/` is the **live lean HTML door** (Instagram Stories star). Dest folders **57**. Leftover-2× unique dests **19**. **2022 ChatGPT live.** 2013 Vine is a live lean HTML door. **2015 is a React door.** 2021 is absent.  
 **Prefix:** `itt16`  
-**Clone shape from:** live `years/2015/` (lean door · Periscope star). **Do not** restore git dest-farm `years/2016/` (132 dests) or `/tmp/itt-2016-forest-backup-*`.
+**Clone shape from:** live `years/2014/` (HTML leanBoot · WhatsApp). **Do not** restore git dest-farm `years/2016/` (132 dests) or `/tmp/itt-2016-forest-backup-*`.
 
 | Doc | Role |
 |-----|------|
 | **This file** | Thesis · star · do / do not |
-| Parent live year | `years/2015/` · Periscope · `itt15` |
+| Parent live year | `years/2014/` · WhatsApp · `itt14` (2015 is React, no HTML tree) |
 
 **Legal:** Educational reconstruction. `localStorage` theater only. Never invent brand pixels. No real Niantic / Graph / Apple APIs, no real E2E, no real DDoS, no partisan campaign UI.
 

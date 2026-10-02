@@ -11,19 +11,20 @@ test.describe("Per-year guided start trails", () => {
       const ids = Object.keys(T).filter((k) => /-start$/.test(k)).sort();
       return ids;
     });
- expect(trails.length).toBe(22);
+ expect(trails.length).toBe(23);
     expect(trails[0]).toBe("1994-start");
     expect(trails).toContain("2005-start");
     expect(trails).toContain("2006-start");
     expect(trails).toContain("2007-start");
-    expect(trails).not.toContain("2009-start");
+    expect(trails).toContain("2008-start");
+    expect(trails).toContain("2009-start");
     expect(trails).toContain("2015-start");
     expect(trails).not.toContain("2021-start");
-    expect(trails).toContain("2022-start");
+    expect(trails).not.toContain("2022-start");
     expect(trails).not.toContain("2023-start");
     expect(trails).not.toContain("2024-start");
     expect(trails).not.toContain("2025-start");
-    expect(trails[trails.length - 1]).toBe("2022-start");
+    expect(trails[trails.length - 1]).toBe("2017-start");
   });
 
   test("deep link ?trail=2010-start writes night state", async ({ page }) => {
@@ -42,7 +43,6 @@ test.describe("Per-year guided start trails", () => {
     const fs = require("fs");
     const path = require("path");
     for (let y = 1994; y <= 2022; y++) {
-      if (y === 2009) continue;
       if (!fs.existsSync(path.join(__dirname, "..", "years", String(y), "index.html"))) continue;
       await page.goto(`/years/${y}/pages/home.html`);
       const rail = page.locator(`#ott-guided-${y}`);

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ProductFace } from "./ProductFace.jsx";
 
-export function OfficialStop({ stop, onNext }) {
+export function OfficialStop({ stop, year, onNext }) {
   const needsField = stop.field !== false;
   const faceOwns = stop.faceField === true;
   const fieldMin = typeof stop.fieldMin === "number" ? stop.fieldMin : 2;
@@ -33,12 +33,17 @@ export function OfficialStop({ stop, onNext }) {
       say(stop.rangeNote || "Type something first. Empty never writes.");
       return;
     }
+    const saveYear = stop.year || year;
+    if (!saveYear) {
+      say("No year on this stop. Nothing was saved.");
+      return;
+    }
     const payload = stop.leftover
-      ? { real: true, leftover: true, year: stop.year || "2022", ts: Date.now() }
+      ? { real: true, leftover: true, year: saveYear, ts: Date.now() }
       : {
           multiStep: true,
           real: true,
-          year: stop.year || "2014",
+          year: saveYear,
           official: true,
           ts: Date.now(),
         };
@@ -46,15 +51,15 @@ export function OfficialStop({ stop, onNext }) {
     try {
       localStorage.setItem(stop.whenKey, JSON.stringify(payload));
     } catch (err) {
-      say("Could not store " + stop.whenKey);
+      say("This browser blocked the save.");
       return;
     }
     setSaved(true);
-    say("Saved · " + stop.whenKey);
+    say("Saved in this browser.");
   }
 
   return (
-    <article className="stop">
+    <article className="stop" id={stop.whenKey}>
       <p className="kicker">{stop.leftover ? "Leftover " + stop.n : "Official " + stop.n}</p>
       <h1>{stop.name}</h1>
       <p>{stop.fact}</p>

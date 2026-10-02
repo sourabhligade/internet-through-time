@@ -1,7 +1,10 @@
 # Pushed-code fix map
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 **Date:** 2026-09-26  
-**Commit:** `cbbd243a6` on `the working branch`  
+**Commit:** `cbbd243a6` on `museum/1994-2020-lean`  
 **Scope:** Major bugs on the shipped museum. Incomplete years (2014 React dual door, period pixels +, short official trails, wiped ) stay out of this list.
 
 Ship law stays [`DISK-TRUTH.md`](DISK-TRUTH.md). Live 5× stays + boarded 2009.

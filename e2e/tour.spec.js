@@ -72,12 +72,17 @@ test.describe('guided tour', () => {
     frame = contentFrame(page);
     await frame.locator('[data-excite-toggle]').first().click({ force: true });
 
-    // Hotmail sign-in stamps "hotmail"
+    // Hotmail sign-in stamps "hotmail". Official-verb owns the submit click:
+    // empty need or unticked reqs cancel the submit, so the inbox machine never runs.
     await goInFrame(page, 'sites/hotmail/index.html');
     await waitForImmersion(page, '1998');
     frame = contentFrame(page);
     await frame.locator('input[name="login"]').fill('tourtester');
     await frame.locator('input[name="pass"]').fill('x');
+    await frame.locator('form[data-hotmail-login] [data-official-need]').fill('HoTMaiL');
+    const reqs = frame.locator('form[data-hotmail-login] [data-official-req]');
+    const reqCount = await reqs.count();
+    for (let i = 0; i < reqCount; i++) await reqs.nth(i).check({ force: true });
     await frame.locator('form[data-hotmail-login] input[type="submit"]').click({ force: true });
     await page.waitForTimeout(400);
 

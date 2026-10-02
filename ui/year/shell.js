@@ -11,7 +11,7 @@
   function esc(s) { return C.esc(s); }
   function dirbar(spec) { return C.dirbar(spec); }
   function netscapeToolbar(spec) { return C.netscapeToolbar(spec); }
-  function chrome22Toolbar() { return C.chrome22Toolbar(); }
+  function chrome22Toolbar(spec) { return C.chrome22Toolbar(spec); }
   function ieToolbar(spec) { return C.ieToolbar(spec); }
   function netscapeMenus() { return C.netscapeMenus(); }
   function ieMenus(spec) { return C.ieMenus(spec); }
@@ -66,22 +66,7 @@
       menus +
       bar +
       (chrome22
-        ? '<style id="itt-2022-one-bar">' +
-          ".year-2022 #browser > .toolbar,.year-2022 .titlebar + .toolbar{display:none!important}" +
-          ".year-2022 #locationbar .toolbar{display:flex!important;flex-wrap:nowrap!important}" +
-          ".year-2022 #btn-back::before,.year-2022 #btn-forward::before,.year-2022 #btn-reload::before,.year-2022 #btn-home::before," +
-          ".year-2022 #btn-back::after,.year-2022 #btn-forward::after,.year-2022 #btn-reload::after,.year-2022 #btn-home::after" +
-          "{content:none!important;display:none!important}" +
-          "</style>" +
-          '<div class="locationbar chrome22-omni" id="locationbar">' +
-          '<div class="toolbar chrome22-bar" id="toolbar" role="toolbar" aria-label="Chrome habit toolbar">' +
-          '<button type="button" class="chrome22-nav" id="btn-back" title="Back">←</button>' +
-          '<button type="button" class="chrome22-nav" id="btn-forward" title="Forward">→</button>' +
-          '<button type="button" class="chrome22-nav" id="btn-reload" title="Reload">↻</button>' +
-          '<button type="button" class="chrome22-nav" id="btn-home" title="Home">⌂</button></div>' +
-          '<input type="text" id="location" value="' +
-          esc(spec.location || "") +
-          '" spellcheck="false" autocomplete="off" aria-label="Address"></div>'
+        ? chrome22Toolbar(spec)
         : '<div class="locationbar" id="locationbar"><label for="location">' +
           esc(spec.locLabel || "Location:") +
           '</label><input type="text" id="location" value="' +
@@ -164,13 +149,13 @@
           if (loc) loc.value = "http://museum/" + path;
         }
         if (cmd === "programs") go("pages/home.html");
+        else if (cmd === "help") go("pages/about.html");
         else if (cmd === "favorites") {
           var b = document.querySelector('[data-cmd="bm-view"]');
           if (b) b.click();
           else openDlg("dlg-bookmarks");
         } else if (cmd === "settings") openDlg("dlg-prefs");
         else if (cmd === "find") openDlg("dlg-find");
-        else if (cmd === "help") openDlg("dlg-about");
         else if (cmd === "run") {
           openDlg("dlg-open-location");
           var ol = document.getElementById("dlg-ol-input");
@@ -290,8 +275,13 @@
         return;
       }
       link.hidden = false;
-      if ({ "2017": 1 }[rec.year]) {
+      var door = ITT.YEAR_CARD && ITT.YEAR_CARD.years && ITT.YEAR_CARD.years[rec.year];
+      if (door && door.kind === "react") {
         link.href = "../../app/index.html#/year/" + rec.year;
+      } else if (door && door.kind !== "html") {
+        link.hidden = true;
+        link.removeAttribute("href");
+        return;
       } else {
         link.href = "../../years/" + rec.year + "/?room=" + encodeURIComponent(rec.path);
       }
@@ -305,6 +295,66 @@
     refresh();
   }
 
+  var OS_PHRASE = {
+    win95: "Win95",
+    win98: "Windows 98",
+    winxp: "Windows XP",
+    win7: "Windows 7",
+    win10: "Windows 10"
+  };
+  var BROWSER_PHRASE = {
+    netscape1: "Netscape 1.0",
+    netscape2: "Netscape 2.0",
+    netscape3: "Netscape 3.0",
+    ie4: "Internet Explorer 4.0",
+    ie5: "Internet Explorer 5.0",
+    ie55: "Internet Explorer 5.5",
+    ie6: "Internet Explorer 6",
+    ie7: "Internet Explorer 7",
+    ie8: "Internet Explorer 8",
+    ie9: "Internet Explorer 9",
+    "chrome-habit": "Chrome habit"
+  };
+
+  function yearLabelFromChrome(year, chrome) {
+    var os = chrome.osPhrase || OS_PHRASE[chrome.os] || "";
+    var browser = chrome.browserPhrase || BROWSER_PHRASE[chrome.browser] || "";
+    var parts = [String(year)];
+    if (os) parts.push(os);
+    if (browser) parts.push(browser);
+    if (chrome.roomClause) parts.push(chrome.roomClause);
+    return parts.join(" · ");
+  }
+
+  function bodyClassFromChrome(year, chrome) {
+    var y = parseInt(year, 10);
+    if (y <= 1996) return "";
+    var parts = ["year-" + year];
+    if (chrome.os) parts.push("os-" + chrome.os);
+    if (chrome.browser) parts.push("browser-" + chrome.browser);
+    return parts.join(" ");
+  }
+
+  function applyCardChrome(year, spec) {
+    var years = ITT.YEAR_CARD && ITT.YEAR_CARD.years;
+    var rec = years && years[year];
+    var chrome = rec && rec.chrome;
+    if (!chrome) return spec;
+    if (chrome.toolbar) spec.toolbar = chrome.toolbar;
+    if (chrome.location) {
+      spec.location = chrome.location;
+      spec.prefHome = chrome.location;
+    }
+    if (typeof chrome.maximized === "boolean") spec.maximized = chrome.maximized;
+    if (typeof chrome.hasTaskbar === "boolean") spec.hasTaskbar = chrome.hasTaskbar;
+    spec.chrome = chrome.assetYear ? String(chrome.assetYear) : null;
+    spec.bodyClass = bodyClassFromChrome(year, chrome);
+    spec.yearLabel = yearLabelFromChrome(year, chrome);
+    if (chrome.toolbar === "chrome22") spec.family = "chrome";
+    else if (chrome.toolbar === "ie") spec.family = "ie";
+    return spec;
+  }
+
   function paint(year) {
     year = String(year);
     var spec = (ITT.YearUI.YEARS || {})[year];
@@ -313,6 +363,7 @@
       return;
     }
     spec.year = year;
+    applyCardChrome(year, spec);
     document.documentElement.setAttribute("data-itt-year", year);
     document.documentElement.style.colorScheme = "only light";
     document.title = spec.title || year;

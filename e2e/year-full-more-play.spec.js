@@ -75,6 +75,10 @@ test('platform 1996 Star Cube mouse + jump', async ({ page }) => {
 });
 
 test('fold  Braid Fold edge click reaches 16', async ({ page }) => {
+  test.skip(
+    !fs.existsSync(path.join(__dirname, '..', 'years', '2008', 'sites', 'playable', 'braidfold.html')),
+    '2008 lean door has no Braid Fold canvas'
+  );
   const canvas = page.locator('canvas');
   await canvas.click({ position: { x: 20, y: 140 } });
   await canvas.click({ position: { x: 20, y: 140 } });

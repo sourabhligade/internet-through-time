@@ -26,7 +26,6 @@ STARS = {
     2012: ("itt12-ig-android", "Vine 6s"),
     2014: ("itt14-wa-install", "Watch"),
     2016: ("itt16-ig-stories", "Reels"),
-    2022: ("itt22-chatgpt", "GPT-4"),
 }
 
 # slug, product, verb, why, cite
@@ -161,27 +160,6 @@ DESTS: dict[int, list[tuple[str, str, str, str, str]]] = {
         ("applepay", "Apple Pay", "Tap leftover", "Apple Pay 2016 year-mass.", "https://en.wikipedia.org/wiki/Apple_Pay"),
         ("panamapapers", "Panama Papers", "Leak leftover", "Panama Papers 3 Apr 2016.", "https://en.wikipedia.org/wiki/Panama_Papers"),
     ],
-    2022: [
-        ("temu", "Temu", "Shop leftover", "Temu launched September 2022.", "https://en.wikipedia.org/wiki/Temu"),
-        ("chrome", "Chrome", "Tab leftover", "StatCounter Chrome habit 2022 · missing dest.", "https://gs.statcounter.com/press/chrome-overtakes-ie-globally-monthly"),
-        ("baidu", "Baidu", "Search leftover", "Baidu 2022 year-mass.", "https://en.wikipedia.org/wiki/Baidu"),
-        ("yandex", "Yandex", "Search leftover", "Yandex 2022 year-mass.", "https://en.wikipedia.org/wiki/Yandex"),
-        ("yahoo", "Yahoo", "Portal leftover", "Yahoo 2022 year-mass.", "https://en.wikipedia.org/wiki/Yahoo"),
-        ("github", "GitHub", "Push leftover", "GitHub 2022 year-mass.", "https://en.wikipedia.org/wiki/GitHub"),
-        ("discord", "Discord", "Join leftover", "Discord 2022 year-mass.", "https://en.wikipedia.org/wiki/Discord"),
-        ("twitch", "Twitch", "Watch leftover", "Twitch 2022 year-mass.", "https://en.wikipedia.org/wiki/Twitch_(service)"),
-        ("spotify", "Spotify", "Play leftover", "Spotify 2022 year-mass.", "https://en.wikipedia.org/wiki/Spotify"),
-        ("snapchat", "Snapchat", "Snap leftover", "Snapchat 2022 year-mass.", "https://en.wikipedia.org/wiki/Snapchat"),
-        ("whatsapp", "WhatsApp", "Chat leftover", "WhatsApp 2022 year-mass.", "https://en.wikipedia.org/wiki/WhatsApp"),
-        ("linkedin", "LinkedIn", "Connect leftover", "LinkedIn 2022 year-mass.", "https://en.wikipedia.org/wiki/LinkedIn"),
-        ("pinterest", "Pinterest", "Pin leftover", "Pinterest 2022 year-mass.", "https://en.wikipedia.org/wiki/Pinterest"),
-        ("musk", "Twitter buy", "Acquire leftover", "Musk closed Twitter acquisition 27 Oct 2022. X wordmark is a trap.", "https://en.wikipedia.org/wiki/Acquisition_of_Twitter_by_Elon_Musk"),
-        ("stablediff", "Stable Diffusion", "Prompt leftover", "Stable Diffusion released August 2022.", "https://en.wikipedia.org/wiki/Stable_Diffusion"),
-        ("midjourney", "Midjourney", "Prompt leftover", "Midjourney opened 2022.", "https://en.wikipedia.org/wiki/Midjourney"),
-        ("dalle2", "DALL-E 2", "Prompt leftover", "DALL-E 2 announced 6 Apr 2022.", "https://en.wikipedia.org/wiki/DALL-E"),
-        ("ios16", "iOS 16", "Lock leftover", "iOS 16 released 12 Sep 2022.", "https://en.wikipedia.org/wiki/IOS_16"),
-        ("m2", "M2", "Chip leftover", "M2 announced 6 Jun 2022.", "https://en.wikipedia.org/wiki/Apple_M2"),
-    ],
 }
 
 LOCK_SKIP_2010 = {
@@ -303,8 +281,8 @@ def main() -> None:
     collisions = []
     matrix = []
     extra: dict[str, set[str]] = {}
-    lock_years = {"2007", "2010", "2012", "2014", "2022"}
-    caps = {2007: 46, 2010: 44, 2012: 48, 2014: 36, 2016: 64, 2022: 38}
+    lock_years = {"2007", "2010", "2012", "2014"}
+    caps = {2007: 46, 2010: 44, 2012: 48, 2014: 36, 2016: 64}
     for year, rows in DESTS.items():
         existing = disk_slugs(year)
         added_year = 0

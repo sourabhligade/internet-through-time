@@ -1,7 +1,10 @@
 # What is undone
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 **Date:** 2026-09-26  
-**Tree:** `the working branch`  
+**Tree:** `museum/1994-2020-lean`  
 **Status:** Recheck vs disk. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **Live:** 24 doors (1994–2007 and 2010 + 2012–2014 plus 2016–2017 plus 2022). wiped. 2009 boarded. 2015 wiped. wiped. 2023–2025 wiped. Leftover-3× catalogs are empty. Do not dest-farm.

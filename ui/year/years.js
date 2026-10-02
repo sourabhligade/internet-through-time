@@ -283,7 +283,7 @@
       "win95-netscape.css",
       "ie4-overrides.css",
       "period-1997.css"],
-    "bodyClass": "",
+    "bodyClass": "year-1997 os-win95 browser-ie4",
     "boot": "browser-1997.js",
     "dir": [
       {
@@ -405,6 +405,7 @@
       }
     ],
     "chrome": "1998",
+    "startImg": "../../assets/period/1998/win98/start.gif",
     "toolbar": "ie",
     "family": "ie",
     "location": "http://home.microsoft.com/intl/web1998/",
@@ -510,7 +511,7 @@
       "win95-netscape.css",
       "ie5-overrides.css",
       "period-2000.css"],
-    "bodyClass": "year-2000 os-win98 browser-ie5",
+    "bodyClass": "year-2000 os-win98 browser-ie55",
     "boot": "browser-2000.js",
     "dir": [
       {
@@ -805,7 +806,7 @@
       { "go": "sites/yahoo/index.html", "label": "Yahoo" },
       { "go": "pages/about.html", "label": "About" }
     ],
-    "chrome": "2004",
+    "chrome": "2005",
     "toolbar": "ie",
     "family": "ie",
     "location": "http://home.microsoft.com/intl/web2005/",
@@ -845,7 +846,7 @@
       { "go": "sites/wikipedia/millionth.html", "label": "Wiki 1M" },
       { "go": "pages/about.html", "label": "About" }
     ],
-    "chrome": "2004",
+    "chrome": "2006",
     "toolbar": "ie",
     "family": "ie",
     "location": "http://home.microsoft.com/intl/web2006/",
@@ -907,6 +908,45 @@
     "hasTaskbar": true,
     "maximized": true
   },
+  "2008": {
+    "title": "Internet Explorer 7.0 — 2008",
+    "css": [
+      "win95-netscape.css",
+      "ie5-overrides.css",
+      "period-2008.css"],
+    "bodyClass": "year-2008 os-winxp browser-ie7",
+    "boot": "browser-2008.js",
+    "dir": [
+      { "go": "pages/home.html", "label": "Start" },
+      { "go": "sites/appstore/index.html", "label": "App Store" },
+      { "go": "sites/chrome/index.html", "label": "Chrome" },
+      { "go": "sites/android/index.html", "label": "G1" },
+      { "go": "sites/github/issue.html", "label": "GitHub" },
+      { "go": "pages/about.html", "label": "About" }
+    ],
+    "chrome": "2004",
+    "toolbar": "ie",
+    "family": "ie",
+    "location": "http://home.microsoft.com/intl/web2008/",
+    "prefHome": "http://home.microsoft.com/intl/web2008/",
+    "yearLabel": "2008 · Windows XP · Internet Explorer 7 · App Store is a room",
+    "windowTitle": "Welcome to the World Wide Web — Microsoft Internet Explorer",
+    "connectH2": "Network Connections",
+    "connectBtn": "Connect (always-on broadband)",
+    "skipBtn": "Skip connect",
+    "thesis": "2008 thesis: phones get a store. Empty / millions-day-one / Play Store / Chrome-as-January never write. FREE/BUY is the save. Desktop stays XP + IE 7.",
+    "openLoc": "Open Location in Internet Explorer:",
+    "aboutHtml": "<p><b>Microsoft Internet Explorer</b></p> <p>Version 7.0<br>Copyright © 1995–2006 Microsoft Corporation</p> <p>Educational historical Web exhibit.</p>",
+    "startBanner": "Windows<b>XP</b>",
+    "taskBtn": "Internet Explorer",
+    "icon": "e",
+    "aria": "Internet Explorer 7",
+    "locLabel": "Address",
+    "bookmarksTitle": "Favorites",
+    "mailPh": "friend@aol.com",
+    "hasTaskbar": true,
+    "maximized": true
+  },
   "2009": {
     "title": "Internet Explorer 8.0 — 2009",
     "css": [
@@ -949,12 +989,13 @@
         "label": "Win7"
       }
     ],
+    // GIF buttons borrow assets/period/2007/chrome. The 2009 chrome folder is logos only.
     "chrome": "2007",
     "toolbar": "ie",
     "family": "ie",
     "location": "http://home.microsoft.com/intl/web2009/",
     "prefHome": "http://home.microsoft.com/intl/web2009/",
-    "yearLabel": "2009 · Windows XP · Internet Explorer 8",
+    "yearLabel": "2009 · Windows XP · Internet Explorer 8 · Facebook Like is the room",
     "windowTitle": "Welcome to the World Wide Web — Microsoft Internet Explorer",
     "connectH2": "Network Connections",
     "connectBtn": "Connect (always-on broadband)",
@@ -1014,7 +1055,7 @@
       "label": "YouTube"
     }
   ],
-  "chrome": "2007",
+  "chrome": null,
   "toolbar": "ie",
   "family": "ie",
   "location": "http://home.microsoft.com/intl/web2010/",
@@ -1025,6 +1066,47 @@
   "connectBtn": "Connect (always-on broadband)",
   "skipBtn": "Skip connect",
   "thesis": "Initializing network adapter... Connect (always-on broadband) Skip connect 2010 thesis: tablet + filter + Like on the open web · still mostly PC. iPad · iPhone 4 · Instagram iOS · Open Graph.",
+  "openLoc": "Open Location:",
+  "aboutHtml": "<p><b>Microsoft Internet Explorer</b></p><p>Educational historical Web exhibit.</p>",
+  "startBanner": "Windows<b>7</b>",
+  "taskBtn": "Internet Explorer",
+  "icon": "e",
+  "aria": "Internet Explorer",
+  "locLabel": "Address",
+  "bookmarksTitle": "Favorites",
+  "mailPh": "you@example.com",
+  "hasTaskbar": true,
+  "maximized": true
+},
+  "2011": {
+  "title": "Win7 · IE 8 residual — 2011",
+  "css": [
+    "win95-netscape.css",
+    "ie5-overrides.css",
+    "period-2011.css"],
+  "bodyClass": "year-2011 os-win7 browser-ie8",
+  "boot": "browser-2011.js",
+  "dir": [
+    {"go": "pages/home.html", "label": "Start"},
+    {"go": "sites/googleplus/index.html", "label": "Google+"},
+    {"go": "sites/spotify/index.html", "label": "Spotify"},
+    {"go": "sites/iphone/index.html", "label": "Siri"},
+    {"go": "sites/facebook/index.html", "label": "Timeline"},
+    {"go": "sites/ipad/index.html", "label": "iPad 2"},
+    {"go": "sites/airbnb/index.html", "label": "Airbnb"},
+    {"go": "pages/map.html", "label": "Map"}
+  ],
+  "chrome": null,
+  "toolbar": "ie",
+  "family": "ie",
+  "location": "http://home.microsoft.com/intl/web2011/",
+  "prefHome": "http://home.microsoft.com/intl/web2011/",
+  "yearLabel": "2011 · Windows 7 · IE 8 desktop residual · the year lives in Google+ rooms",
+  "windowTitle": "Welcome to the World Wide Web — Microsoft Internet Explorer",
+  "connectH2": "Network Connections",
+  "connectBtn": "Connect (always-on broadband)",
+  "skipBtn": "Skip connect",
+  "thesis": "Initializing network adapter... Connect (always-on broadband) Skip connect 2011 thesis: circles, a US listen, and a voice on the 4S. Google+ · Spotify US · Siri · Timeline. Still a Win7 / IE 8 laptop. IE 9 is March.",
   "openLoc": "Open Location:",
   "aboutHtml": "<p><b>Microsoft Internet Explorer</b></p><p>Educational historical Web exhibit.</p>",
   "startBanner": "Windows<b>7</b>",
@@ -1079,7 +1161,7 @@
       "label": "Twitter"
     }
   ],
-  "chrome": "2007",
+  "chrome": null,
   "toolbar": "ie",
   "family": "ie",
   "location": "http://home.microsoft.com/intl/web2012/",
@@ -1140,7 +1222,7 @@
       "label": "About"
     }
   ],
-  "chrome": "2007",
+  "chrome": null,
   "toolbar": "ie",
   "family": "ie",
   "location": "http://home.microsoft.com/intl/web2013/",
@@ -1197,7 +1279,7 @@
       "label": "About"
     }
   ],
-  "chrome": "2007",
+  "chrome": null,
   "toolbar": "ie",
   "family": "ie",
   "location": "http://home.microsoft.com/intl/web2014/",
@@ -1254,11 +1336,11 @@
       "label": "About"
     }
   ],
-  "chrome": "2007",
-  "toolbar": "ie",
-  "family": "ie",
-  "location": "http://home.microsoft.com/intl/web2016/",
-  "prefHome": "http://home.microsoft.com/intl/web2016/",
+  "chrome": null,
+  "toolbar": "chrome22",
+  "family": "chrome",
+  "location": "https://www.google.com/web2016/",
+  "prefHome": "https://www.google.com/web2016/",
   "yearLabel": "2016 · Windows 10 rising · Chrome habit · Edge Spartan residual",
   "windowTitle": "Welcome to the World Wide Web — Chrome habit",
   "connectH2": "Network Connections",
@@ -1268,52 +1350,7 @@
   "openLoc": "Open Location:",
   "aboutHtml": "<p><b>Chrome habit</b></p><p>Museum desktop. Educational historical Web exhibit.</p>",
   "startBanner": "Windows<b>10</b>",
-  "taskBtn": "Chrome",
-  "icon": "e",
-  "aria": "Chrome habit",
-  "locLabel": "Address",
-  "bookmarksTitle": "Favorites",
-  "mailPh": "you@example.com",
-  "hasTaskbar": true,
-  "maximized": true
-},
-  "2022": {
-  "title": "Chrome habit — 2022",
-  "css": [
-    "win95-netscape.css",
-    "chrome-habit.css",
-    "period-2022.css"
-  ],
-  "bodyClass": "year-2022 os-win10 browser-chrome-habit",
-  "boot": "browser-2022.js",
-  "dir": [
-    { "go": "pages/home.html", "label": "Start" },
-    { "go": "sites/chatgpt/index.html", "label": "1 ChatGPT" },
-    { "go": "sites/wordle/index.html", "label": "2 Wordle" },
-    { "go": "sites/twitter/index.html", "label": "3 Twitter" },
-    { "go": "sites/bereal/index.html", "label": "4 BeReal" },
-    { "go": "sites/iphone/14.html", "label": "5 Island" },
-    { "go": "sites/ftx/index.html", "label": "6 FTX" },
-    { "go": "sites/mastodon/index.html", "label": "7 Mastodon" },
-    { "go": "sites/tiktok/index.html", "label": "8 TikTok" },
-    { "go": "sites/windows11/index.html", "label": "9 Win11" },
-    { "go": "sites/playable/game.html", "label": "10 Game" }
-  ],
-  "chrome": "2007",
-  "toolbar": "chrome22",
-  "family": "chrome",
-  "location": "https://www.google.com/web2022/",
-  "prefHome": "https://www.google.com/web2022/",
-  "yearLabel": "2022 · Windows 10 mass · Chrome habit · ChatGPT Send",
-  "windowTitle": "Welcome to the World Wide Web — Chrome habit",
-  "connectH2": "Network Connections",
-  "connectBtn": "Connect (always-on broadband)",
-  "skipBtn": "Skip connect",
-  "thesis": "Initializing network adapter... Connect (always-on broadband) Skip connect 2022 thesis: you type to a model · GPT-4 is the trap · Send is the save. ChatGPT · Wordle · Twitter bird · BeReal.",
-  "openLoc": "Open Location:",
-  "aboutHtml": "<p><b>Chrome habit</b></p><p>Museum desktop. Educational historical Web exhibit.</p>",
-  "startBanner": "Windows<b>10</b>",
-  "taskBtn": "Chrome",
+  "taskBtn": "Chrome habit",
   "icon": "e",
   "aria": "Chrome habit",
   "locLabel": "Address",

@@ -99,24 +99,36 @@
     if (!entries || !entries.length) entries = [];
     function hasWandered() {
       try {
-        if (sessionStorage.getItem(wanderKey) === "1") return true;
-      } catch (eS) { /* */ }
-      try {
-        if (localStorage.getItem(wanderKey) === "1") return true;
-      } catch (eL) { /* */ }
-      return false;
+        return sessionStorage.getItem(wanderKey) === "1";
+      } catch (eS) {
+        return false;
+      }
     }
     function markWandered() {
       try {
         sessionStorage.setItem(wanderKey, "1");
       } catch (eS) { /* */ }
-      try {
-        localStorage.setItem(wanderKey, "1");
-      } catch (eL) { /* */ }
     }
-    if (link) {
-      link.addEventListener("click", function () {
+    /* official-verb stamps on click before this form's submit gate runs.
+       Keep its product-ready bit equal to the wander flag at click time. */
+    function syncReady() {
+      try {
+        if (doc.documentElement) {
+          doc.documentElement.setAttribute("data-official-product-ready", hasWandered() ? "1" : "0");
+        }
+      } catch (eR) { /* */ }
+    }
+    syncReady();
+    if (doc.documentElement && doc.documentElement.getAttribute("data-csotd-ready-sync") !== "1") {
+      doc.documentElement.setAttribute("data-csotd-ready-sync", "1");
+      doc.addEventListener("click", syncReady, true);
+    }
+    if (link && link.getAttribute("data-csotd-wander-bound") !== "1") {
+      link.setAttribute("data-csotd-wander-bound", "1");
+      link.addEventListener("click", function (ev) {
+        if (ev && ev.preventDefault) ev.preventDefault();
         markWandered();
+        syncReady();
       });
     }
 

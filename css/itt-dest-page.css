@@ -13,11 +13,17 @@
  */
 html {
   color-scheme: only light;
+}
+
+/* 2011 is exempt. A dark browser paints the root canvas black and only
+   colors the body, so a content-tall body leaves a black band. The fill
+   lives on the 2011 page itself (inline, important) and below. */
+html:not([data-itt-year="2011"]) {
   min-height: 0 !important;
   height: auto !important;
 }
 
-body {
+html:not([data-itt-year="2011"]) body {
   min-height: 0 !important;
   height: auto !important;
 }
@@ -76,11 +82,55 @@ table {
   margin: 0 2px;
 }
 
-html.has-itt-wayfind,
-body.has-itt-wayfind {
+html.has-itt-wayfind:not([data-itt-year="2011"]),
+html:not([data-itt-year="2011"]) body.has-itt-wayfind {
   min-height: 0 !important;
   height: auto !important;
   scroll-padding-bottom: 64px;
+}
+
+html[data-itt-year="2011"],
+html[data-itt-year="2011"] body {
+  color-scheme: only light !important;
+  forced-color-adjust: none !important;
+  background: #ece9d8 !important;
+  min-height: 100vh !important;
+  min-height: 100dvh !important;
+}
+html[data-itt-year="2011"] body {
+  margin: 0 !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+}
+html[data-itt-year="2011"] body * {
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+}
+html[data-itt-year="2011"] body a:link,
+html[data-itt-year="2011"] body a:link * {
+  color: #0000ee !important;
+  -webkit-text-fill-color: #0000ee !important;
+}
+html[data-itt-year="2011"] body a:visited,
+html[data-itt-year="2011"] body a:visited * {
+  color: #551a8b !important;
+  -webkit-text-fill-color: #551a8b !important;
+}
+html[data-itt-year="2011"] body input,
+html[data-itt-year="2011"] body textarea,
+html[data-itt-year="2011"] body select,
+html[data-itt-year="2011"] body button {
+  color-scheme: only light !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+}
+html[data-itt-year="2011"] body input[type="text"],
+html[data-itt-year="2011"] body input:not([type]),
+html[data-itt-year="2011"] body textarea {
+  background: #fff !important;
+}
+html[data-itt-year="2011"] body button {
+  background: #c0c0c0 !important;
 }
 
 body.has-itt-wayfind {

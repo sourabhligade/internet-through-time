@@ -1,34 +1,35 @@
-/* IE4 chrome overrides — loaded after win95-netscape.css for 1997 only */
+/* IE4 chrome. 1997 is os-win95 browser-ie4. 1998 is os-win98 browser-ie4.
+   The Win95/98 sheet stays win95-netscape.css. These rules are the IE4 deltas. */
 
 /* Title bar: IE4 blue gradient */
-.titlebar {
+:is(body.os-win95, body.os-win98).browser-ie4 .titlebar {
   background: linear-gradient(90deg, #0050a0, #0078d7);
 }
-.titlebar .title,
-.titlebar .icon {
+:is(body.os-win95, body.os-win98).browser-ie4 .titlebar .title,
+:is(body.os-win95, body.os-win98).browser-ie4 .titlebar .icon {
   color: #ffffff;
 }
 
 /* Toolbar: flatter look */
-.toolbar {
+:is(body.os-win95, body.os-win98).browser-ie4 .toolbar {
   background: #d4d0c8;
   border-bottom: 1px solid var(--chrome-shadow);
 }
-.toolbar .btn {
+:is(body.os-win95, body.os-win98).browser-ie4 .toolbar .btn {
   border: 1px solid transparent;
   background: transparent;
 }
-.toolbar .btn:hover {
+:is(body.os-win95, body.os-win98).browser-ie4 .toolbar .btn:hover {
   border: 1px solid var(--chrome-shadow);
   background: #e8e4dc;
 }
-.toolbar .btn:active {
+:is(body.os-win95, body.os-win98).browser-ie4 .toolbar .btn:active {
   border: 1px solid var(--chrome-dark);
   background: #c0bcb4;
 }
 
 /* Throbber: spinning "e" */
-.throbber:not(.idle) {
+:is(body.os-win95, body.os-win98).browser-ie4 .throbber:not(.idle) {
   animation: ie4-spin 1s linear infinite;
 }
 @keyframes ie4-spin {
@@ -37,33 +38,33 @@
 }
 
 /* Location bar: flatter */
-.locationbar {
+:is(body.os-win95, body.os-win98).browser-ie4 .locationbar {
   background: #d4d0c8;
 }
-.locationbar input {
+:is(body.os-win95, body.os-win98).browser-ie4 .locationbar input {
   border: 1px solid #808080;
   border-right-color: #ffffff;
   border-bottom-color: #ffffff;
 }
 
 /* Menu bar: subtle difference */
-.menubar {
+:is(body.os-win95, body.os-win98).browser-ie4 .menubar {
   background: #d4d0c8;
 }
 
 /* Directory bar: flatter */
-.dirbar {
+:is(body.os-win95, body.os-win98).browser-ie4 .dirbar {
   background: #d4d0c8;
 }
-.dirbar .dir-btn {
+:is(body.os-win95, body.os-win98).browser-ie4 .dirbar .dir-btn {
   border: 1px solid transparent;
 }
-.dirbar .dir-btn:hover {
+:is(body.os-win95, body.os-win98).browser-ie4 .dirbar .dir-btn:hover {
   border: 1px solid #808080;
   background: #e8e4dc;
 }
 
 /* Status bar matches */
-.statusbar {
+:is(body.os-win95, body.os-win98).browser-ie4 .statusbar {
   background: #d4d0c8;
 }

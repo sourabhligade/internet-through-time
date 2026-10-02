@@ -72,7 +72,7 @@ test.describe('1996 chrome buttons + dirbar (live, not mocks)', () => {
     const frame = page.frameLocator('#content');
     // Quick-btns removed — destinations list + browser dirbar are the wayfinding
     await expect(frame.getByRole('link', { name: /HoTMaiL|Yahoo/i }).first()).toBeVisible({ timeout: 10000 });
-    await expect(frame.locator('body')).toContainText(/Destinations|Places to try|Welcome/i);
+    await expect(frame.locator('body')).toContainText(/Do this first|HoTMaiL|Yahoo/i);
     const dirN = await page.locator('#dirbar .dir-btn').count();
     expect(dirN).toBeGreaterThanOrEqual(6);
   });

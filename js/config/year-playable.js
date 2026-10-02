@@ -163,6 +163,18 @@
       famous: "TrailSled",
       accent: "#00aced"
     },
+    "2008": {
+      id: "goospan",
+      title: "Goo Span",
+      href: "game.html",
+      key: "itt08-game-goospan",
+      inspire: "World of Goo (2 Oct 2008) — span, not their art",
+      blurb: "Span a leftover bridge. App Store never writes.",
+      why: "October 2008 physics toys. The star is still the App Store.",
+      era: "XP + IE7. App Store is a room. Chrome and the G1 are rooms.",
+      famous: "Pocket Snake + Brick Bat",
+      accent: "#3a6ea5"
+    },
     "2009": {
       id: "plot",
       title: "Plot Neighbors",

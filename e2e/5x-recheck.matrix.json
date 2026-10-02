@@ -391,42 +391,42 @@
       "star": "sites/facebook/index.html",
       "flows": [
         {
-          "suffix": "farm-5x",
+          "suffix": "fv5",
           "room": "sites/farmville/index.html",
           "next": "sites/bing/index.html",
-          "key": "itt09-farm-5x",
+          "key": "itt09-fv5",
           "ok": true,
           "checks": 2
         },
         {
-          "suffix": "bing",
+          "suffix": "bing5",
           "room": "sites/bing/index.html",
           "next": "sites/iphone/index.html",
-          "key": "itt09-bing",
+          "key": "itt09-bing5",
           "ok": true,
           "checks": 2
         },
         {
-          "suffix": "iphone",
+          "suffix": "3gs",
           "room": "sites/iphone/index.html",
           "next": "sites/foursquare/index.html",
-          "key": "itt09-iphone",
+          "key": "itt09-3gs",
           "ok": true,
           "checks": 2
         },
         {
-          "suffix": "foursquare",
+          "suffix": "venue",
           "room": "sites/foursquare/index.html",
           "next": "sites/windows7/index.html",
-          "key": "itt09-foursquare",
+          "key": "itt09-venue",
           "ok": true,
           "checks": 2
         },
         {
-          "suffix": "w7",
+          "suffix": "ie8",
           "room": "sites/windows7/index.html",
           "next": "sites/facebook/index.html",
-          "key": "itt09-w7",
+          "key": "itt09-ie8",
           "ok": true,
           "checks": 2
         }

@@ -40,17 +40,12 @@ test.describe("Bar A named dests · Phase 0–2", () => {
     );
   });
 
-  test("2006 YouTube leftover Watch leftover does not stamp itt06-yt", async ({ page }) => {
+  test("2006 YouTube has no yt-lx plaque; trap does not stamp itt06-yt", async ({ page }) => {
     await openClear(page, "/years/2006/sites/youtube/index.html", ["itt06-yt", "itt06-yt-lx"]);
-    const lo = page.locator('[data-lo-panel]:has([data-lo-save][data-lo-key="yt-lx"])').first();
-    const reqs = lo.locator("[data-lo-req]");
-    const n = await reqs.count();
-    for (let i = 0; i < n; i++) await reqs.nth(i).check({ force: true });
-    await lo.locator('[data-lo-pick="watch"]').click({ force: true });
-    await lo.locator("[data-lo-field]").fill("leftover yt");
-    await lo.locator('[data-lo-save][data-lo-key="yt-lx"]').click({ force: true });
-    await expect.poll(() => getKey(page, "itt06-yt-lx"), { timeout: 8000 }).toBeTruthy();
+    await expect(page.locator('[data-lo-key="yt-lx"]')).toHaveCount(0);
+    await page.locator("[data-yt06-trap]").click();
     expect(await getKey(page, "itt06-yt")).toBeFalsy();
+    expect(await getKey(page, "itt06-yt-lx")).toBeFalsy();
   });
 
   test("2004 Flickr Upload writes itt04-flickr", async ({ page }) => {
@@ -75,14 +70,16 @@ test.describe("Bar A named dests · Phase 0–2", () => {
   });
 
   test(" App Store catalog Get writes itt08-apps", async ({ page }) => {
-    const checks = page.locator("[data-appstore-check]");
-    const n = await checks.count();
-    for (let i = 0; i < n; i++) await checks.nth(i).check({ force: true });
-    const getBtn = page.locator("[data-appstore-install]").first();
-    await expect(getBtn).toBeVisible({ timeout: 8000 });
-    await getBtn.click();
-    const afterOne = await getKey(page, "itt08-apps");
-    if (!afterOne) await getBtn.click();
+    await openClear(page, "/years/2008/sites/appstore/index.html", ["itt08-apps", "itt08-apps-lx"]);
+    const verb = page.locator("[data-official-verb]").first();
+    await expect(verb).toBeVisible({ timeout: 8000 });
+    await verb.click();
+    expect(await getKey(page, "itt08-apps")).toBeFalsy();
+    await page.locator("[data-official-need]").first().fill("Remote");
+    const reqs = page.locator("[data-official-req]");
+    const nReq = await reqs.count();
+    for (let i = 0; i < nReq; i++) await reqs.nth(i).check();
+    await verb.click();
     await expect.poll(() => getKey(page, "itt08-apps"), { timeout: 8000 }).toBeTruthy();
     expect(await getKey(page, "itt08-apps-lx")).toBeFalsy();
     await expect(page.locator('[data-next-flow][data-next-when-key="itt08-apps"]')).toBeVisible();

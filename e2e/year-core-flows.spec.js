@@ -29,7 +29,7 @@ const {
 const YEARS = [
   '1994', '1995', '1996', '1997', '1998', '1999',
   '2000', '2001', '2002', '2003', '2004', '2005', '2006',
-  '2007','2010', '2012', '2013', '2014', '2015', '2016', '2017', '2022',
+  '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017',
 ].filter((year) => isLiveYear(year) && fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')));
 
 /** Location bar hint that should resolve inside each year (when known). */
@@ -57,11 +57,9 @@ const LOCATION_HINT = {
   '2015': { type: 'periscope', re: /periscope|live/i },
   '2016': { type: 'stories', re: /stor(y|ies)|instagram/i },
   '2017': { type: 'faceid', re: /face.?id|iphone.?x|animoji|no.?home/i },
-  '2022': { type: 'chatgpt', re: /chatgpt|send|prompt/i },
   '2023': { type: 'plus', re: /plus/i },
   '2024': { type: 'chatgpt', re: /4o/i },
   '2009': { type: 'facebook', re: /facebook/i },
-  '2022': { type: 'chatgpt', re: /chatgpt|send|research preview/i },
 };
 
 for (const year of YEARS) {

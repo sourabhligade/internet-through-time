@@ -1,7 +1,7 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2007 / 2010 / 2012–2017 / 2022 lean doors live. 2015 and 2017 are React doors. 2009 boarded. 2023+ wiped. Hallway ends at 2022. Do not invent rooms.
+ * 2007–2017 lean doors live. 2011 is live HTML. 2015 and 2017 are React doors. 2018–2025 are absent. Hallway ends at 2017. Do not invent rooms.
  */
 (function (global) {
   "use strict";
@@ -10,7 +10,7 @@
   var OPEN = (function openFromCard() {
     var years = ITT.YEAR_CARD && ITT.YEAR_CARD.years;
     var fallback = [
-      "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2010", "2012", "2013", "2014", "2015", "2016", "2017", "2022"
+      "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017"
     ];
     if (!years) return fallback;
     var out = [];
@@ -31,13 +31,13 @@
       { id: "gray", label: "Gray / directories", blurb: "Directories, SSL cart, portal hop.", years: ["1994", "1995", "1996"] },
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
       { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
- { id: "phone", label: "Phone eats the web", blurb: "App Store · Chrome · G1 → Instagram iOS → Circles. Vine 6s is the 2013 door.", years: ["2010", "2012", "2013"] },
-      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Periscope Go LIVE, Stories, Face ID, ChatGPT Send.", years: ["2014", "2015", "2016", "2017", "2022"] }
+ { id: "phone", label: "Phone eats the web", blurb: "App Store · Like · Chrome · G1 → Instagram iOS → Google+. Vine 6s is the 2013 door.", years: ["2008", "2009", "2010", "2011", "2012", "2013"] },
+      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Periscope Go LIVE, Stories, Face ID.", years: ["2014", "2015", "2016", "2017"] }
     ],
 
     leanYears: [
- "2007", "2010", "2012",
-      "2013", "2014", "2015", "2016", "2017", "2022"
+ "2007", "2008", "2009", "2010", "2011", "2012",
+      "2013", "2014", "2015", "2016", "2017"
     ],
 
     notThisYear: {
@@ -55,8 +55,10 @@
       "2005": "YouTube upload is the save. Maps / Reddit / Digg. Google does not own YouTube.",
       "2006": "140 because SMS. News Feed. No iPhone.",
       "2007": "Safari only. App Store is . Desktop still mass.",
+      "2008": "App Store is the save. Chrome is a room. Desktop stays XP + IE 7.",
       "2009": "Like, not Reactions. No iPad.",
       "2010": "iPhone only. Android Instagram is next year.",
+      "2011": "Circles are the save. Timeline is a room. IE 9 is March, not the January chrome.",
       "2012": "The square photo leaves the iPhone.",
       "2013": "Stories here are Snapchat, not Instagram.",
       "2014": "Messenger is the trap. Install is the save.",
@@ -81,8 +83,10 @@
       "2005": "You uploaded a clip. You dragged a map. You boosted a link. Google did not own YouTube yet.",
       "2006": "You typed 140 because SMS. News Feed was. There was no iPhone yet.",
       "2007": "You used Safari on the phone. The App Store was next year. Desktop was still mass.",
+      "2008": "You tapped FREE. Hundreds of apps, not millions day one. Chrome was a late download.",
       "2009": "You Liked a partner page. Beacon never wrote. Reactions were not here yet.",
       "2010": "The photo was square. The filter had a name. Android is next year.",
+      "2011": "You drew a circle. Spotify played in the US. You asked the phone. IE 9 was not the January window.",
       "2012": "The square left the iPhone. Wikipedia went dark for a day.",
       "2013": "The loop was six seconds. Stories here are Snapchat, not Instagram.",
       "2014": "Nineteen billion dollars. Install is the save. Messenger is the trap.",
@@ -91,7 +95,7 @@
       "2017": "There was no Home button. You looked. You swiped up. Two hundred and eighty characters."
     },
 
-    /* Guided 6 for years whose Starting Point is inline (start-data.js stops at 2009). */
+    /* Guided 6 for years whose Starting Point is inline. 2011 is in start-data.js. */
     guidedFull: {
       "2010": [
         { label: "About 2010", href: "years/2010/pages/about.html" },
@@ -294,6 +298,16 @@
         ],
         game: { label: "Sling Nest", href: "years/2010/sites/playable/game.html" }
       },
+      "2011": {
+        era: "Google+ · Spotify US · Siri",
+        thesis: "Circles, a US listen, and a voice on the 4S. IE 9 is March. Desktop stays Win7 + IE 8.",
+        gold: { label: "Google+", href: "years/2011/sites/googleplus/index.html", key: "itt11-gplus" },
+        guided: [
+          { label: "Spotify US", href: "years/2011/sites/spotify/index.html" },
+          { label: "Siri", href: "years/2011/sites/iphone/index.html" }
+        ],
+        game: { label: "Letter Swap", href: "years/2011/sites/playable/game.html" }
+      },
             "2012": {
         era: "Square photo · IPO · blackout",
         thesis: "Instagram leaves the iPhone. Facebook goes public. Wikipedia goes dark.",
@@ -313,6 +327,16 @@
           { label: "Gmail open", href: "years/2007/sites/gmail/index.html" }
         ],
         game: { label: "Safari Queue", href: "years/2007/sites/playable/game.html" }
+      },
+      "2008": {
+        era: "App Store · Chrome · G1",
+        thesis: "FREE/BUY is the save. Millions day one never writes. Desktop stays XP + IE 7.",
+        gold: { label: "App Store", href: "years/2008/sites/appstore/index.html", key: "itt08-apps" },
+        guided: [
+          { label: "Chrome", href: "years/2008/sites/chrome/index.html" },
+          { label: "Android G1", href: "years/2008/sites/android/index.html" }
+        ],
+        game: { label: "Goo Span", href: "years/2008/sites/playable/game.html" }
       },
       "2009": {
         era: "Like · FarmVille · XP + IE 8",
@@ -398,17 +422,8 @@
           { name: "Equifax freeze", key: "itt17-equifax", href: "/app/index.html#/year/2017?stop=itt17-equifax" },
           { name: "Storm Circle", key: "itt17-game-stormcircle", href: "/app/index.html#/year/2017?stop=itt17-game-stormcircle" }
         ]
-      },
-      "2022": {
-        era: "ChatGPT Send",
-        thesis: "Empty and GPT-4 never write. Send does. Wordle is leftover.",
-        gold: { label: "ChatGPT Send", href: "years/2022/sites/chatgpt/index.html", key: "itt22-chatgpt" },
-        guided: [
-          { label: "Wordle leftover", href: "years/2022/sites/wordle/index.html" }
-        ],
-        game: { label: "Year game", href: "years/2022/sites/playable/game.html" }
       }
-      },
+    },
 
     threads: [
       {

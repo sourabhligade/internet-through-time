@@ -197,6 +197,18 @@
  " <a href=\"map.html\" style=\"color:#9fd4f0\">Year flow map</a> "
  ]
 },
+ "2011": {
+ "href": "../sites/googleplus/index.html",
+ "label": "★ One-thing · Google+ Circle",
+ "items": [
+ " <a href=\"about.html\" style=\"color:#9fd4f0\">About 2011</a> — Win7 · IE 8",
+ " <a href=\"../sites/googleplus/index.html\" style=\"color:#9fd4f0\">Google+</a> — Circle",
+ " <a href=\"../sites/spotify/index.html\" style=\"color:#9fd4f0\">Spotify US</a> — listen",
+ " <a href=\"../sites/iphone/index.html\" style=\"color:#9fd4f0\">Siri</a> — ask",
+ " <a href=\"../sites/facebook/index.html\" style=\"color:#9fd4f0\">Timeline</a> — cover",
+ " <a href=\"map.html\" style=\"color:#9fd4f0\">Year flow map</a> "
+ ]
+},
  "2012": {
  "href": "../sites/instagram/android.html",
  "label": "★ One-thing · Instagram Android REAL",
@@ -259,17 +271,17 @@
  
  ]
 },
- "2022": {
- "href": "../sites/chatgpt/index.html",
- "label": "★ ChatGPT Send",
+ "2008": {
+ "href": "../sites/appstore/index.html",
+ "label": "★ One-thing · App Store FREE/BUY",
  "items": [
- " <a href=\"about.html\" style=\"color:#1565c0\">About 2022</a> — table ends  · ITU 5.3B / 66%",
- " <a href=\"../sites/chatgpt/index.html\" style=\"color:#1565c0\">★ ChatGPT Send</a> — empty / GPT-4 never writes",
- " <a href=\"../sites/wordle/index.html\" style=\"color:#1565c0\">Wordle</a> — NYT 31 Jan",
- " <a href=\"../sites/twitter/index.html\" style=\"color:#1565c0\">Twitter bird</a> — X is 2023",
- " <a href=\"../sites/bereal/index.html\" style=\"color:#1565c0\">BeReal</a> — 2-min drop",
- " <a href=\"map.html\" style=\"color:#1565c0\">Year flow map</a> "
+ " <a href=\"about.html\" style=\"color:#90caf9\">About 2008</a> — June 172,338,726 · users 1,571,601,630",
+ " <a href=\"../sites/appstore/index.html\" style=\"color:#90caf9\">★ App Store</a> — FREE/BUY · ~500 · millions day one never writes",
+ " <a href=\"../sites/chrome/index.html\" style=\"color:#90caf9\">Chrome</a> — 2 Sep / 1.0 11 Dec",
+ " <a href=\"../sites/github/issue.html\" style=\"color:#90caf9\">GitHub issue</a> — 10 Apr",
+ " <a href=\"../sites/android/index.html\" style=\"color:#90caf9\">Android G1</a> · <a href=\"../sites/hulu/index.html\" style=\"color:#90caf9\">Hulu</a>",
+ " <a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a> "
  ]
-}
+},
 };
 })(typeof window !== "undefined" ? window : this);

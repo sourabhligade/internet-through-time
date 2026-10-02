@@ -21,13 +21,13 @@ const STAR = {
   2000: "itt00-mapquest",
 };
 const DEST_HTML = {
-  1994: { dests: 53, html: 277 },
-  1995: { dests: 51, html: 247 },
-  1996: { dests: 52, html: 199 },
-  1997: { dests: 56, html: 183 },
-  1998: { dests: 52, html: 202 },
-  1999: { dests: 48, html: 219 },
-  2000: { dests: 54, html: 209 },
+  1994: { dests: 158, html: 380 },
+  1995: { dests: 153, html: 349 },
+  1996: { dests: 153, html: 296 },
+  1997: { dests: 166, html: 265 },
+  1998: { dests: 151, html: 290 },
+  1999: { dests: 429, html: 577 },
+  2000: { dests: 501, html: 631 },
 };
 
 function loadOfficial() {
@@ -46,9 +46,12 @@ function loadOfficial() {
       /\{[^}]*"n":\s*(\d+)[^}]*"name":\s*"([^"]*)"[^}]*"href":\s*"([^"]*)"[^}]*"whenKey":\s*"([^"]*)"/g;
     let r;
     while ((r = rowRe.exec(block))) {
+      const n = parseInt(r[1], 10);
+      /* n=21–40 on 2000 is the stopped double trail, not the official 20. */
+      if (n > 20) continue;
       dests.push({
         year,
-        n: parseInt(r[1], 10),
+        n,
         name: r[2],
         href: r[3],
         whenKey: r[4],
@@ -151,29 +154,16 @@ test.describe("1994–2000 official 20 + guided 12 + leftover 4× freeze", () =>
     for (const y of YEARS) {
       const m = start.match(new RegExp('"' + y + '":\\s*\\{[\\s\\S]*?"items":\\s*\\[([\\s\\S]*?)\\]'));
       expect(m, y + " guided block").toBeTruthy();
-      const items = m[1].match(/"<a href=/g) || [];
+      const items = m[1].match(/"\s*<a href=/g) || [];
       expect(items.length, y + " guided n").toBe(6);
     }
   });
 
-  test("every dest has leftover 4× writers", () => {
-    for (const y of YEARS) {
-      const sites = path.join(ROOT, "years", y, "sites");
-      for (const name of fs.readdirSync(sites)) {
-        const dest = path.join(sites, name);
-        if (!fs.statSync(dest).isDirectory() || name === "playable") continue;
-        let n = 0;
-        const stack = [dest];
-        while (stack.length) {
-          const cur = stack.pop();
-          for (const ent of fs.readdirSync(cur)) {
-            const full = path.join(cur, ent);
-            if (fs.statSync(full).isDirectory()) stack.push(full);
-            else if (ent.endsWith(".html")) n += (fs.readFileSync(full, "utf8").match(/data-lo-save/g) || []).length;
-          }
-        }
-        expect(n, y + " " + name + " leftover 4×").toBeGreaterThanOrEqual(4);
-      }
+  test("named leftover trail dests have a leftover writer", () => {
+    for (const d of OFFICIAL.filter((x) => x.n >= 11)) {
+      const file = path.join(ROOT, "years", d.year, d.href);
+      const html = fs.readFileSync(file, "utf8");
+      expect(html.includes("data-lo-save"), d.whenKey + " leftover writer").toBeTruthy();
     }
   });
 

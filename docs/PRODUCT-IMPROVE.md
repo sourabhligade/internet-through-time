@@ -1,5 +1,8 @@
 # Product improve map
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 **Date:** 2026-09-27
 **Status:** Historical recommendation. Not ship law. Live year list is [`DISK-TRUTH.md`](DISK-TRUTH.md).
 **Canonical year law (2026-09-29):** hub **22** years (1994–2007 + 2010 + 2012–2017 + 2022). 2015 and 2017 are React doors. 2009 is boarded. 2011, 2018–2021, and 2023–2025 are absent. Counts below are an older snapshot.
@@ -76,7 +79,7 @@ Do these in order. Do not dest-farm to “look complete.” Do not add 2022+ to 
 
 A 9,588-page museum that is not on a URL is a private corpus.
 
-- [x] `the working branch` pushed. The 2026-09-13 snapshot said 26 hub cards. The live hub is 22. 2022 is a live lean door.
+- [x] `museum/1994-2020-lean` pushed. The 2026-09-13 snapshot said 26 hub cards. The live hub is 22. 2022 is a live lean door.
 - [x] Deploy configs: `netlify.toml` publish `.`, `vercel.json` trailingSlash + year page rewrites, `.github/workflows/pages.yml` is **workflow_dispatch only**. Repo root is the document root.
 - [ ] Unlock GitHub Actions billing or stop claiming CI (not verified this pass).
 - [ ] Enable GitHub Pages / Netlify / Vercel public URL — user credentials / Settings → Pages. Do not flip Pages on from this pass.
@@ -123,8 +126,8 @@ Same pass as / 2012 / : dests = `urlMap` ∩ disk, then delete the rest. Shared 
 Order suggestion (largest leftover risk first):
 
 - [x] Snapshot called 2015 wiped and treated later years as React doors. Live law: 2015 and 2017 are the React doors. 2011 and 2018–2021 are absent.
-- [ ] 2004, 1999–2003, 2005–2007, 2010
-- [ ] 2009 only after Slice 2
+- [ ] 2004, 1999–2003, 2005–2007, 2010 — **STOP.** Do not dest-lock forests. Later museum law forbids this box.
+- [ ] 2009 only after Slice 2 — **STOP** unless a later named pass un-boards. DISK-TRUTH keeps 2009 boarded.
 
 ### Slice 6 — Optional, after the above
 

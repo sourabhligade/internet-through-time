@@ -64,15 +64,15 @@ const LIVE = {
     official: ["iphone", "streetview", "gmail", "fbplat", "twitter", "youtube", "tumblr", "kindle", "ie6", "playable"],
     ils: ["121,892,559"],
     doors: [
-      { dest: "/years/2007/sites/iptouch/index.html", go: "[data-pop-go][data-pop-id='iptouch']", key: "itt07-pop-iptouch", next: "apltv/index.html", nextKey: "itt07-pop-apltv", weather: /5 Sep 2007 Apple unveils iPod touch/i, lx: ["itt07-iptouch-dp"], never: ["itt07-iphone"] },
-      { dest: "/years/2007/sites/apltv/index.html", go: "[data-pop-go][data-pop-id='apltv']", key: "itt07-pop-apltv", next: "huluann/index.html", nextKey: "itt07-pop-huluann", weather: /Apple TV 2007 leftover set-top/i, lx: ["itt07-apltv-dp"], never: ["itt07-iphone"] },
-      { dest: "/years/2007/sites/huluann/index.html", go: "[data-pop-go][data-pop-id='huluann']", key: "itt07-pop-huluann", next: "gears/index.html", nextKey: "itt07-pop-gears", weather: /Hulu announced 2007/i, lx: ["itt07-huluann-dp"], never: ["itt07-iphone"] },
-      { dest: "/years/2007/sites/gears/index.html", go: "[data-pop-go][data-pop-id='gears']", key: "itt07-pop-gears", next: "halo3/index.html", nextKey: "itt07-pop-halo3", weather: /Google Gears 2007 offline web/i, lx: ["itt07-gears-dp"], never: ["itt07-iphone"] },
-      { dest: "/years/2007/sites/halo3/index.html", go: "[data-pop-go][data-pop-id='halo3']", key: "itt07-pop-halo3", next: "stumble/index.html", nextKey: "itt07-pop-stumble", weather: /Halo 3 25 Sep 2007 leftover/i, lx: ["itt07-halo3-dp"], never: ["itt07-iphone"] },
-      { dest: "/years/2007/sites/stumble/index.html", go: "[data-pop-go][data-pop-id='stumble']", key: "itt07-pop-stumble", next: "ipann/index.html", nextKey: "itt07-pop3-ipann", weather: /StumbleUpon leftover 2007/i, lx: ["itt07-stumble-dp"], never: ["itt07-iphone"] },
-      { dest: "/years/2007/sites/ipann/index.html", go: "[data-pop-go][data-pop-id='pop3-ipann']", key: "itt07-pop3-ipann", next: "vista/index.html", nextKey: "itt07-pop3-vista", weather: /9 Jan 2007 iPhone announce leftover/i, lx: ["itt07-ipann-dp"], never: ["itt07-iphone"] },
-      { dest: "/years/2007/sites/vista/index.html", go: "[data-pop-go][data-pop-id='pop3-vista']", key: "itt07-pop3-vista", next: "gim/index.html", nextKey: "itt07-pop3-gim", weather: /Vista leftover 2007/i, lx: ["itt07-vista-dp"], never: ["itt07-iphone", "itt07-ie6"] },
-      { dest: "/years/2007/sites/gim/index.html", go: "[data-pop-go][data-pop-id='pop3-gim']", key: "itt07-pop3-gim", next: "pages/home.html", nextKey: "", weather: /Gmail IMAP leftover 2007/i, lx: ["itt07-gim-dp"], never: ["itt07-iphone", "itt07-gmail"] }],
+      { dest: "/years/2007/sites/ipodtouch/index.html", go: "[data-pop-go][data-pop-id='ipodtouch']", key: "itt07-pop-ipodtouch", next: "appletv/index.html", nextKey: "itt07-pop-appletv", weather: /5 Sep 2007 Apple unveils iPod touch/i, lx: [], never: ["itt07-iphone"] },
+      { dest: "/years/2007/sites/appletv/index.html", go: "[data-pop-go][data-pop-id='appletv']", key: "itt07-pop-appletv", next: "gears/index.html", nextKey: "itt07-pop-gears", weather: /Apple TV 2007 leftover set-top/i, lx: [], never: ["itt07-iphone"] },
+      { dest: "/years/2007/sites/gears/index.html", go: "[data-pop-go][data-pop-id='gears']", key: "itt07-pop-gears", next: "stumble/index.html", nextKey: "itt07-pop-stumble", weather: /Google Gears 2007 offline web/i, lx: [], never: ["itt07-iphone"] },
+      { dest: "/years/2007/sites/stumble/index.html", go: "[data-pop-go][data-pop-id='stumble']", key: "itt07-pop-stumble", next: "friendfeed/index.html", nextKey: "itt07-pop-friendfeed", weather: /StumbleUpon leftover 2007/i, lx: [], never: ["itt07-iphone"] },
+      { dest: "/years/2007/sites/friendfeed/index.html", go: "[data-pop-go][data-pop-id='friendfeed']", key: "itt07-pop-friendfeed", next: "hackernews/index.html", nextKey: "itt07-pop-hackernews", weather: /FriendFeed leftover 2007/i, lx: [], never: ["itt07-iphone"] },
+      { dest: "/years/2007/sites/hackernews/index.html", go: "[data-pop-go][data-pop-id='hackernews']", key: "itt07-pop-hackernews", next: "netflix/index.html", nextKey: "itt07-pop-netflix", weather: /Hacker News 19 Feb 2007/i, lx: [], never: ["itt07-iphone"] },
+      { dest: "/years/2007/sites/netflix/index.html", go: "[data-pop-go][data-pop-id='netflix']", key: "itt07-pop-netflix", next: "justintv/index.html", nextKey: "itt07-pop-justintv", weather: /Netflix Watch Instantly leftover 2007/i, lx: [], never: ["itt07-iphone"] },
+      { dest: "/years/2007/sites/justintv/index.html", go: "[data-pop-go][data-pop-id='justintv']", key: "itt07-pop-justintv", next: "funnyordie/index.html", nextKey: "itt07-pop-funnyordie", weather: /Justin\.tv leftover 2007/i, lx: [], never: ["itt07-iphone"] },
+      { dest: "/years/2007/sites/funnyordie/index.html", go: "[data-pop-go][data-pop-id='funnyordie']", key: "itt07-pop-funnyordie", next: "pages/home.html", nextKey: "", weather: /Funny or Die leftover 2007/i, lx: [], never: ["itt07-iphone"] }],
   },
   2009: {
     star: "itt09-like",
@@ -100,15 +100,15 @@ const LIVE = {
     official: ["instagram", "iphone", "ipad", "facebook", "farmville", "imgur", "foursquare", "twitter", "youtube", "playable"],
     ils: ["206,956,723"],
     doors: [
-      { dest: "/years/2010/sites/uber/index.html", go: "[data-pop-go][data-pop-id='uber']", key: "itt10-pop-uber", next: "wikileaks/index.html", nextKey: "itt10-pop-wikileaks", weather: /UberCab SF 2010/i, lx: ["itt10-uber", "itt10-uber-sf"], never: ["itt10-ig-posts", "itt10-ig"] },
-      { dest: "/years/2010/sites/wikileaks/index.html", go: "[data-pop-go][data-pop-id='wikileaks']", key: "itt10-pop-wikileaks", next: "facetime/index.html", nextKey: "itt10-pop-facetime", weather: /28 Nov 2010 Cablegate/i, lx: ["itt10-wikileaks", "itt10-wl"], never: ["itt10-ig-posts"] },
-      { dest: "/years/2010/sites/facetime/index.html", go: "[data-pop-go][data-pop-id='facetime']", key: "itt10-pop-facetime", next: "windowsphone/index.html", nextKey: "itt10-pop-windowsphone", weather: /FaceTime leftover with iPhone 4|Wi-Fi only 2010/i, lx: ["itt10-ft-lx", "itt10-facetime"], never: ["itt10-ig-posts", "itt10-iphone4"] },
-      { dest: "/years/2010/sites/windowsphone/index.html", go: "[data-pop-go][data-pop-id='windowsphone']", key: "itt10-pop-windowsphone", next: "ie9/index.html", nextKey: "itt10-pop-ie9", weather: /Windows Phone 7 leftover|Nov 2010/i, lx: ["itt10-windowsphone", "itt10-windowspho-rlx"], never: ["itt10-ig-posts", "itt10-iphone4"] },
-      { dest: "/years/2010/sites/ie9/index.html", go: "[data-pop-go][data-pop-id='ie9']", key: "itt10-pop-ie9", next: "digg/index.html", nextKey: "itt10-pop-digg", weather: /Internet Explorer 9 preview leftover 2010/i, lx: ["itt10-ie-lx", "itt10-ie9"], never: ["itt10-ig-posts"] },
-      { dest: "/years/2010/sites/digg/index.html", go: "[data-pop-go][data-pop-id='digg']", key: "itt10-pop-digg", next: "browserchoice/index.html", nextKey: "itt10-pop3-browserchoice", weather: /Digg v4 leftover 25 Aug 2010/i, lx: ["itt10-digg-v4", "itt10-digg"], never: ["itt10-ig-posts"] },
-      { dest: "/years/2010/sites/browserchoice/index.html", go: "[data-pop-go][data-pop-id='pop3-browserchoice']", key: "itt10-pop3-browserchoice", next: "kickstarter/index.html", nextKey: "itt10-pop3-kickstarter", weather: /BrowserChoice\.eu 2010 leftover ballot/i, lx: ["itt10-ballot", "itt10-browserchoice"], never: ["itt10-ig-posts"] },
-      { dest: "/years/2010/sites/kickstarter/index.html", go: "[data-pop-go][data-pop-id='pop3-kickstarter']", key: "itt10-pop3-kickstarter", next: "reddit/index.html", nextKey: "itt10-pop3-reddit", weather: /Kickstarter leftover 2010 habit/i, lx: ["itt10-kickstarter", "itt10-ks-lx"], never: ["itt10-ig-posts"] },
-      { dest: "/years/2010/sites/reddit/index.html", go: "[data-pop-go][data-pop-id='pop3-reddit']", key: "itt10-pop3-reddit", next: "pages/home.html", nextKey: "", weather: /Reddit leftover 2010 habit/i, lx: ["itt10-rd-lx", "itt10-reddit"], never: ["itt10-ig-posts"] }],
+      { dest: "/years/2010/sites/hulu/index.html", go: "[data-pop-go][data-pop-id='hulu']", key: "itt10-pop-hulu", next: "groupon/index.html", nextKey: "itt10-pop-groupon", weather: /Hulu leftover 2010/i, lx: [], never: ["itt10-ig-posts", "itt10-ig"] },
+      { dest: "/years/2010/sites/groupon/index.html", go: "[data-pop-go][data-pop-id='groupon']", key: "itt10-pop-groupon", next: "minecraft/index.html", nextKey: "itt10-pop-minecraft", weather: /Groupon leftover 2010/i, lx: [], never: ["itt10-ig-posts"] },
+      { dest: "/years/2010/sites/minecraft/index.html", go: "[data-pop-go][data-pop-id='minecraft']", key: "itt10-pop-minecraft", next: "kinect/index.html", nextKey: "itt10-pop-kinect", weather: /Minecraft leftover 2010/i, lx: [], never: ["itt10-ig-posts"] },
+      { dest: "/years/2010/sites/kinect/index.html", go: "[data-pop-go][data-pop-id='kinect']", key: "itt10-pop-kinect", next: "flipboard/index.html", nextKey: "itt10-pop-flipboard", weather: /Kinect leftover 2010/i, lx: [], never: ["itt10-ig-posts"] },
+      { dest: "/years/2010/sites/flipboard/index.html", go: "[data-pop-go][data-pop-id='flipboard']", key: "itt10-pop-flipboard", next: "angry/index.html", nextKey: "itt10-pop-angry", weather: /Flipboard leftover 2010/i, lx: [], never: ["itt10-ig-posts"] },
+      { dest: "/years/2010/sites/angry/index.html", go: "[data-pop-go][data-pop-id='angry']", key: "itt10-pop-angry", next: "path/index.html", nextKey: "itt10-pop-path", weather: /Angry Birds leftover 2010/i, lx: [], never: ["itt10-ig-posts"] },
+      { dest: "/years/2010/sites/path/index.html", go: "[data-pop-go][data-pop-id='path']", key: "itt10-pop-path", next: "googlebuzz/index.html", nextKey: "itt10-pop-googlebuzz", weather: /Path leftover 2010/i, lx: [], never: ["itt10-ig-posts"] },
+      { dest: "/years/2010/sites/googlebuzz/index.html", go: "[data-pop-go][data-pop-id='googlebuzz']", key: "itt10-pop-googlebuzz", next: "reddit/index.html", nextKey: "itt10-pop3-reddit", weather: /Google Buzz leftover 2010/i, lx: [], never: ["itt10-ig-posts"] },
+      { dest: "/years/2010/sites/reddit/index.html", go: "[data-pop-go][data-pop-id='pop3-reddit']", key: "itt10-pop3-reddit", next: "pages/home.html", nextKey: "", weather: /Reddit leftover 2010 habit/i, lx: [], never: ["itt10-ig-posts"] }],
   },
 };
 
@@ -227,16 +227,17 @@ test.describe("leftover 3× first-pack dest machines that were missing", () => {
   }
 
   test("leftover-2× dest-wrong Maps leftover is gone on KEEP dests", async ({ page }) => {
-  await revealLeftoverRails(page);
+    await page.goto("/years/2005/sites/lastfm/index.html");
+    await revealLeftoverRails(page);
     const labels = await page.locator("[data-lo-save]").allTextContents();
     expect(labels.join(" ")).not.toMatch(/Maps leftover/);
-    expect(labels.join(" ")).toMatch(/Scrobble leftover/);
+    expect(labels.join(" ")).toMatch(/Scrobble/);
   });
 });
 
 test.describe("CUT-3X-2X-2005-2010 dest folders stay frozen", () => {
-  test("dest folders stay 117 / 126 / 55 / 199 / 68 / 44", () => {
-    const want = { 2006: 126, 2007: 55, 2009: 68, 2010: 44 };
+  test("dest folders stay at the live lean counts", () => {
+    const want = { 2006: 370, 2007: 33, 2009: 78, 2010: 29 };
     for (const [y, n] of Object.entries(want)) {
       const dir = path.join(ROOT, "years", y, "sites");
       const got = fs.readdirSync(dir).filter((name) => fs.statSync(path.join(dir, name)).isDirectory()).length;
@@ -300,10 +301,10 @@ for (const [year, spec] of Object.entries(LIVE)) {
         }
       }
       if (year === "2006") expect(twoXH.join(" ")).toMatch(/wii/);
-      if (year === "2007") expect(twoXH.join(" ")).toMatch(/iptouch/);
+      if (year === "2007") expect(twoXH.join(" ")).toMatch(/ipodtouch/);
       if (year === "") expect(twoXH.join(" ")).toMatch(/airbnb/);
       if (year === "2009") expect(twoXH.join(" ")).toMatch(/wolfram/);
-      if (year === "2010") expect(twoXH.join(" ")).toMatch(/uber/);
+      if (year === "2010") expect(twoXH.join(" ")).toMatch(/hulu/);
 
       // lean years must not grow a fake pop-more nine
       if (year === "2006" || year === "2007" || year === "2009") {

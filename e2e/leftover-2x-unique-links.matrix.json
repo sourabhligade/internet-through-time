@@ -1071,6 +1071,79 @@
     "n": 14
   },
   {
+    "year": "2008",
+    "dests": [
+      "cuil",
+      "bitcoin",
+      "friendfeed",
+      "tweetdeck",
+      "bitly",
+      "recaptcha",
+      "fbconnect",
+      "beacon",
+      "mybo",
+      "changegov",
+      "lehman",
+      "justin",
+      "ustream",
+      "vimeo",
+      "kongregate",
+      "newgrounds",
+      "miniclip",
+      "mafiawars",
+      "scrabulous",
+      "wow",
+      "spore",
+      "braid",
+      "lbp",
+      "gtaiv",
+      "clubpenguin",
+      "iplayer",
+      "mint",
+      "yelp",
+      "etsy",
+      "limewire",
+      "piratebay",
+      "mobileme",
+      "lively",
+      "knol"
+    ],
+    "n": 34
+  },
+  {
+    "year": "2009",
+    "dests": [
+      "wolfram",
+      "gvoice",
+      "palmpre",
+      "angry",
+      "bitcoin",
+      "ubercab",
+      "whatsapp",
+      "roblox",
+      "safari",
+      "amz",
+      "pp",
+      "ps",
+      "xbox",
+      "li",
+      "ie8",
+      "spotify",
+      "beacon",
+      "nintendo",
+      "ff",
+      "ss",
+      "mint",
+      "etsy",
+      "opentable",
+      "kiva",
+      "couchsurfing",
+      "hootsuite",
+      "typekit"
+    ],
+    "n": 27
+  },
+  {
     "year": "2010",
     "dests": [
       "angry",
@@ -1190,23 +1263,5 @@
     "year": "2017",
     "dests": [],
     "n": 0
-  },
-  {
-    "year": "2022",
-    "dests": [
-      "temu",
-      "stablediff",
-      "midjourney",
-      "dalle2",
-      "ios16",
-      "m2",
-      "google",
-      "youtube",
-      "facebook",
-      "wikipedia",
-      "reddit",
-      "instagram"
-    ],
-    "n": 12
   }
 ]

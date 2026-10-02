@@ -20,8 +20,12 @@ test.describe('1997 Slashdot + PointCast', () => {
     await waitForImmersion(page, '1997');
     await expect(frame.locator('form[data-sd-comment-form]')).toBeVisible({ timeout: 15000 });
     await frame.locator('input[name="nick"]').fill('TestNerd');
-    await frame.locator('input[name="subject"]').fill('E2E comment');
+    const subject = frame.locator('input[name="subject"]');
+    if (await subject.count()) await subject.fill('E2E comment');
     await frame.locator('textarea[name="body"]').fill('Posted by Playwright.');
+    const reqs = frame.locator('form[data-sd-comment-form] [data-official-req]');
+    const nReq = await reqs.count();
+    for (let i = 0; i < nReq; i++) await reqs.nth(i).check({ force: true });
     await frame.locator('form[data-sd-comment-form] input[type="submit"]').click({ force: true });
     await expect(frame.locator('[data-sd-comments]')).toContainText(/E2E comment|TestNerd|Playwright/i, {
       timeout: 10000,
@@ -44,19 +48,18 @@ test.describe('1997 Slashdot + PointCast', () => {
     await goInFrame(page, 'sites/pointcast/index.html');
     const frame = contentFrame(page);
     await waitForImmersion(page, '1997');
-    await expect(frame.locator('text=/PointCast/i').first()).toBeVisible({ timeout: 10000 });
+    await expect(frame.locator("h1").filter({ hasText: "PointCast Network" })).toBeVisible({ timeout: 10000 });
     await expect(frame.locator('a[href*="channels"]').first()).toBeVisible();
     await goInFrame(page, 'sites/pointcast/channels.html');
     await waitForImmersion(page, '1997');
     await expect(contentFrame(page).locator('body')).toContainText(/Channel/i, { timeout: 10000 });
   });
 
-  test('Amazon Book of the Day renders', async ({ page }) => {
+  test('Amazon IPO room renders', async ({ page }) => {
     await enterYear(page, '1997');
-    await goInFrame(page, 'sites/amazon/index.html');
+    await goInFrame(page, 'sites/amazonipo/index.html');
     const frame = contentFrame(page);
     await waitForImmersion(page, '1997');
-    await expect(frame.locator('[data-book-of-day]')).toBeVisible({ timeout: 10000 });
-    await expect(frame.locator('[data-book-of-day]')).not.toBeEmpty();
+    await expect(frame.getByText(/Amazon IPO|prospectus/i).filter({ visible: true }).first()).toBeVisible({ timeout: 10000 });
   });
 });

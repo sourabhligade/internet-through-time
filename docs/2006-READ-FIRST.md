@@ -1,5 +1,8 @@
 # 2006 — READ FIRST
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 **Date:** 2026-08-31  
 **Status:** **implemented 2026-08-31.** Full-year door scaffolded from `years/2005`. Do **not** `git checkout` the wiped tree.  
 **This file is the year lock.**  

@@ -1,8 +1,10 @@
 # Code structure — SRP map
 
-**Date:** 2026-09-20  
+**Date:** 2026-09-20 · **Docs pass:** 2026-09-30  
 **Law:** Year differences live in **config + dest HTML**. Shared behavior lives **once**. See [`ARCHITECTURE.md`](ARCHITECTURE.md).  
-**Do not** dest-farm leftover-20, dest-lock forests, or grow leftover-3× unique past =3 / 2021=5 while cleaning.
+**Do not** dest-farm leftover-20, dest-lock forests, or grow leftover-3× unique catalogs (they are **empty**). Unique leftover-20 is **2017 only**.
+
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **24 doors** (1994–2017). **2011 is live HTML** (`years/2011/`, `itt11-gplus`). **2015 and 2017 are React.** **2018–2025 are absent.** Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 ## Target layout
 
@@ -18,7 +20,7 @@ js/immersion/boot.js year-agnostic loader (reads data-itt-year or /years/YYYY/)
 ui/year/ Starting Point / shell (canonical)
 js/year-ui/ shims → ui/year/ (atlas still loads start-data here)
 e2e/ Playwright
- dest-true CI pack 16 specs in package.json test:e2e:dest-true
+ dest-true CI pack 18 specs in package.json test:e2e:dest-true / scripts/ci.sh
  warehouse specs leftover densify / leftover-999 — not CI
 docs/DISK-TRUTH.md live dest-folder counts
 ```
@@ -29,7 +31,7 @@ docs/DISK-TRUTH.md live dest-folder counts
 |--------|--------|----------------|
 | `official-verb.js` | official trail `whenKey` `{real, year, official}` | empty, trap, leftover dest leftover |
 | `leftover-official.js` | leftover dest leftover `{real, leftover:true}` | official n=1–10, star |
-| leftover-3× unique | leftover-3× unique dest keys | leftover dest leftover, star |
+| leftover-3× unique | **none** — catalogs empty | leftover dest leftover, star |
 | year extras (`year-2013-extras.js` …) | year-true product machines (Vine 6s, GDPR) | leftover dest leftover clones |
 
 ## Year shims

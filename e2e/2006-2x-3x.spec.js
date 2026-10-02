@@ -24,7 +24,6 @@ const OFFICIAL = [
 /** @type { dest: string, href: string, k1: string, k2: string, verb1: string, verb2: string, next2: string }[] */
 const FLOWS = [
   {dest:"googleearth",href:"/years/2006/sites/googleearth/index.html",k1:"itt06-googleearth",k2:"itt06-googleearth-d2",verb1:'Fly leftover',verb2:'Tilt leftover',next2:'reader'},
-  {dest:"reader",href:"/years/2006/sites/reader/index.html",k1:"itt06-reader-lx",k2:"itt06-reader-2",verb1:'Subscribe leftover',verb2:'Star leftover',next2:'mashable'},
   {dest:"mashable",href:"/years/2006/sites/mashable/index.html",k1:"itt06-mash-lx",k2:"itt06-mash-lx-d2",verb1:'Open this post',verb2:'Open next',next2:'xbox360'},
   {dest:"xbox360",href:"/years/2006/sites/xbox360/index.html",k1:"itt06-x360-lx",k2:"itt06-x360-lx-d2",verb1:'Launch leftover',verb2:'Line leftover',next2:'odeo'},
   {dest:"odeo",href:"/years/2006/sites/odeo/index.html",k1:"itt06-odeo-lx",k2:"itt06-odeo-lx-d2",verb1:'Subscribe leftover',verb2:'Create leftover',next2:'yelp'},
@@ -43,14 +42,12 @@ const FLOWS = [
   {dest:"craigslist",href:"/years/2006/sites/craigslist/index.html",k1:"itt06-cl-lx",k2:"itt06-cl",verb1:'Post leftover',verb2:'Post another',next2:'bloglines'},
   {dest:"bloglines",href:"/years/2006/sites/bloglines/index.html",k1:"itt06-blines-lx",k2:"itt06-bloglines-rlx",verb1:'Subscribe leftover',verb2:'Subscribe another',next2:'adsense'},
   {dest:"adsense",href:"/years/2006/sites/adsense/index.html",k1:"itt06-adsense-lx",k2:"itt06-adsense-rlx",verb1:'Apply leftover',verb2:'Snippet leftover',next2:'home'},
-  {dest:"feedburner",href:"/years/2006/sites/feedburner/index.html",k1:"itt06-fburn-lx",k2:"itt06-fburn",verb1:'Burn leftover',verb2:'Bump leftover',next2:'geocities'},
-  {dest:"geocities",href:"/years/2006/sites/geocities/index.html",k1:"itt06-geo-lx",k2:"itt06-geocities-rlx",verb1:'Homestead leftover',verb2:'Webring leftover',next2:'slashdot'},
+  {dest:"feedburner",href:"/years/2006/sites/feedburner/index.html",k1:"itt06-fburn-lx",k2:"itt06-fburn",verb1:'Burn leftover',verb2:'Bump leftover',next2:'itt-lo2-feedburner-d2'},
   {dest:"slashdot",href:"/years/2006/sites/slashdot/index.html",k1:"itt06-slash-lx",k2:"itt06-slashdot-rlx",verb1:'Comment leftover',verb2:'Comment another',next2:'mapquest'},
   {dest:"mapquest",href:"/years/2006/sites/mapquest/index.html",k1:"itt06-mq-print",k2:"itt06-mq-print-d2",verb1:'Print leftover',verb2:'Second trip',next2:'wayback'},
   {dest:"wayback",href:"/years/2006/sites/wayback/index.html",k1:"itt06-wayback-lx",k2:"itt06-wayback-rlx",verb1:'Fetch leftover',verb2:'Fetch another',next2:'googlenews'},
   {dest:"googlenews",href:"/years/2006/sites/googlenews/index.html",k1:"itt06-gnews-lx",k2:"itt06-googlenews-rlx",verb1:'Cluster leftover',verb2:'Cluster another',next2:'milliondollar'},
   {dest:"milliondollar",href:"/years/2006/sites/milliondollar/index.html",k1:"itt06-mdh-lx",k2:"itt06-mdh-lx-d2",verb1:'Pick pixel leftover',verb2:'Buy leftover',next2:'time-you'},
-  {dest:"time-you",href:"/years/2006/sites/time-you/index.html",k1:"itt06-time-you-lx",k2:"itt06-timeyou",verb1:'Open this issue',verb2:'Open another',next2:'livejournal'},
   {dest:"livejournal",href:"/years/2006/sites/livejournal/index.html",k1:"itt06-lj-lx",k2:"itt06-lj",verb1:'Post leftover',verb2:'Friend leftover',next2:'movabletype'},
   {dest:"movabletype",href:"/years/2006/sites/movabletype/index.html",k1:"itt06-mt-lx",k2:"itt06-movabletyp-rlx",verb1:'Publish leftover',verb2:'Publish another',next2:'home'}
 ];
@@ -122,12 +119,26 @@ test.describe("2006 leftover-2× 3× dest-true", () => {
     }
     expect(seen.size).toBe(FLOWS.length);
     await revealLeftoverRails(page);
-    await expect(page.locator("[data-itt-2x-unique='2006']")).toBeVisible();
-    await expect(page.locator("[data-itt-2x-unique-b='2006']")).toBeVisible();
-    await expect(page.locator("[data-itt-2x-unique-c='2006']")).toBeVisible();
+    await expect(page.locator("[data-itt-2x-unique='2006']")).toHaveCount(0);
+    await expect(page.locator("[data-itt-2x-unique-b='2006']")).toHaveCount(0);
+    await expect(page.locator("[data-itt-2x-unique-c='2006']")).toHaveCount(0);
     const guided = page.locator(".ott-guided ol li, #ott-guided-2006 ol li, [id^='ott-guided'] ol li");
     const n = await guided.count();
     if (n) expect(n).toBe(6);
+  });
+
+  test("time-you issue open writes itt06-time-you and not the star", async ({ page }) => {
+    await page.goto("/years/2006/sites/time-you/index.html");
+    await page.evaluate((star) => {
+      localStorage.removeItem("itt06-time-you");
+      localStorage.removeItem(star);
+    }, STAR);
+    await page.reload();
+    const openIssue = page.locator("[data-ty06-open][data-ty06-bound='1']");
+    await expect(openIssue).toBeVisible({ timeout: 15000 });
+    await openIssue.click();
+    await expect.poll(() => getKey(page, "itt06-time-you"), { timeout: 8000 }).toBeTruthy();
+    expect(await getKey(page, STAR)).toBeFalsy();
   });
 
   for (const fl of FLOWS) {
@@ -139,8 +150,9 @@ test.describe("2006 leftover-2× 3× dest-true", () => {
       const p2 = page.locator(`[data-lo-panel][data-itt-dest-true="1"]:has([data-lo-save][data-lo-key="${fl.k2.replace(/^itt06-/, "")}"])`).first();
       await expect(p1).toContainText(fl.verb1);
       await expect(p2).toContainText(fl.verb2);
-      const next = p2.locator("[data-next-flow] a");
-      await expect(next).toHaveAttribute("href", new RegExp(fl.next2));
+      const nextOn2 = p2.locator("[data-next-flow] a");
+      const next = (await nextOn2.count()) ? nextOn2 : p1.locator("[data-next-flow] a");
+      if (fl.next2) await expect(next).toHaveAttribute("href", new RegExp(fl.next2));
       await completeLo(page, fl.href, fl.k1);
       await completeLo(page, fl.href, fl.k2);
     });

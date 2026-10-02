@@ -1,5 +1,8 @@
 # Every year · every flow — criteria checklist
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 **Date:** 2026-09-26
 **Status:** Working checklist vs live disk. Not ship law. Ship law is [`DISK-TRUTH.md`](DISK-TRUTH.md) + `scripts/itt_gate.py` `SHIP_YEARS`.
 **I/O:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14. Lean leftover: [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) D1–D15. Leftover-2× rails: [`LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md) L1–L13. Visitor 100%: dest-true **flows**, not dest-folder count.

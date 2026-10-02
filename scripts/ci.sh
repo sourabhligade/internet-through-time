@@ -15,6 +15,9 @@ python3 scripts/test-authenticity.py
 echo "==> Static: pipeline"
 python3 scripts/test-pipeline.py
 
+echo "==> Static: year chrome parity"
+python3 scripts/check-year-chrome.py
+
 echo "==> Static: 5× leftover contract"
 python3 scripts/check-5x-contract.py
 
@@ -65,8 +68,8 @@ npx playwright test \
   e2e/year-true-packs.spec.js \
   e2e/2016-3x-detail.spec.js \
   e2e/2017-mvp.spec.js \
-  e2e/2022-mvp.spec.js \
-  e2e/2022-flows.spec.js \
+  e2e/2008-mvp.spec.js \
+  e2e/2009-mvp.spec.js \
   e2e/dest-top.spec.js \
   e2e/follow-site.spec.js \
   --workers=2

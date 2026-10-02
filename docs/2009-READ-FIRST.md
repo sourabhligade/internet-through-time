@@ -1,7 +1,10 @@
-# 2009 — READ FIRST (boarded)
+# 2009 — READ FIRST (live lean door)
 
-**Date:** 2026-09-13  
-**Status:** **boarded.** `years/2009/` stays on disk. Year-shell `index.html` is a plaque (not a hub redirect). `/pages/home.html` redirects to the plaque. No year card. No leftover implement pass. Star on disk remains Facebook Like `itt09-like`.  
+**Live hub is 24 doors** (1994–2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
+**Date:** 2026-09-30  
+**Status:** **live lean HTML door.** Hub card `years/2009/`. Star is Facebook Like `itt09-like`. Dest-true official-verb. Leftover never writes the star. Leftover-2× rails wait on `2x`.  
 **Disk law:** [`DISK-TRUTH.md`](DISK-TRUTH.md).  
 **Prefix:** `itt09-*`
 

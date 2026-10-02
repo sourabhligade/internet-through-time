@@ -47,7 +47,7 @@ test.describe('1997 5× live F1–F5', () => {
     await expect(page.locator('[data-5x-save]')).toHaveCount(0);
     await page.locator('[data-drudge-story="ie4"]').click();
     await page.goto('/years/1997/sites/drudge/index.html');
-    await page.locator('[data-drudge-story="amazon"]').click();
+    await page.locator('[data-drudge-story="pathfinder"]').click();
     await expect.poll(async () => getKey(page, 'itt97-drudge'), { timeout: 8000 }).toBeTruthy();
   });
 

@@ -132,7 +132,6 @@
       for (i = 0; i < 9; i++) {
         if (state.plots[i].state === "growing") {
           state.plots[i].state = "ready";
-          save(state);
           say("Neighbor finished a plot.");
           paint();
           return;
@@ -145,7 +144,7 @@
   if (start) {
     start.addEventListener("click", function () {
       state = { gameId: "plot", year: "2009", coins: 30, harvests: 0, plots: emptyPlots(), real: true };
-      save(state);
+      try { localStorage.removeItem(key); } catch (eR) { /* */ }
       say("New farm.");
       paint();
     });

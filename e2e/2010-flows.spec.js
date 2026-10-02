@@ -51,8 +51,7 @@ test.describe('2010 flows A–T', () => {
     const card = page.locator('a.year-card.available.y2010[href*="years/2010"]');
     await expect(card).toBeVisible();
     await card.click();
-    const skip = page.locator('#skip-connect');
-    if (await skip.isVisible().catch(() => false)) await skip.click();
+    await page.locator('#skip-connect').click({ timeout: 2500 }).catch(() => {});
     await expect(page.locator('body')).toHaveAttribute('data-itt-year', '2010');
     await expect(page.locator('body')).toHaveClass(/os-win7/);
     await expect(page.locator('body')).toHaveClass(/browser-ie8/);
@@ -302,6 +301,30 @@ test.describe('2010 flows A–T', () => {
     await expect.poll(() => getKey(page, 'itt10-ballot')).toMatch(/Chrome|real/i);
   });
 
+  test('U Reddit submit empty blocked · title and link write itt10-reddit-links', async ({ page }) => {
+    test.skip(!destOnDisk('/years/2010/sites/reddit/submit.html'), 'dest-lock');
+    await page.setViewportSize({ width: 1280, height: 800 });
+    await page.goto('/years/2010/sites/reddit/submit.html');
+    await clearKeys(page, ['itt10-reddit-links', 'itt10-ig-posts', 'itt10-reddit']);
+    await page.reload();
+    await page.locator('[data-reddit-submit][data-reddit-form-bound="1"]').waitFor({ timeout: 20000 });
+    await page.locator('[data-reddit-submit] button[type="submit"]').click();
+    expect(await getKey(page, 'itt10-reddit-links')).toBeFalsy();
+    expect(await getKey(page, 'itt10-ig-posts')).toBeFalsy();
+    await page.locator('[data-reddit-submit] [name="title"]').fill('Museum pizza');
+    await page.locator('[data-reddit-submit] button[type="submit"]').click();
+    expect(await getKey(page, 'itt10-reddit-links')).toBeFalsy();
+    await page.locator('[data-reddit-submit] [name="url"]').fill('http://i.imgur.com/museum.png');
+    await page.locator('[data-reddit-submit] button[type="submit"]').click();
+    await expect.poll(() => getKey(page, 'itt10-reddit-links')).toMatch(/Museum pizza/);
+    const raw = await getKey(page, 'itt10-reddit-links');
+    expect(raw).toMatch(/"real":true/);
+    expect(raw).toContain('2010');
+    expect(raw).not.toContain('itt10-ig-posts');
+    expect(await getKey(page, 'itt10-ig-posts')).toBeFalsy();
+    expect(await getKey(page, 'itt10-reddit')).toBeFalsy();
+  });
+
   test('T Sling Nest start scores · famous cabinets load', async ({ page }) => {
     await page.goto('/years/2010/sites/playable/game.html');
     await page.locator('#play-start').click();
@@ -329,7 +352,6 @@ test.describe('2010 continuity + trails live', () => {
     '/years/2010/sites/android/index.html',
     '/years/2010/sites/windowsphone/index.html',
     '/years/2010/sites/reddit/index.html',
-    '/years/2010/sites/reddit/submit.html',
     '/years/2010/sites/ipad/safari.html',
   ];
 

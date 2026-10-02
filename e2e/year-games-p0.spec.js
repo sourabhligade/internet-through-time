@@ -116,7 +116,7 @@ test.describe('P0 2004 Gem Cascade fixtures', () => {
 
 test.describe('P0  Goo Span far click', () => {
   test('far click does not add a node', async ({ page }) => {
-    const frame = await openGame(page);
+    const frame = await openGame(page, '2008');
     await frame.locator('[data-game-start]').click();
     await expect(frame.locator('[data-year-game]')).toHaveAttribute('data-goo-nodes', '2');
     const canvas = frame.locator('canvas');

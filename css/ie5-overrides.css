@@ -4,7 +4,7 @@
    ============================================================ */
 
 /* Shared Win9x bevel helpers */
-body.browser-ie5 {
+:is(body.browser-ie5, body.browser-ie55) {
   --ie-face: #d4d0c8;
   --ie-hi: #ffffff;
   --ie-lo: #808080;
@@ -52,7 +52,7 @@ body.year-1999 .exit-bar a:hover {
 }
 
 /* Window frame slightly tighter */
-body.browser-ie5 .browser {
+:is(body.browser-ie5, body.browser-ie55) .browser {
   border-top-color: var(--ie-hi);
   border-left-color: var(--ie-hi);
   border-right-color: var(--ie-dk);
@@ -60,21 +60,21 @@ body.browser-ie5 .browser {
 }
 
 /* ----- Title bar ----- */
-body.browser-ie5 .titlebar {
+:is(body.browser-ie5, body.browser-ie55) .titlebar {
   background: linear-gradient(90deg, var(--ie-blue) 0%, #3c78b4 55%, var(--ie-blue2) 100%);
   border-bottom: 1px solid #000040;
   min-height: 20px;
   padding: 2px 3px 2px 4px;
   align-items: center;
 }
-body.browser-ie5 .titlebar .title {
+:is(body.browser-ie5, body.browser-ie55) .titlebar .title {
   color: #fff;
   font-family: "MS Sans Serif", Tahoma, sans-serif;
   font-size: 11px;
   font-weight: bold;
   text-shadow: 1px 1px 0 rgba(0,0,40,0.45);
 }
-body.browser-ie5 .titlebar .icon {
+:is(body.browser-ie5, body.browser-ie55) .titlebar .icon {
   width: 16px;
   height: 16px;
   margin-right: 5px;
@@ -89,7 +89,7 @@ body.browser-ie5 .titlebar .icon {
   line-height: 14px;
   box-shadow: inset 0 0 0 1px #cde;
 }
-body.browser-ie5 .titlebar .win-btn {
+:is(body.browser-ie5, body.browser-ie55) .titlebar .win-btn {
   width: 16px;
   height: 14px;
   margin-left: 2px;
@@ -104,10 +104,10 @@ body.browser-ie5 .titlebar .win-btn {
   font-weight: bold;
   box-shadow: none;
 }
-body.browser-ie5 .titlebar .win-btn:hover {
+:is(body.browser-ie5, body.browser-ie55) .titlebar .win-btn:hover {
   background: #e8e4dc;
 }
-body.browser-ie5 .titlebar .win-btn:active {
+:is(body.browser-ie5, body.browser-ie55) .titlebar .win-btn:active {
   border-top: 1px solid var(--ie-dk);
   border-left: 1px solid var(--ie-dk);
   border-right: 1px solid var(--ie-hi);
@@ -115,19 +115,19 @@ body.browser-ie5 .titlebar .win-btn:active {
   padding-top: 1px;
   padding-left: 1px;
 }
-body.browser-ie5 .titlebar .win-btn#btn-close:hover {
+:is(body.browser-ie5, body.browser-ie55) .titlebar .win-btn#btn-close:hover {
   background: #e81123;
   color: #fff;
 }
 
 /* ----- Menu bar ----- */
-body.browser-ie5 .menubar {
+:is(body.browser-ie5, body.browser-ie55) .menubar {
   background: var(--ie-face);
   border-bottom: 1px solid var(--ie-lo);
   padding: 1px 2px;
   gap: 0;
 }
-body.browser-ie5 .menubar .menu-item {
+:is(body.browser-ie5, body.browser-ie55) .menubar .menu-item {
   font-family: "MS Sans Serif", Tahoma, sans-serif;
   font-size: 11px;
   padding: 2px 7px;
@@ -135,12 +135,12 @@ body.browser-ie5 .menubar .menu-item {
   background: transparent;
   color: #000;
 }
-body.browser-ie5 .menubar .menu-item:hover,
-body.browser-ie5 .menu-root.open > .menu-item {
+:is(body.browser-ie5, body.browser-ie55) .menubar .menu-item:hover,
+:is(body.browser-ie5, body.browser-ie55) .menu-root.open > .menu-item {
   border: 1px solid var(--ie-lo);
   background: #e8e4dc;
 }
-body.browser-ie5 .menubar .menu-item:active {
+:is(body.browser-ie5, body.browser-ie55) .menubar .menu-item:active {
   border-top-color: var(--ie-dk);
   border-left-color: var(--ie-dk);
   border-right-color: var(--ie-hi);
@@ -148,7 +148,7 @@ body.browser-ie5 .menubar .menu-item:active {
 }
 
 /* ----- Toolbar: grouped structure + real press feel ----- */
-body.browser-ie5 .toolbar {
+:is(body.browser-ie5, body.browser-ie55) .toolbar {
   display: flex;
   flex-wrap: nowrap;
   align-items: stretch;
@@ -159,8 +159,8 @@ body.browser-ie5 .toolbar {
   box-shadow: inset 0 1px 0 var(--ie-hi);
   overflow-x: auto;
 }
-body.browser-ie5 .toolbar .btn,
-body.browser-ie5 .toolbar .btn-img {
+:is(body.browser-ie5, body.browser-ie55) .toolbar .btn,
+:is(body.browser-ie5, body.browser-ie55) .toolbar .btn-img {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -181,18 +181,18 @@ body.browser-ie5 .toolbar .btn-img {
   color: #000;
   user-select: none;
 }
-body.browser-ie5 .toolbar .btn:hover,
-body.browser-ie5 .toolbar .btn-img:hover {
+:is(body.browser-ie5, body.browser-ie55) .toolbar .btn:hover,
+:is(body.browser-ie5, body.browser-ie55) .toolbar .btn-img:hover {
   background: #e4e0d8;
   border-top-color: var(--ie-hi);
   border-left-color: var(--ie-hi);
   border-right-color: var(--ie-dk);
   border-bottom-color: var(--ie-dk);
 }
-body.browser-ie5 .toolbar .btn:active,
-body.browser-ie5 .toolbar .btn-img:active,
-body.browser-ie5 .toolbar .btn.pressed,
-body.browser-ie5 .toolbar .btn-img.pressed {
+:is(body.browser-ie5, body.browser-ie55) .toolbar .btn:active,
+:is(body.browser-ie5, body.browser-ie55) .toolbar .btn-img:active,
+:is(body.browser-ie5, body.browser-ie55) .toolbar .btn.pressed,
+:is(body.browser-ie5, body.browser-ie55) .toolbar .btn-img.pressed {
   background: #c8c4bc;
   border-top: 1px solid var(--ie-dk);
   border-left: 1px solid var(--ie-dk);
@@ -203,30 +203,30 @@ body.browser-ie5 .toolbar .btn-img.pressed {
   padding-right: 4px;
   padding-bottom: 1px;
 }
-body.browser-ie5 .toolbar .btn:disabled,
-body.browser-ie5 .toolbar .btn-img:disabled {
+:is(body.browser-ie5, body.browser-ie55) .toolbar .btn:disabled,
+:is(body.browser-ie5, body.browser-ie55) .toolbar .btn-img:disabled {
   color: #808080;
   background: var(--ie-face);
   border-color: transparent;
   box-shadow: none;
   opacity: 0.75;
 }
-body.browser-ie5 .toolbar .btn:disabled:hover,
-body.browser-ie5 .toolbar .btn-img:disabled:hover,
-body.browser-ie5 .toolbar .btn:disabled:active,
-body.browser-ie5 .toolbar .btn-img:disabled:active {
+:is(body.browser-ie5, body.browser-ie55) .toolbar .btn:disabled:hover,
+:is(body.browser-ie5, body.browser-ie55) .toolbar .btn-img:disabled:hover,
+:is(body.browser-ie5, body.browser-ie55) .toolbar .btn:disabled:active,
+:is(body.browser-ie5, body.browser-ie55) .toolbar .btn-img:disabled:active {
   background: var(--ie-face);
   border-color: transparent;
   padding: 3px 5px 2px;
 }
-body.browser-ie5 .toolbar .btn-img img {
+:is(body.browser-ie5, body.browser-ie55) .toolbar .btn-img img {
   width: 28px;
   height: 28px;
   image-rendering: pixelated;
   display: block;
   pointer-events: none;
 }
-body.browser-ie5 .toolbar .btn-glyph {
+:is(body.browser-ie5, body.browser-ie55) .toolbar .btn-glyph {
   width: 28px;
   height: 28px;
   display: flex;
@@ -237,7 +237,7 @@ body.browser-ie5 .toolbar .btn-glyph {
   font-family: "Segoe UI Symbol", "MS Sans Serif", sans-serif;
   pointer-events: none;
 }
-body.browser-ie5 .toolbar .btn-label {
+:is(body.browser-ie5, body.browser-ie55) .toolbar .btn-label {
   display: block;
   font-size: 10px;
   font-family: "MS Sans Serif", Tahoma, sans-serif;
@@ -245,7 +245,7 @@ body.browser-ie5 .toolbar .btn-label {
   color: inherit;
   pointer-events: none;
 }
-body.browser-ie5 .toolbar .separator {
+:is(body.browser-ie5, body.browser-ie55) .toolbar .separator {
   width: 2px;
   min-height: 40px;
   margin: 3px 5px;
@@ -255,7 +255,7 @@ body.browser-ie5 .toolbar .separator {
   align-self: center;
   flex: 0 0 auto;
 }
-body.browser-ie5 .toolbar .throbber {
+:is(body.browser-ie5, body.browser-ie55) .toolbar .throbber {
   margin-left: auto;
   width: 38px;
   height: 38px;
@@ -270,12 +270,12 @@ body.browser-ie5 .toolbar .throbber {
   justify-content: center;
   flex-shrink: 0;
 }
-body.browser-ie5 .toolbar .throbber img {
+:is(body.browser-ie5, body.browser-ie55) .toolbar .throbber img {
   width: 30px;
   height: 30px;
   image-rendering: pixelated;
 }
-body.browser-ie5 .toolbar .throbber:not(.idle) {
+:is(body.browser-ie5, body.browser-ie55) .toolbar .throbber:not(.idle) {
   animation: ie5-throb 0.85s steps(3) infinite;
 }
 @keyframes ie5-throb {
@@ -286,7 +286,7 @@ body.browser-ie5 .toolbar .throbber:not(.idle) {
 }
 
 /* ----- Address row structure ----- */
-body.browser-ie5 .locationbar {
+:is(body.browser-ie5, body.browser-ie55) .locationbar {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -295,14 +295,14 @@ body.browser-ie5 .locationbar {
   border-bottom: 1px solid var(--ie-lo);
   box-shadow: inset 0 1px 0 var(--ie-hi);
 }
-body.browser-ie5 .locationbar label {
+:is(body.browser-ie5, body.browser-ie55) .locationbar label {
   font-family: "MS Sans Serif", Tahoma, sans-serif;
   font-size: 11px;
   white-space: nowrap;
   color: #000;
   min-width: 48px;
 }
-body.browser-ie5 .locationbar input {
+:is(body.browser-ie5, body.browser-ie55) .locationbar input {
   flex: 1;
   min-width: 0;
   height: 22px;
@@ -317,10 +317,10 @@ body.browser-ie5 .locationbar input {
   outline: none;
   box-shadow: inset 1px 1px 0 rgba(0,0,0,0.08);
 }
-body.browser-ie5 .locationbar input:focus {
+:is(body.browser-ie5, body.browser-ie55) .locationbar input:focus {
   background: #fffff8;
 }
-body.browser-ie5 .locationbar .btn-go {
+:is(body.browser-ie5, body.browser-ie55) .locationbar .btn-go {
   flex: 0 0 auto;
   height: 22px;
   min-width: 36px;
@@ -337,10 +337,10 @@ body.browser-ie5 .locationbar .btn-go {
   cursor: default;
   line-height: 18px;
 }
-body.browser-ie5 .locationbar .btn-go:hover {
+:is(body.browser-ie5, body.browser-ie55) .locationbar .btn-go:hover {
   background: #e8e4dc;
 }
-body.browser-ie5 .locationbar .btn-go:active {
+:is(body.browser-ie5, body.browser-ie55) .locationbar .btn-go:active {
   border-top: 1px solid var(--ie-dk);
   border-left: 1px solid var(--ie-dk);
   border-right: 1px solid var(--ie-hi);
@@ -351,7 +351,7 @@ body.browser-ie5 .locationbar .btn-go:active {
 }
 
 /* ----- Links bar ----- */
-body.browser-ie5 .dirbar {
+:is(body.browser-ie5, body.browser-ie55) .dirbar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -361,7 +361,7 @@ body.browser-ie5 .dirbar {
   border-bottom: 1px solid var(--ie-lo);
   box-shadow: inset 0 1px 0 var(--ie-hi);
 }
-body.browser-ie5 .dirbar::before {
+:is(body.browser-ie5, body.browser-ie55) .dirbar::before {
   content: "Links";
   font-family: "MS Sans Serif", Tahoma, sans-serif;
   font-size: 10px;
@@ -372,7 +372,7 @@ body.browser-ie5 .dirbar::before {
   box-shadow: 1px 0 0 var(--ie-hi);
   flex: 0 0 auto;
 }
-body.browser-ie5 .dirbar .dir-btn {
+:is(body.browser-ie5, body.browser-ie55) .dirbar .dir-btn {
   font-family: "MS Sans Serif", Tahoma, sans-serif;
   font-size: 11px;
   color: #000080;
@@ -383,7 +383,7 @@ body.browser-ie5 .dirbar .dir-btn {
   cursor: default;
   border-radius: 0;
 }
-body.browser-ie5 .dirbar .dir-btn:hover {
+:is(body.browser-ie5, body.browser-ie55) .dirbar .dir-btn:hover {
   border-top: 1px solid var(--ie-hi);
   border-left: 1px solid var(--ie-hi);
   border-right: 1px solid var(--ie-dk);
@@ -392,8 +392,8 @@ body.browser-ie5 .dirbar .dir-btn:hover {
   text-decoration: none;
   color: #000;
 }
-body.browser-ie5 .dirbar .dir-btn:active,
-body.browser-ie5 .dirbar .dir-btn.dir-active {
+:is(body.browser-ie5, body.browser-ie55) .dirbar .dir-btn:active,
+:is(body.browser-ie5, body.browser-ie55) .dirbar .dir-btn.dir-active {
   border-top: 1px solid var(--ie-dk);
   border-left: 1px solid var(--ie-dk);
   border-right: 1px solid var(--ie-hi);
@@ -407,7 +407,7 @@ body.browser-ie5 .dirbar .dir-btn.dir-active {
 }
 
 /* ----- Status bar structure ----- */
-body.browser-ie5 .statusbar {
+:is(body.browser-ie5, body.browser-ie55) .statusbar {
   display: flex;
   align-items: stretch;
   gap: 3px;
@@ -418,8 +418,8 @@ body.browser-ie5 .statusbar {
   font-family: "MS Sans Serif", Tahoma, sans-serif;
   font-size: 11px;
 }
-body.browser-ie5 .statusbar .status-text,
-body.browser-ie5 .statusbar .status-done {
+:is(body.browser-ie5, body.browser-ie55) .statusbar .status-text,
+:is(body.browser-ie5, body.browser-ie55) .statusbar .status-done {
   border-top: 1px solid var(--ie-dk);
   border-left: 1px solid var(--ie-dk);
   border-right: 1px solid var(--ie-hi);
@@ -428,10 +428,10 @@ body.browser-ie5 .statusbar .status-done {
   background: var(--ie-face);
   line-height: 14px;
 }
-body.browser-ie5 .statusbar .status-text {
+:is(body.browser-ie5, body.browser-ie55) .statusbar .status-text {
   flex: 1;
 }
-body.browser-ie5 .statusbar .status-done {
+:is(body.browser-ie5, body.browser-ie55) .statusbar .status-done {
   flex: 0 0 auto;
   min-width: 110px;
   text-align: center;
@@ -508,9 +508,9 @@ body.year-1999 .desk-label {
 }
 
 /* Dialogs / connect box — same 3D press */
-body.browser-ie5 .dialog-btns button,
-body.browser-ie5 .connect-box button,
-body.browser-ie5 .dialog-body button {
+:is(body.browser-ie5, body.browser-ie55) .dialog-btns button,
+:is(body.browser-ie5, body.browser-ie55) .connect-box button,
+:is(body.browser-ie5, body.browser-ie55) .dialog-body button {
   font-family: "MS Sans Serif", Tahoma, sans-serif;
   font-size: 11px;
   min-width: 72px;
@@ -525,12 +525,12 @@ body.browser-ie5 .dialog-body button {
   cursor: default;
   border-radius: 0;
 }
-body.browser-ie5 .dialog-btns button:hover,
-body.browser-ie5 .connect-box button:hover {
+:is(body.browser-ie5, body.browser-ie55) .dialog-btns button:hover,
+:is(body.browser-ie5, body.browser-ie55) .connect-box button:hover {
   background: #e8e4dc;
 }
-body.browser-ie5 .dialog-btns button:active,
-body.browser-ie5 .connect-box button:active {
+:is(body.browser-ie5, body.browser-ie55) .dialog-btns button:active,
+:is(body.browser-ie5, body.browser-ie55) .connect-box button:active {
   border-top: 1px solid #404040;
   border-left: 1px solid #404040;
   border-right: 1px solid #fff;
@@ -538,7 +538,7 @@ body.browser-ie5 .connect-box button:active {
   padding-top: 1px;
   padding-left: 13px;
 }
-body.browser-ie5 .connect-box {
+:is(body.browser-ie5, body.browser-ie55) .connect-box {
   border-top: 2px solid #fff;
   border-left: 2px solid #fff;
   border-right: 2px solid #404040;
@@ -546,7 +546,7 @@ body.browser-ie5 .connect-box {
   background: #d4d0c8;
   box-shadow: 2px 2px 0 rgba(0,0,0,0.25);
 }
-body.browser-ie5 .connect-box h2 {
+:is(body.browser-ie5, body.browser-ie55) .connect-box h2 {
   font-family: "MS Sans Serif", Tahoma, sans-serif;
   font-size: 12px;
   background: linear-gradient(90deg, #0a246a, #a6caf0);
@@ -554,21 +554,21 @@ body.browser-ie5 .connect-box h2 {
   margin: -8px -10px 10px;
   padding: 4px 8px;
 }
-body.browser-ie5 .dialog {
+:is(body.browser-ie5, body.browser-ie55) .dialog {
   border-top: 2px solid #fff;
   border-left: 2px solid #fff;
   border-right: 2px solid #404040;
   border-bottom: 2px solid #404040;
   box-shadow: 3px 3px 0 rgba(0,0,0,0.28);
 }
-body.browser-ie5 .dialog-titlebar {
+:is(body.browser-ie5, body.browser-ie55) .dialog-titlebar {
   background: linear-gradient(90deg, #0a246a, #3c78b4 60%, #a6caf0);
   color: #fff;
   font-family: "MS Sans Serif", Tahoma, sans-serif;
   font-size: 11px;
   font-weight: bold;
 }
-body.browser-ie5 .dialog-x {
+:is(body.browser-ie5, body.browser-ie55) .dialog-x {
   background: #d4d0c8;
   border-top: 1px solid #fff;
   border-left: 1px solid #fff;
@@ -581,7 +581,7 @@ body.browser-ie5 .dialog-x {
   font-size: 10px;
   font-weight: bold;
 }
-body.browser-ie5 .dialog-x:active {
+:is(body.browser-ie5, body.browser-ie55) .dialog-x:active {
   border-top: 1px solid #404040;
   border-left: 1px solid #404040;
   border-right: 1px solid #fff;
@@ -641,7 +641,7 @@ body.browser-ie6 .browser {
     1px 1px 0 rgba(0, 0, 40, 0.25);
 }
 /* Maximized: thinner blue edge (XP flush-to-taskbar look) */
-body.os-winxp .desktop.browser-max .browser.maximized,
+body.os-winxp:not(.browser-ie7) .desktop.browser-max .browser.maximized,
 body.browser-ie6 .browser.maximized {
   border-top-width: 2px;
   border-left-width: 2px;
@@ -669,6 +669,74 @@ body.browser-ie6 .titlebar .title {
   font-size: 11px;
   font-weight: bold;
   text-shadow: 1px 1px 0 rgba(0, 0, 40, 0.45);
+}
+/* IE 5.5 wears the IE5 skin. The title carries the version the label already states. */
+body.browser-ie55 .titlebar .title::after {
+  content: " 5.5";
+}
+/* IE7 title bar is taller than the IE6 Luna bar. Do not attach these rules to browser-ie6. */
+body.os-winxp.browser-ie7 .titlebar {
+  min-height: 32px;
+  height: auto;
+  padding: 4px 4px 3px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0) 42%),
+    linear-gradient(180deg, #3a7ad4 0%, #1a5ec0 48%, #0f4aa8 100%);
+  border-bottom: 1px solid #083060;
+  box-shadow: inset 0 1px 0 rgba(210, 230, 255, 0.65);
+}
+body.os-winxp.browser-ie7 .titlebar .title {
+  color: #fff;
+  font-family: Tahoma, "MS Sans Serif", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0, 0, 40, 0.4);
+}
+/* IE7 on XP gets its own window frame. IE6 keeps the Luna frame above. */
+body.os-winxp.browser-ie7 .browser {
+  background: var(--xp-face);
+  border-top: 3px solid #1a5ec0;
+  border-left: 3px solid #1a5ec0;
+  border-right: 3px solid #0f4aa8;
+  border-bottom: 3px solid #0c3e90;
+  box-shadow:
+    inset 1px 1px 0 rgba(210, 230, 255, 0.75),
+    inset -1px -1px 0 rgba(8, 48, 96, 0.45),
+    1px 1px 0 rgba(0, 0, 40, 0.22);
+}
+body.os-winxp.browser-ie7 .browser.maximized {
+  border-top-width: 2px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  box-shadow:
+    inset 1px 0 0 rgba(210, 230, 255, 0.55),
+    inset -1px 0 0 rgba(8, 48, 96, 0.35);
+}
+body.os-winxp.browser-ie7 .titlebar .win-btn {
+  width: 22px;
+  height: 18px;
+  margin-left: 2px;
+  border-radius: 3px;
+  border: 1px solid #083060;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.05) 50%, transparent 100%),
+    linear-gradient(180deg, #5b96e0 0%, #1a5ec0 60%, #0f4aa8 100%);
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  font-size: 11px;
+  line-height: 16px;
+}
+body.os-winxp.browser-ie7 .titlebar .win-btn:hover {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, transparent 55%),
+    linear-gradient(180deg, #7aafef 0%, #2a6ed0 62%, #1454b0 100%);
+}
+body.os-winxp.browser-ie7 .titlebar .win-btn#btn-close {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, transparent 45%),
+    linear-gradient(180deg, #e07070 0%, #c42b2b 55%, #9a1a1a 100%);
+  border-color: #5a1010;
 }
 /* Caption buttons sit cleanly on the blue title edge */
 body.browser-ie6 .titlebar .win-btn {
@@ -984,6 +1052,28 @@ body.os-win7 .statusbar {
   font-family: "Segoe UI", Tahoma, sans-serif;
   font-size: 11px;
   color: var(--w7-ink);
+}
+/* IE8 and IE9 on the Win7 frame use the labels ieToolbar already emits.
+   2009 is browser-ie8 on XP and keeps the GIF buttons. */
+body.os-win7.browser-ie8 .toolbar .btn-img img,
+body.os-win7.browser-ie9 .toolbar .btn-img img {
+  display: none !important;
+}
+body.os-win7.browser-ie8 .toolbar .btn-label,
+body.os-win7.browser-ie9 .toolbar .btn-label {
+  display: inline;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-size: 11px;
+  line-height: 1.2;
+  color: #1a1a1a;
+}
+body.os-win7.browser-ie8 .toolbar .btn.btn-img,
+body.os-win7.browser-ie9 .toolbar .btn.btn-img {
+  min-width: 0;
+  min-height: 28px;
+  padding: 2px 8px;
+  background: #f7f7f7;
+  border: 1px solid #c5c5c5;
 }
 
 /* ============================================================

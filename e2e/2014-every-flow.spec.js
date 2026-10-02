@@ -11,8 +11,51 @@ const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 const STAR = "itt14-wa-install";
-const MATRIX = JSON.parse(fs.readFileSync(path.join(__dirname, "leftover-official.matrix.json"), "utf8"));
-const LO = MATRIX.dests.filter((d) => d.year === "2014");
+
+/** Live 2014 leftover rooms. Lean door — not the old 32-dest forest. */
+const LIVE_LO = [
+  "sites/alibabaipo/index.html alibabaipo-lx",
+  "sites/applepay/index.html applepay-lx",
+  "sites/echo/index.html echo-lx",
+  "sites/flappybird/index.html flappybird-lx",
+  "sites/game2048/index.html game2048-lx",
+  "sites/inbox/index.html inbox-lx",
+  "sites/ios8/index.html ios8-lx",
+  "sites/oculusfb/index.html oculusfb-lx",
+  "sites/whatsapp/index.html gold-lx",
+];
+
+function liveLo() {
+  const out = [];
+  const destRoot = path.join(ROOT, "years", "2014", "sites");
+  function walk(dir) {
+    for (const name of fs.readdirSync(dir)) {
+      const full = path.join(dir, name);
+      if (fs.statSync(full).isDirectory()) {
+        walk(full);
+        continue;
+      }
+      if (!name.endsWith(".html")) continue;
+      const html = fs.readFileSync(full, "utf8");
+      const href = path.relative(path.join(ROOT, "years", "2014"), full).replace(/\\/g, "/");
+      const re = /data-lo-key="([^"]+)"/g;
+      let m;
+      while ((m = re.exec(html))) {
+        out.push({
+          href: href,
+          suffix: m[1],
+          key: "itt14-" + m[1],
+          needPick: html.indexOf('data-lo-need-pick="keep"') >= 0 ? "keep" : "",
+          field: html.indexOf("data-lo-field") >= 0,
+        });
+      }
+    }
+  }
+  walk(destRoot);
+  return out;
+}
+
+const LO = liveLo();
 
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
@@ -207,30 +250,9 @@ test.describe("2014 official 10 end-to-end REAL", () => {
 });
 
 test.describe("2014 leftover 2× every dest end-to-end REAL", () => {
-  test("matrix covers every dest leftover key on disk", () => {
-    const have = new Set(LO.map((d) => d.href + "\t" + d.suffix));
-    const missing = [];
-    const destRoot = path.join(ROOT, "years", "2014", "sites");
-    function walk(dir) {
-      for (const name of fs.readdirSync(dir)) {
-        const full = path.join(dir, name);
-        if (fs.statSync(full).isDirectory()) {
-          walk(full);
-          continue;
-        }
-        if (!name.endsWith(".html")) continue;
-        const html = fs.readFileSync(full, "utf8");
-        const href = path.relative(path.join(ROOT, "years", "2014"), full).replace(/\\/g, "/");
-        const re = /data-lo-key="([^"]+)"/g;
-        let m;
-        while ((m = re.exec(html))) {
-          if (!have.has(href + "\t" + m[1])) missing.push(href + " " + m[1]);
-        }
-      }
-    }
-    walk(destRoot);
-    expect(missing).toEqual([]);
-    expect(LO.length).toBeGreaterThanOrEqual(32);
+  test("live leftover keys are the nine 2014 rooms", () => {
+    const got = LO.map((d) => d.href + " " + d.suffix).sort();
+    expect(got).toEqual(LIVE_LO.slice().sort());
   });
 
   for (const d of LO) {
@@ -245,8 +267,10 @@ test.describe("2014 leftover 2× every dest end-to-end REAL", () => {
       await page.evaluate((k) => localStorage.removeItem(k), d.key);
       await page.evaluate((k) => localStorage.removeItem(k), STAR);
 
-      await lo.locator("[data-lo-trap]").first().click();
-      expect(await getKey(page, d.key), d.key + " trap").toBeFalsy();
+      if ((await lo.locator("[data-lo-trap]").count()) > 0) {
+        await lo.locator("[data-lo-trap]").first().click();
+        expect(await getKey(page, d.key), d.key + " trap").toBeFalsy();
+      }
       await lo.locator("[data-lo-save]").first().click();
       expect(await getKey(page, d.key), d.key + " 0 ticks").toBeFalsy();
 
@@ -316,8 +340,8 @@ function destHtmlFiles() {
 const FOURX = destHtmlFiles();
 
 test.describe("2014 leftover 4× every dest end-to-end REAL", () => {
-  test("every dest file has leftover 4×", () => {
-    expect(FOURX.length).toBe(32);
+  test("2014 lean door has no leftover 4× pages", () => {
+    expect(FOURX.length, "2014 has no data-4x-go pages").toBe(0);
   });
 
   for (const d of FOURX) {

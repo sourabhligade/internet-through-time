@@ -254,10 +254,12 @@
     doc = doc || document;
     if (skipPage()) return;
     var y = yearOf();
-    var trails = measurableTrails(y);
-    if (!trails.length) return;
-    paint(doc, trails);
-    revealTrailPanel(doc, currentTrail(trails, yearRelPath()));
+    var all = measurableTrails(y);
+    if (!all.length) return;
+    /* Gold strip is the official cap (≤10). Leftover stops still reveal. */
+    var official = lockedTen(y);
+    if (official.length) paint(doc, official);
+    revealTrailPanel(doc, currentTrail(all, yearRelPath()));
   }
 
   function ensureDataThenBoot(doc) {

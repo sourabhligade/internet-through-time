@@ -106,7 +106,7 @@ const DEST_HTML_FREEZE = {
   1998: { dests: 151, html: 290 },
   1999: { dests: 429, html: 577 },
   2000: { dests: 501, html: 631 },
-  2009: { dests: 78, html: 150 },
+  2009: { dests: 78, html: 151 },
 };
 
 async function getKey(page, key) {
@@ -216,18 +216,26 @@ async function hopLeftover2x(page, year, fromHref) {
     return slug !== here && slug !== "playable" && slug !== "pages";
   });
   expect(destHops.length, fromHref + " leftover dest hops").toBeGreaterThan(0);
-  const nextRel =
-    destHops.find((h) =>
-      /\/(yahoo|amazon|google|cern|lycos|altavista|geocities|hotmail|ebay|icq|napster|youtube|wikipedia|chrome|facebook|spacejam)\//.test(
-        h
-      )
-    ) || destHops[0];
-  const abs = new URL(nextRel, page.url()).pathname;
+  const famous =
+    /\/(yahoo|amazon|google|cern|lycos|altavista|geocities|hotmail|ebay|icq|napster|youtube|wikipedia|chrome|facebook|spacejam)\//;
+  const ordered = destHops.filter((h) => famous.test(h)).concat(destHops.filter((h) => !famous.test(h)));
+  let nextRel = "";
+  let abs = "";
+  let html = "";
+  for (const h of ordered) {
+    const a = new URL(h, page.url()).pathname;
+    const file = path.join(ROOT, a.replace(/^\//, ""));
+    if (!fs.existsSync(file)) continue;
+    const body = fs.readFileSync(file, "utf8");
+    if (!body.includes("data-lo-save")) continue;
+    nextRel = h;
+    abs = a;
+    html = body;
+    break;
+  }
+  expect(nextRel, fromHref + " leftover machine hop").toBeTruthy();
   const res = await page.request.get(abs);
   expect(res.status(), abs).toBe(200);
-  const file = path.join(ROOT, abs.replace(/^\//, ""));
-  expect(fs.existsSync(file), abs + " on disk").toBeTruthy();
-  const html = fs.readFileSync(file, "utf8");
   expect(html.includes("data-lo-save"), abs + " leftover machine").toBeTruthy();
   await expect(strip.locator(`a[href="${nextRel}"]`).first()).toBeVisible();
   await page.goto(abs);

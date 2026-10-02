@@ -50,6 +50,10 @@ test.describe("lean year game engines", () => {
 
   test("2013 leftover Loop Six plaque does not stamp official", async ({ page }) => {
     test.skip(!fs.existsSync(path.join(__dirname, "..", "years", "2013", "index.html")), "2013 tree missing");
+    test.skip(
+      !fs.readFileSync(path.join(__dirname, "..", "years", "2013", "sites", "playable", "game.html"), "utf8").includes('data-lo-key="game-lx"'),
+      "2013 Loop Six page has no leftover plaque"
+    );
     await openClear(page, "/years/2013/sites/playable/game.html", [
       "itt13-game-loopsix",
       "itt13-game-lx"

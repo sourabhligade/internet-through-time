@@ -388,6 +388,47 @@
     });
   }
 
+  function queryParam(doc, name) {
+    try {
+      var s =
+        (doc.defaultView && doc.defaultView.location && doc.defaultView.location.search) ||
+        "";
+      var m = s.match(new RegExp("[?&]" + name + "=([^&]*)"));
+      return m ? decodeURIComponent(m[1].replace(/\+/g, " ")) : "";
+    } catch (eQ) {
+      return "";
+    }
+  }
+
+  function bootRedditSubmit(doc) {
+    var form = doc.querySelector("[data-reddit-submit]");
+    if (!form || form.getAttribute("data-reddit-form-bound") === "1") return;
+    form.setAttribute("data-reddit-form-bound", "1");
+    var st = doc.querySelector("[data-reddit-status]");
+    var titleInput = form.querySelector('[name="title"]');
+    var urlInput = form.querySelector('[name="url"]');
+    var qt = queryParam(doc, "title");
+    var qu = queryParam(doc, "url");
+    if (qt && titleInput && !String(titleInput.value || "").replace(/^\s+|\s+$/g, "")) titleInput.value = qt;
+    if (qu && urlInput) {
+      var current = String(urlInput.value || "").replace(/^\s+|\s+$/g, "");
+      if (!current || current === "http://" || current === "https://") urlInput.value = qu;
+    }
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var title = String((titleInput && titleInput.value) || "").replace(/^\s+|\s+$/g, "");
+      var url = String((urlInput && urlInput.value) || "").replace(/^\s+|\s+$/g, "");
+      if (!title || title.length < 2 || !url || url === "http://" || url === "https://") {
+        feedback("Title and a link are required. Empty never writes.", st, { error: true });
+        return;
+      }
+      var k = key("reddit-links");
+      saveJSON(k, blob({ title: title.slice(0, 80), url: url.slice(0, 200) }));
+      feedback('Submitted "' + title.slice(0, 60) + '" · ' + k, st);
+      try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
+    });
+  }
+
   function bootAll(doc) {
     doc = doc || document;
     bootIpad(doc);
@@ -404,6 +445,7 @@
     bootInstant(doc);
     bootFacetimeDest(doc);
     bootKickstarter(doc);
+    bootRedditSubmit(doc);
   }
 
   if (ITT.ImmersionFeatures && ITT.ImmersionFeatures.registerLocal) {

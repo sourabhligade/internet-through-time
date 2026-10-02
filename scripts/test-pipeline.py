@@ -147,8 +147,8 @@ CI_E2E_ALLOWLIST = (
     "e2e/year-true-packs.spec.js",
     "e2e/2016-3x-detail.spec.js",
     "e2e/2017-mvp.spec.js",
-    "e2e/2022-mvp.spec.js",
-    "e2e/2022-flows.spec.js",
+    "e2e/2008-mvp.spec.js",
+    "e2e/2009-mvp.spec.js",
     "e2e/dest-top.spec.js",
     "e2e/follow-site.spec.js",
 )
@@ -288,22 +288,34 @@ def test_year_card() -> None:
     if open_years != list(SHIP_YEARS):
         fail("year-card", "SHIP_YEARS drifted from the card")
         return
-    if len(open_years) != 22:
-        fail("year-card", f"expected 22 open doors, got {len(open_years)}")
+    if len(open_years) != 24:
+        fail("year-card", f"expected 24 open doors, got {len(open_years)}")
+        return
+    if years.get("2011", {}).get("kind") != "html" or years.get("2011", {}).get("star") != "itt11-gplus":
+        fail("year-card", "2011 must be html with star itt11-gplus")
+        return
+    if years.get("2022", {}).get("kind") != "absent":
+        fail("year-card", "2022 must be absent")
         return
     frozen = [y for y, r in years.items() if r.get("frozen")]
     if sorted(frozen) != [str(y) for y in range(1994, 2007)]:
         fail("year-card", f"frozen years {sorted(frozen)}")
         return
     lean = sorted(y for y, r in years.items() if r.get("leanBoot"))
-    if lean != ["2014", "2016", "2022"]:
+    if lean != ["2014", "2016"]:
         fail("year-card", f"leanBoot {lean}")
         return
-    if years.get("2008", {}).get("kind") != "absent":
-        fail("year-card", "2008 must be absent")
+    if years.get("2008", {}).get("kind") != "html":
+        fail("year-card", "2008 must be html")
         return
-    if years.get("2009", {}).get("kind") != "boarded":
-        fail("year-card", "2009 must be boarded")
+    if years.get("2008", {}).get("star") != "itt08-apps":
+        fail("year-card", "2008 star must be itt08-apps")
+        return
+    if years.get("2009", {}).get("kind") != "html":
+        fail("year-card", "2009 must be html")
+        return
+    if years.get("2009", {}).get("star") != "itt09-like":
+        fail("year-card", "2009 star must be itt09-like")
         return
     hub = read(ROOT / "index.html")
     cards = []

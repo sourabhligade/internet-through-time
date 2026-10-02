@@ -5,7 +5,7 @@
  * Never writes star itt06-tweets / itt05-* / itt07-*.
  */
 const { test, expect } = require("@playwright/test");
-const { revealLeftoverRails } = require("./helpers");
+const { revealLeftoverRails, destOnDisk } = require("./helpers");
 
 /** @type {{ path: string, key: string, title: string }[]} */
 const FLOWS = [
@@ -112,6 +112,7 @@ test.describe("2006 leftover 9+9+9", () => {
 
   for (const fl of FLOWS) {
     test(`${fl.key} · ${fl.title}`, async ({ page }) => {
+      test.skip(!destOnDisk(fl.path), fl.path + " not on disk");
       await completeLo(page, fl.path, fl.key);
     });
   }

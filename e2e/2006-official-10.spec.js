@@ -63,8 +63,18 @@ test.describe("2006 official 10 · dest machines", () => {
     expect(await getKey(page, "itt07-iphone")).toBeFalsy();
   });
   test("2 News Feed hops", async ({ page }) => {
-    await openClear(page, "/years/2006/sites/facebook/feed.html", "itt06-feed-lx");
-    await completeLo(page, "itt06-feed-lx");
+    await openClear(page, "/years/2006/sites/facebook/feed.html", "itt06-feed");
+    await page.locator("[data-ff06-trap]").click();
+    expect(await getKey(page, "itt06-feed")).toBeFalsy();
+    await page.locator("[data-ff06-save]").click();
+    expect(await getKey(page, "itt06-feed")).toBeFalsy();
+    const reqs = page.locator("[data-ff06-req]");
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check();
+    await page.locator('[data-ff06-pick="privacy"]').click();
+    await page.locator("[data-ff06-save]").click();
+    await expect.poll(() => getKey(page, "itt06-feed"), { timeout: 8000 }).toBeTruthy();
+    expect(await getKey(page, "itt06-tweets")).toBeFalsy();
   });
   test("3 Gmail official dest", async ({ page }) => {
     await openClear(page, "/years/2006/sites/gmail/index.html", "itt06-gmail");
@@ -96,9 +106,17 @@ test.describe("2006 official 10 · dest machines", () => {
     expect(blob.year).toBe("2006");
     expect(await getKey(page, "itt06-tweets")).toBeFalsy();
   });
-  test("4 YouTube Google-owned leftover", async ({ page }) => {
-    await openClear(page, "/years/2006/sites/youtube/index.html", "itt06-yt-lx");
-    await completeLo(page, "itt06-yt-lx");
+  test("4 YouTube Google-owned watch", async ({ page }) => {
+    await openClear(page, "/years/2006/sites/youtube/index.html", "itt06-yt");
+    await page.locator("[data-yt06-trap]").click();
+    expect(await getKey(page, "itt06-yt")).toBeFalsy();
+    await page.locator("[data-yt06-watch]").click();
+    expect(await getKey(page, "itt06-yt")).toBeFalsy();
+    await page.locator("[data-yt-player]").click();
+    await page.locator("[data-yt06-watch]").click();
+    await expect.poll(() => getKey(page, "itt06-yt"), { timeout: 8000 }).toBeTruthy();
+    expect(await getKey(page, "itt06-yt-lx")).toBeFalsy();
+    expect(await getKey(page, "itt06-tweets")).toBeFalsy();
   });
   test("5 Google Docs leftover", async ({ page }) => {
     await openClear(page, "/years/2006/sites/googledocs/index.html", "itt06-gdocs");
@@ -136,6 +154,7 @@ test.describe("2006 official 10 · dest machines", () => {
     const reqs = page.locator("[data-official-req]");
     const n = await reqs.count();
     for (let i = 0; i < n; i++) await reqs.nth(i).check();
+    await page.locator("[data-official-need]").first().fill("IE7");
     await page.locator("[data-official-verb]").click();
     await expect.poll(() => getKey(page, "itt06-ie7"), { timeout: 8000 }).toBeTruthy();
     expect(JSON.parse((await getKey(page, "itt06-ie7")) || "{}").official).toBe(true);

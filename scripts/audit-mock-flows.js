@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Mock-flow classifier — HTML years only.
- * React, boarded, and absent years are not in the year card's html kind.
+ * React and absent years are not in the year card's html kind.
  *
  * Previous "no-mock" work kept failing because dest-field plaques
  * (scripts/build-5x-real-dests.py) satisfy the REAL e2e contract
@@ -29,6 +29,8 @@ const path = require("path");
 const ROOT = path.join(__dirname, "..");
 const CARD = JSON.parse(fs.readFileSync(path.join(ROOT, "js", "year-card.json"), "utf8")).years;
 const YEARS = Object.keys(CARD).filter((y) => CARD[y].kind === "html").sort();
+const REACT_YEARS = Object.keys(CARD).filter((y) => CARD[y].kind === "react").sort();
+const ABSENT_YEARS = Object.keys(CARD).filter((y) => CARD[y].kind === "absent").sort();
 
 const argv = process.argv.slice(2);
 const WANT_JSON = argv.includes("--json");
@@ -511,7 +513,14 @@ if (WANT_JSON) {
     JSON.stringify({ summary, fail: fails.length, issues }, null, 2) + "\n"
   );
 } else {
-  console.log("audit-mock-flows — HTML years · 2015 and 2017 React doors skipped (no tree) · 2009 boarded · 2011, 2018–2021, and 2023–2025 wiped");
+  console.log(
+    "audit-mock-flows — html " +
+      YEARS.join(" ") +
+      " · react " +
+      REACT_YEARS.join(" ") +
+      " (no tree) · absent " +
+      ABSENT_YEARS.join(" ")
+  );
   console.log(
     "  DEST_FIELD " +
       summary.DEST_FIELD +

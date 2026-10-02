@@ -147,7 +147,7 @@ test.describe("wiped years stay boarded", () => {
     expect(fs.existsSync(path.join(root, "years", "", "index.html"))).toBe(false);
     expect(fs.existsSync(path.join(root, "years", "2021", "index.html"))).toBe(false);
     expect(fs.existsSync(path.join(root, "years", "2014", "index.html"))).toBe(true);
-    expect(fs.existsSync(path.join(root, "years", "2022", "index.html"))).toBe(true);
+    expect(fs.existsSync(path.join(root, "years", "2022", "index.html"))).toBe(false);
   });
 });
 

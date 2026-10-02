@@ -4,6 +4,7 @@
  * 2005–2010. Not a sample. Incomplete never writes. Gold never written.
  */
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 const fs = require("fs");
 const path = require("path");
 
@@ -70,6 +71,7 @@ async function goldEmpty(page, year) {
  * @param {import("@playwright/test").Page} page
  */
 async function walkPopOnPage(page, year) {
+  await revealLeftoverRails(page);
   const go = page.locator("[data-pop-go]").first();
   if (!(await go.count())) return { skipped: "no leftover 3× dest machine" };
   const id = (await go.getAttribute("data-pop-id")) || "";
@@ -78,6 +80,7 @@ async function walkPopOnPage(page, year) {
   await page.evaluate((k) => localStorage.removeItem(k), key);
   for (const g of GOLD[year] || []) await page.evaluate((k) => localStorage.removeItem(k), g);
   await page.reload();
+  await revealLeftoverRails(page);
   await expect(go).toBeVisible({ timeout: 15000 });
   await page.waitForFunction(
     () => {
@@ -138,6 +141,7 @@ async function walkPopOnPage(page, year) {
  * @param {import("@playwright/test").Page} page
  */
 async function walkLeftover2x(page, year) {
+  await revealLeftoverRails(page);
   const btn = page.locator("[data-lo-save]").first();
   if (!(await btn.count())) return { skipped: "no leftover-2×" };
   await page.waitForFunction(
@@ -203,6 +207,7 @@ async function walkLeftover2x(page, year) {
  * @param {import("@playwright/test").Page} page
  */
 async function walkLeftover4x(page, year) {
+  await revealLeftoverRails(page);
   const prefer = page.locator("[data-4x-go$='-4x']").first();
   const btn = (await prefer.count()) ? prefer : page.locator("[data-4x-go]").first();
   if (!(await btn.count())) return { skipped: "no leftover-4×" };
@@ -274,8 +279,8 @@ async function walkLeftover4x(page, year) {
 }
 
 test.describe("dest folders stay frozen", () => {
-  test("117 / 126 / 55 / 199 / 68 / 44", () => {
-    const want = { 2006: 126, 2007: 55, 2009: 68, 2010: 44 };
+  test("370 / 33 / 78 / 29", () => {
+    const want = { 2006: 370, 2007: 33, 2009: 78, 2010: 29 };
     for (const [y, n] of Object.entries(want)) {
       const dir = path.join(ROOT, "years", y, "sites");
       const got = fs.readdirSync(dir).filter((name) => fs.statSync(path.join(dir, name)).isDirectory()).length;

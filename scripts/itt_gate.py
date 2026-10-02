@@ -13,8 +13,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# One year card. kind html|react are the 22 open doors.
-# boarded: 2009 (tree stays, no hub card). absent includes 2008.
+# One year card. kind html|react are the open doors.
+# 2009 is live HTML (Facebook Like itt09-like).
 _YEARS: dict = json.loads((ROOT / "js" / "year-card.json").read_text(encoding="utf-8"))["years"]
 _BOARDED = {y for y, r in _YEARS.items() if r.get("kind") == "boarded"}
 _WIPED = {y for y, r in _YEARS.items() if r.get("kind") == "absent"}

@@ -1,5 +1,7 @@
 # 2015 triple — criteria only
 
+**STOP (2026-09-30 docs pass).** Do not implement dest folders from this file. F1–F10 fail-look boxes stay `[ ]`. Leftover-3× unique catalogs are **empty**. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
 **Date:** 2026-09-20  
 **Status:** Criteria. Not dest-farm. Not leftover-3× unique growth. **Do not implement dest folders from this file.**  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md).  

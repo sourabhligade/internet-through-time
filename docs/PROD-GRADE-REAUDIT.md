@@ -1,9 +1,12 @@
 # Production-grade reaudit
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 **Date:** 2026-09-29
 **Status:** Code items 1, 4, 5, 6, and 7 are in the working tree (2026-09-29). Items 2, 3, and 8 are still open: no commit, no push, no public URL, no walk on a public host. The research body below is the pre-implementation snapshot.
 **Supersedes as a finding list:** [`PROD-GRADE-AUDIT.md`](PROD-GRADE-AUDIT.md). That note’s body is the pre-fix snapshot. Its status line says the local fixes landed and a public URL did not.
-**Evidence this pass:** working tree on `the working branch`, `HEAD` `20c78cbb2` (same commit as `origin/the working branch`), 92 dirty paths. `python3 scripts/test-pipeline.py` was run (12 passed, 1 failed). GitHub Pages API `repos/sourabhligade/internet-through-time/pages` returned 404. The 6,786-page crawl was not rerun. `npm run ci` and `npm test` were not run. GitNexus was not queried.
+**Evidence this pass:** working tree on `museum/1994-2020-lean`, `HEAD` `20c78cbb2` (same commit as `origin/museum/1994-2020-lean`), 92 dirty paths. `python3 scripts/test-pipeline.py` was run (12 passed, 1 failed). GitHub Pages API `repos/sourabhligade/internet-through-time/pages` returned 404. The 6,786-page crawl was not rerun. `npm run ci` and `npm test` were not run. GitNexus was not queried.
 
 Production grade still means one public URL, 22 doors, a finished room, and a save line the visitor can trust. It does not mean accounts, analytics, a dest-farm, or restoring 2011, 2018–2021, or 2023–2025.
 
@@ -79,7 +82,7 @@ The e2e job in Actions can start. The static job cannot pass, and the local CI s
 
 ### 2. One public URL does not exist, and the fixes are not the commit GitHub would publish
 
-`git rev-parse HEAD` and `origin/the working branch` are both `20c78cbb2` (“Remove 2021 and keep a 22-year hub.”). `git status` shows 92 dirty paths, including `ci.yml`, `404.html`, `README.md`, the React bundle swap (`app/assets/index-DKzFvS7B.js` deleted, `index-n8fjF1ps.js` untracked relative to that commit), and the save and debug edits.
+`git rev-parse HEAD` and `origin/museum/1994-2020-lean` are both `20c78cbb2` (“Remove 2021 and keep a 22-year hub.”). `git status` shows 92 dirty paths, including `ci.yml`, `404.html`, `README.md`, the React bundle swap (`app/assets/index-DKzFvS7B.js` deleted, `index-n8fjF1ps.js` untracked relative to that commit), and the save and debug edits.
 
 `.github/workflows/pages.yml` is `workflow_dispatch` only. It deletes `docs/`, `e2e/`, `scripts/`, and `node_modules`, writes `.nojekyll`, and uploads the repo root. It deploys the commit Actions checks out, which is `20c78cbb2` until someone commits and pushes.
 
@@ -101,7 +104,7 @@ Surfaces that still teach another museum:
 | Place | What it says | What the hub does |
 |---|---|---|
 | `README.md` line 89 | 2009 year-shell redirects to the hub | `/years/2009/` is a plaque titled “2009 · boarded” with links to the year menu, 2007, and 2010 |
-| `README.md` line 99 | Two blank `` sentences between the 2015 sentence and “ removed” | 2018 are absent. The opening paragraph on line 3 already says that |
+| `README.md` line 99 | Two blank `** wiped.**` sentences between the 2015 sentence and “2020 removed” | 2018 and 2019 are absent. The opening paragraph on line 3 already says that |
 | `docs/FLOW-CHECK-DIAGRAM.md` | Hub of 28 cards, playable class table with 2021, star table for GDPR, Disney+, ATT | 22 cards. Those doors are absent |
 | `docs/UNDONE.md`, year `*-READ-FIRST.md`, `docs/OPEN-CHECKLIST.md`, `scripts/generate-museum-map.py` | 24-year hub, 2015 wiped live | Historical. Pages publish strips `docs/`. The generator is not a served page |
 | `js/immersion/layers.js` | A `""` layer whose star href is `sites/zoom/meeting.html` | No tree. Dead config unless some year asks for it |
@@ -178,7 +181,7 @@ Forests remain the bulk of the HTML. The first audit’s folder counts still des
 | Ghost specs in `ci.sh` and `test-pipeline.py` | They fail the job before a real test. The files are gone |
 | Using `docs/FLOW-CHECK-DIAGRAM.md` as the live check | It still says 28 cards and live 2021 |
 | A remote analytics host or CSP `report-to` collector | Conflicts with `connect-src 'self'` and with local-only progress |
-| Restoring 2011, 2018, 2021, 2023, 2024, 2025 | No tree, no card. Rebuild only if a later message names a year |
+| Restoring 2011, 2018, 2019, 2020, 2021, 2023, 2024, 2025 | No tree, no card. Rebuild only if a later message names a year |
 | Dest-farm so 2007 or 2022 looks like 2004 | Harvest weight, not the visitor door |
 | Un-boarding 2009 | Plaque and tree stay. The hub has no card |
 | Treating `npm test` green as the launch bar | Full warehouse e2e is intentionally red. 308 spec files |

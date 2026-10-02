@@ -1,5 +1,8 @@
 # Flow checklist
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 Tick a line after you open the link and finish the visit. An empty click stores nothing. A finished visit stores the key.
 
 Base: http://127.0.0.1:8080/
@@ -21,24 +24,21 @@ A year with only a readme under `assets/period/` does not get a drawn logo. It w
 | 2002 | 89 | Use the files in `assets/period/2002/`. |
 | 2003 | 10 | Use the files in `assets/period/2003/`. |
 | 2004 | 151 | Use the files in `assets/period/2004/`. |
+| 2005 | restored | Use the files in `assets/period/2005/`. |
 | 2006 | 150 | Use the files in `assets/period/2006/`. |
 | 2007 | 150 | Use the files in `assets/period/2007/`. |
-| 2009 | 17 | Use the files in `assets/period/2009/`. |
+| 2009 | 17 | Boarded year. Use the files in `assets/period/2009/`. |
 | 2010 | 3 | Few captures. Do not fill the year with new art. |
-| | 0 | Readme only. Do not draw a logo. |
 | 2012 | 0 | Readme only. Do not draw a logo. |
 | 2013 | 0 | Readme only. Do not draw a logo. |
 | 2014 | 0 | Readme only. Do not draw a logo. |
-| 2015 | 0 | Readme only. Do not draw a logo. |
+| 2015 | 0 | React door. No `assets/period/2015/`. Do not draw a logo. |
 | 2016 | 0 | Readme only. Do not draw a logo. |
-| 2017 | 0 | Readme only. Do not draw a logo. |
-| | 0 | Readme only. Do not draw a logo. |
-| 2021 | 0 | Readme only. Do not draw a logo. |
-| 2022 | 0 | Readme only. Do not draw a logo. |
+| 2017 | 0 | React door. Readme only. Do not draw a logo. |
 
 ## 5× loops
 
-### 2009 (boarded year, loops are on the site pages)
+### 2009 (boarded plaque, not a hub door — loops stay on the site pages)
 
 Pictures in `assets/period/2009/`: 17.
 
@@ -499,20 +499,5 @@ Images: 150 in `assets/period/2007/`.
 - [ ] 8 · Kindle `itt07-kindle` — http://127.0.0.1:8080/years/2007/sites/kindle/index.html
 - [ ] 9 · XP/IE6 residual `itt07-ie6` — http://127.0.0.1:8080/years/2007/sites/ie6/index.html
 - [ ] 10 · Safari Queue `itt07-game-safariq` — http://127.0.0.1:8080/years/2007/sites/playable/game.html
-
-### 2022
-
-Images: none. `assets/period/2022/` is a readme only. Do not draw a logo for this year.
-
-- [ ] 1 · ChatGPT Send `itt22-chatgpt` — http://127.0.0.1:8080/years/2022/sites/chatgpt/index.html
-- [ ] 2 · Wordle `itt22-wordle` — http://127.0.0.1:8080/years/2022/sites/wordle/index.html
-- [ ] 3 · Twitter bird `itt22-twitter` — http://127.0.0.1:8080/years/2022/sites/twitter/index.html
-- [ ] 4 · BeReal `itt22-bereal` — http://127.0.0.1:8080/years/2022/sites/bereal/index.html
-- [ ] 5 · Dynamic Island `itt22-island` — http://127.0.0.1:8080/years/2022/sites/iphone/14.html
-- [ ] 6 · FTX `itt22-ftx` — http://127.0.0.1:8080/years/2022/sites/ftx/index.html
-- [ ] 7 · Mastodon `itt22-mastodon` — http://127.0.0.1:8080/years/2022/sites/mastodon/index.html
-- [ ] 8 · TikTok `itt22-tiktok` — http://127.0.0.1:8080/years/2022/sites/tiktok/index.html
-- [ ] 9 · Windows 11 `itt22-win11` — http://127.0.0.1:8080/years/2022/sites/windows11/index.html
-- [ ] 10 · Prompt Queue `itt22-game-prompt` — http://127.0.0.1:8080/years/2022/sites/playable/game.html
 
 415 trail links, plus 10 five-loop links.

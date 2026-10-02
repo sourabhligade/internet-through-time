@@ -32,6 +32,8 @@
     "/years/2005/sites/youtube/": { href: "https://www.webdesignmuseum.org/gallery/youtube-2005", note: "YouTube 2005 · WDM" },
     "/years/2006/sites/twitter/": { href: "https://www.webdesignmuseum.org/gallery/twitter-2006", note: "Twttr · WDM 2006" },
     "/years/2007/sites/iphone/": { href: "https://www.webdesignmuseum.org/web-design-history/safari-1-0-2003", note: "iPhone Safari · period Safari history" },
+    "/years/2008/sites/appstore/": { href: "https://www.apple.com/newsroom/2008/07/10iPhone-3G-on-Sale-Tomorrow/", note: "[failed-final] App Store · Apple 10 Jul 2008 · 500+ native apps" },
+    "/years/2009/sites/facebook/": { href: "", note: "[failed-final] Facebook Like · 9 Feb 2009 · two partner Likes · Beacon never writes" },
     "/years/2010/sites/instagram/": { href: "", note: "[failed-final] Instagram iOS · WDM year-index is not a named exhibit" },
     "/years/2013/sites/vine/": { href: "", note: "[failed-final] Vine 6s · WDM year-index is not a named exhibit" },
     "/years/2014/sites/whatsapp/": { href: "", note: "[failed-final] WhatsApp Install · WDM year-index is not a named exhibit" },
@@ -502,6 +504,42 @@
     var i;
     for (i = 0; i < nodeList.length; i++) nodes.push(nodeList[i]);
     for (i = 0; i < extra.length; i++) nodes.push(extra[i]);
+    function keptOut(n) {
+      if (!n || inAlsoYear(n)) return true;
+      if (n.getAttribute && n.getAttribute("data-official-verb-host") === "1") return true;
+      if (n.getAttribute && n.getAttribute("data-itt-dest-true") === "1") return true;
+      if (n.getAttribute && n.getAttribute("data-itt-trail-stop") === "1") return true;
+      if (n.getAttribute && n.getAttribute("data-5x-live") === "1") return true;
+      if (n.getAttribute && n.getAttribute("data-4x-panel") != null) return true;
+      if (isCurrentTrailPanel(doc, n)) return true;
+      if (isDestTrueLeftoverFace(n, destKey)) return true;
+      if (
+        !destKey &&
+        n.getAttribute &&
+        (n.getAttribute("data-itt-3x-unique-links") != null ||
+          /(^|\s)itt-3x-unique-links(\s|$)/.test(String(n.className || "")))
+      ) {
+        return true;
+      }
+      return false;
+    }
+    /* Hoist a 4× machine only when an ancestor is about to be folded. */
+    var fourX = doc.querySelectorAll("[data-4x-panel]");
+    var fi;
+    var panel4;
+    var anc;
+    for (fi = 0; fi < fourX.length; fi++) {
+      panel4 = fourX[fi];
+      if (!panel4 || !panel4.parentNode || panel4.parentNode === doc.body) continue;
+      anc = panel4.parentNode;
+      while (anc && anc !== doc.body && anc !== doc.documentElement) {
+        if (nodes.indexOf(anc) !== -1 && !keptOut(anc)) {
+          if (doc.body) doc.body.appendChild(panel4);
+          break;
+        }
+        anc = anc.parentNode;
+      }
+    }
     var box = doc.querySelector("details.itt-also-year");
     if (!box) {
       box = doc.createElement("details");
@@ -516,21 +554,7 @@
     var firstOutside = null;
     for (i = 0; i < nodes.length; i++) {
       n = nodes[i];
-      if (!n || inAlsoYear(n)) continue;
-      if (n.getAttribute && n.getAttribute("data-official-verb-host") === "1") continue;
-      if (n.getAttribute && n.getAttribute("data-itt-dest-true") === "1") continue;
-      if (n.getAttribute && n.getAttribute("data-itt-trail-stop") === "1") continue;
-      if (n.getAttribute && n.getAttribute("data-5x-live") === "1") continue;
-      if (isCurrentTrailPanel(doc, n)) continue;
-      if (isDestTrueLeftoverFace(n, destKey)) continue;
-      if (
-        !destKey &&
-        n.getAttribute &&
-        (n.getAttribute("data-itt-3x-unique-links") != null ||
-          /(^|\s)itt-3x-unique-links(\s|$)/.test(String(n.className || "")))
-      ) {
-        continue;
-      }
+      if (keptOut(n)) continue;
       if (!firstOutside) firstOutside = n;
     }
     if (firstOutside && firstOutside.parentNode && !box.parentNode) {
@@ -538,25 +562,21 @@
     }
     for (i = 0; i < nodes.length; i++) {
       n = nodes[i];
-      if (!n || inAlsoYear(n) || box.contains(n)) continue;
-      if (n.getAttribute && n.getAttribute("data-official-verb-host") === "1") continue;
-      if (n.getAttribute && n.getAttribute("data-itt-dest-true") === "1") continue;
-      if (n.getAttribute && n.getAttribute("data-itt-trail-stop") === "1") continue;
-      if (n.getAttribute && n.getAttribute("data-5x-live") === "1") continue;
-      if (isCurrentTrailPanel(doc, n)) continue;
-      if (isDestTrueLeftoverFace(n, destKey)) continue;
-      if (
-        !destKey &&
-        n.getAttribute &&
-        (n.getAttribute("data-itt-3x-unique-links") != null ||
-          /(^|\s)itt-3x-unique-links(\s|$)/.test(String(n.className || "")))
-      ) {
-        continue;
-      }
+      if (!n || keptOut(n) || box.contains(n)) continue;
       body.appendChild(n);
       moved++;
     }
     if (doc.documentElement) doc.documentElement.setAttribute("data-itt-lo-folded", "1");
+    /* Late packs fold after the test opens deep mode. A new drawer must honor it. */
+    try {
+      if (
+        box &&
+        doc.documentElement &&
+        doc.documentElement.getAttribute("data-itt-deep") === "1"
+      ) {
+        box.open = true;
+      }
+    } catch (eDeepOpen) { /* */ }
     try {
       if (typeof ITT._revealTrailPanel === "function") ITT._revealTrailPanel(doc);
     } catch (eR) { /* */ }

@@ -70,13 +70,39 @@
   border: 1px solid #666;
 }
 
-.os-win10 .exit-bar {
+.os-win10 .exit-bar,
+.browser-chrome-habit .exit-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 8px;
+  background: #202124;
+  color: #e8eaed;
+  border: 0;
   font-family: "Segoe UI", Arial, sans-serif;
 }
+.os-win10 .exit-bar .year-label,
+.browser-chrome-habit .exit-bar .year-label {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.os-win10 .exit-bar a,
+.browser-chrome-habit .exit-bar a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  background: transparent;
+  border: 0;
+  color: #8ab4f8;
+  font-weight: 600;
+}
 
-.os-win10 .win95-taskbar {
-  background: #0078d7;
-  border-top: 1px solid #5aa0e0;
+.os-win10 .win95-taskbar,
+.browser-chrome-habit .win95-taskbar {
+  background: #1f1f1f;
+  border-top: 1px solid #333;
 }
 
 /* Alias so late-year body class is honest even if a leftover IE class remains */
@@ -115,23 +141,88 @@
   min-width: 5.5em;
 }
 
-.os-win10 .win95-start {
-  background: #0078d7;
+.os-win10 .win95-start,
+.browser-chrome-habit .win95-start {
+  background: #2b2b2b;
   border: 0;
-  color: #fff;
+  color: #eee;
 }
 
-/* 2015–2021: Win95 “Navigate:” legend + Machine/Web/Game band are 1995 museum chrome.
-   Chrome habit already has Back, Start, and window ×. Do not invent brand pixels. */
-.os-win10 #itt-shell-nav-legend,
-.os-win10 .shell-nav-legend,
-.browser-chrome-habit #itt-shell-nav-legend,
-.browser-chrome-habit .shell-nav-legend,
+/* Machine / Web / Game is 1995 museum chrome. The navigate legend stays visible. */
 .os-win10 #itt-layer-legend,
 .os-win10 .itt-layer-legend,
 .browser-chrome-habit #itt-layer-legend,
 .browser-chrome-habit .itt-layer-legend {
   display: none !important;
+}
+
+.browser-chrome-habit .shell-nav-legend,
+.os-win10 .shell-nav-legend {
+  background: #202124;
+  color: #e8eaed;
+  border: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+.browser-chrome-habit .shell-nav-legend a,
+.browser-chrome-habit .shell-nav-legend button,
+.os-win10 .shell-nav-legend a,
+.os-win10 .shell-nav-legend button {
+  background: #3c4043;
+  color: #e8eaed;
+  border: 0;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.browser-chrome-habit .locationbar.chrome22-omni {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 0;
+  padding: 6px 12px 8px;
+}
+.browser-chrome-habit .toolbar.chrome22-bar {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 2px;
+  flex: 0 0 auto;
+}
+.browser-chrome-habit .chrome22-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 16px;
+  background: transparent;
+  color: #5f6368;
+  font-size: 16px;
+  line-height: 32px;
+}
+.browser-chrome-habit .chrome22-nav:hover {
+  background: #f1f3f4;
+}
+.browser-chrome-habit #location {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: auto;
+  box-sizing: border-box;
+  background: #f1f3f4;
+  border: 0;
+  border-radius: 24px;
+  padding: 8px 16px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 13px;
 }
 
 /* Chrome-habit costume: kill leftover Win95 bevels so the year does not read as IE 5 */
@@ -140,13 +231,41 @@
   border-radius: 0;
   border-color: #aaa;
 }
-.os-win10 .titlebar {
+.os-win10 .titlebar,
+.browser-chrome-habit .titlebar {
   height: auto;
-  min-height: 28px;
-  padding: 4px 6px;
+  min-height: 36px;
+  padding: 6px 8px 0;
+  background: #dee1e6;
+  color: #202124;
+  border: 0;
 }
-.os-win10 .titlebar .icon {
+.browser-chrome-habit .titlebar .title {
+  display: inline-block;
+  background: #fff;
+  color: #202124;
+  border-radius: 8px 8px 0 0;
+  padding: 8px 18px 7px;
+  font-size: 12px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 500;
+  text-shadow: none;
+}
+.browser-chrome-habit .win-btn {
+  background: transparent;
+  border: 0;
+  color: #5f6368;
+  border-radius: 0;
+}
+.os-win10 .titlebar .icon,
+.browser-chrome-habit .titlebar .icon {
   display: none;
+}
+.browser-chrome-habit .browser,
+.browser-chrome-habit .browser.maximized {
+  background: #dee1e6;
+  border: 0;
+  box-shadow: none;
 }
 .os-win10 .menubar {
   background: #fff;
@@ -227,7 +346,11 @@
   font-family: "Segoe UI", Arial, sans-serif;
 }
 .os-win10 .win95-start,
-.os-win10 .win95-task-btn {
+.os-win10 .win95-task-btn,
+.browser-chrome-habit .win95-start,
+.browser-chrome-habit .win95-task-btn {
+  background: #2b2b2b;
+  color: #eee;
   border-radius: 4px;
   border: 0;
   font-family: "Segoe UI", Arial, sans-serif;

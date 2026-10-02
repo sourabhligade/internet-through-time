@@ -9,7 +9,6 @@ const { enterYear, goInFrame, contentFrame } = require("./helpers");
 const TABS = [
   { year: "1995", path: "/years/1995/sites/amazon/ssl-checkout.html" },
   { year: "1997", path: "/years/1997/sites/amazonipo/index.html" },
-  { year: "2022", path: "/years/2022/sites/chatgpt/index.html" },
 ];
 
 test.describe("dest-as-tab footer", () => {
@@ -61,22 +60,12 @@ test.describe("dest-as-tab footer", () => {
     await expect(page.locator("#itt-year-menu-link")).toBeVisible({ timeout: 15000 });
     await page.locator("#itt-year-menu-link").click();
     await expect(page).toHaveURL(/\/(index\.html)?$/);
-    await expect(page.locator("a.year-card.available")).toHaveCount(22);
+    await expect(page.locator("a.year-card.available")).toHaveCount(24);
 
     await page.goto("/years/1995/sites/amazon/ssl-checkout.html");
     await expect(page.locator("#itt-exhibit-foot a.itt-foot-home")).toBeVisible({ timeout: 15000 });
     await page.locator("#itt-exhibit-foot a.itt-foot-home").click();
     await expect(page).toHaveURL(/years\/1995\/pages\/home\.html/);
-  });
-
-  test("2022 dest tab phone footer is visible and returns to the year", async ({ page }) => {
-    await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto("/years/2022/sites/chatgpt/index.html");
-    const home = page.locator("#itt-exhibit-foot a.itt-foot-home");
-    await expect(home).toBeVisible({ timeout: 15000 });
-    await expect(page.locator("#itt-wayfind")).toHaveCount(0);
-    await home.click();
-    await expect(page).toHaveURL(/years\/2022\/pages\/home\.html/);
   });
 
   test("1995 dest in year iframe keeps sticky wayfind", async ({ page }) => {

@@ -55,11 +55,57 @@
     );
   }
 
-  function chrome22Toolbar() {
-    return "";
+  function chrome22Toolbar(spec) {
+    spec = spec || {};
+    return (
+      '<style id="itt-chrome22-one-bar">' +
+      ".browser-chrome-habit #browser > .toolbar,.browser-chrome-habit .titlebar + .toolbar{display:none!important}" +
+      ".browser-chrome-habit #locationbar .toolbar{display:flex!important;flex-wrap:nowrap!important}" +
+      ".browser-chrome-habit #btn-back::before,.browser-chrome-habit #btn-forward::before,.browser-chrome-habit #btn-reload::before,.browser-chrome-habit #btn-home::before," +
+      ".browser-chrome-habit #btn-back::after,.browser-chrome-habit #btn-forward::after,.browser-chrome-habit #btn-reload::after,.browser-chrome-habit #btn-home::after" +
+      "{content:none!important;display:none!important}" +
+      "</style>" +
+      '<div class="locationbar chrome22-omni" id="locationbar">' +
+      '<div class="toolbar chrome22-bar" id="toolbar" role="toolbar" aria-label="Chrome habit toolbar">' +
+      '<button type="button" class="chrome22-nav" id="btn-back" title="Back">←</button>' +
+      '<button type="button" class="chrome22-nav" id="btn-forward" title="Forward">→</button>' +
+      '<button type="button" class="chrome22-nav" id="btn-reload" title="Reload">↻</button>' +
+      '<button type="button" class="chrome22-nav" id="btn-home" title="Home">⌂</button></div>' +
+      '<input type="text" id="location" value="' +
+      esc(spec.location || "") +
+      '" spellcheck="false" autocomplete="off" aria-label="Address"></div>'
+    );
+  }
+
+  function ieTextToolbar(spec) {
+    var reload = spec.family === "ie" && parseInt(spec.year, 10) >= 1999 ? "Refresh" : "Reload";
+    function btn(id, label, title, disabled) {
+      return (
+        '<button type="button" class="btn btn-img" id="' + id + '" title="' + title + '"' +
+        (disabled ? " disabled" : "") + ">" +
+        '<span class="btn-label">' + label + "</span></button>"
+      );
+    }
+    return (
+      '<div class="toolbar" id="toolbar" role="toolbar" aria-label="Browser toolbar">' +
+      btn("btn-back", "Back", "Back", true) +
+      btn("btn-forward", "Forward", "Forward", true) +
+      btn("btn-stop", "Stop", "Stop") +
+      btn("btn-reload", reload, reload) +
+      btn("btn-home", "Home", "Home") +
+      '<div class="separator" aria-hidden="true"></div>' +
+      btn("btn-search", "Search", "Search the Web") +
+      btn("btn-favorites", "Favorites", "Favorites") +
+      btn("btn-history", "History", "History") +
+      '<div class="separator" aria-hidden="true"></div>' +
+      btn("btn-mail", "Mail", "Mail") +
+      '<div class="throbber idle" id="throbber" title="' + esc(spec.taskBtn) + '"></div></div>'
+    );
   }
 
   function ieToolbar(spec) {
+    spec = spec || {};
+    if (!spec.chrome) return ieTextToolbar(spec);
     var a = "../../assets/period/" + spec.chrome + "/chrome/";
     var reload = spec.family === "ie" && parseInt(spec.year, 10) >= 1999 ? "Refresh" : "Reload";
     return (

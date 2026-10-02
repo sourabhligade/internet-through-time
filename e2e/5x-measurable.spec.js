@@ -11,10 +11,10 @@ const SAMPLE = ['1994', '2005', '2010', '2016'];
 
 const PACK = {
   1994: { file: 'game-2.html', gid: 'whatsnew', key: 'itt94-game-whatsnew', need: 6 },
-  2005: { file: 'game-2.html', gid: 'g2', key: 'itt05-game-g2', need: 2 },
+  2005: { file: 'game-2.html', gid: 'poke', key: 'itt05-game-poke', need: 3 },
   2010: { file: 'game-2.html', gid: 'igfilter', key: 'itt10-game-igfilter', need: 2 },
   2015: { file: 'game-2.html', gid: 'meerkathop', key: 'itt15-game-meerkathop', need: 2 },
-  2016: { file: 'game-2.html', gid: 'story24', key: 'itt16-game-story24', need: 2 },
+  2016: { file: 'game-2.html', gid: 'storyrail', key: 'itt16-game-storyrail', need: 3, minute: true },
 };
 
 async function openPack(page, year, file) {
@@ -22,7 +22,10 @@ async function openPack(page, year, file) {
   await goImmersion(page, year, 'sites/playable/' + file);
   await killOverlays(page);
   const frame = contentFrame(page);
-  await expect(frame.locator('[data-year-game][data-pack-game]')).toBeVisible({ timeout: 20000 });
+  const sel = PACK[year].minute
+    ? '[data-year-game][data-minute-extra]'
+    : '[data-year-game][data-pack-game]';
+  await expect(frame.locator(sel)).toBeVisible({ timeout: 20000 });
   return frame;
 }
 
@@ -33,7 +36,8 @@ for (const year of SAMPLE) {
     await page.evaluate((k) => localStorage.removeItem(k), p.key);
     const frame = await openPack(page, year, p.file);
     await expect(frame.locator(`[data-game-id="${p.gid}"]`)).toBeVisible();
-    await frame.locator('[data-pack-finish]').click({ force: true });
+    const finishSel = p.minute ? '[data-mx-finish]' : '[data-pack-finish]';
+    await frame.locator(finishSel).click({ force: true });
     const raw = await page.evaluate((k) => localStorage.getItem(k), p.key);
     expect(raw).toBeNull();
   });
@@ -42,6 +46,20 @@ for (const year of SAMPLE) {
     await enterYear(page, year);
     await page.evaluate((k) => localStorage.removeItem(k), p.key);
     const frame = await openPack(page, year, p.file);
+    if (p.minute) {
+      await frame.locator('[data-game-start]').click();
+      for (const id of ['open', 'tap', 'done']) {
+        await frame.locator(`[data-mx-item="${id}"]`).click();
+      }
+      await frame.locator('[data-mx-confirm]').fill('24h');
+      await frame.locator('[data-mx-finish]').click();
+      await expect.poll(async () => page.evaluate((k) => localStorage.getItem(k), p.key), { timeout: 8000 }).toBeTruthy();
+      const blob = await page.evaluate((k) => JSON.parse(localStorage.getItem(k) || 'null'), p.key);
+      expect(blob.real).toBe(true);
+      expect(String(blob.year)).toBe(year);
+      expect(blob.gameId).toBe(p.gid);
+      return;
+    }
     const start = frame.locator('[data-game-start]');
     if (await start.count()) await start.click({ force: true });
     const act = frame.locator('[data-pack-act]');
@@ -63,6 +81,12 @@ for (const year of SAMPLE) {
 
   test(`5x cabinet ${year} hosts the year game`, async ({ page }) => {
     await page.goto(`/years/${year}/sites/playable/index.html`);
+    if (year === '2016') {
+      await expect(page.locator('[data-itt-year-cabinets="2016"]')).toBeVisible({ timeout: 20000 });
+      await expect(page.locator('a[href="game.html"]').first()).toBeVisible();
+      await expect(page.locator('a[href*="g=15"]')).toHaveCount(0);
+      return;
+    }
     await expect(page.locator('[data-year-playable]')).toBeVisible({ timeout: 20000 });
     await expect(page.locator('[data-yp-cabinet], a[href="game.html"]').first()).toBeVisible();
     await expect(page.locator('a[href*="g=15"]')).toHaveCount(0);

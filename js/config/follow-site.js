@@ -1,6 +1,6 @@
 /**
  * Follow a site through the years — only rooms that exist on disk.
- * 2009 boarded (skipped). Used by the year-shell control and the hub / atlas walks.
+ * 2009 is live HTML (Like). Used by the year-shell control and the hub / atlas walks.
  */
 (function (global) {
   "use strict";
@@ -28,10 +28,6 @@
         stop("2004", "sites/yahoo/index.html", "Web 2.0 year"),
         stop("2005", "sites/yahoo/index.html", "still #1"),
         stop("2006", "sites/yahoo/index.html", "Twttr year"),
-        stop("2007", "sites/yahoo/index.html", "iPhone year"),
-        stop("2010", "sites/yahoo/index.html", "lean"),
-        stop("2012", "sites/yahoo/index.html", "IPO year"),
-        stop("2015", "sites/yahoo/index.html", "Go LIVE year"),
       ]
     },
     amazon: {
@@ -49,11 +45,7 @@
         stop("2003", "sites/amazon/index.html", "99¢ year"),
         stop("2004", "sites/amazon/index.html", "Web 2.0 year"),
         stop("2006", "sites/amazon/index.html", "Twttr year"),
-        stop("2010", "sites/amazon/index.html", "lean"),
-        stop("2012", "sites/amazon/index.html", "IPO year"),
-        stop("2015", "sites/amazon/index.html", "Go LIVE year"),
         stop("2017", "sites/amazon/index.html", "Face ID year"),
-        stop("2022", "sites/amazon/index.html", "ChatGPT year")
       ]
     },
     google: {
@@ -68,28 +60,24 @@
         stop("2003", "sites/google/index.html", "Photobucket year"),
         stop("2004", "sites/google/index.html", "thefacebook year"),
         stop("2006", "sites/google/index.html", "YouTube deal year"),
-        stop("2007", "sites/google/index.html", "iPhone year"),
         stop("2010", "sites/google/index.html", "lean"),
-        stop("2012", "sites/google/index.html", "IPO year"),
-        stop("2015", "sites/googlephotos/index.html", "Photos locker"),
-        stop("2022", "sites/google/index.html", "ChatGPT year")
       ]
     },
     facebook: {
       label: "Facebook",
-      match: /\/sites\/facebook\//,
+      match: /\/sites\/(facebook|fbplat)\//,
       stops: [
         stop("2004", "sites/facebook/networks.html", "thefacebook"),
         stop("2006", "sites/facebook/feed.html", "News Feed"),
-        stop("2007", "sites/facebook/index.html", "Platform leftover"),
+        stop("2007", "sites/fbplat/index.html", "Platform"),
+        stop("2009", "sites/facebook/index.html", "Like"),
         stop("2010", "sites/facebook/index.html", "Open Graph"),
+        stop("2011", "sites/facebook/index.html", "Timeline"),
         stop("2012", "sites/facebook/index.html", "IPO"),
         stop("2013", "sites/facebook/index.html", "Vine year"),
         stop("2014", "sites/facebook/index.html", "Install year"),
-        stop("2015", "sites/facebook/index.html", "Go LIVE year"),
         stop("2016", "sites/facebook/reactions.html", "Reactions"),
         stop("2017", "sites/facebook/index.html", "2017 door · no Facebook dest"),
-        stop("2022", "sites/facebook/index.html", "leftover Facebook")
       ]
     },
     youtube: {
@@ -102,8 +90,6 @@
         stop("2012", "sites/youtube/index.html", "IPO year"),
         stop("2013", "sites/youtube/index.html", "Vine year"),
         stop("2014", "sites/youtube/index.html", "Install year"),
-        stop("2015", "sites/youtube/index.html", "Go LIVE year"),
-        stop("2022", "sites/youtube/index.html", "leftover YouTube")
       ]
     },
     twitter: {
@@ -113,12 +99,11 @@
         stop("2006", "sites/twitter/index.html", "Twttr"),
         stop("2007", "sites/twitter/index.html", "iPhone year"),
         stop("2010", "sites/twitter/index.html", "lean"),
+        stop("2011", "sites/twitter/index.html", "140"),
         stop("2012", "sites/twitter/index.html", "IPO year"),
         stop("2013", "sites/twitter/index.html", "Vine year"),
         stop("2014", "sites/twitter/index.html", "Install year"),
-        stop("2015", "sites/twitter/index.html", "Go LIVE year"),
         stop("2017", "sites/twitter/280.html", "280"),
-        stop("2022", "sites/twitter/index.html", "bird leftover")
       ]
     },
     instagram: {
@@ -126,12 +111,11 @@
       match: /\/sites\/instagram\//,
       stops: [
         stop("2010", "sites/instagram/index.html", "iOS"),
+        stop("2011", "sites/instagram/index.html", "iPhone app"),
         stop("2012", "sites/instagram/android.html", "Android"),
         stop("2014", "sites/instagram/index.html", "Install year"),
-        stop("2015", "sites/instagram/index.html", "Go LIVE year"),
         stop("2016", "sites/instagram/stories.html", "Stories"),
         stop("2017", "sites/instagram/index.html", "leftover Instagram on this door · itt17-instagram17"),
-        stop("2022", "sites/instagram/index.html", "ChatGPT year")
       ]
     },
     iphone: {
@@ -140,13 +124,12 @@
       stops: [
         stop("2007", "sites/iphone/index.html", "Safari"),
         stop("2010", "sites/iphone/index.html", "iPhone 4"),
+        stop("2011", "sites/iphone/index.html", "Siri"),
         stop("2012", "sites/iphone/index.html", "Maps flop leftover"),
         stop("2013", "sites/iphone/ios7.html", "iOS 7"),
         stop("2014", "sites/iphone/index.html", "Install year"),
-        stop("2015", "sites/iphone/index.html", "Go LIVE year"),
         stop("2016", "sites/iphone/index.html", "iPhone 7 · no jack"),
         stop("2017", "sites/iphone/x.html", "Face ID"),
-        stop("2022", "sites/iphone/14.html", "Island leftover")
       ]
     }
   };
@@ -167,8 +150,12 @@
   }
 
  var SKIP_YEARS = {
- "2009": 1,
  "2015": 1,
+ "2018": 1,
+ "2019": 1,
+ "2020": 1,
+ "2021": 1,
+ "2022": 1,
  "2023": 1,
  "2024": 1,
  "2025": 1

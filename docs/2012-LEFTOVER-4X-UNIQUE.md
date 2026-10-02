@@ -1,5 +1,8 @@
 # 2012 leftover-4× unique — step map
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 **Date:** 2026-09-15  
 **Status:** Implemented 2026-09-15. Chrome · Twitter · SoundCloud dests already on disk. Stacked leftover-4× still 0.  
 **Law:** leftover-3× unique U1–U11 / M1–M4 in [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md). Same criteria. Fourth **strip**, not a fourth machine.  

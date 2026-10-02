@@ -15,6 +15,7 @@
     "pages/home.html",
     "pages/map.html",
     "pages/whats-new.html",
+    "pages/cool.html",
     "sites/about/index.html",
     "sites/afterellen/index.html",
     "sites/ageofmythology/index.html",
@@ -300,7 +301,7 @@
   var i;
   for (i = 0; i < rooms.length; i++) {
     if (!urlMap[rooms[i]]) {
-      urlMap[rooms[i]] = "http://museum.local/years/2002/" + rooms[i];
+      urlMap[rooms[i]] = "http://home.microsoft.com/intl/web2002/" + rooms[i];
     }
   }
 

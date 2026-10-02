@@ -36,6 +36,9 @@ test.describe("2004 dest-true official", () => {
     const n = await reqs.count();
     for (let i = 0; i < n; i++) await reqs.nth(i).check();
     await page.locator("[data-official-verb]").click();
+    expect(await getKey(page, "itt04-fx")).toBeFalsy();
+    await page.locator("[data-official-need]").first().fill("Firefox 1.0");
+    await page.locator("[data-official-verb]").click();
     await expect.poll(() => getKey(page, "itt04-fx"), { timeout: 8000 }).toBeTruthy();
     const blob = JSON.parse((await getKey(page, "itt04-fx")) || "{}");
     expect(blob.official).toBe(true);
@@ -60,6 +63,11 @@ test.describe("2004 dest-true official", () => {
     const reqs = page.locator("[data-official-req]");
     const n = await reqs.count();
     for (let i = 0; i < n; i++) await reqs.nth(i).check();
+    await page.locator("[data-official-verb]").click();
+    expect(await getKey(page, "itt04-digg")).toBeFalsy();
+    const needs = page.locator("[data-official-need]");
+    const nNeed = await needs.count();
+    for (let i = 0; i < nNeed; i++) await needs.nth(i).fill("digg leftover");
     await page.locator("[data-official-verb]").click();
     await expect.poll(() => getKey(page, "itt04-digg"), { timeout: 8000 }).toBeTruthy();
     expect(JSON.parse((await getKey(page, "itt04-digg")) || "{}").official).toBe(true);

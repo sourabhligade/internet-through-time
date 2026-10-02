@@ -141,7 +141,7 @@ function initCsotd(root) {
     link.textContent = pick.title;
     link.setAttribute("data-official-pick", "today");
     try {
-      if (sessionStorage.getItem("itt94-csotd-pick") === "1") {
+      if (sessionStorage.getItem("itt94-csotd-wandered") === "1") {
         link.className = (String(link.className || "") + " is-on").replace(/\s+/g, " ").replace(/^\s+|\s+$/g, "");
         link.setAttribute("aria-pressed", "true");
       }

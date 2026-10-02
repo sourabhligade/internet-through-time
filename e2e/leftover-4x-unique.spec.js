@@ -1,7 +1,7 @@
 // @ts-check
 /**
- * Unique leftover-4× dests — 2012 fourth strip only.
- * One dest / one key / dest-true. Empty never writes. Never star.
+ * Unique leftover-4× dests. One dest once in a year. Empty never writes. Never the star.
+ * 2012 stays chrome · twitter · soundcloud. Other years use rooms already on disk.
  */
 const { test, expect } = require("@playwright/test");
 const { revealLeftoverRails } = require("./helpers");
@@ -11,8 +11,8 @@ function goSel(row) {
   return `[data-itt-lo3x] [data-pop-go][data-pop-key='pop4-${row.id}']`;
 }
 
-test("unique leftover-4× dests are a set — no dest twice", () => {
-  const ids = ROWS.map((r) => r.id);
+test("unique leftover-4× dests are a set — no dest twice in a year", () => {
+  const ids = ROWS.map((r) => r.year + ":" + r.id);
   expect(new Set(ids).size, "unique dests").toBe(ids.length);
 });
 
@@ -22,6 +22,12 @@ test("2012 leftover-4× unique is chrome · twitter · soundcloud", () => {
     "twitter",
     "soundcloud",
   ]);
+});
+
+test("2007 2010 2013 leftover-4× unique ids", () => {
+  expect(ROWS.filter((r) => r.year === "2007").map((r) => r.id)).toEqual(["digg", "flickr", "reddit"]);
+  expect(ROWS.filter((r) => r.year === "2010").map((r) => r.id)).toEqual(["netflix", "tumblr", "wave"]);
+  expect(ROWS.filter((r) => r.year === "2013").map((r) => r.id)).toEqual(["askfm", "whisper", "facebook"]);
 });
 
 for (const row of ROWS) {

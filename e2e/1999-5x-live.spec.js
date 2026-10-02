@@ -47,6 +47,10 @@ test.describe('1999 5× live F1–F5', () => {
     await expect.poll(async () => getKey(page, 'itt99-y2k')).toBeFalsy();
     await page.locator('[data-y2k-sys="cobol"]').check();
     await page.locator('[data-y2k-sys="embed"]').check();
+    await page.locator('form[data-y2k-form] [data-official-need]').fill('y2k');
+    const reqs = page.locator('form[data-y2k-form] [data-official-req]');
+    const nReq = await reqs.count();
+    for (let i = 0; i < nReq; i++) await reqs.nth(i).check();
     await page.locator('form[data-y2k-form] button[type="submit"]').click();
     await expect.poll(async () => getKey(page, 'itt99-y2k'), { timeout: 8000 }).toBeTruthy();
   });

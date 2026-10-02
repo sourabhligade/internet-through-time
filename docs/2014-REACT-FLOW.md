@@ -1,12 +1,15 @@
 # 2014 — existing flow, then the React flow
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 **Date:** 2026-09-25
 **Static door:** `years/2014/` stays. Tests and the hub card still open it.
-**React door:** [http://localhost:5173/year/2014](http://localhost:5173/year/2014)
+**React hash:** `/app/index.html#/year/2014` bounces to `/years/2014/` (not a live React year).
 **Trail:** `js/config/flow-trails.js` year `"2014"`. Nine stops. There is no stop 10. Stop 9 returns to WhatsApp.
 **Star:** `itt14-wa-install` on `sites/whatsapp/index.html`.
 
-2014 is the first year in the React app. 2015 and later still use the generic shell. stays wiped.
+**Live 2014 door is HTML leanBoot** (`/years/2014/`). React hash `#/year/2014` bounces to that HTML tree (`hashToHtml`). Unmounted `Year2014.jsx` is gone. 2015 and 2017 are the live React doors.
 
 ## Existing flow
 

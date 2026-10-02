@@ -101,8 +101,11 @@ test.describe('all-years signature REAL · early web', () => {
         /* */
       }
     });
-    await frame.locator('[name="gbname"]').fill('AllYear94');
-    await frame.locator('[name="gbnote"]').fill('Worth the modem.');
+    await frame.locator('[data-official-pick="today"][data-official-pick-bound="1"]').click();
+    const note = frame.locator('form[data-csotd-gb] [name="gbnote"]');
+    await note.scrollIntoViewIfNeeded();
+    await frame.locator('form[data-csotd-gb] [name="gbname"]').fill('AllYear94');
+    await note.fill('Worth the modem.');
     await frame.locator('form[data-csotd-gb] input[type="submit"]').click();
     await requireKey(page, 'itt94-csotd', /AllYear94|multiStep/i);
   });
@@ -232,6 +235,7 @@ test.describe('all-years signature REAL · 2000s boom', () => {
     const frame = contentFrame(page);
     const title = 'AllYearYT ' + Date.now();
     await frame.locator('[data-yt-upload] [name="title"]').fill(title);
+    await frame.locator('[data-yt-upload] [name="desc"]').fill('museum tag');
     const ticks = frame.locator('[data-yt-upload] [data-yt-req]');
     const n = await ticks.count();
     for (let i = 0; i < n; i++) await ticks.nth(i).check();

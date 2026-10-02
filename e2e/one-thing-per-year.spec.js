@@ -189,12 +189,13 @@ const THINGS = [
     path: "/years/2009/sites/facebook/index.html",
     key: "itt09-like",
     incomplete: async (page) => {
-      await page.locator("[data-lk09-like]").click();
+      await page.locator("[data-official-trap]").first().click();
     },
     complete: async (page) => {
-      await page.locator('[data-lk09-page="news"]').click();
-      await page.locator('[data-lk09-page="music"]').click();
-      await page.locator("[data-lk09-like]").click();
+      await page.locator("[data-official-need]").fill("Like");
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-verb]").click();
     },
   },
   {
@@ -295,27 +296,10 @@ const THINGS = [
     },
   },
 
-  {
-    year: "2022",
-    path: "/years/2022/sites/chatgpt/index.html",
-    key: "itt22-chatgpt",
-    incomplete: async (page) => {
-      await page.locator("[data-official-trap]").first().click();
-    },
-    complete: async (page) => {
-      const need = page.locator("[data-official-need]");
-      if (await need.count()) await need.fill("explain this like I am five");
-      const reqs = page.locator("[data-official-verb-host] [data-official-req]");
-      const n = await reqs.count();
-      for (let i = 0; i < n; i++) await reqs.nth(i).check();
-      await page.locator("[data-official-verb-host] [data-official-verb]").click();
-    },
-  },
 ];
 
 test.describe("One-thing per year — load + REAL gate", () => {
   for (const t of THINGS) {
-    if (t.year === "2009") continue;
     test(`${t.year} loads and incomplete does not write ${t.key}`, async ({ page }) => {
       test.skip(!t.react && !fs.existsSync(path.join(ROOT, "years", t.year, "index.html")), t.year + " wiped");
       await page.goto(t.path);
@@ -381,7 +365,7 @@ test.describe("One-thing per year — load + REAL gate", () => {
     for (const y of years) {
       if (!fs.existsSync(path.join(ROOT, "years", y, "index.html"))) continue;
       /* Lean doors use leftover 2× strip, not a forest residual pack. */
-      if (y === "2007" || y === "2009") continue;
+      if (y === "2007") continue;
       await page.goto(`/years/${y}/pages/home.html`);
       await expect(page.locator(`[data-ott-one-thing="${y}"]`).first()).toBeVisible();
       await expect(page.locator(`#ott-guided-${y}`).first()).toBeVisible();

@@ -113,17 +113,57 @@
       });
     }
     var root = doc.querySelector("[data-wp-install-root]");
-    if (root) {
+    if (root && root.getAttribute("data-wp-install-bound") !== "1") {
+      root.setAttribute("data-wp-install-bound", "1");
       var step = 1;
       function showStep(n) {
         step = n;
-        var num = doc.querySelector("[data-wp-step-num]");
+        var num = root.querySelector("[data-wp-step-num]");
         if (num) num.textContent = String(n);
-        for (var i = 1; i <= 3; i++) {
-          var el = doc.querySelector('[data-wp-step="' + i + '"]');
+        var i;
+        for (i = 1; i <= 3; i++) {
+          var el = root.querySelector('[data-wp-step="' + i + '"]');
           if (el) el.style.display = i === n ? "block" : "none";
         }
-        if (n === 3) {
+      }
+      function trimVal(scope, name) {
+        var el = scope && scope.querySelector('[name="' + name + '"]');
+        return el ? String(el.value || "").replace(/^\s+|\s+$/g, "") : "";
+      }
+      function installReqsOk() {
+        var step1 = root.querySelector('[data-wp-step="1"]');
+        var boxes = step1 ? step1.querySelectorAll("[data-wp-install-req]") : [];
+        var i;
+        if (!boxes.length) return false;
+        for (i = 0; i < boxes.length; i++) {
+          if (!boxes[i].checked) return false;
+        }
+        return true;
+      }
+      var nexts = root.querySelectorAll("[data-wp-next]");
+      var j;
+      for (j = 0; j < nexts.length; j++) {
+        nexts[j].addEventListener("click", function () {
+          var st = root.querySelector("[data-wp-install-status]");
+          if (step === 1) {
+            if (!installReqsOk()) {
+              if (st) st.textContent = "Tick both install checks. Empty never writes.";
+              return;
+            }
+            showStep(2);
+            if (st) st.textContent = "";
+            return;
+          }
+          if (step !== 2) return;
+          var step2 = root.querySelector('[data-wp-step="2"]');
+          var blog = trimVal(step2, "blog");
+          var db = trimVal(step2, "db");
+          var user = trimVal(step2, "user");
+          var pass = trimVal(step2, "pass");
+          if (blog.length < 2 || db.length < 2 || user.length < 2 || pass.length < 1) {
+            if (st) st.textContent = "Blog title, database, user, and password are required. Empty never writes.";
+            return;
+          }
           try {
             localStorage.setItem(
               installKey(),
@@ -132,18 +172,15 @@
                 real: true,
                 steps: 3,
                 year: year() || undefined,
+                blog: blog.slice(0, 80),
+                db: db.slice(0, 40),
+                user: user.slice(0, 40),
                 ts: Date.now()
               })
             );
           } catch (eInst) { /* */ }
-        }
-      }
-      var nexts = doc.querySelectorAll("[data-wp-next]");
-      for (var j = 0; j < nexts.length; j++) {
-        nexts[j].addEventListener("click", function () {
-          showStep(Math.min(3, step + 1));
-          var st = doc.querySelector("[data-wp-install-status]");
-          if (st && step >= 3) st.textContent = "Installed (this browser only).";
+          showStep(3);
+          if (st) st.textContent = 'Installed "' + blog.slice(0, 60) + '" (this browser only).';
         });
       }
     }

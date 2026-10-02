@@ -1,5 +1,7 @@
 # Board C leftover-2× — 1999–2004 implementer steps (minute-detailed)
 
+**Wait-2x (2026-09-30 docs pass).** Research lock. Do not dest-farm more dest folders from this note. Dest **doubling** waits on `2x`. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
 **Date:** 2026-09-13  
 **Kind:** leftover-**2×** dest-true. Not leftover-3×. Not official 10. Not leftover-4×.  
 **Status:** **implemented 2026-09-13** for 1999–2004. Generator: `scripts/impl_board_c_dests.py`. **Do not invent dests.** Harvest tables win for slug / verb / key / trap / Next.  

@@ -14,7 +14,7 @@ function row(n, name, whenKey, next, verb, trap, fact) {
 export const TRAIL_2015 = [
   row(1, "Periscope Go LIVE", "itt15-periscope", "Apple Music", "Go LIVE", "Broadcast already ended", "Type a title, then Go LIVE. An ended broadcast writes nothing."),
   row(2, "Apple Music", "itt15-music", "Windows 10", "Play", "Download only", "June 2015. Play is the save."),
-  row(3, "Windows 10", "itt15-win10", "Reddit", "Upgrade", "Still on 8", "29 July 2015. The free upgrade is the save."),
+  row(3, "Windows 10", "itt15-win10", "Reddit redesign", "Upgrade", "Still on 8", "29 July 2015. The free upgrade is the save."),
   row(4, "Reddit redesign", "itt15-reddit", "Apple Watch", "Open the cards", "Old alien only", "The new card is the save."),
   row(5, "Apple Watch", "itt15-watch", "Edge", "Pair", "iPhone only", "24 April 2015 ship. Pair is the save."),
   row(6, "Edge", "itt15-edge", "Meerkat", "Open Edge", "IE as gold", "Windows 10’s browser. Open is the save."),

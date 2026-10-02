@@ -1,0 +1,27 @@
+/* 2008 document styles — XP · IE7 · App Store is a room
+   Year delta: @import period-2007 then 2008-specific rules. */
+@import url("period-2007.css");
+
+body.year-2008 .itt-year-chip {
+  color: #0a246a;
+  border-bottom-color: #33ccff;
+}
+
+:root {
+  --itt08-apps: #0a246a;
+  --itt08-xp: #ece9d8;
+  --itt08-ie: #0a246a;
+}
+
+html[data-itt-year="2008"] .itt-playable-link,
+html[data-itt-year="2008"] .itt-hub-exit,
+html[data-itt-year="2008"] .itt-felt-trail,
+html[data-itt-year="2008"] #itt-year-start-extra,
+html[data-itt-year="2008"] #itt-first-night-bar,
+html[data-itt-year="2008"] .itt-3x-visible,
+html[data-itt-year="2008"] #itt-layer-assess,
+html[data-itt-year="2008"] .itt-layer-assess,
+html[data-itt-year="2008"] .itt-home-more,
+html[data-itt-year="2008"] a[href="?deep=1"] {
+  display: none !important;
+}

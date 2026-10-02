@@ -96,6 +96,11 @@ test.describe('2005 signature REAL vs mock gates', () => {
     expect(await getKey(page, 'itt05-yt-uploads')).toBe(before);
     const title = 'RealVsMockYT ' + Date.now();
     await page.fill('[name="title"]', title);
+    const desc = page.locator('[data-yt-upload] [name="desc"]');
+    if (await desc.count()) await desc.fill("tags for the clip");
+    const ytReqs = page.locator("[data-yt-upload] [data-yt-req]");
+    const nYt = await ytReqs.count();
+    for (let i = 0; i < nYt; i++) await ytReqs.nth(i).check();
     await page.locator('[data-yt-upload] button[type="submit"]').click();
     const raw = await requireKey(page, 'itt05-yt-uploads');
     expect(raw).toContain(title);

@@ -2,7 +2,7 @@ import { Component, useEffect } from "react";
 import { Link, Navigate, Route, Routes, useParams } from "react-router-dom";
 import { Year2015 } from "./Year2015.jsx";
 import { Year2017 } from "./Year2017.jsx";
-import { REACT_YEARS, cardList, hashHtmlYears } from "./years.js";
+import { REACT_YEARS } from "./years.js";
 import card from "../../js/year-card.json";
 
 const DOORS = {
@@ -76,18 +76,12 @@ function StaticYear({ year }) {
 }
 
 function Hall() {
-  const reactYears = REACT_YEARS.map((row) => row.year).join(", ");
-  const staticYears = hashHtmlYears().join(", ");
-  const boarded = cardList("boarded").join(", ");
-  const absent = cardList("absent").join(", ");
+  const reactYears = REACT_YEARS.map((row) => row.year).join(" and ");
   return (
     <main className="hall">
       <p className="kicker">React doors · {reactYears}</p>
       <h1>Internet Through Time</h1>
-      <p className="lede">
-        {reactYears} are the React doors. {staticYears} open on the static
-        museum. {boarded} is boarded. {absent} are absent.
-      </p>
+      <p className="lede">{reactYears} are the React doors.</p>
       <ul className="cards">
         {REACT_YEARS.map((row) => (
           <li key={row.year}>

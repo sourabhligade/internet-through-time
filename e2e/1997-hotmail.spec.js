@@ -28,6 +28,10 @@ test.describe('1997 HoTMaiL', () => {
 
     await frame.locator('input[name="login"]').fill('itt97user');
     await frame.locator('input[name="pass"]').fill('secret');
+    await frame.locator('form[data-hotmail-login] [data-official-need]').fill('HoTMaiL');
+    const reqs = frame.locator('form[data-hotmail-login] [data-official-req]');
+    const nReq = await reqs.count();
+    for (let i = 0; i < nReq; i++) await reqs.nth(i).check({ force: true });
     await frame
       .locator('form[data-hotmail-login] input[type="submit"], form[data-hotmail-login] input[type="image"]')
       .first()

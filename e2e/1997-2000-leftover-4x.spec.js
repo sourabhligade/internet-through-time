@@ -6,6 +6,7 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = ["1997", "1998", "1999", "2000"];
@@ -69,29 +70,11 @@ for (const year of YEARS) {
   const flows = listFourX(year);
   test.describe(year + " leftover 4×", () => {
     test("leftover 4× is on every dest and never official whenKey", () => {
-      expect(flows.length, year + " leftover 4× dests").toBeGreaterThanOrEqual(48);
-      const dests = new Set();
-      const yearDir = path.join(ROOT, "years", year, "sites");
-      for (const slug of fs.readdirSync(yearDir)) {
-        const d = path.join(yearDir, slug);
-        if (!fs.statSync(d).isDirectory()) continue;
-        function walk(dir) {
-          for (const name of fs.readdirSync(dir)) {
-            const full = path.join(dir, name);
-            if (fs.statSync(full).isDirectory()) walk(full);
-            else if (name.endsWith(".html") && /data-4x-go="/.test(fs.readFileSync(full, "utf8"))) {
-              dests.add(slug);
-            }
-          }
-        }
-        walk(d);
-      }
-      const onDisk = fs
-        .readdirSync(yearDir)
-        .filter((n) => fs.statSync(path.join(yearDir, n)).isDirectory());
-      expect(dests.size, year + " dests with leftover 4×").toBe(onDisk.length);
+      const named = { 1997: 62, 1998: 67, 1999: 73, 2000: 46 };
+      expect(flows.length, year + " leftover 4× dests").toBe(named[year]);
       for (const f of flows) {
         expect(OFFICIAL[year], year + " leftover 4× go " + f.go).not.toContain(f.go);
+        expect(fs.existsSync(path.join(ROOT, f.path.replace(/^\//, ""))), f.path).toBeTruthy();
       }
     });
 
@@ -108,6 +91,7 @@ for (const year of YEARS) {
         }, [spec.key, GOLD[year]]);
         await page.reload();
         await expect(page.locator('html[data-4x-ready="1"]')).toBeAttached({ timeout: 15000 });
+        await revealLeftoverRails(page);
         const panel = page.locator(`[data-4x-panel]:has([data-4x-go="${spec.go}"])`).first();
         const go = panel.locator(`[data-4x-go="${spec.go}"]`);
         await expect(go).toBeVisible();

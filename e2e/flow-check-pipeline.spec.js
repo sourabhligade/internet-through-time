@@ -13,7 +13,7 @@ const LEAN = require("./lean-double-leftover.matrix.json");
 const ROOT = path.join(__dirname, "..");
 const SHIP = [];
 for (let y = 1994; y <= 2022; y++) {
- if ((y > 2007 && y < 2009) || y === 2009 || y === 2021 || (y > 2017 && y < 2021) || (y > 2010 && y < 2012)) continue;
+ if (y === 2021 || y === 2022 || (y > 2017 && y < 2021)) continue;
   SHIP.push(String(y));
 }
 
@@ -25,7 +25,6 @@ const LO3X_STOP = {
   2014: 0,
   2015: 0,
   2016: 0,
-  2022: 0,
 };
 
 function officialTen(year) {
@@ -57,8 +56,8 @@ async function getKey(page, key) {
 }
 
 test.describe("FLOW-CHECK pipeline · every playable year", () => {
- test("1 hub 22 cards · no 2009 · 2015 react · no 2023+", async ({ page }) => {
- expect(SHIP).toHaveLength(22);
+ test("1 hub 24 cards · 2009 live · 2011 live · 2015 react · no 2022+", async ({ page }) => {
+ expect(SHIP).toHaveLength(24);
     await page.goto("/");
  await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
     const reactDoor = new Set(["2015", "2017"]);
@@ -72,7 +71,7 @@ test.describe("FLOW-CHECK pipeline · every playable year", () => {
       }
       await expect(page.locator(`a.year-card.available[href*="years/${y}"]`).first()).toBeVisible();
     }
-    await expect(page.locator("a.year-card.available[href*='years/2009']")).toHaveCount(0);
+    await expect(page.locator("a.year-card.available[href*='years/2009']")).toBeVisible();
     await expect(page.locator("a.year-card.available[href*='years/2015']")).toHaveCount(0);
     await expect(page.locator('a.year-card.available[data-year="2015"]')).toBeVisible();
     await expect(page.locator("a.year-card.available[href*='years/2023']")).toHaveCount(0);
@@ -125,7 +124,9 @@ test.describe("FLOW-CHECK pipeline · every playable year", () => {
         const href = path.join(ROOT, "years", y, row.href);
         expect(fs.existsSync(href), href).toBe(true);
         const html = fs.readFileSync(href, "utf8");
-        expect(html.indexOf("data-lo-panel"), y + " " + row.href + " leftover-2×").toBe(-1);
+        const twoX =
+          html.indexOf("data-itt-2x-links") !== -1 || html.indexOf("data-itt-2x-unique") !== -1;
+        expect(twoX, y + " " + row.href + " leftover-2×").toBe(false);
         const destTrue =
           html.indexOf("data-official-need") !== -1 || html.indexOf("data-year-game") !== -1;
         expect(destTrue, y + " " + row.href + " dest-true need").toBe(true);
@@ -150,7 +151,7 @@ test.describe("FLOW-CHECK pipeline · leftover dest I/O sample", () => {
     leanByYear[row.year] = leanByYear[row.year] || [];
     leanByYear[row.year].push(row);
   }
-  for (const year of ["2007", "2010", "2022"]) {
+  for (const year of ["2007", "2010"]) {
     const rows = leanByYear[year] || [];
     if (rows[0]) samples.push({ ...rows[0], lean: true });
   }

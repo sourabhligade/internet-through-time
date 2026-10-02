@@ -218,6 +218,7 @@
         else if (host.nextSibling) host.parentNode.insertBefore(chip, host.nextSibling);
         else host.parentNode.appendChild(chip);
       }
+      fiveXChips(year, host, chipId);
       if (isDeep()) {
         var threeId = "ott-3x-" + year + "-dp";
         var three = document.getElementById(threeId);
@@ -317,6 +318,61 @@
       }
     } catch (eD) { /* */ }
     return false;
+  }
+
+  var FIVE_X_2009 = [
+    { name: "FarmVille", href: "sites/farmville/index.html" },
+    { name: "Bing", href: "sites/bing/index.html" },
+    { name: "iPhone 3GS", href: "sites/iphone/index.html" },
+    { name: "Foursquare", href: "sites/foursquare/index.html" },
+    { name: "Windows 7", href: "sites/windows7/index.html" }
+  ];
+
+  function fiveXChips(year, host, chipId) {
+    var id = "ott-5x-" + year;
+    if (document.getElementById(id) || !host || !host.parentNode) return;
+    var picks = [];
+    var i;
+    var t;
+    if (year === "2009") {
+      picks = FIVE_X_2009;
+    } else {
+      var trails = (ITT.flowTrails && ITT.flowTrails[year]) || [];
+      for (i = 0; i < trails.length; i++) {
+        t = trails[i];
+        if (t && parseInt(t.n, 10) >= 1 && parseInt(t.n, 10) <= 10 && t.href) picks.push(t);
+      }
+      picks.sort(function (a, b) {
+        return (parseInt(a.n, 10) || 0) - (parseInt(b.n, 10) || 0);
+      });
+      if (picks.length < 6) return;
+      picks = picks.slice(0, 6);
+    }
+    if (picks.length < (year === "2009" ? 5 : 6)) return;
+    var html = "";
+    for (i = 0; i < picks.length; i++) {
+      if (i) html += " · ";
+      html +=
+        '<a href="' +
+        esc(flowHref(picks[i].href)) +
+        '">' +
+        esc(stripLeftoverWord(picks[i].name || "room")) +
+        "</a>";
+    }
+    var row = document.createElement("p");
+    row.id = id;
+    row.className = "itt-5x-trails";
+    row.setAttribute("data-itt-5x-atlas", "1");
+    row.innerHTML = "<b>5×</b> · " + html;
+    var anchor = chipId ? document.getElementById(chipId) : null;
+    if (anchor && anchor.parentNode) {
+      if (anchor.nextSibling) anchor.parentNode.insertBefore(row, anchor.nextSibling);
+      else anchor.parentNode.appendChild(row);
+    } else if (host.nextSibling) {
+      host.parentNode.insertBefore(row, host.nextSibling);
+    } else {
+      host.parentNode.appendChild(row);
+    }
   }
 
   function playableChipHtml(year) {

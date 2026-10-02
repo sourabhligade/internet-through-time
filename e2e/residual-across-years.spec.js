@@ -5,7 +5,7 @@
  */
 const { test, expect } = require("@playwright/test");
 
-const { completeRealGate } = require("./helpers");
+const { completeRealGate, revealLeftoverRails } = require("./helpers");
 const fs = require("fs");
 const path = require("path");
 
@@ -61,11 +61,26 @@ test.describe("residual REAL across years", () => {
         await page.evaluate((kk) => localStorage.removeItem(kk), k);
         await page.reload();
         await waitResidual(page);
-        await expect(page.locator("[data-appstore-install]").first()).toBeVisible({ timeout: 15000 });
-        await page.locator("[data-appstore-install]").first().click();
-        expect(await getKey(page, k)).toBeFalsy();
-        await completeRealGate(page, "[data-appstore-install]");
-        await expect.poll(async () => getKey(page, k)).toBeTruthy();
+        const install = page.locator("[data-appstore-install]");
+        if (await install.count()) {
+          await expect(install.first()).toBeVisible({ timeout: 15000 });
+          await install.first().click();
+          expect(await getKey(page, k)).toBeFalsy();
+          await completeRealGate(page, "[data-appstore-install]");
+          await expect.poll(async () => getKey(page, k)).toBeTruthy();
+          return;
+        }
+        const live = (await page.locator("html").getAttribute("data-official-key")) || k;
+        const verb = page.locator("[data-official-verb]").first();
+        await expect(verb).toBeVisible({ timeout: 15000 });
+        await verb.click();
+        expect(await getKey(page, live)).toBeFalsy();
+        await page.locator("[data-official-need]").first().fill("Remote");
+        const reqs = page.locator("[data-official-req]");
+        const nReq = await reqs.count();
+        for (let i = 0; i < nReq; i++) await reqs.nth(i).check();
+        await verb.click();
+        await expect.poll(async () => getKey(page, live)).toBeTruthy();
       });
     }
 
@@ -102,11 +117,33 @@ test.describe("residual REAL across years", () => {
         await page.evaluate((kk) => localStorage.removeItem(kk), k);
         await page.reload();
         await waitResidual(page);
-        await expect(page.locator("[data-lastfm-scrobble]")).toBeVisible({ timeout: 15000 });
-        await page.locator("[data-lastfm-scrobble] button[type='submit']").click();
-        expect(await getKey(page, k)).toBeFalsy();
-        await completeRealGate(page, "[data-lastfm-scrobble] button[type='submit']");
-        await expect.poll(async () => getKey(page, k)).toBeTruthy();
+        const scrobble = page.locator("[data-lastfm-scrobble]");
+        if (await scrobble.count()) {
+          await expect(scrobble).toBeVisible({ timeout: 15000 });
+          await page.locator("[data-lastfm-scrobble] button[type='submit']").click();
+          expect(await getKey(page, k)).toBeFalsy();
+          await completeRealGate(page, "[data-lastfm-scrobble] button[type='submit']");
+          await expect.poll(async () => getKey(page, k)).toBeTruthy();
+          return;
+        }
+        await revealLeftoverRails(page);
+        const save = page.locator("[data-lo-save]").first();
+        await expect(save).toBeVisible({ timeout: 15000 });
+        const suf = (await save.getAttribute("data-lo-key")) || "lastfm";
+        const live = key(year, suf);
+        await page.evaluate((kk) => localStorage.removeItem(kk), live);
+        await save.click();
+        expect(await getKey(page, live)).toBeFalsy();
+        const reqs = page.locator("[data-lo-req]");
+        const nReq = await reqs.count();
+        for (let i = 0; i < nReq; i++) await reqs.nth(i).check();
+        const needPick = await save.getAttribute("data-lo-need-pick");
+        if (needPick) await page.locator(`[data-lo-pick="${needPick}"]`).first().click();
+        const field = page.locator("[data-lo-field]").first();
+        if (await field.count()) await field.fill("museum track");
+        await save.click();
+        await expect.poll(async () => getKey(page, live)).toBeTruthy();
+        expect(await getKey(page, key(year, "stumble"))).toBeFalsy();
       });
     }
 
@@ -118,12 +155,28 @@ test.describe("residual REAL across years", () => {
         await page.evaluate((kk) => localStorage.removeItem(kk), k);
         await page.reload();
         await waitResidual(page);
-        await expect(page.locator("[data-dropbox-add]")).toBeVisible({ timeout: 15000 });
-        await page.locator("[data-dropbox-add]").click();
+        const add = page.locator("[data-dropbox-add]");
+        if (await add.count()) {
+          await expect(add).toBeVisible({ timeout: 15000 });
+          await add.click();
+          expect(await getKey(page, k)).toBeFalsy();
+          await page.locator("[data-dropbox-name]").fill("memo-" + year + ".doc");
+          await completeRealGate(page, "[data-dropbox-add]");
+          await expect.poll(async () => getKey(page, k)).toBeTruthy();
+          return;
+        }
+        const live = (await page.locator("html").getAttribute("data-official-key")) || k;
+        const verb = page.locator("[data-official-verb]").first();
+        await expect(verb).toBeVisible({ timeout: 15000 });
+        await verb.click();
+        expect(await getKey(page, live)).toBeFalsy();
+        await page.locator("[data-official-need]").first().fill("memo-" + year + ".doc");
+        const reqs = page.locator("[data-official-req]");
+        const nReq = await reqs.count();
+        for (let i = 0; i < nReq; i++) await reqs.nth(i).check();
+        await verb.click();
+        await expect.poll(async () => getKey(page, live)).toBeTruthy();
         expect(await getKey(page, k)).toBeFalsy();
-        await page.locator("[data-dropbox-name]").fill("memo-" + year + ".doc");
-        await completeRealGate(page, "[data-dropbox-add]");
-        await expect.poll(async () => getKey(page, k)).toBeTruthy();
       });
     }
 

@@ -23,7 +23,7 @@ function loadTrails() {
   while ((m = yearRe.exec(src))) starts.push({ year: m[1], at: m.index + m[0].length });
   for (let i = 0; i < starts.length; i++) {
     const year = starts[i].year;
-    if (year === "2009" || year === "2025") continue;
+    if (year === "2025") continue;
     if (!fs.existsSync(path.join(ROOT, "years", year, "index.html"))) continue;
     const end = i + 1 < starts.length ? starts[i + 1].at : src.length;
     const block = src.slice(starts[i].at, end);
@@ -180,24 +180,15 @@ const STAR = {
       await page.locator("[data-official-verb]").click();
     },
   },
-  "itt08-github": {
-    incomplete: async (page) => {
-      await page.locator("form[data-gh-issue-form] button[type='submit']").click();
-    },
-    complete: async (page) => {
-      await page.fill("[name='title']", "Cannot center logo residual");
-      await page.fill("[name='body']", "Steps to reproduce residual");
-      await page.locator("form[data-gh-issue-form] button[type='submit']").click();
-    },
-  },
   "itt09-like": {
     incomplete: async (page) => {
-      await page.locator("[data-lk09-like]").click();
+      await page.locator("[data-official-trap]").first().click();
     },
     complete: async (page) => {
-      await page.locator('[data-lk09-page="news"]').click();
-      await page.locator('[data-lk09-page="music"]').click();
-      await page.locator("[data-lk09-like]").click();
+      await page.locator("[data-official-need]").fill("Like");
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-verb]").click();
     },
   },
   "itt10-ig-posts": {
@@ -212,13 +203,13 @@ const STAR = {
   },
   "itt11-gplus": {
     incomplete: async (page) => {
-      await page.locator("[data-gp11-hangout]").click();
+      await page.locator("[data-official-trap]").first().click();
     },
     complete: async (page) => {
-      await page.fill("[data-gp11-circle]", "Friends");
-      await page.locator('[data-gp11-person="ada"]').click();
-      await page.locator('[data-gp11-person="al"]').click();
-      await page.locator("[data-gp11-hangout]").click();
+      await page.locator("[data-official-need]").fill("Friends");
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-verb]").click();
     },
   },
   "itt12-ig-android": {

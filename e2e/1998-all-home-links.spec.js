@@ -15,16 +15,9 @@ const { enterYear, contentFrame } = require('./helpers');
 const HOME_LINKS = [
   'Google!',
   'Yahoo!',
-  'Amazon.com',
+  "I'm Feeling Lucky",
+  'Buy a CD',
   'eBay',
-  'Excite',
-  'CNN Interactive',
-  'GeoCities',
-  'Hotmail',
-  'CDnow',
-  'Valve',
-  'Slashdot',
-  "You've Got Mail",
 ];
 
 test.describe('1998 every Starting Point link', () => {

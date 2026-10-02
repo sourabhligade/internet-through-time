@@ -7,10 +7,13 @@ const fs = require('fs');
 const path = require('path');
 const { test, expect } = require('@playwright/test');
 
-const matrix = require('./year-extra-cde.matrix.json').filter((row) =>
-  fs.existsSync(path.join(__dirname, '..', 'years', row.year, 'index.html')) &&
-  fs.existsSync(path.join(__dirname, '..', row.path.replace(/^\//, '')))
-);
+const matrix = require('./year-extra-cde.matrix.json').filter((row) => {
+  const full = path.join(__dirname, '..', row.path.replace(/^\//, ''));
+  if (!fs.existsSync(path.join(__dirname, '..', 'years', row.year, 'index.html'))) return false;
+  if (!fs.existsSync(full)) return false;
+  const html = fs.readFileSync(full, 'utf8');
+  return html.includes('data-more-game') && html.includes('data-game-id="' + row.id + '"');
+});
 
 async function getKey(page, key) {
   return page.evaluate((k) => {

@@ -1,5 +1,8 @@
 # Leftover-3× unique dest links — 2× map
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 **Removed.** Leftover-3× unique links are gone. No rails, no 107-dest set, no =3 or 2021=5 cap. The text below is the old map.
 
 **Date:** 2026-09-22  

@@ -329,6 +329,9 @@ html[data-itt-year=""] body.itt-start-page #itt-year-start {
   margin: 28px auto 48px;
   padding: 0 20px;
 }
+html[data-itt-year="2022"][data-itt-start-standalone] #itt-year-start {
+  margin-bottom: 16px;
+}
 html[data-itt-start-habit] .itt-year-star,
 html[data-itt-year="2015"] .itt-year-star,
 html[data-itt-year="2016"] .itt-year-star,

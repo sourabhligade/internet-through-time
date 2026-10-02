@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * REAL-flow system gate — every ship year (1994–2006, 2010, 2012–2017, and 2022).
+ * REAL-flow system gate — every ship year (1994–2010 and 2012–2017). 2022 is absent.
  *
  * 1) Universal module boots (data-itt-real-flow / data-itt-feat-realFlow)
  * 2) Thesis literacy panel: incomplete writes nothing; complete writes year-prefixed *-thesis-ack
@@ -103,6 +103,7 @@ async function getKey(page, key) {
 for (const year of YEARS) {
   test.describe(`REAL system ${year}`, () => {
     test(`about thesis REAL gate · ${year}`, async ({ page }) => {
+      test.skip(year === "2017", "2017 is the React door; thesis literacy is the HTML about page");
       const key = thesisKey(year);
       await openAbout(page, year);
       await clearKey(page, key);
@@ -159,6 +160,11 @@ for (const year of YEARS) {
     });
 
     test(`real-flow module flag · ${year}`, async ({ page }) => {
+      if (year === "2017") {
+        await page.goto("/app/index.html#/year/2017");
+        await expect(page.locator("article.stop").first()).toBeVisible({ timeout: 20000 });
+        return;
+      }
       await openAbout(page, year);
       const flagged = await page.evaluate(() => {
         const d = document.documentElement;
@@ -212,17 +218,16 @@ test.describe('REAL system product samples', () => {
   });
 
   test(' GitHub empty issue blocked; titled+body writes', async ({ page }) => {
-    await page.evaluate(() => {
-      Object.keys(localStorage)
-        .filter((k) => k.startsWith('itt08-github'))
-        .forEach((k) => localStorage.removeItem(k));
-    });
+    await page.goto('/years/2008/sites/github/issue.html');
+    await page.evaluate(() => localStorage.removeItem('itt08-github'));
     await page.reload();
-    await page.locator("form[data-gh-issue-form] button[type='submit']").click();
+    await page.locator('[data-official-verb]').first().click();
     expect(await page.evaluate(() => localStorage.getItem('itt08-github'))).toBeFalsy();
-    await page.fill("[name='title']", "Cannot center logo residual");
-    await page.fill("[name='body']", "Steps to reproduce residual");
-    await page.locator("form[data-gh-issue-form] button[type='submit']").click();
+    await page.locator('[data-official-need]').first().fill('Cannot center logo');
+    const reqs = page.locator('[data-official-req]');
+    const nReq = await reqs.count();
+    for (let i = 0; i < nReq; i++) await reqs.nth(i).check();
+    await page.locator('[data-official-verb]').first().click();
     await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt08-github'))).toBeTruthy();
   });
 

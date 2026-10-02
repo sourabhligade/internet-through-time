@@ -167,28 +167,14 @@ test.describe("leftover-3× unique dest links", () => {
     await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
   });
 
-  test("2022 leftover dest leftover-3× unique dest amazon · ChatGPT leftover-3× unique dest links 0", async ({
-    page,
-  }) => {
-    await page.goto("/years/2022/sites/amazon/index.html");
-    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
-    await expect(page.locator("[data-itt-lo3x]")).toHaveCount(0);
-    await page.goto("/years/2022/sites/chatgpt/index.html");
-    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
-  });
-
   test("2010 leftover dest leftover-3× unique dest netflix · Instagram leftover-3× unique dest links 0", async ({
     page,
   }) => {
     await page.goto("/years/2010/sites/netflix/index.html");
     await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
-    await expect(page.locator("[data-itt-lo3x]")).toHaveCount(0);
+    await expect(page.locator("[data-itt-lo3x]")).toHaveCount(1);
+    await expect(page.locator('[data-itt-lo3x] [data-pop-go][data-pop-key="pop4-netflix"]')).toHaveCount(1);
     await page.goto("/years/2010/sites/instagram/index.html");
-    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
-  });
-
-  test("2022 Starting Point leftover-3× unique dest links first paint 0", async ({ page }) => {
-    await page.goto("/years/2022/pages/home.html");
     await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
   });
 
@@ -208,19 +194,4 @@ test.describe("leftover-3× unique dest links", () => {
     expect(await getKey(page, "itt07-iphone")).toBeFalsy();
   });
 
-  test("2022 leftover dest leftover-3× unique dest-true leftover dest I/O never writes star", async ({
-    page,
-  }) => {
-    await page.goto("/years/2022/sites/amazon/index.html");
-    await revealLeftoverRails(page);
-    await page.evaluate((ks) => ks.forEach((k) => localStorage.removeItem(k)), [
-      "itt22-pop-amazon",
-      "itt22-chatgpt",
-    ]);
-    await page.reload();
-    await revealLeftoverRails(page);
-    await expect(page.locator("[data-itt-lo3x]")).toHaveCount(0);
-    expect(await getKey(page, "itt22-pop-amazon")).toBeFalsy();
-    expect(await getKey(page, "itt22-chatgpt")).toBeFalsy();
-  });
 });

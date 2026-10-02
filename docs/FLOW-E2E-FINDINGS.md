@@ -1,5 +1,8 @@
 # Flow end-to-end findings
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 Browser run on 2026-09-28 against http://127.0.0.1:8080. Two passes.
 
 **Recheck 2026-09-29.** Playwright against the same local server, only the 7 empty-write URLs and the 28 finished-click URLs below. The tables were not edited and the 6,786-page crawl was not rerun.

@@ -1,5 +1,5 @@
 /**
- * Product face on 2016 and 2022 official rooms.
+ * Product face on 2016 official rooms.
  * Does not write storage. The existing verb still does.
  */
 (function (global) {
@@ -15,16 +15,6 @@
     "itt16-musically": ["musical.ly", "Fifteen seconds. TikTok For You writes nothing."],
     "itt16-win10-end": ["Windows 10", "The free upgrade is closing. Still-free writes nothing."],
     "itt16-game-gymrush": ["Gym Rush", "The year toy. A score of 0 writes nothing."],
-    "itt22-chatgpt": ["ChatGPT", "Type, then Send. Empty Send writes nothing. GPT-4 writes nothing."],
-    "itt22-wordle": ["Wordle", "Five letters. A sixth writes nothing."],
-    "itt22-twitter": ["Twitter", "The bird is still here. An X writes nothing."],
-    "itt22-bereal": ["BeReal", "Two minutes. Posting late writes nothing."],
-    "itt22-island": ["Dynamic Island", "The 14 Pro cutout. A 13 notch writes nothing."],
-    "itt22-ftx": ["FTX", "The balance does not move. Withdraw writes nothing."],
-    "itt22-mastodon": ["Mastodon", "Join. It is not Twitter."],
-    "itt22-tiktok": ["TikTok", "A watch. It is not ChatGPT."],
-    "itt22-win11": ["Windows 11", "The desktop. Still-Windows-10 writes nothing."],
-    "itt22-game-prompt": ["Prompt Queue", "The year toy. A score of 0 writes nothing."]
   };
 
   function boot(doc) {

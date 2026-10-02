@@ -1,7 +1,9 @@
 # Leftover-2× unique dest links — 2× map
 
+**Wait-2x (2026-09-30 docs pass).** Leftover-2× unique dest **links** already live. Dest **doubling** waits on the word `2x`. Do not dest-farm from this note. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
 **Date:** 2026-09-21  
-**Status:** Implemented 2026-09-21. Leftover-2× unique dest **links** on leftover dest HTML. Official dest leftover-2× first paint **0**. Dest-true leftover dest I/O unchanged. Not dest-farm. Leftover-3× unique flows and links were removed. Do not treat =3 or 2021=5 as a live cap.  
+**Status:** Implemented 2026-09-21. Leftover-2× unique dest **links** on leftover dest HTML. Official dest leftover-2× first paint **0**. Dest-true leftover dest I/O unchanged. Not dest-farm. Leftover-3× unique flows and links were removed. Do not treat =3 or 2021=5 as a live cap. Dest **doubling** waits on the word `2x`.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · live `years/` · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **I/O:** leftover never writes the star · empty / trap never write.  
 **Census:** live `years/` leftover-2× rails (`data-itt-2x-links` / `data-itt-2x-unique` / `ITT-2X-LINKS`).  

@@ -19,6 +19,7 @@ test.describe('1996 5× live F1–F5', () => {
     await page.evaluate((k) => { try { localStorage.removeItem(k); } catch (e) {} }, 'itt96-hotmail-user');
     await page.reload();
     await expect(page.locator('[data-5x-save]')).toHaveCount(0);
+    await expect(page.locator('form[data-hotmail-login] [data-official-verb]')).toBeVisible({ timeout: 15000 });
     await page.locator('form[data-hotmail-login] input[type="image"], form[data-hotmail-login] button, form[data-hotmail-login] input[type="submit"]').first().click();
     await expect.poll(async () => getKey(page, 'itt96-hotmail-user')).toBeFalsy();
     await page.fill('form[data-hotmail-login] [name="login"]', 'museum96');
@@ -31,14 +32,18 @@ test.describe('1996 5× live F1–F5', () => {
     await page.goto('/years/1996/sites/spacejam/index.html');
     await page.evaluate(() => {
       try { localStorage.removeItem('itt96-jam'); } catch (e) {}
+      try { localStorage.removeItem('itt96-sj-seen'); } catch (e1) {}
       try { sessionStorage.removeItem('itt96-sj-seen'); } catch (e2) {}
     });
+    await page.reload();
     await expect(page.locator('[data-5x-save]')).toHaveCount(0);
-    await page.locator('[data-sj-planet="press"]').click();
-    await page.goto('/years/1996/sites/spacejam/index.html');
-    await page.locator('[data-sj-planet="jam"]').click();
-    await page.goto('/years/1996/sites/spacejam/index.html');
-    await page.locator('[data-sj-planet="bball"]').click();
+    for (const id of ['press', 'jam', 'bball']) {
+      const planet = page.locator('[data-sj-planet="' + id + '"][data-official-gold="1"]');
+      await expect(planet).toBeVisible({ timeout: 15000 });
+      await planet.click();
+      await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt96-sj-seen') || '')).toContain(id);
+      if (id !== 'bball') await page.goto('/years/1996/sites/spacejam/index.html');
+    }
     await expect.poll(async () => getKey(page, 'itt96-jam'), { timeout: 8000 }).toBeTruthy();
   });
 

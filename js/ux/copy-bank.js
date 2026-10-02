@@ -34,7 +34,7 @@
         return "Saved in this browser.";
       },
       shellCoach:
-        "This is a museum desktop. The big window is the period web. Starting Point is the all-years list. Toolbar Home is this year’s landing.",
+        "This is a museum desktop. The big window is the period web. All years is the museum list. Toolbar Home opens this year’s Starting Point.",
       gameFocus: "Click the game board for keyboard focus, or use on-screen controls."
     },
     nav: {
@@ -52,7 +52,7 @@
         return "Saved in this browser.";
       },
       shellCoach:
-        "This is a museum desktop. The big window is the period web. Starting Point is the all-years list. Toolbar Home is this year’s landing.",
+        "This is a museum desktop. The big window is the period web. All years is the museum list. Toolbar Home opens this year’s Starting Point.",
       gameFocus: "Click the puzzle, then use arrows or the D-pad."
     },
     xp: {
@@ -72,7 +72,7 @@
         return "Saved in this browser.";
       },
       shellCoach:
-        "This is a museum desktop. The big window is the period web. Starting Point is the all-years list. Toolbar Home is this year’s landing.",
+        "This is a museum desktop. The big window is the period web. All years is the museum list. Toolbar Home opens this year’s Starting Point.",
       gameFocus: "Focus the game (click it), then play."
     },
     web2: {
@@ -92,7 +92,7 @@
         return "Saved in this browser.";
       },
       shellCoach:
-        "This is a museum desktop. The big window is the period web. Starting Point is the all-years list. Toolbar Home is this year’s landing.",
+        "This is a museum desktop. The big window is the period web. All years is the museum list. Toolbar Home opens this year’s Starting Point.",
       gameFocus: "Click the stage for controls."
     },
     app: {
@@ -112,7 +112,7 @@
         return "Saved in this browser.";
       },
       shellCoach:
-        "This is a museum desktop. The big window is the period web. Starting Point is the all-years list. Toolbar Home is this year’s landing.",
+        "This is a museum desktop. The big window is the period web. All years is the museum list. Toolbar Home opens this year’s Starting Point.",
       gameFocus: "Tap the board, then use keys or on-screen buttons."
     },
     modern: {
@@ -132,7 +132,7 @@
         return "Saved in this browser.";
       },
       shellCoach:
-        "This is a museum desktop. The big window is the period web. Starting Point is the all-years list. Toolbar Home is this year’s landing.",
+        "This is a museum desktop. The big window is the period web. All years is the museum list. Toolbar Home opens this year’s Starting Point.",
       gameFocus: "Click the game panel for focus (arrow keys need it)."
     }
   };

@@ -1,7 +1,10 @@
 # Flow plans, code, unimplemented work, unused files
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 **Date:** 2026-09-14  
-**Tree:** `the working branch` (working tree dirty; lean Starting Point + leftover fold in progress)  
+**Tree:** `museum/1994-2020-lean` (working tree dirty; lean Starting Point + leftover fold in progress)  
 **Status:** Audit report. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) + `scripts/itt_gate.py` `SHIP_YEARS`.  
 **Out of scope:** restoring wiped and 2023–2025. 2022 is a live door. 2009 stays boarded. Leftover-3× catalogs are empty. This file is not ship law when it still describes 28 open years.

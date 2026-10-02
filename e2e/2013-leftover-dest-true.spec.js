@@ -51,17 +51,34 @@ async function completeLo(page, loKey, gold, fill) {
 }
 
 test.describe("2013 leftover dest-true", () => {
-  test("Ask.fm leftover-3× dest-true", async ({ page }) => {
+  test("Ask.fm is a cite shell with no pop machine", async ({ page }) => {
     await page.goto("/years/2013/sites/askfm/index.html");
-    await completePop(page, "askfm", "itt13-pop-askfm", "itt13-vine-posts", "ask leftover");
+    await expect(page.locator("h1")).toContainText(/Ask\.fm/i);
+    await expect(page.locator("[data-pop-go]")).toHaveCount(0);
+    expect(await getKey(page, "itt13-pop-askfm")).toBeFalsy();
   });
-  test("Whisper leftover-3× dest-true", async ({ page }) => {
+  test("Whisper is a cite shell with no pop machine", async ({ page }) => {
     await page.goto("/years/2013/sites/whisper/index.html");
-    await completePop(page, "whisper", "itt13-pop-whisper", "itt13-vine-posts", "whisper leftover");
+    await expect(page.locator("h1")).toContainText(/Whisper/i);
+    await expect(page.locator("[data-pop-go]")).toHaveCount(0);
+    expect(await getKey(page, "itt13-pop-whisper")).toBeFalsy();
   });
-  test("YouTube leftover-3× dest-true", async ({ page }) => {
+  test("YouTube popular wiki save writes itt13-wiki and not the Vine star", async ({ page }) => {
     await page.goto("/years/2013/sites/youtube/index.html");
-    await completePop(page, "youtube", "itt13-pop-youtube", "itt13-vine-posts", "youtube leftover");
+    await page.evaluate(() => {
+      localStorage.removeItem("itt13-wiki");
+      localStorage.removeItem("itt13-vine-posts");
+    });
+    await page.reload();
+    const save = page.locator("[data-itt-popular-save][data-storage-key='wiki']");
+    await save.click();
+    expect(await getKey(page, "itt13-wiki")).toBeFalsy();
+    const reqs = page.locator("[data-popular-req][data-pop-for='wiki']");
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check();
+    await save.click();
+    await expect.poll(() => getKey(page, "itt13-wiki"), { timeout: 8000 }).toBeTruthy();
+    expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
   });
   test("Vine leftover-2× lx then d2 never writes gold", async ({ page }) => {
     test.skip(true, "official dest leftover-2× panels = 0");

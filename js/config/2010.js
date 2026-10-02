@@ -16,6 +16,7 @@
     "pages/home.html",
     "pages/map.html",
     "pages/whats-new.html",
+    "pages/cool.html",
     "sites/android/index.html",
     "sites/angry/index.html",
     "sites/chrome/about.html",
@@ -88,7 +89,7 @@
   var i;
   for (i = 0; i < rooms.length; i++) {
     if (!urlMap[rooms[i]]) {
-      urlMap[rooms[i]] = "http://museum.local/years/2010/" + rooms[i];
+      urlMap[rooms[i]] = "http://home.microsoft.com/intl/web2010/" + rooms[i];
     }
   }
 

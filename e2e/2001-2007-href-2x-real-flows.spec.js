@@ -89,13 +89,13 @@ const YEARS = [
 ];
 
 const DEST_HTML_FREEZE = {
-  2001: { dests: 259, html: 330 },
-  2002: { dests: 230, html: 281 },
-  2003: { dests: 203, html: 267 },
+  2001: { dests: 259, html: 331 },
+  2002: { dests: 230, html: 282 },
+  2003: { dests: 203, html: 268 },
   2004: { dests: 805, html: 955 },
   2005: { dests: 806, html: 966 },
   2006: { dests: 370, html: 562 },
-  2007: { dests: 33, html: 91 },
+  2007: { dests: 33, html: 92 },
 };
 
 async function getKey(page, key) {

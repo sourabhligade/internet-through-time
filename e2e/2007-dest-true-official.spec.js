@@ -115,6 +115,7 @@ test.describe("2007 dest-true official", () => {
     await completeOfficial(page, {
       path: "/years/2007/sites/ie6/index.html",
       key: "itt07-ie6",
+      field: "XP IE6",
     });
   });
 

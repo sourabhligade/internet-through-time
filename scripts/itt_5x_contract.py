@@ -36,7 +36,7 @@ NO_PLAQUE: frozenset[tuple[int, str]] = frozenset(
 )
 
 # Years restored to committed dests (no leftover 5× plaques) except ALLOW_PLAQUE.
-NO_PLAQUE_YEARS: frozenset[int] = frozenset({2006, 2009, 2010, 2012, 2013, 2022, 2023})
+NO_PLAQUE_YEARS: frozenset[int] = frozenset({2006, 2009, 2010, 2012, 2013, 2023})
 
 # 5×-live F1–F5 leftover plaques (keys are not official gold, except Hulu/Chrome
 # share a dest with gold). -5x-live / 2012-5x-live require data-5x-save here.

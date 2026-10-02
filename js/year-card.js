@@ -8,133 +8,370 @@
       "kind": "html",
       "href": "years/1994/",
       "star": "itt94-csotd",
-      "frozen": true
+      "frozen": true,
+      "chrome": {
+        "os": "win31",
+        "browser": "netscape1",
+        "toolbar": "netscape",
+        "assetYear": "1994",
+        "location": "http://home.nerf.edu/web1994/",
+        "maximized": false,
+        "hasTaskbar": false
+      }
     },
     "1995": {
       "kind": "html",
       "href": "years/1995/",
       "star": "itt95-ssl-checkout",
-      "frozen": true
+      "frozen": true,
+      "chrome": {
+        "os": "win95",
+        "browser": "netscape2",
+        "toolbar": "netscape",
+        "assetYear": "1995",
+        "location": "http://home.nerf.edu/web1995/",
+        "maximized": true,
+        "hasTaskbar": true
+      }
     },
     "1996": {
       "kind": "html",
       "href": "years/1996/",
       "star": "itt96-portal-wars",
-      "frozen": true
+      "frozen": true,
+      "chrome": {
+        "os": "win95",
+        "browser": "netscape3",
+        "toolbar": "netscape",
+        "assetYear": "1996",
+        "location": "http://home.nerf.edu/web1996/",
+        "maximized": true,
+        "hasTaskbar": true
+      }
     },
     "1997": {
       "kind": "html",
       "href": "years/1997/",
       "star": "itt97-pointcast",
-      "frozen": true
+      "frozen": true,
+      "chrome": {
+        "os": "win95",
+        "browser": "ie4",
+        "toolbar": "ie",
+        "assetYear": "1997",
+        "location": "http://home.microsoft.com/intl/web1997/",
+        "maximized": true,
+        "hasTaskbar": true
+      }
     },
     "1998": {
       "kind": "html",
       "href": "years/1998/",
       "star": "itt98-lucky",
-      "frozen": true
+      "frozen": true,
+      "chrome": {
+        "os": "win98",
+        "browser": "ie4",
+        "toolbar": "ie",
+        "assetYear": "1998",
+        "location": "http://home.microsoft.com/intl/web1998/",
+        "maximized": true,
+        "hasTaskbar": true
+      }
     },
     "1999": {
       "kind": "html",
       "href": "years/1999/",
       "star": "itt99-aim",
-      "frozen": true
+      "frozen": true,
+      "chrome": {
+        "os": "win98",
+        "browser": "ie5",
+        "toolbar": "ie",
+        "assetYear": "1999",
+        "location": "http://home.microsoft.com/intl/web1999/",
+        "maximized": true,
+        "hasTaskbar": true,
+        "osPhrase": "Win98 SE"
+      }
     },
     "2000": {
       "kind": "html",
       "href": "years/2000/",
       "star": "itt00-mapquest",
-      "frozen": true
+      "frozen": true,
+      "chrome": {
+        "os": "win98",
+        "browser": "ie55",
+        "toolbar": "ie",
+        "assetYear": "2000",
+        "location": "http://home.microsoft.com/intl/web2000/",
+        "maximized": true,
+        "hasTaskbar": true,
+        "osPhrase": "Win98 SE"
+      }
     },
     "2001": {
       "kind": "html",
       "href": "years/2001/",
       "star": "itt01-wiki",
-      "frozen": true
+      "frozen": true,
+      "chrome": {
+        "os": "winxp",
+        "browser": "ie6",
+        "toolbar": "ie",
+        "assetYear": "2001",
+        "location": "http://home.microsoft.com/intl/web2001/",
+        "maximized": true,
+        "hasTaskbar": true
+      }
     },
     "2002": {
       "kind": "html",
       "href": "years/2002/",
       "star": "itt02-stumble",
-      "frozen": true
+      "frozen": true,
+      "chrome": {
+        "os": "winxp",
+        "browser": "ie6",
+        "toolbar": "ie",
+        "assetYear": "2002",
+        "location": "http://home.microsoft.com/intl/web2002/",
+        "maximized": true,
+        "hasTaskbar": true
+      }
     },
     "2003": {
       "kind": "html",
       "href": "years/2003/",
       "star": "itt03-photobucket",
-      "frozen": true
+      "frozen": true,
+      "chrome": {
+        "os": "winxp",
+        "browser": "ie6",
+        "toolbar": "ie",
+        "assetYear": "2004",
+        "location": "http://home.microsoft.com/intl/web2003/",
+        "maximized": true,
+        "hasTaskbar": true
+      }
     },
     "2004": {
       "kind": "html",
       "href": "years/2004/",
       "star": "itt04-thefacebook-networks",
-      "frozen": true
+      "frozen": true,
+      "chrome": {
+        "os": "winxp",
+        "browser": "ie6",
+        "toolbar": "ie",
+        "assetYear": "2004",
+        "location": "http://home.microsoft.com/intl/web2004/",
+        "maximized": true,
+        "hasTaskbar": true
+      }
     },
     "2005": {
       "kind": "html",
       "href": "years/2005/",
       "star": "itt05-yt-uploads",
-      "frozen": true
+      "frozen": true,
+      "chrome": {
+        "os": "winxp",
+        "browser": "ie6",
+        "toolbar": "ie",
+        "assetYear": "2005",
+        "location": "http://home.microsoft.com/intl/web2005/",
+        "maximized": true,
+        "hasTaskbar": true
+      }
     },
     "2006": {
       "kind": "html",
       "href": "years/2006/",
       "star": "itt06-tweets",
-      "frozen": true
+      "frozen": true,
+      "chrome": {
+        "os": "winxp",
+        "browser": "ie6",
+        "toolbar": "ie",
+        "assetYear": "2006",
+        "location": "http://home.microsoft.com/intl/web2006/",
+        "maximized": true,
+        "hasTaskbar": true
+      }
     },
     "2007": {
       "kind": "html",
       "href": "years/2007/",
-      "star": "itt07-iphone"
+      "star": "itt07-iphone",
+      "chrome": {
+        "os": "winxp",
+        "browser": "ie6",
+        "toolbar": "ie",
+        "assetYear": "2004",
+        "location": "http://home.microsoft.com/intl/web2007/",
+        "maximized": true,
+        "hasTaskbar": true,
+        "roomClause": "iPhone Safari is a room"
+      }
     },
     "2008": {
-      "kind": "absent"
+      "kind": "html",
+      "href": "years/2008/",
+      "star": "itt08-apps",
+      "chrome": {
+        "os": "winxp",
+        "browser": "ie7",
+        "toolbar": "ie",
+        "assetYear": "2004",
+        "location": "http://home.microsoft.com/intl/web2008/",
+        "maximized": true,
+        "hasTaskbar": true,
+        "roomClause": "App Store is a room"
+      }
     },
     "2009": {
-      "kind": "boarded",
-      "star": "itt09-like"
+      "kind": "html",
+      "href": "years/2009/",
+      "star": "itt09-like",
+      "chrome": {
+        "os": "winxp",
+        "browser": "ie8",
+        "toolbar": "ie",
+        "assetYear": "2007",
+        "location": "http://home.microsoft.com/intl/web2009/",
+        "maximized": true,
+        "hasTaskbar": true,
+        "roomClause": "Facebook Like is the room"
+      }
     },
     "2010": {
       "kind": "html",
       "href": "years/2010/",
-      "star": "itt10-ig-posts"
+      "star": "itt10-ig-posts",
+      "chrome": {
+        "os": "win7",
+        "browser": "ie8",
+        "toolbar": "ie",
+        "assetYear": null,
+        "location": "http://home.microsoft.com/intl/web2010/",
+        "maximized": true,
+        "hasTaskbar": true,
+        "browserPhrase": "IE 8 desktop residual",
+        "roomClause": "the year lives in iPad / Instagram rooms"
+      }
     },
     "2011": {
-      "kind": "absent"
+      "kind": "html",
+      "href": "years/2011/",
+      "star": "itt11-gplus",
+      "chrome": {
+        "os": "win7",
+        "browser": "ie8",
+        "toolbar": "ie",
+        "assetYear": null,
+        "location": "http://home.microsoft.com/intl/web2011/",
+        "maximized": true,
+        "hasTaskbar": true,
+        "browserPhrase": "IE 8 desktop residual",
+        "roomClause": "the year lives in Google+ rooms"
+      }
     },
     "2012": {
       "kind": "html",
       "href": "years/2012/",
-      "star": "itt12-ig-android"
+      "star": "itt12-ig-android",
+      "chrome": {
+        "os": "win7",
+        "browser": "ie9",
+        "toolbar": "ie",
+        "assetYear": null,
+        "location": "http://home.microsoft.com/intl/web2012/",
+        "maximized": true,
+        "hasTaskbar": true,
+        "roomClause": "IE8 residual"
+      }
     },
     "2013": {
       "kind": "html",
       "href": "years/2013/",
-      "star": "itt13-vine-posts"
+      "star": "itt13-vine-posts",
+      "chrome": {
+        "os": "win7",
+        "browser": "ie9",
+        "toolbar": "ie",
+        "assetYear": null,
+        "location": "http://home.microsoft.com/intl/web2013/",
+        "maximized": true,
+        "hasTaskbar": true,
+        "browserPhrase": "IE 9 desktop residual",
+        "roomClause": "the year lives in Vine / iOS 7 rooms"
+      }
     },
     "2014": {
       "kind": "html",
       "href": "years/2014/",
       "star": "itt14-wa-install",
       "leanBoot": true,
-      "hashToHtml": true
+      "hashToHtml": true,
+      "chrome": {
+        "os": "win7",
+        "browser": "ie9",
+        "toolbar": "ie",
+        "assetYear": null,
+        "location": "http://home.microsoft.com/intl/web2014/",
+        "maximized": true,
+        "hasTaskbar": true,
+        "browserPhrase": "Internet Explorer 9 desktop residual",
+        "roomClause": "the year lives in WhatsApp / Heartbleed rooms"
+      }
     },
     "2015": {
       "kind": "react",
       "href": "app/index.html#/year/2015",
-      "star": "itt15-periscope"
+      "star": "itt15-periscope",
+      "chrome": {
+        "os": "win10",
+        "browser": "chrome-habit",
+        "toolbar": "chrome22",
+        "assetYear": null,
+        "location": "https://www.google.com/web2015/",
+        "maximized": true,
+        "hasTaskbar": true
+      }
     },
     "2016": {
       "kind": "html",
       "href": "years/2016/",
       "star": "itt16-ig-stories",
       "leanBoot": true,
-      "hashToHtml": true
+      "hashToHtml": true,
+      "chrome": {
+        "os": "win10",
+        "browser": "chrome-habit",
+        "toolbar": "chrome22",
+        "assetYear": null,
+        "location": "https://www.google.com/web2016/",
+        "maximized": true,
+        "hasTaskbar": true,
+        "osPhrase": "Windows 10 rising",
+        "roomClause": "Edge Spartan residual"
+      }
     },
     "2017": {
       "kind": "react",
       "href": "app/index.html#/year/2017",
-      "star": "itt17-faceid"
+      "star": "itt17-faceid",
+      "chrome": {
+        "os": "win10",
+        "browser": "chrome-habit",
+        "toolbar": "chrome22",
+        "assetYear": null,
+        "location": "https://www.google.com/web2017/",
+        "maximized": true,
+        "hasTaskbar": true
+      }
     },
     "2018": {
       "kind": "absent"
@@ -149,11 +386,7 @@
       "kind": "absent"
     },
     "2022": {
-      "kind": "html",
-      "href": "years/2022/",
-      "star": "itt22-chatgpt",
-      "leanBoot": true,
-      "hashToHtml": true
+      "kind": "absent"
     },
     "2023": {
       "kind": "absent"

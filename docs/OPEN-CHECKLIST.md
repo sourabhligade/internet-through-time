@@ -1,7 +1,10 @@
 # Open checklist
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 **Date:** 2026-09-26  
-**Branch:** `the working branch`. This commit ships React-door atlas, dest-true 2017/ MVP, leftover-20 React I/O, leftover-3× catalogs empty.  
+**Branch:** `museum/1994-2020-lean`. This commit ships React-door atlas, dest-true 2017/ MVP, leftover-20 React I/O, leftover-3× catalogs empty.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) and `scripts/itt_gate.py` `SHIP_YEARS`.  
 **Live museum:** 24 doors (1994–2007, 2010 + 2012–2014, 2016–2017, 2022). wiped. 2009 is boarded. 2015, and 2023–2025 are wiped. Leftover-3× catalogs are empty.
 
@@ -308,7 +311,7 @@ Ship law stays [`DISK-TRUTH.md`](DISK-TRUTH.md): 26 doors, 2009 boarded, 2015 wi
 - [x] Counts are the line above. Failures clustered on old leftover-panel specs (`1997-2000-leftover-4x`, `1994-1999-official-10`, `1994-2000-2009-href-2x-real-flows`, `1994-2000-dest-true-leftover-note`). The run loaded those files before the strip assertions were updated, so this result still includes the old 9+9+9 expects.
 - [x] Dest-true pack 2026-09-26: **511 passed, 2 skipped**. GitHub Playwright is this pack (19 files including 2017-mvp and -mvp), not the full tree.
 - [x] Leftover-20 + unique-flows 2026-09-26: **75 passed**.
-- [x] Shipped `cbbd243a6` on ask (2026-09-26). This commit ships React-door atlas, dest-true 2017/ MVP, leftover-20 React I/O, and dest-count docs. Branch `the working branch`.
+- [x] Shipped `cbbd243a6` on ask (2026-09-26). This commit ships React-door atlas, dest-true 2017/ MVP, leftover-20 React I/O, and dest-count docs. Branch `museum/1994-2020-lean`.
 
 **Done when:** the suite result is written in this file, and a commit exists only if you asked for one.
 

@@ -5,14 +5,13 @@
  * Guided <ol> stays 6. Star chip stays.
  */
 const { test, expect } = require("@playwright/test");
-const { openAlsoYear } = require("./helpers");
 
 const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-for (let y = 1994; y <= 2022; y++) { if (y !== 2021) YEARS.push(String(y)); }
+for (let y = 1994; y <= 2022; y++) { if (y !== 2021 && y !== 2022) YEARS.push(String(y)); }
 
 function yearOnDisk(year) {
   return fs.existsSync(path.join(ROOT, "years", year, "pages", "home.html"));
@@ -27,18 +26,16 @@ test.describe("3× links every implemented year", () => {
   for (const year of YEARS) {
     test(`${year} home 3× directory · guided 6 · star · sample hrefs 200`, async ({ page }) => {
       test.skip(!yearOnDisk(year), year + " not on disk");
-      await page.goto(`/years/${year}/pages/home.html`);
+      const LEAN = new Set(["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2016", "2017"]);
+      const lean = LEAN.has(year);
+      await page.goto(`/years/${year}/pages/home.html${lean ? "" : "?deep=1"}`);
       await expect(page.locator(`#ott-guided-${year} ol li`)).toHaveCount(6);
       await expect(page.locator("[data-ott-one-thing]").first()).toBeVisible();
-      const LEAN = new Set(["2007", "2010", "2012", "2013", "2014", "2016", "2017", "", ""]);
-      if (LEAN.has(year) || year === "2009") {
-        await expect(page.locator("[data-itt-pop3x]:visible, [data-itt-3x-links]:visible")).toHaveCount(0);
+      if (lean) {
+        await expect(page.locator("[data-itt-pop3x]:visible, [data-itt-3x-links]:visible, .itt-3x-visible:visible")).toHaveCount(0);
         return;
       }
-      await openAlsoYear(page, year);
-      const box = page.locator(
-        "[data-itt-3x-links]:visible, [data-itt-pop3x]:visible, [data-itt-cut-3x-trios]:visible"
-      ).first();
+      const box = page.locator(`#ott-3x-${year}-dp, .itt-3x-visible`).first();
       await expect(box).toBeVisible();
       const hrefs = await box.locator("a[href]").evaluateAll((els) =>
         els.map((a) => a.getAttribute("href") || "").filter(Boolean)

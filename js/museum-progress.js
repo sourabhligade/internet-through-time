@@ -199,9 +199,9 @@
     "2007": yearVisitTour("2007",
       { path: "sites/iphone/index.html", label: "iPhone Safari", blurb: "Empty / App Store / Chrome never write. Go does.", match: "/iphone/" },
       { path: "sites/streetview/index.html", label: "Street View leftover", blurb: "29 May leftover. Not the chip.", match: "/streetview/" }),
-    "2022": yearVisitTour("2022",
-      { path: "sites/chatgpt/index.html", label: "ChatGPT Send", blurb: "Empty / GPT-4 never write. Send does.", match: "/chatgpt/" },
-      { path: "sites/wordle/index.html", label: "Wordle leftover", blurb: "NYT leftover. Not ChatGPT gold.", match: "/wordle/" }),
+    "2008": yearVisitTour("2008",
+      { path: "sites/appstore/index.html", label: "App Store", blurb: "Empty / millions-day-one / Play Store never write. FREE/BUY does.", match: "/appstore/" },
+      { path: "sites/chrome/index.html", label: "Chrome leftover", blurb: "Download theater. Not January OS.", match: "/chrome/" }),
   };
 
   var TRAILS = {

@@ -706,6 +706,9 @@
           if (t && t.tagName === "A") linkEl = t;
         }
         if (!linkEl) return;
+        /* Capture runs before the page's pick listener. These anchors toggle
+           a trail pick; navigating here leaves the room before it can. */
+        if (linkEl.hasAttribute("data-official-pick")) return;
         var href = linkEl.getAttribute("href");
         if (!href || href.charAt(0) === "#") return;
         if (href.indexOf("mailto:") === 0) {

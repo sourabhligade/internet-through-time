@@ -15,20 +15,9 @@ const HOME_LINKS = [
   'Napster',
   'Google',
   'Blogger',
-  'Yahoo!',
-  'Amazon.com',
-  'eBay',
-  'Ask Jeeves',
-  'CNN',
-  'Y2K',
-  'PayPal',
-  'Hampster',
-  'Zombo',
-  'Slashdot',
-  'MSN Gaming',
-  'Matrix',
-  'Flash 4',
-  'My Netscape',
+  'AIM sign-on',
+  'Y2K clock',
+  'SourceForge',
 ];
 
 test.describe('1999 Starting Point links', () => {

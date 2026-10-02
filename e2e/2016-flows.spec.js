@@ -150,6 +150,6 @@ test.describe("2016 flows", () => {
     await page.locator("[data-lo-field]").first().fill("front page");
     await go.click();
     await expect.poll(async () => getKey(page, "itt16-reddit-lx"), { timeout: 8000 }).toBeTruthy();
-    await expect(page.locator('[data-next-flow] a[href*="netflix"]').first()).toBeVisible();
+    await expect(page.locator('[data-next-flow] a[href*="instagram/stories"]').first()).toBeVisible();
   });
 });

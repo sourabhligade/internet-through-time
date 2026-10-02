@@ -263,6 +263,7 @@
       "immersion/digg.js",
       "immersion/gmail.js",
       "immersion/flickr.js",
+      "immersion/delicious.js",
       "immersion/amazon.js",
       "immersion/one-thing-machines.js",
       "immersion/source-flows.js"
@@ -308,11 +309,17 @@
       "immersion/source-flows.js"
     ],
     "2009": [
-      "immersion/year-2009-extras.js",
+      "immersion/no-mock-gfc.js",
+      "immersion/no-mock-sopa.js",
+      "immersion/no-mock-uber.js",
+      "immersion/no-mock-wave.js",
+      "immersion/no-mock-fb-connect.js",
+      "immersion/no-mock-culture-ack.js",
+      "immersion/no-mock-common.js",
       "immersion/farmville.js",
       "immersion/bing.js",
-      "immersion/appstore.js",
-      "immersion/one-thing-machines.js"
+      "immersion/one-thing-machines.js",
+      "immersion/year-2009-extras.js"
     ],
         "2010": [
       "immersion/google.js",
@@ -331,6 +338,9 @@
       "immersion/imgur.js",
       "immersion/pinterest.js",
       "immersion/year-2010-extras.js",
+      "immersion/one-thing-machines.js"
+    ],
+    "2011": [
       "immersion/one-thing-machines.js"
     ],
         "2012": [
@@ -359,7 +369,8 @@
       "immersion/no-mock-culture-ack.js",
       "immersion/no-mock-common.js",
       "immersion/year-2016-extras.js",
-      "immersion/one-thing-machines.js"
+      "immersion/one-thing-machines.js",
+      "immersion/year-4x-flows.js"
     ],
     "2007": [
       "immersion/no-mock-gfc.js",
@@ -371,9 +382,7 @@
       "immersion/no-mock-common.js",
       "immersion/one-thing-machines.js"
     ],
-
-    "2022": [
-      "immersion/leftover-official.js",
+    "2008": [
       "immersion/no-mock-gfc.js",
       "immersion/no-mock-sopa.js",
       "immersion/no-mock-uber.js",
@@ -381,9 +390,9 @@
       "immersion/no-mock-fb-connect.js",
       "immersion/no-mock-culture-ack.js",
       "immersion/no-mock-common.js",
-      "immersion/one-thing-machines.js",
-      "immersion/year-2022-extras.js"
-    ]
+      "immersion/one-thing-machines.js"
+    ],
+
   };
 
   ITT.IMMERSION_FEATURES_BY_YEAR = {};

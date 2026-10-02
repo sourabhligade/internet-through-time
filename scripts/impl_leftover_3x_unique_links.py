@@ -58,10 +58,6 @@ KEEP: dict[str, list[str]] = {
         "slack", "reddit", "netflix", "youtube", "alphago", "assistant", "dyn",
         "fblive", "moments",
     ],
-    "2022": [
-        "amazon", "google", "instagram", "facebook", "youtube", "reddit",
-        "wikipedia", "netflix", "nyt",
-    ],
 }
 
 # Cited ADD. Leftover dest KEEP dest-disjoint first, then official dest hrefs
@@ -96,10 +92,6 @@ CITED_ADD: dict[str, list[str]] = {
         "douyin", "airpods", "allo", "daydream", "ethereum", "figma", "googlehome",
         "ios10", "letsencrypt",
     ],
-    "2022": [
-        "temu", "stablediff", "midjourney", "dalle2", "ios16", "m2",
-        "wordle", "bereal", "ftx",
-    ],
 }
 
 WANT_AFTER = {
@@ -110,7 +102,6 @@ WANT_AFTER = {
     "2014": 18,
     "2015": 18,
     "2016": 18,
-    "2022": 18,
 }
 
 WAREHOUSE = {"123-reg", "a21-inc", "123reg"}

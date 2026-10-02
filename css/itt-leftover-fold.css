@@ -19,7 +19,6 @@ html[data-official-key] [data-itt-pop-3x3],
 html[data-official-key] [data-itt-pop3x],
 html[data-official-key] [data-itt-lo3x],
 html[data-official-key] [data-5x-loop]:not([data-5x-live]),
-html[data-official-key] [data-4x-panel],
 html[data-official-key] .itt-pop3,
 html[data-official-key] .itt-pop3x-flow:not([data-itt-dest-true]),
 html[data-official-key] .itt-3x-also:not(details),
@@ -63,9 +62,17 @@ html:not([data-official-key]):not([data-itt-start]) [data-itt-3x-also]:not(detai
 html:not([data-official-key]):not([data-itt-start]) .itt-3x-also:not(details),
 html:not([data-official-key]):not([data-itt-start]) [data-itt-pop-more],
 html:not([data-official-key]):not([data-itt-start]) .itt-pop-more,
-html:not([data-official-key]):not([data-itt-start]) [data-4x-panel],
-html:not([data-official-key]):not([data-itt-start]) [data-5x-loop] {
+html:not([data-official-key]):not([data-itt-start]) [data-5x-loop]:not([data-5x-live]) {
   display: none;
+}
+/* Same exclusions as the hide above, plus deep, so ?deep=1 actually shows the rail. */
+html[data-itt-deep]:not([data-official-key]):not([data-itt-start]) [data-lo-panel]:not([data-itt-dest-true]),
+html[data-itt-deep]:not([data-official-key]):not([data-itt-start]) [data-itt-3x-also]:not(details),
+html[data-itt-deep]:not([data-official-key]):not([data-itt-start]) .itt-3x-also:not(details),
+html[data-itt-deep]:not([data-official-key]):not([data-itt-start]) [data-itt-pop-more],
+html[data-itt-deep]:not([data-official-key]):not([data-itt-start]) .itt-pop-more,
+html[data-itt-deep]:not([data-official-key]):not([data-itt-start]) [data-5x-loop]:not([data-5x-live]) {
+  display: block;
 }
 details.itt-also-year {
   display: none;
@@ -101,6 +108,7 @@ html[data-itt-deep] [data-5x-loop],
 html[data-itt-deep] [data-4x-panel],
 html[data-itt-deep] .itt-pop3,
 html[data-itt-deep] .itt-pop3x-flow,
+html[data-itt-deep][data-official-key] .itt-pop3x-flow,
 html[data-itt-deep] .itt-3x-also:not(details),
 html[data-itt-deep] .itt-3x-links,
 html[data-itt-deep] .itt-pop-more,

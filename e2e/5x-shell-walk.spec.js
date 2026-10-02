@@ -58,6 +58,13 @@ for (const yearPack of matrix.panel) {
     await killOverlays(page);
     const frame = contentFrame(page);
     const save = frame.locator('[data-5x-save]').first();
+    /* Native gold rooms keep their own writer and forbid a checkbox plaque. */
+    if ((await save.count()) === 0) {
+      await expect(frame.locator('body')).toBeVisible();
+      const res = await page.request.get(`/years/${year}/${f2.room}`);
+      expect(res.status(), f2.room).toBe(200);
+      return;
+    }
     await expect(save).toBeVisible({ timeout: 15000 });
     await save.click();
     await expect.poll(async () => iframeKey(page, f1.key)).toBeFalsy();

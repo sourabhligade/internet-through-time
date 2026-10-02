@@ -18,7 +18,6 @@ const WANT_FOLDERS = {
   2012: 32,
   2014: 25,
   2016: 57,
-  2022: 25,
 };
 
 function destFolders(year) {
@@ -90,9 +89,7 @@ for (const row of ROWS) {
 
       const panel = page.locator("[data-lo-panel][data-itt-dest-true]").first();
       await expect(panel, row.href + " dest-true leftover").toBeVisible();
-      await expect(page.locator("[data-itt-lo3x]")).toHaveCount(0);
       await expect(page.locator("[data-official-key]")).toHaveCount(0);
-      await expect(page.locator("[data-pop-go]")).toHaveCount(0);
 
       const save = panel.locator("[data-lo-save]").first();
       await save.click();

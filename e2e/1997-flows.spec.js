@@ -109,8 +109,12 @@ test.describe('1997 flow: Slashdot comments', () => {
     const frame = await boot(page, 'sites/slashdot/story.html');
     await expect(frame.locator('form[data-sd-comment-form]')).toBeVisible({ timeout: 15000 });
     await frame.locator('input[name="nick"]').fill('Nerd97');
-    await frame.locator('input[name="subject"]').fill('Flow comment');
+    const subject = frame.locator('input[name="subject"]');
+    if (await subject.count()) await subject.fill('Flow comment');
     await frame.locator('textarea[name="body"]').fill('Slashdot flow works.');
+    const reqs = frame.locator('form[data-sd-comment-form] [data-official-req]');
+    const nReq = await reqs.count();
+    for (let i = 0; i < nReq; i++) await reqs.nth(i).check({ force: true });
     await frame.locator('form[data-sd-comment-form] input[type="submit"]').click({ force: true });
     await expect(frame.locator('[data-sd-comments]')).toContainText(/Flow comment|Nerd97/i, {
       timeout: 10000,

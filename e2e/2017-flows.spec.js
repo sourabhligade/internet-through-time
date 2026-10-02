@@ -75,7 +75,7 @@ test.describe("2017 flows", () => {
 
   test("Storm Circle official dest exists dest-true", async ({ page }) => {
     const room = await openReactStop(page, "2017", "itt17-game-stormcircle");
-    await expect(room.locator("code", { hasText: "itt17-game-stormcircle" })).toHaveCount(1);
+    await expect(room).toHaveAttribute("id", "itt17-game-stormcircle");
     await expect(room.locator(".kicker")).toContainText(/Official/i);
   });
 });

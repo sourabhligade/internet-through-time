@@ -17,7 +17,7 @@ test.describe('1997 ICQ', () => {
     await goInFrame(page, 'sites/icq/index.html');
     const frame = contentFrame(page);
     await waitForImmersion(page, '1997');
-    await expect(frame.locator('text=/ICQ|I Seek You/i').first()).toBeVisible({ timeout: 15000 });
-    await expect(frame.locator('text=/buddy|Mirabilis|download/i').first()).toBeVisible();
+    await expect(frame.locator("b").filter({ hasText: "I Seek You" }).first()).toBeVisible({ timeout: 15000 });
+    await expect(frame.locator("p").filter({ hasText: /buddy lists/i }).first()).toBeVisible();
   });
 });

@@ -1,5 +1,8 @@
 # Dest-true flow map — every playable year
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 **Date:** 2026-09-20
 **Status:** Map first. Deep-research KEEP/DROP year-false uses this list. Not dest-farm. Not leftover-2× warehouse dests.
 **Visitor 100%:** dest-true I/O — empty/trap never write; leftover never writes the star.

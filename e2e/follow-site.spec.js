@@ -84,24 +84,20 @@ test.describe("follow-a-site", () => {
     await expect(page.frameLocator("iframe#content").locator("body")).toBeVisible();
   });
 
-  test("2007 Facebook follow next skips boarded 2009", async ({ page }) => {
-    await page.goto("/years/2007/?room=sites/facebook/index.html");
+  test("2007 Facebook follow next opens 2009 Like", async ({ page }) => {
+    await page.goto("/years/2007/?room=sites/fbplat/index.html");
     const next = page.locator("#itt-follow-next");
     await expect(next).toBeVisible({ timeout: 15000 });
-    await expect(next).toHaveAttribute("href", /years\/2010\/\?room=sites%2Ffacebook%2Findex\.html/);
-    await expect(next).not.toHaveAttribute("href", /years\/2009/);
+    await expect(next).toHaveAttribute("href", /years\/2009\/\?room=sites%2Ffacebook%2Findex\.html/);
     await next.click();
-    await expect(page).toHaveURL(/years\/2010\/\?room=sites%2Ffacebook%2Findex\.html/);
+    await expect(page).toHaveURL(/years\/2009\/\?room=sites%2Ffacebook%2Findex\.html/);
   });
 
-  test("2014 YouTube follow next skips wiped 2015 and opens 2022", async ({ page }) => {
+  test("2014 YouTube follow next is absent", async ({ page }) => {
     await page.goto("/years/2014/?room=sites/youtube/index.html");
     const next = page.locator("#itt-follow-next");
-    await expect(next).toBeVisible({ timeout: 15000 });
-    await expect(next).toHaveAttribute("href", /years\/2022\/\?room=sites%2Fyoutube%2Findex\.html/);
-    await expect(next).not.toHaveAttribute("href", /years\/2015/);
-    await next.click();
-    await expect(page).toHaveURL(/years\/2022\/\?room=sites%2Fyoutube%2Findex\.html/);
+    await expect(next).toBeAttached({ timeout: 15000 });
+    await expect(next).toBeHidden();
   });
 
   test("2014 Twitter follow next skips wiped 2015 and opens the 2017 React door", async ({ page }) => {
@@ -115,10 +111,4 @@ test.describe("follow-a-site", () => {
     await expect(page.locator("body")).toContainText(/2017/);
   });
 
-  test("2022 Amazon follow next is absent", async ({ page }) => {
-    await page.goto("/years/2022/?room=sites/amazon/index.html");
-    const next = page.locator("#itt-follow-next");
-    await expect(next).toBeAttached({ timeout: 15000 });
-    await expect(next).toBeHidden();
-  });
 });

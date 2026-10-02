@@ -15,6 +15,7 @@
     "pages/home.html",
     "pages/map.html",
     "pages/whats-new.html",
+    "pages/cool.html",
     "sites/419eater/index.html",
     "sites/4chan/about.html",
     "sites/4chan/index.html",
@@ -286,7 +287,7 @@
   var i;
   for (i = 0; i < rooms.length; i++) {
     if (!urlMap[rooms[i]]) {
-      urlMap[rooms[i]] = "http://museum.local/years/2003/" + rooms[i];
+      urlMap[rooms[i]] = "http://home.microsoft.com/intl/web2003/" + rooms[i];
     }
   }
 

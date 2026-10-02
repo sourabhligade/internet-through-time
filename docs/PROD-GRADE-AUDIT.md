@@ -1,10 +1,13 @@
 # Production-grade audit
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 **Date:** 2026-09-29
 **Status:** Implemented locally on 2026-09-29, except item 7. No commit, no push, no GitHub Pages. The sections below are the research snapshot and were not rewritten.
 **Done here:** one 22-year list on the hub, `SHIP_YEARS`, `404.html`, `README.md`, and the `DISK-TRUTH.md` opening; CI and `test:e2e:dest-true` name 18 spec files that exist; a thrown `localStorage.setItem` says “This browser blocked the save.” instead of Saved; React hall is 2015 and 2017 only, with static redirects for 2014, 2016, and 2022, and the visitor bundle was rebuilt; `?debug=1` arms a local session ring. The 7 empty-write URLs and 28 finished-click URLs were rechecked in Playwright. Counts in the findings file were not edited.
 **Not done:** a public URL. Full `npm test` was not run and stays intentionally red.
-**Evidence:** live tree on `the working branch`, read this session. Not the stopped full-code scan (68 of 645 slices). The 6,786-page browser crawl in [`FLOW-E2E-FINDINGS.md`](FLOW-E2E-FINDINGS.md) (2026-09-28) was not rerun. A later Playwright pass rechecked only the 35 repair URLs plus the local walk.
+**Evidence:** live tree on `museum/1994-2020-lean`, read this session. Not the stopped full-code scan (68 of 645 slices). The 6,786-page browser crawl in [`FLOW-E2E-FINDINGS.md`](FLOW-E2E-FINDINGS.md) (2026-09-28) was not rerun. A later Playwright pass rechecked only the 35 repair URLs plus the local walk.
 **GitNexus:** repo `internet-through-time`, index 3 commits behind HEAD. Year lists below are from files, not the graph.
 
 Production grade for this museum means a visitor can open one public URL, walk 22 doors, finish a real room, and trust the save line. It does not mean accounts, analytics, a dest-farm, or restoring 2018–2021 or 2023–2025.
@@ -30,7 +33,7 @@ The forests are large (2004 has 805 destination folders, 2005 has 806). That is 
 | HTML trees | 1994–2007, 2009, 2010, 2012–2014, 2016, 2022. No `years/2015` or `years/2017` |
 | React-only doors | Hub links 2015 and 2017 to `/app/index.html#/year/YYYY`. Built bundle is `app/assets/index-DKzFvS7B.js` (252 KB) |
 | Boarded | 2009 tree stays (78 dests, 150 HTML). No hub card |
-| Gone | No trees for 2008, 2011, 2018, 2021, 2023–2025 |
+| Gone | No trees for 2008, 2011, 2018, 2019, 2020, 2021, 2023–2025 |
 | Trails | `js/config/flow-trails.js` keys match HTML years only. 2015 and 2017 are not in that file |
 | Hub chrome | `css/hub-lean.css` hides era chip, label, scale, motif, and "Enter immersion" with `display: none` |
 | Deploy shape | Static root. `netlify.toml` and `vercel.json` set CSP `connect-src 'self'`. Pages workflow is manual |
@@ -174,7 +177,7 @@ Drop these. They are not the exhibit.
 | React hall cards and iframe doors for 2014, 2016, and 2022 | The hub already has those years as HTML. Two doors means two bugs |
 | Prose that still ships 2021, a 24-year hub, or a wiped 2015 | `DISK-TRUTH` opening, `404.html`, `PRODUCT-IMPROVE`, `YEAR-GAPS` header, README's ATT Ask sentence, the `itt_gate.py` comment |
 | A remote analytics vendor | Conflicts with CSP and with local-only progress |
-| Restoring 2018, 2021, 2023, 2024, 2025 | No tree, no card, no trail. Rebuild only if a later message names a year |
+| Restoring 2018, 2019, 2020, 2021, 2023, 2024, 2025 | No tree, no card, no trail. Rebuild only if a later message names a year |
 | Dest-farm to make 2007 or 2022 look like 2004 | 805 folders is harvest weight, not the visitor door |
 | Un-boarding 2009 unless a later message names the Like door | Tree and plaque stay |
 | Treating `npm test` green as the launch bar | Full warehouse e2e is intentionally red |

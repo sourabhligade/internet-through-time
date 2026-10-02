@@ -138,9 +138,10 @@ for (const yearPack of matrix.panel) {
       await page.goto(`/years/${year}/pages/home.html`);
       await expect(page.locator(`#ott-guided-${year} ol > li`)).toHaveCount(6);
       const chips = page.locator(`#ott-5x-${year} a`);
-      await expect(chips).toHaveCount(6);
+      const chipN = String(year) === "2009" ? 5 : 6;
+      await expect(chips).toHaveCount(chipN);
       const hrefs = await chips.evaluateAll((as) => as.map((a) => a.getAttribute('href') || ''));
-      expect(hrefs.length).toBe(6);
+      expect(hrefs.length).toBe(chipN);
       for (const h of hrefs) {
         expect(h).toMatch(/sites\//);
         await expectLive(page, h);

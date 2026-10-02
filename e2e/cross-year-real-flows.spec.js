@@ -208,6 +208,9 @@ test.describe('cross-year delicious (post + year key)', () => {
       if (await page.locator('[data-delicious-post] [name="tags"]').count()) {
         await page.fill('[data-delicious-post] [name="tags"]', 'test folksonomy');
       }
+      const reqs = page.locator('[data-delicious-post] [data-official-req]');
+      const nReq = await reqs.count();
+      for (let i = 0; i < nReq; i++) await reqs.nth(i).check();
       await page.locator('[data-delicious-post] button[type="submit"]').click();
       await expect(page.locator('[data-delicious-status]')).toContainText(/Posted|browser/i, {
         timeout: 5000,
@@ -227,6 +230,9 @@ test.describe('cross-year delicious (post + year key)', () => {
     const title = 'IsoDel04 ' + Date.now();
     await page.fill('[data-delicious-post] [name="url"]', 'http://example.com/iso04');
     await page.fill('[data-delicious-post] [name="title"]', title);
+    const reqs = page.locator('[data-delicious-post] [data-official-req]');
+    const nReq = await reqs.count();
+    for (let i = 0; i < nReq; i++) await reqs.nth(i).check();
     await page.locator('[data-delicious-post] button[type="submit"]').click();
     await expect(page.locator('[data-delicious-list]')).toContainText(title, { timeout: 5000 });
     const pair = await page.evaluate(() => ({
@@ -251,7 +257,7 @@ test.describe('cross-year bloglines (subscribe + year key)', () => {
       const index = `/years/${year}/sites/bloglines/index.html`;
       const readerFile = require('path').join(__dirname, '..', reader.replace(/^\//, ''));
       const readerHtml = require('fs').existsSync(readerFile) ? require('fs').readFileSync(readerFile, 'utf8') : '';
-      const blogUrl = readerHtml.includes('[data-bloglines-add]') ? reader : index;
+      const blogUrl = readerHtml.includes('data-bloglines-add') ? reader : index;
       await gotoReady(page, blogUrl, '[data-bloglines-add]', key);
       const title = `XFeed ${year} ${Date.now()}`;
       await page.fill('[data-bloglines-add] [name="url"]', `http://example.com/feed-${year}.xml`);

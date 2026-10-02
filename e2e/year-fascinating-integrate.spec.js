@@ -291,17 +291,15 @@ test.describe("Fascinating integrate leftovers", () => {
       ["2002", /stumbleupon/],
       ["2006", /twitter/],
       ["2007", /iphone/],
-      [/github\/issue/],
+      ["2008", /appstore/],
       ["2009", /facebook/],
       ["2010", /instagram/],
-      ["", /googleplus/],
       ["2012", /instagram\/android/],
       ["2013", /vine\/record/],
       ["2016", /instagram\/stories/],
       ["2017", /iphone\/x/],
     ];
     for (const [year, star] of rows) {
-      if (year === "2009") continue;
       if (!yearOnDisk(year)) continue;
       await page.goto("/years/" + year + "/pages/home.html");
       await expect(page.locator("#ott-guided-" + year + " ol > li")).toHaveCount(6);

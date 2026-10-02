@@ -13,7 +13,7 @@ async function twoStepClick(page, selector) {
 test.describe('1998 SOURCES rooms', () => {
   test('CDnow music-first store + Amazon Music link', async ({ page }) => {
     await page.goto('/years/1998/sites/cdnow/index.html');
-    await expect(page.getByText(/CDnow|Ultimate Music/i).first()).toBeVisible();
+    await expect(page.locator("b").getByText("CDnow", { exact: true }).first()).toBeVisible();
     await page.getByRole('link', { name: /Amazon Music|Compare Amazon/i }).first().click();
     await expect(page).toHaveURL(/amazon\/music/);
   });

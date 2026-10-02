@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import card from "../../js/year-card.json";
 import { OfficialStop } from "./OfficialStop.jsx";
 import { YearRails } from "./YearRails.jsx";
 
@@ -48,21 +49,31 @@ export function YearRail({ year, star: _star, trail, also, all, guided, stopByKe
 
   function openNext() {
     if (!stop) return;
-    const list = stop.leftover ? also : trail;
+    const list = trail.concat(also);
     const index = list.findIndex((row) => row.whenKey === stop.whenKey);
     const next = list[(index + 1) % list.length];
-    if (stop.leftover && index === list.length - 1) {
-      setView(trail[0].whenKey);
-      setLabel("1 " + trail[0].name);
-      return;
-    }
     setView(next.whenKey);
     setLabel(next.n + " " + next.name);
   }
 
+  const chrome = (card.years[String(year)] && card.years[String(year)].chrome) || {};
+  const chromeClass =
+    (chrome.os ? " os-" + chrome.os : "") +
+    (chrome.browser ? " browser-" + chrome.browser : "");
+
   return (
-    <div className="door door-2014">
+    <div className={"door" + chromeClass}>
       <header>
+        <span className="habit-tab">Chrome habit</span>
+        <label className="habit-omni">
+          <input
+            className="habit-location"
+            readOnly
+            value={chrome.location || ""}
+            aria-label="Address"
+            spellCheck={false}
+          />
+        </label>
         <a href="../index.html">Museum</a>
         <Link to="/">React doors</Link>
         <strong>{year}</strong>
@@ -108,7 +119,7 @@ export function YearRail({ year, star: _star, trail, also, all, guided, stopByKe
           </ol>
         </article>
       ) : null}
-      {stop ? <OfficialStop key={stop.whenKey} stop={stop} onNext={openNext} /> : null}
+      {stop ? <OfficialStop key={stop.whenKey} stop={stop} year={year} onNext={openNext} /> : null}
     </div>
   );
 }

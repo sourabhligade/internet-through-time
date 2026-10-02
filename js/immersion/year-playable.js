@@ -82,7 +82,7 @@
           "</a>"
       );
     }
-    if (y !== "2007" && y !== "2009") {
+    if (y !== "2007" && y !== "2008" && y !== "2009") {
       bits.push('<a class="yp-btn secondary" href="more-a.html">more-a</a>');
       bits.push('<a class="yp-btn secondary" href="more-b.html">more-b</a>');
     }

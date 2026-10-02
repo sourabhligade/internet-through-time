@@ -16,6 +16,7 @@
     "pages/home.html",
     "pages/map.html",
     "pages/whats-new.html",
+    "pages/cool.html",
     "sites/airpods/index.html",
     "sites/allo/index.html",
     "sites/alphago/about.html",
@@ -122,15 +123,15 @@
 
   var urlMap = {
     "index.html": "http://museum.local/index.html",
-    "pages/home.html": "http://home.microsoft.com/intl/web2016/",
-    "pages/about.html": "http://home.microsoft.com/intl/web2016/about.html",
+    "pages/home.html": "https://www.google.com/web2016/",
+    "pages/about.html": "https://www.google.com/web2016/about.html",
     "pages/map.html": "http://museum.local/years/2016/map/",
     "pages/whats-new.html": "http://museum.local/pages/whats-new.html"
   };
   var i;
   for (i = 0; i < rooms.length; i++) {
     if (!urlMap[rooms[i]]) {
-      urlMap[rooms[i]] = "http://museum.local/years/2016/" + rooms[i];
+      urlMap[rooms[i]] = "https://www.google.com/web2016/" + rooms[i];
     }
   }
 
@@ -152,7 +153,7 @@
       expireDays: 30,
       autoload: true,
       modemDelay: 20,
-      homeUrl: "http://home.microsoft.com/intl/web2016/",
+      homeUrl: "https://www.google.com/web2016/",
       homePath: "pages/home.html",
       showToolbar: true,
       showLocation: true,
@@ -181,15 +182,15 @@
       { title: "Reactions", path: "sites/facebook/reactions.html" },
       { title: "WhatsApp E2E", path: "sites/whatsapp/e2e.html" }
     ],
-    fallbackUrlBase: "http://home.microsoft.com/intl/web2016/",
+    fallbackUrlBase: "https://www.google.com/web2016/",
     locationHints: [
       { re: /mario.?run|super.?mario/i, path: "sites/smario/index.html" },
       { re: /assistant|ok.?google|pixel/i, path: "sites/assistant/index.html" },
       { re: /houseparty/i, path: "sites/houseparty/index.html" },
       { re: /linkedin/i, path: "sites/linkedinms/index.html" },
       { re: /\bjio\b/i, path: "sites/jio/index.html" },
-      { re: /stor(y|ies)|instagram/i, path: "sites/instagram/stories.html" },
-      { re: /pokemon|pogo|go/i, path: "sites/pokemongo/index.html" },
+      { re: /\bstor(y|ies)\b|instagram/i, path: "sites/instagram/stories.html" },
+      { re: /pokemon|pogo|\bgo\b/i, path: "sites/pokemongo/index.html" },
       { re: /react|haha|wow/i, path: "sites/facebook/reactions.html" },
       { re: /whatsapp|e2e|encrypt/i, path: "sites/whatsapp/e2e.html" },
       { re: /iphone.?7|jack|dongle/i, path: "sites/iphone/index.html" },
@@ -198,7 +199,8 @@
       { re: /spectacle|snapbot/i, path: "sites/snapchat/spectacles.html" },
       { re: /musical|tiktok/i, path: "sites/musically/index.html" },
       { re: /windows.?10|win10|upgrade/i, path: "sites/windows10/end.html" },
-      { re: /dyn|mirai|ddos/i, path: "sites/dyn/index.html" }
+      { re: /dyn|mirai|ddos/i, path: "sites/dyn/index.html" },
+      { re: /(^|[^\w])google(\.com)?\/?$/i, path: "pages/home.html" }
     ]
   };
 })(typeof window !== "undefined" ? window : this);

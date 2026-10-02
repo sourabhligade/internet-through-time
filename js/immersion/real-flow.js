@@ -250,8 +250,13 @@
           try {
             var nexts = doc.querySelectorAll("[data-next-flow]");
             var ni;
+            var panel = btn.closest ? btn.closest(".itt-popular-panel") : null;
             for (ni = 0; ni < nexts.length; ni++) {
               if (nexts[ni].closest && nexts[ni].closest("[data-4x-panel]")) continue;
+              if (panel) {
+                var owner = nexts[ni].closest ? nexts[ni].closest(".itt-popular-panel") : null;
+                if (owner !== panel) continue;
+              }
               nexts[ni].removeAttribute("hidden");
               nexts[ni].style.display = "";
             }

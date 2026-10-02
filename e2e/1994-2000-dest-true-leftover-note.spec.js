@@ -6,25 +6,25 @@
 const { test, expect } = require("@playwright/test");
 
 const DESTS = [
-  { path: "/years/1994/sites/cern/index.html", key: "itt94-cern" },
-  { path: "/years/1994/sites/whitehouse/index.html", key: "itt94-wh-map" },
-  { path: "/years/1994/sites/nasa/index.html", key: "itt94-nasa" },
-  { path: "/years/1994/sites/hotwired/index.html", key: "itt94-hotwired" },
-  { path: "/years/1995/sites/cnn/index.html", key: "itt95-cnn" },
-  { path: "/years/1995/sites/microsoft/index.html", key: "itt95-ms" },
-  { path: "/years/1996/sites/spacejam/index.html", key: "itt96-jam" },
+  { path: "/years/1994/sites/cern/index.html", key: "itt94-cern", field: "cern" },
+  { path: "/years/1994/sites/whitehouse/index.html", key: "itt94-wh-map", field: "Welcome to the White House" },
+  { path: "/years/1994/sites/nasa/index.html", key: "itt94-nasa", field: "National Aeronautics and Space Administr" },
+  { path: "/years/1994/sites/hotwired/index.html", key: "itt94-hotwired", field: "hotwired" },
+  { path: "/years/1995/sites/cnn/index.html", key: "itt95-cnn", field: "CNN" },
+  { path: "/years/1995/sites/microsoft/index.html", key: "itt95-ms", field: "Microsoft" },
+  { path: "/years/1996/sites/spacejam/index.html", key: "itt96-jam", field: "Space Jam" },
   { path: "/years/1996/sites/yahoo/my.html", key: "itt96-myyahoo", field: "Ada" },
   { path: "/years/1996/sites/geocities/index.html", key: "itt96-geocities", field: "Tokyo" },
   { path: "/years/1996/sites/auctionweb/index.html", key: "itt96-auctionweb", field: "laptop" },
   { path: "/years/1996/sites/altavista/index.html", key: "itt96-av", field: "space jam" },
-  { path: "/years/1997/sites/drudge/index.html", key: "itt97-drudge" },
-  { path: "/years/1997/sites/microsoft/index.html", key: "itt97-ms" },
-  { path: "/years/1998/sites/mozilla/index.html", key: "itt98-mozilla" },
+  { path: "/years/1997/sites/drudge/index.html", key: "itt97-drudge", field: "Drudge" },
+  { path: "/years/1997/sites/microsoft/index.html", key: "itt97-ms", field: "Microsoft" },
+  { path: "/years/1998/sites/mozilla/index.html", key: "itt98-mozilla", field: "source leftover" },
   { path: "/years/1998/sites/slashdot/index.html", key: "itt98-slashdot", field: "first post" },
-  { path: "/years/1998/sites/dmoz/index.html", key: "itt98-dmoz" },
+  { path: "/years/1998/sites/dmoz/index.html", key: "itt98-dmoz", field: "source leftover" },
   { path: "/years/1999/sites/sourceforge/index.html", key: "itt99-sf", field: "httpd" },
-  { path: "/years/2000/sites/gnutella/index.html", key: "itt00-gnutella" },
-  { path: "/years/2000/sites/y2k/index.html", key: "itt00-y2k" },
+  { path: "/years/2000/sites/gnutella/index.html", key: "itt00-gnutella", field: "Gnutella" },
+  { path: "/years/2000/sites/y2k/index.html", key: "itt00-y2k", field: "y2k" },
 ];
 
 async function getKey(page, key) {

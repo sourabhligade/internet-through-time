@@ -1,5 +1,8 @@
 # TODO — full audit map (every year, every leftover, every stale MD)
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 **Date:** 2026-09-20  
 **Source:** live `years/` · every museum Markdown in `docs/` + root `README.md` + `ui/year/README.md` (66 files) · every `e2e/*.spec.js` (328) · every `js/config/1994.js`–`2022.js` (29, all parse, 0 missing urlMap files) · `docs/DEST-TRUE-FLOW-NAMES.md` · `docs/YEAR-FALSE-KEEP-DROP.md` · `docs/DISK-TRUTH.md` · `docs/VISITOR-100-FLOWS.md` · `docs/YEAR-BY-YEAR-RESEARCH-STEPS.md`.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`. This file does not override that.  
@@ -24,7 +27,7 @@ Stops stay `[ ]` so nobody implements them. They are not a backlog.
 
 ## 1. Machine state right now
 
-Branch `the working branch`.
+Branch `museum/1994-2020-lean`.
 
 | Item | State |
 |------|--------|

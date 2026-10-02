@@ -16,7 +16,7 @@ const GOLD = [
   { year: "1995", writer: "sites/amazon/ssl-checkout.html", key: "itt95-ssl-checkout", nextNeedle: "auctionweb/item-laser", chipHref: "sites/amazon/ssl-checkout.html" },
   { year: "1996", writer: "sites/portals/wars.html", key: "itt96-portal-wars", nextNeedle: "hotmail", chipHref: "sites/portals/wars.html" },
   { year: "1997", writer: "sites/pointcast/index.html", key: "itt97-pointcast", nextNeedle: "icq", chipHref: "sites/pointcast/index.html" },
-  { year: "1998", writer: "sites/google/lucky.html", key: "itt98-lucky", nextNeedle: "amazon/music", chipHref: "sites/google/lucky.html" },
+  { year: "1998", writer: "sites/google/lucky.html", key: "itt98-lucky", nextNeedle: "yahoo", chipHref: "sites/google/lucky.html" },
   { year: "1999", writer: "sites/aim/index.html", key: "itt99-aim", nextNeedle: "napster", chipHref: "sites/aim/index.html" },
   { year: "2000", writer: "sites/mapquest/index.html", key: "itt00-mapquest", nextNeedle: "amazon", chipHref: "sites/mapquest/index.html" },
   { year: "2001", writer: "sites/wikipedia/edit.html", key: "itt01-wiki", nextNeedle: "archive", chipHref: "sites/wikipedia/edit.html" },
@@ -26,27 +26,25 @@ const GOLD = [
   { year: "2005", writer: "sites/youtube/upload.html", key: "itt05-yt-uploads", nextNeedle: "maps", chipHref: "sites/youtube/upload.html" },
   { year: "2006", writer: "sites/twitter/index.html", key: "itt06-tweets", nextNeedle: "facebook/feed", chipHref: "sites/twitter/index.html" },
   { year: "2007", writer: "sites/iphone/index.html", key: "itt07-iphone", nextNeedle: "streetview", chipHref: "sites/iphone/index.html" },
-    { year: "2010", writer: "sites/instagram/index.html", key: "itt10-ig", nextNeedle: "iphone", chipHref: "sites/instagram/index.html" },
+  { year: "2008", writer: "sites/appstore/index.html", key: "itt08-apps", nextNeedle: "chrome", chipHref: "sites/appstore/index.html" },
+  { year: "2009", writer: "sites/facebook/index.html", key: "itt09-like", nextNeedle: "farmville", chipHref: "sites/facebook/index.html" },
+  { year: "2010", writer: "sites/instagram/index.html", key: "itt10-ig", nextNeedle: "iphone", chipHref: "sites/instagram/index.html" },
+  { year: "2011", writer: "sites/googleplus/index.html", key: "itt11-gplus", nextNeedle: "spotify", chipHref: "sites/googleplus/index.html" },
   { year: "2012", writer: "sites/instagram/android.html", key: "itt12-ig-android", nextNeedle: "pinterest", chipHref: "sites/instagram/android.html" },
   { year: "2013", writer: "sites/vine/record.html", key: "itt13-vine-posts", nextNeedle: "instagram/video", chipHref: "sites/vine/record.html" },
   { year: "2014", writer: "sites/whatsapp/index.html", key: "itt14-wa-install", nextNeedle: "chat", chipHref: "sites/whatsapp/index.html" },
-  { year: "2015", writer: "sites/periscope/index.html", key: "itt15-periscope", nextNeedle: "googlephotos", chipHref: "sites/periscope/index.html" },
   { year: "2016", writer: "sites/instagram/stories.html", key: "itt16-ig-stories", nextNeedle: "pokemongo", chipHref: "sites/instagram/stories.html" },
-  { year: "2017", writer: "sites/iphone/x.html", key: "itt17-faceid", nextNeedle: "fortnite", chipHref: "sites/iphone/x.html" },
 ];
 
 function yearFile(year, rel) {
   return path.join(ROOT, "years", year, rel);
 }
 
-const BOARDED = new Set(["2009", "", "2023", "2024", "2025"]);
-
-test("gold-a table covers every live year on disk", () => {
+test("gold-a table covers every live HTML year on disk", () => {
   const years = GOLD.map((g) => g.year);
   const live = [];
-  for (let y = 1994; y <= 2017; y++) {
+  for (let y = 1994; y <= 2022; y++) {
     const ys = String(y);
-    if (BOARDED.has(ys)) continue;
     if (fs.existsSync(yearFile(ys, "index.html"))) live.push(ys);
   }
   expect(years.sort()).toEqual(live.sort());

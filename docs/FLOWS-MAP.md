@@ -1,5 +1,8 @@
 # All flows
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 Not ship law. Read from `js/config/flow-trails.js` on 2026-09-23 after 2005 and were wiped. A destination room lists every stop. Starting Point lists only n=1–10.
 
 Official stops are n=1–10. Leftover stops are n above 10. An empty click stores nothing. A finished visit stores that row’s key.

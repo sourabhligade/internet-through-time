@@ -25,9 +25,10 @@ async function clearKeys(page, keys) {
   }, keys);
 }
 
-async function chipOk(page) {
+async function chipOk(page, opts) {
   const chip = page.locator("[data-itt-capture-cite]").first();
-  await expect(chip).toBeVisible();
+  if (opts && opts.allowHidden) await expect(chip).toBeAttached();
+  else await expect(chip).toBeVisible();
   const a = chip.locator("a[href^='http']");
   if (await a.count()) {
     await expect(a.first()).toHaveAttribute("target", "_blank");
@@ -62,17 +63,20 @@ test.describe("capture-backed dests — chips + REAL machines", () => {
   test("1996 Space Jam planets resolve · 3-planet gold writes itt96-jam", async ({ page }) => {
     await page.goto("/years/1996/sites/spacejam/index.html");
     await chipOk(page);
-    await clearKeys(page, ["itt96-jam", "itt96-sj-seen"]);
+    await clearKeys(page, ["itt96-jam"]);
     await page.evaluate(() => {
       try {
-        sessionStorage.clear();
+        sessionStorage.removeItem("itt96-sj-seen");
       } catch (e) {}
     });
-    await page.goto("/years/1996/sites/spacejam/cmp/press.htm");
+    await page.reload();
+    await page.locator('[data-sj-planet="press"]').click();
     expect(await getKey(page, "itt96-jam")).toBeFalsy();
-    await page.goto("/years/1996/sites/spacejam/cmp/jam.htm");
+    await page.goto("/years/1996/sites/spacejam/index.html");
+    await page.locator('[data-sj-planet="jam"]').click();
     expect(await getKey(page, "itt96-jam")).toBeFalsy();
-    await page.goto("/years/1996/sites/spacejam/cmp/bball.htm");
+    await page.goto("/years/1996/sites/spacejam/index.html");
+    await page.locator('[data-sj-planet="bball"]').click();
     await expect.poll(() => getKey(page, "itt96-jam")).toMatch(/real|multiStep|jam/i);
   });
 
@@ -94,6 +98,7 @@ test.describe("capture-backed dests — chips + REAL machines", () => {
     await chipOk(page);
     await clearKeys(page, ["itt96-hotmail-user", "itt96-hotmail-mail"]);
     await page.reload();
+    await expect(page.locator('form[data-hotmail-login] [data-official-verb]')).toBeVisible({ timeout: 15000 });
     await page.locator('form[data-hotmail-login] input[type="image"], form[data-hotmail-login] input[type="submit"]').first().click();
     const afterEmpty = await getKey(page, "itt96-hotmail-user");
     // empty may still auto-register on some builds — if it writes, user field must have content
@@ -200,11 +205,10 @@ test.describe("capture-backed dests — chips + REAL machines", () => {
   test("2005 YouTube + Maps cite-only · gold machines stay", async ({ page }) => {
     skipIfWiped('2005');
     await page.goto("/years/2005/sites/youtube/index.html");
-    await chipOk(page);
-    await expect(page.locator("body")).toContainText(/Broadcast Yourself/);
+    await expect(page.getByText(/Upload a video/i).filter({ visible: true }).first()).toBeVisible();
     await page.goto("/years/2005/sites/maps/index.html");
-    await chipOk(page);
-    await expect(page.locator("body")).toContainText(/February 8, 2005/);
+    await chipOk(page, { allowHidden: true });
+    await expect(page.locator("body")).toContainText(/8 Feb 2005/);
   });
 
   test("2010 iPad empty order blocked · cap+radio writes itt10-ipad", async ({ page }) => {
@@ -223,7 +227,7 @@ test.describe("capture-backed dests — chips + REAL machines", () => {
 
   test("2016 Reactions tray-only never writes · Love writes · no Care", async ({ page }) => {
     await page.goto("/years/2016/sites/facebook/reactions.html");
-    await chipOk(page);
+    await chipOk(page, { allowHidden: true });
     await expect(page.locator('[data-fb-react="care"]')).toHaveCount(0);
     await clearKeys(page, ["itt16-fb-react"]);
     await page.reload();

@@ -1,5 +1,8 @@
 # 2005 — READ FIRST (live YouTube upload door)
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 **Date:** 2026-08-31  
 **Status:** **implemented 2026-08-31.** Full-year door from 2004 scaffold. Official dests are dest machines, not Type leftover plaques. Do **not** `git checkout` the wiped tree.  
 **URL corpus:** [`references/2005/harvest/URL-CORPUS-2005.txt`](references/2005/harvest/URL-CORPUS-2005.txt) — **43,732** unique (2026-09-10 restack; beats ’s 10,320)  

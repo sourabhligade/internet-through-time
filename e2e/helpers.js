@@ -7,15 +7,15 @@ const path = require("path");
 const YEAR_CARD = JSON.parse(
   fs.readFileSync(path.join(__dirname, "..", "js", "year-card.json"), "utf8")
 ).years;
-/** Plaque plus 2023–2025 (no tree). 2008 is absent and is not in this set. */
+/** Plaque plus 2023–2025 (no tree). 2008 is a live HTML year and is not in this set. */
 const BOARDED_YEARS = new Set(
   Object.keys(YEAR_CARD).filter(
     (y) => YEAR_CARD[y].kind === "boarded" || (YEAR_CARD[y].kind === "absent" && Number(y) >= 2023)
   )
 );
-/** Absent doors except 2008, which never had a hub card in this set. */
+/** Absent doors (2008 is a live HTML year). */
 const WIPED_YEARS = new Set(
-  Object.keys(YEAR_CARD).filter((y) => YEAR_CARD[y].kind === "absent" && y !== "2008")
+  Object.keys(YEAR_CARD).filter((y) => YEAR_CARD[y].kind === "absent")
 );
 
 /** True when years/YYYY/... is on disk (dest-lock deletes workshop dests). */
@@ -76,7 +76,6 @@ function isLiveYear(year) {
 
 /**
  * Boarded year: no hub card, no dirbar.
- * 2009: plaque at /years/2009/ (not a hub redirect).
  * 2023+: no tree — /years/YYYY/ 404s; still no hub card.
  * @param {import('@playwright/test').Page} page
  * @param {string} year
@@ -88,11 +87,6 @@ async function expectYearBoarded(page, year) {
   await expect(page.locator(`a.year-card[href*="years/${y}"]`)).toHaveCount(0);
   await expect(page.locator(`.year-card.y${y}`)).toHaveCount(0);
   const res = await page.goto(`/years/${y}/`);
-  if (y === "2009") {
-    await expect(page.locator("body")).toContainText(/boarded/i);
-    await expect(page.locator("#dirbar")).toHaveCount(0);
-    return;
-  }
   if (["2023", "2024", "2025"].includes(y)) {
     expect(res && res.status()).toBe(404);
     return;

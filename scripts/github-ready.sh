@@ -74,7 +74,7 @@ for f in README.md LICENSE package.json package-lock.json .github/workflows/ci.y
   if [[ -f "$f" ]]; then ok "$f"; else bad "missing $f"; fi
 done
 # Hub-open years on disk. Keep in sync with scripts/itt_gate.py.
-# 2009 is boarded (index must exist and redirect). 2022–2025 must be absent.
+# Absent years must have no index. Boarded years must redirect. Open years must have an index.
 eval "$(python3 -c 'import sys; sys.path.insert(0,"scripts"); from itt_gate import _BOARDED, _WIPED
 print("BOARDED=\"" + " ".join(sorted(_BOARDED)) + "\"")
 print("WIPED=\"" + " ".join(sorted(_WIPED)) + "\"")')"
@@ -142,5 +142,5 @@ say "       • Vercel:   import repo → framework Other / static (vercel.json)
 say "       • GitHub Pages: Settings → Pages → GitHub Actions, or serve root via static host"
 say ""
 say "Suggested commit title if bundling current work:"
-say "  Ship hub 27 years (1994–2007 + 2010–2021). 2009 boarded. 2022 wiped."
+say "  Open the 23 year doors and wire the real saves."
 exit 0

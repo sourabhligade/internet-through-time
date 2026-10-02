@@ -567,6 +567,12 @@
         case "help-feedback":
           openMailDialog("info@mcom.com", "Netscape Feedback");
           break;
+        case "help":
+          ctx.navigate(paths.help || "pages/about.html");
+          break;
+        case "programs":
+          ctx.navigate(paths.programs || "pages/home.html");
+          break;
         case "help-exhibit":
           ctx.navigate("pages/about.html");
           break;
@@ -636,14 +642,14 @@
         '<span class="shell-nav-label">Navigate:</span> ' +
         '<a class="shell-nav-btn" id="itt-shell-goto-start" href="' +
         hubHref +
-        '" title="All years — museum home">Starting Point</a>' +
+        '" title="Museum list of every open year">All years</a>' +
         '<span class="shell-nav-sep" aria-hidden="true">·</span>' +
         '<button type="button" class="shell-nav-btn" id="itt-shell-goto-back" title="Previous page in this year">Back</button>' +
         '<span class="shell-nav-sep" aria-hidden="true">·</span>' +
         '<a class="shell-nav-exit" href="' +
         hubHref +
         '" title="Exit">← Year menu</a>' +
-        '<span class="shell-nav-hint">Lost? Starting Point = all years · toolbar Home = this year</span>';
+        '<span class="shell-nav-hint">Lost? All years = the museum list · toolbar Home = this year’s Starting Point</span>';
       var ui = document.getElementById("itt-year-ui");
       var desk = ui && ui.querySelector(":scope > .desktop");
       var layer = document.getElementById("itt-layer-legend");

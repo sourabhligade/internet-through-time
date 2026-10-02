@@ -84,7 +84,7 @@
       var n = attrs[i].name || "";
       if (n.indexOf("data-") !== 0) continue;
       if (n.slice(-4) !== "-req") continue;
-      if (n === "data-lo-req" || n === "data-pop-req" || n === "data-5x-req") continue;
+      if (n === "data-lo-req" || n === "data-pop-req" || n === "data-popular-req" || n === "data-5x-req") continue;
       return true;
     }
     return false;

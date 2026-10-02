@@ -26,7 +26,9 @@ test.describe('1994 navigation', () => {
     await goInFrame(page, 'sites/cern/index.html');
     const frame = contentFrame(page);
     await waitForImmersion(page, '1994');
-    await expect(frame.locator('text=/World Wide Web|CERN|hypermedia/i').first()).toBeVisible({
+    await expect(
+      frame.getByText(/birth of the Web/i).filter({ visible: true }).first()
+    ).toBeVisible({
       timeout: 15000,
     });
   });

@@ -94,9 +94,34 @@ async function runDest(page, d) {
   expect(String(blob.year), d.key + " year").toBe(d.year);
 }
 
+const LIVE_PANELS = {
+  1994: 209, 1995: 199, 1996: 193, 1997: 203, 1998: 197, 1999: 484, 2000: 547,
+};
+
+function panelCount(year) {
+  const dir = path.join(ROOT, "years", year);
+  let n = 0;
+  const stack = [dir];
+  while (stack.length) {
+    const cur = stack.pop();
+    let names;
+    try { names = fs.readdirSync(cur); } catch (e) { continue; }
+    for (const name of names) {
+      const full = path.join(cur, name);
+      let st;
+      try { st = fs.statSync(full); } catch (e2) { continue; }
+      if (st.isDirectory()) stack.push(full);
+      else if (name.endsWith(".html") && fs.readFileSync(full, "utf8").includes("data-lo-panel")) n++;
+    }
+  }
+  return n;
+}
+
 test.describe("1994–2000 leftover-official dest count", () => {
-  test("matrix dests exist for 1994–2000", () => {
-    expect(DESTS.length, "1994–2000 leftover dests").toBeGreaterThan(2900);
+  test("live leftover panels stay on the kept pages", () => {
+    for (const [y, n] of Object.entries(LIVE_PANELS)) {
+      expect(panelCount(y), y + " leftover panels").toBe(n);
+    }
   });
 });
 

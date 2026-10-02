@@ -72,6 +72,7 @@ const YEARS = [
       await page.locator("form[data-csotd-gb] input[type='submit']").click();
       expect(await getKey(page, "itt94-csotd")).toBeFalsy();
       await page.evaluate(() => sessionStorage.setItem("itt94-csotd-wandered", "1"));
+      await page.locator("[data-official-pick='today']").click();
       await page.fill("[name='gbname']", "Glenn residual");
       await page.locator("form[data-csotd-gb] input[type='submit']").click();
       await expect.poll(() => getKey(page, "itt94-csotd"), { timeout: 8000 }).toBeTruthy();

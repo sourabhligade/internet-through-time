@@ -14,6 +14,6 @@ test.describe("1999 portals density", () => {
 
   test("GeoCities shows Yahoo branding", async ({ page }) => {
     await page.goto("/years/1999/sites/geocities/index.html");
-    await expect(page.locator("body")).toContainText(/Yahoo! GeoCities|15MB|Neighborhoods/i);
+    await expect(page.locator("body")).toContainText(/GeoCities|geocities\.yahoo|redirected/i);
   });
 });

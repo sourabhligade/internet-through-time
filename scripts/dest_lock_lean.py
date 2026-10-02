@@ -17,7 +17,6 @@ LEAN = {
     "2010",
     "2012",
     "2014",
-    "2022",
 }
 
 EXTRA_KEEP = {
@@ -38,9 +37,6 @@ EXTRA_KEEP = {
     "2014": {
         "alibabaipo", "applepay", "echo", "flappybird", "game2048", "inbox", "ios8",
         "oculusfb"
-    },
-    "2022": {
-        "dalle2", "ios16", "m2", "midjourney", "stablediff", "temu"
     },
 }
 

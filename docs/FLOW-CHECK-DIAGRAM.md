@@ -1,7 +1,10 @@
 # Flow-check diagram
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **24 doors** (1994–2017). **2011 is live HTML.** **2015 and 2017 are React.** **2018–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 **Date:** 2026-09-20  
-**Live check updated:** 2026-09-29. Sections 1–4 are the 22-door walk. Sections 5–6 are the 2026-09-20 snapshot and still name years that are not doors.  
+**Live check updated:** 2026-10-02. Sections 1–4 are the 24-door walk. Sections 5–6 are the 2026-09-20 snapshot and still name years that are not doors.  
 **Status:** Check map. Not dest-farm.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md).  
 **Dest-true I/O:** [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md).  
@@ -11,13 +14,13 @@
 
 ---
 
-## 1. Museum door (22 open years)
+## 1. Museum door (24 open years)
 
-Open doors: 1994–2007, 2010, 2012–2017, 2022. 2015 and 2017 are React doors (`/app/index.html#/year/YYYY`). 2014, 2016, and 2022 are HTML doors. 2009 is a boarded plaque, not a card. 2011, 2018, and 2021 are absent. 2023–2025 are wiped.
+Open doors: 1994–2017. 2015 and 2017 are React doors (`/app/index.html#/year/YYYY`). 2011, 2014, and 2016 are HTML doors. 2008 and 2009 are live HTML doors. 2018–2025 are absent. 2023–2025 are wiped.
 
 ```mermaid
 flowchart TD
- HUB["Hub index.html<br/>22 year cards"] --> KIND{"Card kind"}
+ HUB["Hub index.html<br/>24 year cards"] --> KIND{"Card kind"}
  KIND -->|HTML| YEAR["/years/YYYY/"]
  KIND -->|React 2015 or 2017| REACT["/app/index.html#/year/YYYY"]
  YEAR --> ROOM["Room click"]
@@ -42,21 +45,19 @@ flowchart TD
 
 ```mermaid
 flowchart LR
- subgraph PLAY["22 open doors"]
- HTML["HTML doors<br/>1994–2007 · 2010 · 2012–2014 · 2016 · 2022"]
+ subgraph PLAY["24 open doors"]
+ HTML["HTML doors<br/>1994–2014 · 2016"]
  REACT["React doors<br/>2015 · 2017"]
  end
- BOARD["2009 boarded plaque"]
- ABSENT["2011 · 2018 · 2021 absent"]
+ ABSENT["2018–2025 absent"]
  WIPE["2023–2025 wiped"]
 ```
 
 | Class | Years | Check |
 |-------|-------|-------|
-| HTML door | 1994–2007, 2010, 2012–2014, 2016, 2022 | `/years/YYYY/` returns 200. Official list stops at the cap above. |
+| HTML door | 1994–2014, 2016 | `/years/YYYY/` returns 200. Official list stops at the cap above. |
 | React door | 2015, 2017 | Hub and atlas open `/app/index.html#/year/YYYY`. No HTML tree. |
-| Boarded | 2009 | Plaque at `/years/2009/`. No hub card. No atlas tick. |
-| Absent | 2011, 2018, 2021 | No card, no tree, no React door. |
+| Absent | 2018, 2019, 2020, 2021, 2022 | No card, no tree, no React door. |
 | Wiped | 2023–2025 | No tree. Do not restore. |
 
 ---
@@ -90,7 +91,7 @@ flowchart TD
 
 ```mermaid
 flowchart TD
- A["1. Hub: 22 cards. No 2009. No 2011. No 2018–2021. No 2023+."] --> B["2. HTML door or React door. 2015 and 2017 are React."]
+ A["1. Hub: 24 cards, 1994–2017. No 2018–2025."] --> B["2. HTML door or React door. 2015 and 2017 are React."]
  B --> C["3. Star verb. Empty / trap never write. Complete writes star key."]
  C --> D["4. HTML official stops through the cap. 2004=8. 2012–2014=9."]
  D --> E["5. Leftover only where that year still has a rail. Do not dest-farm."]
@@ -116,7 +117,7 @@ CI does **not** run leftover-3× directory (`3x-links`), leftover-5× live, left
 
 ## 5. Leftover-3× unique dest-true dests (dest-disjoint)
 
-**Snapshot 2026-09-20. Not the live walk.** The table below still names 2011, 2018, and 2021. Those years are not doors. Do not walk them and do not restore them. Section 6 is the same snapshot. The live check is sections 1–4.
+**Snapshot 2026-09-20. Not the live walk.** Leftover-3× unique catalogs are **empty**. The table below still names 2018, 2019, 2020, and 2021. Those years are not doors. 2011 is a live HTML door and is not in this snapshot. Do not walk the absent years and do not restore them. Section 6 is the same snapshot. The live check is sections 1–4.
 
 ```mermaid
 flowchart LR
@@ -140,6 +141,7 @@ flowchart LR
 | 2017 | **0 leftover-3× unique dest-true dests** (unique leftover-20) | `itt17-faceid` |
 | | **3 stop** | `itt18-gdpr` |
 | | 9 | `itt19-disneyplus` |
+| 2020 | 9 | `itt20-zoom` |
 | 2021 | **5 stop** | `itt21-att` |
 | 2022 | 9 amazon…nyt | `itt22-chatgpt` |
 

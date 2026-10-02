@@ -161,7 +161,7 @@ try {
     if (missing.length) fail("hub-cards", `missing available cards: ${missing.join(",")}`);
     else ok("hub-cards", `${YEARS.length + REACT.size} playable years`);
     const desc = await page.locator('meta[name="description"]').getAttribute("content");
-    if (!/22 years open/i.test(desc || "")) fail("hub-copy", "expected 22 years open");
+    if (!/24 years open/i.test(desc || "")) fail("hub-copy", "expected 24 years open");
     else ok("hub-copy");
     const h1 = await page.locator("h1").first().innerText();
     if (!/Internet Through Time/i.test(h1)) fail("hub-era-chip", "missing product h1");

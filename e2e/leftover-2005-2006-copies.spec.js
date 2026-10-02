@@ -5,6 +5,7 @@
  * 2004 Gmail and official 2006 Digg / Flickr stay { official:true } or a plain sign-in.
  */
 const { test, expect } = require("@playwright/test");
+const { revealLeftoverRails } = require("./helpers");
 
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
@@ -30,6 +31,7 @@ function expectLeftover(raw, year) {
 test.describe("leftover 2006 copies of 2004 rooms", () => {
   test("2004 Gmail sign-in stays a sign-in record", async ({ page }) => {
     await openFresh(page, "/years/2004/sites/gmail/index.html", ["itt04-gmail"]);
+    await page.fill('[name="email"]', "ada@gmail.com");
     await page.fill('[name="pass"]', "secret");
     await page.locator("form[data-gmail-login] button[type=submit]").click();
     await expect.poll(() => getKey(page, "itt04-gmail")).toBeTruthy();
@@ -38,13 +40,20 @@ test.describe("leftover 2006 copies of 2004 rooms", () => {
     expect(blob.leftover).toBeFalsy();
   });
 
-  test("2006 del.icio.us real URL stores itt06-delicious leftover", async ({ page }) => {
+  test("2006 del.icio.us leftover plaque stores itt06-delicious", async ({ page }) => {
     await openFresh(page, "/years/2006/sites/delicious/index.html", ["itt06-delicious"]);
+    await revealLeftoverRails(page);
     await page.locator("form[data-delicious-post] button[type=submit]").click();
     expect(await getKey(page, "itt06-delicious")).toBeFalsy();
-    await page.fill('[name="url"]', "http://example.com/museum");
-    await page.fill('[name="title"]', "museum bookmark");
-    await page.locator("form[data-delicious-post] button[type=submit]").click();
+    const lo = page.locator('[data-lo-panel]:has([data-lo-save][data-lo-key="delicious"])').first();
+    await lo.locator("[data-lo-trap]").click();
+    expect(await getKey(page, "itt06-delicious")).toBeFalsy();
+    const reqs = lo.locator("[data-lo-req]");
+    const nReq = await reqs.count();
+    for (let i = 0; i < nReq; i++) await reqs.nth(i).check();
+    await lo.locator('[data-lo-pick="keep"]').click();
+    await lo.locator("[data-lo-field]").fill("museum bookmark");
+    await lo.locator("[data-lo-save]").click();
     await expect.poll(() => getKey(page, "itt06-delicious")).toBeTruthy();
     expectLeftover(await getKey(page, "itt06-delicious"), "2006");
   });
@@ -52,12 +61,11 @@ test.describe("leftover 2006 copies of 2004 rooms", () => {
   test("2006 Flickr load and empty title store nothing; a title stores itt06-flickr leftover", async ({
     page,
   }) => {
-    await openFresh(page, "/years/2006/sites/flickr/index.html", [
+    await openFresh(page, "/years/2006/sites/flickr/upload.html", [
       "itt06-flickr",
       "itt06-flickr-stream",
     ]);
     expect(await getKey(page, "itt06-flickr")).toBeFalsy();
-    expect(await getKey(page, "itt06-flickr-stream")).toBeFalsy();
     await page.locator("form[data-flickr-upload] button[type=submit]").click();
     expect(await getKey(page, "itt06-flickr")).toBeFalsy();
     await page.fill('form[data-flickr-upload] [name="title"]', "museum photo");

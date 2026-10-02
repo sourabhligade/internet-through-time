@@ -32,15 +32,6 @@ const FACE = {
   "itt17-musically": ["lips", "musical.ly", "The 2017 app. TikTok's US mass is 2018."],
   "itt17-equifax": ["lock", "Equifax", "Place a freeze. Ignore writes nothing. No SSN."],
   "itt17-game-stormcircle": ["game", "Storm Circle", "The year toy. Face ID stays the star."],
-  "itt22-wordle": ["word", "Wordle", "Five letters. A sixth writes nothing."],
-  "itt22-twitter": ["bird", "Twitter", "The bird is still here. An X writes nothing."],
-  "itt22-bereal": ["timer", "BeReal", "Two minutes. Posting late writes nothing."],
-  "itt22-island": ["phone", "Dynamic Island", "The 14 Pro cutout. A 13 notch writes nothing."],
-  "itt22-ftx": ["balance", "FTX", "The balance does not move. Withdraw writes nothing."],
-  "itt22-mastodon": ["join", "Mastodon", "Join. It is not Twitter."],
-  "itt22-tiktok": ["ring", "TikTok", "A watch. It is not ChatGPT."],
-  "itt22-win11": ["window", "Windows 11", "The desktop. “Still Windows 10” writes nothing."],
-  "itt22-game-prompt": ["game", "Prompt Queue", "The year toy. A score of 0 writes nothing."],
 };
 
 export function ProductFace({ id, text, onText, maxLength }) {

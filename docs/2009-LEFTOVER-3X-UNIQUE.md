@@ -1,5 +1,8 @@
 # 2009 leftover-3× unique dest-true — boarded
 
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+
+
 **Date:** 2026-09-19  
 **Status:** 2009 is **boarded**. Leftover-3× catalogs exist. They are **not** visitor flows. Do not restore 2009 as a playable door. Do not dest-true leftover-3× unique dest-true dests.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`2009-READ-FIRST.md`](2009-READ-FIRST.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  

@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Museum door — docs/FLOW-CHECK-DIAGRAM.md §4 + docs/DISK-TRUTH.md.
- * Hub 22 years (1994–2007 + 2010 + 2012–2017 + 2022). 2015 and 2017 are React doors. 2009 boarded. 2011, 2018–2021, and 2023–2025 are absent.
+ * Hub 24 years (1994–2017). 2015 and 2017 are React doors. 2018–2022 and 2023–2025 are absent.
  * Links first, then dest-true I/O. Dest-folder count is not a pass.
  */
 const fs = require("fs");
@@ -12,10 +12,10 @@ const { destOnDisk, expectYearBoarded } = require("./helpers");
 const ROOT = path.join(__dirname, "..");
 const SHIP = [];
 for (let y = 1994; y <= 2022; y++) {
- if ((y > 2007 && y < 2009) || y === 2009 || y === 2021 || (y > 2017 && y < 2021) || (y > 2010 && y < 2012)) continue;
+ if (y === 2021 || y === 2022 || (y > 2017 && y < 2021)) continue;
   SHIP.push(String(y));
 }
-const BOARDED = ["2009", "2023", "2024", "2025"];
+const BOARDED = ["2023", "2024", "2025"];
 
 function officialTen(year) {
   const src = fs.readFileSync(path.join(ROOT, "js/config/flow-trails.js"), "utf8");
@@ -45,8 +45,8 @@ async function getKey(page, key) {
 }
 
 test.describe("visitor door", () => {
- test("hub lists 22 years including 2022, 2015, and 2005 · no 2009 · no 2023+", async ({ page }) => {
- expect(SHIP).toHaveLength(22);
+ test("hub lists 24 years including 2015, 2011, 2009, 2008, and 2005 · no 2022+", async ({ page }) => {
+ expect(SHIP).toHaveLength(24);
     await page.goto("/");
  await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
     await expect(page.locator("body")).not.toContainText(/27 years open/i);
@@ -64,16 +64,15 @@ test.describe("visitor door", () => {
       }
       await expect(page.locator(`a.year-card.available[href*="years/${y}"]`).first()).toBeVisible();
     }
-    await expect(page.locator("a.year-card.available[href*='years/2022']")).toBeVisible();
-    await expect(page.locator(".year-card.locked.y2022")).toHaveCount(0);
+    await expect(page.locator("a.year-card[data-year='2022']")).toHaveCount(0);
+    await expect(page.locator(".year-card.y2022")).toHaveCount(0);
     for (const y of BOARDED) {
       await expect(page.locator(`a.year-card[href*="years/${y}"]`)).toHaveCount(0);
       await expect(page.locator(`.year-card.y${y}`)).toHaveCount(0);
     }
   });
 
-  test("2009 boarded plaque · 2023–2025 wiped", async ({ page }) => {
-    await expectYearBoarded(page, "2009");
+  test("2023–2025 wiped", async ({ page }) => {
     await expectYearBoarded(page, "2023");
     await expectYearBoarded(page, "2024");
     await expectYearBoarded(page, "2025");
@@ -130,32 +129,20 @@ test.describe("visitor door", () => {
         const href = path.join(ROOT, "years", y, row.href);
         if (!fs.existsSync(href)) continue;
         const html = fs.readFileSync(href, "utf8");
-        if (html.indexOf("data-lo-panel") !== -1) hits.push(y + "/" + row.href);
+        if (html.indexOf("data-itt-2x-links") !== -1 || html.indexOf("data-itt-2x-unique") !== -1) {
+          hits.push(y + "/" + row.href);
+        }
       }
     }
     expect(hits, hits.join("\n")).toEqual([]);
   });
 
   test("Starting Point guided ol is 6 on forest and ChatGPT doors", async ({ page }) => {
-    for (const y of ["1994", "2022"]) {
+    for (const y of ["1994"]) {
       await page.goto("/years/" + y + "/pages/home.html");
       await expect(page.locator("#ott-guided-" + y + " ol > li")).toHaveCount(6);
       await expect(page.locator('[data-ott-one-thing="' + y + '"]')).toBeVisible();
     }
-  });
-
-  test("2022 ChatGPT empty / GPT-4 never write · Send writes", async ({ page }) => {
-    await page.goto("/years/2022/sites/chatgpt/index.html");
-    await page.evaluate(() => localStorage.removeItem("itt22-chatgpt"));
-    await page.reload();
-    await page.locator("[data-official-verb]").click();
-    expect(await getKey(page, "itt22-chatgpt")).toBeFalsy();
-    await page.locator("[data-official-trap]").click();
-    expect(await getKey(page, "itt22-chatgpt")).toBeFalsy();
-    await page.locator("[data-official-need]").fill("hello there");
-    await page.locator("[data-official-verb]").click();
-    await expect.poll(() => getKey(page, "itt22-chatgpt")).toBeTruthy();
-    await expect(page.locator("[data-lo-panel]")).toHaveCount(0);
   });
 
   test("local postcard empty never claims a finish", async ({ page }) => {
@@ -172,9 +159,7 @@ test.describe("visitor door", () => {
     expect(on).toBeFalsy();
   });
 
-  test("14.4k wait is gone on 2000–2022 Starting Point", async ({ page }) => {
-    await page.goto("/years/2022/pages/home.html");
-    await expect(page.locator("[data-itt-friction]")).toHaveCount(0);
+  test("14.4k wait is gone on 2017 and 2010 Starting Point", async ({ page }) => {
     await page.goto("/app/index.html#/year/2017");
     await expect(page.locator("[data-itt-friction]")).toHaveCount(0);
     await page.goto("/years/2010/pages/home.html");
@@ -182,7 +167,7 @@ test.describe("visitor door", () => {
   });
 
   test("standalone Starting Point has no boot.js cavern", async ({ page }) => {
-    for (const y of ["1994", "2007", "2022"]) {
+    for (const y of ["1994", "2007"]) {
       await page.goto("/years/" + y + "/pages/home.html");
       await expect(page.locator("#ott-guided-" + y + " ol > li")).toHaveCount(6);
       await expect(page.locator("[data-itt-postcard]")).toBeVisible();
@@ -200,14 +185,11 @@ test.describe("visitor door", () => {
       expect(info.fill, y + " #itt-page-fill").toBe(false);
       expect(info.standalone, y + " standalone").toBe("1");
       expect(info.gap, y + " postcard→footer gap " + info.gap).toBeGreaterThanOrEqual(0);
-      if (y === "2022") {
-        expect(info.gap, y + " postcard→footer gap " + info.gap).toBeLessThan(80);
-      }
     }
   });
 
   test("iframe Starting Point still fills the year desktop pane", async ({ page }) => {
-    for (const y of ["1994", "2022"]) {
+    for (const y of ["1994"]) {
       await page.goto("/years/" + y + "/");
       const frame = page.frameLocator("iframe#content");
       await expect(frame.locator("#ott-guided-" + y + " ol > li")).toHaveCount(6);

@@ -33,7 +33,6 @@ const GOLD = [
   { year: "2014", dest: "sites/whatsapp/index.html", star: "itt14-wa-install" },
 
   { year: "2016", dest: "sites/instagram/stories.html", star: "itt16-ig-stories" },
-  { year: "2017", dest: "sites/iphone/x.html", star: "itt17-faceid" },
 ];
 
 async function getKey(page, key) {

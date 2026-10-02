@@ -191,12 +191,6 @@ CITED_ADD: dict[str, list[str]] = {
         "googlelens", "googlepay", "highsierra", "horizonzd", "imacpro", "injustice2",
         "ipadpro105", "ipadpro129", "iphone8plus",
     ],
-    "2022": [
-        "temu", "stablediff", "midjourney", "dalle2", "ios16", "m2", "google",
-        "youtube", "facebook", "twitter", "wikipedia", "reddit", "instagram", "amazon",
-        "bereal", "chatgpt", "ftx", "iphone", "mastodon", "netflix", "nyt", "playable",
-        "tiktok", "windows11", "wordle",
-    ],
 }
 
 

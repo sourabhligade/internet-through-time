@@ -25,7 +25,6 @@ echo "== 5. node syntax immersion core =="
 node --check js/immersion/boot.js
 node --check js/immersion/registry.js
 node --check js/immersion/residual-placard.js
-node --check js/immersion/year-2017-extras.js
 node --check e2e/helpers.js
 
 echo "== 6. e2e 2017 pack =="

@@ -29,14 +29,16 @@ async function finish(page, path, key, nextHref) {
 }
 
 test.describe("2009 5× live F1–F5", () => {
-  test("plaque lists the five rooms and the Like star, and is not a hub door", async ({ page }) => {
-    await page.goto("/years/2009/");
-    await expect(page.locator("h1")).toContainText("2009 is boarded");
+  test("home chips list the five leftover rooms and not the Like star", async ({ page }) => {
+    await page.goto("/years/2009/pages/home.html");
+    await expect(page.locator("#ott-guided-2009 ol > li")).toHaveCount(6);
     const row = page.locator("#ott-5x-2009 a");
-    await expect(row).toHaveCount(6);
-    await expect(row.nth(0)).toHaveAttribute("href", "sites/farmville/index.html");
-    await expect(row.nth(4)).toHaveAttribute("href", "sites/windows7/index.html");
-    await expect(row.nth(5)).toHaveAttribute("href", "sites/facebook/index.html");
+    await expect(row).toHaveCount(5);
+    await expect(row.nth(0)).toHaveAttribute("href", "../sites/farmville/index.html");
+    await expect(row.nth(4)).toHaveAttribute("href", "../sites/windows7/index.html");
+    const hrefs = await row.evaluateAll((as) => as.map((a) => a.getAttribute("href") || ""));
+    expect(hrefs.join(" ")).not.toMatch(/facebook/i);
+    await expect(page.locator("[data-ott-one-thing]").first()).toBeVisible();
   });
 
   test("F1 FarmVille", async ({ page }) => {

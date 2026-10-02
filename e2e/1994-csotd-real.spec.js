@@ -61,6 +61,7 @@ test.describe("1994 CSotD + FishCam gold", () => {
     await page.evaluate(() => {
       sessionStorage.setItem("itt94-csotd-wandered", "1");
     });
+    await page.locator("[data-official-pick='today']").click();
     await page.fill("[name='gbname']", "Glenn residual");
     await page.fill("[name='gbnote']", "Worth the modem.");
     await page.locator("form[data-csotd-gb] input[type='submit']").click();

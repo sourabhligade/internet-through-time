@@ -28,11 +28,14 @@ test.describe('1995 5× live F1–F5', () => {
     await page.reload();
     await expect(page.locator('[data-auction-id][data-itt-auction-bound="1"]')).toBeVisible({ timeout: 15000 });
     await expect(page.locator('[data-5x-save]')).toHaveCount(0);
-    await page.locator('form[data-bid-form] button[type="submit"], form[data-bid-form] input[type="submit"]').first().click();
+    const bidBtn = page.locator('form[data-bid-form] button[type="submit"], form[data-bid-form] input[type="submit"]').first();
+    await bidBtn.click({ force: true });
     await expect.poll(async () => getKey(page, 'itt95-aw-bid')).toBeFalsy();
+    const alertOk = page.locator('#itt-period-alert button');
+    if (await alertOk.count()) await alertOk.first().click();
     await page.fill('form[data-bid-form] [name="bidder"]', 'museum@dialup');
     await page.fill('form[data-bid-form] [name="bid"]', '25');
-    await page.locator('form[data-bid-form] button[type="submit"], form[data-bid-form] input[type="submit"]').first().click();
+    await bidBtn.click();
     await expect.poll(async () => getKey(page, 'itt95-aw-bid'), { timeout: 8000 }).toBeTruthy();
   });
 
@@ -62,6 +65,12 @@ test.describe('1995 5× live F1–F5', () => {
     await page.evaluate((k) => { try { localStorage.removeItem(k); } catch (e) {} }, 'itt95-ns-dl');
     await page.reload();
     await expect(page.locator('[data-5x-save]')).toHaveCount(0);
+    await page.locator('form[data-ns-download] input[type="submit"]').click();
+    await expect.poll(async () => getKey(page, 'itt95-ns-dl')).toBeFalsy();
+    await page.locator('form[data-ns-download] [data-official-need]').fill('Netscape');
+    const reqs = page.locator('form[data-ns-download] [data-official-req]');
+    const nReq = await reqs.count();
+    for (let i = 0; i < nReq; i++) await reqs.nth(i).check();
     await page.locator('form[data-ns-download] input[type="submit"]').click();
     await expect.poll(async () => getKey(page, 'itt95-ns-dl'), { timeout: 8000 }).toBeTruthy();
   });

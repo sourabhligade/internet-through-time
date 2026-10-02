@@ -15,6 +15,7 @@
     "pages/home.html",
     "pages/map.html",
     "pages/whats-new.html",
+    "pages/cool.html",
     "sites/alibabaipo/index.html",
     "sites/applepay/index.html",
     "sites/echo/index.html",
@@ -62,7 +63,7 @@
   var i;
   for (i = 0; i < rooms.length; i++) {
     if (!urlMap[rooms[i]]) {
-      urlMap[rooms[i]] = "http://museum.local/years/2014/" + rooms[i];
+      urlMap[rooms[i]] = "http://home.microsoft.com/intl/web2014/" + rooms[i];
     }
   }
 
