@@ -20,8 +20,14 @@
   }
 
   function destSlug() {
-    var m = String(location.pathname || "").match(/\/sites\/([^/]+)/);
-    return m ? m[1] : "";
+    var path = String(location.pathname || "");
+    var m = path.match(/\/sites\/([^/]+)/);
+    var slug = m ? m[1] : "";
+    if (/\/shorts\.html/.test(path)) return "youtubeshorts";
+    if (/\/reels\.html/.test(path)) return "reels";
+    if (/\/files\.html/.test(path)) return "twitterfiles";
+    if (slug === "stablediff") return "stablediffusion";
+    return slug;
   }
 
   function replyFor(q) {
@@ -393,7 +399,14 @@
       openai: "OpenAI leftover · blog · Send stays on ChatGPT",
       zoom: "Zoom leftover · Leave is later gold",
       reels: "Reels leftover · launched later · not 2022 gold",
-      youtubeshorts: "Shorts leftover · 2021 mass · not 2022 gold"
+      youtubeshorts: "Shorts leftover · 2021 mass · not 2022 gold",
+      dalle2: "DALL-E 2 leftover · Apr 2022 prompt · not ChatGPT",
+      temu: "Temu leftover · Sep 2022 shop · cart leftover",
+      ios16: "iOS 16 leftover · Lock Screen · Sep 2022",
+      m2: "M2 leftover · Mac chip · Jun 2022 · not a wallet",
+      nyt: "NYT leftover · headline",
+      playable: "Playables leftover · lobby · Prompt Queue stays the game",
+      twitterfiles: "Twitter Files leftover · Dec 2022 · not the bird gold"
     };
     return faces[slug] || slug + " leftover · 2022 room · not gold";
   }
@@ -502,7 +515,19 @@
       apple: '<div data-y22-ok="news"><p>Apple leftover · iOS 16 leftover</p><p>' + t + "</p></div>",
       chrome: '<div data-y22-ok="search"><p>Chrome leftover · habit shell stays</p><p>' + t + "</p></div>",
       edge: '<div data-y22-ok="search"><p>Edge leftover · Chromium habit</p><p>' + t + "</p></div>",
-      windows10: '<div data-y22-ok="files"><p>Win10 leftover · still mass</p><p>' + t + "</p></div>"
+      windows10: '<div data-y22-ok="files"><p>Win10 leftover · still mass</p><p>' + t + "</p></div>",
+      dalle2:
+        '<div data-y22-ok="compose"><p>DALL-E 2 leftover · Apr 2022</p><p>' +
+        t +
+        '</p><p class="y22-mj">[failed-final] no invented image</p></div>',
+      temu: '<div data-y22-ok="shop"><p>Cart leftover · Sep 2022</p><p>' + t + "</p></div>",
+      ios16: '<div data-y22-ok="news"><p>Lock Screen leftover · iOS 16</p><p>' + t + "</p></div>",
+      m2: '<div data-y22-ok="news"><p>M2 leftover · Mac chip · no wallet</p><p>' + t + "</p></div>",
+      playable:
+        '<div data-y22-ok="files"><p>Lobby leftover · Prompt Queue stays the game</p><p>' +
+        t +
+        "</p></div>",
+      twitterfiles: '<div data-y22-ok="files"><p>Opened leftover · Twitter Files</p><p>' + t + "</p></div>"
     };
     if (rows[slug]) return rows[slug];
     if (kind === "compose") return '<div class="y22-msg" data-y22-ok="compose">You: ' + t + "</div>";
@@ -540,6 +565,11 @@
     }
     if (!go || !out) return;
     go.addEventListener("click", function () {
+      var reqs = host.querySelectorAll("[data-lo-req]");
+      var i;
+      for (i = 0; i < reqs.length; i++) if (!reqs[i].checked) return;
+      var keep = host.querySelector('[data-lo-pick="keep"]');
+      if (keep && keep.getAttribute("aria-pressed") !== "true") return;
       var q = field ? String(field.value || "").replace(/^\s+|\s+$/g, "") : "";
       if (q.length < 2) {
         out.textContent = "";
@@ -548,7 +578,7 @@
       }
       out.removeAttribute("data-y22-empty");
       out.innerHTML = destResult(slug, kind, q);
-    });
+    }, true);
   }
 
   function bootRooms(doc) {

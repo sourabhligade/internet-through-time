@@ -341,7 +341,8 @@
       "immersion/one-thing-machines.js"
     ],
     "2011": [
-      "immersion/one-thing-machines.js"
+      "immersion/one-thing-machines.js",
+      "immersion/year-2011-extras.js"
     ],
         "2012": [
       "immersion/youtube.js",
@@ -401,7 +402,8 @@
       "immersion/no-mock-fb-connect.js",
       "immersion/no-mock-culture-ack.js",
       "immersion/no-mock-common.js",
-      "immersion/one-thing-machines.js"
+      "immersion/one-thing-machines.js",
+      "immersion/year-2020-extras.js"
     ],
     "2021": [
       "immersion/leftover-official.js",
@@ -412,7 +414,8 @@
       "immersion/no-mock-fb-connect.js",
       "immersion/no-mock-culture-ack.js",
       "immersion/no-mock-common.js",
-      "immersion/one-thing-machines.js"
+      "immersion/one-thing-machines.js",
+      "immersion/year-2020-extras.js"
     ],
     "2022": [
       "immersion/leftover-official.js",

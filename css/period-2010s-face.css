@@ -1,0 +1,186 @@
+/* 2010–2014 and 2016 leftover rooms.
+   The save is the only filled verb. Picks and traps stay visible as quiet chips.
+   Official shells, gold plaques, and 6× machines are outside this sheet.
+   A finished save paints [data-era-result]. Empty and trap never do. */
+
+html[data-itt-year="2010"]:not([data-official-key]) [data-lo-panel]:not([data-itt-gold-lx]):has([data-era-result]),
+html[data-itt-year="2011"]:not([data-official-key]) [data-lo-panel]:not([data-itt-gold-lx]):has([data-era-result]),
+html[data-itt-year="2012"]:not([data-official-key]) [data-lo-panel]:not([data-itt-gold-lx]):has([data-era-result]),
+html[data-itt-year="2013"]:not([data-official-key]) [data-lo-panel]:not([data-itt-gold-lx]):has([data-era-result]),
+html[data-itt-year="2014"]:not([data-official-key]) [data-lo-panel]:not([data-itt-gold-lx]):has([data-era-result]) {
+  background: #fff !important;
+  border: 1px solid #ccc !important;
+  border-radius: 6px !important;
+  color: #111 !important;
+  font-family: Helvetica, Arial, sans-serif !important;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) [data-lo-panel]:not([data-itt-gold-lx]):not(.itt-2016-machine):has([data-era-result]) {
+  background: #fff !important;
+  border: 1px solid #dadce0 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  color: #202124 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+html[data-itt-year="2010"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-field],
+html[data-itt-year="2011"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-field],
+html[data-itt-year="2012"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-field],
+html[data-itt-year="2013"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-field],
+html[data-itt-year="2014"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-field],
+html[data-itt-year="2016"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-field] {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 6px 0;
+  padding: 6px 8px;
+  background: #fff;
+  color: #111;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font: 13px Helvetica, Arial, sans-serif;
+}
+
+html[data-itt-year="2010"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-save],
+html[data-itt-year="2011"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-save],
+html[data-itt-year="2012"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-save],
+html[data-itt-year="2013"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-save],
+html[data-itt-year="2014"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-save] {
+  appearance: none;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  background: #007aff !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  border: 0 !important;
+  border-radius: 4px !important;
+  padding: 8px 14px !important;
+  font-family: Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-save] {
+  appearance: none;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  background: #1a73e8 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  border: 0 !important;
+  border-radius: 4px !important;
+  padding: 8px 14px !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+}
+
+html[data-itt-year="2010"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-pick],
+html[data-itt-year="2010"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-trap],
+html[data-itt-year="2011"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-pick],
+html[data-itt-year="2011"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-trap],
+html[data-itt-year="2012"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-pick],
+html[data-itt-year="2012"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-trap],
+html[data-itt-year="2013"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-pick],
+html[data-itt-year="2013"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-trap],
+html[data-itt-year="2014"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-pick],
+html[data-itt-year="2014"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-trap],
+html[data-itt-year="2016"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-pick],
+html[data-itt-year="2016"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-trap] {
+  appearance: none;
+  display: inline-block;
+  width: auto;
+  margin: 0 6px 6px 0;
+  background: #f2f2f2 !important;
+  color: #111 !important;
+  -webkit-text-fill-color: #111 !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  padding: 4px 8px !important;
+  font-family: Helvetica, Arial, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+}
+
+html[data-itt-year="2010"] [data-era-result]:not(:empty),
+html[data-itt-year="2011"] [data-era-result]:not(:empty),
+html[data-itt-year="2012"] [data-era-result]:not(:empty),
+html[data-itt-year="2013"] [data-era-result]:not(:empty),
+html[data-itt-year="2014"] [data-era-result]:not(:empty) {
+  margin: 12px 0 0;
+  padding: 10px;
+  background: #f2f2f2;
+  border-radius: 6px;
+  color: #111;
+}
+
+html[data-itt-year="2016"] [data-era-result]:not(:empty) {
+  margin: 12px 0 0;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  color: #202124;
+}
+
+html[data-itt-year="2010"] .era-stage,
+html[data-itt-year="2011"] .era-stage,
+html[data-itt-year="2012"] .era-stage,
+html[data-itt-year="2013"] .era-stage,
+html[data-itt-year="2014"] .era-stage,
+html[data-itt-year="2016"] .era-stage {
+  min-height: 72px;
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #141414;
+  color: #f5f5f5;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+html[data-itt-year="2016"] .era-stage {
+  border-radius: 8px;
+}
+
+/* 2011 paints every button gray and every glyph black unless a later rule wins. */
+html[data-itt-year="2011"]:not([data-official-key]):not(:has(#itt-year-ui)) [data-lo-panel]:has([data-era-result]) [data-lo-save] {
+  background: #007aff !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  border: 0 !important;
+}
+
+html[data-itt-year="2011"]:not([data-official-key]):not(:has(#itt-year-ui)) [data-lo-panel]:has([data-era-result]) [data-lo-pick],
+html[data-itt-year="2011"]:not([data-official-key]):not(:has(#itt-year-ui)) [data-lo-panel]:has([data-era-result]) [data-lo-trap],
+html[data-itt-year="2011"]:not([data-official-key]):not(:has(#itt-year-ui)) [data-lo-panel]:has([data-era-result]) [data-lo-field] {
+  background: #f2f2f2 !important;
+  color: #111 !important;
+  -webkit-text-fill-color: #111 !important;
+  border: 1px solid #ccc !important;
+}
+
+html[data-itt-year="2011"]:not([data-official-key]):not(:has(#itt-year-ui)) [data-lo-panel]:has([data-era-result]) [data-lo-field] {
+  background: #fff !important;
+}
+
+html[data-itt-year="2011"]:not([data-official-key]):not(:has(#itt-year-ui)) [data-lo-panel]:has([data-era-result]) [data-era-result],
+html[data-itt-year="2011"]:not([data-official-key]):not(:has(#itt-year-ui)) [data-lo-panel]:has([data-era-result]) [data-era-result] * {
+  color: #111 !important;
+  -webkit-text-fill-color: #111 !important;
+}
+
+html[data-itt-year="2011"]:not([data-official-key]):not(:has(#itt-year-ui)) [data-lo-panel]:has([data-era-result]) .era-stage,
+html[data-itt-year="2011"]:not([data-official-key]):not(:has(#itt-year-ui)) [data-lo-panel]:has([data-era-result]) .era-stage * {
+  background: #141414 !important;
+  color: #f5f5f5 !important;
+  -webkit-text-fill-color: #f5f5f5 !important;
+}
