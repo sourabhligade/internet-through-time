@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Preflight before first GitHub push. Does not create remotes or push.
+# Local safety checks. Does not create remotes.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 ROOT="$(pwd)"
@@ -38,7 +38,7 @@ fi
 dirty="$(git status --porcelain | wc -l | tr -d ' ')"
 say "  working tree changes: $dirty"
 if [[ "$dirty" != "0" ]]; then
-  say "  note: commit (or stash) before push so CI runs on the full museum"
+  say "  note: working tree has uncommitted changes"
 fi
 
 # --- must not publish ---
@@ -62,7 +62,7 @@ for f in .env .env.local credentials.json; do
     if git check-ignore -q "$f" 2>/dev/null || ! git ls-files --error-unmatch "$f" >/dev/null 2>&1; then
       ok "$f exists but is not tracked"
     else
-      bad "$f is tracked — remove from git before push"
+      bad "$f is tracked — remove it from git"
     fi
   fi
 done
@@ -123,24 +123,9 @@ fi
 
 say ""
 if [[ "$fail" -ne 0 ]]; then
-  say "PREFLIGHT FAILED — fix items above before creating the repo."
+  say "PREFLIGHT FAILED — fix the items above."
   exit 1
 fi
 
 say "PREFLIGHT PASSED"
-say ""
-say "Next steps (run yourself — creates a public remote):"
-say ""
-say "  1) Commit the museum work on this branch (review git status first)."
-say "  2) gh auth login          # if not already"
-say "  3) gh repo create internet-through-time --public --source=. --remote=origin --push"
-say "     # or private:  --private"
-say "  4) Open Actions tab and confirm CI green."
-say "  5) Production host (pick one):"
-say "       • Netlify:  connect repo → publish directory '.'  (netlify.toml)"
-say "       • Vercel:   import repo → framework Other / static (vercel.json)"
-say "       • GitHub Pages: Settings → Pages → GitHub Actions, or serve root via static host"
-say ""
-say "Suggested commit title if bundling current work:"
-say "  Open the 23 year doors and wire the real saves."
 exit 0

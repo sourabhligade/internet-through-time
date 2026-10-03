@@ -1702,7 +1702,7 @@ Empty catalog. Do not dest-farm a rail.
 
 ## Still open (from OPEN-CHECKLIST)
 
-- [x] Commit / push this working tree (React-door atlas, dest-true 2017/ MVP, leftover-20 React I/O, UNDONE dest recount)
+- [x] Commit this working tree (React-door atlas, dest-true 2017/ MVP, leftover-20 React I/O, UNDONE dest recount)
 - [x] 2017 / leftover-20 I/O on the React rail — `e2e/2017--leftover-20.spec.js` + `e2e/2017-unique-flows.spec.js` **75 passed** 2026-09-26 (empty / trap never write · leftover never writes the star)
 - [x] [`UNDONE.md`](UNDONE.md) dest counts rechecked vs disk 2026-09-26
 

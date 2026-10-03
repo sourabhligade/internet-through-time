@@ -225,4 +225,4 @@ Visitor product still lives in [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) **B**, n
 - Do not restore 2011, 2018–2021, or 2023–2025 because `YEAR-E2E-POTENTIAL` still scores them.
 - Do not dest-lock forests because `PRODUCT-IMPROVE` Slice 5 is still `[ ]`.
 - Do not implement 2014 as a React door from `2014-REACT-FLOW.md`.
-- Do not commit or push until asked.
+- Do not commit until asked.

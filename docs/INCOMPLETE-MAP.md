@@ -370,7 +370,7 @@ Lean-double room under the cap (live / cap), from OPEN-CHECKLIST research — **
 - Do not invent a logo, a cite, or a 5,000-site ranking.
 - Do not dest-farm dests to unskip warehouse specs.
 - Do not treat dest-true as a substitute for the named full e2e suite.
-- Do not commit or push until asked.
+- Do not commit until asked.
 
 ---
 

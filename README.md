@@ -35,9 +35,6 @@ npm run ci
 
 # Fast static only (no browser)
 npm run check
-
-# GitHub push preflight (no remote/push)
-npm run github:ready
 ```
 
 CI on GitHub: `.github/workflows/ci.yml` (static job + a **named ship Playwright pack**, not the full `e2e/` tree). Triggers on `main` / `master` / `museum/*`. `npm test` is the full suite and is **not** what GitHub Actions runs.
@@ -47,24 +44,6 @@ CI on GitHub: `.github/workflows/ci.yml` (static job + a **named ship Playwright
 - Trailing-slash URLs OK (`vercel.json` sets `trailingSlash`)
 - Deploy the **entire** repo root — keep `/years` `/js` `/css` `/assets` together
 - Do not deploy only `years/1995/` without parent `js/` and `css/`
-
-## Publish to GitHub (first time)
-
-```bash
-# 1) Preflight (safe — no push)
-bash scripts/github-ready.sh
-
-# 2) Commit museum work on main (if not already)
-
-# 3) Auth + create public repo + push
-gh auth login
-gh repo create internet-through-time --public --source=. --remote=origin --push
-```
-
-Use `--private` instead of `--public` if you want a private museum first.  
-CI runs automatically on push to `main` or `museum/*` (static smoke + Playwright).
-
-Then connect **Netlify** or **Vercel** to the same GitHub repo for production CDN.
 
 ## What’s built
 

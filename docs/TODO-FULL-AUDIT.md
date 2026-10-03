@@ -386,7 +386,7 @@ Do not dest-farm. Do not invent dests. Do not grow leftover-3× unique past the 
 6. **Forest pack DROP 12 dests** if named (§7).
 7. **2009 Like door / postcard / non-US dest / period-friction / public URL** if named (§11).
 
-Never: leftover-20 dest-farm, leftover-3× unique past =3 / 2021=5, dest-lock 2015 / forests / 2013 / 2022, restore 2023–2025, restore 2022 to 85 dests, delete official 10, delete leftover-3× unique dests, delete 2017 leftover-20 extras, push.
+Never: leftover-20 dest-farm, leftover-3× unique past =3 / 2021=5, dest-lock 2015 / forests / 2013 / 2022, restore 2023–2025, restore 2022 to 85 dests, delete official 10, delete leftover-3× unique dests, delete 2017 leftover-20 extras.
 
 ---
 

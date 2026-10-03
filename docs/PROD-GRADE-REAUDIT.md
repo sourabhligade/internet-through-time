@@ -84,7 +84,7 @@ The e2e job in Actions can start. The static job cannot pass, and the local CI s
 
 `git rev-parse HEAD` and `origin/museum/1994-2020-lean` are both `20c78cbb2` (“Remove 2021 and keep a 22-year hub.”). `git status` shows 92 dirty paths, including `ci.yml`, `404.html`, `README.md`, the React bundle swap (`app/assets/index-DKzFvS7B.js` deleted, `index-n8fjF1ps.js` untracked relative to that commit), and the save and debug edits.
 
-`.github/workflows/pages.yml` is `workflow_dispatch` only. It deletes `docs/`, `e2e/`, `scripts/`, and `node_modules`, writes `.nojekyll`, and uploads the repo root. It deploys the commit Actions checks out, which is `20c78cbb2` until someone commits and pushes.
+`.github/workflows/pages.yml` is `workflow_dispatch` only. It deletes `docs/`, `e2e/`, `scripts/`, and `node_modules`, writes `.nojekyll`, and uploads the repo root. It deploys the commit Actions checks out, which is `20c78cbb2`.
 
 `gh api repos/sourabhligade/internet-through-time/pages` returned HTTP 404, “Not Found”. There is no Pages site to open.
 
@@ -166,7 +166,7 @@ Forests remain the bulk of the HTML. The first audit’s folder counts still des
 ## Improve, in order
 
 1. Make `scripts/ci.sh` and `CI_E2E_ALLOWLIST` in `scripts/test-pipeline.py` name the same 18 files as `ci.yml`. Drop `e2e/2016--3x-detail.spec.js`, `e2e/-mvp.spec.js`, `e2e-mvp.spec.js`, and `e2e/2021-mvp.spec.js`. Re-run `python3 scripts/test-pipeline.py` and expect the allowlist check to pass. Do not run the full warehouse as the gate.
-2. Commit and push only when asked. Until then, Pages, Netlify, and Vercel cannot see the save line, the debug ring, the React bundle, or the 404 copy.
+2. Commit only when asked. Pages, Netlify, and Vercel cannot see the save line, the debug ring, the React bundle, or the 404 copy from this working tree.
 3. Publish one URL after 1 and 2. Pages stays manual. Enable the github-pages environment, then `workflow_dispatch`. Confirm the hub returns 200 and the title “The Internet Through Time” on that host, not only on `127.0.0.1`.
 4. Point the React app at `js/debug-ring.js`, or accept that 2015 and 2017 never join the ring. Bootstrap failure and deferred-pack failure in `boot.js` should call `ITT.debug.record` when the ring exists, with year, href, and the script or feature id. Still no network.
 5. On PayPal, a refused official click should not GET-reload the form. One key, one sentence. Gold and the official verb should not silently overwrite each other under `itt99-paypal`.
