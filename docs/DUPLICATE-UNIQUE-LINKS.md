@@ -1,5 +1,7 @@
 # Duplicate unique dest links — leftover-2× ∩ leftover-3×
 
+**2018–2022 paths and stars in this note are research, not live doors.** 2018–2025, including 2022, are absent.
+
 **Date:** 2026-09-22
 **Status:** Killed 2026-09-22. leftover-2× unique dest **links** dest-disjoint leftover-3× unique dest **links**, official dests, leftover trail n=11–20 dests, leftover-4× unique dests. leftover-3× unique dest-true dests host leftover-3× unique dest **links** only. Leftover-3× unique dest-true dests stay **107**.
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · leftover never writes the star · empty/trap never write · do not dest-farm.

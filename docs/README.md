@@ -2,7 +2,7 @@
 
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json` · live `years/` · `scripts/itt_gate.py` `SHIP_YEARS`.
 
-Hub is **24 years open** (1994–2017). **2015 and 2017 are React doors** (`/app/index.html#/year/YYYY`, no `years/YYYY` tree). **2014 and 2016 are HTML leanBoot.** **2008 is live HTML** (App Store `itt08-apps`). **2009 is live lean HTML** (Facebook Like `itt09-like`). **2011 is live HTML** (Google+ `itt11-gplus`, `years/2011/`). **Absent:** 2018–2025. Leftover-3× unique catalogs are **empty**. Leftover-2× unique dest **links** live (1,080 dests, 20 years). Dest doubling waits on `2x`.
+Hub is **27 years open** (1994–2017 and 2020–2022). **2015 and 2017 are React doors** (`/app/index.html#/year/YYYY`, no `years/YYYY` tree). **2014, 2016, and 2020–2022 are HTML leanBoot.** **2008 is live HTML** (App Store `itt08-apps`). **2009 is live lean HTML** (Facebook Like `itt09-like`). **2011 is live HTML** (Google+ `itt11-gplus`, `years/2011/`). **2020** Zoom Leave `itt20-zoom`. **2021** Ask App Not to Track `itt21-att`. **2022** ChatGPT Send `itt22-chatgpt`. **Absent:** 2018, 2019, and 2023–2025. Leftover-3× unique catalogs are **empty**. Leftover-2× unique dest **links** live (1,158 dests, 23 matrix rows). Dest doubling waits on `2x`.
 
 **Current finding lists (2026-09-30):** [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) (visitor / specs / docs-vs-disk) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md) (markdown corpus). [`UNDONE.md`](UNDONE.md), [`OPEN-CHECKLIST.md`](OPEN-CHECKLIST.md), and [`TODO-FULL-AUDIT.md`](TODO-FULL-AUDIT.md) are historical. 2008 is a **live HTML lean door** (App Store `itt08-apps`). 2009 is a **live HTML lean door** (Facebook Like `itt09-like`). Pack B/C wait. Do not dest-farm.
 
@@ -12,7 +12,7 @@ Hub is **24 years open** (1994–2017). **2015 and 2017 are React doors** (`/app
 1b. [`CODE-STRUCTURE.md`](CODE-STRUCTURE.md) — SRP: config vs engine vs dest HTML vs dest-true e2e. Dest-true CI pack is **18** specs.
 2. [`ARCHITECTURE.md`](ARCHITECTURE.md) — year differences live in config + HTML. Shared engines live in `js/`.
 3. That year’s `YYYY-READ-FIRST.md` (if it exists) — thesis and bans only. Hub counts in those files were struck 2026-09-30; live list is DISK-TRUTH.
-4. [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) — visitor I/O pass/fail for lean HTML doors. **2021 is absent.** 2017 is the React leftover-20 door.
+4. [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) — visitor I/O pass/fail for lean HTML doors. 2020–2022 are live HTML. 2017 is the React leftover-20 door.
 5. [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) — same bar for 2013 Vine 6s.
 6. [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) — 30 unique dests on the React door (10 official + 20 leftover). No clones.
 7. [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md) — **removed.** Catalogs empty. Year notes ([`2007-LEFTOVER-3X-UNIQUE.md`](2007-LEFTOVER-3X-UNIQUE.md) · [`2009-LEFTOVER-3X-UNIQUE.md`](2009-LEFTOVER-3X-UNIQUE.md) boarded · [`2010-LEFTOVER-3X-UNIQUE.md`](2010-LEFTOVER-3X-UNIQUE.md)) are retired maps. Do not grow the catalogs.

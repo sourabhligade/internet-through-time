@@ -13,7 +13,7 @@ const LEAN = require("./lean-double-leftover.matrix.json");
 const ROOT = path.join(__dirname, "..");
 const SHIP = [];
 for (let y = 1994; y <= 2022; y++) {
- if (y === 2021 || y === 2022 || (y > 2017 && y < 2021)) continue;
+ if (y === 2018 || y === 2019) continue;
   SHIP.push(String(y));
 }
 
@@ -56,8 +56,8 @@ async function getKey(page, key) {
 }
 
 test.describe("FLOW-CHECK pipeline · every playable year", () => {
- test("1 hub 24 cards · 2009 live · 2011 live · 2015 react · no 2022+", async ({ page }) => {
- expect(SHIP).toHaveLength(24);
+ test("1 hub 27 cards · 2009 live · 2011 live · 2015 react · 2020–2022 live", async ({ page }) => {
+ expect(SHIP).toHaveLength(27);
     await page.goto("/");
  await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
     const reactDoor = new Set(["2015", "2017"]);

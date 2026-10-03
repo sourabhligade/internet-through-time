@@ -264,6 +264,24 @@ async function waitForImmersion(page, year) {
  * @param {string} year
  * @param {string} relativePath
  */
+/** Wait until the iframe document at pathNeedle has set attr to value. */
+async function waitForFrameAttr(page, pathNeedle, attr, value) {
+  await page.waitForFunction(
+    ({ n, a, v }) => {
+      try {
+        const doc = document.getElementById('content').contentDocument;
+        const path = (doc && doc.location && doc.location.pathname) || '';
+        if (path.indexOf(n) === -1) return false;
+        return (doc.documentElement.getAttribute(a) || '') === v;
+      } catch (e) {
+        return false;
+      }
+    },
+    { n: pathNeedle, a: attr, v: value },
+    { timeout: 20000 }
+  );
+}
+
 async function goImmersion(page, year, relativePath) {
   await goInFrame(page, relativePath);
   await waitForImmersion(page, year);
@@ -810,6 +828,7 @@ module.exports = {
   goInFrame,
   waitForImmersion,
   goImmersion,
+  waitForFrameAttr,
   contentFrame,
   killOverlays,
   clickAllDirbar,

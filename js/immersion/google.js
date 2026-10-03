@@ -51,14 +51,20 @@
         return e.path ? R(e.path) : (e.href || "#");
       }
 
-      function searchHref(q) {
-        var base = (location.pathname || "").indexOf("/google/") !== -1
-          ? "search.html"
-          : R("sites/google/search.html");
+      function searchHref(q, form) {
+        var action = form && form.getAttribute && form.getAttribute("action");
+        var base;
+        if (action && action.charAt(0) !== "#" && action.indexOf("javascript:") !== 0) {
+          base = action;
+        } else if ((location.pathname || "").indexOf("/google/") !== -1) {
+          base = "search.html";
+        } else {
+          base = R("sites/google/search.html");
+        }
         return base + (q ? ("?q=" + encodeURIComponent(q)) : "");
       }
 
-      function goLucky(q) {
+      function goLucky(q, form) {
         q = String(q || "").replace(/^\s+|\s+$/g, "");
         if (!q) {
           actionFeedback("Type a query first (Lucky does not guess).", { error: true, flash: true });
@@ -70,7 +76,7 @@
             ? ITT.util.immersionStorageKey("lucky", pfx)
             : pfx + "-lucky";
           var destShow = rank(q);
-          var destHref = destShow.length ? entryHref(destShow[0].e) : searchHref(q);
+          var destHref = destShow.length ? entryHref(destShow[0].e) : searchHref(q, form);
           localStorage.setItem(lk, JSON.stringify({
             q: q,
             dest: destHref,
@@ -89,7 +95,7 @@
         if (show.length) {
           location.href = entryHref(show[0].e);
         } else {
-          location.href = searchHref(q);
+          location.href = searchHref(q, form);
         }
       }
 
@@ -108,7 +114,7 @@
                 /lucky/i.test(submitter.value || "")
               );
               if (isLucky) {
-                goLucky(q);
+                goLucky(q, f);
                 markTourUsed();
                 return;
               }
@@ -132,7 +138,7 @@
                 }));
                 try { if (ITT.revealNextFlow) ITT.revealNextFlow(document); } catch (eN0) { /* */ }
               } catch (eG) { /* */ }
-              location.href = searchHref(qTrim);
+              location.href = searchHref(qTrim, f);
             });
             // explicit lucky button click (older browsers)
             var luckyBtns = f.querySelectorAll("[data-google-lucky], input[name='btnI']");
@@ -140,7 +146,7 @@
               luckyBtns[j].addEventListener("click", function (ev) {
                 ev.preventDefault();
                 var input = f.querySelector('input[name="q"]') || f.querySelector('input[type="text"]');
-                goLucky(input ? input.value : "");
+                goLucky(input ? input.value : "", f);
                 markTourUsed();
               });
             }

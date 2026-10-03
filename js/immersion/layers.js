@@ -111,8 +111,9 @@
 
   function legendHtml(y, here) {
     var webHref = hrefFor(y, "pages/home.html");
+    /* 2011 and 2013 have game.html only. 2014's lobby is not the chip. */
     var gameRel =
-      String(y) === "" || String(y) === "2013" || String(y) === "2014"
+      String(y) === "" || String(y) === "2011" || String(y) === "2013" || String(y) === "2014"
         ? "sites/playable/game.html"
         : "sites/playable/index.html";
     var gameHref = hrefFor(y, gameRel);
@@ -230,7 +231,7 @@
       path = "";
     }
     if (!/\/pages\/home\.html$/.test(path)) return;
-    if (["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017"].indexOf(String(y)) !== -1) return;
+    if (["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2020", "2021", "2022"].indexOf(String(y)) !== -1) return;
     if (doc.getElementById("itt-layer-assess")) return;
     var meta = META[y] || {};
     var links = webLinks(y);

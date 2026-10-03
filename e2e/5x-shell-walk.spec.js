@@ -8,6 +8,21 @@ const { test, expect } = require('@playwright/test');
 const fs = require('fs');
 const path = require('path');
 const { enterYear, goInFrame, contentFrame, killOverlays, isLiveYear } = require('./helpers');
+
+async function frameCount(page, selector) {
+  let last;
+  for (let i = 0; i < 4; i++) {
+    try {
+      return await contentFrame(page).locator(selector).count();
+    } catch (e) {
+      last = e;
+      const msg = String((e && e.message) || e);
+      if (!/destroyed|Target closed/i.test(msg)) throw e;
+      await page.waitForTimeout(250);
+    }
+  }
+  throw last;
+}
 function yearOnDisk(year) {
   return fs.existsSync(path.join(__dirname, '..', 'years', String(year), 'index.html'));
 }
@@ -59,7 +74,7 @@ for (const yearPack of matrix.panel) {
     const frame = contentFrame(page);
     const save = frame.locator('[data-5x-save]').first();
     /* Native gold rooms keep their own writer and forbid a checkbox plaque. */
-    if ((await save.count()) === 0) {
+    if ((await frameCount(page, '[data-5x-save]')) === 0) {
       await expect(frame.locator('body')).toBeVisible();
       const res = await page.request.get(`/years/${year}/${f2.room}`);
       expect(res.status(), f2.room).toBe(200);
@@ -71,7 +86,7 @@ for (const yearPack of matrix.panel) {
     await frame.locator('[data-5x-req="a"]').first().check();
     await frame.locator('[data-5x-req="b"]').first().check();
     const extra = frame.locator('[data-5x-req="c"]');
-    if (await extra.count()) await extra.first().check();
+    if (await frameCount(page, '[data-5x-req="c"]')) await extra.first().check();
     await save.click();
     await expect.poll(async () => iframeKey(page, f1.key), { timeout: 8000 }).toBeTruthy();
     const next = frame.locator('[data-5x-loop] [data-5x-next] a').first();
@@ -91,12 +106,13 @@ for (const yearPack of matrix.panel) {
       f2.room.replace(/^\//, ''),
       { timeout: 20000 }
     );
-    /* Native gold F2 (FishCam, Hotmail, AuctionWeb…) has no checkbox plaque. */
-    const save2 = contentFrame(page).locator('[data-5x-save]').first();
-    if ((await save2.count()) === 0) {
+    /* Native gold F2 (FishCam, Hotmail, AuctionWeb…) has no checkbox plaque.
+       Next can destroy the iframe document mid-count; retry like F1. */
+    if ((await frameCount(page, '[data-5x-save]')) === 0) {
       await expect(contentFrame(page).locator('body')).toBeVisible();
       return;
     }
+    const save2 = contentFrame(page).locator('[data-5x-save]').first();
     await expect(save2).toBeVisible({ timeout: 15000 });
   });
 }

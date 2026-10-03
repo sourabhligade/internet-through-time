@@ -103,7 +103,7 @@ test.describe('1998 chrome buttons + info', () => {
     await page.goto('/years/1998/pages/whats-new.html');
     await expect(page.locator('body')).toContainText(/Google|Amazon Music|eBay|Windows 98/i);
     await page.goto('/years/1998/pages/cool.html');
-    await expect(page.locator('body')).toContainText(/Excite|GeoCities|Slashdot/i);
+    await expect(page.locator('body')).toContainText(/Lucky|Yahoo packed|Amazon Music/);
   });
 
   test('Google no smile + densify about', async ({ page }) => {

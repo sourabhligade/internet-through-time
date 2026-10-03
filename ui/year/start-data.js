@@ -283,5 +283,41 @@
  " <a href=\"map.html\" style=\"color:#90caf9\">Year flow map</a> "
  ]
 },
+ "2020": {
+ "href": "../sites/zoom/meeting.html",
+ "label": "★ One-thing · Zoom Leave REAL",
+ "items": [
+ " <a href=\"about.html\" style=\"color:#1565c0\">About 2020</a> — table ends 2018 · no invented ILS cell",
+ " <a href=\"../sites/zoom/meeting.html\" style=\"color:#1565c0\">★ Zoom Leave</a> — Stay / empty never writes",
+ " <a href=\"../sites/houseparty/index.html\" style=\"color:#1565c0\">Houseparty</a> — not Zoom gold",
+ " <a href=\"../sites/classroom/index.html\" style=\"color:#1565c0\">Classroom</a> — join class",
+ " <a href=\"../sites/amongus/index.html\" style=\"color:#1565c0\">Among Us</a> — not the chip",
+ " <a href=\"map.html\" style=\"color:#1565c0\">Year flow map</a> "
+ ]
+},
+ "2021": {
+ "href": "../sites/att/index.html",
+ "label": "★ Ask App Not to Track",
+ "items": [
+ " <a href=\"about.html\" style=\"color:#1565c0\">About 2021</a> — table ends 2018 · ITU 4.9B / 63%",
+ " <a href=\"../sites/att/index.html\" style=\"color:#1565c0\">★ ATT Ask</a> — Ask App Not to Track · Allow never writes",
+ " <a href=\"../sites/signal/index.html\" style=\"color:#1565c0\">Signal</a> — 15 May delay",
+ " <a href=\"../sites/copilot/index.html\" style=\"color:#1565c0\">Copilot waitlist</a> — not ChatGPT",
+ " <a href=\"../sites/meta/index.html\" style=\"color:#1565c0\">Meta rename</a> — app still Facebook",
+ " <a href=\"map.html\" style=\"color:#1565c0\">Year flow map</a> "
+ ]
+},
+ "2022": {
+ "href": "../sites/chatgpt/index.html",
+ "label": "★ ChatGPT Send",
+ "items": [
+ " <a href=\"about.html\" style=\"color:#1565c0\">About 2022</a> — table ends 2018 · ITU 5.3B / 66%",
+ " <a href=\"../sites/chatgpt/index.html\" style=\"color:#1565c0\">★ ChatGPT Send</a> — empty / GPT-4 never writes",
+ " <a href=\"../sites/wordle/index.html\" style=\"color:#1565c0\">Wordle</a> — NYT 31 Jan",
+ " <a href=\"../sites/twitter/index.html\" style=\"color:#1565c0\">Twitter bird</a> — X is 2023",
+ " <a href=\"../sites/bereal/index.html\" style=\"color:#1565c0\">BeReal</a> — 2-min drop",
+ " <a href=\"map.html\" style=\"color:#1565c0\">Year flow map</a> "
+ ]
+}
 };
 })(typeof window !== "undefined" ? window : this);

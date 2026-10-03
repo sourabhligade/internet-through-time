@@ -508,6 +508,7 @@
       if (!n || inAlsoYear(n)) return true;
       if (n.getAttribute && n.getAttribute("data-official-verb-host") === "1") return true;
       if (n.getAttribute && n.getAttribute("data-itt-dest-true") === "1") return true;
+      if (n.getAttribute && n.getAttribute("data-itt-gold-lx") === "1") return true;
       if (n.getAttribute && n.getAttribute("data-itt-trail-stop") === "1") return true;
       if (n.getAttribute && n.getAttribute("data-5x-live") === "1") return true;
       if (n.getAttribute && n.getAttribute("data-4x-panel") != null) return true;

@@ -106,7 +106,8 @@ test.describe("2013 flows", () => {
   test("Vine star dest leftover-2× first paint 0", async ({ page }) => {
     await page.goto("/years/2013/sites/vine/record.html");
     await expect(page.locator("html")).toHaveAttribute("data-official-key", "itt13-vine-posts");
-    await expect(page.locator("[data-lo-save]")).toHaveCount(0);
+    await expect(page.locator("[data-itt-gold-lx]")).toHaveCount(1);
+    await expect(page.locator("[data-lo-panel]:not([data-itt-gold-lx])")).toHaveCount(0);
     await expect(page.locator("[data-lo-panel][data-itt-dest-true]")).toHaveCount(0);
   });
 

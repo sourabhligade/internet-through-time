@@ -1738,10 +1738,7 @@
                     { "name": "N3 Amazon smile tabs", "href": "sites/amazon/index.html", "do": "4\u00d7 \u2192 itt00-smile-tab" },
                     { "name": "N4 Pets goodbye", "href": "sites/pets/shutdown.html", "do": "4\u00d7 \u2192 itt00-pets-end" },
                     { "name": "N5 Startup Failures", "href": "sites/startupfailures/index.html", "do": "4\u00d7 \u2192 itt00-fail" },
-                    { "name": "N6 Expedia", "href": "sites/expedia/index.html", "do": "4\u00d7 \u2192 itt00-expedia" },
-                    { "name": "N7 Travelocity", "href": "sites/travelocity/index.html", "do": "4\u00d7 \u2192 itt00-travel" },
                     { "name": "N8 Half.com", "href": "sites/half/index.html", "do": "4\u00d7 \u2192 itt00-half" },
-                    { "name": "N9 Baidu", "href": "sites/baidu/index.html", "do": "4\u00d7 \u2192 itt00-baidu" },
                     { "name": "N10 Everything2", "href": "sites/everything2/index.html", "do": "4\u00d7 \u2192 itt00-e2" },
                     { "name": "N11 Gnutella", "href": "sites/gnutella/index.html", "do": "4\u00d7 \u2192 itt00-gnutella" },
                     { "name": "N12 LimeWire seed", "href": "sites/limewire/index.html", "do": "4\u00d7 \u2192 itt00-lw" },
@@ -2183,7 +2180,6 @@ ITT.flowMaps["2005"] = {
           { "name": "Reader leftover", "href": "sites/reader/index.html", "do": "itt05-reader-lx" },
           { "name": "Yelp leftover", "href": "sites/yelp/index.html", "do": "itt05-yelp-lx" },
           { "name": "Odeo leftover", "href": "sites/odeo/index.html", "do": "itt05-odeo-lx" },
-          { "name": "Second Life leftover", "href": "sites/secondlife/index.html", "do": "itt05-secondlife" },
           { "name": "Mashable leftover", "href": "sites/mashable/index.html", "do": "itt05-mash-lx" },
           { "name": "Xbox 360 leftover", "href": "sites/xbox360/index.html", "do": "itt05-x360-lx" },
           { "name": "ProgrammableWeb leftover", "href": "sites/programmableweb/index.html", "do": "itt05-pw-lx" },
@@ -2210,6 +2206,34 @@ ITT.flowMaps["2005"] = {
           { "name": "Twttr", "href": "sites/twitter/index.html", "do": "★ gold" },
           { "name": "Famous", "href": "sites/playable/famous.html", "do": "cabinet" },
           { "name": "Year flow map", "href": "pages/map.html", "do": "This tree" }
+        ]
+      }
+    ]
+  };
+
+  ITT.flowMaps["2008"] = {
+    year: "2008",
+    thesis: "Phones get a store. App Store is the star. Desktop stays XP + IE 7.",
+    shell: "Windows XP · Internet Explorer 7",
+    how: [
+      "App Store: FREE/BUY is the save. Empty never writes.",
+      "Chrome, G1, Hulu, and GitHub are the same year, not the star."
+    ],
+    branches: [
+      {
+        label: "★ Official 10",
+        do: "Star stays App Store.",
+        sites: [
+          { name: "1 App Store", href: "sites/appstore/index.html", do: "FREE/BUY → itt08-apps" },
+          { name: "2 Chrome", href: "sites/chrome/index.html", do: "itt08-chrome" },
+          { name: "3 Android G1", href: "sites/android/index.html", do: "itt08-android" },
+          { name: "4 Hulu", href: "sites/hulu/index.html", do: "itt08-hulu" },
+          { name: "5 GitHub issue", href: "sites/github/issue.html", do: "itt08-github" },
+          { name: "6 Facebook", href: "sites/facebook/index.html", do: "itt08-facebook" },
+          { name: "7 Twitter", href: "sites/twitter/index.html", do: "itt08-tweets" },
+          { name: "8 YouTube", href: "sites/youtube/index.html", do: "itt08-yt" },
+          { name: "9 Dropbox", href: "sites/dropbox/index.html", do: "itt08-dropbox" },
+          { name: "10 iPhone 3G", href: "sites/iphone/index.html", do: "itt08-iphone3g" }
         ]
       }
     ]
@@ -2455,7 +2479,6 @@ ITT.flowMaps["2007"] = {
         label: "Leftover 2×",
         do: "Never a second star",
         sites: [
-          { name: "Announce", href: "sites/ipann/index.html", do: "Pack A start" },
           { name: "Continuity close", href: "sites/playable/close.html", do: "Pack C end · Next Safari" }
         ]
       }

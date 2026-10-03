@@ -136,6 +136,7 @@ function initHomestead() {
   }
 
   if (!form) return;
+  form.setAttribute("data-homestead-bound", "1");
   if (existing) {
     var n = form.querySelector('[name="neighborhood"]');
     var num = form.querySelector('[name="number"]');

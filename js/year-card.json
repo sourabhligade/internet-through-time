@@ -376,13 +376,58 @@
       "kind": "absent"
     },
     "2020": {
-      "kind": "absent"
+      "kind": "html",
+      "href": "years/2020/",
+      "star": "itt20-zoom",
+      "leanBoot": true,
+      "hashToHtml": true,
+      "chrome": {
+        "os": "win10",
+        "browser": "chrome-habit",
+        "toolbar": "chrome22",
+        "assetYear": null,
+        "location": "http://home.microsoft.com/intl/web2020/",
+        "maximized": true,
+        "hasTaskbar": true,
+        "osPhrase": "Windows 10 mass",
+        "roomClause": "Zoom Leave"
+      }
     },
     "2021": {
-      "kind": "absent"
+      "kind": "html",
+      "href": "years/2021/",
+      "star": "itt21-att",
+      "leanBoot": true,
+      "hashToHtml": true,
+      "chrome": {
+        "os": "win10",
+        "browser": "chrome-habit",
+        "toolbar": "chrome22",
+        "assetYear": null,
+        "location": "http://home.microsoft.com/intl/web2021/",
+        "maximized": true,
+        "hasTaskbar": true,
+        "osPhrase": "Windows 10 mass",
+        "roomClause": "iOS 14.5 ATT"
+      }
     },
     "2022": {
-      "kind": "absent"
+      "kind": "html",
+      "href": "years/2022/",
+      "star": "itt22-chatgpt",
+      "leanBoot": true,
+      "hashToHtml": true,
+      "chrome": {
+        "os": "win10",
+        "browser": "chrome-habit",
+        "toolbar": "chrome22",
+        "assetYear": null,
+        "location": "https://www.google.com/web2022/",
+        "maximized": true,
+        "hasTaskbar": true,
+        "osPhrase": "Windows 10 mass",
+        "roomClause": "ChatGPT Send"
+      }
     },
     "2023": {
       "kind": "absent"

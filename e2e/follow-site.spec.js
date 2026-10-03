@@ -20,21 +20,21 @@ test.describe("follow-a-site", () => {
     await page.goto("/years/2016/?room=sites/instagram/stories.html");
     const next = page.locator("#itt-follow-next");
     await expect(next).toBeVisible({ timeout: 15000 });
-    await expect(next).toHaveAttribute("href", /app\/index\.html#\/year\/2017/);
+    await expect(next).toHaveAttribute("href", /app\/index\.html#\/year\/2017\?stop=itt17-instagram17/);
   });
 
-  test("2016 iPhone follow next opens the 2017 React door", async ({ page }) => {
+  test("2016 iPhone follow next opens the 2017 Face ID stop", async ({ page }) => {
     await page.goto("/years/2016/?room=sites/iphone/index.html");
     const next = page.locator("#itt-follow-next");
     await expect(next).toBeVisible({ timeout: 15000 });
-    await expect(next).toHaveAttribute("href", /app\/index\.html#\/year\/2017/);
+    await expect(next).toHaveAttribute("href", /app\/index\.html#\/year\/2017\?stop=itt17-faceid/);
   });
 
-  test("2016 Facebook follow next opens the 2017 React door", async ({ page }) => {
+  test("2016 Facebook is the last Facebook room", async ({ page }) => {
     await page.goto("/years/2016/?room=sites/facebook/reactions.html");
     const next = page.locator("#itt-follow-next");
-    await expect(next).toBeVisible({ timeout: 15000 });
-    await expect(next).toHaveAttribute("href", /app\/index\.html#\/year\/2017/);
+    await expect(next).toBeAttached({ timeout: 15000 });
+    await expect(next).toBeHidden();
   });
 
   test("2005 Yahoo next stays Yahoo 2006", async ({ page }) => {
@@ -46,7 +46,7 @@ test.describe("follow-a-site", () => {
     await expect(next).not.toContainText("Amazon");
   });
 
-  test("2014 Facebook follow next skips wiped 2015 to 2016", async ({ page }) => {
+  test("2014 Facebook follow next has no 2015 room, so it opens 2016", async ({ page }) => {
     await page.goto("/years/2014/?room=sites/facebook/index.html");
     const next = page.locator("#itt-follow-next");
     await expect(next).toBeVisible({ timeout: 15000 });
@@ -55,7 +55,7 @@ test.describe("follow-a-site", () => {
     await expect(next).not.toHaveAttribute("href", /years\/2015/);
 });
 
-  test("2014 Instagram follow next skips wiped 2015 to 2016", async ({ page }) => {
+  test("2014 Instagram follow next has no 2015 room, so it opens 2016", async ({ page }) => {
     await page.goto("/years/2014/?room=sites/instagram/index.html");
     const next = page.locator("#itt-follow-next");
     await expect(next).toBeVisible({ timeout: 15000 });
@@ -64,7 +64,7 @@ test.describe("follow-a-site", () => {
     await expect(next).not.toHaveAttribute("href", /years\/2015/);
   });
 
-  test("2014 iPhone follow next skips wiped 2015 to 2016", async ({ page }) => {
+  test("2014 iPhone follow next has no 2015 room, so it opens 2016", async ({ page }) => {
     await page.goto("/years/2014/?room=sites/iphone/index.html");
     const next = page.locator("#itt-follow-next");
     await expect(next).toBeVisible({ timeout: 15000 });
@@ -93,18 +93,18 @@ test.describe("follow-a-site", () => {
     await expect(page).toHaveURL(/years\/2009\/\?room=sites%2Ffacebook%2Findex\.html/);
   });
 
-  test("2014 YouTube follow next is absent", async ({ page }) => {
+  test("2014 YouTube follow next opens 2015 YouTube Red", async ({ page }) => {
     await page.goto("/years/2014/?room=sites/youtube/index.html");
     const next = page.locator("#itt-follow-next");
-    await expect(next).toBeAttached({ timeout: 15000 });
-    await expect(next).toBeHidden();
+    await expect(next).toBeVisible({ timeout: 15000 });
+    await expect(next).toHaveAttribute("href", /app\/index\.html#\/year\/2015\?stop=itt15-youtube/);
   });
 
-  test("2014 Twitter follow next skips wiped 2015 and opens the 2017 React door", async ({ page }) => {
+  test("2014 Twitter follow next has no 2015 room and opens the 2017 280 stop", async ({ page }) => {
     await page.goto("/years/2014/?room=sites/twitter/index.html");
     const next = page.locator("#itt-follow-next");
     await expect(next).toBeVisible({ timeout: 15000 });
-    await expect(next).toHaveAttribute("href", /app\/index\.html#\/year\/2017/);
+    await expect(next).toHaveAttribute("href", /app\/index\.html#\/year\/2017\?stop=itt17-twitter-280/);
     await expect(next).not.toHaveAttribute("href", /years\/2015/);
     await next.click();
     await expect(page).toHaveURL(/app\/index\.html#\/year\/2017/);

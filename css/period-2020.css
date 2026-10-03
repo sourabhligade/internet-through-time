@@ -1,0 +1,30 @@
+@import url("period-2019.css");
+.year-2020.os-win10 { --itt-desktop-bg: #0078d7; }
+html[data-itt-year="2020"] body.itt-start-page { background: #f3f3f3 !important; color: #111 !important; }
+
+/* A · 2020 first paint: Zoom + guided 6 + dest verb. Workshop stays in Also. */
+html[data-itt-year="2020"] .itt-playable-link,
+html[data-itt-year="2020"] .itt-hub-exit,
+html[data-itt-year="2020"] .itt-felt-trail,
+html[data-itt-year="2020"] #itt-year-start-extra,
+html[data-itt-year="2020"] #itt-first-night-bar,
+html[data-itt-year="2020"] .itt-3x-visible,
+html[data-itt-year="2020"] #itt-layer-assess,
+html[data-itt-year="2020"] .itt-layer-assess,
+html[data-itt-year="2020"] .itt-home-more,
+html[data-itt-year="2020"] a[href="?deep=1"] {
+  display: none !important;
+}
+
+html[data-itt-year="2020"] .itt-pixel-failed,
+html[data-itt-year="2020"] .archive-residual {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

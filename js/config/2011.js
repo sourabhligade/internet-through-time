@@ -52,7 +52,8 @@
     "pages/map.html",
     "pages/checklist.html",
     "pages/about.html",
-    "pages/whats-new.html"
+    "pages/whats-new.html",
+    "pages/cool.html"
   ];
   var urlMap = {
     "index.html": "http://museum.local/index.html",

@@ -168,6 +168,9 @@ test.describe('1995 flow: GeoCities homestead', () => {
     await frame.locator('input[name="number"]').fill('4242');
     await frame.locator('input[name="title"]').fill('Flow Homestead 95');
     await frame.locator('textarea[name="about"]').fill('Homestead flow test page.');
+    await expect(frame.locator('form[data-homestead-form]')).toHaveAttribute('data-homestead-bound', '1', {
+      timeout: 20000,
+    });
     await frame.locator('form[data-homestead-form] input[type="submit"]').click({ force: true });
     await expect(frame.locator('[data-homestead-view]')).toBeVisible({ timeout: 15000 });
     await expect(frame.locator('[data-homestead-view]')).toContainText(/Flow Homestead 95/i);

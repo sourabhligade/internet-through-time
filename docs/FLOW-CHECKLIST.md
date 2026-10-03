@@ -1,6 +1,6 @@
 # Flow checklist
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical visitor ticks.** Not ship law. Live hub is **24 doors** (1994–2017). **2015 and 2017 are React.** **2008, 2009, and 2011 are live HTML.** **2018–2025, including 2022, are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 Tick a line after you open the link and finish the visit. An empty click stores nothing. A finished visit stores the key.
@@ -27,7 +27,7 @@ A year with only a readme under `assets/period/` does not get a drawn logo. It w
 | 2005 | restored | Use the files in `assets/period/2005/`. |
 | 2006 | 150 | Use the files in `assets/period/2006/`. |
 | 2007 | 150 | Use the files in `assets/period/2007/`. |
-| 2009 | 17 | Boarded year. Use the files in `assets/period/2009/`. |
+| 2009 | 17 | Live door. Use the files in `assets/period/2009/`. |
 | 2010 | 3 | Few captures. Do not fill the year with new art. |
 | 2012 | 0 | Readme only. Do not draw a logo. |
 | 2013 | 0 | Readme only. Do not draw a logo. |
@@ -38,7 +38,7 @@ A year with only a readme under `assets/period/` does not get a drawn logo. It w
 
 ## 5× loops
 
-### 2009 (boarded plaque, not a hub door — loops stay on the site pages)
+### 2009 (live HTML door — loops stay on the site pages)
 
 Pictures in `assets/period/2009/`: 17.
 

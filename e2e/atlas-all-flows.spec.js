@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Hallway atlas — every on-disk flow layer, every open year.
- * Golds stay locked. Hallway ends at 2017. 2009 is live HTML. 2021 and 2022 are absent.
+ * Golds stay locked. 2009 is live HTML. 2020–2022 are live HTML. 2018–2019 and 2023–2025 are absent.
  */
 const { test, expect } = require("@playwright/test");
 
@@ -11,12 +11,12 @@ const trio = require("../scripts/popular-3x3-sites.json");
 const OPEN = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003",
   "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012",
-  "2013", "2014", "2016", "2017"
+  "2013", "2014", "2015", "2016", "2017", "2020", "2021", "2022"
 ];
 const WIPED = ["2023", "2024", "2025"];
 const LEAN = [
   "2007", "2008", "2009", "2010", "2011", "2012",
-  "2013", "2014", "2015", "2016", "2017"
+  "2013", "2014", "2015", "2016", "2017", "2020", "2021", "2022"
 ];
 const WINGS = {
   gray: ["1994", "1995", "1996"],
@@ -48,9 +48,12 @@ const GOLD = {
   "2012": /Instagram Android/i,
   "2013": /Vine/i,
   "2014": /WhatsApp Install/i,
-
+  "2015": /Periscope/i,
   "2016": /Instagram Stories/i,
   "2017": /Face ID|iPhone X/i,
+  "2020": /Zoom Leave/i,
+  "2021": /Ask App Not to Track/i,
+  "2022": /ChatGPT/i,
 };
 
 function twoXByYear() {
@@ -89,7 +92,7 @@ test.describe("atlas hallway — all flows", () => {
     await page.goto("/");
     await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
     await expect(page.locator(".start-hint")).toHaveCount(0);
-    await expect(page.locator("a.year-card.available")).toHaveCount(24);
+    await expect(page.locator("a.year-card.available")).toHaveCount(27);
   });
 
   test("remember lines are year-true and wiped years stay off the spine", async ({ page }) => {
@@ -122,10 +125,13 @@ test.describe("atlas hallway — all flows", () => {
     await expect(page.locator('#atlas-spine .atlas-wing[data-wing="wiped-late"]')).toHaveCount(0);
   });
 
-  test("hallway does not list wiped years · 2022 is absent", async ({ page }) => {
+  test("hallway lists 2020–2022 and does not list wiped years", async ({ page }) => {
     await page.goto("/atlas/");
-    await expect(page.locator('#atlas-spine [data-atlas-year="2021"]')).toHaveCount(0);
-    await expect(page.locator('#atlas-spine [data-atlas-year="2022"]')).toHaveCount(0);
+    await expect(page.locator('#atlas-spine [data-atlas-year="2020"]')).toHaveCount(1);
+    await expect(page.locator('#atlas-spine [data-atlas-year="2021"]')).toHaveCount(1);
+    await expect(page.locator('#atlas-spine [data-atlas-year="2022"]')).toHaveCount(1);
+    await expect(page.locator('#atlas-spine [data-atlas-year="2018"]')).toHaveCount(0);
+    await expect(page.locator('#atlas-spine [data-atlas-year="2019"]')).toHaveCount(0);
     for (const y of ["2023", "2024", "2025"]) {
       await expect(page.locator(`#atlas-spine [data-atlas-year="${y}"]`)).toHaveCount(0);
     }
@@ -148,7 +154,7 @@ test.describe("atlas hallway — all flows", () => {
       const guidedN = await panel.locator(`#atlas-guided-${y} ol li`).count();
       expect(guidedN, y + " guided").toBeGreaterThanOrEqual(4);
       const officialN = await panel.locator("ol.ten li").count();
-      const reactDoor = y === "2017";
+      const reactDoor = y === "2015" || y === "2017";
       if (!reactDoor) {
       expect(officialN, y + " official").toBeGreaterThanOrEqual(7);
       expect(officialN, y + " official").toBeLessThanOrEqual(10);
@@ -179,7 +185,7 @@ test.describe("atlas hallway — all flows", () => {
       expect(gn, y + " games").toBeGreaterThanOrEqual(1);
       const gHrefs = await gameLinks.evaluateAll((els) => els.map((a) => a.getAttribute("href") || ""));
       for (const h of gHrefs) {
-        if (String(h).indexOf("/years/2017/") !== -1) continue;
+        if (String(h).indexOf("/years/2017/") !== -1 || String(h).indexOf("/app/") !== -1) continue;
         await expectLive(page, h, y + " game");
       }
     }
@@ -226,20 +232,20 @@ test.describe("atlas hallway — all flows", () => {
     }
   });
 
-  test("museum-wide Every flow lists 24 golds and live official trails", async ({ page }) => {
+  test("museum-wide Every flow lists 27 golds and live official trails", async ({ page }) => {
     await page.goto("/atlas/");
     await waitCatalog(page);
     const golds = page.locator("#atlas-all-golds ol li");
-    await expect(golds).toHaveCount(24);
+    await expect(golds).toHaveCount(27);
     const goldHrefs = await page.locator("#atlas-all-golds a").evaluateAll((els) => els.map((a) => a.getAttribute("href") || ""));
-    expect(goldHrefs.length).toBe(24);
+    expect(goldHrefs.length).toBe(27);
     for (const h of goldHrefs) await expectLive(page, h, "all-golds");
 
     await expect(page.locator("#atlas-all-guided")).toBeVisible();
     await expect(page.locator("#atlas-all-official")).toBeVisible();
     await expect(page.locator("#atlas-all-games")).toBeVisible();
     const officialYears = page.locator("#atlas-all-official h4");
-    await expect(officialYears).toHaveCount(22);
+    await expect(officialYears).toHaveCount(25);
   });
 
   test("first night is the real 5-stop walk; hallway ends at 2017", async ({ page }) => {
@@ -258,8 +264,8 @@ test.describe("atlas hallway — all flows", () => {
     expect(nightHrefs.length).toBeGreaterThanOrEqual(5);
     for (const h of nightHrefs) await expectLive(page, h, "first-night");
 
-    await expect(page.locator('#atlas-spine [data-atlas-year="2021"]')).toHaveCount(0);
-    await expect(page.locator('#atlas-spine [data-atlas-year="2022"]')).toHaveCount(0);
+    await expect(page.locator('#atlas-spine [data-atlas-year="2021"]')).toHaveCount(1);
+    await expect(page.locator('#atlas-spine [data-atlas-year="2022"]')).toHaveCount(1);
     for (const y of ["2023", "2024", "2025"]) {
       await expect(page.locator(`#atlas-spine [data-atlas-year="${y}"]`)).toHaveCount(0);
     }
@@ -281,9 +287,10 @@ test.describe("atlas hallway — all flows", () => {
     await expect(page.locator("#atlas-find-results")).toContainText(/No match/i);
   });
 
-  test("hash #year-2022 is absent and #year-2017 is the last live hash", async ({ page }) => {
+  test("hash #year-2022 opens and #year-2017 stays a live door", async ({ page }) => {
     await page.goto("/atlas/#year-2022");
-    await expect(page.locator('#atlas-spine [data-atlas-year="2022"]')).toHaveCount(0);
+    await expect(page.locator('#atlas-spine [data-atlas-year="2022"]')).toHaveCount(1);
+    await expect(page.locator('#atlas-spine [data-atlas-year="2022"]')).toHaveClass(/selected/);
     await page.goto("/atlas/#year-2017");
     await expect(page.locator('#atlas-spine [data-atlas-year="2017"]')).toHaveClass(/selected/);
   });

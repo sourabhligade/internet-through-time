@@ -31,13 +31,13 @@ function uniqueIds(year) {
   return ids;
 }
 
-test("2015 and 2017 are React doors; 2018 and 2020 stay off disk", () => {
+test("2015 and 2017 are React doors; 2018 stays off disk; 2020 is HTML", () => {
   expect(fs.existsSync(path.join(ROOT, "years", "2015"))).toBe(false);
   expect(fs.existsSync(path.join(ROOT, "react", "src", "year2015.js"))).toBe(true);
   expect(fs.existsSync(path.join(ROOT, "years", "2017"))).toBe(false);
   expect(fs.existsSync(path.join(ROOT, "react", "src", "year2017.js"))).toBe(true);
   expect(fs.existsSync(path.join(ROOT, "years", "2018"))).toBe(false);
-  expect(fs.existsSync(path.join(ROOT, "years", "2020"))).toBe(false);
+  expect(fs.existsSync(path.join(ROOT, "years", "2020", "index.html"))).toBe(true);
   expect(fs.existsSync(path.join(ROOT, "react", "src", "year2020.js"))).toBe(false);
 });
 

@@ -45,7 +45,6 @@
         stop("2003", "sites/amazon/index.html", "99¢ year"),
         stop("2004", "sites/amazon/index.html", "Web 2.0 year"),
         stop("2006", "sites/amazon/index.html", "Twttr year"),
-        stop("2017", "sites/amazon/index.html", "Face ID year"),
       ]
     },
     google: {
@@ -77,7 +76,6 @@
         stop("2013", "sites/facebook/index.html", "Vine year"),
         stop("2014", "sites/facebook/index.html", "Install year"),
         stop("2016", "sites/facebook/reactions.html", "Reactions"),
-        stop("2017", "sites/facebook/index.html", "2017 door · no Facebook dest"),
       ]
     },
     youtube: {
@@ -90,6 +88,7 @@
         stop("2012", "sites/youtube/index.html", "IPO year"),
         stop("2013", "sites/youtube/index.html", "Vine year"),
         stop("2014", "sites/youtube/index.html", "Install year"),
+        stop("2015", "app/index.html#/year/2015?stop=itt15-youtube", "YouTube Red"),
       ]
     },
     twitter: {
@@ -103,7 +102,7 @@
         stop("2012", "sites/twitter/index.html", "IPO year"),
         stop("2013", "sites/twitter/index.html", "Vine year"),
         stop("2014", "sites/twitter/index.html", "Install year"),
-        stop("2017", "sites/twitter/280.html", "280"),
+        stop("2017", "app/index.html#/year/2017?stop=itt17-twitter-280", "280"),
       ]
     },
     instagram: {
@@ -115,7 +114,7 @@
         stop("2012", "sites/instagram/android.html", "Android"),
         stop("2014", "sites/instagram/index.html", "Install year"),
         stop("2016", "sites/instagram/stories.html", "Stories"),
-        stop("2017", "sites/instagram/index.html", "leftover Instagram on this door · itt17-instagram17"),
+        stop("2017", "app/index.html#/year/2017?stop=itt17-instagram17", "leftover Instagram"),
       ]
     },
     iphone: {
@@ -129,7 +128,7 @@
         stop("2013", "sites/iphone/ios7.html", "iOS 7"),
         stop("2014", "sites/iphone/index.html", "Install year"),
         stop("2016", "sites/iphone/index.html", "iPhone 7 · no jack"),
-        stop("2017", "sites/iphone/x.html", "Face ID"),
+        stop("2017", "app/index.html#/year/2017?stop=itt17-faceid", "Face ID"),
       ]
     }
   };
@@ -150,7 +149,6 @@
   }
 
  var SKIP_YEARS = {
- "2015": 1,
  "2018": 1,
  "2019": 1,
  "2020": 1,

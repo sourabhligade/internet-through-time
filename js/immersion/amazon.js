@@ -97,7 +97,16 @@ function initAmazonAdd() {
       cart.push(item);
       setCart(cart);
       updateCartBadges();
-      var msg = "Added " + item.title + " · cart now " + cart.length + ". Opening cart…";
+      /* Hop to the cart only inside the year frame. A top-level dest
+         that sets location.href at 80ms destroys the document while
+         the cart key is still being read. */
+      var framed = false;
+      try {
+        framed = !!(window.parent && window.parent !== window);
+      } catch (eFrame) {
+        framed = true;
+      }
+      var msg = "Added " + item.title + " · cart now " + cart.length + (framed ? ". Opening cart…" : ".");
       var note = ensureFlash();
       if (note) {
         note.style.display = "block";
@@ -109,8 +118,7 @@ function initAmazonAdd() {
         showFlash(msg);
       }
       markTourUsed();
-      /* 1996 Amazon took you to the cart. Stay-on-page felt like a dead mock. */
-      setTimeout(goCart, 80);
+      if (framed) setTimeout(goCart, 80);
     });
   }
   updateCartBadges();

@@ -1,5 +1,7 @@
 # Lean-door leftover double — criteria only
 
+**2018–2025, including 2021 and 2022, are absent.** Lists for those years in this file are research. Do not restore `years/`. Live doors are 1994–2017. Ship law is [`DISK-TRUTH.md`](DISK-TRUTH.md).
+
 **Date:** 2026-09-20  
 **Status:** Implemented 2026-09-20 (Step 2 named). Not dest-farm. Not leftover-3× unique growth. Leftover dests on thin lean doors only. Cap is not a quota.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  

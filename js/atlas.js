@@ -11,7 +11,7 @@
   var y;
   var WIPED = { "2023": 1, "2024": 1, "2025": 1 };
   for (y = 1994; y <= 2022; y++) {
-    if (y === 2021 || y === 2022) continue;
+    if (y === 2018 || y === 2019) continue;
     if (!WIPED[String(y)]) YEARS_ALL.push(String(y));
   }
 

@@ -36,7 +36,16 @@ async function clickOfficialVerb(page, destUrl) {
     page.waitForTimeout(150),
   ]);
   await page.waitForLoadState("domcontentloaded").catch(() => {});
-  if (destUrl && (await page.locator("[data-official-verb]").count()) === 0) {
+  let verbCount = 0;
+  try {
+    verbCount = await page.locator("[data-official-verb]").count();
+  } catch (e) {
+    const msg = String((e && e.message) || e);
+    if (!/Execution context was destroyed|Target closed|destroyed/i.test(msg)) throw e;
+    await page.waitForLoadState("domcontentloaded").catch(() => {});
+    verbCount = 0;
+  }
+  if (destUrl && verbCount === 0) {
     await page.goto(destUrl);
     await revealLeftoverRails(page);
   }

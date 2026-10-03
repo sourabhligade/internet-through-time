@@ -9,7 +9,7 @@ async function twoStepClick(page, selector) {
   await el.click();
 }
 
-const { enterYear, goInFrame, waitForImmersion, contentFrame } = require('./helpers');
+const { enterYear, goInFrame, waitForImmersion, waitForFrameAttr, contentFrame } = require('./helpers');
 
 /** 1998 tour steps from config/immersion-1998.js */
 const TOUR_1998 = [
@@ -55,6 +55,7 @@ test.describe('guided tour', () => {
     // Amazon Music add-to-cart stamps "amazon"
     await goInFrame(page, 'sites/amazon/music.html');
     await waitForImmersion(page, '1998');
+    await waitForFrameAttr(page, 'music.html', 'data-amz-add', '1');
     frame = contentFrame(page);
     await frame.locator('[data-add-cart]').first().click({ force: true });
 

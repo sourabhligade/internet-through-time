@@ -210,14 +210,14 @@ test.describe("Fascinating integrate leftovers", () => {
   test("2013 Ask.fm leftover empty never writes · complete leftover · gold empty", async ({ page }) => {
     skipIfWiped("2013");
     await openClean(page, "/years/2013/sites/askfm/index.html", [
-      "itt13-pop-askfm",
+      "itt13-pop4-askfm",
       "itt13-vine-posts",
     ]);
     const go = page.locator("[data-pop-go][data-pop-id='askfm']").first();
     test.skip((await go.count()) === 0, "2013 Ask.fm leftover-3× face gone");
     await expect(go).toBeVisible();
     await go.click();
-    expect(await getKey(page, "itt13-pop-askfm")).toBeFalsy();
+    expect(await getKey(page, "itt13-pop4-askfm")).toBeFalsy();
     expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
     const panel = page.locator("[data-pop-panel]").filter({ has: go }).first();
     const keep = panel.locator("[data-pop-pick='keep']");
@@ -228,7 +228,7 @@ test.describe("Fascinating integrate leftovers", () => {
     const field = panel.locator("[data-pop-field]").first();
     if (await field.count()) await field.fill("ask.fm leftover");
     await go.click();
-    await expect.poll(() => getKey(page, "itt13-pop-askfm")).toBeTruthy();
+    await expect.poll(() => getKey(page, "itt13-pop4-askfm")).toBeTruthy();
     expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
   });
 

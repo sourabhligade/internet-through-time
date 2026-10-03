@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Museum door — docs/FLOW-CHECK-DIAGRAM.md §4 + docs/DISK-TRUTH.md.
- * Hub 24 years (1994–2017). 2015 and 2017 are React doors. 2018–2022 and 2023–2025 are absent.
+ * Hub 27 years (1994–2017 and 2020–2022). 2015 and 2017 are React doors. 2018–2019 and 2023–2025 are absent.
  * Links first, then dest-true I/O. Dest-folder count is not a pass.
  */
 const fs = require("fs");
@@ -12,7 +12,7 @@ const { destOnDisk, expectYearBoarded } = require("./helpers");
 const ROOT = path.join(__dirname, "..");
 const SHIP = [];
 for (let y = 1994; y <= 2022; y++) {
- if (y === 2021 || y === 2022 || (y > 2017 && y < 2021)) continue;
+ if (y === 2018 || y === 2019) continue;
   SHIP.push(String(y));
 }
 const BOARDED = ["2023", "2024", "2025"];
@@ -45,8 +45,8 @@ async function getKey(page, key) {
 }
 
 test.describe("visitor door", () => {
- test("hub lists 24 years including 2015, 2011, 2009, 2008, and 2005 · no 2022+", async ({ page }) => {
- expect(SHIP).toHaveLength(24);
+ test("hub lists 27 years including 2015, 2011, 2009, 2008, 2005, and 2020–2022", async ({ page }) => {
+ expect(SHIP).toHaveLength(27);
     await page.goto("/");
  await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
     await expect(page.locator("body")).not.toContainText(/27 years open/i);
@@ -64,8 +64,8 @@ test.describe("visitor door", () => {
       }
       await expect(page.locator(`a.year-card.available[href*="years/${y}"]`).first()).toBeVisible();
     }
-    await expect(page.locator("a.year-card[data-year='2022']")).toHaveCount(0);
-    await expect(page.locator(".year-card.y2022")).toHaveCount(0);
+    await expect(page.locator("a.year-card.available[data-year='2022']")).toHaveCount(1);
+    await expect(page.locator(".year-card.y2022")).toHaveCount(1);
     for (const y of BOARDED) {
       await expect(page.locator(`a.year-card[href*="years/${y}"]`)).toHaveCount(0);
       await expect(page.locator(`.year-card.y${y}`)).toHaveCount(0);

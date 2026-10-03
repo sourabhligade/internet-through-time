@@ -1539,9 +1539,8 @@
       try {
         sessionStorage.setItem(PHONE_MUTE_KEY, "1"); // never chain-interrupt the same visit
       } catch (e1) { /* */ }
-      /* Do not drop CONNECTED_KEY or revive the modem overlay — that undoes Skip
-         and leaves #dlg-alert / #connect-overlay intercepting iframe clicks. */
-      showAlert("Modem", msg);
+      /* Status only. A modal backdrop here sits over the year frame and eats clicks. */
+      setStatus("Line: " + String(msg).split("\n")[0]);
     }
 
     function focusContent() {

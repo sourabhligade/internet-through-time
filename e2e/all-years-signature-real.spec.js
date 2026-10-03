@@ -20,7 +20,7 @@ async function twoStepClick(page, selector) {
   await el.click();
 }
 
-const { enterYear, contentFrame, waitForImmersion, goInFrame, goImmersion, isLiveYear } = require('./helpers');
+const { enterYear, contentFrame, waitForImmersion, goInFrame, goImmersion, waitForFrameAttr, isLiveYear } = require('./helpers');
 function yearOnDisk(year) {
   return fs.existsSync(path.join(__dirname, '..', 'years', String(year), 'index.html'));
 }
@@ -115,6 +115,7 @@ test.describe('all-years signature REAL · early web', () => {
     await page.evaluate(() => localStorage.setItem('itt95-amazon-cart', '[]'));
     await goImmersion(page, '1995', 'sites/amazon/book-neuromancer.html');
     const frame = contentFrame(page);
+    await waitForFrameAttr(page, 'book-neuromancer.html', 'data-amz-add', '1');
     await frame.locator('[data-add-cart]').first().click({ force: true });
     await expect
       .poll(async () =>
@@ -200,6 +201,20 @@ test.describe('all-years signature REAL · 2000s boom', () => {
     await page.evaluate(() => localStorage.setItem('itt00-amazon-cart', '[]'));
     await goImmersion(page, '2000', 'sites/amazon/music.html');
     const frame = contentFrame(page);
+    /* FrameLocator in this Playwright has no evaluate. Read the iframe document
+       from the shell. Wait until music.html itself has bound Add to Cart. */
+    await expect.poll(async () => {
+      return page.evaluate(() => {
+        try {
+          const doc = document.getElementById('content').contentDocument;
+          const path = (doc && doc.location && doc.location.pathname) || '';
+          if (path.indexOf('music.html') === -1) return '';
+          return doc.documentElement.getAttribute('data-amz-add') || '';
+        } catch (e) {
+          return '';
+        }
+      });
+    }, { timeout: 20000 }).toBe('1');
     await frame.locator('[data-add-cart]').first().click({ force: true });
     await expect
       .poll(async () =>

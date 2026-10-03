@@ -1,7 +1,7 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2007–2017 lean doors live. 2011 is live HTML. 2015 and 2017 are React doors. 2018–2025 are absent. Hallway ends at 2017. Do not invent rooms.
+ * 2007–2017 and 2020–2022 lean doors live. 2011 is live HTML. 2015 and 2017 are React doors. 2018–2019 and 2023–2025 are absent. Do not invent rooms.
  */
 (function (global) {
   "use strict";
@@ -37,7 +37,7 @@
 
     leanYears: [
  "2007", "2008", "2009", "2010", "2011", "2012",
-      "2013", "2014", "2015", "2016", "2017"
+      "2013", "2014", "2015", "2016", "2017", "2020", "2021", "2022"
     ],
 
     notThisYear: {
@@ -65,6 +65,9 @@
       "2015": "Meerkat was earlier. Periscope is the star.",
       "2016": "Snapchat invented the 24-hour slide.",
       "2017": "Look to unlock. Fortnite is.",
+      "2020": "Disney+ Continue is last year. Empty never writes.",
+      "2021": "Allow never writes. ChatGPT is next year.",
+      "2022": "Empty and GPT-4 never write. X and Threads are next years.",
       },
 
     /* L1 nostalgia — visitor postcard only. Open years. Wiped years omit this. */
@@ -422,6 +425,36 @@
           { name: "Equifax freeze", key: "itt17-equifax", href: "/app/index.html#/year/2017?stop=itt17-equifax" },
           { name: "Storm Circle", key: "itt17-game-stormcircle", href: "/app/index.html#/year/2017?stop=itt17-game-stormcircle" }
         ]
+      },
+      "2020": {
+        era: "Zoom Leave · the meeting is the room",
+        thesis: "Lean door. Mute, then chat, then Leave. Empty never writes.",
+        gold: { label: "Zoom Leave", href: "years/2020/sites/zoom/meeting.html", key: "itt20-zoom" },
+        guided: [
+          { label: "Houseparty", href: "years/2020/sites/houseparty/index.html" },
+          { label: "Classroom", href: "years/2020/sites/classroom/index.html" }
+        ],
+        game: { label: "Year game", href: "years/2020/sites/playable/game.html" }
+      },
+      "2021": {
+        era: "Ask App Not to Track · iOS 14.5",
+        thesis: "Lean door. The phone asks first. Allow never writes.",
+        gold: { label: "Ask App Not to Track", href: "years/2021/sites/att/index.html", key: "itt21-att" },
+        guided: [
+          { label: "Signal", href: "years/2021/sites/signal/index.html" },
+          { label: "Copilot waitlist", href: "years/2021/sites/copilot/index.html" }
+        ],
+        game: { label: "Five Letter", href: "years/2021/sites/playable/game.html" }
+      },
+      "2022": {
+        era: "ChatGPT Send · you type to a model",
+        thesis: "Lean door. Send is the save. Empty and GPT-4 never write.",
+        gold: { label: "ChatGPT Send", href: "years/2022/sites/chatgpt/index.html", key: "itt22-chatgpt" },
+        guided: [
+          { label: "Wordle", href: "years/2022/sites/wordle/index.html" },
+          { label: "BeReal", href: "years/2022/sites/bereal/index.html" }
+        ],
+        game: { label: "Prompt Queue", href: "years/2022/sites/playable/game.html" }
       }
     },
 

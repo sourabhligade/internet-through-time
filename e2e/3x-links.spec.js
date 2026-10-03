@@ -11,7 +11,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-for (let y = 1994; y <= 2022; y++) { if (y !== 2021 && y !== 2022) YEARS.push(String(y)); }
+for (let y = 1994; y <= 2022; y++) YEARS.push(String(y));
 
 function yearOnDisk(year) {
   return fs.existsSync(path.join(ROOT, "years", year, "pages", "home.html"));
@@ -26,7 +26,7 @@ test.describe("3× links every implemented year", () => {
   for (const year of YEARS) {
     test(`${year} home 3× directory · guided 6 · star · sample hrefs 200`, async ({ page }) => {
       test.skip(!yearOnDisk(year), year + " not on disk");
-      const LEAN = new Set(["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2016", "2017"]);
+      const LEAN = new Set(["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2016", "2017", "2020", "2021", "2022"]);
       const lean = LEAN.has(year);
       await page.goto(`/years/${year}/pages/home.html${lean ? "" : "?deep=1"}`);
       await expect(page.locator(`#ott-guided-${year} ol li`)).toHaveCount(6);

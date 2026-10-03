@@ -51,17 +51,21 @@ async function completeLo(page, loKey, gold, fill) {
 }
 
 test.describe("2013 leftover dest-true", () => {
-  test("Ask.fm is a cite shell with no pop machine", async ({ page }) => {
+  test("Ask.fm leftover empty never writes · complete writes pop4", async ({ page }) => {
     await page.goto("/years/2013/sites/askfm/index.html");
     await expect(page.locator("h1")).toContainText(/Ask\.fm/i);
-    await expect(page.locator("[data-pop-go]")).toHaveCount(0);
-    expect(await getKey(page, "itt13-pop-askfm")).toBeFalsy();
+    await expect(page.locator("[data-pop-go]")).toHaveCount(1);
+    expect(await getKey(page, "itt13-pop4-askfm")).toBeFalsy();
+    expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
+    await completePop(page, "askfm", "itt13-pop4-askfm", "itt13-vine-posts", "ask.fm leftover");
   });
-  test("Whisper is a cite shell with no pop machine", async ({ page }) => {
+  test("Whisper leftover empty never writes · complete writes pop4", async ({ page }) => {
     await page.goto("/years/2013/sites/whisper/index.html");
     await expect(page.locator("h1")).toContainText(/Whisper/i);
-    await expect(page.locator("[data-pop-go]")).toHaveCount(0);
-    expect(await getKey(page, "itt13-pop-whisper")).toBeFalsy();
+    await expect(page.locator("[data-pop-go]")).toHaveCount(1);
+    expect(await getKey(page, "itt13-pop4-whisper")).toBeFalsy();
+    expect(await getKey(page, "itt13-vine-posts")).toBeFalsy();
+    await completePop(page, "whisper", "itt13-pop4-whisper", "itt13-vine-posts", "whisper leftover");
   });
   test("YouTube popular wiki save writes itt13-wiki and not the Vine star", async ({ page }) => {
     await page.goto("/years/2013/sites/youtube/index.html");

@@ -174,6 +174,16 @@
         '">' +
         (isHabitYear(year) ? habitStarLabel(spec.label) : spec.label) +
         "</a></p>";
+      if (year === "2021") {
+        starInner =
+          '<div class="itt-start-hero">' +
+          '<p class="itt-start-kicker">26 April 2021 · iOS 14.5</p>' +
+          '<p class="itt-year-star"><a data-ott-one-thing="2021" href="' +
+          spec.href +
+          '">Ask App Not to Track</a></p>' +
+          '<p class="itt-start-sub">Allow never writes. Ask App Not to Track is the save.</p>' +
+          "</div>";
+      }
       host.innerHTML =
         starInner +
         '<div class="ott-guided" id="ott-guided-' +

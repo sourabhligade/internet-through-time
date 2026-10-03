@@ -229,6 +229,9 @@ test.describe('1995 live flows (hard)', () => {
     await frame.locator('input[name="number"]').fill('5151');
     await frame.locator('input[name="title"]').fill('LiveFlow Homestead');
     await frame.locator('textarea[name="about"]').fill('Built by hard flow audit.');
+    await expect(frame.locator('form[data-homestead-form]')).toHaveAttribute('data-homestead-bound', '1', {
+      timeout: 20000,
+    });
     await frame.locator('form[data-homestead-form] input[type="submit"]').click({ force: true });
     await expect(frame.locator('[data-homestead-view]')).toBeVisible({ timeout: 15000 });
     await expect(frame.locator('[data-homestead-view]')).toContainText(/LiveFlow Homestead/i);

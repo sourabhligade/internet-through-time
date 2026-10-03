@@ -12,7 +12,7 @@ const { killOverlays } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-const WIPED_YEARS = new Set(["2009", "2015", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"]);
+const WIPED_YEARS = new Set(["2009", "2015", "2017", "2018", "2019", "2023", "2024", "2025"]);
 for (let y = 1994; y <= 2022; y++) {
   const s = String(y);
   if (WIPED_YEARS.has(s)) continue;

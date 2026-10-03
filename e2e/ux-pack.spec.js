@@ -12,7 +12,7 @@ test.describe("UX pack U1 hub", () => {
     await page.goto("/index.html");
     await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
     await expect(page.locator("#begin-first-night")).toHaveCount(0);
-    await expect(page.locator("a.year-card.available")).toHaveCount(24);
+    await expect(page.locator("a.year-card.available")).toHaveCount(27);
   });
 
   test("year card enters 1994", async ({ page }) => {

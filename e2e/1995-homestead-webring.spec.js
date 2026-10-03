@@ -25,6 +25,9 @@ test.describe('1995 GeoCities homestead + webring', () => {
     await frame.locator('input[name="number"]').fill('9999');
     await frame.locator('input[name="title"]').fill('E2E Homestead');
     await frame.locator('textarea[name="about"]').fill('Built by Playwright tests.');
+    await expect(frame.locator('form[data-homestead-form]')).toHaveAttribute('data-homestead-bound', '1', {
+      timeout: 20000,
+    });
     await frame.locator('form[data-homestead-form] input[type="submit"]').click({ force: true });
 
     // Navigates to my-homestead.html
@@ -57,6 +60,9 @@ test.describe('1995 GeoCities homestead + webring', () => {
     await expect(frame.locator('form[data-homestead-form]')).toBeVisible({ timeout: 20000 });
     await waitForImmersion(page, '1995');
     await frame.locator('input[name="title"]').fill('');
+    await expect(frame.locator('form[data-homestead-form]')).toHaveAttribute('data-homestead-bound', '1', {
+      timeout: 20000,
+    });
     await frame.locator('form[data-homestead-form] input[type="submit"]').click({ force: true });
     await page.waitForTimeout(300);
     expect(await page.evaluate(() => localStorage.getItem('itt95-homestead'))).toBeFalsy();
@@ -64,6 +70,9 @@ test.describe('1995 GeoCities homestead + webring', () => {
     await frame.locator('input[name="number"]').fill('4242');
     await frame.locator('input[name="title"]').fill('Reload Homestead');
     await frame.locator('textarea[name="about"]').fill('Gold wave persist.');
+    await expect(frame.locator('form[data-homestead-form]')).toHaveAttribute('data-homestead-bound', '1', {
+      timeout: 20000,
+    });
     await frame.locator('form[data-homestead-form] input[type="submit"]').click({ force: true });
     await expect(frame.locator('[data-homestead-view]')).toContainText(/Reload Homestead/i, { timeout: 15000 });
     await goInFrame(page, 'sites/geocities/my-homestead.html');
@@ -95,6 +104,9 @@ test.describe('1995 GeoCities homestead + webring', () => {
     await frame.locator('input[name="number"]').fill('7777');
     await frame.locator('input[name="title"]').fill('Ring Homestead');
     await frame.locator('textarea[name="about"]').fill('Street theater.');
+    await expect(frame.locator('form[data-homestead-form]')).toHaveAttribute('data-homestead-bound', '1', {
+      timeout: 20000,
+    });
     await frame.locator('form[data-homestead-form] input[type="submit"]').click({ force: true });
     await expect(frame.locator('[data-homestead-addr]')).toContainText(/Hollywood\s*\/\s*7777/i, {
       timeout: 15000,

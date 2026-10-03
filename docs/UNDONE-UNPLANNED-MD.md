@@ -21,13 +21,13 @@ Open checkbox count in project markdown (skills excluded): **~996 `[ ]`**. Most 
 | **U — Undone checklist** | Open `[ ]` that still looks like work a visitor or implementer would do. | Name a strike, a visitor-tick pass, or a product step from [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md). |
 | **S — Stop boxes** | Open `[ ]` that are law (“do not dest-farm”). Leave forever. | Do not implement. A tick here is only “banner this file as stop-only.” |
 | **N — Unplanned research** | Never named as a product step. Harvest, leftover-3× unique year notes, improve research. | Keep as research, or name a later implement. |
-| **H — Historical / stale plan** | Was a plan. Disk moved. Still teaching 24/26 doors, 2015 wiped, 85 dests, leftover-3× unique live. | Strike counts to 22-door / 2015 React live, or leave dated. |
+| **H — Historical / stale plan** | Was a plan. Disk moved. Still teaching an older door list, 2015 wiped, 85 dests, leftover-3× unique live. | Strike counts to the live 27-door hub (1994–2017 and 2020–2022), or leave dated. |
 | **C — Closed research** | Applied or criteria-complete. Not leftover. | Out of the undone list. |
 | **L — Ship law / current map** | Canonical or the current finding list. | Out of this checklist. |
 
 A row in **N** is not a license to add dest folders. A row in **U** is not a license to dest-farm so a warehouse spec unskips.
 
-Live hub: **24 doors** (1994–2017). **2015 and 2017 are React.** **2008, 2009, and 2011 are live HTML.** Absent: 2018–2025.
+Live hub: **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2008, 2009, 2011, and 2020–2022 are live HTML.** Absent: 2018, 2019, and 2023–2025.
 
 ---
 
@@ -75,36 +75,36 @@ Same shape: Door · Images · Official 10 · Leftover 10 (or 0). None ticked.
 | [`checklists/2000.md`](checklists/2000.md) | 43 | leftover **30** | 76 |
 | [`checklists/2001.md`](checklists/2001.md) … [`2003.md`](checklists/2003.md) | 23 each | leftover 10 | 35 / 25 / 21 |
 | [`checklists/2004.md`](checklists/2004.md) | 21 | leftover 10 · official **8** (matches trail cap) | 148 |
-| [`checklists/2005.md`](checklists/2005.md) | 22 | leftover 10 | 91 |
+| [`checklists/2005.md`](checklists/2005.md) | 22 | leftover 10 | 92 |
 | [`checklists/2006.md`](checklists/2006.md) | 23 | leftover 10 | 101 |
-| [`checklists/2007.md`](checklists/2007.md) | 14 | leftover **0** | **14** (lean-double rows exist) |
-| [`checklists/2009.md`](checklists/2009.md) | 19 | leftover 0 · boarded | boarded, not a door |
-| [`checklists/2010.md`](checklists/2010.md) | 14 | leftover **0** | **10** |
-| [`checklists/2012.md`](checklists/2012.md) | 13 | leftover **0** · official 9 | **11** keep |
-| [`checklists/2013.md`](checklists/2013.md) | 13 | leftover **0** · official 9 | **25** |
+| [`checklists/2007.md`](checklists/2007.md) | 14 | leftover **0** | **17** (lean-double rows exist) |
+| [`checklists/2009.md`](checklists/2009.md) | 19 | leftover 0 · live HTML door | **33** |
+| [`checklists/2010.md`](checklists/2010.md) | 14 | leftover **0** | **12** |
+| [`checklists/2012.md`](checklists/2012.md) | 13 | leftover **0** · official 9 | **12** keep |
+| [`checklists/2013.md`](checklists/2013.md) | 13 | leftover **0** · official 9 | **27** |
 | [`checklists/2014.md`](checklists/2014.md) | 13 | leftover **0** · official 9 | **16** |
 | [`checklists/2015.md`](checklists/2015.md) | 14 | leftover **0** · React hash URLs | **0** (React official 10) |
-| [`checklists/2016.md`](checklists/2016.md) | 14 | leftover **0** | **19** |
+| [`checklists/2016.md`](checklists/2016.md) | 14 | leftover **0** | **20** |
 | [`checklists/2017.md`](checklists/2017.md) | 14 | leftover **0** · React hash URLs | unique leftover-**20** on React, not in this file |
 | [`checklists/2022.md`](checklists/2022.md) | 14 | leftover **0** | **12** |
 
 - [ ] **U** Tick forests 1994–2006 against live official 10 (visitor pass). Leftover-10 in the file is a **sample**, not the leftover-2× unique catalog. Catalog `n` noted on each forest file 2026-09-30.
 - [x] **U** Rewrite lean-year leftover sections (2007, 2010, 2012–2014, 2016, 2022) to leftover-2× unique keep lists. Rails fold unless `?deep=1`.
 - [x] **U** [`checklists/2017.md`](checklists/2017.md) leftover-20 React rail listed (20 keys + `#/year/2017`). Map: [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md).
-- [x] **S** [`checklists/2009.md`](checklists/2009.md) — boarded plaque note. Do not tick as a hub door.
-- [x] **H** No checklists for 2008, 2011, 2018–2021, 2023–2025. Do not add them.
+- [x] **S** [`checklists/2009.md`](checklists/2009.md) — historical boarded-plaque note. 2009 is now a live HTML door. Do not tick the visitor boxes from this file.
+- [x] **H** [`checklists/2008.md`](checklists/2008.md) and [`checklists/2011.md`](checklists/2011.md) are the checklists for those live HTML doors. 2018, 2019, and 2023–2025 stay absent. 2020 and 2021 are live HTML doors. Do not add checklist files for absent years.
 
 ### 2.3 Combined visitor-tick list
 
-- [x] **H** [`FLOW-CHECKLIST.md`](FLOW-CHECKLIST.md) picture table struck 2026-09-30 (2005 restored; wiped-year rows and 2021 dropped; 2009 boarded). **U** combined visitor-tick boxes stay `[ ]` until a browser visit. 2009 5× stays boarded-year content.
+- [x] **H** [`FLOW-CHECKLIST.md`](FLOW-CHECKLIST.md) picture table struck 2026-09-30 (2005 restored; wiped-year rows and 2021 dropped). **U** combined visitor-tick boxes stay `[ ]` until a browser visit. 2009 is a live HTML door; its 5× rooms stay on the site pages.
 
 ---
 
 ## 3. Implement checklists that were never named, or are forbidden
 
 - [x] **N / S** [`2000-DOUBLE-TRAIL.md`](2000-DOUBLE-TRAIL.md) — STOP banner 2026-09-30. Unique leftover-20 is **2017 only**. Do not dest-farm n=21–40 again. Phase 0 reserve boxes stay `[ ]`.
-- [x] **H** [`2005-REBUILD-PLAN.md`](2005-REBUILD-PLAN.md) — 2005 restored live (YouTube upload star, 806 dests, leftover-2× unique 91). Historical banner. Boxes were never ticked after restore.
-- [x] **H** [`2022-IMPLEMENT.md`](2022-IMPLEMENT.md) — FINISHED as lean door, disk dest folders **25**. [`2022-DEST-MAP.md`](2022-DEST-MAP.md) leftover-2× unique 12, leftover-3× unique **0**.
+- [x] **H** [`2005-REBUILD-PLAN.md`](2005-REBUILD-PLAN.md) — 2005 restored live (YouTube upload star, 806 dests, leftover-2× unique 92). Historical banner. Boxes were never ticked after restore.
+- [x] **H** [`2022-IMPLEMENT.md`](2022-IMPLEMENT.md) — 2022 is a live HTML leanBoot door (ChatGPT Send `itt22-chatgpt`, `years/2022/`, hub card). [`2022-DEST-MAP.md`](2022-DEST-MAP.md) is research, not the live door list.
 - [x] **N / S** [`LEAN-TRIPLE-2015.md`](LEAN-TRIPLE-2015.md) + [`LEAN-TRIPLE-2015-CHECKLIST.md`](LEAN-TRIPLE-2015-CHECKLIST.md) — STOP banners 2026-09-30. **F1–F10 fail-look** stay `[ ]` forever. Do not dest-farm.
 - [x] **H** [`2014-REACT-FLOW.md`](2014-REACT-FLOW.md) — live 2014 is **HTML leanBoot**. React hash `#/year/2014` bounces to `/years/2014/`. Unmounted `Year2014.jsx` is gone.
 - [x] **C / H** [`FLOW-IMPLEMENT-CHECKLIST.md`](FLOW-IMPLEMENT-CHECKLIST.md) — 22-door historical banner. Closed as ticks; counts inside may still be old.
@@ -132,7 +132,7 @@ Workshop leftover-3× **faces** on forests are leftover machines, not this uniqu
 
 ## 5. Unplanned leftover-2× / Board C / harvest — wait on `2x`
 
-Leftover-2× unique **links** already live (1,080 dests, 20 years). Dest **doubling** waits on the word `2x`. Finish line is leftover dests hosting hrefs in the browser plus the year map, not catalog `n`.
+Leftover-2× unique **links** already live (1,158 dests, 23 matrix rows). Dest **doubling** waits on the word `2x`. Finish line is leftover dests hosting hrefs in the browser plus the year map, not catalog `n`.
 
 - [x] **C / wait-2x** [`LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md) — links implemented. Wait-2x banner 2026-09-30. **9 open** are stops. Dest doubling still waits on `2x`.
 - [ ] **N / wait-2x** [`1999-LEFTOVER-2X-DOUBLE-RESEARCH.md`](1999-LEFTOVER-2X-DOUBLE-RESEARCH.md) — wait-2x banner 2026-09-30. Further dest doubling waits on `2x`.
@@ -221,8 +221,8 @@ Visitor product still lives in [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) **B**, n
 ## Leave alone unless named
 
 - Do not dest-farm from FIVE-K, Board C harvest, leftover-3× unique year notes, or `2000-DOUBLE-TRAIL`.
-- Do not un-board 2009 because `FLOW-CHECKLIST` still lists 5×.
-- Do not restore 2011, 2018–2021, or 2023–2025 because `YEAR-E2E-POTENTIAL` still scores them.
+- 2009 is a live HTML door. Do not board it again because an older note called it a plaque. Do not put the 5× Like chip back on the home row.
+- 2011 is a live HTML door. Do not restore 2018–2025, including 2021 and 2022, because a research note still scores them.
 - Do not dest-lock forests because `PRODUCT-IMPROVE` Slice 5 is still `[ ]`.
 - Do not implement 2014 as a React door from `2014-REACT-FLOW.md`.
 - Do not commit until asked.

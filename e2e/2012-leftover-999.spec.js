@@ -3,7 +3,7 @@
  * 2012 / 2016 / 2017 dest-true leftover-official.
  * The old 9+9+9 pop3x rails were duplicate flows and stay off the home page.
  * Trap / 0 ticks never write. Leftover never writes the year star.
- * 2022 is absent. 2023–2025 wiped.
+ * 2021 and 2022 are live HTML. 2023–2025 wiped.
  */
 const fs = require("fs");
 const path = require("path");
@@ -107,8 +107,8 @@ test.describe("wiped years stay boarded", () => {
     }
     expect(fs.existsSync(path.join(ROOT, "years", "2015", "index.html"))).toBe(false);
     expect(fs.existsSync(path.join(ROOT, "years", "2017", "index.html"))).toBe(false);
-    expect(fs.existsSync(path.join(ROOT, "years", "2021", "index.html"))).toBe(false);
-    expect(fs.existsSync(path.join(ROOT, "years", "2022", "index.html"))).toBe(false);
+    expect(fs.existsSync(path.join(ROOT, "years", "2021", "index.html"))).toBe(true);
+    expect(fs.existsSync(path.join(ROOT, "years", "2022", "index.html"))).toBe(true);
   });
 });
 

@@ -8,7 +8,7 @@
 
 GitNexus before this write: `list_repos` = `internet-through-time` (index 1 commit behind HEAD, last indexed commit `4873fdf26`). `detect_changes({scope:"all"})` = 25 changed symbols / 15 dirty files / **MEDIUM** on the already-dirty docs tree. `impact` on `UNDONE.md` “What is undone” = **UNKNOWN**, 0 callers. Confirmed: no `js` / `py` / `jsx` / `yml` / `sh` import of `UNDONE.md`, `OPEN-CHECKLIST.md`, or `TODO-FULL-AUDIT.md`. This file is a new research note. No museum code, dest HTML, or e2e was edited.
 
-Implement only after this note is read and named. Leftover-2× unique dest doubling waits on the word `2x`. Do not dest-farm. Do not restore 2018–2025. Do not dest-lock 2015, forests, or 2013.
+Implement only after this note is read and named. Leftover-2× unique dest doubling waits on the word `2x`. Do not dest-farm. Do not restore 2018, 2019, or 2023–2025. Do not dest-lock 2015, forests, or 2013.
 
 ---
 
@@ -19,7 +19,7 @@ Four buckets of incomplete. A row in one bucket is not a license to close a row 
 | Bucket | Meaning |
 |--------|---------|
 | **A. Session read / ingest** | Files still unread, or GitNexus `ingest_document` still open. Blocks further museum code changes until the e2e last-line pass finishes. |
-| **B. Visitor product** | A person on the live 24 doors still hits a missing URL, a missing save, a wrong star key, a hall that teaches absent years, or a dest that never writes. |
+| **B. Visitor product** | A person on the live 27 doors still hits a missing URL, a missing save, a wrong star key, a hall that teaches absent years, or a dest that never writes. |
 | **C. Specs vs disk** | Warehouse e2e and matrices still assert an older museum (24 doors, forest-era dest counts, gold leftover-2× hops, blank-year leftovers). Full warehouse stays expected red until those specs match disk. |
 | **D. Docs vs disk** | Markdown still teaching 24/26/28 doors, 2015 wiped, 85 dests in 2022, leftover-3× unique as live. |
 
@@ -27,9 +27,9 @@ Four buckets of incomplete. A row in one bucket is not a license to close a row 
 
 ---
 
-## 0. Live snapshot (2026-09-30 disk)
+## 0. Live snapshot (corrected 2026-10-03)
 
-Hub **24 open doors**: 1994–2017. **2015 and 2017 are React doors** (`/app/index.html#/year/YYYY`, no `years/YYYY` tree). **2014 and 2016** are HTML leanBoot + hashToHtml. **2008, 2009, and 2011 are live HTML doors** (stars `itt08-apps`, `itt09-like`, `itt11-gplus`). **Absent:** 2018–2025. Frozen forests: 1994–2006. The year rows below this paragraph are the 2026-09-30 recount and still omit 2008 and 2011 and still list 2022.
+Hub **27 open doors**: 1994–2017 and 2020–2022. **2015 and 2017 are React doors** (`/app/index.html#/year/YYYY`, no `years/YYYY` tree). **2014, 2016, and 2020–2022** are HTML leanBoot + hashToHtml. **2008, 2009, and 2011 are live HTML doors** (stars `itt08-apps`, `itt09-like`, `itt11-gplus`). **2020–2022 are live HTML** (stars `itt20-zoom`, `itt21-att`, `itt22-chatgpt`). **Absent:** 2018, 2019, and 2023–2025. Frozen forests: 1994–2006. Door kinds below were corrected 2026-10-03. Dest-folder counts for years that were already in the 2026-09-30 recount are unchanged. **2008** and **2011** folder and HTML counts were measured 2026-10-02 (113/125 and 37/46). **2020–2022** folder and HTML counts were measured 2026-10-03 (22/29, 18/65, 25/40). Leftover-2× unique for **2008** is **47** in `e2e/leftover-2x-unique-links.matrix.json`. **2011** and **2020–2022** have no leftover-2× matrix row. HTML sibling rails on 2020–2022 link leftover rooms only and are not a new catalog.
 
 | Year | Kind | Star | Dest folders / HTML | Leftover-2× unique dests | Notes |
 |------|------|------|--------------------:|-------------------------:|-------|
@@ -44,20 +44,24 @@ Hub **24 open doors**: 1994–2017. **2015 and 2017 are React doors** (`/app/ind
 | 2002 | html frozen | `itt02-stumble` | 230 / 273 | 25 | CUT-FOREST |
 | 2003 | html frozen | `itt03-photobucket` | 203 / 259 | 21 | CUT-FOREST |
 | 2004 | html frozen | `itt04-thefacebook-networks` | 805 / 946 | 148 | official stops **8** |
-| 2005 | html frozen | `itt05-yt-uploads` | 806 / 957 | 91 | restored |
+| 2005 | html frozen | `itt05-yt-uploads` | 806 / 957 | 92 | restored |
 | 2006 | html frozen | `itt06-tweets` | 370 / 553 | 101 | |
-| 2007 | html lean | `itt07-iphone` | 33 / 83 | 14 | dest-lock |
-| 2009 | boarded | `itt09-like` | 78 / 142 | — | plaque, not a door |
-| 2010 | html lean | `itt10-ig-posts` | 29 / 61 | 10 | dest-lock · card star is `itt10-ig-posts` |
-| 2012 | html lean | `itt12-ig-android` | 32 / 70 | 11 | dest-lock · leftover-4× unique **3** |
-| 2013 | html lean | `itt13-vine-posts` | 52 / 53 | 25 | leftover 2× ×2 · official stops **9** |
+| 2007 | html lean | `itt07-iphone` | 33 / 83 | 17 | dest-lock |
+| 2008 | html lean | `itt08-apps` | 113 / 125 | 47 | live door · XP+IE7 |
+| 2009 | html lean | `itt09-like` | 78 / 142 | 33 | live door · not a boarded plaque |
+| 2010 | html lean | `itt10-ig-posts` | 29 / 61 | 12 | dest-lock · card star is `itt10-ig-posts` |
+| 2011 | html lean | `itt11-gplus` | 37 / 46 | — | live door · Win7+IE8 · no leftover-2× matrix row |
+| 2012 | html lean | `itt12-ig-android` | 32 / 70 | 12 | dest-lock · leftover-4× unique **3** |
+| 2013 | html lean | `itt13-vine-posts` | 52 / 53 | 27 | leftover 2× ×2 · official stops **9** |
 | 2014 | html leanBoot | `itt14-wa-install` | 25 / 36 | 16 | dest-lock · official stops **9** |
 | 2015 | **react** | `itt15-periscope` | **0 HTML** | **0** | official 10 on React rail |
-| 2016 | html leanBoot | `itt16-ig-stories` | 57 / 97 | 19 | leftover-3× unique **0** |
+| 2016 | html leanBoot | `itt16-ig-stories` | 57 / 97 | 20 | leftover-3× unique **0** |
 | 2017 | **react** | `itt17-faceid` | **0 HTML** | **0** | official 10 + leftover-20 |
-| 2022 | html leanBoot | `itt22-chatgpt` | 25 / 31 | 12 | leftover-3× unique **0** |
+| 2020 | html leanBoot | `itt20-zoom` | 22 / 29 | — | live door · Zoom Leave · leftover-3× unique 0 |
+| 2021 | html leanBoot | `itt21-att` | 18 / 65 | — | live door · Ask App Not to Track · leftover-3× unique 0 |
+| 2022 | html leanBoot | `itt22-chatgpt` | 25 / 40 | — | live door · ChatGPT Send · leftover-3× unique 0 |
 
-Leftover-2× unique dest catalog total **1080** across 20 years (2015 = 0, 2017 = 0). Leftover-3× unique catalogs **empty** (`leftover-3x-unique.matrix.json` and `leftover-3x-unique-links.matrix.json` are `[]`). 2012 leftover-4× unique stays Chrome / Twitter / SoundCloud. Official dest leftover-2× first paint **0**. Unique leftover-20 lives on **2017 only**.
+Leftover-2× unique dest catalog total **1158** across 23 matrix rows (2015 = 0, 2017 = 0; 2011 has no row). Leftover-3× unique catalogs **empty** (`leftover-3x-unique.matrix.json` and `leftover-3x-unique-links.matrix.json` are `[]`). 2012 leftover-4× unique stays Chrome / Twitter / SoundCloud. Official dest leftover-2× first paint **0**. Unique leftover-20 lives on **2017 only**.
 
 Dest-true CI pack is **18 files**, and they agree across `e2e/README.md`, `scripts/ci.sh`, `.github/workflows/ci.yml`, and `scripts/test-pipeline.py` `CI_E2E_ALLOWLIST`. [`CODE-STRUCTURE.md`](CODE-STRUCTURE.md) still says **16**. Last dest-true GitHub pack after `4873fdf26`: **473 passed / 2 skipped**. Last full warehouse: **4,837 passed / 968 failed / 433 skipped** (expected red). `python3 scripts/test-pipeline.py` was last documented as 12 passed / 1 failed when `CI_E2E_ALLOWLIST` still named ghost specs; live `ci.sh` / `ci.yml` / allowlist now name the 18 files that exist. Re-run the static job before treating that fail as current.
 
@@ -320,9 +324,9 @@ Canonical year list is the hub + `js/year-card.json` + [`DISK-TRUTH.md`](DISK-TR
 | [`LEFTOVER-3X-UNIQUE-LINKS.md`](LEFTOVER-3X-UNIQUE-LINKS.md) · [`2007-LEFTOVER-3X-UNIQUE.md`](2007-LEFTOVER-3X-UNIQUE.md) · [`2010-LEFTOVER-3X-UNIQUE.md`](2010-LEFTOVER-3X-UNIQUE.md) · [`2022-LEFTOVER-3X-UNIQUE.md`](2022-LEFTOVER-3X-UNIQUE.md) | leftover-3× unique as a live catalog; live catalogs are empty |
 | Harvest `2x-harvest-c-1999.md` … `2004.md` | Board C dest counts 432/486/261/234/206/810 — forest-era vs later extra dest DROP |
 | [`FIVE-K-SITE-WALK.md`](FIVE-K-SITE-WALK.md) | KEEP-table Name column offset vs harvest slug; year headings blank for wiped years |
-| Root `README.md` | reaudit listed line 89 (2009 redirects to hub) and blank wiped sentences; live 2009 is a plaque |
+| Root `README.md` | reaudit listed line 89 (2009 redirects to hub) and blank wiped sentences; live 2009 is a live HTML door |
 
-[`DISK-TRUTH.md`](DISK-TRUTH.md) dest-folder numbers for 1999–2004 / 2007 / 2010 / 2012 / 2014 / 2016 / 2022 match this pass. 2005 DISK-TRUTH leftover-2× rail **91** matches the leftover-2× unique matrix.
+[`DISK-TRUTH.md`](DISK-TRUTH.md) dest-folder numbers for 1999–2004 / 2007 / 2010 / 2012 / 2014 / 2016 / 2022 match this pass. 2005 DISK-TRUTH leftover-2× rail **92** matches the leftover-2× unique matrix.
 
 ---
 
@@ -345,8 +349,8 @@ Lean-double room under the cap (live / cap), from OPEN-CHECKLIST research — **
 
 ## Already true (so it is not leftover)
 
-- Hub 22 year-number cards, same thin gray border, era-chips hidden (`css/hub-lean.css`).
-- `SHIP_YEARS`, `e2e/helpers.js` `isLiveYear`, `js/museum-progress.js` `isLiveYear`, hub cards, and `DISK-TRUTH.md` first paragraph agree on 22 doors.
+- Hub 27 year doors (1994–2017 and 2020–2022). 2015 and 2017 are React. 2018, 2019, and 2023–2025 stay absent.
+- `SHIP_YEARS`, `js/year-card.json`, hub cards, and `DISK-TRUTH.md` agree on those 27 doors.
 - Dest-true two writers: `official-verb.js` and `leftover-official.js`. Empty / trap / incomplete never write. Leftover never writes the star.
 - Official dest leftover-2× `data-lo-panel` = 0 on official dest HTML.
 - Leftover-3× unique catalogs empty. Mock-flow DEST_FIELD / WEAK_REAL / HASH_CTA / PACK = 0.
@@ -361,9 +365,9 @@ Lean-double room under the cap (live / cap), from OPEN-CHECKLIST research — **
 
 ## Leave alone unless named
 
-- Do not un-board 2009.
-- Do not restore 2011, 2018–2021, or 2023–2025.
-- Do not dest-lock 2015, forests, 2013, or 2022 again.
+- 2009, 2011, and 2020–2022 are live HTML doors. Do not board them.
+- Do not restore 2018, 2019, or 2023–2025.
+- Do not dest-lock 2015, forests, or 2013 again.
 - Do not grow leftover-3× unique catalogs.
 - Do not add a unique leftover-20 map except the 2017 trail already in React.
 - Do not build forest destinations from [`FIVE-K-SITE-WALK.md`](FIVE-K-SITE-WALK.md).

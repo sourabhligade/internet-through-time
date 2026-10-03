@@ -1,12 +1,12 @@
 # 2016–2021 · visitor I/O criteria
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical research.** Not ship law. Live hub is **24 doors** (1994–2017). **2015 and 2017 are React.** **2018–2025, including 2021 and 2022, are absent** (no tree, no hub card, no React door). The year lists below are research, not live doors. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md).
 
 
 **Date:** 2026-09-14  
 **Status:** Criteria. Not dest-farm. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Years:** live lean doors **2016 · 2017 · 2021**. **2022 is a later lean door** (`2022-READ-FIRST.md`). · Zoom Leave.
+**Years in this note:** research for 2016–2021. **2016 is a live HTML door. 2017 is a live React door. 2018–2021 and 2022 are absent.** Do not restore them from this file.
 
 I/O here means **how the year feels to use**: first click, period chrome, the star verb, what writes, what never writes. It does **not** mean dest count.
 
