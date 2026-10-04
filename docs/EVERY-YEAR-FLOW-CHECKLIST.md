@@ -1581,7 +1581,7 @@ I/O for each official stop: empty never writes · trap never writes · finished 
 
 I/O: empty never writes · trap never writes · finished visit writes leftover only · star stays empty.
 
-Spec: `e2e/2017--leftover-20.spec.js` + `e2e/2017-unique-flows.spec.js` (React). Browser hand-click of 37 leftover rooms besides AirPods 2 / Cuphead / Animoji is still open on [`OPEN-CHECKLIST.md`](OPEN-CHECKLIST.md) step 1.
+Spec: `e2e/2017--leftover-20.spec.js` + `e2e/2017-unique-flows.spec.js` (React). Browser hand-click of 37 leftover rooms besides AirPods 2 / Cuphead / Animoji stays on [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md). `OPEN-CHECKLIST.md` was removed.
 
 ### leftover-2× unique dest links
 
@@ -1704,5 +1704,5 @@ Empty catalog. Do not dest-farm a rail.
 
 - [x] Commit this working tree (React-door atlas, dest-true 2017/ MVP, leftover-20 React I/O, UNDONE dest recount)
 - [x] 2017 / leftover-20 I/O on the React rail — `e2e/2017--leftover-20.spec.js` + `e2e/2017-unique-flows.spec.js` **75 passed** 2026-09-26 (empty / trap never write · leftover never writes the star)
-- [x] [`UNDONE.md`](UNDONE.md) dest counts rechecked vs disk 2026-09-26
+- [x] Dest counts rechecked vs disk 2026-09-26. `UNDONE.md` was removed. See [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md).
 

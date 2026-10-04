@@ -409,6 +409,8 @@
     fallbackUrlBase: "http://home.microsoft.com/intl/web1997/",
     displayUrlExtras: null,
     locationHints: [
+      { re: /^drudgereport$/i, path: "sites/drudgereport/index.html" },
+      { re: /^msn$/i, path: "sites/msn/index.html" },
       { re: /icq/i, path: "sites/icq/index.html" },
       { re: /pointcast/i, path: "sites/pointcast/index.html" },
       { re: /ebay/i, path: "sites/ebay/index.html" },
@@ -417,9 +419,10 @@
       { re: /hotbot/i, path: "sites/hotbot/index.html" },
       { re: /slashdot/i, path: "sites/slashdot/index.html" },
       { re: /apple/i, path: "sites/apple/index.html" },
-      { re: /microsoft|msn/i, path: "sites/microsoft/index.html" },
+      { re: /\bmsn\b/i, path: "sites/msn/index.html" },
+      { re: /\bmicrosoft\b/i, path: "sites/microsoft/index.html" },
       { re: /altavista|babel/i, path: "sites/altavista/index.html" },
-      { re: /drudge/i, path: "sites/drudge/index.html" },
+      { re: /\bdrudge\b/i, path: "sites/drudge/index.html" },
       { re: /home\.microsoft/i, path: "pages/home.html" }
     ],
     dirSiteKeys: [

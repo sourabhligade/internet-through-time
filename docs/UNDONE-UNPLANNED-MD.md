@@ -43,17 +43,15 @@ Live hub: **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.
 
 ---
 
-## 1. Superceded undone maps — do not implement from these
+## 1. Superceded undone maps — removed
 
-These three plus the 2026-09-20 audit were the incomplete maps. [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) supersedes them as a finding list. They stay historical. Their year counts are not live.
+These five were the old incomplete maps. [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) is the finding list. They were removed 2026-10-04. Do not restore them as implement lists. Open product holes that are still true live in INCOMPLETE-MAP B (period pictures, public URL).
 
-- [x] **H** [`UNDONE.md`](UNDONE.md) — 22-door historical banner 2026-09-30. Body still a 24-door snapshot. Open product holes that are still true live in INCOMPLETE-MAP B (period pictures, public URL).
-- [x] **H** [`OPEN-CHECKLIST.md`](OPEN-CHECKLIST.md) — 22-door historical banner 2026-09-30. Boxes were ticked against a 24/26-door museum.
-- [x] **H / U** [`TODO-FULL-AUDIT.md`](TODO-FULL-AUDIT.md) — 22-door historical banner 2026-09-30. Mix of **S** stop boxes and stale improve todos. Do not dest-farm leftover-20 / leftover-3× unique / restore wiped years from this file.
-- [x] **H** [`FLOW-UNIMPLEMENTED-AND-UNUSED.md`](FLOW-UNIMPLEMENTED-AND-UNUSED.md) — 22-door historical banner 2026-09-30. Unused/delete list is a snapshot, not a delete order.
-- [x] **H** [`AUDIT-MAP-2026-09-23.md`](AUDIT-MAP-2026-09-23.md) — 22-door historical banner 2026-09-30. Not ship law.
-
-[`docs/README.md`](README.md) struck 2026-09-30 (22 doors · 2015+2017 React · leftover-3× unique catalogs empty). These five carry the one-line historical banner.
+- [x] **H** `UNDONE.md` — removed. Was a 24-door snapshot behind a 22-door banner.
+- [x] **H** `OPEN-CHECKLIST.md` — removed. Boxes were ticked against a 24/26-door museum.
+- [x] **H / U** `TODO-FULL-AUDIT.md` — removed. Stop boxes and stale improve todos. Do not dest-farm from memory of that file.
+- [x] **H** `FLOW-UNIMPLEMENTED-AND-UNUSED.md` — removed. Its unused/delete list was a snapshot, not a delete order.
+- [x] **H** `AUDIT-MAP-2026-09-23.md` — removed. Not ship law.
 
 ---
 
@@ -206,7 +204,7 @@ Do not reopen as implement work.
 Nothing here is museum JS, dest HTML, or e2e. Landed 2026-09-30:
 
 1. [x] **Strike** [`docs/README.md`](README.md) to 22 doors / 2015+2017 React live / leftover-3× unique catalogs empty.
-2. [x] **Banner** §1 superceded maps (`UNDONE`, `OPEN-CHECKLIST`, `TODO-FULL-AUDIT`, `FLOW-UNIMPLEMENTED`, `AUDIT-MAP-2026-09-23`) as historical. Point at [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) + this file.
+2. [x] **Remove** §1 superceded maps (`UNDONE`, `OPEN-CHECKLIST`, `TODO-FULL-AUDIT`, `FLOW-UNIMPLEMENTED`, `AUDIT-MAP-2026-09-23`). Finding list is [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md).
 3. [x] **Fix** [`checklists/README.md`](checklists/README.md) blank links and drop `2021.md`. Lean leftover lists rewritten.
 4. [x] **Rewrite or banner** leftover-3× unique year notes (§4) as workshop / empty catalogs.
 5. [x] **Banner** `2022-IMPLEMENT` / `2022-DEST-MAP` 85 dests → disk 25.

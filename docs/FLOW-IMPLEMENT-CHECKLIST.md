@@ -4,7 +4,7 @@
 
 
 **Date:** 2026-09-14  
-**Law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) · [`FLOW-UNIMPLEMENTED-AND-UNUSED.md`](FLOW-UNIMPLEMENTED-AND-UNUSED.md)  
+**Law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md)
 **This pass:** implement every criterion those files allow. Do **not** dest-farm. Do **not** invent dests or brand pixels.
 
 Boxes flip to `[x]` only after disk + e2e (or a named skip with reason).

@@ -194,7 +194,7 @@ Implement leftover-3× unique dests **only when named**. Criteria is not a licen
 | [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) | Visitor I/O I1–I14 |
 | [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) | Vine star · unique leftover-20 not written |
 | [`2022-RESEARCH-MAP.md`](2022-RESEARCH-MAP.md) | Unique leftover-20 not this pass |
-| [`UNDONE.md`](UNDONE.md) | Years with no unique leftover dest map |
+| [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) | Years with no unique leftover dest map. `UNDONE.md` was removed. |
 | [`FLOW-IMPLEMENT-CHECKLIST.md`](FLOW-IMPLEMENT-CHECKLIST.md) | Leftover dest leftover-3× dest face E1–E9 |
 | `scripts/popular-3x-sites.json` | First-strip catalog (not unique-checked) |
 | `scripts/popular-3x3-sites.json` | Third-strip catalog (mostly official) |

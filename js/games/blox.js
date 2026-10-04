@@ -202,6 +202,7 @@
       ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
       ctx.fill();
       ctx.strokeStyle = "#822";
+      ctx.lineWidth = 2;
       ctx.beginPath();
       ctx.moveTo(b.x, b.y + b.r);
       ctx.lineTo(b.x, b.y + b.r + 10);

@@ -235,7 +235,8 @@
     ],
     fallbackUrlBase: "http://home.microsoft.com/intl/web2007/",
     locationHints: [
-      { re: /iphone|safari|apple\.com/i, path: "sites/iphone/index.html" },
+      { re: /^safari3$/i, path: "sites/safari3/index.html" },
+      { re: /\biphone\b|\bsafari\b|apple\.com/i, path: "sites/iphone/index.html" },
       { re: /street.?view/i, path: "sites/streetview/index.html" },
       { re: /gmail/i, path: "sites/gmail/index.html" },
       { re: /facebook|platform/i, path: "sites/fbplat/index.html" },

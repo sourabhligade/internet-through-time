@@ -34,6 +34,29 @@
     ) || document.querySelector("[data-year-game][data-minute-extra]");
     if (!host) return null;
 
+    var incomingRich = !!(
+      (spec.items && spec.items.length) ||
+      (spec.lines && spec.lines.length) ||
+      (spec.targets && spec.targets.length) ||
+      (spec.fields && spec.fields.length) ||
+      (spec.results && spec.results.length) ||
+      (spec.panels && spec.panels.length) ||
+      spec.query ||
+      spec.confirm ||
+      spec.holdLabel
+    );
+    if (host.getAttribute("data-mx-rich") === "1" && !incomingRich) {
+      return host._ittMx || null;
+    }
+    if (!spec.confirm) {
+      var needConfirm = host.getAttribute("data-mx-confirm-need");
+      if (needConfirm) spec.confirm = needConfirm;
+    }
+    if (!spec.query) {
+      var needQuery = host.getAttribute("data-mx-query");
+      if (needQuery) spec.query = needQuery;
+    }
+
     var year = spec.year || host.getAttribute("data-year") || "";
     var gid = spec.id || host.getAttribute("data-game-id") || "extra";
     var kind = spec.kind || host.getAttribute("data-mx-kind") || "pick";
@@ -52,6 +75,17 @@
     var statusEl = host.querySelector("[data-itt-action-status]");
     var startBtn = host.querySelector("[data-game-start]");
     var finBtn = host.querySelector("[data-mx-finish], [data-game-finish]");
+    function unbound(el) {
+      if (!el || !el.parentNode || el.getAttribute("data-mx-bound") !== "1") return el;
+      var fresh = el.cloneNode(true);
+      fresh.removeAttribute("data-mx-bound");
+      el.parentNode.replaceChild(fresh, el);
+      return fresh;
+    }
+    if (host.getAttribute("data-mx-mounted") === "1") {
+      startBtn = unbound(startBtn);
+      finBtn = unbound(finBtn);
+    }
     var hudEl = host.querySelector("[data-mx-hud]");
 
     var running = false;
@@ -647,7 +681,11 @@
     paintBest();
     render();
     setStatus(spec.idleStatus || "Press Start. Incomplete never writes.");
-    return { reset: reset, finish: finish, ready: ready };
+    host.setAttribute("data-mx-mounted", "1");
+    if (incomingRich) host.setAttribute("data-mx-rich", "1");
+    var api = { reset: reset, finish: finish, ready: ready };
+    host._ittMx = api;
+    return api;
   }
 
   ITT.YearExtraMinute = { mount: mount };

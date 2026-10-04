@@ -114,7 +114,8 @@
       { title: "Ice Bucket", path: "sites/icebucket/index.html" }
     ],
     fallbackUrlBase: "http://home.microsoft.com/intl/web2014/",
-    locationHints: [      { re: /musical\.?ly/i, path: "sites/musically14/index.html" },
+    locationHints: [
+      { re: /^applepay$/i, path: "sites/applepay/index.html" },      { re: /musical\.?ly/i, path: "sites/musically14/index.html" },
       { re: /truecrypt/i, path: "sites/truecrypt/index.html" },
       { re: /whatsapp/i, path: "sites/whatsapp/index.html" },
       { re: /heartbleed|openssl|cve-2014-0160/i, path: "sites/heartbleed/index.html" },

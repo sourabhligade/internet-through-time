@@ -319,7 +319,8 @@
     urlMap: urlMap,
     locationHints: [
       { re: /photobucket/i, path: "sites/photobucket/index.html" },
-      { re: /itunes|99.?cent|music store/i, path: "sites/itunes/index.html" },
+      { re: /ituneswin|itunes for windows|itunes windows/i, path: "sites/ituneswin/index.html" },
+      { re: /\bitunes\b|99.?cent|music store/i, path: "sites/itunes/index.html" },
       { re: /wordpress|\bwp\b/i, path: "sites/wordpress/index.html" },
       { re: /linkedin/i, path: "sites/linkedin/index.html" },
       { re: /myspace|my space/i, path: "sites/myspace/index.html" },

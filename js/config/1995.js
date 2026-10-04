@@ -574,6 +574,10 @@
     fallbackUrlBase: "http://home.nerf.edu/web1995/",
     displayUrlExtras: null,
     locationHints: [
+      { re: /^allaboutjazz$/i, path: "sites/allaboutjazz/index.html" },
+      { re: /^cyclingnews$/i, path: "sites/cyclingnews/index.html" },
+      { re: /^dejanews$/i, path: "sites/dejanews/index.html" },
+      { re: /^newgrounds$/i, path: "sites/newgrounds/index.html" },
       { re: /yahoo/i, path: "sites/yahoo/index.html" },
       { re: /amazon/i, path: "sites/amazon/index.html" },
       { re: /auction/i, path: "sites/auctionweb/index.html" },
@@ -585,9 +589,9 @@
       { re: /whitehouse|white\s*house/i, path: "sites/whitehouse/index.html" },
       { re: /hotwired|wired/i, path: "sites/hotwired/index.html" },
       { re: /cool/i, path: "pages/cool.html" },
-      { re: /new/i, path: "pages/whats-new.html" },
-      { re: /about/i, path: "pages/about.html" },
-      { re: /home|nerf/i, path: "pages/home.html" }
+      { re: /\bnew\b/i, path: "pages/whats-new.html" },
+      { re: /\babout\b/i, path: "pages/about.html" },
+      { re: /\bhome\b|nerf/i, path: "pages/home.html" }
     ],
     dirSiteKeys: [
       "yahoo",

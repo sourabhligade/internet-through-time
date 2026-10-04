@@ -248,7 +248,7 @@ test.describe("atlas hallway — all flows", () => {
     await expect(officialYears).toHaveCount(25);
   });
 
-  test("first night is the real 5-stop walk; hallway ends at 2017", async ({ page }) => {
+  test("first night is the real 5-stop walk; spine keeps 2021 and 2022", async ({ page }) => {
     await page.goto("/atlas/");
     const night = page.locator("#trail-first-night");
     await expect(night).toContainText(/Stops in 2010/i);

@@ -4,7 +4,7 @@
 **Tree:** `museum/1994-2020-lean`  
 **Status:** Current incomplete inventory from the markdown full-read, the dest-true e2e last-line pass, and a live-disk recount. **Not ship law.**  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json` · `scripts/itt_gate.py` `SHIP_YEARS`. Live tree wins.  
-**This file supersedes as a finding list:** [`UNDONE.md`](UNDONE.md) (2026-09-26, still 24 doors), [`OPEN-CHECKLIST.md`](OPEN-CHECKLIST.md) (still 24/26 doors), [`TODO-FULL-AUDIT.md`](TODO-FULL-AUDIT.md) (2026-09-20, still 24 doors). Those notes stay historical. Do not treat their year counts as live.
+**This file is the finding list.** The older maps `UNDONE.md`, `OPEN-CHECKLIST.md`, and `TODO-FULL-AUDIT.md` were removed 2026-10-04 (they still said 24 or 26 doors). Do not restore them. Do not treat their year counts as live.
 
 GitNexus before this write: `list_repos` = `internet-through-time` (index 1 commit behind HEAD, last indexed commit `4873fdf26`). `detect_changes({scope:"all"})` = 25 changed symbols / 15 dirty files / **MEDIUM** on the already-dirty docs tree. `impact` on `UNDONE.md` “What is undone” = **UNKNOWN**, 0 callers. Confirmed: no `js` / `py` / `jsx` / `yml` / `sh` import of `UNDONE.md`, `OPEN-CHECKLIST.md`, or `TODO-FULL-AUDIT.md`. This file is a new research note. No museum code, dest HTML, or e2e was edited.
 
@@ -301,7 +301,7 @@ Specs still contain wiped-year leftovers with year string `''` or skip-if-wiped:
 
 ### C.5 CODE-STRUCTURE dest-true pack count
 
-[`CODE-STRUCTURE.md`](CODE-STRUCTURE.md) “dest-true CI pack **16** specs”. Live pack is **18**. Ghost filenames (`e2e/2016--3x-detail.spec.js`, `e2e/-mvp.spec.js`, `e2e-mvp.spec.js`, `e2e/2021-mvp.spec.js`) are **gone** from live `ci.sh` / `ci.yml` / `CI_E2E_ALLOWLIST`. [`PROD-GRADE-REAUDIT.md`](PROD-GRADE-REAUDIT.md) and [`TODO-FULL-AUDIT.md`](TODO-FULL-AUDIT.md) still describe those ghosts.
+[`CODE-STRUCTURE.md`](CODE-STRUCTURE.md) “dest-true CI pack **16** specs”. Live pack is **18**. Ghost filenames (`e2e/2016--3x-detail.spec.js`, `e2e/-mvp.spec.js`, `e2e-mvp.spec.js`, `e2e/2021-mvp.spec.js`) are **gone** from live `ci.sh` / `ci.yml` / `CI_E2E_ALLOWLIST`. [`PROD-GRADE-REAUDIT.md`](PROD-GRADE-REAUDIT.md) and the removed `TODO-FULL-AUDIT.md` still describe those ghosts.
 
 ---
 
@@ -312,13 +312,13 @@ Canonical year list is the hub + `js/year-card.json` + [`DISK-TRUTH.md`](DISK-TR
 | File | What it still says |
 |------|--------------------|
 | [`docs/README.md`](README.md) | Hub **24** · **2015 wiped** · leftover-3× unique dest-true dests still “implemented” |
-| [`UNDONE.md`](UNDONE.md) | 24 doors · 2015 wiped · dest-lock table 2015–2016 50/57 · unique leftover-20 on 2017 **and** a wiped year · dest-true 511 passed |
-| [`OPEN-CHECKLIST.md`](OPEN-CHECKLIST.md) | 24/26 doors · leftover stops · 2015 wiped · leftover-3× “=3 / 2021=5” |
-| [`TODO-FULL-AUDIT.md`](TODO-FULL-AUDIT.md) | 24 doors · 2015 wiped · 2021 as a door · dest-true pack ghosts · 2022 **85 dests** |
+| `UNDONE.md` (removed) | 24 doors · 2015 wiped · dest-lock table 2015–2016 50/57 · unique leftover-20 on 2017 **and** a wiped year · dest-true 511 passed |
+| `OPEN-CHECKLIST.md` (removed) | 24/26 doors · leftover stops · 2015 wiped · leftover-3× “=3 / 2021=5” |
+| `TODO-FULL-AUDIT.md` (removed) | 24 doors · 2015 wiped · 2021 as a door · dest-true pack ghosts · 2022 **85 dests** |
 | [`2015-READ-FIRST.md`](2015-READ-FIRST.md) | **Status: WIPED.** No hub card. Hub is 24 |
 | [`2010-READ-FIRST.md`](2010-READ-FIRST.md) · [`2013-READ-FIRST.md`](2013-READ-FIRST.md) · [`2014-READ-FIRST.md`](2014-READ-FIRST.md) · [`2016-READ-FIRST.md`](2016-READ-FIRST.md) · [`2017-READ-FIRST.md`](2017-READ-FIRST.md) | stale hub / 2015 wiped |
 | [`2022-DEST-MAP.md`](2022-DEST-MAP.md) · [`2022-IMPLEMENT.md`](2022-IMPLEMENT.md) | **85 dests** vs disk **25** |
-| [`EVERY-YEAR-FLOW-CHECKLIST.md`](EVERY-YEAR-FLOW-CHECKLIST.md) · [`YEAR-BY-YEAR-RESEARCH-STEPS.md`](YEAR-BY-YEAR-RESEARCH-STEPS.md) · [`FLOW-UNIMPLEMENTED-AND-UNUSED.md`](FLOW-UNIMPLEMENTED-AND-UNUSED.md) · [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) · [`SOURCES.md`](SOURCES.md) · [`AUDIT-MAP-2026-09-23.md`](AUDIT-MAP-2026-09-23.md) | stale hub and/or 2015 wiped |
+| [`EVERY-YEAR-FLOW-CHECKLIST.md`](EVERY-YEAR-FLOW-CHECKLIST.md) · [`YEAR-BY-YEAR-RESEARCH-STEPS.md`](YEAR-BY-YEAR-RESEARCH-STEPS.md) · `FLOW-UNIMPLEMENTED-AND-UNUSED.md` (removed) · [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) · [`SOURCES.md`](SOURCES.md) · `AUDIT-MAP-2026-09-23.md` (removed) | stale hub and/or 2015 wiped |
 | [`PROD-GRADE-AUDIT.md`](PROD-GRADE-AUDIT.md) · [`PROD-GRADE-REAUDIT.md`](PROD-GRADE-REAUDIT.md) · [`PRODUCT-IMPROVE.md`](PRODUCT-IMPROVE.md) · [`PUSHED-CODE-FIX-MAP.md`](PUSHED-CODE-FIX-MAP.md) | public-URL / ghost-spec snapshot; parts of the reaudit body predate the 18-file allowlist fix |
 | [`FLOW-CHECK-DIAGRAM.md`](FLOW-CHECK-DIAGRAM.md) | §§1–4 are 22-door. §§5–6 still name years that are not doors |
 | [`LEFTOVER-3X-UNIQUE-LINKS.md`](LEFTOVER-3X-UNIQUE-LINKS.md) · [`2007-LEFTOVER-3X-UNIQUE.md`](2007-LEFTOVER-3X-UNIQUE.md) · [`2010-LEFTOVER-3X-UNIQUE.md`](2010-LEFTOVER-3X-UNIQUE.md) · [`2022-LEFTOVER-3X-UNIQUE.md`](2022-LEFTOVER-3X-UNIQUE.md) | leftover-3× unique as a live catalog; live catalogs are empty |

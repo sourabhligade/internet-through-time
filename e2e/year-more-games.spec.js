@@ -112,3 +112,36 @@ for (const year of YEARS) {
     }
   });
 }
+
+/** 2003 Play buttons that used to return before a field existed. */
+const CABINETS_2003 = [
+  ["game-5.html", "skypenote"],
+  ["extra-c.html", "top8note"],
+  ["extra-e.html", "delnote"],
+  ["extra-f.html", "pointclick"],
+  ["extra-g.html", "kolturn"],
+  ["extra-h.html", "ninetynine"],
+];
+
+for (const [file, id] of CABINETS_2003) {
+  test(`2003 ${id} Play starts · empty Finish writes nothing · star stays empty`, async ({ page }) => {
+    const key = "itt03-game-" + id;
+    await page.goto("/years/2003/sites/playable/" + file + "?test=1");
+    await page.evaluate((k) => {
+      localStorage.removeItem(k);
+      localStorage.removeItem("itt03-photobucket");
+    }, key);
+    const host = page.locator('[data-more-game][data-game-id="' + id + '"]');
+    await expect(host).toBeVisible();
+    await page.locator("[data-game-finish]").click();
+    expect(await page.evaluate((k) => localStorage.getItem(k), key)).toBeFalsy();
+    await page.locator("[data-game-start]").click();
+    await page.locator("[data-game-finish]").click();
+    await expect.poll(() => page.evaluate((k) => localStorage.getItem(k), key), { timeout: 8000 }).toBeTruthy();
+    const blob = JSON.parse((await page.evaluate((k) => localStorage.getItem(k), key)) || "{}");
+    expect(blob.real, key).toBe(true);
+    expect(blob.multiStep, key).toBe(true);
+    expect(String(blob.year), key).toBe("2003");
+    expect(await page.evaluate(() => localStorage.getItem("itt03-photobucket"))).toBeFalsy();
+  });
+}

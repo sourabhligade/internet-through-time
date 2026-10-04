@@ -45,6 +45,17 @@
   }
   function writeBest() {
     if (beats <= 0) return;
+    var onCabinet = /\/years\/2013\//.test(String(location.pathname || ""));
+    if (!onCabinet) {
+      if (window.ITTGames) {
+        window.ITTGames.addScore("loopsix", beats, "Loop");
+        var board = document.getElementById("score-board");
+        if (board && window.ITTGames.renderBoard) window.ITTGames.renderBoard(board, "loopsix");
+      }
+      if (beats > best) best = beats;
+      paint();
+      return;
+    }
     if (YG && YG.saveBest) {
       YG.saveBest("loopsix", beats, { year: "2013", merge: { multiStep: true, loop: beats } });
     } else {

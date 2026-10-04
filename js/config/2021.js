@@ -79,7 +79,7 @@
   var i;
   for (i = 0; i < rooms.length; i++) {
     if (!urlMap[rooms[i]]) {
-      urlMap[rooms[i]] = "http://museum.local/years/2021/" + rooms[i];
+      urlMap[rooms[i]] = "http://home.microsoft.com/intl/web2021/" + rooms[i];
     }
   }
   ITT.configs["2021"] = {
@@ -119,7 +119,7 @@
     ],
     fallbackUrlBase: "http://home.microsoft.com/intl/web2021/",
     locationHints: [
-      { re: /att|tracking|ask app|idfa|not to track/i, path: "sites/att/index.html" },
+      { re: /\batt\b|\btracking\b|ask app|idfa|not to track/i, path: "sites/att/index.html" },
       { re: /signal/i, path: "sites/signal/index.html" },
       { re: /copilot|waitlist/i, path: "sites/copilot/index.html" },
       { re: /meta|rename/i, path: "sites/meta/index.html" },

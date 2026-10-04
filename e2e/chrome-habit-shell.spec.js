@@ -66,6 +66,8 @@ test.describe("Chrome habit shell labels", () => {
   test("React hall does not list absent years", async ({ page }) => {
     await page.goto("/app/index.html");
     await expect(page.locator(".lede")).toContainText("2015 and 2017 are the React doors.");
+    await expect(page.locator(".cards .year")).toHaveText(["2015", "2017"]);
+    await expect(page.locator(".cards .star")).toHaveText(["Periscope Go LIVE", "Face ID"]);
     await expect(page.locator(".hall")).not.toContainText(/absent/i);
     await expect(page.locator(".hall")).not.toContainText(/boarded/i);
     await expect(page.locator('a[href="../index.html"]')).toBeVisible();
@@ -79,6 +81,8 @@ test.describe("Chrome habit shell labels", () => {
       await expect(page.locator(".door-2014")).toHaveCount(0);
       await expect(page.locator(".habit-tab")).toHaveText("Chrome habit");
       await expect(page.locator(".habit-location")).toHaveValue(new RegExp("google\\.com/web" + year + "/"));
+      await expect(page.locator(".year-star")).toHaveText(year === "2015" ? "Periscope" : "Face ID");
+      await expect(page.getByRole("button", { name: "Lock", exact: true })).toHaveCount(0);
     }
   });
 

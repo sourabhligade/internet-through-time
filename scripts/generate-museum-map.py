@@ -14,10 +14,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "dev" / "museum-map"
-LOCK_4X = {"2012", "2013", "2016", "2017", "", ""}
-NO_SECOND = {"2013", ""}
+LOCK_4X = {"2012", "2013", "2016", "2017"}
+NO_SECOND = {"2013"}
 BOARDED = []
-WIPED = ["2023", "2024", "2025"]
+WIPED = ["2018", "2019", "2023", "2024", "2025"]
 
 
 def dump_disk() -> dict:
@@ -169,7 +169,7 @@ def render(data: dict) -> str:
         )
     for y in WIPED:
         ticks.append(
-            f'<div class="tick board"><div class="y">{escape(y)}</div><div class="g">wiped</div></div>'
+            f'<div class="tick board"><div class="y">{escape(y)}</div><div class="g">absent</div></div>'
         )
 
     open_labels = [rec["year"] for rec in years]
@@ -204,7 +204,7 @@ def render(data: dict) -> str:
 <p class="legend">
   <span><i style="background:#3fb950"></i>forest</span>
   <span><i style="background:#58a6ff"></i>lean door</span>
-  <span><i style="background:#6e7681"></i>boarded</span>
+  <span><i style="background:#6e7681"></i>absent</span>
   <span><i style="background:#d4a017"></i>gold label</span>
 </p>
 
@@ -212,7 +212,7 @@ def render(data: dict) -> str:
 <div class="machine">
   <div class="slot ok"><b>leftover-2×</b> <code>*-lx</code> + <code>*-d2</code> on every live dest. Land → trap/empty never write → complete leftover only → Next 200.</div>
   <div class="slot ok"><b>leftover-3× first</b> pop3x. Unused leftover dests. Never official n=1–10.</div>
-  <div class="slot lock"><b>leftover-3× second</b> pop-more. Same rule. 2013 /  stay unnamed — no dest-farm.</div>
+  <div class="slot lock"><b>leftover-3× second</b> pop-more. Same rule. 2013 stays unnamed — no dest-farm.</div>
   <div class="slot ok"><b>leftover-3× third</b> pop3-* may sit on official dests.</div>
   <div class="slot lock"><b>leftover-4×</b> lock 0 on {escape(", ".join(sorted(LOCK_4X)))}.</div>
 </div>
@@ -228,7 +228,7 @@ def render(data: dict) -> str:
       <li>smoke-production.py</li>
       <li>audit-internal-links.py — 440,253 / 0 broken</li>
       <li>test-authenticity.py — 84/84</li>
-      <li>test-pipeline.py — sitemap lists ship years only (2023+ wiped)</li>
+      <li>test-pipeline.py — sitemap lists ship years only (2023–2025 absent)</li>
       <li>check-5x-contract.py</li>
       <li>audit-mock-flows.js</li>
       <li>check-all-years.py — 29/29</li>
@@ -238,7 +238,7 @@ def render(data: dict) -> str:
   <div class="card">
     <h3>E2E ship pack</h3>
     <ul class="plain">
-      <li>oss-visitor-gate — enter all 29</li>
+      <li>oss-visitor-gate — enter all 27</li>
       <li>hub · atlas · 3× links · all-years smoke</li>
       <li>Gold-A · popular 3× · one-thing</li>
       <li>2005–2010 leftover-4× ·  CUT-DOUBLE + 5×</li>
@@ -252,10 +252,11 @@ def render(data: dict) -> str:
 <h2 id="leave">Still leftover by law</h2>
 <div class="row">
   <span class="pill lock">2013 leftover-3× second — no dest-farm</span>
-  <span class="pill lock"> leftover-3× second — official 10 + first 3 = 13 dests</span>
+  <span class="pill lock">leftover-3× second — official 10 + first 3 = 13 dests</span>
   <span class="pill lock">leftover-4× on lock years</span>
-  <span class="pill lock">CUT-OPEN 2022+ wiped</span>
-  <span class="pill lock">do not restore 2013 /  forests</span>
+  <span class="pill lock">2022 is an open HTML door</span>
+  <span class="pill lock">2018, 2019, and 2023–2025 stay absent</span>
+  <span class="pill lock">do not restore 2013 or the forests</span>
 </div>
 
 <p class="foot">Generated from live configs. Trust order: years/ → itt_gate.py → DISK-TRUTH. Do not treat this page as a visitor room.</p>

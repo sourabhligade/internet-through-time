@@ -498,7 +498,15 @@
     fallbackUrlBase: "http://home.nerf.edu/web1996/",
     displayUrlExtras: null,
     locationHints: [
-      { re: /yahoo/i, path: "sites/yahoo/index.html" },
+      { re: /^athome$/i, path: "sites/athome/index.html" },
+      { re: /^cnnsi$/i, path: "sites/cnnsi/index.html" },
+      { re: /^flash$/i, path: "sites/flash/index.html" },
+      { re: /^homedepot$/i, path: "sites/homedepot/index.html" },
+      { re: /^yahoohotjobs$/i, path: "sites/yahoohotjobs/index.html" },
+      { re: /^yahoojapan$/i, path: "sites/yahoojapan/index.html" },
+      { re: /^yahookids$/i, path: "sites/yahookids/index.html" },
+      { re: /^yahoonews$/i, path: "sites/yahoonews/index.html" },
+      { re: /\byahoo\b/i, path: "sites/yahoo/index.html" },
       { re: /hotmail/i, path: "sites/hotmail/index.html" },
       { re: /spacejam|space.?jam/i, path: "sites/spacejam/index.html" },
       { re: /amazon/i, path: "sites/amazon/index.html" },
@@ -506,10 +514,10 @@
       { re: /geocit/i, path: "sites/geocities/index.html" },
       { re: /altavista/i, path: "sites/altavista/index.html" },
       { re: /excite/i, path: "sites/excite/index.html" },
-      { re: /cnn/i, path: "sites/cnn/index.html" },
+      { re: /\bcnn\b/i, path: "sites/cnn/index.html" },
       { re: /netscape/i, path: "sites/netscape/index.html" },
       { re: /futurewave|flash/i, path: "sites/plugin/index.html" },
-      { re: /home|nerf/i, path: "pages/home.html" }
+      { re: /\bhome\b|nerf/i, path: "pages/home.html" }
     ],
     dirSiteKeys: [
       "yahoo",

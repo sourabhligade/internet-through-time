@@ -16,17 +16,23 @@
       <a href="../../index.html">Hub</a>
     </header>
     <section class="games-panel">
-      <div class="itt-year-game yg-shell" data-year-game data-year="2006" data-game-id="loopsix" data-yg-goal="Hold to fill a 6s loop. Release in the gold band." data-yg-next-href="index.html" data-yg-next-label="Arcade lobby">
+      <div class="itt-year-game yg-shell" data-year-game data-year="2013" data-game-id="loopsix" data-yg-goal="Six beats close a loop. 15 seconds never scores." data-yg-next-href="index.html" data-yg-next-label="Arcade lobby">
       <h1>Loop Six</h1>
-      <p style="font-size:12px;margin:0 0 8px">Museum original · 6-second hold genre (Vine-class 2013). Not Vine software.</p>
-      <div class="flash-banner">Hold 5–6 seconds · gold band posts · 8 loops · 3 misses and you’re out</div>
+      <p style="font-size:12px;margin:0 0 8px">Museum original · Vine-class 2013 cabinet. Not Vine software. This wing writes the arcade board only.</p>
+      <div class="flash-banner">New Game, then six beats. 15 seconds never scores.</div>
       <div class="play-hud">
         <button type="button" id="play-start" data-game-start>Start / Hold</button>
         <span>Score: <b id="play-score" data-game-score>0</b></span>
         <span>Combo: <b data-game-combo>0</b></span>
         <span>Best: <b data-game-best>0</b></span>
-        <span id="play-status" style="color:#444">Hold to fill the loop</span>
+        <span id="play-status" data-itt-action-status style="color:#444">New Game. Incomplete never writes.</span>
       </div>
+      <p data-loopsix-track>○ ○ ○ ○ ○ ○</p>
+      <p>
+        <button type="button" data-peg-city>Beat</button>
+        <button type="button" data-peg-city>Beat 2</button>
+        <button type="button" data-peg-trap>15s (trap)</button>
+      </p>
       <div class="play-stage">
         <canvas id="game-canvas" width="320" height="400" data-game="loopsix"></canvas>
       </div>

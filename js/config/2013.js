@@ -133,6 +133,8 @@
     ],
     fallbackUrlBase: "http://home.microsoft.com/intl/web2013/",
     locationHints: [
+      { re: /^ios7$/i, path: "sites/ios7/index.html" },
+      { re: /^iphone5s$/i, path: "sites/iphone5s/index.html" },
       { re: /vine/i, path: "sites/vine/record.html" },
       { re: /instagram|ig.?video/i, path: "sites/instagram/video.html" },
       { re: /snapchat|stories/i, path: "sites/snapchat/story.html" },

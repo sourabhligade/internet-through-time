@@ -141,6 +141,8 @@
     ],
     fallbackUrlBase: "http://home.microsoft.com/intl/web2010/",
     locationHints: [
+      { re: /^chromewebstore$/i, path: "sites/chromewebstore/index.html" },
+      { re: /^googlebuzz$/i, path: "sites/googlebuzz/index.html" },
       { re: /instagram|instagr\.am/i, path: "sites/instagram/index.html" },
       { re: /reddit/i, path: "sites/reddit/index.html" },
       { re: /ipad/i, path: "sites/ipad/index.html" },
@@ -153,8 +155,8 @@
       { re: /imgur/i, path: "sites/imgur/index.html" },
       { re: /groupon/i, path: "sites/groupon/index.html" },
       { re: /wave/i, path: "sites/wave/index.html" },
-      { re: /google/i, path: "sites/google/index.html" },
-      { re: /chrome/i, path: "sites/chrome/index.html" },
+      { re: /\bgoogle\b/i, path: "sites/google/index.html" },
+      { re: /\bchrome\b/i, path: "sites/chrome/index.html" },
       { re: /nexus|android/i, path: "sites/android/index.html" },
     ]
   };

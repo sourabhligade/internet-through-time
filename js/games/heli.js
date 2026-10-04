@@ -166,6 +166,7 @@
   function keyDown(e) {
     if (e.code === "Space" || e.key === " ") {
       if (e.preventDefault) e.preventDefault();
+      if (e.repeat) return true;
       if (window.ITT && ITT.YearGame && ITT.YearGame.isPaused && ITT.YearGame.isPaused()) return true;
       if (!running) reset();
       hold = true;
@@ -178,8 +179,6 @@
   }
   document.addEventListener("keydown", keyDown, true);
   document.addEventListener("keyup", keyUp, true);
-  window.addEventListener("keydown", keyDown, true);
-  window.addEventListener("keyup", keyUp, true);
   if (window.ITT && ITT.YearGame && ITT.YearGame.focusHost) {
     ITT.YearGame.focusHost("[data-year-game]");
   }

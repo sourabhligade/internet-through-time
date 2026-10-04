@@ -58,7 +58,7 @@
   var i;
   for (i = 0; i < rooms.length; i++) {
     if (!urlMap[rooms[i]]) {
-      urlMap[rooms[i]] = "http://museum.local/years/2022/" + rooms[i];
+      urlMap[rooms[i]] = "https://www.google.com/web2022/" + rooms[i];
     }
   }
 

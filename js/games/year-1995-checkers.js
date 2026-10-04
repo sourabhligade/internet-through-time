@@ -364,10 +364,7 @@
       endGame(turn === 1 ? "win" : "loss");
       return;
     }
-    if (!countSide(board, turn) || !allMoves(board, turn, null).length) {
-      endGame(turn === 1 ? "loss" : "win");
-      return;
-    }
+    // The side that just moved is still `turn`. Their own mobility is judged on their next turn.
     // draw-ish: 80 moves without capture tracked simply by moveCount
     turn = opp;
     if (vsAi && turn === -1) {

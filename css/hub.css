@@ -1280,10 +1280,6 @@ body {
   color: #5eb0ff;
 }
 
-.year-card.available:not(.y1996):not(.y1999):not(.y2007):not({
-  filter: brightness(0.92);
-}
-
 /* Compare table: slight era column tint for scannability (1994–1999 table) */
 .compare-table:not(.compare-2000s):not(.compare-late) th:nth-child(2) { background: #d8d8d8; } /* 1994 */
 .compare-table:not(.compare-2000s):not(.compare-late) th:nth-child(3) { background: #c8e0e0; } /* 1995 */

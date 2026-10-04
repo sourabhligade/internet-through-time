@@ -43,7 +43,7 @@
   var i;
   for (i = 0; i < rooms.length; i++) {
     if (!urlMap[rooms[i]]) {
-      urlMap[rooms[i]] = "http://museum.local/years/2020/" + rooms[i];
+      urlMap[rooms[i]] = "http://home.microsoft.com/intl/web2020/" + rooms[i];
     }
   }
   ITT.configs["2020"] = {

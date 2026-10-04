@@ -601,6 +601,7 @@
       return null;
     },
     locationHints: [
+      { re: /^netscape$/i, path: "sites/netscape/index.html" },
       { re: /exploratorium/i, path: "sites/exploratorium/index.html" },
       { re: /louvre|weblouvre/i, path: "sites/weblouvre/index.html" },
 

@@ -512,20 +512,34 @@
       }, startAt);
     }
 
+    function haltIframeNetwork() {
+      try {
+        if (iframe && iframe.contentWindow && typeof iframe.contentWindow.stop === "function") {
+          iframe.contentWindow.stop();
+        }
+      } catch (eHalt) { /* detached or not yet a document */ }
+    }
+
     function setIframeSrc(path) {
       var abs = absContentUrl(path);
       var prevAbs = iframe.getAttribute("src") || "";
       var prevNorm = normalizePath(prevAbs).split("?")[0];
       var nextNorm = normalizePath(path).split("?")[0];
+      var gen = loadGen;
+      /* Drop the previous document's subresources before the next request. */
+      haltIframeNetwork();
       if (prevNorm === nextNorm && prevAbs.indexOf("about:") !== 0) {
         ignoreIframeLoad = true;
         iframe.src = "about:blank";
-        // rAF: faster than fixed 20ms timeout for same-document reload
+        // rAF: faster than fixed 20ms timeout for same-document reload.
+        // A newer navigate bumps loadGen; this frame must not restore the old room.
         requestAnimationFrame(function () {
+          if (gen !== loadGen) return;
           ignoreIframeLoad = false;
           iframe.src = abs;
         });
       } else {
+        ignoreIframeLoad = false;
         iframe.src = abs;
       }
     }
@@ -567,7 +581,9 @@
 
     function stopLoad() {
       loadGen++;
+      ignoreIframeLoad = false;
       clearLoadTimers();
+      haltIframeNetwork();
       loading = false;
       if (throbber) throbber.classList.add("idle");
       if (browserEl) browserEl.classList.remove("loading");
@@ -996,14 +1012,16 @@
       var path = pathFromIframe();
       if (!path || path === "about:blank" || path.indexOf("about:") === 0) return;
 
-      if (path.indexOf("pages/error/") === 0) {
+      /* A focused address bar is mid-entry. A late load must not replace it. */
+      var locationBusy = locationInput && document.activeElement === locationInput;
+      if (!locationBusy && path.indexOf("pages/error/") === 0) {
         try {
           var attempted = sessionStorage.getItem("itt-last-url");
           if (locationInput) locationInput.value = attempted || displayUrl(path);
         } catch (e1) {
           if (locationInput) locationInput.value = displayUrl(path);
         }
-      } else if (locationInput) {
+      } else if (!locationBusy && locationInput) {
         locationInput.value = displayUrl(path);
       }
       if (windowTitle) windowTitle.textContent = displayTitle(path);

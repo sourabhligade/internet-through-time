@@ -20,6 +20,15 @@
   var board = [];
   var state = "idle";
   var turn = 1;
+  var aiTimer = 0;
+  var lobbyTimer = 0;
+
+  function clearPending() {
+    if (aiTimer) clearTimeout(aiTimer);
+    if (lobbyTimer) clearTimeout(lobbyTimer);
+    aiTimer = 0;
+    lobbyTimer = 0;
+  }
 
   function key() {
     return YG ? YG.storageKey("connect4", "1997") : "itt97-game-connect4";
@@ -143,7 +152,8 @@
     }
     turn = 2;
     setStatus("Computer…");
-    setTimeout(aiMove, 400);
+    if (aiTimer) clearTimeout(aiTimer);
+    aiTimer = setTimeout(aiMove, 400);
   }
 
   function aiMove() {
@@ -197,6 +207,7 @@
   }
 
   function findGame() {
+    clearPending();
     if (startBtn) startBtn.disabled = true;
     state = "lobby";
     var lines = [
@@ -211,7 +222,7 @@
       if (lobbyEl) lobbyEl.textContent += lines[i] + "\n";
       i++;
       if (i < lines.length) {
-        setTimeout(step, YG && YG.isFast() ? 50 : 300);
+        lobbyTimer = setTimeout(step, YG && YG.isFast() ? 50 : 300);
       } else {
         reset();
         state = "play";
@@ -228,6 +239,7 @@
   if (resignBtn) {
     resignBtn.addEventListener("click", function () {
       if (state !== "play") return;
+      clearPending();
       state = "over";
       setStatus("You resign.");
       saveStats("loss");

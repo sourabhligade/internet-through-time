@@ -198,7 +198,7 @@ Other same-year stand-ins that were looked for and not found: no `lycos` in 1995
 
 ### 7.2 Which “no index.html” files are the trail (disk)
 
-The auditor in `scripts/audit-year-flows.py` accepts the first HTML file in a dest folder. A bare folder URL still needs `index.html`. Museum grade in [`TODO-FULL-AUDIT.md`](TODO-FULL-AUDIT.md) does not define itself as an index alias.
+The auditor in `scripts/audit-year-flows.py` accepts the first HTML file in a dest folder. A bare folder URL still needs `index.html`. Museum grade in the removed `TODO-FULL-AUDIT.md` did not define itself as an index alias. Live law is [`DISK-TRUTH.md`](DISK-TRUTH.md).
 
 These trail hrefs already name the file that exists. An `index.html` is not how the trail is written:
 
