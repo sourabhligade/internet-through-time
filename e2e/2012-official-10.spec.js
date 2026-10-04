@@ -73,7 +73,6 @@ const YEARS = [
     leftover: [
       ["/years/2012/sites/pinterest/index.html", "itt12-pin-lx"],
       ["/years/2012/sites/facebook/ipo.html", "itt12-fb-ipo-lx"],
-      ["/years/2012/sites/facebook/index.html", "itt12-facebook-lx"],
       ["/years/2012/sites/iphone/maps.html", "itt12-maps-lx"],
       ["/years/2012/sites/wikipedia/sopa.html", "itt12-sopa-lx"],
       ["/years/2012/sites/medium/index.html", "itt12-pop-medium-lx"],

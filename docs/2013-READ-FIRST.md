@@ -1,10 +1,10 @@
 # 2013 — READ FIRST
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 **Date:** 2026-09-08  
-**Status:** **LIVE lean door** (CUT-OPEN). Star = Vine 6s `itt13-vine-posts`. Hub **22 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2022). **2009 boarded.** **2015 is a React door.** **2023–2025 wiped.** Do not `git checkout` an old 2013 forest.  
+**Status:** **LIVE lean door** (CUT-OPEN). Star = Vine 6s `itt13-vine-posts`. Hub **27 years open** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Do not `git checkout` an old 2013 forest.  
 **Prefix:** `itt13-*`  
 **Official 10 keys already live in `flow-trails.js` — dest paths must match.**  
 **Leftover:** 2× ×2 on every dest HTML. Leftover 3× first (Ask.fm · Whisper · YouTube) + second (Chrome · Medium) + third. Leftover 4× **0**.

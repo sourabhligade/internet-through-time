@@ -4,8 +4,7 @@ import card from "../../js/year-card.json";
 import { OfficialStop } from "./OfficialStop.jsx";
 import { YearRails } from "./YearRails.jsx";
 
-export function YearRail({ year, star: _star, trail, also, all, guided, stopByKey, startTitle, startBody, about }) {
-  void _star;
+export function YearRail({ year, star, trail, also, all, guided, stopByKey, startTitle, startBody, about }) {
   const [view, setView] = useState("start");
   const [label, setLabel] = useState("Starting Point");
   const location = useLocation();
@@ -77,6 +76,7 @@ export function YearRail({ year, star: _star, trail, also, all, guided, stopByKe
         <a href="../index.html">Museum</a>
         <Link to="/">React doors</Link>
         <strong>{year}</strong>
+        {star ? <span className="year-star">{star}</span> : null}
         <em>{label}</em>
       </header>
       <YearRails

@@ -4,10 +4,10 @@ const { test, expect } = require('@playwright/test');
 
 const FLOWS = [
   { suf: 'pin', path: '/years/2012/sites/pinterest/index.html', next: /facebook\/ipo/ },
-  { suf: 'fb-ipo', path: '/years/2012/sites/facebook/ipo.html', next: /index\.html/ },
-  { suf: 'facebook', path: '/years/2012/sites/facebook/index.html', next: /iphone\/maps/ },
+  { suf: 'fb-ipo', path: '/years/2012/sites/facebook/ipo.html', next: /iphone\/maps/ },
+  { suf: 'facebook', path: '/years/2012/sites/facebook/index.html', next: /instagram\/android/ },
   { suf: 'maps', path: '/years/2012/sites/iphone/maps.html', next: /wikipedia\/sopa/ },
-  { suf: 'sopa', path: '/years/2012/sites/wikipedia/sopa.html', next: /instagram\/android/ },
+  { suf: 'sopa', path: '/years/2012/sites/wikipedia/sopa.html', next: /medium\/index/ },
 ];
 
 async function getKey(page, key) {

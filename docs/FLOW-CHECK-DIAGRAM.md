@@ -1,10 +1,10 @@
 # Flow-check diagram
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **24 doors** (1994–2017). **2011 is live HTML.** **2015 and 2017 are React.** **2018–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2011 is live HTML.** **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 **Date:** 2026-09-20  
-**Live check updated:** 2026-10-02. Sections 1–4 are the 24-door walk. Sections 5–6 are the 2026-09-20 snapshot and still name years that are not doors.  
+**Live check updated:** 2026-10-02. Sections 1–4 are the 27-door walk. Sections 5–6 are the 2026-09-20 snapshot and still name years that are not doors.  
 **Status:** Check map. Not dest-farm.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md).  
 **Dest-true I/O:** [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md).  
@@ -16,7 +16,7 @@
 
 ## 1. Museum door (24 open years)
 
-Open doors: 1994–2017. 2015 and 2017 are React doors (`/app/index.html#/year/YYYY`). 2011, 2014, and 2016 are HTML doors. 2008 and 2009 are live HTML doors. 2018–2025 are absent. 2023–2025 are wiped.
+Open doors: 1994–2017 and 2020–2022. 2015 and 2017 are React doors (`/app/index.html#/year/YYYY`). 2014, 2016, and 2020–2022 are HTML leanBoot doors. 2008, 2009, and 2011 are live HTML doors. 2018, 2019, and 2023–2025 are absent.
 
 ```mermaid
 flowchart TD

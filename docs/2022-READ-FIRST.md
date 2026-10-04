@@ -1,7 +1,7 @@
 # 2022 — READ FIRST (CUT-OPEN)
 
 **Date:** 2026-09-15  
-**Status:** **LIVE lean door.** Dest-true official 10 · dest folders **25**. Leftover-3× unique catalogs empty. Leftover-2× dest-farm dests not restored. Star `itt22-chatgpt`. Do not dest-farm. Hub **24 years open**.  
+**Status:** **LIVE lean door.** Dest-true official 10 · dest folders **25**. Leftover-3× unique catalogs empty. Leftover-2× dest-farm dests not restored. Star `itt22-chatgpt`. Do not dest-farm. Hub **27 years open** (1994–2017 and 2020–2022).  
 **Parent (live):** 2021 ATT Ask `itt21-att`. **Child:** 2023 wiped. · Zoom Leave.  
 **Clone chrome:** 2021 Win10 + Chrome habit.
 

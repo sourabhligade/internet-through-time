@@ -172,20 +172,30 @@ def render(data: dict) -> str:
             f'<div class="tick board"><div class="y">{escape(y)}</div><div class="g">wiped</div></div>'
         )
 
+    open_labels = [rec["year"] for rec in years]
+    n_open = len(open_labels)
+    expected = [str(y) for y in range(1994, 2018)] + ["2020", "2021", "2022"]
+    span = "1994–2017 and 2020–2022" if open_labels == expected else ", ".join(open_labels)
+    lede = (
+        f"{n_open} years open ({span}). "
+        "2018, 2019, and 2023–2025 are absent. "
+        "Leftover-2× hrefs. Incomplete never writes."
+    )
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Museum map — 24 open years (author only)</title>
+<title>Museum map — {n_open} open years (author only)</title>
 <style>{CSS}</style>
 </head>
 <body>
 <div class="wrap">
 <header>
   <h1>Internet Through Time — disk map</h1>
-  <p class="lede">24 years open (1994–2017) · 2011 live HTML · 2018–2025 absent · 2023+ wiped · leftover-2× hrefs · incomplete never writes.</p>
+  <p class="lede">{escape(lede)}</p>
   <p class="banner">Author only. Not linked from the hub. Names come from <code>js/atlas-data.js</code>, <code>js/config/flow-trails.js</code>, and <code>scripts/popular-3x-sites.json</code>.</p>
 </header>
 

@@ -19,9 +19,10 @@ Hub is **27 years open** (1994–2017 and 2020–2022). **2015 and 2017 are Reac
 8. [`CLONE-STRIP-DEST-LOCKED.md`](CLONE-STRIP-DEST-LOCKED.md) — strip leftover clone machines on dest-locked lean dests.
 9. [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) — current incomplete inventory. [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md) — undone / unplanned markdown checklist.
 9b. [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) — 100% is dest-true flows on dests already on disk, not dest-farm links.
-9c. [`FLOW-CHECK-DIAGRAM.md`](FLOW-CHECK-DIAGRAM.md) — §§1–4 are the 24-door walk. §§5–6 are a 2026-09-20 snapshot (leftover-3× unique dests; catalogs empty).
+9c. [`FLOW-CHECK-DIAGRAM.md`](FLOW-CHECK-DIAGRAM.md) — §§1–4 are the 27-door walk. §§5–6 are a 2026-09-20 snapshot (leftover-3× unique dests; catalogs empty).
 9c-flow. [`DEST-TRUE-FLOW-MAP.md`](DEST-TRUE-FLOW-MAP.md) · named list [`DEST-TRUE-FLOW-NAMES.md`](DEST-TRUE-FLOW-NAMES.md) · KEEP/DROP/MISS [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md).
-9d. [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) — 5k walk, not 5k dests. Double leftover dests on thin lean doors only. Cap is a ceiling.
+9d. [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) — 5k walk, not 5k dests. September 2026 counts. Cap is a ceiling.
+9d-live. [`FAMOUS-DOUBLE-CRITERIA.md`](FAMOUS-DOUBLE-CRITERIA.md) — 2026-10-04 live disk. Criteria only. Thin doors, taken slugs, game rule. No folders from that file.
 9d-2x. [`LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md) — leftover-2× unique dest **links** implemented. Dest folders already on disk. Official dest leftover-2× first paint 0. Dest **doubling** waits on `2x`.
 9d-3x. [`LEFTOVER-3X-UNIQUE-LINKS.md`](LEFTOVER-3X-UNIQUE-LINKS.md) — leftover-3× unique dest **links** removed. Catalog empty.
 9e. [`LEAN-TRIPLE-2015.md`](LEAN-TRIPLE-2015.md) — 2015 triple look. Criteria. Do not dest-farm 2015/2017. Do not implement dest folders from that file. F1–F10 fail-look boxes stay `[ ]`. Checklist: [`LEAN-TRIPLE-2015-CHECKLIST.md`](LEAN-TRIPLE-2015-CHECKLIST.md).

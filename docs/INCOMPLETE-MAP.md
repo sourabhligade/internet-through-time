@@ -145,7 +145,7 @@ These are the live-tree holes a visitor can still hit. Order is the product orde
 
 ### B.1 No public URL
 
-The exhibit plays on http://127.0.0.1:8080. `https://internet-through-time.vercel.app` returns **DEPLOYMENT_NOT_FOUND**. GitHub Pages API is 404. `.github/workflows/pages.yml` is `workflow_dispatch` only and strips `docs/`, `e2e/`, `scripts/`. Production grade (one public URL, 22 doors, a finished room, a save line the visitor can trust) is **open**.
+The exhibit plays on http://127.0.0.1:8080. `https://internet-through-time.vercel.app` returns **DEPLOYMENT_NOT_FOUND**. GitHub Pages API is 404. `.github/workflows/pages.yml` is `workflow_dispatch` only and strips `docs/`, `e2e/`, `scripts/`. Production grade (one public URL, 27 doors, a finished room, a save line the visitor can trust) is **open**.
 
 ### B.2 React hall still teaches absent years
 
@@ -238,7 +238,7 @@ Those warehouse specs are a C-bucket fail until they match dest-true.
 
 ### B.16 dest_lock_lean.py still names 2021
 
-`scripts/dest_lock_lean.py` `LEAN` still includes **2021**. 2021 is absent. Live dest-lock years on disk: 2007, 2010, 2012, 2014. 2022 is dest-true lean. Do not dest-lock 2015 / forests / 2013 / 2022 again.
+`scripts/dest_lock_lean.py` `LEAN` is **2007, 2010, 2012, 2014**. 2021 is a live HTML door and is not in that set. Do not dest-lock 2015, forests, 2013, or 2020–2022.
 
 ### B.17 2009 trail still in flow-trails.js
 
@@ -307,7 +307,7 @@ Specs still contain wiped-year leftovers with year string `''` or skip-if-wiped:
 
 ## D. Docs vs disk
 
-Canonical year list is the hub + `js/year-card.json` + [`DISK-TRUTH.md`](DISK-TRUTH.md) (22 doors, 2015 React live). These files still teach another museum:
+Canonical year list is the hub + `js/year-card.json` + [`DISK-TRUTH.md`](DISK-TRUTH.md) (27 doors, 1994–2017 and 2020–2022). Banners that still teach another museum:
 
 | File | What it still says |
 |------|--------------------|
@@ -394,7 +394,7 @@ Nothing here is an implement pass until this note is read and a step is named.
    7. Atlas OPEN 21 → 22 in `atlas-all-flows.spec.js` (B.10).
    8. href-2× gold leftover hops → dest-true 0 (B.8, C.1).
    9. leftover-official.spec 24×10 and gold set (C.2).
-   10. Stale docs strike to 22 doors / 2015 React live (D) — `docs/README.md` first.
+   10. Stale docs strike to 27 doors / 2015 and 2017 React live (D) — `docs/README.md` first.
 4. **Leftover-2× unique dest doubling** only after the user says `2x`.
 5. **Warehouse 968 fails** only after the last-line read, as dest-true I/O on dests already on disk. Do not waive by changing counts.
 

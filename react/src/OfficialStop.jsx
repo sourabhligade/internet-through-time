@@ -65,7 +65,7 @@ export function OfficialStop({ stop, year, onNext }) {
       <p>{stop.fact}</p>
       {stop.leftover ? null : (
         <ProductFace
-          id={stop.whenKey}
+          stop={stop}
           text={text}
           onText={setText}
           maxLength={faceOwns ? fieldMax + 1 : undefined}

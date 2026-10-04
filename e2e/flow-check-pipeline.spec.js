@@ -117,7 +117,7 @@ test.describe("FLOW-CHECK pipeline · every playable year", () => {
       await expect(page.locator("#ott-guided-" + y + " ol > li")).toHaveCount(6);
       await expect(page.locator('[data-ott-one-thing="' + y + '"]')).toBeVisible();
       const ten = officialTen(y);
-      const officialCap = { "2004": 8, "2012": 9, "2013": 9, "2014": 9 };
+      const officialCap = { "2004": 8, "2012": 10, "2013": 9, "2014": 9 };
       const cap = officialCap[y] || 10;
       expect(ten, y + " official " + cap).toHaveLength(cap);
       for (const row of ten) {

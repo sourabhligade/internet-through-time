@@ -1,10 +1,10 @@
 # 2017 — READ FIRST (from-scratch rebuild)
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 **Date:** 2026-08-18  
-**Disk truth:** Hub is **22 years open**. 2017 is a **live React door** (Face ID star). HTML dest folders **0**. **2009 boarded.** **2015 is a React door.** · Zoom Leave. 2013 Vine is a live lean door · **2022 ChatGPT live.**  
+**Disk truth:** Hub is **27 years open** (1994–2017 and 2020–2022). 2017 is a **live React door** (Face ID star). HTML dest folders **0**. **2015 and 2017 are React.** **2020 Zoom Leave.** 2013 Vine is a live lean door. **2022 ChatGPT live.**  
 **Prefix:** `itt17`  
 **Clone shape from:** live `years/2016/` (lean door · ~25 HTML · Instagram Stories star). **Do not** restore git `HEAD` / `52df8ae3` `years/2017/` (108-page forest) or the older 43-HTML lean tree. **Do not** restore `/tmp/itt-2017-*`.
 

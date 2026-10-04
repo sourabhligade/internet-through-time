@@ -1,49 +1,28 @@
-import { useState } from "react";
+/** Costume for an official stop. The sentence lives on the stop. The save lives on OfficialStop. */
 
-/** Distinct chrome for an official stop. Save still lives on OfficialStop. */
-const FACE = {
-  "itt15-periscope": ["live", "Periscope", "Type a title, then Go LIVE. An ended broadcast writes nothing."],
-  "itt15-music": ["music", "Apple Music", "June 2015. Play is the save. A download-only tap writes nothing."],
-  "itt15-win10": ["window", "Windows 10", "29 July 2015. The free upgrade is the save. “Still on 8” writes nothing."],
-  "itt15-reddit": ["reddit", "Reddit redesign", "The new card is the save. The old alien-only page writes nothing."],
-  "itt15-watch": ["watch", "Apple Watch", "24 April 2015 ship. Pair is the save. iPhone-only writes nothing."],
-  "itt15-edge": ["window", "Edge", "Windows 10’s browser. Open is the save. IE-as-gold writes nothing."],
-  "itt15-meerkat": ["live", "Meerkat", "The earlier live app. A “still the default” tap writes nothing."],
-  "itt15-slack": ["chat", "Slack", "A channel. Send is the save. Email-as-the-room writes nothing."],
-  "itt15-youtube": ["title", "YouTube Red", "The paid row. Subscribe is the save. A free-only tap writes nothing."],
-  "itt15-game-liverush": ["game", "Live Rush", "The year toy. A score of 0 writes nothing."],
-  "itt16-ig-stories": ["ring", "Stories", "Tap the ring. An empty story writes nothing. Reels is the trap."],
-  "itt16-pogo": ["game", "Pokémon GO", "Tap one nearby creature. Already-caught writes nothing."],
-  "itt16-fb-react": ["faces", "Reactions", "Love, haha, wow, sad, angry. Like-as-the-only-save is the trap."],
-  "itt16-wa-e2e": ["lock", "WhatsApp", "Turn the lock on. No lock writes nothing."],
-  "itt16-iphone7": ["phone", "iPhone 7", "The jack is gone. Confirm the 2016 phone. Face ID writes nothing."],
-  "itt16-vine-end": ["loop", "Vine", "A 6-second loop that is closing. A new loop writes nothing."],
-  "itt16-spectacles": ["glasses", "Spectacles", "Pair the glasses. A plain Snap writes nothing."],
-  "itt16-musically": ["lips", "musical.ly", "Fifteen seconds. TikTok For You writes nothing. That mass is 2018."],
-  "itt16-win10-end": ["window", "Windows 10", "The free upgrade is closing. “Still free” writes nothing."],
-  "itt16-game-gymrush": ["game", "Gym Rush", "The year toy. A score of 0 writes nothing."],
-  "itt17-faceid": ["phone", "Face ID", "Look, then swipe up. A Home-button tap writes nothing."],
-  "itt17-fortnite": ["game", "Fortnite", "Drop from the bus. A paid battle pass writes nothing."],
-  "itt17-twitter-280": ["counter", "280", "141 through 280 is the save. 281 writes nothing."],
-  "itt17-teams": ["chat", "Teams", "Create the team. “This is the 2016 preview” writes nothing."],
-  "itt17-vine-gone": ["loop", "Vine", "The app is already closed. Posting writes nothing."],
-  "itt17-switch": ["game", "Switch", "The home menu. “No console” writes nothing."],
-  "itt17-wannacry": ["lock", "WannaCry", "Patch. A payload writes nothing."],
-  "itt17-musically": ["lips", "musical.ly", "The 2017 app. TikTok's US mass is 2018."],
-  "itt17-equifax": ["lock", "Equifax", "Place a freeze. Ignore writes nothing. No SSN."],
-  "itt17-game-stormcircle": ["game", "Storm Circle", "The year toy. Face ID stays the star."],
+const MARK = {
+  live: "Live",
+  music: "Music",
+  window: "Window",
+  reddit: "Cards",
+  watch: "Watch",
+  chat: "Channel",
+  title: "Title",
+  game: "Toy",
+  phone: "Phone",
+  loop: "Loop",
+  lips: "Lip-sync",
+  counter: "Count",
+  lock: "Lock",
 };
 
-export function ProductFace({ id, text, onText, maxLength }) {
-  const row = FACE[id];
-  const [live, setLive] = useState(false);
-  if (!row) return null;
-  const [kind, title, line] = row;
+export function ProductFace({ stop, text, onText, maxLength }) {
+  const kind = stop && stop.face;
+  if (!kind) return null;
   const typed = String(text || "");
   return (
     <div className={"product-face face-" + kind} data-product-face={kind}>
-      <p className="product-kicker">{title}</p>
-      {kind === "ring" ? <button type="button" className="story-ring" onClick={() => setLive(true)} aria-label="Story ring">{live ? "posted" : "story"}</button> : null}
+      <p className="product-kicker">{MARK[kind] || kind}</p>
       {kind === "counter" ? (
         <label className="counter">
           {typed.length}/280
@@ -59,15 +38,8 @@ export function ProductFace({ id, text, onText, maxLength }) {
           />
         </label>
       ) : null}
-      {kind === "faces" ? <p className="reacts">Like · Love · Haha · Wow · Sad · Angry</p> : null}
-      {kind === "grid" ? <p className="grid4">····</p> : null}
-      {kind === "lock" ? <p className="pad">{live ? "locked" : "open"} <button type="button" onClick={() => setLive(true)}>Lock</button></p> : null}
-      {kind === "word" ? <p className="tiles">□□□□□</p> : null}
-      {kind === "ask" ? <p className="sheet">Ask App Not to Track</p> : null}
-      {kind === "timer" ? <p className="timer">2:00</p> : null}
-      {kind === "balance" ? <p className="balance">0.00 · frozen</p> : null}
-      {kind === "bird" ? <p className="bird">bird still here</p> : null}
-      <p>{line}</p>
+      {kind === "lock" ? <p className="pad">closed</p> : null}
+      {kind === "counter" || kind === "lock" ? null : <span className="mark" aria-hidden="true" />}
     </div>
   );
 }

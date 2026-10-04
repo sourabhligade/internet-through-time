@@ -76,14 +76,15 @@ function StaticYear({ year }) {
 }
 
 function Hall() {
-  const reactYears = REACT_YEARS.map((row) => row.year).join(" and ");
+  const open = REACT_YEARS.filter((row) => DOORS[row.year]);
+  const reactYears = open.map((row) => row.year).join(" and ");
   return (
     <main className="hall">
       <p className="kicker">React doors · {reactYears}</p>
       <h1>Internet Through Time</h1>
       <p className="lede">{reactYears} are the React doors.</p>
       <ul className="cards">
-        {REACT_YEARS.map((row) => (
+        {open.map((row) => (
           <li key={row.year}>
             <Link to={"/year/" + row.year}>
               <span className="year">{row.year}</span>

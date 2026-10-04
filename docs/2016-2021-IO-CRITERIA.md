@@ -1,6 +1,6 @@
 # 2016–2021 · visitor I/O criteria
 
-**Historical research.** Not ship law. Live hub is **24 doors** (1994–2017). **2015 and 2017 are React.** **2018–2025, including 2021 and 2022, are absent** (no tree, no hub card, no React door). The year lists below are research, not live doors. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md).
+**Historical research.** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** **2020–2022 are live HTML.** The year lists below are research, not a second door list. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md).
 
 
 **Date:** 2026-09-14  

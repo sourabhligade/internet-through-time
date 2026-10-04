@@ -1,11 +1,11 @@
 # 2014 — READ FIRST (from-scratch 5k-web research freeze)
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 **Date:** 2026-09-04  
 **Status:** **LIVE lean door.** Hub card is available.  
-**Disk truth:** Hub is **22 years open** · **2009 boarded** · **2015 is a React door** · **2023–2025 wiped**. 2013 Vine and 2022 ChatGPT are live lean doors. This file is the lock. Star is WhatsApp Install.  
+**Disk truth:** Hub is **27 years open** (1994–2017 and 2020–2022) · **2015 and 2017 are React** · **2018, 2019, and 2023–2025 are absent**. 2013 Vine and 2022 ChatGPT are live lean doors. This file is the lock. Star is WhatsApp Install.  
 **Prefix:** `itt14`  
 **Clone shape:** live `years/2012/` (Win7 + IE 9 residual). Chrome habit is a later-year look. **Do not** clone wiped `years/2015/`. **Do not** restore `/tmp/itt-2014-*` or any wiped forest.
 

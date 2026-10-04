@@ -1,6 +1,6 @@
 # 2005 rebuild plan
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 Not ship law. **2005 is restored and live** (YouTube upload `itt05-yt-uploads`, dest folders **806**, leftover-2× unique dests **91**). Boxes below were never ticked after restore. Do not dest-farm from this plan. Git `20b7730ca` on `museum/1994-2020-lean` still has the year folder, the 20-stop trail, 105 leftover-2× link ids, and `assets/period/2005` (162 files: 143 GIF, 4 PNG, 3 JPG, 12 readme text files).

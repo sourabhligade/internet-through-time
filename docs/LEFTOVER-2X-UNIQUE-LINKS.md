@@ -1,6 +1,6 @@
 # Leftover-2× unique dest links — 2× map
 
-**2018–2022 paths and stars in this note are research, not live doors.** 2018–2025, including 2022, are absent.
+**2018–2019 and 2023–2025 paths in this note are not live doors.** 2020–2022 are live HTML. Do not restore 2018, 2019, or 2023–2025 from this note.
 
 **Wait-2x (2026-09-30 docs pass).** Leftover-2× unique dest **links** already live. Dest **doubling** waits on the word `2x`. Do not dest-farm from this note. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 

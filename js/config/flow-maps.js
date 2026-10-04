@@ -2341,7 +2341,7 @@ ITT.flowMaps["2005"] = {
   "shell": "Windows 7 · IE 9",
   "how": [
     "★ Instagram Android: named filter → share → itt12-ig-android",
-    "F1 Pinterest ≥2 pins → F2 IPO $38 + Nasdaq → F3 1B → F4 Maps flop → F5 SOPA → ★",
+    "F1 Pinterest ≥2 pins → F2 IPO $38 + Nasdaq → Maps flop → SOPA → Medium → Path → Flipboard → Guess Doodle → Facebook 1B → ★",
     "3× Medium draft · Path moment · Flipboard ≥2 flips",
     "18 on those rooms + SoundCloud, Tinder, UberX, Win8, Chrome, AMA"
   ],

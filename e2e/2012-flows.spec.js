@@ -165,6 +165,52 @@ test.describe('2012 flows', () => {
     await expect.poll(() => getKey(page, 'itt12-win8-tiles')).toBeTruthy();
   });
 
+  test('official Next follows the numbered trail', async ({ page }) => {
+    const hops = [
+      ['/years/2012/sites/instagram/android.html', 'pinterest/index.html'],
+      ['/years/2012/sites/pinterest/index.html', 'facebook/ipo.html'],
+      ['/years/2012/sites/facebook/ipo.html', 'iphone/maps.html'],
+      ['/years/2012/sites/iphone/maps.html', 'wikipedia/sopa.html'],
+      ['/years/2012/sites/wikipedia/sopa.html', 'medium/index.html'],
+      ['/years/2012/sites/medium/index.html', 'path/index.html'],
+      ['/years/2012/sites/path/index.html', 'flipboard/index.html'],
+      ['/years/2012/sites/flipboard/index.html', 'playable/game.html'],
+      ['/years/2012/sites/playable/game.html', 'facebook/index.html'],
+      ['/years/2012/sites/facebook/index.html', 'instagram/android.html'],
+    ];
+    for (const [path, href] of hops) {
+      await page.goto(path);
+      const links = page.locator('[data-next-flow] a');
+      const n = await links.count();
+      expect(n).toBeGreaterThan(0);
+      for (let i = 0; i < n; i++) {
+        await expect(links.nth(i)).toHaveAttribute('href', new RegExp(href.replace(/\//g, '\\/')));
+      }
+    }
+  });
+
+  test('Facebook 1B is official n=10: empty and trap write nothing, literacy writes itt12-facebook only', async ({ page }) => {
+    await page.goto('/years/2012/sites/facebook/index.html');
+    await clearKeys(page, ['itt12-facebook', 'itt12-ig-android']);
+    await page.reload();
+    const trail = page.locator('[data-itt-flow-trail]');
+    await expect(trail).toContainText('10 · Facebook 1B');
+    await expect(trail.locator('a[href*="instagram/android"]').last()).toBeVisible();
+    await page.locator('[data-official-trap]').click();
+    expect(await getKey(page, 'itt12-facebook')).toBeFalsy();
+    await page.locator('[data-fb1b-ack]').click();
+    expect(await getKey(page, 'itt12-facebook')).toBeFalsy();
+    const boxes = page.locator('[data-fb1b-req]');
+    await boxes.nth(0).check();
+    await boxes.nth(1).check();
+    await page.locator('[data-fb1b-ack]').click();
+    await expect.poll(() => getKey(page, 'itt12-facebook')).toBeTruthy();
+    expect(await getKey(page, 'itt12-ig-android')).toBeFalsy();
+    const next = page.locator('[data-next-when-key="itt12-facebook"] a');
+    await expect(next).toHaveAttribute('href', '../instagram/android.html');
+    await expect(next).toBeVisible();
+  });
+
   test('second leftover dests Facebook · Maps · SOPA exist and are not the gold', async ({ page }) => {
     await page.goto("/years/2012/pages/home.html");
     await expect(page.locator("#ott-guided-2012 ol > li")).toHaveCount(6);

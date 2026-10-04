@@ -1,9 +1,9 @@
 # Sources, archives & provenance — Internet Through Time
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
-> **This file is a bibliography, not ship state.** Canonical playable years: [`DISK-TRUTH.md`](DISK-TRUTH.md) — **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2022). **2009 boarded.** **2015 wiped.** **2023–2025 wiped.** Deleted research dossiers stay deleted. There is no `SOURCE-AUDIT.md`. §§11–12 still name deleted dossiers (`MASTER-PROVENANCE.md`, year `*-RESEARCH.md`, `docs/references/**`) as historical bibliography — those paths are **not on disk** and must not be restored.
+> **This file is a bibliography, not ship state.** Canonical playable years: [`DISK-TRUTH.md`](DISK-TRUTH.md) — **27 years open** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Deleted research dossiers stay deleted. There is no `SOURCE-AUDIT.md`. §§11–12 still name deleted dossiers (`MASTER-PROVENANCE.md`, year `*-RESEARCH.md`, `docs/references/**`) as historical bibliography — those paths are **not on disk** and must not be restored.
 
 
 **Purpose:** External URL bibliography for reconstructions. Not ship state.  

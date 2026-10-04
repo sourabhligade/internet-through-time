@@ -90,7 +90,7 @@ test.describe("visitor door", () => {
     /** @type {string[]} */
     const missing = [];
     /** @type {Record<string, number>} */
-    const officialCap = { "2004": 8, "2012": 9, "2013": 9, "2014": 9 };
+    const officialCap = { "2004": 8, "2012": 10, "2013": 9, "2014": 9 };
     const reactDoor = new Set(["2015", "2017"]);
     for (const y of SHIP) {
       if (reactDoor.has(y)) {

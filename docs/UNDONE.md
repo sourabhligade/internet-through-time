@@ -1,13 +1,13 @@
 # What is undone
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2007 + 2010 + 2012–2017 + 2022). **2015 and 2017 are React.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 **Date:** 2026-09-26  
 **Tree:** `museum/1994-2020-lean`  
 **Status:** Recheck vs disk. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Live:** 24 doors (1994–2007 and 2010 + 2012–2014 plus 2016–2017 plus 2022). wiped. 2009 boarded. 2015 wiped. wiped. 2023–2025 wiped. Leftover-3× catalogs are empty. Do not dest-farm.
+**Live:** 27 doors (1994–2017 and 2020–2022). 2015 and 2017 are React. 2008, 2009, 2011, and 2020–2022 are live HTML. 2018, 2019, and 2023–2025 are absent. Leftover-3× catalogs are empty. Do not dest-farm.
 
 Rechecked 2026-09-26: dest folders · leftover-3× unique catalogs empty · official 10 files · official dest leftover-2× `data-lo-panel` 0 on playable years · period assets · dest-true 511 passed.
 
@@ -19,7 +19,7 @@ Full year/flow boxes: [`EVERY-YEAR-FLOW-CHECKLIST.md`](EVERY-YEAR-FLOW-CHECKLIST
 
 | Item | Disk |
 |------|------|
-| **24 years open** (1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2022) · 2009 boarded · 2015 wiped · wiped · 2023–2025 wiped | Hub · `DISK-TRUTH.md` |
+| **27 years open** (1994–2017 and 2020–2022) · 2015 and 2017 React · 2018, 2019, and 2023–2025 absent | Hub · `DISK-TRUTH.md` |
 | Official trail dests | `flow-trails.js` · `check-every-flow.py` **475 stops, 0 missing** |
 | Guided Starting Point exactly 6 | `ui/year/start-data.js` |
 | Dest-lock **reverted** 2016 HTML | dest folders **57** · **2015 wiped** |

@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-03
 **Branch:** `museum/1994-2020-lean` (dirty tree, not committed)
-**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md). Hub is 24 doors, 1994–2017. 2015 and 2017 are React. 2018–2025 are absent.
+**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md). Hub is 27 doors, 1994–2017 and 2020–2022. 2015 and 2017 are React. 2018, 2019, and 2023–2025 are absent.
 **Run that found them:** 2 Oct `npm test`. Check phase passed. Playwright **25 failed, 3884 passed, 642 skipped**, 17.7 min. Log `/tmp/itt-npm-test.log` is gone. The title list below is that run’s failure footer.
 **Recheck:** 3 Oct `npm test`, log `/tmp/itt-e2e-full.log`. **3909 passed, 642 skipped, 2 failed**, 8.3 min, exit 1. All 25 rows in this map passed. The two failures are in [Still open](#still-open). A targeted rerun the same day (`/tmp/itt-25-fix-rerun.log` plus `/tmp/itt-25-core.log`) passed every one of these 25 again. No further product edit was required.
 

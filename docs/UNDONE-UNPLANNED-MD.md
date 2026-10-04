@@ -157,7 +157,7 @@ Never a named product step after [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md). Keep 
 - [ ] **N** [`CLONE-STRIP-DEST-LOCKED.md`](CLONE-STRIP-DEST-LOCKED.md)
 - [ ] **N** [`SOURCE-PASS-2026-09-22.md`](SOURCE-PASS-2026-09-22.md)
 - [x] **H** [`SOURCES.md`](SOURCES.md) — 22-door historical banner. Bibliography.
-- [x] **H** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) — 22-door historical banner. 2021 is absent; 2017 is React leftover-20.
+- [x] **H** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) — banner struck to the 27-door hub. 2020–2022 are live HTML. 2017 is React leftover-20.
 - [x] **C** [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) — Vine 6s bar; unique leftover-20 “not written” is still law
 - [x] **C** [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) — 30 unique dests on the React door
 - [x] **C** [`2017-REACT-FLOW.md`](2017-REACT-FLOW.md)

@@ -4,7 +4,7 @@
 **Law:** Year differences live in **config + dest HTML**. Shared behavior lives **once**. See [`ARCHITECTURE.md`](ARCHITECTURE.md).  
 **Do not** dest-farm leftover-20, dest-lock forests, or grow leftover-3× unique catalogs (they are **empty**). Unique leftover-20 is **2017 only**.
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **24 doors** (1994–2017). **2011 is live HTML** (`years/2011/`, `itt11-gplus`). **2015 and 2017 are React.** **2018–2025 are absent.** Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2011 is live HTML** (`years/2011/`, `itt11-gplus`). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 ## Target layout
 
