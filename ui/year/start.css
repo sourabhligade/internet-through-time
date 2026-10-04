@@ -102,6 +102,11 @@ html[data-itt-year] body.itt-start-page .itt-home-more {
   padding-left: 1.3em;
   line-height: 1.7;
 }
+/* The flow row already prints its stop number. The marker would number it twice. */
+.ott-flows ol {
+  list-style: none;
+  padding-left: 0;
+}
 .ott-flow-next {
   display: none;
 }

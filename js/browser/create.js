@@ -108,7 +108,7 @@
     var loadGen = 0;
     var statusTimers = [];
     var imageRevealTimers = [];
-    var loadStartedAt = 0;
+    var loadStartedAt = Date.now();
     var maximized = !!config.maximizedDefault;
     var lastAttemptedUrl = "";
     var ignoreIframeLoad = false;
@@ -371,10 +371,18 @@
       loading = false;
       if (throbber) throbber.classList.add("idle");
       if (browserEl) browserEl.classList.remove("loading");
-      var elapsed = Math.max(1, Math.round((Date.now() - loadStartedAt) / 1000) || 1);
+      /* A zero clock is Date.now() and would print about a billion seconds. */
+      var elapsed = 0;
+      if (loadStartedAt > 0) {
+        elapsed = Math.round((Date.now() - loadStartedAt) / 1000);
+        if (elapsed > 600) elapsed = 0;
+        else if (elapsed < 1) elapsed = 1;
+      }
       if (statusDone) statusDone.textContent = "Document: Done";
       var extra = imgCount ? " · " + imgCount + " image" + (imgCount === 1 ? "" : "s") : "";
-      var msg = "Document: Done (" + elapsed + " sec" + (elapsed === 1 ? "" : "s") + extra + ")";
+      var msg = elapsed > 0
+        ? "Document: Done (" + elapsed + " sec" + (elapsed === 1 ? "" : "s") + extra + ")"
+        : "Document: Done" + (imgCount ? " (" + imgCount + " image" + (imgCount === 1 ? "" : "s") + ")" : "");
       if (debugPerf) {
         var ms = Math.max(0, Date.now() - loadStartedAt);
         msg += " [" + ms + "ms]";
