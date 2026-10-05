@@ -106,3 +106,14 @@ html, body {
     display: none !important;
   }
 }
+
+/* Find paints this on the shell directory chip. The page hit lives in the
+   iframe, which does not inherit this sheet. */
+#itt-year-ui #dirbar .dir-btn.itt-find-hit {
+  background: #ffff00 !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+  outline: 2px solid #000 !important;
+  box-shadow: 0 0 0 2px #ffff00 !important;
+  user-select: text !important;
+}

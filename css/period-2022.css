@@ -388,7 +388,7 @@ html[data-itt-year="2022"] body {
   font-family: "Segoe UI", Arial, sans-serif !important;
   margin: 0;
 }
-html[data-itt-year="2022"] a {
+html[data-itt-year="2022"] a:not(.itt-layer-chip):not(.shell-nav-btn) {
   color: #1967d2 !important;
   text-decoration: none !important;
 }

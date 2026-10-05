@@ -23,23 +23,59 @@ html {
 }
 
 body {
-  background: #c0c0c0;
-  color: #000000;
   font-family: "Times New Roman", Times, serif;
   font-size: 14px;
   margin: 8px;
   line-height: normal;
 }
+body:not([bgcolor]) { background: #c0c0c0; }
+body:not([text]) { color: #000000; }
 
-/* Links — browser defaults */
-a:link {
-  color: #0000ee;
-  text-decoration: underline;
+/* Links — browser defaults, unless the page set link/vlink.
+   :where stays weaker than layer chips and a year's own nav. */
+a:link { text-decoration: underline; }
+:where(body:not([link])) a:link { color: #0000ee; }
+a:visited { text-decoration: underline; }
+:where(body:not([vlink])) a:visited { color: #551a8b; }
+:where(body[bgcolor="#000" i]:not([link])) a:link,
+:where(body[bgcolor="#000000" i]:not([link])) a:link,
+:where(body[bgcolor="#000033" i]:not([link])) a:link,
+:where(body[bgcolor="#000080" i]:not([link])) a:link,
+:where(body[bgcolor="#111" i]:not([link])) a:link,
+:where(body[bgcolor="#111111" i]:not([link])) a:link {
+  color: #99ccff;
 }
-
-a:visited {
-  color: #551a8b;
-  text-decoration: underline;
+table[bgcolor="#ffffff" i],
+table[bgcolor="white" i],
+table[bgcolor="#f5f5ff" i],
+table[bgcolor="#ffffcc" i],
+td[bgcolor="#ffffff" i],
+td[bgcolor="#f5f5ff" i] {
+  color: #000000;
+}
+table[bgcolor="#ffffff" i] a:link,
+table[bgcolor="#ffffff" i] a:visited,
+table[bgcolor="#f5f5ff" i] a:link {
+  color: #0000ee;
+}
+td[bgcolor="#000033" i],
+td[bgcolor="#000066" i],
+td[bgcolor="#000080" i],
+td[bgcolor="#000000" i],
+td[bgcolor="#000" i],
+table[bgcolor="#000033" i],
+table[bgcolor="#000066" i],
+table[bgcolor="#000080" i] {
+  color: #ffffff;
+}
+[data-itt-flow-trail] {
+  background: #ffffff;
+  color: #111111;
+  border-color: #888888;
+}
+[data-itt-flow-trail] a:link,
+[data-itt-flow-trail] a:visited {
+  color: #0000ee;
 }
 
 a:active {
@@ -220,7 +256,8 @@ button:active {
   --itt94-vlink: #551a8b;
   --itt94-chrome: #808080;
 }
-body[data-itt-year="1994"], html[data-itt-year="1994"] body {
+body[data-itt-year="1994"]:not([bgcolor]),
+html[data-itt-year="1994"] body:not([bgcolor]) {
   background: var(--itt94-bg);
 }
 

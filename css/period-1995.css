@@ -13,8 +13,6 @@
 /* 1995 document defaults — tables for layout, commercial web */
 html { background: #ffffff; min-height: 0; height: auto; color-scheme: only light; }
 body {
-  background: #ffffff;
-  color: #000000;
   font-family: "Times New Roman", Times, serif;
   font-size: 14px;
   margin: 8px;
@@ -22,9 +20,90 @@ body {
   height: auto;
   line-height: 1.25;
 }
-a:link { color: #0000ee; text-decoration: underline; }
-a:visited { color: #551a8b; text-decoration: underline; }
+/* A page's text/bgcolor/link attributes are the page. These defaults apply
+   only when the page did not set them. Later !important year skins still win. */
+body:not([bgcolor]) { background: #ffffff; }
+body:not([text]) { color: #000000; }
+a:link { text-decoration: underline; }
+/* :where stays weaker than Starting Point cards, layer chips, and a year's own nav.
+   A page that set link= keeps that color. A light text= with no link= gets a light link. */
+:where(body:not([link])) a:link { color: #0000ee; }
+a:visited { text-decoration: underline; }
+:where(body:not([vlink])) a:visited { color: #551a8b; }
 a:active { color: #ff0000; }
+:where(body[bgcolor="#000" i]:not([link])) a:link,
+:where(body[bgcolor="#000000" i]:not([link])) a:link,
+:where(body[bgcolor="#000022" i]:not([link])) a:link,
+:where(body[bgcolor="#000033" i]:not([link])) a:link,
+:where(body[bgcolor="#000066" i]:not([link])) a:link,
+:where(body[bgcolor="#000080" i]:not([link])) a:link,
+:where(body[bgcolor="#111" i]:not([link])) a:link,
+:where(body[bgcolor="#111111" i]:not([link])) a:link,
+:where(body[bgcolor="#0b3d0b" i]:not([link])) a:link,
+:where(body[bgcolor="#075e54" i]:not([link])) a:link {
+  color: #99ccff;
+}
+/* Light layout tables keep black ink when the body text attribute is light. */
+table[bgcolor="#ffffff" i],
+table[bgcolor="white" i],
+table[bgcolor="#f5f5ff" i],
+table[bgcolor="#ffffcc" i],
+table[bgcolor="#f2f2f2" i],
+table[bgcolor="#eeeeee" i],
+table[bgcolor="#fff8dc" i],
+td[bgcolor="#ffffff" i],
+td[bgcolor="#f5f5ff" i],
+td[bgcolor="#ffffcc" i] {
+  color: #000000;
+}
+table[bgcolor="#ffffff" i] a:link,
+table[bgcolor="#ffffff" i] a:visited,
+table[bgcolor="#f5f5ff" i] a:link,
+table[bgcolor="#f5f5ff" i] a:visited,
+table[bgcolor="#ffffcc" i] a:link,
+table[bgcolor="#ffffcc" i] a:visited {
+  color: #0000ee;
+}
+/* Dark presentational cells keep light ink. Font color on a child still wins. */
+table[bgcolor="#000" i],
+table[bgcolor="#000000" i],
+table[bgcolor="#000033" i],
+table[bgcolor="#000066" i],
+table[bgcolor="#000080" i],
+table[bgcolor="#003366" i],
+table[bgcolor="#003399" i],
+table[bgcolor="#111" i],
+table[bgcolor="#111111" i],
+table[bgcolor="#003300" i],
+td[bgcolor="#000" i],
+td[bgcolor="#000000" i],
+td[bgcolor="#000033" i],
+td[bgcolor="#000066" i],
+td[bgcolor="#000080" i],
+td[bgcolor="#003366" i],
+td[bgcolor="#003399" i],
+td[bgcolor="#111" i],
+td[bgcolor="#111111" i],
+td[bgcolor="#003300" i] {
+  color: #ffffff;
+}
+td[bgcolor="#000033" i] a:link,
+td[bgcolor="#003366" i] a:link,
+td[bgcolor="#000080" i] a:link,
+tr[bgcolor="#000033" i] a:link,
+tr[bgcolor="#003366" i] a:link {
+  color: #ffffff;
+}
+[data-itt-flow-trail] {
+  background: #ffffff;
+  color: #111111;
+  border-color: #888888;
+}
+[data-itt-flow-trail] a,
+[data-itt-flow-trail] a:link,
+[data-itt-flow-trail] a:visited {
+  color: #0000ee;
+}
 a img { border: 2px solid #0000ee; }
 img[border="0"], img.noborder { border: 0 !important; }
 table.layout { width: 100%; border-collapse: collapse; }

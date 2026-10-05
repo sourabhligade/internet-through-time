@@ -287,4 +287,50 @@ html[data-itt-year=""]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-tr
 
 /* streaming */
 
+/* White plaques on a light-ink page. The page text= must not wash these out. */
+[data-lo-panel][data-itt-gold-lx],
+.itt-popular-panel,
+[data-itt-popular] {
+  color: #111111;
+}
+[data-lo-panel][data-itt-gold-lx] a:link,
+.itt-popular-panel a:link,
+[data-itt-popular] a:link,
+[data-itt-gold-3x] a:link,
+[data-itt-gold-3x] a:visited {
+  color: #0000ee;
+}
+
+/* Leftover paper is light. An am-shell that inlined white ink was written for a dark body. */
+html[data-itt-year]:not([data-official-key]) body:has([data-lo-panel][data-itt-dest-true]) .am-shell,
+html[data-itt-year]:not([data-official-key]) body:has(.itt-pop3x-flow[data-itt-dest-true]) .am-shell {
+  color: #111111 !important;
+}
+
+/* Years that never import period-1995 still need a trail card and a light link on a light-ink body. */
+[data-itt-flow-trail] {
+  background: #ffffff;
+  color: #111111;
+  border-color: #888888;
+}
+[data-itt-flow-trail] a:link,
+[data-itt-flow-trail] a:visited {
+  color: #0000ee;
+}
+:where(body[bgcolor="#000" i]:not([link])) a:link,
+:where(body[bgcolor="#000000" i]:not([link])) a:link,
+:where(body[bgcolor="#000022" i]:not([link])) a:link,
+:where(body[bgcolor="#000033" i]:not([link])) a:link,
+:where(body[bgcolor="#111" i]:not([link])) a:link,
+:where(body[bgcolor="#111111" i]:not([link])) a:link,
+:where(body[bgcolor="#0b3d0b" i]:not([link])) a:link,
+:where(body[bgcolor="#075e54" i]:not([link])) a:link {
+  color: #99ccff;
+}
+body[bgcolor="#111111" i][text="#111111" i],
+body[bgcolor="#121211" i][text="#111111" i],
+body[bgcolor="#111" i][text="#111" i] {
+  color: #f3f3f3;
+}
+
 

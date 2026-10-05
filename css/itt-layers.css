@@ -127,6 +127,11 @@ html[data-itt-layer-band="f"] .itt-layer-chip.is-on {
   border-color: #0078d7;
   color: #fff;
 }
+html[data-itt-year="2020"] a.itt-layer-chip,
+html[data-itt-year="2021"] a.itt-layer-chip,
+html[data-itt-year="2022"] a.itt-layer-chip {
+  color: #fff !important;
+}
 
 /* shell: sit under exit bar */
 body[data-itt-layer="machine"] > .itt-layer-legend,

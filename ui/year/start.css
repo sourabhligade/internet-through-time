@@ -251,6 +251,39 @@ html[data-itt-year="2008"] .ott-guided a,
 html[data-itt-year="2008"] .ott-flows a {
   color: #cfe4ff;
 }
+/* The 2002–2007 Starting Point body is XP blue. Light links there.
+   Yellow honesty notes and beige assessor columns keep blue links. */
+html[data-itt-year="2002"] body.itt-start-page a,
+html[data-itt-year="2003"] body.itt-start-page a,
+html[data-itt-year="2004"] body.itt-start-page a,
+html[data-itt-year="2005"] body.itt-start-page a,
+html[data-itt-year="2006"] body.itt-start-page a,
+html[data-itt-year="2007"] body.itt-start-page a {
+  color: #cfe4ff;
+}
+html[data-itt-year="2002"] body.itt-start-page .itt-year-honesty a,
+html[data-itt-year="2003"] body.itt-start-page .itt-year-honesty a,
+html[data-itt-year="2004"] body.itt-start-page .itt-year-honesty a,
+html[data-itt-year="2005"] body.itt-start-page .itt-year-honesty a,
+html[data-itt-year="2006"] body.itt-start-page .itt-year-honesty a,
+html[data-itt-year="2007"] body.itt-start-page .itt-year-honesty a,
+html[data-itt-year="2002"] body.itt-start-page .itt-la-col a,
+html[data-itt-year="2003"] body.itt-start-page .itt-la-col a,
+html[data-itt-year="2004"] body.itt-start-page .itt-la-col a,
+html[data-itt-year="2005"] body.itt-start-page .itt-la-col a,
+html[data-itt-year="2006"] body.itt-start-page .itt-la-col a,
+html[data-itt-year="2007"] body.itt-start-page .itt-la-col a {
+  color: #0000ee;
+}
+html[data-itt-year="2002"] body.itt-start-page .itt-year-star a,
+html[data-itt-year="2003"] body.itt-start-page .itt-year-star a,
+html[data-itt-year="2004"] body.itt-start-page .itt-year-star a,
+html[data-itt-year="2005"] body.itt-start-page .itt-year-star a,
+html[data-itt-year="2006"] body.itt-start-page .itt-year-star a,
+html[data-itt-year="2007"] body.itt-start-page .itt-year-star a {
+  color: #1b5e20;
+  background: #e8f5e9;
+}
 
 /* 2009 · Like blue (matches period-2009) */
 html[data-itt-year="2009"] .ott-guided,
@@ -483,9 +516,9 @@ html[data-itt-start-standalone] #itt-wayfind {
 html[data-itt-start-standalone] body.itt-start-page.has-itt-wayfind {
   padding-bottom: 0 !important;
 }
-html[data-itt-year="2020"] body.itt-start-page a,
-html[data-itt-year="2021"] body.itt-start-page a,
-html[data-itt-year="2022"] body.itt-start-page a,
+html[data-itt-year="2020"] body.itt-start-page a:not(.itt-layer-chip):not(.shell-nav-btn),
+html[data-itt-year="2021"] body.itt-start-page a:not(.itt-layer-chip):not(.shell-nav-btn),
+html[data-itt-year="2022"] body.itt-start-page a:not(.itt-layer-chip):not(.shell-nav-btn),
 html[data-itt-year="2020"] .ott-guided a,
 html[data-itt-year="2020"] .ott-flows a,
 html[data-itt-year="2021"] .ott-guided a,
@@ -714,5 +747,14 @@ html[data-itt-year="2011"] .ott-flows a {
 html[data-itt-year="2014"] .ott-guided a,
 html[data-itt-year="2014"] .ott-flows a {
   color: #125688 !important;
+}
+/* ensureFill() paints every 2022 Starting Point anchor #1967d2 !important.
+   That sheet is injected after this file, so the chip exception has to be
+   more specific than html[data-itt-year] body.itt-start-page a. */
+html[data-itt-year="2016"] body.itt-start-page a.itt-layer-chip,
+html[data-itt-year="2020"] body.itt-start-page a.itt-layer-chip,
+html[data-itt-year="2021"] body.itt-start-page a.itt-layer-chip,
+html[data-itt-year="2022"] body.itt-start-page a.itt-layer-chip {
+  color: #fff !important;
 }
 

@@ -818,6 +818,11 @@ html[data-itt-year="2021"][data-official-key]:not(:has(.att21-phone)) .archive-r
   border: 0;
 }
 
+:where(body[bgcolor="#1a1a1a" i]:not([link])) a:link,
+:where(body[bgcolor="#111" i]:not([link])) a:link,
+:where(body[bgcolor="#111111" i]:not([link])) a:link {
+  color: #99ccff;
+}
 html[data-itt-year="2020"] [data-itt-flow-trail],
 html[data-itt-year="2021"] [data-itt-flow-trail],
 html[data-itt-year="2022"] [data-itt-flow-trail] {

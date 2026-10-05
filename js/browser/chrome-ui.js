@@ -144,32 +144,163 @@
       openDialog("dlg-alert");
     }
 
+    function unwrapFindMarks(doc) {
+      if (!doc) return;
+      var marks = doc.querySelectorAll("mark.itt-find-hit");
+      var i;
+      for (i = marks.length - 1; i >= 0; i--) {
+        var mark = marks[i];
+        var parent = mark.parentNode;
+        if (!parent) continue;
+        while (mark.firstChild) parent.insertBefore(mark.firstChild, mark);
+        parent.removeChild(mark);
+      }
+      if (doc.body && doc.body.normalize) doc.body.normalize();
+    }
+
+    function ensureFindStyle(doc) {
+      if (!doc || !doc.documentElement || doc.getElementById("itt-find-hit-style")) return;
+      var style = doc.createElement("style");
+      style.id = "itt-find-hit-style";
+      style.textContent =
+        "mark.itt-find-hit{background:#ffff00!important;color:#000!important;" +
+        "-webkit-text-fill-color:#000!important;display:inline!important;" +
+        "visibility:visible!important;outline:2px solid #000!important;" +
+        "user-select:text!important;padding:0 1px!important}";
+      (doc.head || doc.documentElement).appendChild(style);
+    }
+
+    function parkFindDialog(foundLabel) {
+      var el = document.getElementById("dlg-find");
+      if (!el) return;
+      var title = el.querySelector(".dialog-titlebar span");
+      if (title) title.textContent = foundLabel ? "Found: " + foundLabel : "Find";
+      el.style.top = "auto";
+      el.style.left = "auto";
+      el.style.right = "12px";
+      el.style.bottom = "40px";
+      el.style.transform = "none";
+    }
+
+    function ensureShellFindStyle() {
+      if (document.getElementById("itt-find-hit-style")) return;
+      var style = document.createElement("style");
+      style.id = "itt-find-hit-style";
+      style.textContent =
+        "#dirbar .dir-btn.itt-find-hit{background:#ffff00!important;color:#000!important;" +
+        "-webkit-text-fill-color:#000!important;outline:2px solid #000!important;" +
+        "box-shadow:0 0 0 2px #ffff00!important;user-select:text!important}";
+      document.head.appendChild(style);
+    }
+
+    function markDirbar(q, matchCase) {
+      var bar = document.getElementById("dirbar");
+      var hit = null;
+      if (!bar) return null;
+      ensureShellFindStyle();
+      var buttons = bar.querySelectorAll(".dir-btn");
+      var needle = matchCase ? q : String(q || "").toLowerCase();
+      var i;
+      for (i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("itt-find-hit");
+        var label = buttons[i].textContent || "";
+        var hay = matchCase ? label : label.toLowerCase();
+        if (needle && hay.indexOf(needle) !== -1) {
+          buttons[i].classList.add("itt-find-hit");
+          if (!hit) hit = label;
+        }
+      }
+      return hit;
+    }
+
+    function textHits(doc, q, matchCase) {
+      var needle = matchCase ? q : q.toLowerCase();
+      var hits = [];
+      if (!doc.body || !needle) return hits;
+      var walker = doc.createTreeWalker(doc.body, 4, null);
+      var node;
+      while ((node = walker.nextNode())) {
+        var parent = node.parentNode;
+        var name = parent && parent.nodeName;
+        if (name === "SCRIPT" || name === "STYLE" || name === "NOSCRIPT") continue;
+        var raw = node.nodeValue || "";
+        var hay = matchCase ? raw : raw.toLowerCase();
+        var at = 0;
+        var found = hay.indexOf(needle, at);
+        while (found !== -1) {
+          hits.push({ node: node, index: found, length: needle.length });
+          at = found + needle.length;
+          found = hay.indexOf(needle, at);
+        }
+      }
+      return hits;
+    }
+
+    function paintFindHit(doc, hit) {
+      var node = hit.node;
+      if (!node || !node.parentNode) return null;
+      ensureFindStyle(doc);
+      if (hit.index > 0) node = node.splitText(hit.index);
+      node.splitText(hit.length);
+      var mark = doc.createElement("mark");
+      mark.className = "itt-find-hit";
+      mark.setAttribute("data-itt-find-hit", "1");
+      node.parentNode.insertBefore(mark, node);
+      mark.appendChild(node);
+      try {
+        mark.scrollIntoView({ block: "start", inline: "nearest" });
+      } catch (eScroll) {
+        mark.scrollIntoView(true);
+      }
+      return mark;
+    }
+
     function doFind(again) {
       var input = document.getElementById("dlg-find-input");
       var caseEl = document.getElementById("dlg-find-case");
       var q = again ? findLastQuery : (input && input.value) || "";
       if (!q) return;
       findLastQuery = q;
-      var matchCase = caseEl && caseEl.checked;
+      var matchCase = !!(caseEl && caseEl.checked);
       try {
-        var doc = ctx.iframe.contentDocument;
-        var body = doc.body;
-        var text = body.innerText || body.textContent || "";
-        var hay = matchCase ? text : text.toLowerCase();
-        var needle = matchCase ? q : q.toLowerCase();
-        var start = again ? findLastIndex + 1 : 0;
-        var idx = hay.indexOf(needle, start);
-        if (idx === -1 && start > 0) idx = hay.indexOf(needle, 0);
-        if (idx === -1) {
+        var frame = ctx.iframe;
+        var doc = frame && frame.contentDocument;
+        if (!doc || !doc.body) {
+          showAlert("Find", "Could not search this document.");
+          return;
+        }
+        closeDialog("dlg-alert");
+        unwrapFindMarks(doc);
+        var hits = textHits(doc, q, matchCase);
+        var folded = false;
+        if (!hits.length && matchCase) {
+          hits = textHits(doc, q, false);
+          folded = true;
+        }
+        var dirLabel = markDirbar(q, matchCase && !folded);
+        if (!hits.length && !dirLabel && matchCase) {
+          dirLabel = markDirbar(q, false);
+        }
+        if (!hits.length && !dirLabel) {
           showAlert("Find", "Search string not found:\n" + q);
           return;
         }
-        findLastIndex = idx;
-        if (window.find) {
-          ctx.iframe.contentWindow.focus();
-          ctx.iframe.contentWindow.find(q, matchCase, false, true, false, false, false);
+        var shown = dirLabel || q;
+        if (hits.length) {
+          var key = (matchCase && !folded ? "1:" : "0:") + q;
+          var at = 0;
+          if (again && doc.__ittFindKey === key) {
+            at = (doc.__ittFindAt || 0) + 1;
+            if (at >= hits.length) at = 0;
+          }
+          doc.__ittFindKey = key;
+          doc.__ittFindAt = at;
+          var mark = paintFindHit(doc, hits[at]);
+          findLastIndex = at;
+          if (mark) shown = mark.textContent || shown;
         }
-        ctx.setStatus("Found: " + q);
+        parkFindDialog(shown);
+        ctx.setStatus("Found: " + shown);
       } catch (e) {
         showAlert("Find", "Could not search this document.");
       }

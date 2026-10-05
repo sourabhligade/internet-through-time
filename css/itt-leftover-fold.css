@@ -124,6 +124,14 @@ html[data-official-key] h1,
 html[data-official-key] .crumb {
   display: block !important;
 }
+/* Readable paper on a dark dest that did not paint its own card.
+   ATT's dark alert and any host with an inline background keep theirs.
+   2020–2022 skins are more specific and still win. */
+html[data-official-key] [data-official-verb-host]:not(.att21-alert):not([style*="background"]) {
+  background: #ffffff;
+  color: #111111;
+  padding: 8px 10px;
+}
 details.itt-also-year[open] [data-lo-panel],
 details.itt-also-year[open] [data-itt-2x-links],
 details.itt-also-year[open] [data-itt-2x-unique],

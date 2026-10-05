@@ -405,6 +405,13 @@ html[data-itt-year="2014"] [data-year-game] {
   font-size: 14px;
 }
 
+/* A dark body paints every link light blue. The shell is its own paper,
+   so links inside it use the shell accent instead of that body color. */
+.yg-shell a:link,
+.yg-shell a:visited {
+  color: var(--yg-accent);
+}
+
 /* buttons */
 .yg-shell button,
 [data-year-game] button,

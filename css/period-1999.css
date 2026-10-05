@@ -453,7 +453,10 @@ a:hover { color: #cc0000 !important; }
   border: 1px solid #00FF00;
   font-family: "Courier New", Courier, monospace;
 }
-.amz97-nav a { color: #FFCC00; }
+a.amz97-nav,
+td[bgcolor="#000033" i] a.amz97-nav,
+td[bgcolor="#003366" i] a.amz97-nav,
+tr[bgcolor="#003366" i] a.amz97-nav { color: #FFCC00; }
 .amz97-logo { color: #FFFFFF; text-decoration: none; font-family: Times, serif; font-size: 28px; }
 
 /* 1998 extras — Google sparse + Amazon tabs + Excite */
