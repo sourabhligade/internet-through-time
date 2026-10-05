@@ -18,38 +18,133 @@
       _vp.content = "width=device-width, initial-scale=1";
       (document.head || document.documentElement).insertBefore(_vp, (document.head && document.head.firstChild) || null);
     }
- if (/\/years\/\d{4}\/sites\//.test(_p)) {
- try {
- if (window.self === window.top) {
- document.documentElement.className =
- (document.documentElement.className || "") + " itt-dest-top";
- }
- } catch (eDestTop) { /* */ }
- }
-    if (/\/years\/\d{4}\/sites\//.test(_p) && !document.getElementById("itt-dest-page-css")) {
-      var _base = "";
-      var _idx = _p.indexOf("/years/");
-      if (_idx !== -1) _base = _p.slice(0, _idx);
-      var _link = document.createElement("link");
-      _link.id = "itt-dest-page-css";
-      _link.rel = "stylesheet";
- _link.href = _base + "/css/itt-dest-page.css?v=20260929clip2";
-      (document.head || document.documentElement).appendChild(_link);
+    /* Glass. The link sheet can arrive late. This style hides the builder line in the same turn. */
+    var _ittClipGlass = function () {
+      if (!/\/years\/\d{4}\//.test(_p) || !document.body) return;
+      var _onSite = /\/years\/\d{4}\/sites\//.test(_p);
+      if (_onSite) {
+        try {
+          if (window.self === window.top && (document.documentElement.className || "").indexOf("itt-dest-top") === -1) {
+            document.documentElement.className =
+              (document.documentElement.className || "") + " itt-dest-top";
+          }
+        } catch (eDestTop) { /* */ }
+      }
+      if (!document.getElementById("itt-dest-clip")) {
+        var _style = document.createElement("style");
+        _style.id = "itt-dest-clip";
+        _style.textContent =
+          "html body .itt-pixel-failed,html body [data-itt-clip],html body [data-late-face] > [data-itt-capture-cite]{" +
+          "position:absolute!important;left:0!important;top:0!important;width:1px!important;height:1px!important;" +
+          "padding:0!important;margin:0!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;" +
+          "clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important;" +
+          "visibility:hidden!important;opacity:0!important;pointer-events:none!important}";
+        (document.head || document.documentElement).appendChild(_style);
+      }
+      if (_onSite && !document.getElementById("itt-dest-page-css")) {
+        var _base = "";
+        var _idx = _p.indexOf("/years/");
+        if (_idx !== -1) _base = _p.slice(0, _idx);
+        var _link = document.createElement("link");
+        _link.id = "itt-dest-page-css";
+        _link.rel = "stylesheet";
+        _link.href = _base + "/css/itt-dest-page.css?v=20260929clip2";
+        (document.head || document.documentElement).appendChild(_link);
+        if (!document.querySelector('meta[name="color-scheme"]')) {
+          var _cs = document.createElement("meta");
+          _cs.name = "color-scheme";
+          _cs.content = "only light";
+          (document.head || document.documentElement).insertBefore(
+            _cs,
+            (document.head && document.head.firstChild) || null
+          );
+        }
+      }
       var _builder = document.querySelectorAll(".itt-pixel-failed, .archive-residual");
       var _bi;
       for (_bi = 0; _bi < _builder.length; _bi++) {
         var _bt = (_builder[_bi].textContent || "").replace(/^\s+/, "");
         if (_bt.indexOf("[failed-final]") === 0) _builder[_bi].setAttribute("data-itt-clip", "1");
       }
-      if (!document.querySelector('meta[name="color-scheme"]')) {
-        var _cs = document.createElement("meta");
-        _cs.name = "color-scheme";
-        _cs.content = "only light";
-        (document.head || document.documentElement).insertBefore(
-          _cs,
-          (document.head && document.head.firstChild) || null
-        );
+      /* A storage key in a code tag stays in the DOM. The visitor does not see it. */
+      var _codes = document.querySelectorAll("code");
+      var _ci;
+      for (_ci = 0; _ci < _codes.length; _ci++) {
+        if (_codes[_ci].getAttribute("data-itt-clip")) continue;
+        var _kt = (_codes[_ci].textContent || "").replace(/^\s+|\s+$/g, "");
+        if (/^itt\d{2}-[A-Za-z0-9_.:-]+$/.test(_kt)) _codes[_ci].setAttribute("data-itt-clip", "1");
       }
+      /* Five 2004 pages never name another action. Every other exact "Open leftover" uses the page's own heading. */
+      if (!/\/years\/2004\/sites\/(?:extremetech|hatena|redhat|lenta|kuro5hin)\//.test(_p)) {
+        var _h1 = document.querySelector("h1");
+        var _verb = _h1 ? (_h1.textContent || "").replace(/\s+/g, " ").trim() : "";
+        if (_verb && _verb !== "Open leftover") {
+          var _acts = document.querySelectorAll("button, b");
+          var _ai;
+          for (_ai = 0; _ai < _acts.length; _ai++) {
+            if (_acts[_ai].children.length) continue;
+            if ((_acts[_ai].textContent || "").replace(/\s+/g, " ").trim() !== "Open leftover") continue;
+            _acts[_ai].textContent = _verb;
+          }
+          var _fields = document.querySelectorAll("input[placeholder], textarea[placeholder]");
+          var _fi;
+          for (_fi = 0; _fi < _fields.length; _fi++) {
+            if ((_fields[_fi].getAttribute("placeholder") || "").replace(/^\s+|\s+$/g, "") !== "Open leftover") continue;
+            _fields[_fi].setAttribute("placeholder", _verb);
+          }
+        }
+      }
+      var _skipTag = { SCRIPT: 1, STYLE: 1, TEXTAREA: 1, NOSCRIPT: 1 };
+      function _skipGlass(el) {
+        var n = el;
+        while (n && n.nodeType === 1) {
+          if (_skipTag[n.tagName]) return true;
+          if (n.hasAttribute && (n.hasAttribute("data-itt-clip") || n.hasAttribute("data-lo-status"))) return true;
+          n = n.parentNode;
+        }
+        return false;
+      }
+      function _wrapToken(re) {
+        if (!document.body) return;
+        var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+        var pending = [];
+        var node;
+        while ((node = walker.nextNode())) pending.push(node);
+        var pi;
+        for (pi = 0; pi < pending.length; pi++) {
+          node = pending[pi];
+          var parent = node.parentNode;
+          if (!parent || parent.nodeType !== 1 || _skipGlass(parent)) continue;
+          var text = node.nodeValue;
+          if (!text || !re.test(text)) continue;
+          re.lastIndex = 0;
+          var frag = document.createDocumentFragment();
+          var last = 0;
+          var found = false;
+          var m;
+          while ((m = re.exec(text))) {
+            found = true;
+            if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+            var span = document.createElement("span");
+            span.setAttribute("data-itt-clip", "1");
+            span.textContent = m[0];
+            frag.appendChild(span);
+            last = m.index + m[0].length;
+          }
+          if (!found) continue;
+          if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+          parent.replaceChild(frag, node);
+        }
+      }
+      _wrapToken(/\[failed-final\]/g);
+      _wrapToken(/\bitt\d{2}-[A-Za-z0-9_-]+(?:[.:][A-Za-z0-9_-]+)*/g);
+      _wrapToken(/\bdest-true\b/g);
+    };
+    try { _ittClipGlass(); } catch (eClip) { /* */ }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", function () {
+        try { _ittClipGlass(); } catch (eClip2) { /* */ }
+      });
     }
     /* Fill About/map when they sit in the year iframe. Standalone Starting Point
        (top window) must not min-height:100% — that is the cavern under the footer. */

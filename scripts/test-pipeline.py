@@ -146,7 +146,6 @@ CI_E2E_ALLOWLIST = (
     "e2e/lean-triple-leftover.spec.js",
     "e2e/year-true-packs.spec.js",
     "e2e/2016-3x-detail.spec.js",
-    "e2e/2017-mvp.spec.js",
     "e2e/2008-mvp.spec.js",
     "e2e/2009-mvp.spec.js",
     "e2e/dest-top.spec.js",
@@ -288,8 +287,8 @@ def test_year_card() -> None:
     if open_years != list(SHIP_YEARS):
         fail("year-card", "SHIP_YEARS drifted from the card")
         return
-    if len(open_years) != 27:
-        fail("year-card", f"expected 27 open doors, got {len(open_years)}")
+    if len(open_years) != 26:
+        fail("year-card", f"expected 26 open doors, got {len(open_years)}")
         return
     if years.get("2011", {}).get("kind") != "html" or years.get("2011", {}).get("star") != "itt11-gplus":
         fail("year-card", "2011 must be html with star itt11-gplus")
@@ -303,7 +302,7 @@ def test_year_card() -> None:
     if years.get("2022", {}).get("kind") != "html" or years.get("2022", {}).get("star") != "itt22-chatgpt":
         fail("year-card", "2022 must be html with star itt22-chatgpt")
         return
-    for wiped in ("2018", "2019", "2023", "2024", "2025"):
+    for wiped in ("2017", "2018", "2019", "2023", "2024", "2025"):
         if years.get(wiped, {}).get("kind") != "absent":
             fail("year-card", f"{wiped} must stay absent")
             return

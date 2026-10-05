@@ -360,3 +360,16 @@
   border-style: solid;
   box-shadow: none;
 }
+
+/* Phone chips stay about 16px. The shared 640px rule gives every dir button min-height 32. */
+@media (max-width: 640px) {
+  .os-win10 .dirbar .dir-btn,
+  .browser-chrome-habit .dirbar .dir-btn {
+    min-height: 16px;
+    height: 16px;
+    padding: 0 10px;
+    line-height: 16px;
+    font-size: 11px;
+    box-sizing: border-box;
+  }
+}

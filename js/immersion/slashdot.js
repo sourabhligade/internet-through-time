@@ -46,13 +46,37 @@ function initSlashdotComments() {
       score: "3"
     }
   ];
+  function commentsOf(stored) {
+    if (Array.isArray(stored) && stored.length) return stored;
+    if (stored && Array.isArray(stored.comments) && stored.comments.length) return stored.comments;
+    return null;
+  }
   function loadComments() {
     var stored = loadJSON(key, null);
-    if (stored && stored.length) return stored;
+    var arr = commentsOf(stored);
+    if (arr) return arr;
     return seeds.slice();
   }
   function saveComments(arr) {
-    saveJSON(key, arr.slice(0, 40));
+    var slice = arr.slice(0, 40);
+    var officialKey = "";
+    try {
+      officialKey = document.documentElement.getAttribute("data-official-key") || "";
+    } catch (eK) { /* */ }
+    if (officialKey && officialKey === key) {
+      saveJSON(key, {
+        real: true,
+        official: true,
+        year: String(YEAR || ""),
+        multiStep: true,
+        comments: slice
+      });
+    } else {
+      saveJSON(key, slice);
+    }
+    try {
+      if (ITT.revealNextFlow) ITT.revealNextFlow(document);
+    } catch (eN) { /* */ }
   }
   function paint(arr) {
     if (!list) return;

@@ -13,7 +13,7 @@ const LEAN = require("./lean-double-leftover.matrix.json");
 const ROOT = path.join(__dirname, "..");
 const SHIP = [];
 for (let y = 1994; y <= 2022; y++) {
- if (y === 2018 || y === 2019) continue;
+ if (y === 2017 || y === 2018 || y === 2019) continue;
   SHIP.push(String(y));
 }
 
@@ -56,11 +56,11 @@ async function getKey(page, key) {
 }
 
 test.describe("FLOW-CHECK pipeline · every playable year", () => {
- test("1 hub 27 cards · 2009 live · 2011 live · 2015 react · 2020–2022 live", async ({ page }) => {
- expect(SHIP).toHaveLength(27);
+ test("1 hub 26 cards · 2009 live · 2011 live · 2015 react · 2020–2022 live", async ({ page }) => {
+ expect(SHIP).toHaveLength(26);
     await page.goto("/");
  await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
-    const reactDoor = new Set(["2015", "2017"]);
+    const reactDoor = new Set(["2015"]);
     for (const y of SHIP) {
       if (reactDoor.has(y)) {
         await expect(page.locator(`a.year-card.available[data-year="${y}"]`)).toHaveAttribute(
@@ -99,18 +99,12 @@ test.describe("FLOW-CHECK pipeline · every playable year", () => {
     test(`2–4 ${y} Starting Point guided 6 · official 10 files dest-true · leftover-2× = 0`, async ({
       page,
     }) => {
-      if (y === "2015" || y === "2017") {
+      if (y === "2015") {
         await page.goto("/app/index.html#/year/" + y);
         await expect(page.locator("article.stop ol > li")).toHaveCount(6);
         const src = fs.readFileSync(path.join(ROOT, "react", "src", "year" + y + ".js"), "utf8");
-        if (y === "2015") {
-          const keys = [...new Set([...src.matchAll(/"(itt15-[a-z0-9-]+)"/g)].map((m) => m[1]))];
-          expect(keys, "2015 official 10").toHaveLength(10);
-        } else {
-          for (const row of officialTen(y)) {
-            expect(src, row.whenKey).toContain(row.whenKey);
-          }
-        }
+        const keys = [...new Set([...src.matchAll(/"(itt15-[a-z0-9-]+)"/g)].map((m) => m[1]))];
+        expect(keys, "2015 official 10").toHaveLength(10);
         return;
       }
       await page.goto("/years/" + y + "/pages/home.html");

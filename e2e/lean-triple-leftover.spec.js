@@ -2,7 +2,7 @@
 /**
  * Legal 3× leftover dests — 2016 leftover dests only.
  * Empty / trap never write. Complete writes leftover. Never star.
- * Not leftover-3× unique. Not leftover-20. 2015 and 2017 are React doors with no HTML tree.
+ * Not leftover-3× unique. Not leftover-20. 2015 is the React door. 2017 is absent.
  */
 const fs = require("fs");
 const path = require("path");
@@ -31,11 +31,11 @@ function uniqueIds(year) {
   return ids;
 }
 
-test("2015 and 2017 are React doors; 2018 stays off disk; 2020 is HTML", () => {
+test("2015 is the React door; 2017 and 2018 stay off disk; 2020 is HTML", () => {
   expect(fs.existsSync(path.join(ROOT, "years", "2015"))).toBe(false);
   expect(fs.existsSync(path.join(ROOT, "react", "src", "year2015.js"))).toBe(true);
   expect(fs.existsSync(path.join(ROOT, "years", "2017"))).toBe(false);
-  expect(fs.existsSync(path.join(ROOT, "react", "src", "year2017.js"))).toBe(true);
+  expect(fs.existsSync(path.join(ROOT, "react", "src", "year2017.js"))).toBe(false);
   expect(fs.existsSync(path.join(ROOT, "years", "2018"))).toBe(false);
   expect(fs.existsSync(path.join(ROOT, "years", "2020", "index.html"))).toBe(true);
   expect(fs.existsSync(path.join(ROOT, "react", "src", "year2020.js"))).toBe(false);

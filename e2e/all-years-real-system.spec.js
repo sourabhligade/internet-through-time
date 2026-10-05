@@ -38,7 +38,6 @@ const YEARS = [
   '2013',
   '2014',
   '2016',
-  '2017',
 ];
 
 /** @param {string} year */
@@ -160,11 +159,6 @@ for (const year of YEARS) {
     });
 
     test(`real-flow module flag · ${year}`, async ({ page }) => {
-      if (year === "2017") {
-        await page.goto("/app/index.html#/year/2017");
-        await expect(page.locator("article.stop").first()).toBeVisible({ timeout: 20000 });
-        return;
-      }
       await openAbout(page, year);
       const flagged = await page.evaluate(() => {
         const d = document.documentElement;

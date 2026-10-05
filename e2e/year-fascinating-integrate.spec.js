@@ -266,22 +266,6 @@ test.describe("Fascinating integrate leftovers", () => {
     expect(await getKey(page, "itt16-ig-stories")).toBeFalsy();
   });
 
-  test("2017 WannaCry payload trap never writes · patch writes leftover", async ({ page }) => {
-    const { openReactStop, completeReactStop } = require("./helpers");
-    const room = await openReactStop(page, "2017", "itt17-wannacry");
-    await page.evaluate(() => {
-      localStorage.removeItem("itt17-wannacry");
-      localStorage.removeItem("itt17-faceid");
-    });
-    await room.getByRole("button", { name: "Run payload (trap)" }).click();
-    expect(await getKey(page, "itt17-wannacry")).toBeFalsy();
-    await room.locator(".actions button").last().click();
-    expect(await getKey(page, "itt17-wannacry")).toBeFalsy();
-    await completeReactStop(page, room);
-    await expect.poll(() => getKey(page, "itt17-wannacry")).toBeTruthy();
-    expect(await getKey(page, "itt17-faceid")).toBeFalsy();
-  });
-
   test("guided stays 6 and star hrefs stay put", async ({ page }) => {
     const rows = [
       ["1994", /csotd/],
@@ -297,7 +281,6 @@ test.describe("Fascinating integrate leftovers", () => {
       ["2012", /instagram\/android/],
       ["2013", /vine\/record/],
       ["2016", /instagram\/stories/],
-      ["2017", /iphone\/x/],
     ];
     for (const [year, star] of rows) {
       if (!yearOnDisk(year)) continue;

@@ -1,7 +1,7 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2007–2017 and 2020–2022 lean doors live. 2011 is live HTML. 2015 and 2017 are React doors. 2018–2019 and 2023–2025 are absent. Do not invent rooms.
+ * 2007–2016 and 2020–2022 lean doors live. 2011 is live HTML. 2015 is the React door. 2017–2019 and 2023–2025 are absent. Do not invent rooms.
  */
 (function (global) {
   "use strict";
@@ -10,7 +10,7 @@
   var OPEN = (function openFromCard() {
     var years = ITT.YEAR_CARD && ITT.YEAR_CARD.years;
     var fallback = [
-      "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2020", "2021", "2022"
+      "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2020", "2021", "2022"
     ];
     if (!years) return fallback;
     var out = [];
@@ -32,12 +32,12 @@
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
       { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
  { id: "phone", label: "Phone eats the web", blurb: "App Store · Like · Chrome · G1 → Instagram iOS → Google+. Vine 6s is the 2013 door.", years: ["2008", "2009", "2010", "2011", "2012", "2013"] },
-      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Periscope Go LIVE, Stories, Face ID.", years: ["2014", "2015", "2016", "2017"] }
+      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Periscope Go LIVE, Stories.", years: ["2014", "2015", "2016"] }
     ],
 
     leanYears: [
  "2007", "2008", "2009", "2010", "2011", "2012",
-      "2013", "2014", "2015", "2016", "2017", "2020", "2021", "2022"
+      "2013", "2014", "2015", "2016", "2020", "2021", "2022"
     ],
 
     notThisYear: {
@@ -64,7 +64,6 @@
       "2014": "Messenger is the trap. Install is the save.",
       "2015": "Meerkat was earlier. Periscope is the star.",
       "2016": "Snapchat invented the 24-hour slide.",
-      "2017": "Look to unlock. Fortnite is.",
       "2020": "Disney+ Continue is last year. Empty never writes.",
       "2021": "Allow never writes. ChatGPT is next year.",
       "2022": "Empty and GPT-4 never write. X and Threads are next years.",
@@ -95,7 +94,6 @@
       "2014": "Nineteen billion dollars. Install is the save. Messenger is the trap.",
       "2015": "You typed a title and went live. Apple Music played. The Windows 10 upgrade was free.",
       "2016": "The slide lasted twenty-four hours. Snapchat invented the format. People walked into lamp posts.",
-      "2017": "There was no Home button. You looked. You swiped up. Two hundred and eighty characters."
     },
 
     /* Guided 6 for years whose Starting Point is inline. 2011 is in start-data.js. */
@@ -147,14 +145,6 @@
         { label: "Reactions — five faces", href: "years/2016/sites/facebook/reactions.html" },
         { label: "WhatsApp E2E — default lock", href: "years/2016/sites/whatsapp/e2e.html" },
         { label: "Year flow map", href: "years/2016/pages/map.html" }
-      ],
-      "2017": [
-        { label: "About 2017", href: "/app/index.html#/year/2017?stop=about" },
-        { label: "Face ID / iPhone X", href: "/app/index.html#/year/2017?stop=itt17-faceid" },
-        { label: "Fortnite BR", href: "/app/index.html#/year/2017?stop=itt17-fortnite" },
-        { label: "Twitter 280", href: "/app/index.html#/year/2017?stop=itt17-twitter-280" },
-        { label: "Teams GA", href: "/app/index.html#/year/2017?stop=itt17-teams" },
-        { label: "Year flow map", href: "/app/index.html#/year/2017?stop=map" }
       ],
       },
 
@@ -404,28 +394,6 @@
         ],
         game: { label: "Gym Rush", href: "years/2016/sites/playable/game.html" }
       },
-      "2017": {
-        era: "Face ID · free storm · 280",
-        thesis: "Lean door. Look to unlock. Fortnite is.",
-        gold: { label: "Face ID / iPhone X", href: "/app/index.html#/year/2017?stop=itt17-faceid", key: "itt17-faceid" },
-        guided: [
-          { label: "Fortnite", href: "/app/index.html#/year/2017?stop=itt17-fortnite" },
-          { label: "Twitter 280", href: "/app/index.html#/year/2017?stop=itt17-twitter-280" }
-        ],
-        game: { label: "Storm Circle", href: "/app/index.html#/year/2017?stop=itt17-game-stormcircle" },
-        reactStops: [
-          { name: "Face ID / iPhone X", key: "itt17-faceid", href: "/app/index.html#/year/2017?stop=itt17-faceid" },
-          { name: "Fortnite BR", key: "itt17-fortnite", href: "/app/index.html#/year/2017?stop=itt17-fortnite" },
-          { name: "Twitter 280", key: "itt17-twitter-280", href: "/app/index.html#/year/2017?stop=itt17-twitter-280" },
-          { name: "Teams GA", key: "itt17-teams", href: "/app/index.html#/year/2017?stop=itt17-teams" },
-          { name: "Vine gone", key: "itt17-vine-gone", href: "/app/index.html#/year/2017?stop=itt17-vine-gone" },
-          { name: "Nintendo Switch", key: "itt17-switch", href: "/app/index.html#/year/2017?stop=itt17-switch" },
-          { name: "WannaCry", key: "itt17-wannacry", href: "/app/index.html#/year/2017?stop=itt17-wannacry" },
-          { name: "musical.ly", key: "itt17-musically", href: "/app/index.html#/year/2017?stop=itt17-musically" },
-          { name: "Equifax freeze", key: "itt17-equifax", href: "/app/index.html#/year/2017?stop=itt17-equifax" },
-          { name: "Storm Circle", key: "itt17-game-stormcircle", href: "/app/index.html#/year/2017?stop=itt17-game-stormcircle" }
-        ]
-      },
       "2020": {
         era: "Zoom Leave · the meeting is the room",
         thesis: "Lean door. Mute, then chat, then Leave. Empty never writes.",
@@ -552,11 +520,10 @@
       {
         id: "phone",
         label: "Phone eats the web",
-        blurb: "iOS filter → WhatsApp install → Face ID.",
+        blurb: "iOS filter → WhatsApp install.",
         stops: [
           { year: "2010", href: "years/2010/sites/instagram/index.html", note: "iOS filter" },
-          { year: "2016", href: "years/2016/sites/whatsapp/e2e.html", note: "E2E" },
-          { year: "2017", href: "/app/index.html#/year/2017?stop=itt17-faceid", note: "Face ID" }
+          { year: "2016", href: "years/2016/sites/whatsapp/e2e.html", note: "E2E" }
         ]
       },
       {
@@ -621,11 +588,10 @@
       {
         id: "phone-trail",
         label: "Phone ate the web",
-        blurb: "iOS filter → WhatsApp install → Face ID.",
+        blurb: "iOS filter → WhatsApp install.",
         steps: [
           { year: "2010", label: "Instagram iOS", href: "years/2010/sites/instagram/index.html" },
-          { year: "2016", label: "WhatsApp E2E", href: "years/2016/sites/whatsapp/e2e.html" },
-          { year: "2017", label: "Face ID", href: "/app/index.html#/year/2017?stop=itt17-faceid" }
+          { year: "2016", label: "WhatsApp E2E", href: "years/2016/sites/whatsapp/e2e.html" }
         ]
       },
       {
@@ -633,8 +599,7 @@
         label: "Broadcast yourself",
         blurb: "Upload → live → 24-hour slide. Vine is the 2013 gold.",
         steps: [
-          { year: "2016", label: "Instagram Stories", href: "years/2016/sites/instagram/stories.html" },
-          { year: "2017", label: "musical.ly", href: "/app/index.html#/year/2017?stop=itt17-musically" }
+          { year: "2016", label: "Instagram Stories", href: "years/2016/sites/instagram/stories.html" }
         ]
       },
       {

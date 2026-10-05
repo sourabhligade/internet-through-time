@@ -43,8 +43,6 @@
 
  "2016": "<p class=\"itt-felt-trail\">24 hours: <a href=\"../sites/instagram/stories.html\">Instagram Stories</a>. Pokémon GO is outdoor AR, not the chip.</p>",
 
- "2017": "<p class=\"itt-felt-trail\">Look, then unlock: <a href=\"/app/index.html#/year/2017\">Face ID</a>— unlock without look never writes.</p>",
-
  "2007": "<p class=\"itt-felt-trail\">Go, do not App Store: <a href=\"../sites/iphone/index.html\">iPhone Safari</a>. Empty / App Store / Chrome never write.</p>",
 
 

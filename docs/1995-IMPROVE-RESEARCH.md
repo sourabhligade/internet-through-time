@@ -89,4 +89,4 @@ Leftover dest missing leftover-2× rail: **`apple`** (trail n=12). Can host rail
 6. Cut 5×/4× from `flow-maps.js` 1995; list leftover trail + leftover-2× 80.  
 7. Fill leftover-2× toward **133** with cited Wikipedia-1995 dests (miss 160).  
 
-Highest-leverage 1–7 mostly shipped 2026-09-26 (Pathfinder still dest-true form; leftover-2× 117 not 133). Remaining UI/flow items and dest footer cavern: GitHub issue #16.
+Highest-leverage 1–7 mostly shipped 2026-09-26. Pathfinder is a 1995 path form in the working tree. Leftover-2× stays 117 (the cap without new folders is 133; that fill stays unbuilt). Excite keeps one key, `itt95-excite-lx`. IBM Next is Infoseek. The year-game widget Next is SSL checkout. A win writes `itt95-game`. A loss, resign, or draw stays on `itt95-game-checkers`. GitHub issue #16 (dest footer) is closed.

@@ -35,7 +35,7 @@ IMMERSION = """/**
   var me = document.currentScript || scripts[scripts.length - 1];
   var base = (me && me.src) ? me.src.replace(/\\/[^/]*$/, "/") : "/js/";
   var el = document.createElement("script");
-  el.src = base + "immersion/boot.js?v=20260921boot2";
+  el.src = base + "immersion/boot.js?v=20261004glass";
   el.async = true;
   (document.head || document.documentElement).appendChild(el);
 }})();

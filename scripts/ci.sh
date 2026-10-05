@@ -67,7 +67,7 @@ npx playwright test \
   e2e/lean-triple-leftover.spec.js \
   e2e/year-true-packs.spec.js \
   e2e/2016-3x-detail.spec.js \
-  e2e/2017-mvp.spec.js \
+  \
   e2e/2008-mvp.spec.js \
   e2e/2009-mvp.spec.js \
   e2e/dest-top.spec.js \

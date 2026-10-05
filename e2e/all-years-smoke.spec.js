@@ -83,7 +83,7 @@ test.describe('hub unlock consistency', () => {
       els.map((e) => e.getAttribute('data-year')).filter(Boolean)
     );
     expect(years.length).toBeGreaterThanOrEqual(10);
-    const reactDoor = new Set(["2015", "2017"]);
+    const reactDoor = new Set(["2015"]);
     for (const y of years) {
       if (reactDoor.has(y)) continue;
       const res = await page.goto(`/years/${y}/`);

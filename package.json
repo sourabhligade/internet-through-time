@@ -16,7 +16,7 @@
     "test:e2e": "playwright test",
     "test:e2e:leftover-2x-unique-links": "playwright test e2e/leftover-2x-unique-links.spec.js --workers=2",
     "test:e2e:leftover-3x-unique-links": "playwright test e2e/leftover-3x-unique-links.spec.js --workers=2",
-    "test:e2e:dest-true": "playwright test e2e/hub-years.spec.js e2e/year-start-trails.spec.js e2e/visitor-door.spec.js e2e/flow-check-pipeline.spec.js e2e/one-thing-per-year.spec.js e2e/all-years-official-10-real.spec.js e2e/leftover-3x-unique.spec.js e2e/leftover-2x-unique-links.spec.js e2e/leftover-3x-unique-links.spec.js e2e/official-leftover-2x.spec.js e2e/lean-triple-leftover.spec.js e2e/year-true-packs.spec.js e2e/2016-3x-detail.spec.js e2e/2017-mvp.spec.js e2e/2008-mvp.spec.js e2e/2009-mvp.spec.js e2e/dest-top.spec.js e2e/follow-site.spec.js --workers=2",
+    "test:e2e:dest-true": "playwright test e2e/hub-years.spec.js e2e/year-start-trails.spec.js e2e/visitor-door.spec.js e2e/flow-check-pipeline.spec.js e2e/one-thing-per-year.spec.js e2e/all-years-official-10-real.spec.js e2e/leftover-3x-unique.spec.js e2e/leftover-2x-unique-links.spec.js e2e/leftover-3x-unique-links.spec.js e2e/official-leftover-2x.spec.js e2e/lean-triple-leftover.spec.js e2e/year-true-packs.spec.js e2e/2016-3x-detail.spec.js e2e/2008-mvp.spec.js e2e/2009-mvp.spec.js e2e/dest-top.spec.js e2e/follow-site.spec.js --workers=2",
     "test:e2e:cross-year": "playwright test e2e/cross-year-real-flows.spec.js --workers=1",
     "test:e2e:scenarios": "playwright test e2e/scenario-real-flows.spec.js --workers=1",
     "test:e2e:real-gates": "playwright test e2e/cross-year-real-flows.spec.js e2e/scenario-real-flows.spec.js --workers=1",
@@ -42,16 +42,13 @@
     "test:e2e:2005-2010-3x-2x": "playwright test e2e/2005-2010-3x-2x-cut.spec.js --workers=2",
     "test:e2e:2005-2010-every-leftover": "playwright test e2e/2005-2010-every-leftover-flow.spec.js --workers=1",
     "test:e2e:2016": "playwright test e2e/2016-mvp.spec.js e2e/2016-flows.spec.js e2e/2016-densify.spec.js e2e/2016-trail-real-flows.spec.js e2e/2016-3x-detail.spec.js e2e/2016-trail-chain.spec.js e2e/one-thing-per-year.spec.js --grep 2016 --workers=1",
-    "test:e2e:2017": "playwright test e2e/2017-mvp.spec.js e2e/2017-flows.spec.js e2e/2017-densify.spec.js e2e/2017-trail-real-flows.spec.js e2e/2016-3x-detail.spec.js e2e/2016-trail-chain.spec.js e2e/one-thing-per-year.spec.js --grep 2017 --workers=1",
-    "test:e2e:wiped-door": "playwright test e2e/2017-deepen-theater.spec.js --workers=1",
-
     "test:e2e:popular": "playwright test e2e/popular-flows-all-years.spec.js --workers=1",
     "test:e2e:3x3": "playwright test e2e/year-3x3.spec.js e2e/year-more-3x.spec.js --workers=1",
     "test:e2e:1999-2005-3x": "playwright test e2e/1999-2005-leftover-3x.spec.js e2e/1999-2005-yes-leftover.spec.js e2e/1999-2005-leftover-3x-three-machines.spec.js --workers=2",
     "test:e2e:2006-2010-3x": "playwright test e2e/2006-2010-leftover-3x.spec.js e2e/2006-2010-yes-leftover.spec.js e2e/2006-2010-leftover-3x-three-machines.spec.js --workers=2",
     "test:e2e:2010-2015-3x": "playwright test e2e/2010-2015-leftover-3x.spec.js e2e/2010-2015-yes-leftover.spec.js e2e/2010-2015-leftover-3x-three-machines.spec.js --workers=2",
     "test:e2e:1994-1998-3x": "playwright test e2e/1994-1998-leftover-3x.spec.js e2e/undone-yes-leftover.spec.js e2e/1994-1998-leftover-3x-three-machines.spec.js --grep \"1994|1995|1996|1997|1998\" --workers=2",
-    "test:e2e:2016-3x": "playwright test e2e/2016-leftover-3x.spec.js e2e/undone-yes-leftover.spec.js e2e/1994-1998-leftover-3x-three-machines.spec.js --grep \"2016|2017\" --workers=2",
+    "test:e2e:2016-3x": "playwright test e2e/2016-leftover-3x.spec.js e2e/undone-yes-leftover.spec.js e2e/1994-1998-leftover-3x-three-machines.spec.js --grep \"2016\" --workers=2",
     "test:e2e:leftover-3x-unique": "playwright test e2e/leftover-3x-unique.spec.js e2e/2013-leftover-3x-second.spec.js e2e/leftover-dest-3x-face.spec.js --workers=2",
     "test:e2e:year-true-packs": "playwright test e2e/year-true-packs.spec.js --workers=2",
     "test:oss:gate": "node scripts/oss-visitor-gate.mjs",
@@ -89,8 +86,7 @@
     "test:e2e:5x-all": "playwright test e2e/1994-5x-live.spec.js e2e/1995-5x-live.spec.js e2e/1996-5x-live.spec.js e2e/1997-5x-live.spec.js e2e/1998-5x-live.spec.js e2e/1999-5x-live.spec.js e2e/2000-5x-live.spec.js e2e/2004-5x-live.spec.js --workers=1",
     "test:e2e:5x-recheck": "playwright test e2e/5x-all-years-recheck.spec.js --workers=2",
     "test:e2e:gold-a": "playwright test e2e/gold-a-leftover-pack.spec.js e2e/one-thing-per-year.spec.js e2e/flow-maps.spec.js --workers=1",
-    "test:e2e:atlas": "playwright test e2e/atlas.spec.js e2e/atlas-all-flows.spec.js --workers=1",
-    "test:e2e:last5": "playwright test e2e/2017-deepen-theater.spec.js --workers=2"
+    "test:e2e:atlas": "playwright test e2e/atlas.spec.js e2e/atlas-all-flows.spec.js --workers=1"
   },
   "engines": {
     "node": ">=18"

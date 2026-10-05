@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 
 
 const OPEN = [
- '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2020', '2021', '2022'
+ '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2020', '2021', '2022'
 ];
 const BOARDED = ['2023', '2024', '2025'];
 const LOCKED = [];
@@ -11,19 +11,12 @@ const LOCKED = [];
 test.describe('hub + year shells', () => {
   test('hub lists playable years; 2026+ off disk', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('a.year-card.available')).toHaveCount(27);
+    await expect(page.locator('a.year-card.available')).toHaveCount(26);
     for (const y of OPEN) {
       if (y === "2015") {
         await expect(page.locator('a.year-card.available[data-year="2015"]')).toHaveAttribute(
           "href",
           /app\/index\.html#\/year\/2015/
-        );
-        continue;
-      }
-      if (y === "2017") {
-        await expect(page.locator('a.year-card.available[data-year="2017"]')).toHaveAttribute(
-          "href",
-          /app\/index\.html#\/year\/2017/
         );
         continue;
       }
@@ -80,7 +73,7 @@ test.describe('hub + year shells', () => {
     expect(live.y2024).toBe(false);
     expect(live.y2025).toBe(false);
     expect(live.y).toBe(false);
-    expect(live.trails).toEqual(expect.arrayContaining(['2017-start']));
+    expect(live.trails).toEqual(expect.arrayContaining(['2016-start']));
     expect(live.trails).not.toEqual(expect.arrayContaining(['2022-start']));
     expect(live.trails).not.toEqual(expect.arrayContaining(['2021-start']));
     expect(live.trails).not.toEqual(expect.arrayContaining(['-start']));
@@ -106,7 +99,7 @@ test.describe('hub + year shells', () => {
 
   test('hub year cards use period class skins + data-year', async ({ page }) => {
     await page.goto('/');
-    const reactDoor = new Set(["2015", "2017"]);
+    const reactDoor = new Set(["2015"]);
     for (const y of OPEN) {
       const card = reactDoor.has(y)
         ? page.locator(`a.year-card.available.y${y}[data-year="${y}"]`)
@@ -130,7 +123,6 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.y2014.locked')).toHaveCount(0);
     await expect(page.locator('.y2015.available')).toBeVisible();
     await expect(page.locator('.y2016')).toBeVisible();
-    await expect(page.locator('.y2017')).toBeVisible();
     await expect(page.locator('.y')).toHaveCount(0);
     await expect(page.locator('.y')).toHaveCount(0);
     await expect(page.locator('.y2020')).toHaveCount(1);
@@ -159,7 +151,7 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('section.decade')).toHaveCount(4);
     await expect(page.locator('#decade-1990s a.year-card.available')).toHaveCount(6);
     await expect(page.locator('#decade-2000s a.year-card.available')).toHaveCount(10);
- await expect(page.locator('#decade-2010s a.year-card.available')).toHaveCount(8);
+ await expect(page.locator('#decade-2010s a.year-card.available')).toHaveCount(7);
     await expect(page.locator('#decade-2020s a.year-card.available')).toHaveCount(3);
     await expect(page.locator('#decade-later')).toHaveCount(0);
     await expect(page.locator('.year-gap')).toHaveCount(0);
@@ -176,12 +168,6 @@ test.describe('hub + year shells', () => {
       if (year === "2015") {
         await page.goto("/app/index.html#/year/2015");
         await expect(page.getByRole("heading", { name: "Periscope Go LIVE" })).toBeVisible();
-        await expect(page.locator("article.stop ol > li")).toHaveCount(6);
-        return;
-      }
-      if (year === "2017") {
-        await page.goto("/app/index.html#/year/2017");
-        await expect(page.getByRole("heading", { name: "Face ID" })).toBeVisible();
         await expect(page.locator("article.stop ol > li")).toHaveCount(6);
         return;
       }

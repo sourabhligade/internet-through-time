@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import card from "../../js/year-card.json";
 import { OfficialStop } from "./OfficialStop.jsx";
@@ -7,9 +7,16 @@ import { YearRails } from "./YearRails.jsx";
 export function YearRail({ year, star, trail, also, all, guided, stopByKey, startTitle, startBody, about }) {
   const [view, setView] = useState("start");
   const [label, setLabel] = useState("Starting Point");
+  const opened = useRef(Date.now());
+  const [statusLine, setStatusLine] = useState("Document: Done");
   const location = useLocation();
   const deep = new URLSearchParams(location.search).get("deep") === "1";
   const stop = stopByKey(view);
+
+  useEffect(() => {
+    const secs = Math.max(1, Math.round((Date.now() - opened.current) / 1000));
+    setStatusLine(secs > 600 ? "Document: Done" : "Document: Done (" + secs + " sec" + (secs === 1 ? "" : "s") + ")");
+  }, []);
 
   useEffect(() => {
     const stopId = new URLSearchParams(location.search).get("stop");
@@ -76,7 +83,7 @@ export function YearRail({ year, star, trail, also, all, guided, stopByKey, star
         <a href="../index.html">Museum</a>
         <Link to="/">React doors</Link>
         <strong>{year}</strong>
-        {star ? <span className="year-star">{star}</span> : null}
+        {view === "start" && star ? <span className="year-star">{star}</span> : null}
         <em>{label}</em>
       </header>
       <YearRails
@@ -120,6 +127,7 @@ export function YearRail({ year, star, trail, also, all, guided, stopByKey, star
         </article>
       ) : null}
       {stop ? <OfficialStop key={stop.whenKey} stop={stop} year={year} onNext={openNext} /> : null}
+      <div id="status" className="react-status">{statusLine}</div>
     </div>
   );
 }

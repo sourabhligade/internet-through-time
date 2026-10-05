@@ -47,6 +47,25 @@
     s.ts = Date.now();
     s.real = true;
     if (YG) YG.saveJSON(key(), s);
+    try {
+      if (result === "win") {
+        var off =
+          (document.documentElement && document.documentElement.getAttribute("data-official-key")) ||
+          "";
+        if (off && YG && off !== key()) {
+          YG.saveJSON(off, {
+            gameId: "checkers",
+            year: "1995",
+            real: true,
+            multiStep: true,
+            official: true,
+            lastResult: result,
+            ts: Date.now()
+          });
+        }
+        if (off && window.ITT && ITT.revealNextFlow) ITT.revealNextFlow(document);
+      }
+    } catch (eOff) { /* */ }
     paintStats();
   }
   function paintStats() {
@@ -491,6 +510,13 @@
       endGame("loss");
       setStatus("You resign.");
     });
+  }
+  if (YG && YG.isFast && YG.isFast()) {
+    host.__ittCheckersEnd = function (result) {
+      if (result !== "win" && result !== "loss" && result !== "draw") return;
+      if (state !== "play" && state !== "over") return;
+      endGame(result);
+    };
   }
 
   if (YG && YG.focusHost) YG.focusHost("[data-year-game]");

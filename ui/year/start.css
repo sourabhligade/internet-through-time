@@ -42,8 +42,11 @@ html[data-itt-year="2005"] body.itt-start-page,
 html[data-itt-year="2005"] body[data-itt-start] {
   background: #3a6ea5 !important;
 }
+html[data-itt-year="2008"] body.itt-start-page {
+  background: #ece9d8 !important;
+}
 html[data-itt-year="2010"] body.itt-start-page,
-html[data-itt-year=""] body.itt-start-page,
+html[data-itt-year="2011"] body.itt-start-page,
 html[data-itt-year="2012"] body.itt-start-page,
 html[data-itt-year="2013"] body.itt-start-page,
 html[data-itt-year="2014"] body.itt-start-page,
@@ -211,7 +214,7 @@ html[data-itt-year="2001"] .ott-flows a {
   color: #c6d4f0;
 }
 
-/* 2002–2007 · XP start */
+/* 2002–2008 · XP start. 2008 page background stays Luna beige. */
 html[data-itt-year="2002"] .ott-guided,
 html[data-itt-year="2002"] .ott-flows,
 html[data-itt-year="2003"] .ott-guided,
@@ -224,6 +227,14 @@ html[data-itt-year="2006"] .ott-guided,
 html[data-itt-year="2006"] .ott-flows,
 html[data-itt-year="2007"] .ott-guided,
 html[data-itt-year="2007"] .ott-flows,
+html[data-itt-year="2008"] .ott-guided,
+html[data-itt-year="2008"] .ott-flows {
+  background: #3a6ea5;
+  color: #fff;
+  border: 1px solid #0a246a;
+  border-radius: 0;
+  font-family: Tahoma, Arial, sans-serif;
+}
 html[data-itt-year="2002"] .ott-guided a,
 html[data-itt-year="2002"] .ott-flows a,
 html[data-itt-year="2003"] .ott-guided a,
@@ -236,6 +247,10 @@ html[data-itt-year="2006"] .ott-guided a,
 html[data-itt-year="2006"] .ott-flows a,
 html[data-itt-year="2007"] .ott-guided a,
 html[data-itt-year="2007"] .ott-flows a,
+html[data-itt-year="2008"] .ott-guided a,
+html[data-itt-year="2008"] .ott-flows a {
+  color: #cfe4ff;
+}
 
 /* 2009 · Like blue (matches period-2009) */
 html[data-itt-year="2009"] .ott-guided,
@@ -252,8 +267,8 @@ html[data-itt-year="2009"] .ott-flows a {
 /* 2010–2013 · light desktop residual */
 html[data-itt-year="2010"] .ott-guided,
 html[data-itt-year="2010"] .ott-flows,
-html[data-itt-year=""] .ott-guided,
-html[data-itt-year=""] .ott-flows,
+html[data-itt-year="2011"] .ott-guided,
+html[data-itt-year="2011"] .ott-flows,
 html[data-itt-year="2012"] .ott-guided,
 html[data-itt-year="2012"] .ott-flows,
 html[data-itt-year="2013"] .ott-guided,
@@ -266,23 +281,35 @@ html[data-itt-year="2013"] .ott-flows {
 }
 html[data-itt-year="2010"] .ott-guided a,
 html[data-itt-year="2010"] .ott-flows a,
-html[data-itt-year=""] .ott-guided a,
-html[data-itt-year=""] .ott-flows a,
+html[data-itt-year="2011"] .ott-guided a,
+html[data-itt-year="2011"] .ott-flows a,
 html[data-itt-year="2012"] .ott-guided a,
 html[data-itt-year="2012"] .ott-flows a,
 html[data-itt-year="2013"] .ott-guided a,
 html[data-itt-year="2013"] .ott-flows a {
   color: #125688;
 }
-html[data-itt-year=""] .ott-guided,
-html[data-itt-year=""] .ott-flows {
+html[data-itt-year="2011"] .ott-guided,
+html[data-itt-year="2011"] .ott-flows {
   background: #dd4b39;
   color: #fff;
   border: 0;
 }
-html[data-itt-year=""] .ott-guided a,
-html[data-itt-year=""] .ott-flows a {
+html[data-itt-year="2011"] .ott-guided a,
+html[data-itt-year="2011"] .ott-flows a {
   color: #ffe8e4;
+}
+html[data-itt-year="2014"] .ott-guided,
+html[data-itt-year="2014"] .ott-flows {
+  background: #f2f2f2;
+  color: #111;
+  border: 1px solid #bbb;
+  border-radius: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+html[data-itt-year="2014"] .ott-guided a,
+html[data-itt-year="2014"] .ott-flows a {
+  color: #125688;
 }
 html[data-itt-year="2013"] .ott-guided,
 html[data-itt-year="2013"] .ott-flows {
@@ -378,6 +405,10 @@ html[data-itt-year="2017"] .ott-guided,
 html[data-itt-year="2017"] .ott-flows,
 html[data-itt-year=""] .ott-guided,
 html[data-itt-year=""] .ott-flows,
+html[data-itt-year="2020"] .ott-guided,
+html[data-itt-year="2020"] .ott-flows,
+html[data-itt-year="2021"] .ott-guided,
+html[data-itt-year="2021"] .ott-flows,
 html[data-itt-year="2022"] .ott-guided,
 html[data-itt-year="2022"] .ott-flows {
   background: #ffffff !important;
@@ -395,7 +426,11 @@ html[data-itt-year="2016"] .ott-flows a,
 html[data-itt-year="2017"] .ott-guided a,
 html[data-itt-year="2017"] .ott-flows a,
 html[data-itt-year=""] .ott-guided a,
-html[data-itt-year=""] .ott-flows a {
+html[data-itt-year=""] .ott-flows a,
+html[data-itt-year="2020"] .ott-guided a,
+html[data-itt-year="2020"] .ott-flows a,
+html[data-itt-year="2021"] .ott-guided a,
+html[data-itt-year="2021"] .ott-flows a {
   color: #1967d2 !important;
   text-decoration: none;
 }
@@ -406,7 +441,11 @@ html[data-itt-year="2016"] .ott-flows a:hover,
 html[data-itt-year="2017"] .ott-guided a:hover,
 html[data-itt-year="2017"] .ott-flows a:hover,
 html[data-itt-year=""] .ott-guided a:hover,
-html[data-itt-year=""] .ott-flows a:hover {
+html[data-itt-year=""] .ott-flows a:hover,
+html[data-itt-year="2020"] .ott-guided a:hover,
+html[data-itt-year="2020"] .ott-flows a:hover,
+html[data-itt-year="2021"] .ott-guided a:hover,
+html[data-itt-year="2021"] .ott-flows a:hover {
   text-decoration: underline;
 }
 
@@ -444,7 +483,13 @@ html[data-itt-start-standalone] #itt-wayfind {
 html[data-itt-start-standalone] body.itt-start-page.has-itt-wayfind {
   padding-bottom: 0 !important;
 }
+html[data-itt-year="2020"] body.itt-start-page a,
+html[data-itt-year="2021"] body.itt-start-page a,
 html[data-itt-year="2022"] body.itt-start-page a,
+html[data-itt-year="2020"] .ott-guided a,
+html[data-itt-year="2020"] .ott-flows a,
+html[data-itt-year="2021"] .ott-guided a,
+html[data-itt-year="2021"] .ott-flows a,
 html[data-itt-year="2022"] .ott-guided a,
 html[data-itt-year="2022"] .ott-flows a,
 html[data-itt-year="2022"] .itt-la-col a,
@@ -455,6 +500,10 @@ html[data-itt-year="2022"] .itt-felt-trail a {
 html[data-itt-year="2022"] body.itt-start-page a:hover {
   text-decoration: underline !important;
 }
+html[data-itt-year="2020"] .ott-guided,
+html[data-itt-year="2020"] .ott-flows,
+html[data-itt-year="2021"] .ott-guided,
+html[data-itt-year="2021"] .ott-flows,
 html[data-itt-year="2022"] .ott-guided,
 html[data-itt-year="2022"] .ott-flows {
   border: 0 !important;
@@ -626,5 +675,44 @@ html[data-itt-year=""] body.itt-start-page .ott-flows,
 html[data-itt-year="2022"] body.itt-start-page .ott-flows {
   border-radius: 8px !important;
   box-shadow: 0 1px 2px rgba(60, 64, 67, 0.12) !important;
+}
+
+/* Pass 1. These beat inline row colors and the 2011 flatten in period-2011.css. */
+html[data-itt-year="2007"] .ott-guided a,
+html[data-itt-year="2007"] .ott-flows a,
+html[data-itt-year="2008"] .ott-guided a,
+html[data-itt-year="2008"] .ott-flows a {
+  color: #cfe4ff !important;
+}
+html[data-itt-year="2009"] body.itt-start-page {
+  background: #e7ebf2 !important;
+  color: #1c1e21 !important;
+}
+html[data-itt-year="2010"] .ott-guided a,
+html[data-itt-year="2010"] .ott-flows a,
+html[data-itt-year="2012"] .ott-guided a,
+html[data-itt-year="2012"] .ott-flows a {
+  color: #125688 !important;
+}
+html[data-itt-year="2011"]:not(:has(#itt-year-ui)) body .ott-guided,
+html[data-itt-year="2011"]:not(:has(#itt-year-ui)) body .ott-flows,
+html[data-itt-year="2011"] .ott-guided,
+html[data-itt-year="2011"] .ott-flows {
+  background: #dd4b39 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+html[data-itt-year="2011"]:not(:has(#itt-year-ui)) body .ott-guided a:link,
+html[data-itt-year="2011"]:not(:has(#itt-year-ui)) body .ott-guided a:visited,
+html[data-itt-year="2011"]:not(:has(#itt-year-ui)) body .ott-flows a:link,
+html[data-itt-year="2011"]:not(:has(#itt-year-ui)) body .ott-flows a:visited,
+html[data-itt-year="2011"] .ott-guided a,
+html[data-itt-year="2011"] .ott-flows a {
+  color: #ffe8e4 !important;
+  -webkit-text-fill-color: #ffe8e4 !important;
+}
+html[data-itt-year="2014"] .ott-guided a,
+html[data-itt-year="2014"] .ott-flows a {
+  color: #125688 !important;
 }
 

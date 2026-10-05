@@ -27,7 +27,4 @@ node --check js/immersion/registry.js
 node --check js/immersion/residual-placard.js
 node --check e2e/helpers.js
 
-echo "== 6. e2e 2017 pack =="
-npm run test:e2e:2017
-
 echo "PROCESS OK"

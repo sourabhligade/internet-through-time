@@ -314,17 +314,6 @@ const SIGNATURE = {
       await frame.locator('[data-ig-story-add]').click();
     },
   },
-  '2017': {
-    path: 'sites/iphone/x.html',
-    keySuffix: 'faceid',
-    body: /Face ID/i,
-    act: async (page) => {
-      const frame = contentFrame(page);
-      await expect(frame.locator('[data-faceid-look]')).toBeVisible({ timeout: 15000 });
-      await frame.locator('[data-faceid-look]').click();
-      await frame.locator('[data-faceid-unlock]').click();
-    },
-  },
 };
 
 const YEARS = [
@@ -342,7 +331,6 @@ const YEARS = [
   '2010',
   '2012',
   '2016',
-  '2017',
 ];
 
 /**

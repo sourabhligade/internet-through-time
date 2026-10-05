@@ -360,18 +360,7 @@
       }
     },
     "2017": {
-      "kind": "react",
-      "href": "app/index.html#/year/2017",
-      "star": "itt17-faceid",
-      "chrome": {
-        "os": "win10",
-        "browser": "chrome-habit",
-        "toolbar": "chrome22",
-        "assetYear": null,
-        "location": "https://www.google.com/web2017/",
-        "maximized": true,
-        "hasTaskbar": true
-      }
+      "kind": "absent"
     },
     "2018": {
       "kind": "absent"

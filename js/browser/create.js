@@ -371,7 +371,7 @@
       loading = false;
       if (throbber) throbber.classList.add("idle");
       if (browserEl) browserEl.classList.remove("loading");
-      /* A zero clock is Date.now() and would print about a billion seconds. */
+      /* A zero loadStartedAt is the epoch and would print about a billion seconds. */
       var elapsed = 0;
       if (loadStartedAt > 0) {
         elapsed = Math.round((Date.now() - loadStartedAt) / 1000);

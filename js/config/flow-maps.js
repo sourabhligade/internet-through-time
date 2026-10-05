@@ -2393,60 +2393,7 @@ ITT.flowMaps["2005"] = {
   "year": "2012"
 };
 
-  ITT.flowMaps["2017"] = {
-    thesis: "The face becomes the password. A free storm eats Saturday. Tweets get twice as long.",
-    shell: "Win10 mass · Chrome habit · EdgeHTML residual",
-    year: "2017",
-    how: [
-      "Face ID: no Home + not XS → unlock → itt17-faceid",
-      "280: type past 140 → Tweet. Under 141 never writes.",
-      "Next waits for the write. Crumb ← last dest is visible on land.",
-      "Animoji never writes the star key."
-    ],
-    branches: [
-      {
-        label: "★ Official 10",
-        do: "Star stays Face ID. Incomplete never writes.",
-        sites: [
-          { name: "1 Face ID / iPhone X", href: "sites/iphone/x.html", do: "unlock → itt17-faceid → Fortnite" },
-          { name: "2 Fortnite BR", href: "sites/fortnite/index.html", do: "100 + free · not Switch → itt17-fortnite → 280" },
-          { name: "3 Twitter 280", href: "sites/twitter/280.html", do: "past 140 → itt17-twitter-280 → Teams" },
-          { name: "4 Teams GA", href: "sites/teams/index.html", do: "preview-vs-GA + name → itt17-teams → Vine gone" },
-          { name: "5 Vine gone", href: "sites/vine/gone.html", do: "archive → itt17-vine-gone → Switch" },
-          { name: "6 Nintendo Switch", href: "sites/switch/index.html", do: "$299.99 buy this year → itt17-switch → WannaCry" },
-          { name: "7 WannaCry", href: "sites/wannacry/index.html", do: "literacy · no payload → itt17-wannacry → musical.ly" },
-          { name: "8 musical.ly", href: "sites/musically/index.html", do: "caption · merge is  → itt17-musically → Equifax" },
-          { name: "9 Equifax freeze", href: "sites/equifax/index.html", do: "no SSN → itt17-equifax → Storm Circle" },
-          { name: "10 Storm Circle", href: "sites/playable/game.html", do: "score → itt17-game-stormcircle → Face ID" }
-        ]
-      },
-      {
-        label: "Leftover-2× unique · dest-true",
-        do: "Leftover keys only. Never Face ID. Not leftover-3×. Incomplete never writes.",
-        sites: [
-          { name: "WhatsApp Status", href: "sites/whatsapp/index.html", do: "Post a Status → itt17-whatsapp-lx · Watch a Status → itt17-whatsapp-d2 → Snap Map" },
-          { name: "Snap Map", href: "sites/snapmap/index.html", do: "Pinch to Map → itt17-snapmap-lx · Ghost Mode leftover → itt17-snapmap-d2 → Lens" },
-          { name: "Google Lens", href: "sites/googlelens/index.html", do: "Point → itt17-googlelens-lx · Wi-Fi leftover → itt17-googlelens-d2 → BotW" },
-          { name: "Breath of the Wild", href: "sites/botw/index.html", do: "Climb → itt17-botw-lx · Cook leftover → itt17-botw-d2 → Watch" },
-          { name: "Facebook Watch", href: "sites/facebookwatch/index.html", do: "Open Watch → itt17-facebookwatch-lx · Watchlist → itt17-facebookwatch-d2 → Destiny 2" },
-          { name: "Destiny 2", href: "sites/destiny2/index.html", do: "Launch leftover → itt17-destiny2-lx · Fireteam leftover → itt17-destiny2-d2 → Cuphead" },
-          { name: "Cuphead", href: "sites/cuphead/index.html", do: "Fight a boss → itt17-cuphead-lx · Co-op leftover → itt17-cuphead-d2 → SNES Classic" },
-          { name: "SNES Classic Mini", href: "sites/snesclassic/index.html", do: "Pick a cart → itt17-snesclassic-lx · Two-player leftover → itt17-snesclassic-d2 → Model 3" },
-          { name: "Tesla Model 3", href: "sites/model3/index.html", do: "Take delivery → itt17-model3-lx · Configure leftover → itt17-model3-d2 → ST2" },
-          { name: "Stranger Things 2", href: "sites/netflix/index.html", do: "Play Part 2 → itt17-netflix-lx · My List leftover → itt17-netflix-d2 → Starting Point" }
-        ]
-      },
-      {
-        label: "Side · rejoin official",
-        do: "Never a second star",
-        sites: [
-          { name: "Animoji", href: "sites/animoji/index.html", do: "needs Face ID → itt17-animoji → Fortnite" },
-          { name: "Famous", href: "sites/playable/famous.html", do: "cabinet · gold is Storm Circle" }
-        ]
-      }
-    ]
-  };
-
+  
   
 ITT.flowMaps["2007"] = {
     thesis: "The phone becomes a browser. Empty / App Store / Chrome never write. Go is the save.",

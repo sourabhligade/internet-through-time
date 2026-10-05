@@ -15,7 +15,6 @@ const ROOT = path.join(__dirname, "..");
 const YEARS = [
   { year: "2012", star: "itt12-ig-android", honesty: "Instagram Android" },
   { year: "2016", star: "itt16-ig-stories", honesty: "Instagram Stories" },
-  { year: "2017", star: "itt17-faceid", honesty: "Face ID" },
 ];
 
 function yearHomePath(year) {

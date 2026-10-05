@@ -102,7 +102,6 @@
         stop("2012", "sites/twitter/index.html", "IPO year"),
         stop("2013", "sites/twitter/index.html", "Vine year"),
         stop("2014", "sites/twitter/index.html", "Install year"),
-        stop("2017", "app/index.html#/year/2017?stop=itt17-twitter-280", "280"),
       ]
     },
     instagram: {
@@ -114,7 +113,6 @@
         stop("2012", "sites/instagram/android.html", "Android"),
         stop("2014", "sites/instagram/index.html", "Install year"),
         stop("2016", "sites/instagram/stories.html", "Stories"),
-        stop("2017", "app/index.html#/year/2017?stop=itt17-instagram17", "leftover Instagram"),
       ]
     },
     iphone: {
@@ -128,7 +126,6 @@
         stop("2013", "sites/iphone/ios7.html", "iOS 7"),
         stop("2014", "sites/iphone/index.html", "Install year"),
         stop("2016", "sites/iphone/index.html", "iPhone 7 · no jack"),
-        stop("2017", "app/index.html#/year/2017?stop=itt17-faceid", "Face ID"),
       ]
     }
   };
@@ -149,6 +146,7 @@
   }
 
  var SKIP_YEARS = {
+ "2017": 1,
  "2018": 1,
  "2019": 1,
  "2020": 1,

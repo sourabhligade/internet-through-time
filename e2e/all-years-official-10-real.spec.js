@@ -275,15 +275,6 @@ const STAR = {
       await page.locator("[data-ig-story-add]").click();
     },
   },
-  "itt17-faceid": {
-    incomplete: async (page) => {
-      await page.locator("[data-faceid-unlock]").click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-faceid-look]").click();
-      await page.locator("[data-faceid-unlock]").click();
-    },
-  },
   "itt20-zoom": {
     incomplete: async (page) => {
       await page.locator("[data-zoom-leave]").click();
@@ -700,7 +691,7 @@ async function runDest(page, d) {
 
 test.describe("official 10 · every dest REAL", () => {
   test("every live official dest has a named whenKey and a file", () => {
-    // React doors are 2015 and 2017. Their official saves are in the year mvp specs.
+    // The React door is 2015. Its official saves are in the year mvp specs.
     expect(DESTS.length, "official dests").toBeGreaterThanOrEqual(19 * 10);
     const empty = DESTS.filter((d) => !d.whenKey);
     expect(empty, "empty whenKeys").toEqual([]);

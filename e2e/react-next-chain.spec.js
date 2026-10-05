@@ -33,19 +33,3 @@ test("2015 Live Rush Next returns to Periscope", async ({ page }) => {
   await saveAndNext(page, room, "2015", "itt15-game-liverush", "Periscope Go LIVE", "Periscope Go LIVE", "itt15-periscope");
 });
 
-test("2017 Storm Circle Next opens Animoji", async ({ page }) => {
-  const room = await openDirect(page, "2017", "itt17-game-stormcircle");
-  await saveAndNext(page, room, "2017", "itt17-game-stormcircle", "Animoji", "Animoji", "itt17-animoji");
-  const star = await page.evaluate(() => localStorage.getItem("itt17-faceid"));
-  expect(star).toBeFalsy();
-});
-
-test("2017 Hollow Knight Next returns to Face ID and never writes the star", async ({ page }) => {
-  const room = await openDirect(page, "2017", "itt17-hollowknight");
-  await saveAndNext(page, room, "2017", "itt17-hollowknight", "Face ID / iPhone X", "Face ID / iPhone X", "itt17-faceid");
-  const saved = JSON.parse(await page.evaluate(() => localStorage.getItem("itt17-hollowknight")));
-  expect(saved.leftover).toBe(true);
-  expect(saved.official).toBeUndefined();
-  const star = await page.evaluate(() => localStorage.getItem("itt17-faceid"));
-  expect(star).toBeFalsy();
-});

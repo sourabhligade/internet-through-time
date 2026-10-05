@@ -130,6 +130,17 @@ test.describe('1995 live flows (hard)', () => {
     await page.evaluate(() => localStorage.setItem('itt95-amazon-cart', '[]'));
     await goInFrame(page, 'sites/amazon/book-neuromancer.html');
     await waitForImmersion(page, '1995');
+    await page.waitForFunction(() => {
+      try {
+        const doc = document.getElementById('content').contentDocument;
+        if (!doc) return false;
+        const path = (doc.location && doc.location.pathname) || '';
+        if (path.indexOf('book-neuromancer.html') === -1) return false;
+        return doc.documentElement.getAttribute('data-amz-add') === '1';
+      } catch (e) {
+        return false;
+      }
+    }, null, { timeout: 15000 });
     const frame = contentFrame(page);
     await frame.locator('[data-add-cart]').first().click({ force: true });
     await expect.poll(async () => {

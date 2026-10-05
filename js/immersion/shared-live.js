@@ -371,9 +371,9 @@
               var summary = summaryEl ? String(summaryEl.value || "") : "";
               var raw = ta ? String(ta.value || "").replace(/^\s+|\s+$/g, "") : "";
               var st = document.querySelector("[data-wiki-save-status], [data-itt-action-status]");
-              if (!raw) {
-                if (st) st.textContent = "Type something first — empty save is not a page.";
-                api.actionFeedback("Type something first.", { status: st, flash: false });
+              if (raw.length < 2) {
+                if (st) st.textContent = "Empty never writes.";
+                api.actionFeedback("Empty never writes.", { status: st, flash: false });
                 return;
               }
               var pages = loadJSON(storageKey("wiki-pages"), []) || [];

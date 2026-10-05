@@ -265,23 +265,6 @@ const THINGS = [
     },
   },
   {
-    year: "2017",
-    react: true,
-    path: "/app/index.html#/year/2017",
-    key: "itt17-faceid",
-    incomplete: async (page) => {
-      await page.getByRole("button", { name: "1 Face ID / iPhone X" }).click();
-      await page.locator("article.stop").getByRole("button", { name: "Swipe up", exact: true }).click();
-    },
-    complete: async (page) => {
-      await page.getByRole("button", { name: "1 Face ID / iPhone X" }).click();
-      const room = page.locator("article.stop");
-      await room.locator("input[type='checkbox']").first().check();
-      await room.locator("input:not([type='checkbox'])").fill("Look");
-      await room.getByRole("button", { name: "Swipe up", exact: true }).click();
-    },
-  },
-  {
     year: "2007",
     path: "/years/2007/sites/iphone/index.html",
     key: "itt07-iphone",

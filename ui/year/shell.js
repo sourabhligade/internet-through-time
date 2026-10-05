@@ -36,7 +36,7 @@
         '<div class="desk-icon" data-icon="bin" title="Recycle Bin"><span class="desk-glyph desk-bin"></span><span class="desk-label">Recycle Bin</span></div>' +
         "</div>";
     var statusbar = chrome22
-      ? '<div class="statusbar" id="status" hidden>Document: Done</div>'
+      ? '<div class="statusbar" id="status">Document: Done</div>'
       : '<div class="statusbar"><div class="status-text" id="status">Document: Done</div>' +
         '<div class="status-done" id="status-done">Document: Done</div></div>';
     return (

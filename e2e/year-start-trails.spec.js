@@ -11,7 +11,7 @@ test.describe("Per-year guided start trails", () => {
       const ids = Object.keys(T).filter((k) => /-start$/.test(k)).sort();
       return ids;
     });
- expect(trails.length).toBe(23);
+ expect(trails.length).toBe(22);
     expect(trails[0]).toBe("1994-start");
     expect(trails).toContain("2005-start");
     expect(trails).toContain("2006-start");
@@ -24,7 +24,7 @@ test.describe("Per-year guided start trails", () => {
     expect(trails).not.toContain("2023-start");
     expect(trails).not.toContain("2024-start");
     expect(trails).not.toContain("2025-start");
-    expect(trails[trails.length - 1]).toBe("2017-start");
+    expect(trails[trails.length - 1]).toBe("2016-start");
   });
 
   test("deep link ?trail=2010-start writes night state", async ({ page }) => {

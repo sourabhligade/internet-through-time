@@ -6,11 +6,10 @@ const { test, expect } = require("@playwright/test");
 
 const OPEN = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008",
-  "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017",
+  "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016",
 ];
 const REACT = {
   2015: "Periscope Go LIVE",
-  2017: "Face ID",
 };
 
 function officialCount(year) {
@@ -46,12 +45,14 @@ test.describe("visitor path", () => {
     await expect(page.getByRole("link", { name: "Museum" })).toHaveAttribute("href", "../index.html");
   });
 
-  test("2017 leftover rail stays closed until deep=1", async ({ page }) => {
+  test("2017 hash is not a door and does not show the 2015 star", async ({ page }) => {
     await page.goto("/app/index.html#/year/2017");
-    await expect(page.getByRole("heading", { name: "Face ID" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "Also this year" })).toHaveCount(0);
-    await page.goto("/app/index.html#/year/2017?deep=1");
-    await expect(page.getByRole("heading", { name: "Also this year" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "2017 is not a door" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Face ID" })).toHaveCount(0);
+    await expect(page.locator(".lede")).toHaveCount(0);
+    await expect(page.locator(".year-star")).toHaveCount(0);
+    await expect(page.locator("body")).not.toContainText("Periscope");
+    await expect(page.getByRole("link", { name: "Museum hub" })).toHaveAttribute("href", "../index.html");
   });
 
   test("2016 starting point shows the guided six inside the year shell", async ({ page }) => {

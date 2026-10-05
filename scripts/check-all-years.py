@@ -126,15 +126,6 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/whatsapp/e2e.html",
         "sites/playable/game.html"
     ],
-    "2017": [
-        "pages/home.html",
-        "pages/about.html",
-        "sites/iphone/x.html",
-        "sites/fortnite/index.html",
-        "sites/twitter/280.html",
-        "sites/teams/index.html",
-        "sites/playable/game.html"
-    ],
 }
 
 # Optional research markers (year can be "research-only" without tree)

@@ -16,18 +16,18 @@ test.describe("follow-a-site", () => {
     await expect(next).toContainText("Yahoo");
   });
 
-  test("2016 Instagram follow next opens the 2017 React door", async ({ page }) => {
+  test("2016 Instagram is the last Instagram room", async ({ page }) => {
     await page.goto("/years/2016/?room=sites/instagram/stories.html");
     const next = page.locator("#itt-follow-next");
-    await expect(next).toBeVisible({ timeout: 15000 });
-    await expect(next).toHaveAttribute("href", /app\/index\.html#\/year\/2017\?stop=itt17-instagram17/);
+    await expect(next).toBeAttached({ timeout: 15000 });
+    await expect(next).toBeHidden();
   });
 
-  test("2016 iPhone follow next opens the 2017 Face ID stop", async ({ page }) => {
+  test("2016 iPhone is the last iPhone room", async ({ page }) => {
     await page.goto("/years/2016/?room=sites/iphone/index.html");
     const next = page.locator("#itt-follow-next");
-    await expect(next).toBeVisible({ timeout: 15000 });
-    await expect(next).toHaveAttribute("href", /app\/index\.html#\/year\/2017\?stop=itt17-faceid/);
+    await expect(next).toBeAttached({ timeout: 15000 });
+    await expect(next).toBeHidden();
   });
 
   test("2016 Facebook is the last Facebook room", async ({ page }) => {
@@ -100,15 +100,12 @@ test.describe("follow-a-site", () => {
     await expect(next).toHaveAttribute("href", /app\/index\.html#\/year\/2015\?stop=itt15-youtube/);
   });
 
-  test("2014 Twitter follow next has no 2015 room and opens the 2017 280 stop", async ({ page }) => {
+  test("2014 Twitter is the last Twitter room", async ({ page }) => {
     await page.goto("/years/2014/?room=sites/twitter/index.html");
     const next = page.locator("#itt-follow-next");
-    await expect(next).toBeVisible({ timeout: 15000 });
-    await expect(next).toHaveAttribute("href", /app\/index\.html#\/year\/2017\?stop=itt17-twitter-280/);
+    await expect(next).toBeAttached({ timeout: 15000 });
+    await expect(next).toBeHidden();
     await expect(next).not.toHaveAttribute("href", /years\/2015/);
-    await next.click();
-    await expect(page).toHaveURL(/app\/index\.html#\/year\/2017/);
-    await expect(page.locator("body")).toContainText(/2017/);
   });
 
 });

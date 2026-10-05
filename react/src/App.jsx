@@ -1,13 +1,11 @@
 import { Component, useEffect } from "react";
 import { Link, Navigate, Route, Routes, useParams } from "react-router-dom";
 import { Year2015 } from "./Year2015.jsx";
-import { Year2017 } from "./Year2017.jsx";
 import { REACT_YEARS } from "./years.js";
 import card from "../../js/year-card.json";
 
 const DOORS = {
   2015: Year2015,
-  2017: Year2017,
 };
 
 export function App() {
@@ -78,11 +76,12 @@ function StaticYear({ year }) {
 function Hall() {
   const open = REACT_YEARS.filter((row) => DOORS[row.year]);
   const reactYears = open.map((row) => row.year).join(" and ");
+  const one = open.length === 1;
   return (
     <main className="hall">
-      <p className="kicker">React doors · {reactYears}</p>
+      <p className="kicker">{one ? "React door" : "React doors"} · {reactYears}</p>
       <h1>Internet Through Time</h1>
-      <p className="lede">{reactYears} are the React doors.</p>
+      <p className="lede">{one ? reactYears + " is the React door." : reactYears + " are the React doors."}</p>
       <ul className="cards">
         {open.map((row) => (
           <li key={row.year}>
@@ -101,9 +100,22 @@ function Hall() {
   );
 }
 
+function AbsentYear({ year }) {
+  return (
+    <main className="hall">
+      <h1>{year} is not a door</h1>
+      <p>This year is not in the museum.</p>
+      <p>
+        <a href="../index.html">Museum hub</a>
+      </p>
+    </main>
+  );
+}
+
 function YearSwitch() {
   const { year } = useParams();
   const rec = card.years[year];
+  if (rec && rec.kind === "absent") return <AbsentYear year={year} />;
   if (rec && rec.hashToHtml) return <StaticYear year={year} />;
   const Door = DOORS[year];
   if (Door && rec && rec.kind === "react") {

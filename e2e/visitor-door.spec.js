@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Museum door — docs/FLOW-CHECK-DIAGRAM.md §4 + docs/DISK-TRUTH.md.
- * Hub 27 years (1994–2017 and 2020–2022). 2015 and 2017 are React doors. 2018–2019 and 2023–2025 are absent.
+ * Hub 26 years (1994–2016 and 2020–2022). 2015 is the React door. 2017–2019 and 2023–2025 are absent.
  * Links first, then dest-true I/O. Dest-folder count is not a pass.
  */
 const fs = require("fs");
@@ -12,7 +12,7 @@ const { destOnDisk, expectYearBoarded } = require("./helpers");
 const ROOT = path.join(__dirname, "..");
 const SHIP = [];
 for (let y = 1994; y <= 2022; y++) {
- if (y === 2018 || y === 2019) continue;
+ if (y === 2017 || y === 2018 || y === 2019) continue;
   SHIP.push(String(y));
 }
 const BOARDED = ["2023", "2024", "2025"];
@@ -45,15 +45,15 @@ async function getKey(page, key) {
 }
 
 test.describe("visitor door", () => {
- test("hub lists 27 years including 2015, 2011, 2009, 2008, 2005, and 2020–2022", async ({ page }) => {
- expect(SHIP).toHaveLength(27);
+ test("hub lists 26 years including 2015, 2011, 2009, 2008, 2005, and 2020–2022", async ({ page }) => {
+ expect(SHIP).toHaveLength(26);
     await page.goto("/");
  await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
     await expect(page.locator("body")).not.toContainText(/27 years open/i);
     await expect(page.locator("a.year-card[href*='years/2005']")).toBeVisible();
     await expect(page.locator("a.year-card.available[href*='years/2015']")).toHaveCount(0);
     await expect(page.locator('a.year-card.available[data-year="2015"]')).toBeVisible();
-    const reactDoor = new Set(["2015", "2017"]);
+    const reactDoor = new Set(["2015"]);
     for (const y of SHIP) {
       if (reactDoor.has(y)) {
         await expect(page.locator(`a.year-card.available[data-year="${y}"]`)).toHaveAttribute(
@@ -91,7 +91,7 @@ test.describe("visitor door", () => {
     const missing = [];
     /** @type {Record<string, number>} */
     const officialCap = { "2004": 8, "2012": 10, "2013": 9, "2014": 9 };
-    const reactDoor = new Set(["2015", "2017"]);
+    const reactDoor = new Set(["2015"]);
     for (const y of SHIP) {
       if (reactDoor.has(y)) {
         if (!fs.existsSync(path.join(ROOT, "react", "src", "year" + y + ".js"))) {
@@ -159,9 +159,7 @@ test.describe("visitor door", () => {
     expect(on).toBeFalsy();
   });
 
-  test("14.4k wait is gone on 2017 and 2010 Starting Point", async ({ page }) => {
-    await page.goto("/app/index.html#/year/2017");
-    await expect(page.locator("[data-itt-friction]")).toHaveCount(0);
+  test("14.4k wait is gone on the 2010 Starting Point", async ({ page }) => {
     await page.goto("/years/2010/pages/home.html");
     await expect(page.locator("[data-itt-friction]")).toHaveCount(0);
   });

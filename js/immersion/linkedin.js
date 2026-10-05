@@ -95,7 +95,6 @@
       var cons = loadC();
       if (!cons.length) {
         cons = defaults();
-        saveC(cons);
       }
       list.innerHTML = cons
         .map(function (x) {
