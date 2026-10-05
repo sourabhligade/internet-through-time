@@ -1,0 +1,731 @@
+/* Twenty 2002 leftover rooms only (adwords, apache2, audiogalaxy, aws,
+   bb5810, dotnet, dwmx, eclipse2, ffxi, ichat, imacg4, j2se14, nnw,
+   nokia7650, ns7, plaxo, qt6, sidekick, tabletpc, tungsten).
+   leftover-dest-face.css paints a white outset XP panel on every
+   data-itt-dest-true room. These rooms keep that flag so the save
+   panel stays on screen. This sheet, linked after period-2002.css,
+   paints the visitor action. */
+
+html[data-itt-year="2002"]:not([data-official-key]) body.d02-page:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]) {
+  margin: 0;
+  background: #ece9d8 !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+  font-family: Tahoma, "MS Sans Serif", sans-serif !important;
+}
+
+.d02-wrap {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 12px 12px 36px;
+  box-sizing: border-box;
+}
+
+.d02-wrap h1 {
+  margin: 8px 0;
+  font-size: 22px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.d02-lead,
+.d02-cite {
+  margin: 0 0 8px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.d02-wrap .crumb {
+  margin: 0;
+  font-size: 12px;
+}
+
+body.d02-page a {
+  color: #003399;
+}
+
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02:not([data-itt-gold-lx]):has([data-era-result]) {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: inherit !important;
+  padding: 0 !important;
+  margin: 10px 0 0 !important;
+  max-width: none !important;
+  font-size: 13px !important;
+  font-family: Tahoma, "MS Sans Serif", sans-serif !important;
+}
+
+.d02-kicker {
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.d02-label {
+  display: block;
+  margin: 8px 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.d02 [data-lo-field] {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 3px;
+  padding: 3px 4px;
+  border: 2px inset #fff;
+  background: #fff !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+  font: 13px Tahoma, "MS Sans Serif", sans-serif;
+}
+
+.d02 [data-lo-field]::placeholder {
+  color: #333;
+  -webkit-text-fill-color: #333;
+  opacity: 1;
+}
+
+.d02-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.d02-after {
+  display: none;
+}
+
+.d02:has([data-lo-pick="keep"].is-on) .d02-before,
+.d02:has([data-lo-pick="keep"][aria-pressed="true"]) .d02-before {
+  display: none;
+}
+
+.d02:has([data-lo-pick="keep"].is-on) .d02-after,
+.d02:has([data-lo-pick="keep"][aria-pressed="true"]) .d02-after {
+  display: block;
+}
+
+.d02-honest {
+  margin-top: 10px;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #aca899;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-honest,
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-honest label {
+  background: #fff !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+.d02-honest label {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+  margin: 4px 0;
+}
+
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02:has([data-era-result]) [data-lo-pick],
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02:has([data-era-result]) [data-lo-trap] {
+  appearance: none;
+  display: inline-block !important;
+  width: auto !important;
+  margin: 0 !important;
+  background: #ece9d8 !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+  border: 2px outset #fff !important;
+  border-radius: 0 !important;
+  padding: 3px 10px !important;
+  font-family: Tahoma, "MS Sans Serif", sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02:has([data-era-result]) [data-lo-pick].is-on,
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02:has([data-era-result]) [data-lo-pick][aria-pressed="true"] {
+  background: #316ac5 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  border: 2px inset #fff !important;
+}
+
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02:has([data-era-result]) [data-lo-trap]::after {
+  content: " · never writes";
+  font-weight: 400;
+}
+
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02:has([data-era-result]) [data-lo-save] {
+  appearance: none;
+  display: inline-block !important;
+  width: auto !important;
+  margin: 0 !important;
+  background: #ece9d8 !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+  border: 2px outset #fff !important;
+  border-radius: 0 !important;
+  padding: 4px 16px !important;
+  font-family: Tahoma, "MS Sans Serif", sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+.d02 button:focus-visible,
+.d02 input:focus-visible {
+  outline: 2px solid #003c74;
+  outline-offset: 1px;
+}
+
+/* Not a trail stop. The shared list would read "Step — of 10".
+   itt-dest-page.css forces that list on for a direct tab, so this beats it. */
+html.itt-dest-top[data-itt-year="2002"] body.d02-page [data-itt-flow-trail],
+body.d02-page [data-itt-flow-trail] {
+  display: none !important;
+}
+
+.d02 [data-lo-status]:not(:empty) {
+  display: inline-block;
+  margin: 8px 0 0;
+  padding: 3px 8px;
+  background: #f4efe6 !important;
+  font-size: 12px;
+}
+
+.d02-win {
+  background: #fff;
+  color: #000;
+  border: 2px solid #0831a2;
+}
+
+.d02-title {
+  margin: 0;
+  padding: 3px 8px;
+  background: #0a246a;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.d02-body {
+  padding: 10px;
+  background: #fff;
+  color: #000;
+  -webkit-text-fill-color: #000;
+}
+
+.d02-hit,
+.d02-line {
+  margin: 0 0 8px;
+  padding: 6px 8px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #aca899;
+}
+
+/* Audiogalaxy — search comes back prohibited */
+.d02-audiogalaxy .d02-hit {
+  font-family: Tahoma, sans-serif;
+  font-size: 14px;
+}
+
+.d02-audiogalaxy .d02-after {
+  background: #fff;
+  color: #000;
+  font-weight: 700;
+}
+
+/* Plaxo — plain-text card */
+.d02-cardline {
+  margin: 0 0 8px;
+  padding: 8px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #aca899;
+}
+
+.d02-plaxo .d02-who {
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+
+/* iChat — buddy list */
+.d02-buddies {
+  margin: 0 0 8px;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+  color: #000;
+  border: 1px solid #7aa2d4;
+}
+
+.d02-buddies li {
+  padding: 4px 8px;
+  border-bottom: 1px solid #d5e4f5;
+}
+
+.d02-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  background: #1a7a32;
+}
+
+.d02-away {
+  background: #8a8a8a;
+}
+
+/* .NET and Eclipse and javac — editor panes */
+.d02-code,
+.d02-out {
+  margin: 0 0 8px;
+  padding: 8px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #aca899;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.d02-eclipse2 .d02-bench {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 6px;
+}
+
+.d02-eclipse2 .d02-tree {
+  margin: 0;
+  padding: 6px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #aca899;
+  font-size: 12px;
+}
+
+/* AdWords — results plus a right-hand sponsored column */
+.d02-ads {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 8px;
+}
+
+.d02-col {
+  padding: 8px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #aca899;
+}
+
+.d02-adwords .d02-sponsored {
+  background: #fff8dc;
+  color: #000;
+  -webkit-text-fill-color: #000;
+}
+
+/* AWS — XML pane */
+.d02-xml {
+  margin: 0 0 8px;
+  padding: 8px;
+  background: #fff;
+  color: #000;
+  border: 2px inset #fff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+/* Dreamweaver — design beside code */
+.d02-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.d02-pane {
+  min-height: 72px;
+  padding: 8px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #aca899;
+  font-size: 12px;
+}
+
+.d02-dwmx .d02-codepane {
+  background: #f4f4f0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Netscape 7 — tab strip */
+.d02-tabs {
+  display: flex;
+  gap: 4px;
+  margin: 0 0 0;
+}
+
+.d02-tab {
+  padding: 4px 10px;
+  background: #d4d0c8;
+  color: #000;
+  border: 1px solid #808080;
+  border-bottom: 0;
+  font-size: 12px;
+}
+
+.d02-ns7 .d02-tab-on,
+.d02-ns7:has([data-lo-pick="keep"].is-on) .d02-tab-new {
+  background: #fff;
+  font-weight: 700;
+}
+
+.d02-ns7 .d02-tab-new {
+  display: none;
+}
+
+.d02-ns7:has([data-lo-pick="keep"].is-on) .d02-tab-new {
+  display: inline-block;
+}
+
+.d02-doc {
+  margin: 0 0 8px;
+  padding: 10px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #808080;
+}
+
+/* NetNewsWire Lite — three panes */
+.d02-panes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.15fr;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.d02-nnw .d02-pane p {
+  margin: 0 0 4px;
+}
+
+/* Final Fantasy XI — PlayOnline */
+.d02-play {
+  padding: 12px;
+  background: #0b1c38;
+  color: #e8eef8;
+  -webkit-text-fill-color: #e8eef8;
+}
+
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-play,
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-play p,
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-play .d02-label,
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-play .d02-kicker {
+  color: #e8eef8 !important;
+  -webkit-text-fill-color: #e8eef8 !important;
+}
+
+.d02-ffxi .d02-world {
+  min-height: 72px;
+  margin: 0 0 8px;
+  padding: 14px 10px;
+  background: #071426;
+  color: #e8eef8;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* QuickTime 6 */
+.d02-player {
+  padding: 10px;
+  background: #1a1a1a;
+  color: #f0f0f0;
+}
+
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-player,
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-player p,
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-player .d02-label,
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-player .d02-kicker {
+  color: #f0f0f0 !important;
+  -webkit-text-fill-color: #f0f0f0 !important;
+}
+
+.d02-qt6 .d02-screen {
+  min-height: 88px;
+  margin: 0 0 8px;
+  padding: 16px 10px;
+  background: #000;
+  color: #f0f0f0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.d02-transport {
+  display: flex;
+  gap: 6px;
+  margin: 0 0 8px;
+}
+
+.d02-transport span {
+  width: 28px;
+  height: 18px;
+  background: #3a3a3a;
+  border: 1px solid #888;
+}
+
+/* Apache 2.0.35 */
+.d02-term {
+  padding: 12px;
+  background: #0e1610;
+  color: #d7f5d0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-term,
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-term p,
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-term .d02-label,
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-term .d02-kicker {
+  color: #d7f5d0 !important;
+  -webkit-text-fill-color: #d7f5d0 !important;
+  font-family: "Courier New", Courier, monospace !important;
+}
+
+.d02-apache2 .d02-prompt {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Tablet PC — slate and ink */
+.d02-slate {
+  padding: 14px 12px 16px;
+  background: #c8c4bc;
+  border: 2px solid #6e6a62;
+  border-radius: 10px;
+}
+
+.d02-paper {
+  min-height: 96px;
+  margin: 0 0 8px;
+  padding: 10px;
+  background: #f7f4ea;
+  color: #000;
+  border: 1px solid #8a8478;
+}
+
+.d02-inkline {
+  height: 3px;
+  width: 62%;
+  margin: 8px 0 0;
+  background: #1a2744;
+}
+
+/* Nokia 7650 */
+.d02-phone {
+  width: 188px;
+  margin: 0 auto 8px;
+  padding: 16px 14px 18px;
+  background: #d5dbe3;
+  border: 2px solid #8d97a3;
+  border-radius: 22px;
+}
+
+.d02-ear {
+  width: 36px;
+  height: 6px;
+  margin: 0 auto 10px;
+  background: #6d7784;
+  border-radius: 4px;
+}
+
+.d02-lcd {
+  min-height: 132px;
+  padding: 10px;
+  background: #12315c;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-lcd,
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-lcd p {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+.d02-nokia7650 .d02-lcd p {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Sidekick — monochrome Hiptop */
+.d02-hip {
+  width: 230px;
+  margin: 0 auto 8px;
+  padding: 12px 12px 16px;
+  background: #2a2a2a;
+  border-radius: 12px 12px 18px 18px;
+}
+
+.d02-mono {
+  min-height: 110px;
+  padding: 8px;
+  background: #111;
+  color: #e4e4e4;
+  -webkit-text-fill-color: #e4e4e4;
+}
+
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-mono,
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-mono p {
+  color: #e4e4e4 !important;
+  -webkit-text-fill-color: #e4e4e4 !important;
+}
+
+.d02-wheel {
+  width: 28px;
+  height: 28px;
+  margin: 8px auto 0;
+  background: #3a3a3a;
+  border: 2px solid #777;
+  border-radius: 50%;
+}
+
+/* BlackBerry 5810 */
+.d02-bb {
+  width: 210px;
+  margin: 0 auto 8px;
+  padding: 10px;
+  background: #2c2c28;
+  border-radius: 8px;
+}
+
+.d02-bb .d02-mono {
+  min-height: 96px;
+}
+
+.d02-keys {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3px;
+  margin-top: 8px;
+}
+
+.d02-keys i {
+  display: block;
+  height: 12px;
+  background: #4a4a44;
+  font-style: normal;
+}
+
+/* iMac G4 — hemisphere and a floating panel */
+.d02-rig {
+  padding: 8px 0 12px;
+}
+
+.d02-imac-lcd {
+  width: 210px;
+  margin: 0 auto;
+  padding: 18px 10px;
+  background: #f7f7f7;
+  color: #000;
+  border: 10px solid #e4e4e4;
+  text-align: center;
+  transform-origin: 50% 100%;
+}
+
+.d02-imacg4:has([data-lo-pick="keep"].is-on) .d02-imac-lcd,
+.d02-imacg4:has([data-lo-pick="keep"][aria-pressed="true"]) .d02-imac-lcd {
+  transform: rotate(-12deg);
+}
+
+.d02-arm {
+  width: 12px;
+  height: 34px;
+  margin: 0 auto;
+  background: #c8c8c8;
+}
+
+.d02-dome {
+  width: 156px;
+  height: 74px;
+  margin: 0 auto;
+  background: #f4f4f4;
+  border: 2px solid #b5b5b5;
+  border-radius: 80px 80px 18px 18px;
+}
+
+.d02-imac-lcd p {
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Tungsten T */
+.d02-pda {
+  width: 210px;
+  margin: 0 auto 8px;
+  padding: 12px 12px 14px;
+  background: #cfc8bc;
+  border: 2px solid #8a8172;
+  border-radius: 14px;
+}
+
+.d02-pda-screen {
+  min-height: 84px;
+  padding: 8px;
+  background: #16324f;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-pda-screen,
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-pda-screen p {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+.d02-graf {
+  margin-top: 8px;
+  padding: 8px;
+  background: #f3efe4;
+  color: #000;
+  -webkit-text-fill-color: #000;
+  border: 1px solid #8a8172;
+}
+
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-graf,
+html[data-itt-year="2002"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d02 .d02-graf p {
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+.d02-graf p {
+  margin: 0;
+  font-weight: 700;
+}
+
+@media (max-width: 420px) {
+  .d02-ads,
+  .d02-split,
+  .d02-panes,
+  .d02-eclipse2 .d02-bench {
+    grid-template-columns: 1fr;
+  }
+}

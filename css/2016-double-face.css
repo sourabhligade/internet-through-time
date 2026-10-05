@@ -1,0 +1,642 @@
+/* Ten 2016 leftover rooms only (marketplace, note7, gboard, touchbar,
+   bots, watchs2, nesclassic, hololens, yahoobreach, twilio).
+   period-2016.css pulls in a Material skin that flattens every
+   data-itt-dest-true panel. These rooms keep that flag so the save
+   panel stays on screen. This sheet, linked after period-2016.css,
+   paints the visitor action. */
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-page:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]) {
+  margin: 0;
+  background: #f4f4f4 !important;
+  color: #161616 !important;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif !important;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-page.d16-marketplace:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]) {
+  background: #e9ebee !important;
+  color: #1d2129 !important;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-page.d16-gboard:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]) {
+  background: #ececee !important;
+  color: #111 !important;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-page.d16-bots:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]) {
+  background: #f4f6f8 !important;
+  color: #111 !important;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-page.d16-yahoo:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]) {
+  background: #f3f3f5 !important;
+  color: #222 !important;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-page.d16-twilio:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]) {
+  background: #f7f8fa !important;
+  color: #111 !important;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-page.d16-dark:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]) {
+  background: #141414 !important;
+  color: #f4f4f4 !important;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-page.d16-note7:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]) {
+  background: #1c140e !important;
+  color: #f6f1e8 !important;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-page.d16-touchbar:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]) {
+  background: #1b1b1d !important;
+  color: #f2f2f2 !important;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-page.d16-watch:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]) {
+  background: #071018 !important;
+  color: #e8f4ff !important;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-page.d16-nes:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]) {
+  background: #2a241c !important;
+  color: #f4efe6 !important;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-page.d16-holo:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]) {
+  background: #0c1420 !important;
+  color: #e7eef8 !important;
+}
+
+.d16-wrap {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 16px 16px 40px;
+  box-sizing: border-box;
+}
+
+.d16-wrap h1 {
+  margin: 10px 0 8px;
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.d16-lead,
+.d16-cite {
+  margin: 0 0 10px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.d16-wrap .crumb {
+  margin: 0;
+  font-size: 13px;
+}
+
+body.d16-page a {
+  color: #0842a0;
+}
+
+body.d16-page.d16-dark a {
+  color: #9ec1ff;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d16:not([data-itt-gold-lx]):not(.itt-2016-machine):has([data-era-result]) {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: inherit !important;
+  padding: 0 !important;
+  margin: 14px 0 0 !important;
+  max-width: none !important;
+  font-size: 15px !important;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif !important;
+}
+
+.d16-card,
+.d16-offer,
+.d16-notice,
+.d16-thread,
+.d16-board,
+.d16-deck,
+.d16-handset,
+.d16-case,
+.d16-set,
+.d16-preorder {
+  box-sizing: border-box;
+}
+
+.d16-kicker {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.d16-label {
+  display: block;
+  margin: 10px 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.d16 [data-lo-field] {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 4px;
+  padding: 10px 12px;
+  border: 1px solid #5c5c5c;
+  border-radius: 8px;
+  background: #fff;
+  color: #111;
+  font: 16px/1.3 "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.d16-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.d16-honest {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.d16-honest label {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 6px 0;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-pick],
+html[data-itt-year="2016"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-trap] {
+  appearance: none;
+  display: inline-block !important;
+  width: auto !important;
+  margin: 0 !important;
+  background: #fff !important;
+  color: #111 !important;
+  -webkit-text-fill-color: #111 !important;
+  border: 1px solid #4d4d4d !important;
+  border-radius: 999px !important;
+  padding: 8px 14px !important;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-dark [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-pick],
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-dark [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-trap] {
+  background: #2a2a2a !important;
+  color: #f5f5f5 !important;
+  -webkit-text-fill-color: #f5f5f5 !important;
+  border-color: #cfcfcf !important;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-pick].is-on,
+html[data-itt-year="2016"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-pick][aria-pressed="true"] {
+  background: #111 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  border-color: #111 !important;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-dark [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-pick].is-on,
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-dark [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-pick][aria-pressed="true"] {
+  background: #f5f5f5 !important;
+  color: #111 !important;
+  -webkit-text-fill-color: #111 !important;
+  border-color: #f5f5f5 !important;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-trap]::after {
+  content: " · never writes";
+  font-weight: 500;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-save] {
+  appearance: none;
+  display: inline-block !important;
+  width: auto !important;
+  margin: 0 !important;
+  background: #111 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  padding: 10px 16px !important;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+.d16 button:focus-visible,
+.d16 input:focus-visible {
+  outline: 3px solid #0842a0;
+  outline-offset: 2px;
+}
+
+body.d16-dark .d16 button:focus-visible,
+body.d16-dark .d16 input:focus-visible {
+  outline-color: #9ec1ff;
+}
+
+html[data-itt-year="2016"] .d16 [data-era-result]:not(:empty) {
+  margin: 12px 0 0;
+  padding: 12px;
+  background: #fff;
+  color: #111;
+  border-radius: 8px;
+}
+
+.d16 [data-lo-status] {
+  min-height: 1.2em;
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+
+/* Status text is inline #060 / #a00. On a dark room that green sits on the page, so give it a light chip. */
+body.d16-dark .d16 [data-lo-status]:not(:empty) {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #f4efe6;
+}
+
+.d16 [data-era-result] p {
+  margin: 0 0 4px;
+}
+
+/* Marketplace — a local listing, 3 Oct 2016 */
+.d16-feed .d16-card {
+  background: #fff;
+  color: #1d2129;
+  border-radius: 8px;
+  padding: 14px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+}
+
+.d16-photo {
+  display: flex;
+  align-items: flex-end;
+  height: 112px;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  background: linear-gradient(160deg, #d5dbe3, #b7c0cc);
+  color: #1d2129;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-marketplace [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-save] {
+  background: #163a70 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+/* Note7 — September recall. Power down blacks the screen. */
+.d16-handset {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 12px;
+  background: #0e0e0e;
+  border: 3px solid #5a5048;
+  border-radius: 28px;
+}
+
+.d16-screen {
+  min-height: 220px;
+  padding: 18px 14px;
+  border-radius: 16px;
+  background: #6d1b1b;
+  color: #fff;
+}
+
+.d16-screen p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.d16-asleep {
+  display: none;
+}
+
+.d16:has([data-lo-pick="keep"].is-on) .d16-screen,
+.d16:has([data-lo-pick="keep"][aria-pressed="true"]) .d16-screen {
+  background: #000;
+  color: #c8c8c8;
+}
+
+.d16:has([data-lo-pick="keep"].is-on) .d16-awake,
+.d16:has([data-lo-pick="keep"][aria-pressed="true"]) .d16-awake {
+  display: none;
+}
+
+.d16:has([data-lo-pick="keep"].is-on) .d16-asleep,
+.d16:has([data-lo-pick="keep"][aria-pressed="true"]) .d16-asleep {
+  display: block;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-note7 [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-save] {
+  background: #8f1d1d !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+/* Gboard — search sits in the keyboard, 12 May 2016 */
+.d16-board {
+  background: #cfd3dc;
+  color: #111;
+  border-radius: 18px;
+  padding: 10px;
+}
+
+.d16-searchrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.d16-searchrow .d16-label {
+  flex: 1;
+  margin: 0;
+}
+
+.d16-keys {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 4px;
+}
+
+.d16-keys span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  border-radius: 5px;
+  background: #fff;
+  color: #111;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 1px 0 #8d93a0;
+}
+
+.d16-keys .d16-wide {
+  grid-column: span 2;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-gboard [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-save] {
+  background: #0d47a1 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  border-radius: 10px !important;
+}
+
+/* Touch Bar — the strip that replaces function keys */
+.d16-deck {
+  padding: 14px 12px 18px;
+  background: #2c2c2e;
+  border-radius: 14px 14px 6px 6px;
+  color: #f2f2f2;
+}
+
+.d16-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  min-height: 48px;
+  padding: 6px;
+  border-radius: 8px;
+  background: #000;
+}
+
+.d16-strip span {
+  padding: 6px 8px;
+  color: #d0d0d0;
+  font-size: 12px;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-touchbar [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-save] {
+  background: #003d82 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-touchbar [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-pick="keep"].is-on {
+  background: #8ec5ff !important;
+  color: #071018 !important;
+  -webkit-text-fill-color: #071018 !important;
+  border-color: #8ec5ff !important;
+}
+
+/* Messenger bots — a thread, beta, 12 Apr 2016 */
+.d16-thread {
+  padding: 12px;
+  border-radius: 16px;
+  background: #fff;
+  color: #111;
+}
+
+.d16-bubble {
+  max-width: 18em;
+  margin: 0 0 10px;
+  padding: 10px 12px;
+  border-radius: 14px 14px 14px 4px;
+  background: #eceff1;
+  color: #111;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-bots [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-save] {
+  background: #0a4f9c !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  border-radius: 18px !important;
+}
+
+/* Series 2 — swim on the watch, not the iPhone 7 door */
+.d16-case {
+  width: 210px;
+  margin: 4px auto 12px;
+  padding: 16px;
+  background: #111;
+  border: 8px solid #6a7380;
+  border-radius: 54px;
+}
+
+.d16-round {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 168px;
+  height: 168px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #06283a;
+  color: #e7f6ff;
+  text-align: center;
+}
+
+.d16-round p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.d16-go {
+  display: none;
+}
+
+.d16:has([data-lo-pick="keep"].is-on) .d16-idle,
+.d16:has([data-lo-pick="keep"][aria-pressed="true"]) .d16-idle {
+  display: none;
+}
+
+.d16:has([data-lo-pick="keep"].is-on) .d16-go,
+.d16:has([data-lo-pick="keep"][aria-pressed="true"]) .d16-go {
+  display: block;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-watch [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-save] {
+  background: #0c4f46 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+/* NES Classic — hardware you plug into a TV. Gym Rush stays the cabinet. */
+.d16-set {
+  padding: 12px 12px 20px;
+  background: #d7d7d7;
+  border-radius: 18px;
+  color: #111;
+}
+
+.d16-crt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  border-radius: 8px;
+  background: #101010;
+  color: #d5d5d5;
+  text-align: center;
+}
+
+.d16:has([data-lo-pick="keep"].is-on) .d16-crt,
+.d16:has([data-lo-pick="keep"][aria-pressed="true"]) .d16-crt {
+  background: #10243f;
+  color: #fff;
+}
+
+.d16-bezel {
+  margin: 8px 0 0;
+  color: #222;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-nes [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-save] {
+  background: #7f1212 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+/* HoloLens Development Edition — pre-order, not a shop headset */
+.d16-visor {
+  height: 74px;
+  margin: 0 auto 12px;
+  border-radius: 40px;
+  background:
+    linear-gradient(#1a1a1a, #1a1a1a) center top / 100% 28px no-repeat,
+    linear-gradient(#9ec9ff, #d7e8ff) center bottom / 86% 36px no-repeat;
+  background-color: transparent;
+}
+
+.d16-preorder {
+  padding: 14px;
+  border-radius: 10px;
+  background: #132033;
+  color: #e7eef8;
+}
+
+.d16-preorder p {
+  margin: 0 0 8px;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-holo [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-save] {
+  background: #004578 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+/* Yahoo notice — the theft was late 2014. The change is 2016. */
+.d16-ybar {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 8px 8px 0 0;
+  background: #400090;
+  color: #fff;
+  font-weight: 700;
+}
+
+.d16-notice {
+  padding: 14px;
+  border-radius: 0 0 8px 8px;
+  background: #fff;
+  color: #222;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-yahoo [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-save] {
+  background: #400090 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+/* Twilio — the 22 Jun 2016 price, before the first trade */
+.d16-offer {
+  padding: 18px 16px;
+  border-radius: 8px;
+  border-top: 8px solid #12141a;
+  background: #fff;
+  color: #111;
+}
+
+.d16-dollars {
+  margin: 0 0 4px;
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 800;
+  color: #111;
+}
+
+html[data-itt-year="2016"]:not([data-official-key]) body.d16-twilio [data-lo-panel][data-itt-dest-true].d16:has([data-era-result]) [data-lo-save] {
+  background: #12141a !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}

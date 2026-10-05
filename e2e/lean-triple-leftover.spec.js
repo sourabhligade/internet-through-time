@@ -41,8 +41,8 @@ test("2015 is the React door; 2017 and 2018 stay off disk; 2020 is HTML", () => 
   expect(fs.existsSync(path.join(ROOT, "react", "src", "year2020.js"))).toBe(false);
 });
 
-test("2016 dest folders 57", () => {
-  expect(destFolders(2016).length).toBe(57);
+test("2016 dest folders 67", () => {
+  expect(destFolders(2016).length).toBe(67);
 });
 
 test("triple leftover dests dest-disjoint leftover-3× unique", () => {

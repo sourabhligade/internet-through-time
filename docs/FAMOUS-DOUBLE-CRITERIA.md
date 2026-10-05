@@ -69,7 +69,11 @@ Counts are first-level folders under `years/YYYY/sites/`, with `playable` exclud
 
 Aim = twice the live site count. The aim is a ceiling. A year with no cited room stays at the live count. Every year below already has its official playable stop, so this pass adds no games.
 
-**2016 decision.** Live count is 56. Twice that is 112. The September aim was 64, from a disk of 32. The rejected farm was 132. The live ceiling is **112**. The hard fail is **132**. The September 64 is not the ceiling, because the disk is already 56. A proposal that passes 112, or that rebuilds the 132-dest farm, fails F6.
+**2016 decision.** Live count was 56. Twice that is 112. The September aim was 64, from a disk of 32. The rejected farm was 132. The live ceiling is **112**. The hard fail is **132**. The September 64 is not the ceiling, because the disk was already 56. A proposal that passes 112, or that rebuilds the 132-dest farm, fails F6.
+
+On 2026-10-05 the named double added ten leftover rooms: `marketplace`, `note7`, `gboard`, `touchbar`, `bots`, `watchs2`, `nesclassic`, `hololens`, `yahoobreach`, `twilio`. Sites now **66**. Folders **67** with `playable`. Ceiling stays **112**. Hard fail stays **132**. These rooms are leftover dests. They are not official stops and not leftover-2× links.
+
+**2002 named implement.** On 2026-10-05 the same double was built on the frozen 2002 forest, because that implement was named: twenty leftover rooms (`adwords`, `apache2`, `audiogalaxy`, `aws`, `bb5810`, `dotnet`, `dwmx`, `eclipse2`, `ffxi`, `ichat`, `imacg4`, `j2se14`, `nnw`, `nokia7650`, `ns7`, `plaxo`, `qt6`, `sidekick`, `tabletpc`, `tungsten`). Official trail stays 20. Star stays `itt02-stumble`. Folders go from 230 to 250. These rooms are direct-URL leftovers with one writer each. They are not official stops and not leftover-2× links. §3 still says Stop for any other new 1994–2006 folder.
 
 | Year | Star key | Sites now | Aim | New leftover cap | Official toy |
 |------|----------|----------:|-----:|-----------------:|--------------|
@@ -78,7 +82,7 @@ Aim = twice the live site count. The aim is a ceiling. A year with no cited room
 | 2011 | `itt11-gplus` | 36 | 72 | 36 | `itt11-game-letterswap` |
 | 2012 | `itt12-ig-android` | 31 | 62 | 31 | `itt12-game-guessdoodle` |
 | 2014 | `itt14-wa-install` | 24 | 48 | 24 | `itt14-game-tilefold` |
-| 2016 | `itt16-ig-stories` | 56 | 112 | 56 | `itt16-game-gymrush` |
+| 2016 | `itt16-ig-stories` | 66 | 112 | 46 | `itt16-game-gymrush` |
 | 2020 | `itt20-zoom` | 21 | 42 | 21 | `itt20-game-leave` |
 | 2021 | `itt21-att` | 17 | 34 | 17 | `itt21-game-five` |
 | 2022 | `itt22-chatgpt` | 24 | 48 | 24 | `itt22-game-prompt` |
@@ -111,9 +115,9 @@ A new dest fails F1 if its folder name is already here. `playable` is the cabine
 
 `alibabaipo` · `applepay` · `echo` · `facebook` · `flappybird` · `game2048` · `heartbleed` · `icebucket` · `inbox` · `instagram` · `ios8` · `iphone` · `material` · `musically14` · `oculusfb` · `playable` · `slack` · `snapchat` · `truecrypt` · `twitch` · `twitter` · `uber` · `whatsapp` · `wikipedia` · `youtube`
 
-### 2016 (57)
+### 2016 (67)
 
-`airpods` · `allo` · `alphago` · `assistant` · `athletic` · `battlefield1` · `clashroyale` · `daydream` · `doom2016` · `douyin` · `duo` · `dyn` · `ethereum` · `facebook` · `fblive` · `figma` · `googlehome` · `houseparty` · `iana` · `instagram` · `ios10` · `iphone` · `jio` · `letsencrypt` · `linkedinms` · `mastodon` · `miitomo` · `moments` · `musically` · `netflix` · `nomanssky` · `nougat` · `oculusrift` · `overwatch` · `panamapapers` · `peach` · `pixel` · `playable` · `pokemongo` · `prisma` · `psvr` · `reddit` · `ringer` · `sierra` · `slack` · `smario` · `snapchat` · `tay` · `tesla` · `thedao` · `uncharted4` · `vine` · `vive` · `whatsapp` · `windows10` · `youtube` · `zcash`
+`airpods` · `allo` · `alphago` · `assistant` · `athletic` · `battlefield1` · `bots` · `clashroyale` · `daydream` · `doom2016` · `douyin` · `duo` · `dyn` · `ethereum` · `facebook` · `fblive` · `figma` · `gboard` · `googlehome` · `hololens` · `houseparty` · `iana` · `instagram` · `ios10` · `iphone` · `jio` · `letsencrypt` · `linkedinms` · `marketplace` · `mastodon` · `miitomo` · `moments` · `musically` · `nesclassic` · `netflix` · `nomanssky` · `note7` · `nougat` · `oculusrift` · `overwatch` · `panamapapers` · `peach` · `pixel` · `playable` · `pokemongo` · `prisma` · `psvr` · `reddit` · `ringer` · `sierra` · `slack` · `smario` · `snapchat` · `tay` · `tesla` · `thedao` · `touchbar` · `twilio` · `uncharted4` · `vine` · `vive` · `watchs2` · `whatsapp` · `windows10` · `yahoobreach` · `youtube` · `zcash`
 
 ### 2020 (22)
 

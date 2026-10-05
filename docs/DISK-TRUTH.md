@@ -1,6 +1,6 @@
 # Disk truth — hub & years (canonical)
 
-**Date:** 2026-10-02  
+**Date:** 2026-10-05  
 **Law:** live tree + `scripts/itt_gate.py` `SHIP_YEARS`. This file does **not** append old ship cards.
 
 Hub **26 years open** (1994–2016 and 2020–2022). **2015 is the React door** (no `years/YYYY` tree · hub goes to `/app/index.html#/year/2015`). **2014, 2016, and 2020–2022 are HTML leanBoot doors.** **2009 is live lean** · Facebook Like `itt09-like`. **2011 is live HTML** · Google+ `itt11-gplus` · `years/2011/`. **2017–2019 and 2023–2025 are absent** (no tree · no hub card · no React door). **2023–2025 wiped.** **2020 is live HTML lean** · Zoom Leave `itt20-zoom`. **2021 is live HTML lean** · Ask App Not to Track `itt21-att`. **2022 is live HTML lean** · ChatGPT Send `itt22-chatgpt`. **2005 is restored** · YouTube upload `itt05-yt-uploads`. **2007 is live lean** · iPhone Safari `itt07-iphone`. **2008 is live lean** · App Store `itt08-apps`. Leftover-3× unique flows and link rails are **removed** (`leftover3xUnique` and `leftover3xUniqueLinks` are empty). **Leftover-4× unique** is 3 dests already on disk: 2007 digg · flickr · reddit, 2010 netflix · tumblr · wave, 2012 chrome · twitter · soundcloud, 2013 askfm · whisper · facebook (`data-itt-lo3x` + `pop4-*` · not the unique-3× catalog). Stacked `data-4x-go` stays 0 on 2007, 2010, 2012, and 2014. 1994–1996 and 2001–2004 each have 3 leftover-4× checks. 2016 has 3 leftover-4× checks. 2008 and 2015 have no new fourth strip. **2005 leftover-3× dest faces** are forest leftover machines, not a unique-3× catalog. **Dest-locked leftover dest leftover-2× = one leftover writer** (not `lx`+`d2`). Forests 1994–2006 and **2013 leftover 2× ×2** stay two leftover writers. **Official dest leftover-2× panels = 0** on official dest HTML. **2013 is Vine 6s.** 2006 is Twttr. **2014 is WhatsApp Install.** **2015 is Periscope Go LIVE.**
@@ -11,7 +11,7 @@ Hub **26 years open** (1994–2016 and 2020–2022). **2015 is the React door** 
 | **1999** | Live forest · AIM `itt99-aim` · dests **429** · leftover-2× unique dests **138** · leftover-2× on leftover dests · Board C rail `data-itt-2x-unique-c` |
 | **2000** | Live forest · MapQuest `itt00-mapquest` · dests **501** · trail stops **40** (official 10 + leftover 30) · leftover-2× on every dest · Board C rail |
 | **2001** | **CUT-FOREST LIVE** · Wikipedia UseMod `itt01-wiki` · dests **259** · leftover 18 year-true |
-| **2002** | **CUT-FOREST LIVE** · StumbleUpon `itt02-stumble` · dests **230** · leftover 18 year-true |
+| **2002** | **CUT-FOREST LIVE** · StumbleUpon `itt02-stumble` · dests **250** · leftover 18 year-true · famous double leftover rooms **20** (adwords · apache2 · audiogalaxy · aws · bb5810 · dotnet · dwmx · eclipse2 · ffxi · ichat · imacg4 · j2se14 · nnw · nokia7650 · ns7 · plaxo · qt6 · sidekick · tabletpc · tungsten) · direct URL · one writer each · official trail stays 20 |
 | **2003** | **CUT-FOREST LIVE** · Photobucket upload `itt03-photobucket` · dests **203** · leftover 18 year-true |
 | **2004** | Live forest · thefacebook networks `itt04-thefacebook-networks` · dests **805** · leftover-2× on every dest · Board C rail |
 | **2005** | **Restored** · YouTube upload `itt05-yt-uploads` · official 10 + leftover 10 · leftover-2× rail **92** cited ids · XP+IE6 |
@@ -25,7 +25,7 @@ Hub **26 years open** (1994–2016 and 2020–2022). **2015 is the React door** 
 | **2013** | **Live lean door** · Vine 6s `itt13-vine-posts` · leftover 2× ×2 on every dest · leftover-3× unique **0** · leftover-4× unique **3** (askfm · whisper · facebook) · leftover-2× unique **27** |
 | **2014** | **Live lean door** · WhatsApp Install `itt14-wa-install` · dest-lock official 10 + leftover dests · leftover-3× unique **0** · leftover-4× **0** (no room outside official, trail, and leftover-2×) · dest folders **25** · Win7 + IE 9 |
 | **2015** | **Live lean React door** · Periscope Go LIVE `itt15-periscope` · no HTML tree · official 10 · hub `/app/index.html#/year/2015` |
-| **2016** | Live lean door · IG Stories · extra leftover dest leftover DROPped · dest folders **57** · leftover-3× unique **0** · leftover-2× unique **20** · leftover dests · leftover-4× checks **3** (alphago · figma · ethereum) |
+| **2016** | Live lean door · IG Stories · extra leftover dest leftover DROPped · dest folders **67** · famous double leftover rooms **10** (marketplace · note7 · gboard · touchbar · bots · watchs2 · nesclassic · hololens · yahoobreach · twilio) · leftover-3× unique **0** · leftover-2× unique **20** · leftover dests · leftover-4× checks **3** (alphago · figma · ethereum) |
 | **2017** | **Absent** · no HTML tree · no hub card · no React door · no trail |
 | **2018** | **Absent** · no HTML tree · no hub card · no React door · no trail |
 | **2019** | **Absent** · no HTML tree · no hub card · no React door · no trail |
@@ -34,7 +34,7 @@ Hub **26 years open** (1994–2016 and 2020–2022). **2015 is the React door** 
 | **2022** | **LIVE HTML lean** · ChatGPT Send `itt22-chatgpt` · leanBoot · hashToHtml · official 10 · `years/2022/` |
 | **2023–2025** | **Wiped** · no tree · no year card · no atlas tick |
 
-Lean doors: **2007 + 2008 + 2009 + 2010 + 2012–2014 + 2016 + 2020–2022** are HTML. **2015** is React. Dest-lock applied 2026-09-15 on 2007/2010/2012/2014. **2016 HTML dest folders** 57. **2011 is live HTML.** **2017–2019 and 2023–2025 absent.** Forests 1994–2006 stay dense.
+Lean doors: **2007 + 2008 + 2009 + 2010 + 2012–2014 + 2016 + 2020–2022** are HTML. **2015** is React. Dest-lock applied 2026-09-15 on 2007/2010/2012/2014. **2016 HTML dest folders** 67. **2011 is live HTML.** **2017–2019 and 2023–2025 absent.** Forests 1994–2006 stay dense.
 Games wing (`games/`) is separate and live.
 
 Rebuild a wiped year only when named. Do not `git checkout` an old forest. Live tree + this file win. Stale implement notebooks were removed.

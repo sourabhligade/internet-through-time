@@ -31,7 +31,7 @@ const STAR = {
 };
 const DEST_HTML = {
   2001: { dests: 259, html: 331 },
-  2002: { dests: 230, html: 282 },
+  2002: { dests: 250, html: 302 },
   2003: { dests: 203, html: 268 },
   2004: { dests: 805, html: 955 },
   2005: { dests: 806, html: 966 },

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "marketplace",
+    "href": "/years/2016/sites/marketplace/index.html",
+    "key": "itt16-marketplace-lx",
+    "verb": "Sell",
+    "cite": "https://about.fb.com/news/2016/10/introducing-marketplace-buy-and-sell-with-your-local-community/"
+  },
+  {
+    "id": "note7",
+    "href": "/years/2016/sites/note7/index.html",
+    "key": "itt16-note7-lx",
+    "verb": "Power down",
+    "cite": "https://www.cpsc.gov/Recalls/2016/Samsung-Recalls-Galaxy-Note7-Smartphones"
+  },
+  {
+    "id": "gboard",
+    "href": "/years/2016/sites/gboard/index.html",
+    "key": "itt16-gboard-lx",
+    "verb": "Search",
+    "cite": "https://blog.google/products-and-platforms/products/search/gboard-search-gifs-emojis-keyboard/"
+  },
+  {
+    "id": "touchbar",
+    "href": "/years/2016/sites/touchbar/index.html",
+    "key": "itt16-touchbar-lx",
+    "verb": "Touch",
+    "cite": "https://www.apple.com/newsroom/2016/10/apple-unveils-groundbreaking-new-macbook-pro/"
+  },
+  {
+    "id": "bots",
+    "href": "/years/2016/sites/bots/index.html",
+    "key": "itt16-bots-lx",
+    "verb": "Send",
+    "cite": "https://about.fb.com/news/2016/04/messenger-platform-at-f8/"
+  },
+  {
+    "id": "watchs2",
+    "href": "/years/2016/sites/watchs2/index.html",
+    "key": "itt16-watchs2-lx",
+    "verb": "Swim",
+    "cite": "https://www.apple.com/newsroom/2016/09/apple-introduces-apple-watch-series-2/"
+  },
+  {
+    "id": "nesclassic",
+    "href": "/years/2016/sites/nesclassic/index.html",
+    "key": "itt16-nesclassic-lx",
+    "verb": "Plug",
+    "cite": "https://web.archive.org/web/20160718232432/http://www.nintendo.com/nes-classic"
+  },
+  {
+    "id": "hololens",
+    "href": "/years/2016/sites/hololens/index.html",
+    "key": "itt16-hololens-lx",
+    "verb": "Purchase",
+    "cite": "https://blogs.windows.com/devices/2016/02/29/announcing-microsoft-hololens-development-edition-open-for-pre-order-shipping-march-30/"
+  },
+  {
+    "id": "yahoobreach",
+    "href": "/years/2016/sites/yahoobreach/index.html",
+    "key": "itt16-yahoobreach-lx",
+    "verb": "Change",
+    "cite": "https://help.yahoo.com/kb/account/september-sln28092.html"
+  },
+  {
+    "id": "twilio",
+    "href": "/years/2016/sites/twilio/index.html",
+    "key": "itt16-twilio-lx",
+    "verb": "Price",
+    "cite": "https://www.twilio.com/en-us/press/releases/twilio-announces-pricing-of-initial-public-offering"
+  }
+]
