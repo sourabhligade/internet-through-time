@@ -205,6 +205,7 @@
       "kind": "html",
       "href": "years/2007/",
       "star": "itt07-iphone",
+      "leanBoot": true,
       "chrome": {
         "os": "winxp",
         "browser": "ie6",
@@ -220,6 +221,7 @@
       "kind": "html",
       "href": "years/2008/",
       "star": "itt08-apps",
+      "leanBoot": true,
       "chrome": {
         "os": "winxp",
         "browser": "ie7",
@@ -235,6 +237,7 @@
       "kind": "html",
       "href": "years/2009/",
       "star": "itt09-like",
+      "leanBoot": true,
       "chrome": {
         "os": "winxp",
         "browser": "ie8",
@@ -250,6 +253,7 @@
       "kind": "html",
       "href": "years/2010/",
       "star": "itt10-ig-posts",
+      "leanBoot": true,
       "chrome": {
         "os": "win7",
         "browser": "ie8",
@@ -266,6 +270,7 @@
       "kind": "html",
       "href": "years/2011/",
       "star": "itt11-gplus",
+      "leanBoot": true,
       "chrome": {
         "os": "win7",
         "browser": "ie8",
@@ -282,6 +287,7 @@
       "kind": "html",
       "href": "years/2012/",
       "star": "itt12-ig-android",
+      "leanBoot": true,
       "chrome": {
         "os": "win7",
         "browser": "ie9",
@@ -297,6 +303,7 @@
       "kind": "html",
       "href": "years/2013/",
       "star": "itt13-vine-posts",
+      "leanBoot": true,
       "chrome": {
         "os": "win7",
         "browser": "ie9",

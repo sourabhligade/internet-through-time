@@ -768,8 +768,11 @@ async function leftoverOfficialDest(page, href, suffix, goldKey) {
   await page.evaluate((k) => localStorage.removeItem(k), key);
   if (goldKey) await page.evaluate((k) => localStorage.removeItem(k), goldKey);
 
-  await panel.locator("[data-lo-trap]").first().click();
-  expect(await page.evaluate((k) => localStorage.getItem(k), key), key + " trap").toBeFalsy();
+  const traps = panel.locator("[data-lo-trap]");
+  if ((await traps.count()) > 0) {
+    await traps.first().click();
+    expect(await page.evaluate((k) => localStorage.getItem(k), key), key + " trap").toBeFalsy();
+  }
 
   await panel.locator("[data-lo-save]").first().click();
   expect(await page.evaluate((k) => localStorage.getItem(k), key), key + " 0 ticks").toBeFalsy();

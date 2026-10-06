@@ -4,7 +4,7 @@
  * Leftover dests keep dest-true leftover dest faces visible.
  * leftover-official.js folds warehouse clones into details.itt-also-year.
  */
-html[data-official-key] [data-lo-panel]:not([data-itt-dest-true]):not([data-itt-gold-lx]),
+html[data-official-key] [data-lo-panel]:not([data-itt-dest-true]):not([data-itt-gold-lx]):not([data-5x-live]),
 html[data-official-key] [data-itt-2x-links],
 html[data-official-key] [data-itt-2x-unique],
 html[data-official-key] [data-itt-2x-unique-b],

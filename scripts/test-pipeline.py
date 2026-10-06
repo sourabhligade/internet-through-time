@@ -309,7 +309,7 @@ def test_year_card() -> None:
         fail("year-card", f"frozen years {sorted(frozen)}")
         return
     lean = sorted(y for y, r in years.items() if r.get("leanBoot"))
-    if lean != ["2014", "2016", "2020", "2021", "2022"]:
+    if lean != ["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2016", "2020", "2021", "2022"]:
         fail("year-card", f"leanBoot {lean}")
         return
     if years.get("2008", {}).get("kind") != "html":

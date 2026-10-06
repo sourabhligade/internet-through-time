@@ -132,6 +132,96 @@
     }
   }
 
+  function yearHasEngine(rel, doc) {
+    var y = yearOf(doc || document);
+    var list = (ITT.IMMERSION_FEATURES_BY_YEAR && ITT.IMMERSION_FEATURES_BY_YEAR[y]) || [];
+    var i;
+    for (i = 0; i < list.length; i++) if (list[i] === rel) return true;
+    return false;
+  }
+
+  function renameHook(root, from, to) {
+    var els = root.querySelectorAll("[" + from + "]");
+    var i;
+    var v;
+    for (i = 0; i < els.length; i++) {
+      v = els[i].getAttribute(from);
+      els[i].setAttribute(to, v == null ? "" : v);
+    }
+  }
+
+  /** Lean years drop ytl / pop / 5× engines. Map those dest hooks onto leftover-official. */
+  function foldDeadPackHooks(doc) {
+    doc = doc || document;
+    var i;
+    var root;
+    var go;
+    var need;
+    if (!yearHasEngine("immersion/year-true-leftover.js", doc)) {
+      var ytl = doc.querySelectorAll("[data-ytl]");
+      for (i = 0; i < ytl.length; i++) {
+        root = ytl[i];
+        if (root.getAttribute("data-lo-ytl-folded") === "1") continue;
+        root.setAttribute("data-lo-ytl-folded", "1");
+        root.setAttribute("data-lo-panel", "1");
+        renameHook(root, "data-ytl-pick", "data-lo-pick");
+        renameHook(root, "data-ytl-trap", "data-lo-trap");
+        renameHook(root, "data-ytl-field", "data-lo-field");
+        renameHook(root, "data-ytl-req", "data-lo-req");
+        renameHook(root, "data-ytl-status", "data-lo-status");
+        go = root.querySelector("[data-ytl-go]");
+        if (!go) continue;
+        go.setAttribute("data-lo-save", "1");
+        go.setAttribute("data-lo-key", root.getAttribute("data-ytl-key") || "leftover");
+        need = root.getAttribute("data-ytl-need-pick") || "";
+        if (need) go.setAttribute("data-lo-need-pick", need);
+        need = root.getAttribute("data-ytl-need-field") || "";
+        if (need) go.setAttribute("data-lo-need-field", need);
+      }
+    }
+    if (!yearHasEngine("immersion/year-popular-3x.js", doc)) {
+      var pops = doc.querySelectorAll("[data-pop-go]");
+      for (i = 0; i < pops.length; i++) {
+        go = pops[i];
+        if (go.getAttribute("data-lo-pop-folded") === "1") continue;
+        go.setAttribute("data-lo-pop-folded", "1");
+        root = go;
+        while (root && root !== doc && root !== doc.documentElement) {
+          if (root.getAttribute && (root.getAttribute("data-pop-panel") === "1" || /\bitt-pop3\b/.test(root.className || ""))) break;
+          root = root.parentNode;
+        }
+        if (!root || !root.querySelector) root = go.parentNode || doc;
+        if (root.setAttribute) root.setAttribute("data-lo-panel", "1");
+        renameHook(root, "data-pop-pick", "data-lo-pick");
+        renameHook(root, "data-pop-trap", "data-lo-trap");
+        renameHook(root, "data-pop-field", "data-lo-field");
+        renameHook(root, "data-pop-req", "data-lo-req");
+        renameHook(root, "data-pop-status", "data-lo-status");
+        go.setAttribute("data-lo-save", "1");
+        go.setAttribute("data-lo-key", go.getAttribute("data-pop-key") || ("pop-" + (go.getAttribute("data-pop-id") || "site")));
+      }
+    }
+    if (!yearHasEngine("immersion/year-5x-pack.js", doc)) {
+      var fives = doc.querySelectorAll("[data-5x-save]");
+      for (i = 0; i < fives.length; i++) {
+        go = fives[i];
+        if (go.getAttribute("data-lo-5x-folded") === "1") continue;
+        go.setAttribute("data-lo-5x-folded", "1");
+        root = go;
+        while (root && root !== doc && root !== doc.documentElement) {
+          if (root.getAttribute && root.getAttribute("data-5x-loop") != null) break;
+          root = root.parentNode;
+        }
+        if (!root || !root.querySelector) root = go.parentNode || doc;
+        if (root.setAttribute) root.setAttribute("data-lo-panel", "1");
+        renameHook(root, "data-5x-req", "data-lo-req");
+        renameHook(root, "data-5x-status", "data-lo-status");
+        go.setAttribute("data-lo-save", "1");
+        go.setAttribute("data-lo-key", (root.getAttribute && root.getAttribute("data-5x-suffix")) || "leftover");
+      }
+    }
+  }
+
   function countReq(root) {
     var els = root.querySelectorAll("[data-lo-req]");
     var n = 0;
@@ -254,38 +344,65 @@
       if (ev && ev.preventDefault) ev.preventDefault();
       if (ev && ev.stopImmediatePropagation) ev.stopImmediatePropagation();
       if (ev && ev.stopPropagation) ev.stopPropagation();
+      /* Pick runs first on a combined verb and paints is-on before this gate. */
+      function refuse(msg) {
+        if (save.getAttribute("data-lo-pick")) {
+          var already = false;
+          try {
+            var prev = JSON.parse(localStorage.getItem(k) || "null");
+            already = !!(prev && prev.real);
+          } catch (eAlready) { already = false; }
+          if (!already) {
+            save.className = String(save.className || "").replace(/\bis-on\b/g, "").replace(/\s+/g, " ").replace(/^\s+|\s+$/g, "");
+            save.setAttribute("aria-pressed", "false");
+          }
+        }
+        say(st, msg, true);
+      }
       var reqs = countReq(root);
       if (reqs.need && reqs.have < reqs.need) {
-        say(st, "Tick honesty first. Incomplete never writes.", true);
+        refuse("Tick honesty first. Incomplete never writes.");
         return;
       }
       var got = pickedSet(root);
       var ids = Object.keys(got).filter(Boolean);
       if (picks.length && needPick && !got[needPick]) {
-        say(st, "Pick first. Incomplete never writes.", true);
+        refuse("Pick first. Incomplete never writes.");
         return;
       }
       if (picks.length && minPick && ids.length < minPick) {
-        say(st, "Pick " + minPick + " rows first. Incomplete never writes.", true);
+        refuse("Pick " + minPick + " rows first. Incomplete never writes.");
         return;
       }
       if (picks.length && !needPick && !minPick && !ids.length) {
-        say(st, "Pick first. Incomplete never writes.", true);
+        refuse("Pick first. Incomplete never writes.");
         return;
       }
       var v = field ? String(field.value || "").replace(/^\s+|\s+$/g, "") : "";
-      if (field && v.length < 2) {
-        say(st, "Type something first. Empty never writes.", true);
+      var needField =
+        save.getAttribute("data-lo-need-field") ||
+        (root.getAttribute && root.getAttribute("data-lo-need-field")) ||
+        "";
+      if (needField) {
+        var got = v.toLowerCase().replace(/\s+/g, " ");
+        var want = String(needField).toLowerCase().replace(/\s+/g, " ");
+        if (got !== want) {
+          refuse("Type " + needField + " first. Empty / wrong never writes.");
+          return;
+        }
+      } else if (field && v.length < 2) {
+        refuse("Type something first. Empty never writes.");
         return;
       }
       if (waitBtn && waitBtn.getAttribute("data-lo-waited") !== "1") {
-        say(st, "Wait first. Incomplete never writes.", true);
+        refuse("Wait first. Incomplete never writes.");
         return;
       }
       if (!field && !picks.length && !reqs.need && !waitBtn) {
-        say(st, "Dest-true leftover needs a field, pick, tick, or wait. Empty never writes.", true);
+        refuse("Dest-true leftover needs a field, pick, tick, or wait. Empty never writes.");
         return;
       }
+      var foldedFive = save.getAttribute("data-lo-5x-folded") === "1";
       var payload = {
         multiStep: true,
         real: true,
@@ -297,6 +414,10 @@
         q: v ? v.slice(0, 80) : undefined,
         ts: Date.now()
       };
+      if (foldedFive) {
+        payload.pack = "5x";
+        payload.flow = suffix;
+      }
       try {
         /* Official 10 is n=1–10. Leftover-trail dests (n>10) use leftover
            whenKeys — leftover save must write those. Blocking every whenKey
@@ -308,7 +429,7 @@
           if (!stop || stop.whenKey !== k) continue;
           var tn = parseInt(stop.n, 10);
           if (tn >= 1 && tn <= 10) {
-            say(st, "Leftover never stamps the official key.", true);
+            refuse("Leftover never stamps the official key.");
             return;
           }
         }
@@ -332,10 +453,20 @@
         } catch (eRec) { /* */ }
       }
       if (!wrote) {
-        say(st, "This browser blocked the save.", true);
+        refuse("This browser blocked the save.");
         return;
       }
       say(st, "Saved · " + k, false);
+      if (foldedFive) {
+        var fiveNext = root.querySelectorAll("[data-5x-next]");
+        var ni;
+        for (ni = 0; ni < fiveNext.length; ni++) {
+          try {
+            fiveNext[ni].removeAttribute("hidden");
+            fiveNext[ni].style.display = "";
+          } catch (eNx) { /* */ }
+        }
+      }
       try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
     });
   }
@@ -488,6 +619,120 @@
     return false;
   }
 
+  function folderSlug(doc) {
+    var path = "";
+    try {
+      if (doc && doc.location && doc.location.pathname) path = doc.location.pathname;
+    } catch (ePath) { /* */ }
+    if (!path) {
+      try {
+        if (doc && doc.defaultView && doc.defaultView.location) {
+          path = doc.defaultView.location.pathname || "";
+        }
+      } catch (eWin) { /* */ }
+    }
+    if (!path) {
+      try { path = location.pathname || ""; } catch (eLoc) { path = ""; }
+    }
+    var m = String(path).match(/\/sites\/([^/]+)\//i);
+    return m ? m[1].toLowerCase() : "";
+  }
+
+  function isDupSaveKey(key) {
+    return /-d[2-9]$/i.test(String(key || ""));
+  }
+
+  /* pizza / pizzahut, well-dp / well, youtube-lx / youtube, bing-lx-d2 / bing. */
+  function saveKeyMatchesSlug(key, slug) {
+    if (!key || !slug) return false;
+    var k = String(key).toLowerCase().replace(/-d[2-9]$/i, "");
+    var s = String(slug).toLowerCase();
+    if (k === s || k.indexOf(s) === 0 || (k.length >= 3 && s.indexOf(k) === 0)) return true;
+    var stem = k.replace(/-(lx|dp|more|rlx|ab|about)$/i, "");
+    if (!stem || stem.length < 3) return false;
+    return stem === s || s.indexOf(stem) === 0 || stem.indexOf(s) === 0;
+  }
+
+  function isStartDoc(doc) {
+    try {
+      if (doc.documentElement && doc.documentElement.getAttribute("data-itt-start") === "1") return true;
+      if (doc.body && /(^|\s)itt-start-page(\s|$)/.test(doc.body.className || "")) return true;
+    } catch (eStart) { /* */ }
+    return false;
+  }
+
+  function nestedInLoPanel(el) {
+    var n = el && el.parentNode;
+    while (n && n.nodeType === 1) {
+      if (n.getAttribute && n.getAttribute("data-lo-panel") != null) return true;
+      n = n.parentNode;
+    }
+    return false;
+  }
+
+  function hoistBeforeAlso(doc, node) {
+    if (!node || !inAlsoYear(node)) return;
+    var host = node;
+    while (host && host.nodeType === 1 && !(host.className && /(^|\s)itt-also-year(\s|$)/.test(String(host.className)))) {
+      host = host.parentNode;
+    }
+    if (host && host.parentNode) host.parentNode.insertBefore(node, host);
+    else if (doc.body) doc.body.insertBefore(node, doc.body.firstChild);
+  }
+
+  /* Global fold was hiding the room's own save whenever the HTML lacked
+     data-itt-dest-true. Claim that one face here. -d2/-d4/-d5 copies stay folded.
+     Official dests and Starting Point do not claim. */
+  function claimLocalRoomFace(doc) {
+    if (!doc || !doc.documentElement || !doc.querySelectorAll) return;
+    var destKey = "";
+    try { destKey = doc.documentElement.getAttribute("data-official-key") || ""; } catch (eOff) { /* */ }
+    if (destKey || isStartDoc(doc)) return;
+    var existing = doc.querySelectorAll("[data-lo-panel][data-itt-dest-true='1']");
+    var j;
+    if (existing.length) {
+      for (j = 0; j < existing.length; j++) hoistBeforeAlso(doc, existing[j]);
+      return;
+    }
+    var panels = doc.querySelectorAll("[data-lo-panel]");
+    var top = [];
+    var all = [];
+    var i;
+    var panel;
+    var save;
+    var key;
+    var row;
+    for (i = 0; i < panels.length; i++) {
+      panel = panels[i];
+      if (!panel || !panel.querySelector) continue;
+      save = panel.querySelector("[data-lo-save][data-lo-key]");
+      if (!save) continue;
+      key = save.getAttribute("data-lo-key") || "";
+      row = { panel: panel, key: key, dup: isDupSaveKey(key) };
+      all.push(row);
+      if (!nestedInLoPanel(panel)) top.push(row);
+    }
+    var saves = top.length ? top : all;
+    if (!saves.length) return;
+    var slug = folderSlug(doc);
+    var pool = [];
+    for (i = 0; i < saves.length; i++) if (!saves[i].dup) pool.push(saves[i]);
+    if (!pool.length) pool = saves;
+    var chosen = null;
+    if (slug) {
+      for (i = 0; i < pool.length; i++) {
+        if (saveKeyMatchesSlug(pool[i].key, slug)) {
+          chosen = pool[i];
+          break;
+        }
+      }
+    }
+    if (!chosen) chosen = pool[0];
+    if (!chosen || !chosen.panel || !chosen.panel.setAttribute) return;
+    chosen.panel.setAttribute("data-itt-dest-true", "1");
+    hoistBeforeAlso(doc, chosen.panel);
+  }
+
   function foldLeftoverRails(doc) {
     doc = doc || document;
     var destKey = "";
@@ -566,6 +811,7 @@
       body.appendChild(n);
       moved++;
     }
+    claimLocalRoomFace(doc);
     if (doc.documentElement) doc.documentElement.setAttribute("data-itt-lo-folded", "1");
     /* Late packs fold after the test opens deep mode. A new drawer must honor it. */
     try {
@@ -659,6 +905,7 @@
 
   function boot(doc) {
     doc = doc || document;
+    foldDeadPackHooks(doc);
     var btns = doc.querySelectorAll("[data-lo-save]");
     var i;
     for (i = 0; i < btns.length; i++) bootOne(btns[i]);

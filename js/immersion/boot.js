@@ -301,7 +301,6 @@
       ["techcrunch", "immersion/techcrunch.js"],
       ["github", "immersion/github.js"],
       ["msn", "immersion/msn.js"],
-
       ["imgur", "immersion/imgur.js"],
       ["wave", "immersion/wave.js"],
       ["oneThingMachines", "immersion/one-thing-machines.js"],
@@ -347,11 +346,20 @@
       else addLater(rel);
     }
     /**
-     * Dest engine for hooks already on this page.
-     * Lean years omit dest engines from EXTRA; the dest HTML is the contract.
+     * Dest-slug brand engine (appstore, googleplus, …).
+     * CORE leftover packs stay listed-only — GATE years never pick them up here.
      */
+    var PACK_ONLY = {
+      "immersion/year-5x-pack.js": 1,
+      "immersion/year-true-packs.js": 1,
+      "immersion/year-popular-3x.js": 1,
+      "immersion/year-true-leftover.js": 1,
+      "immersion/leftover-2x-unique-links.js": 1,
+      "config/leftover-2x-unique-links.js": 1
+    };
     function addEngine(rel) {
       if (!rel || seen[rel]) return;
+      if (PACK_ONLY[rel] && !listed(rel)) return;
       seen[rel] = 1;
       priority.push(rel);
     }
