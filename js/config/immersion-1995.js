@@ -1,6 +1,6 @@
 /**
  * Immersion config — 1995
- * Tour, nav, catalog. Behavior lives in immersion-core.js.
+ * Tour, nav, catalog. Behavior lives in js/immersion/*.js.
  */
 (function (global) {
   "use strict";

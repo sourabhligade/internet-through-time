@@ -18,7 +18,6 @@ const CRITICAL = [
   '/',
   '/index.html',
   '/js/browser-core.js',
-  '/js/immersion-core.js',
   '/js/immersion/create.js',
   '/js/immersion/shared.js',
   '/js/immersion/amazon.js',

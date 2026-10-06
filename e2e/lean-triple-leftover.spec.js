@@ -9,7 +9,9 @@ const path = require("path");
 const { test, expect } = require("@playwright/test");
 const { revealLeftoverRails, killOverlays } = require("./helpers");
 const ROWS = require("./lean-triple-leftover.matrix.json");
-const UNIQUE = require("../scripts/leftover-3x-unique.json");
+const UNIQUE = fs.existsSync(path.join(__dirname, "../scripts/leftover-3x-unique.json"))
+  ? require("../scripts/leftover-3x-unique.json")
+  : {};
 
 const ROOT = path.join(__dirname, "..");
 

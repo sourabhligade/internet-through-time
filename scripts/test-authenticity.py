@@ -191,7 +191,9 @@ def test_homestead_webring_markup() -> None:
     if imm_dir.is_dir():
         for p in sorted(imm_dir.glob("*.js")):
             immersion_js += read(p)
-    immersion_js += read(ROOT / "js/immersion-core.js")
+    core_p = ROOT / "js/immersion-core.js"
+    if core_p.is_file():
+        immersion_js += read(core_p)
     if "initHomestead" not in immersion_js or "initWebring" not in immersion_js:
         fail("immersion-handlers", "missing initHomestead/initWebring")
         return
@@ -290,7 +292,9 @@ def test_pointcast_and_slashdot() -> None:
     if imm_dir.is_dir():
         for p in sorted(imm_dir.glob("*.js")):
             immersion_js += read(p)
-    immersion_js += read(ROOT / "js/immersion-core.js")
+    core_p = ROOT / "js/immersion-core.js"
+    if core_p.is_file():
+        immersion_js += read(core_p)
     if "initSlashdotComments" not in immersion_js or "initAmazonRecs" not in immersion_js:
         fail("immersion-sprint-d", "missing new init handlers")
         return
@@ -329,9 +333,12 @@ def test_immersion_boot_markers() -> None:
         if "data-itt-immersion-booted" in t or "itt-immersion-booted" in t:
             found = True
             break
-    # also check core
-    if "itt-immersion-booted" in read(ROOT / "js/immersion-core.js") or "immersion-booted" in read(ROOT / "js/immersion-core.js"):
-        found = True
+    # also check the retired shim when it is still on disk
+    core_p = ROOT / "js/immersion-core.js"
+    if core_p.is_file():
+        core_txt = read(core_p)
+        if "itt-immersion-booted" in core_txt or "immersion-booted" in core_txt:
+            found = True
     # check thin loaders
     for y in ("1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003"):
         ip = ROOT / f"js/immersion-{y}.js"
@@ -342,7 +349,8 @@ def test_immersion_boot_markers() -> None:
             found = True
     if not found:
         # e2e waits on data-itt-immersion-booted — verify attribute is set somewhere
-        core = read(ROOT / "js/immersion-core.js") + read(ROOT / "js/immersion-1995.js")
+        core_p = ROOT / "js/immersion-core.js"
+        core = (read(core_p) if core_p.is_file() else "") + read(ROOT / "js/immersion-1995.js")
         if "data-itt-immersion-booted" not in core and "itt-immersion-booted" not in core:
             # search all js
             for jp in (ROOT / "js").rglob("*.js"):
@@ -2204,13 +2212,10 @@ def test_immersion_registry_complete() -> None:
 
 def test_year_stubs_use_shared_boot() -> None:
     """Year immersion stubs must load boot.js and not embed FEATURES maps."""
-    stubs = ["js/immersion.js"] + [f"js/immersion-{y}.js" for y in ("1994", "1995", "1996", "1997", "1998", "1999", "2001", "2002", "2003") if (ROOT / f"js/immersion-{y}.js").is_file()]
+    stubs = [f"js/immersion-{y}.js" for y in ("1994", "1995", "1996", "1997", "1998", "1999", "2001", "2002", "2003")]
     for rel in stubs:
         path = ROOT / rel
         if not path.is_file():
-            # immersion-1994 optional if immersion.js covers 1994
-            if rel == "js/immersion-1994.js":
-                continue
             fail("year-stubs-boot", f"missing {rel}")
             return
         s = read(path)

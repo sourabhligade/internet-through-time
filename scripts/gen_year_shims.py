@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
-"""Generate js/browser-YYYY.js and js/immersion-YYYY.js. Do not hand-fork."""
+"""Generate js/browser-YYYY.js and js/immersion-YYYY.js for HTML ship years. Do not hand-fork.
+
+Years come from js/year-card.json via HTML_SHIP_YEARS in scripts/itt_gate.py.
+React 2015 and absent years (2017–2019, 2023–2025) are not written.
+"""
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-YEARS = [str(y) for y in range(1994, 2023)]
+sys.path.insert(0, str(ROOT / "scripts"))
+from itt_gate import HTML_SHIP_YEARS  # noqa: E402
+
+YEARS = list(HTML_SHIP_YEARS)
 
 BROWSER = """/**
  * Browser year stub — {year}
