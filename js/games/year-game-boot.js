@@ -70,14 +70,16 @@
   }
 
   /**
-   * Save best numeric score only if improved (or first run with score > 0).
-   * @returns {object} saved blob
+   * Save best numeric score only when the score is above 0.
+   * Score 0 and Start return null and do not write the key.
+   * @returns {object|null} saved blob, or null when the score is not above 0 or storage refuses
    */
   function saveBest(gameId, score, extra) {
     extra = extra || {};
+    var sc = Number(score) || 0;
+    if (!(sc > 0)) return null;
     var year = extra.year || yearOf();
     var key = extra.key || storageKey(gameId, year);
-    var sc = Number(score) || 0;
     var prev = loadJSON(key, null) || {};
     var best = typeof prev.best === "number" ? prev.best : 0;
     var runs = (typeof prev.runs === "number" ? prev.runs : 0) + 1;
@@ -116,7 +118,7 @@
       } catch (eRec) { /* */ }
       return null;
     }
-    /* Official n=10 whenKey (flow-trails) — score 0 / Start never writes. */
+    /* Second trail key, when it differs. A score that is not above 0 already returned. */
     if (sc > 0) {
       try {
         var host =
@@ -226,6 +228,8 @@
    */
   function onWingScore(gameId, score) {
     try {
+      var sc = Number(score) || 0;
+      if (!(sc > 0)) return;
       var host =
         document.querySelector("[data-year-game][data-game-id]") ||
         document.querySelector("[data-year-game]");

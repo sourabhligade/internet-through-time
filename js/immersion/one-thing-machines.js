@@ -56,6 +56,14 @@
   function trim(s) {
     return String(s == null ? "" : s).replace(/^\s+|\s+$/g, "");
   }
+  function envelopeKind(k) {
+    try {
+      var rec = window.ITT.User.read(k);
+      return rec && rec.kind ? String(rec.kind) : "";
+    } catch (eKind) {
+      return "";
+    }
+  }
   function feedback(msg, st, err) {
     if (st) {
       st.textContent = msg;
@@ -189,7 +197,7 @@
         entries.unshift(row);
         entries = entries.slice(0, 20);
         saveJSON(gbKey, entries);
-        saveJSON(
+        var starOk = saveJSON(
           key,
           blob({
             pickId: title,
@@ -197,19 +205,27 @@
             href: href,
             day: day,
             name: name,
-            wandered: true
+            wandered: true,
+            official: true
           })
         );
-        stamp();
         if (last) last.textContent = "Signed: " + name + " · " + title;
         if (nameEl) nameEl.value = "";
         if (noteEl) noteEl.value = "";
         renderList();
-        feedback("Guestbook signed · today's cool site stamped (this browser).", st);
+        if (!starOk) {
+          feedback("This browser blocked the save.", st, true);
+          return;
+        }
+        stamp();
+        feedback("Saved.", st);
         revealNext(doc);
       });
     }
-    if (saved) revealNext(doc);
+    if (envelopeKind(key) === "official") {
+      feedback("Saved.", st);
+      revealNext(doc);
+    }
   }
 
   function bootSsl(doc) {
@@ -271,8 +287,17 @@
       if (done && done.visited && done.visited.length) return done.visited.slice();
       return loadPortalProgress();
     }
+    /* Homepage verb shares this page. It stays blocked until the three visits. */
+    function holdVerbUntilTrail(n) {
+      try {
+        if (doc.documentElement) {
+          doc.documentElement.setAttribute("data-official-product-ready", n >= 3 ? "1" : "0");
+        }
+      } catch (eReady) { /* */ }
+    }
     function render() {
       var list = visitedList();
+      holdVerbUntilTrail(list.length);
       if (out) {
         out.textContent = list.length
           ? "Visited: " + list.join(", ")
@@ -346,6 +371,15 @@
     };
     var chans = loadJSON(key, null);
     var list = (chans && chans.channels) || [];
+    /* News is also the official verb. Block it until two channels are on. */
+    function holdVerbUntilChannels(n) {
+      try {
+        if (doc.documentElement) {
+          doc.documentElement.setAttribute("data-official-product-ready", n >= 2 ? "1" : "0");
+        }
+      } catch (eReady) { /* */ }
+    }
+    holdVerbUntilChannels(list.length);
     var tickTimer = null;
     function crawlText(lines) {
       return "+++ POINTCAST +++  " + lines.join("   ·   ") + "   +++";
@@ -405,19 +439,27 @@
         var name = this.getAttribute("data-pc-sub");
         if (!name) return;
         if (list.indexOf(name) === -1) list.push(name);
+        holdVerbUntilChannels(list.length);
         if (list.length < 2) {
           feedback("Subscribe to at least 2 channels.", st, true);
           render();
           return;
         }
-        saveJSON(key, blob({ channels: list.slice() }));
+        if (!saveJSON(key, blob({ channels: list.slice(), official: true }))) {
+          feedback("This browser blocked the save.", st, true);
+          render();
+          return;
+        }
         stamp();
-        feedback("Push subscriptions saved locally.", st);
+        feedback("Saved.", st);
         render();
         revealNext(doc);
       });
     }
-    if (loadJSON(key, null) && list.length >= 2) revealNext(doc);
+    if (list.length >= 2 && envelopeKind(key) === "official") {
+      feedback("Saved.", st);
+      revealNext(doc);
+    }
   }
 
   function bootStumble(doc) {

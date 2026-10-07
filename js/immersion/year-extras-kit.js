@@ -54,9 +54,10 @@
       }
     }
 
-    function saveJSON(k, v) {
+    /* opts.kind and opts.year reach User.store. Two-arg callers stay inferred. */
+    function saveJSON(k, v, opts) {
       try {
-        window.ITT.User.store(k, v);
+        window.ITT.User.store(k, v, opts || {});
         return true;
       } catch (e) {
         try {
@@ -255,7 +256,19 @@
 
   function storageFinished(k) {
     try {
-      if (ITT.User && typeof ITT.User.finished === "function") return ITT.User.finished(k) === true;
+      if (!(ITT.User && typeof ITT.User.finished === "function")) return false;
+      if (ITT.User.finished(k) !== true) return false;
+      /* These two stars wait for kind official. Every other key stays on finished(). */
+      if (k === "itt94-csotd" || k === "itt97-pointcast") {
+        var rec = null;
+        try {
+          rec = ITT.User.read ? ITT.User.read(k) : null;
+        } catch (eR) {
+          rec = null;
+        }
+        return !!(rec && rec.kind === "official");
+      }
+      return true;
     } catch (eF) { /* */ }
     return false;
   }
