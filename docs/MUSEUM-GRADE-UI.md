@@ -1,7 +1,7 @@
 # Museum-grade UI and UX
 
 **Date:** 2026-10-04
-**Status:** Map. Phases 1–6 are done. Phase 7 is not started.
+**Status:** Map. Phases 1–7 are done. Phase 7 is the public URL, 2026-10-07.
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json`. Hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** **2009 is live** (Like `itt09-like`). Forests **1994–2006** stay frozen.
 **Supersedes for this job:** [`UI-FIX-LIST.md`](history/UI-FIX-LIST.md) and [`UI-FIX-MAP.md`](history/UI-FIX-MAP.md) are history. The live door count is 26 in [`DISK-TRUTH.md`](DISK-TRUTH.md).
 **Looked at:** every year 1994–2022 on `http://127.0.0.1:8080`, desktop 1100px. HTML doors are `years/YYYY/pages/home.html`. 2015 is `/app/index.html#/year/2015`.
@@ -31,7 +31,7 @@ Museum grade means a visitor can enter any live door, tell what year they are in
 | 4 | Phone, 390px, all 26 doors | Passed. `e2e/phase4-phone.spec.js`, 26 of 26. Lists match, guided is six, the menubar stays inside 390. 2026-10-04 |
 | 5 | Builder words off the glass | Passed. `e2e/phase5-glass.spec.js`, 27 of 27, 2026-10-04 |
 | 6 | The walk matches the checklist, then the boxes get ticked | Walked. 548 ticked, 44 left open. 2026-10-05 |
-| 7 | One public URL | Not started. Waits until you say publish |
+| 7 | One public URL | Passed. https://sourabhligade.github.io/internet-through-time/ serves the 26 doors. 2017–2019 and 2023–2025 are 404. 2026-10-07 |
 
 ## Where the cards stand
 
@@ -262,11 +262,11 @@ Checklists. Open counts are the 2026-10-04 list, except 2020 and 2021, which are
 
 ## Phase 7 — Publish
 
-Not started from a UI edit. `docs/history/PRODUCT-IMPROVE.md` Slice 0 is still the gate: Actions billing, and one public URL.
+Done 2026-10-07. GitHub Pages, legacy build, branch `museum/1994-2020-lean`, root `/`. Public URL: https://sourabhligade.github.io/internet-through-time/
 
-The tree that gets published is the tree after Phases 1–6. It serves the same 26 doors. It does not serve 2017, 2018, 2019, or 2023–2025. It does not turn the hub into a marketing page.
+The published tree is the tree already on that branch. It serves the same 26 doors. It does not serve 2017, 2018, 2019, or 2023–2025. The hub is still the year cards, not a marketing page.
 
-Until you say publish, the museum stays at `http://127.0.0.1:8080`.
+Actions billing is still locked, so the Pages workflow cannot run. The live site is the branch publish, not that workflow. Local checks stay at `http://127.0.0.1:8080`.
 
 ## Not these seven phases
 
@@ -284,4 +284,4 @@ Until you say publish, the museum stays at `http://127.0.0.1:8080`.
 4. Phase 4 is done. Chrome-habit directory chips stay about 16px on a phone. Do not paint 1994 with that skin.
 5. Phase 5 is done. Leave `[failed-final]` in the HTML. The five generic buttons stay Open leftover.
 6. Phase 6 breaks, then tick.
-7. Phase 7 when you say publish.
+7. Phase 7 is done. The public URL stays the 26-door tree. Do not add 2017–2019 or 2023–2025 to it.
