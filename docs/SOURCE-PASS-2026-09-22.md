@@ -194,7 +194,7 @@ The first draft of this note kept names and dates. This section is the rest of w
 
 Other same-year stand-ins that were looked for and not found: no `lycos` in 1995; no `geocities` in 1997–2000 (`angelfire` and `tripod` are other hosts); no `facebook` or `thefacebook` in 2005; no `reddit` in 2006 or ; no `auctionweb` or `half` standing in for missing `ebay` in 2001, 2002, or 2004.
 
-`years/2014/sites/google`, `years//sites/google`, and `years/2021/sites/wikipedia` are also absent. Those are DROP slugs in [`LEFTOVER-3X-UNIQUE-LINKS.md`](LEFTOVER-3X-UNIQUE-LINKS.md) (2014 `google` with `yahoo`, `amazon`, `netflix`; 2021 `wikipedia`). They are not open trail holes. The 2014 / 2021 / 2022 leftover-3× link caps are already filled without new folders.
+`years/2014/sites/google`, `years//sites/google`, and `years/2021/sites/wikipedia` are also absent. Those are DROP slugs in [`LEFTOVER-3X-UNIQUE-LINKS.md`](history/LEFTOVER-3X-UNIQUE-LINKS.md) (2014 `google` with `yahoo`, `amazon`, `netflix`; 2021 `wikipedia`). They are not open trail holes. The 2014 / 2021 / 2022 leftover-3× link caps are already filled without new folders.
 
 ### 7.2 Which “no index.html” files are the trail (disk)
 

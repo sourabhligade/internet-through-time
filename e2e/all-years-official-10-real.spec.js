@@ -13,6 +13,14 @@ const { getKey, clickOfficialVerb } = require("./dest-true-io");
 
 const ROOT = path.join(__dirname, "..");
 
+function ytUploads(raw) {
+  let parsed = null;
+  try { parsed = JSON.parse(raw || "null"); } catch (e) { parsed = null; }
+  if (Array.isArray(parsed)) return parsed;
+  if (parsed && Array.isArray(parsed.body)) return parsed.body;
+  return [];
+}
+
 function loadTrails() {
   const src = fs.readFileSync(path.join(ROOT, "js/config/flow-trails.js"), "utf8");
   /** @type {{ year: string, n: number, name: string, href: string, whenKey: string }[]} */
@@ -400,7 +408,7 @@ async function runDest(page, d) {
     if (star.seedOk) {
       const afterEmpty = await getKey(page, d.whenKey);
       if (d.whenKey === "itt05-yt-uploads") {
-        const a = JSON.parse(afterEmpty || "[]");
+        const a = ytUploads(afterEmpty);
         expect(a.some((x) => x && /residual/i.test(x.title || "")), d.whenKey + " empty title").toBeFalsy();
       } else {
         expect(afterEmpty, d.whenKey + " incomplete").toBe(before);
@@ -413,8 +421,8 @@ async function runDest(page, d) {
     if (d.whenKey === "itt05-yt-uploads") {
       await expect.poll(async () => {
         const raw = await getKey(page, d.whenKey);
-        const list = JSON.parse(raw || "[]");
-        return Array.isArray(list) && list.some((x) => x && /residual/i.test(x.title || ""));
+        const list = ytUploads(raw);
+        return list.some((x) => x && /residual/i.test(x.title || ""));
       }, { timeout: 8000 }).toBeTruthy();
     } else {
       await expect.poll(() => getKey(page, d.whenKey), { timeout: 10000 }).toBeTruthy();
@@ -583,17 +591,17 @@ async function runDest(page, d) {
 
   if (html.indexOf("data-li-invite") !== -1) {
     await page.waitForTimeout(400);
-    const before = JSON.parse((await getKey(page, d.whenKey)) || "[]");
-    const n0 = Array.isArray(before) ? before.length : 0;
+    const before = ytUploads(await getKey(page, d.whenKey));
+    const n0 = before.length;
     await page.locator("form[data-li-invite] button[type=submit]").click();
-    const afterEmpty = JSON.parse((await getKey(page, d.whenKey)) || "[]");
-    expect(Array.isArray(afterEmpty) ? afterEmpty.length : 0, d.whenKey + " empty li").toBe(n0);
+    const afterEmpty = ytUploads(await getKey(page, d.whenKey));
+    expect(afterEmpty.length, d.whenKey + " empty li").toBe(n0);
     await page.locator("form[data-li-invite] [name=name]").fill("Reid leftover");
     await page.locator("form[data-li-invite] button[type=submit]").click();
     await expect.poll(async () => {
       const raw = await getKey(page, d.whenKey);
-      const list = JSON.parse(raw || "[]");
-      return Array.isArray(list) && list.some((x) => x && /Reid leftover/.test(x.name || ""));
+      const list = ytUploads(raw);
+      return list.some((x) => x && /Reid leftover/.test(x.name || ""));
     }, { timeout: 8000 }).toBeTruthy();
     return;
   }

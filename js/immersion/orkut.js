@@ -21,23 +21,23 @@
   }
   function loadFriends() {
     try {
-      return JSON.parse(localStorage.getItem(key("friends")) || "null");
+      return window.ITT.User.take(key("friends"), null);
     } catch (e) {
       return null;
     }
   }
   function saveFriends(list) {
-    localStorage.setItem(key("friends"), JSON.stringify(list));
+    window.ITT.User.store(key("friends"), list);
   }
   function loadProfile() {
     try {
-      return JSON.parse(localStorage.getItem(key("profile")) || "null");
+      return window.ITT.User.take(key("profile"), null);
     } catch (e) {
       return null;
     }
   }
   function saveProfile(p) {
-    localStorage.setItem(key("profile"), JSON.stringify(p));
+    window.ITT.User.store(key("profile"), p);
   }
   function esc(s) {
     return String(s || "")

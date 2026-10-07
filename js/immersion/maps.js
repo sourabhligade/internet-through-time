@@ -22,13 +22,13 @@
 
   function loadState() {
     try {
-      return JSON.parse(localStorage.getItem(stateKey()) || "null") || null;
+      return window.ITT.User.take(stateKey(), null) || null;
     } catch (e) {
       return null;
     }
   }
   function saveState(st) {
-    localStorage.setItem(stateKey(), JSON.stringify(st));
+    window.ITT.User.store(stateKey(), st);
   }
   function svKey() {
     return ITT.util && ITT.util.immersionStorageKey
@@ -42,7 +42,7 @@
     var viewer = doc.querySelector("[data-sv-viewer]");
     var st = { city: null, heading: 0, ts: 0 };
     try {
-      var prev = JSON.parse(localStorage.getItem(svKey()) || "null");
+      var prev = window.ITT.User.take(svKey(), null);
       if (prev && prev.city) st = prev;
     } catch (e0) {
       /* */
@@ -68,7 +68,7 @@
     function persist() {
       st.ts = Date.now();
       try {
-        localStorage.setItem(svKey(), JSON.stringify(st));
+        window.ITT.User.store(svKey(), st);
       } catch (e1) {
         /* */
       }
@@ -321,18 +321,15 @@
         try {
           var ok = doc.documentElement && doc.documentElement.getAttribute("data-official-key");
           if (ok === "itt05-maps" && (what || where || q)) {
-            if (!localStorage.getItem("itt05-maps")) {
-              localStorage.setItem(
-                "itt05-maps",
-                JSON.stringify({
+            if (!window.ITT.User.take("itt05-maps")) {
+              window.ITT.User.store("itt05-maps", {
                   multiStep: true,
                   real: true,
                   year: "2005",
                   official: true,
                   q: String(label).slice(0, 80),
                   ts: Date.now()
-                })
-              );
+                });
             }
             if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
           }
@@ -374,21 +371,18 @@
       var k = root && root.getAttribute("data-official-key");
       if (k !== "itt05-maps") return;
       try {
-        if (localStorage.getItem(k)) {
+        if (window.ITT.User.take(k)) {
           if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
           return;
         }
-        localStorage.setItem(
-          k,
-          JSON.stringify({
+        window.ITT.User.store(k, {
             multiStep: true,
             real: true,
             year: "2005",
             official: true,
             drag: true,
             ts: Date.now()
-          })
-        );
+          });
         if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
       } catch (eW) { /* */ }
     }

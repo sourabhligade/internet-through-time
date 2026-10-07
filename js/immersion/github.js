@@ -22,16 +22,16 @@
   }
   function loadJSON(k, fb) {
     try {
-      var raw = localStorage.getItem(k);
+      var raw = window.ITT.User.take(k);
       if (raw == null || raw === "") return fb;
-      return JSON.parse(raw);
+      return raw;
     } catch (e) {
       return fb;
     }
   }
   function saveJSON(k, v) {
     try {
-      localStorage.setItem(k, JSON.stringify(v));
+      window.ITT.User.store(k, v);
       return true;
     } catch (e) {
       return false;

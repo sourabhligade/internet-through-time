@@ -3,8 +3,8 @@
 **Date:** 2026-09-26  
 **Status:** Implemented 2026-09-26 (this pass). Research remains the source of the sequence; ship law is still DISK-TRUTH.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) + `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Year lock:** [`2016-READ-FIRST.md`](2016-READ-FIRST.md).  
-**Product frame:** [`PRODUCT-IMPROVE.md`](PRODUCT-IMPROVE.md).  
+**Year lock:** [`2016-READ-FIRST.md`](history/2016-READ-FIRST.md).  
+**Product frame:** [`PRODUCT-IMPROVE.md`](history/PRODUCT-IMPROVE.md).  
 **I/O criteria:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md).
 
 This is the full write-up of:
@@ -20,7 +20,7 @@ Disk counts and dest lists were taken from the live tree on 2026-09-26. GitNexus
 
 2016 is a **live lean HTML door**. The visitor gold is one 24-hour Story you actually post, in 2016 Chrome / Win10 habit, that **never writes if you bounce**. Pokémon GO is sidewalks, not the chip. Reactions, WhatsApp E2E, iPhone 7, Vine goodbye, Spectacles, musical.ly, Win10 upgrade end, and Gym Rush are the rest of the official ten. Leftover dests exist; leftover never writes the star.
 
-Do not compete with Wayback on coverage or Web Design Museum on screenshot count. [`PRODUCT-IMPROVE.md`](PRODUCT-IMPROVE.md)
+Do not compete with Wayback on coverage or Web Design Museum on screenshot count. [`PRODUCT-IMPROVE.md`](history/PRODUCT-IMPROVE.md)
 
 ---
 
@@ -656,8 +656,8 @@ This research **did not** re-run dest-true after writing this file.
 
 ### Repo law and maps
 
-- [S2] [`docs/2016-READ-FIRST.md`](2016-READ-FIRST.md)
-- [S3] `js/immersion/leftover-official.js` STAR_CITE; [`docs/PRODUCT-IMPROVE.md`](PRODUCT-IMPROVE.md)
+- [S2] [`docs/history/2016-READ-FIRST.md`](history/2016-READ-FIRST.md)
+- [S3] `js/immersion/leftover-official.js` STAR_CITE; [`docs/history/PRODUCT-IMPROVE.md`](history/PRODUCT-IMPROVE.md)
 - [S6] `js/config/flow-trails.js`; `js/museum-progress.js` YEAR_STARTS; `ui/year/start-data.js`
 - [S7] [`docs/2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md); `scripts/dest_lock_lean.py`; [`DISK-TRUTH.md`](DISK-TRUTH.md)
 - [S8b] `years/2016/pages/about.html`; `e2e/2016-mvp.spec.js`

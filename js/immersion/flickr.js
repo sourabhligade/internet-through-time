@@ -35,18 +35,18 @@
   function load() {
     try {
       var k = KEY();
-      var raw = localStorage.getItem(k);
+      var raw = window.ITT.User.take(k);
       if (!raw && k === "itt05-flickr-stream") {
-        raw = localStorage.getItem("itt04-flickr-stream");
-        if (raw) localStorage.setItem(k, raw);
+        raw = window.ITT.User.take("itt04-flickr-stream");
+        if (raw) window.ITT.User.store(k, raw);
       }
-      return raw ? JSON.parse(raw) : null;
+      return raw ? raw : null;
     } catch (e) {
       return null;
     }
   }
   function save(list) {
-    localStorage.setItem(KEY(), JSON.stringify(list));
+    window.ITT.User.store(KEY(), list);
   }
   function esc(s) {
     return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -107,10 +107,8 @@
         try {
           var ok = doc.documentElement && doc.documentElement.getAttribute("data-official-key");
           if (ok === "itt05-flickr") {
-            if (!localStorage.getItem("itt05-flickr")) {
-              localStorage.setItem(
-                "itt05-flickr",
-                JSON.stringify({
+            if (!window.ITT.User.take("itt05-flickr")) {
+              window.ITT.User.store("itt05-flickr", {
                   multiStep: true,
                   real: true,
                   official: true,
@@ -118,15 +116,12 @@
                   title: title.slice(0, 80),
                   tags: String(tags || "").slice(0, 80),
                   ts: Date.now()
-                })
-              );
+                });
             }
             if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
           } else if (ok === "itt06-flickr") {
-            if (!localStorage.getItem("itt06-flickr")) {
-              localStorage.setItem(
-                "itt06-flickr",
-                JSON.stringify({
+            if (!window.ITT.User.take("itt06-flickr")) {
+              window.ITT.User.store("itt06-flickr", {
                   multiStep: true,
                   real: true,
                   leftover: true,
@@ -134,8 +129,7 @@
                   title: title.slice(0, 80),
                   tags: String(tags || "").slice(0, 80),
                   ts: Date.now()
-                })
-              );
+                });
             }
             if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
           }

@@ -51,7 +51,7 @@
     if (YG) YG.saveJSON(key(), p);
     else
       try {
-        localStorage.setItem(key(), JSON.stringify(p));
+        window.ITT.User.store(key(), p);
       } catch (e) { /* */ }
     paint(p);
   }

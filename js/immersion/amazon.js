@@ -364,7 +364,7 @@ function initOrderThanks() {
     note = document.createElement("p");
     note.id = "itt-order-mail-note";
     note.innerHTML = '<font size="2">A confirmation message from <b>orders@amazon.com</b> has been ' +
-      "queued in your mail (File → Mail Document / browser mail window in a full Netscape setup).</font>";
+      "queued in your mail (File · Mail Document / browser mail window in a full Netscape setup).</font>";
     document.body.appendChild(note);
   }
   var br = parentBrowser();

@@ -36,18 +36,18 @@
   function load() {
     try {
       var k = KEY();
-      var raw = localStorage.getItem(k);
+      var raw = window.ITT.User.take(k);
       if (!raw && k !== "itt05-delicious-posts") {
-        raw = localStorage.getItem("itt05-delicious-posts");
-        if (raw) localStorage.setItem(k, raw);
+        raw = window.ITT.User.take("itt05-delicious-posts");
+        if (raw) window.ITT.User.store(k, raw);
       }
-      return raw ? JSON.parse(raw) : null;
+      return raw ? raw : null;
     } catch (e) {
       return null;
     }
   }
   function save(list) {
-    localStorage.setItem(KEY(), JSON.stringify(list));
+    window.ITT.User.store(KEY(), list);
   }
   function esc(s) {
     return String(s || "")
@@ -156,18 +156,15 @@
           var yLo = year();
           if ((yLo === "2005" || yLo === "2006") && url && url !== "http://") {
             var loKey = "itt" + yLo.slice(2) + "-delicious";
-            if (!localStorage.getItem(loKey)) {
-              localStorage.setItem(
-                loKey,
-                JSON.stringify({
+            if (!window.ITT.User.take(loKey)) {
+              window.ITT.User.store(loKey, {
                   multiStep: true,
                   real: true,
                   leftover: true,
                   year: yLo,
                   q: String(title || "").slice(0, 80),
                   ts: Date.now()
-                })
-              );
+                });
             }
             if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
           }

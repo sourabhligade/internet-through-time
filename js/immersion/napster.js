@@ -27,7 +27,7 @@
 
       function library() {
         try {
-          return JSON.parse(localStorage.getItem(storageKey("napster-lib")) || "[]");
+          return (function (v) { return Array.isArray(v) ? v : []; })(window.ITT.User.take(storageKey("napster-lib"), []));
         } catch (e) {
           return [];
         }
@@ -35,7 +35,7 @@
 
       function saveLibrary(list) {
         try {
-          localStorage.setItem(storageKey("napster-lib"), JSON.stringify(list));
+          window.ITT.User.store(storageKey("napster-lib"), list);
         } catch (e) {}
       }
 
@@ -171,16 +171,13 @@
               (document.documentElement && document.documentElement.getAttribute("data-itt-year")) || "";
           } catch (eY) { /* */ }
           try {
-            localStorage.setItem(
-              storageKey("napster-installed"),
-              JSON.stringify({
+            window.ITT.User.store(storageKey("napster-installed"), {
                 multiStep: true,
                 real: true,
                 theater: true,
                 year: y || undefined,
                 ts: Date.now()
-              })
-            );
+              });
           } catch (e) {}
           actionFeedback("Napster installed (theater). Open Search.");
           markTourUsed("napster");

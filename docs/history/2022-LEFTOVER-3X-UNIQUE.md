@@ -2,9 +2,9 @@
 
 **Date:** 2026-09-20  
 **Status:** Unique leftover dests on disk. Dest-true dests already shipped. This file is the leftover-3× unique dest-true map. Not dest-farm.  
-**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`2022-READ-FIRST.md`](2022-READ-FIRST.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
+**Ship law:** [`DISK-TRUTH.md`](../DISK-TRUTH.md) · [`2022-READ-FIRST.md`](../2022-READ-FIRST.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **Leftover-3× unique dest-true law:** [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md).  
-**Implement map:** [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) Phase 2.  
+**Implement map:** [`VISITOR-100-FLOWS.md`](../VISITOR-100-FLOWS.md) Phase 2.  
 **Prefix:** `itt22`  
 **Star:** ChatGPT Send `itt22-chatgpt` · `sites/chatgpt/index.html`  
 **Disk:** dest-true lean door · dest folders **25**. Official dest leftover-2× panels = **0**. Leftover-4× = **0**. Do not restore dest-farm to 85.

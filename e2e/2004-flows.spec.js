@@ -85,7 +85,8 @@ test.describe('2004 hard flows', () => {
       timeout: 10000,
     });
     const left = await page.evaluate(() => localStorage.getItem('itt04-gmail-invites'));
-    expect(left).toBe('5');
+    const parsedLeft = JSON.parse(left);
+    expect(String(parsedLeft && parsedLeft.body != null ? parsedLeft.body : left)).toBe('5');
     await expect(frame.locator('[data-gmail-invites]')).toContainText('5');
   });
 

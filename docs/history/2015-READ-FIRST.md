@@ -1,11 +1,11 @@
 # 2015 — READ FIRST (from-scratch rebuild)
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](../DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 **Date:** 2026-09-27  
 **Status:** **LIVE React door.** Hub card opens `/app/index.html#/year/2015`. No `years/2015/` HTML tree. Official 10 on the React rail. Leftover trail empty. Star is Periscope Go LIVE `itt15-periscope`. Do not restore an HTML forest.  
-**Disk truth:** Hub is **27 years open** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** 2013 Vine and 2022 ChatGPT are live lean HTML doors.  
+**Disk truth:** Hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** 2013 Vine and 2022 ChatGPT are live lean HTML doors.  
 **Prefix:** `itt15`  
 **Clone shape from:** live `years/2014/` (lean door). **Do not** restore `/tmp` or git leftovers.
 
@@ -63,5 +63,5 @@ This rebuild picks a **verb you can do in the frame**.
 ## How to read
 
 1. This file.  
-2. [`DISK-TRUTH.md`](DISK-TRUTH.md).  
+2. [`DISK-TRUTH.md`](../DISK-TRUTH.md).  
 3. The year tree is gone. Do not restore the old 213-folder forest. Do not add dests.

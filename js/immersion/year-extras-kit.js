@@ -56,7 +56,7 @@
 
     function saveJSON(k, v) {
       try {
-        localStorage.setItem(k, JSON.stringify(v));
+        window.ITT.User.store(k, v);
         return true;
       } catch (e) {
         try {
@@ -75,9 +75,9 @@
 
     function loadJSON(k, fb) {
       try {
-        var r = localStorage.getItem(k);
+        var r = window.ITT.User.take(k);
         if (!r) return fb === undefined ? null : fb;
-        return JSON.parse(r);
+        return r;
       } catch (e) {
         return fb === undefined ? null : fb;
       }
@@ -367,18 +367,15 @@
         return;
       }
       try {
-        if (!localStorage.getItem("itt05-fx")) {
-          localStorage.setItem(
-            "itt05-fx",
-            JSON.stringify({
+        if (!window.ITT.User.take("itt05-fx")) {
+          window.ITT.User.store("itt05-fx", {
               multiStep: true,
               real: true,
               leftover: true,
               year: "2005",
               os: picked.value,
               ts: Date.now()
-            })
-          );
+            });
         }
       } catch (eFx) { /* */ }
       try {

@@ -1,15 +1,15 @@
 # Leftover-3× unique dest links — 2× map
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](../DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 **Removed.** Leftover-3× unique links are gone. No rails, no 107-dest set, no =3 or 2021=5 cap. The text below is the old map.
 
 **Date:** 2026-09-22  
 **Status:** Removed. Was: leftover-3× unique dest links on leftover dest HTML. Official dest first paint 0. The old set was 107. The 2014 / 2021 / 2022 caps were filled 2026-09-22 with official dest **hrefs** already on disk (T6). No new dest folders. Deep-research-2 **partial** (Hosting.com / Wikipedia category membership unverified). Leftover dest KEEP dest-disjoint cite walks 2007–2014 and 2015–2022 **KEEP**. Leftover dest DROP dests stay gone and must not be restored.  
-**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · live `years/` · `scripts/itt_gate.py` `SHIP_YEARS`.  
+**Ship law:** [`DISK-TRUTH.md`](../DISK-TRUTH.md) · live `years/` · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **Leftover-3× unique dest-true dests:** [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md) · `e2e/leftover-3x-unique.matrix.json`.  
-**Leftover-2× unique dest links (already implemented):** [`LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md).  
+**Leftover-2× unique dest links (already implemented):** [`LEFTOVER-2X-UNIQUE-LINKS.md`](../LEFTOVER-2X-UNIQUE-LINKS.md).  
 **I/O:** leftover never writes the star · empty / trap never write.  
 **Census:** leftover-3× unique dest-true dests (first / second / third) · leftover dest KEEP dests dest-disjoint · dests already on disk with `index.html`.
 
@@ -70,12 +70,12 @@ Alphabetical dests-on-disk fill is **out**. ADD dests must be famous that year *
 | Source | URL | What it gave |
 |--------|-----|----------------|
 | Hosting.com June visits 1995–2022 | https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/ | Top 10 per year. Skip porn ranks. leftover-3× unique dests already include many Hosting.com dests as leftover-3× unique dest-true dests. |
-| Leftover dest KEEP lean-double | [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) | 2007 / 2010–2012 / 2014 / 2016 / 2021 / 2022 leftover dest KEEP dests on disk dest-disjoint. |
-| Extra dest KEEP | [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md) | KEEP **166** dests with cites. Dest-disjoint leftover dest KEEP. 2013 extra dest KEEP **34** · 2015 extra dest KEEP **31** · extra dest KEEP **54**. |
+| Leftover dest KEEP lean-double | [`LEAN-DOUBLE-CRITERIA.md`](../LEAN-DOUBLE-CRITERIA.md) | 2007 / 2010–2012 / 2014 / 2016 / 2021 / 2022 leftover dest KEEP dests on disk dest-disjoint. |
+| Extra dest KEEP | [`TODO-EXTRA-DEST-RESEARCH.md`](../TODO-EXTRA-DEST-RESEARCH.md) | KEEP **166** dests with cites. Dest-disjoint leftover dest KEEP. 2013 extra dest KEEP **34** · 2015 extra dest KEEP **31** · extra dest KEEP **54**. |
 | Leftover-3× unique dest-true dests | [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md) · `e2e/leftover-3x-unique.matrix.json` | KEEP original leftover-3× unique dests. =**3** · 2021=**5** · 2017 leftover-20. |
 | Cybercultural year essays | https://cybercultural.com/p/internet-2010/ · 2007 · 2012 | Year mass: iPhone 2007 · Instagram 2010 · Google+ · IG Android 2012. |
 | Web Design Museum year galleries | https://www.webdesignmuseum.org/gallery/year-1995 | Period exhibits. Failed-final stays honest. |
-| 2017 leftover-20 | [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) | Skip leftover-3× unique dests on 2017 leftover-20. |
+| 2017 leftover-20 | 2017-UNIQUE-FLOWS.md (not on disk; 2017 is absent) | Skip leftover-3× unique dests on 2017 leftover-20. |
 
 Leftover dest KEEP dests already have dest-true leftover dest I/O. This pass only **hrefs** them in leftover-3× unique dest **links**.
 
@@ -93,7 +93,7 @@ Verified leftover dest KEEP dest-disjoint ADD dests (independently checked):
 | 2014 | leftover dest KEEP dest-disjoint **7**: `alibabaipo` `oculusfb` `inbox` `echo` `flappybird` `game2048` `ios8` | leftover dest dests on disk dest-disjoint leftover dest KEEP dest-true dests are these 7. Dest folders **25** = leftover-3× unique dests 9 + official dests 9 + leftover dest KEEP dest-disjoint 7 |
 | 2021 | leftover dest KEEP dest-disjoint **3**: `nft` `coinbaseipo` `epicapple` | Coinbase IPO Apr 2021. Dest folders **18** = leftover-3× unique dests 5 + official dests 10 + leftover dest KEEP dest-disjoint 3. leftover-3× unique dest-true dests stay **5** |
 
-Leftover dest KEEP dest-disjoint ADD dests in leftover-3× unique dest **links** §6 (2007 hackernews…pownce · 2010 hulu…ibooks · ios5…codecademy · 2012 tinder…googleplay · 2013 extra dest KEEP · 2015 extra dest KEEP · 2016 leftover dest KEEP · gplusgone epicstore ios12 · extra dest KEEP · clubhouse hbomax peacock · 2022 temu…m2) stay leftover dest KEEP dests on disk dest-disjoint. Extra dest KEEP ADD dests (2013 / 2015 / ) stay cited in [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md).
+Leftover dest KEEP dest-disjoint ADD dests in leftover-3× unique dest **links** §6 (2007 hackernews…pownce · 2010 hulu…ibooks · ios5…codecademy · 2012 tinder…googleplay · 2013 extra dest KEEP · 2015 extra dest KEEP · 2016 leftover dest KEEP · gplusgone epicstore ios12 · extra dest KEEP · clubhouse hbomax peacock · 2022 temu…m2) stay leftover dest KEEP dests on disk dest-disjoint. Extra dest KEEP ADD dests (2013 / 2015 / ) stay cited in [`TODO-EXTRA-DEST-RESEARCH.md`](../TODO-EXTRA-DEST-RESEARCH.md).
 
 ---
 
@@ -202,7 +202,7 @@ Leftover-4× unique dests stay leftover-4× unique dests: `chrome` · `twitter` 
 KEEP original leftover-3× unique dests: `askfm` · `whisper` · `youtube` · `chrome` · `medium` · `yikyak` · `reddit` · `facebook` · `twitter`
 
 ADD extra dest KEEP dest-disjoint: `bitcoin` · `chromecast` · `doordash` · `bustle` · `giphy` · `patreon` · `kahoot` · `kitkat` · `ios7`  
-Cites: Bitcoin 2013 · Chromecast 24 Jul 2013 · DoorDash 2013 · [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md).
+Cites: Bitcoin 2013 · Chromecast 24 Jul 2013 · DoorDash 2013 · [`TODO-EXTRA-DEST-RESEARCH.md`](../TODO-EXTRA-DEST-RESEARCH.md).
 
 ### 2014 — leftover-3× unique dest **links** after 18 · ADD 9 · leftover-3× unique dest-true dests stay 9 · star `itt14-wa-install`
 
@@ -229,7 +229,7 @@ Cites: Douyin 2016 · Houseparty Feb 2016 · Super Mario Run 15 Dec 2016.
 
 ### 2017 — stop leftover-20
 
-Leftover-20 unique dests stay **20**. Do not leftover-3× unique dests. Map [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md).
+Leftover-20 unique dests stay **20**. Do not leftover-3× unique dests. Map 2017-UNIQUE-FLOWS.md (not on disk; 2017 is absent).
 
 ### — leftover-3× unique dest **links** after 6 · ADD 3 · leftover-3× unique dest-true dests stay **3** · star `itt18-gdpr`
 

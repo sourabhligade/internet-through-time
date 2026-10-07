@@ -1,6 +1,6 @@
 # 2005 rebuild plan
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](history/INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](history/UNDONE-UNPLANNED-MD.md).
 
 
 Not ship law. **2005 is restored and live** (YouTube upload `itt05-yt-uploads`, dest folders **806**, leftover-2× unique dests **91**). Boxes below were never ticked after restore. Do not dest-farm from this plan. Git `20b7730ca` on `museum/1994-2020-lean` still has the year folder, the 20-stop trail, 105 leftover-2× link ids, and `assets/period/2005` (162 files: 143 GIF, 4 PNG, 3 JPG, 12 readme text files).
@@ -21,7 +21,7 @@ An empty click stores nothing. A finished visit stores that stop’s `whenKey`. 
 |---|---|---|
 | 0.1 | `git checkout 20b7730ca -- years/2005 assets/period/2005` | `years/2005/index.html` exists. Picture count is 143 GIF + 4 PNG + 3 JPG |
 | 0.2 | Restore the 2005 blocks in `js/config/flow-trails.js`, `leftover-2x-unique-links.js`, `flow-maps.js`, `ui/year/years.js`, `ui/year/start-data.js`, `follow-site.js` | The object no longer jumps from 2004 to 2006 |
-| 0.3 | Put 2005 back on the hub and in `scripts/itt_gate.py` `SHIP_YEARS` | Hub says **27 years open**. Card links `years/2005/` |
+| 0.3 | Put 2005 back on the hub and in `scripts/itt_gate.py` `SHIP_YEARS` | Card links `years/2005/`. The old done-when said **27 years open**. The live hub is **26 doors**. |
 | 0.4 | Put the 2005 row back in `docs/DISK-TRUTH.md` | Row says YouTube upload, not wiped |
 | 0.5 | Open http://127.0.0.1:8080/years/2005/ | The XP / IE6 shell loads. No new copy yet |
 

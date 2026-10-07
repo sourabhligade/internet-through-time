@@ -1,13 +1,13 @@
 # Production-grade audit
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](../DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 **Date:** 2026-09-29
 **Status:** Implemented locally on 2026-09-29, except item 7. No commit, no push, no GitHub Pages. The sections below are the research snapshot and were not rewritten.
 **Done here:** one 22-year list on the hub, `SHIP_YEARS`, `404.html`, `README.md`, and the `DISK-TRUTH.md` opening; CI and `test:e2e:dest-true` name 18 spec files that exist; a thrown `localStorage.setItem` says “This browser blocked the save.” instead of Saved; React hall is 2015 and 2017 only, with static redirects for 2014, 2016, and 2022, and the visitor bundle was rebuilt; `?debug=1` arms a local session ring. The 7 empty-write URLs and 28 finished-click URLs were rechecked in Playwright. Counts in the findings file were not edited.
 **Not done:** a public URL. Full `npm test` was not run and stays intentionally red.
-**Evidence:** live tree on `museum/1994-2020-lean`, read this session. Not the stopped full-code scan (68 of 645 slices). The 6,786-page browser crawl in [`FLOW-E2E-FINDINGS.md`](FLOW-E2E-FINDINGS.md) (2026-09-28) was not rerun. A later Playwright pass rechecked only the 35 repair URLs plus the local walk.
+**Evidence:** live tree on `museum/1994-2020-lean`, read this session. Not the stopped full-code scan (68 of 645 slices). The 6,786-page browser crawl in [`FLOW-E2E-FINDINGS.md`](../FLOW-E2E-FINDINGS.md) (2026-09-28) was not rerun. A later Playwright pass rechecked only the 35 repair URLs plus the local walk.
 **GitNexus:** repo `internet-through-time`, index 3 commits behind HEAD. Year lists below are from files, not the graph.
 
 Production grade for this museum means a visitor can open one public URL, walk 22 doors, finish a real room, and trust the save line. It does not mean accounts, analytics, a dest-farm, or restoring 2018–2021 or 2023–2025.
@@ -109,7 +109,7 @@ A year shell (`years/1995/index.html`) itself is five script tags. `ui/year/ui.j
 
 ### 6. The last full crawl is a lead list, not a current fail list
 
-[`FLOW-E2E-FINDINGS.md`](FLOW-E2E-FINDINGS.md) recorded, on 2026-09-28:
+[`FLOW-E2E-FINDINGS.md`](../FLOW-E2E-FINDINGS.md) recorded, on 2026-09-28:
 
 - 5,464 pages whose finished click wrote a real save
 - 1,263 ordinary pages with no save button

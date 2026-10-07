@@ -1,12 +1,12 @@
 # 2012 leftover-4× unique — step map
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](history/INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](history/UNDONE-UNPLANNED-MD.md).
 
 
 **Date:** 2026-09-15  
 **Status:** Implemented 2026-09-15. Chrome · Twitter · SoundCloud dests already on disk. Stacked leftover-4× still 0.  
-**Law:** leftover-3× unique U1–U11 / M1–M4 in [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md). Same criteria. Fourth **strip**, not a fourth machine.  
-**Lock today:** [`2012-READ-FIRST.md`](2012-READ-FIRST.md) leftover 4× **= 0**. [`DISK-TRUTH.md`](DISK-TRUTH.md) 2012 leftover 4× **0**. Implementing this pass **lifts that lock to 3 dests**, not stacked leftover-4× on every dest.
+**Law:** leftover-3× unique U1–U11 / M1–M4 in [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](history/LEFTOVER-3X-UNIQUE-CRITERIA.md). Same criteria. Fourth **strip**, not a fourth machine.  
+**Lock today:** [`2012-READ-FIRST.md`](history/2012-READ-FIRST.md) leftover 4× **= 0**. [`DISK-TRUTH.md`](DISK-TRUTH.md) 2012 leftover 4× **0**. Implementing this pass **lifts that lock to 3 dests**, not stacked leftover-4× on every dest.
 
 Leftover-4× unique here means **one more leftover dest strip of 3 dests already on disk**. It is **not** `data-4x-go` stacked on Snapchat. It is **not** dest-farm.
 

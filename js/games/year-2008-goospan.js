@@ -88,7 +88,7 @@
     if (YG && YG.saveBest) YG.saveBest("goospan", score, { year: "2008", key: key });
     else {
       try {
-        localStorage.setItem(key, JSON.stringify(blob));
+        window.ITT.User.store(key, blob);
       } catch (eS) { /* */ }
     }
     say("Span complete. App Store was not written.");

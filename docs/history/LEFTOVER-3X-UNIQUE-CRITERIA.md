@@ -1,15 +1,15 @@
 # Leftover-3× · unique-flow criteria
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](../DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 **Removed.** Leftover-3× unique flows are gone. The catalog is empty. The cream panels are off the pages. The text below is the old criteria, not current law.
 
 **Date:** 2026-09-15  
 **Status:** Removed. Was criteria + unique leftover dests implemented 2026-09-15. Not dest-farm. Not ship law.  
-**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Template:** [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) — 30 unique dests, 30 unique verbs, 30 unique keys.  
-**I/O:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).  
+**Ship law:** [`DISK-TRUTH.md`](../DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
+**Template:** 2017-UNIQUE-FLOWS.md (not on disk; 2017 is absent) — 30 unique dests, 30 unique verbs, 30 unique keys.  
+**I/O:** [`2016-2021-IO-CRITERIA.md`](../2016-2021-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](../2013-IO-CRITERIA.md).  
 **Mock:** `scripts/audit-mock-flows.js` — `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` fail.  
 **Years:** ship years **1994–2007 + 2010 + 2012–2014 + 2016–2017 + 2022**. **2009 boarded.** **2023–2025 wiped.**
 
@@ -114,7 +114,7 @@ Do not pick the dests in this file unless a later implement pass is named.
 | Year | Can 9 unique leftover dests fit without adding folders? | Note |
 |------|:--:|------|
 | 2013 | **Yes — shipped 9** | first `askfm` `whisper` `youtube` · second `chrome` `medium` `yikyak` · third `reddit` `facebook` `twitter` |
-| 2017 | Use the **existing 20** leftover dests. Do not add leftover-3× dests. | [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) §4.2 |
+| 2017 | Use the **existing 20** leftover dests. Do not add leftover-3× dests. | 2017-UNIQUE-FLOWS.md (not on disk; 2017 is absent) §4.2 |
 | | **No** | 13 dests = official 10 folders + first 3. Third is official. Stop. |
 | 2021 | **No** | 5 leftover dest folders shipped as leftover-3× first 3 + second 2. Stop. |
 | 2022 | **Yes — shipped 9** | dest-true dests already on disk. Unique leftover-20 is not this pass. Map [`2022-LEFTOVER-3X-UNIQUE.md`](2022-LEFTOVER-3X-UNIQUE.md). |
@@ -184,18 +184,18 @@ Implement leftover-3× unique dests **only when named**. Criteria is not a licen
 
 | Doc | Role |
 |-----|------|
-| [`DISK-TRUTH.md`](DISK-TRUTH.md) | Playable years · dest-lock counts |
+| [`DISK-TRUTH.md`](../DISK-TRUTH.md) | Playable years · dest-lock counts |
 | [`2007-LEFTOVER-3X-UNIQUE.md`](2007-LEFTOVER-3X-UNIQUE.md) | 2007 leftover-3× unique dest-true 9 |
 | [`-LEFTOVER-3X-UNIQUE.md`](-LEFTOVER-3X-UNIQUE.md) | forest stacked leftover-3× workshop · unique leftover-3×n stop |
 | [`2009-LEFTOVER-3X-UNIQUE.md`](2009-LEFTOVER-3X-UNIQUE.md) | 2009 boarded · leftover-3× catalogs are not visitor flows |
 | [`2010-LEFTOVER-3X-UNIQUE.md`](2010-LEFTOVER-3X-UNIQUE.md) | 2010 leftover-3× unique dest-true 9 |
 | [`2022-LEFTOVER-3X-UNIQUE.md`](2022-LEFTOVER-3X-UNIQUE.md) | 2022 leftover-3× unique dest-true 9 |
-| [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) | Only shipped unique leftover-20 map |
-| [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) | Visitor I/O I1–I14 |
-| [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) | Vine star · unique leftover-20 not written |
+| 2017-UNIQUE-FLOWS.md (not on disk; 2017 is absent) | Leftover-20 is not a live rail |
+| [`2016-2021-IO-CRITERIA.md`](../2016-2021-IO-CRITERIA.md) | Visitor I/O I1–I14 |
+| [`2013-IO-CRITERIA.md`](../2013-IO-CRITERIA.md) | Vine star · unique leftover-20 not written |
 | [`2022-RESEARCH-MAP.md`](2022-RESEARCH-MAP.md) | Unique leftover-20 not this pass |
 | [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) | Years with no unique leftover dest map. `UNDONE.md` was removed. |
-| [`FLOW-IMPLEMENT-CHECKLIST.md`](FLOW-IMPLEMENT-CHECKLIST.md) | Leftover dest leftover-3× dest face E1–E9 |
+| [`FLOW-IMPLEMENT-CHECKLIST.md`](../FLOW-IMPLEMENT-CHECKLIST.md) | Leftover dest leftover-3× dest face E1–E9 |
 | `scripts/popular-3x-sites.json` | First-strip catalog (not unique-checked) |
 | `scripts/popular-3x3-sites.json` | Third-strip catalog (mostly official) |
 | `js/config/flow-trails.js` | Official 10 |

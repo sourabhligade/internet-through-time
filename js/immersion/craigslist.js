@@ -21,13 +21,13 @@
   }
   function load() {
     try {
-      return JSON.parse(localStorage.getItem(key()) || "[]");
+      return (function (v) { return Array.isArray(v) ? v : []; })(window.ITT.User.take(key(), []));
     } catch (e) {
       return [];
     }
   }
   function save(list) {
-    localStorage.setItem(key(), JSON.stringify(list));
+    window.ITT.User.store(key(), list);
   }
   function esc(s) {
     return String(s || "")

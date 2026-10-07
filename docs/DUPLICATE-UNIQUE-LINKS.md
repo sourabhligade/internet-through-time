@@ -5,7 +5,7 @@
 **Date:** 2026-09-22
 **Status:** Killed 2026-09-22. leftover-2× unique dest **links** dest-disjoint leftover-3× unique dest **links**, official dests, leftover trail n=11–20 dests, leftover-4× unique dests. leftover-3× unique dest-true dests host leftover-3× unique dest **links** only. Leftover-3× unique dest-true dests stay **107**.
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · leftover never writes the star · empty/trap never write · do not dest-farm.
-**Law:** one dest once as a **link** per year ([`LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md) L1 · [`LEFTOVER-3X-UNIQUE-LINKS.md`](LEFTOVER-3X-UNIQUE-LINKS.md) T1 / T14).
+**Law:** one dest once as a **link** per year ([`LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md) L1 · [`LEFTOVER-3X-UNIQUE-LINKS.md`](history/LEFTOVER-3X-UNIQUE-LINKS.md) T1 / T14).
 **Sibling:** [`DUPLICATE-FLOWS.md`](DUPLICATE-FLOWS.md).
 
 Leftover-3× unique dest-true dests stay **107**. Official dest leftover unique-link first paint **0**. Forests 1994–2006 have leftover-2× unique dest links only (no leftover-3× unique dest-true dests). 2017 leftover-20 has leftover-2× unique dest links only.

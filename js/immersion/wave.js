@@ -27,7 +27,7 @@
     if (!btn) return;
     var st = doc.querySelector("[data-wave-status]");
     try {
-      var prev = localStorage.getItem(storageKey());
+      var prev = window.ITT.User.take(storageKey());
       if (prev && st) st.textContent = "Invite saved · " + storageKey();
     } catch (e0) { /* */ }
     btn.addEventListener("click", function () {
@@ -38,9 +38,7 @@
         ittFeedback(st ? st.textContent : "Tick both checks first.", st);
         return;
       }
-      localStorage.setItem(
-        storageKey(),
-        JSON.stringify({
+      window.ITT.User.store(storageKey(), {
           invited: true,
           real: true,
           multiStep: true,
@@ -48,8 +46,7 @@
           notDailyEmail: true,
           ts: Date.now(),
           note: "I/O demo lore · not daily email"
-        })
-      );
+        });
       if (st) {
         st.textContent = "Invite requested · public mass is 2010, not 2009 daily driver.";
         ittFeedback(st.textContent, st);

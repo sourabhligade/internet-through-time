@@ -7,7 +7,7 @@
   }
   function countBids() {
     var n = 0, winning = [];
-    /* auction.js: key = itt00-bid-<id> → {amount,bidder}; hist = key+"-hist" → array */
+    /* auction.js: key = itt00-bid-<id> · {amount,bidder}; hist = key+"-hist" · array */
     try {
       for (var i = 0; i < localStorage.length; i++) {
         var k = localStorage.key(i);
@@ -43,4 +43,4 @@
   if (elB) elB.textContent = String(b.n);
   if (elW) elW.textContent = b.winning.length ? b.winning.join("; ") : "— place a bid on a listing —";
 })();
-</script><script src="../../../../js/immersion-2000.js"></script></body></html>
+</script><script src="../../../../js/immersion-2000.js?v=20261007a"></script></body></html>

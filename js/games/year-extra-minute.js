@@ -192,7 +192,7 @@
       };
       var wrote = false;
       try {
-        localStorage.setItem(k, JSON.stringify(blob));
+        window.ITT.User.store(k, blob);
         wrote = true;
       } catch (eSave) {
         wrote = false;

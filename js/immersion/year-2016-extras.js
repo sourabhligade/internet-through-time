@@ -175,7 +175,7 @@
         feedback("Tick both honesty notes. Incomplete never writes.", st, { error: true });
         return;
       }
-      saveJSON(key("wa-e2e"), blob({ e2e: "default" }));
+      saveJSON(key("wa-e2e"), blob({ e2e: "default", official: true }));
       feedback("Default E2E (theater) · itt16-wa-e2e", st);
       reveal(doc);
     });
@@ -194,7 +194,7 @@
         feedback("Tick jack-gone and dongle. Incomplete never writes.", st, { error: true });
         return;
       }
-      saveJSON(key("iphone7"), blob({ jack: false, dongle: true }));
+      saveJSON(key("iphone7"), blob({ jack: false, dongle: true, official: true }));
       feedback("Reserved (theater) · itt16-iphone7", st);
       reveal(doc);
     });
@@ -228,7 +228,7 @@
         feedback("Read both notes first.", st, { error: true });
         return;
       }
-      saveJSON(key("vine-end"), blob({ announced: "2016-10-27" }));
+      saveJSON(key("vine-end"), blob({ announced: "2016-10-27", official: true }));
       feedback("Vine winds down · itt16-vine-end", st);
       reveal(doc);
     });
@@ -243,7 +243,7 @@
         feedback("Ack Snapbot / not every mall first.", st, { error: true });
         return;
       }
-      saveJSON(key("spectacles"), blob({ pair: true, price: "129.99" }));
+      saveJSON(key("spectacles"), blob({ pair: true, price: "129.99", official: true }));
       feedback("Paired (theater) · itt16-spectacles", st);
       reveal(doc);
     });
@@ -259,7 +259,7 @@
         feedback("Caption first. Empty never writes.", st, { error: true });
         return;
       }
-      saveJSON(key("musically"), blob({ caption: cap.slice(0, 80) }));
+      saveJSON(key("musically"), blob({ caption: cap.slice(0, 80), official: true }));
       feedback("Posted (theater) · not TikTok · itt16-musically", st);
       reveal(doc);
     });
@@ -278,7 +278,7 @@
         feedback("Tick offer-ends and Spartan-not-Chromium.", st, { error: true });
         return;
       }
-      saveJSON(key("win10-end"), blob({ ended: "2016-07-29" }));
+      saveJSON(key("win10-end"), blob({ ended: "2016-07-29", official: true }));
       feedback("Tray closed (theater) · itt16-win10-end", st);
       reveal(doc);
     });

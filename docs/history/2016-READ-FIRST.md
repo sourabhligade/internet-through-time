@@ -1,10 +1,10 @@
 # 2016 — READ FIRST (from-scratch rebuild)
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](../DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 **Date:** 2026-08-18  
-**Disk truth:** Hub is **27 years open** (1994–2017 and 2020–2022). `years/2016/` is the **live lean HTML door** (Instagram Stories star). Dest folders **57**. Leftover-2× unique dests **20**. **2022 ChatGPT live.** 2013 Vine is a live lean HTML door. **2015 and 2017 are React.** **2020 and 2021 are live HTML.**  
+**Disk truth:** Hub is **26 doors** (1994–2016 and 2020–2022). `years/2016/` is the **live lean HTML door** (Instagram Stories star). Dest folders **57**. Leftover-2× unique dests **20**. **2022 ChatGPT live.** 2013 Vine is a live lean HTML door. **2015 is the React door.** **2017 is absent.** **2020 and 2021 are live HTML.**  
 **Prefix:** `itt16`  
 **Clone shape from:** live `years/2014/` (HTML leanBoot · WhatsApp). **Do not** restore git dest-farm `years/2016/` (132 dests) or `/tmp/itt-2016-forest-backup-*`.
 
@@ -62,5 +62,5 @@
 ## How to read
 
 1. This file.  
-2. [`DISK-TRUTH.md`](DISK-TRUTH.md).  
+2. [`DISK-TRUTH.md`](../DISK-TRUTH.md).  
 3. Dest folders **57**. Do not restore the 132-dest dest-farm forest. Do not add more dests.

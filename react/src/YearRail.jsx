@@ -2,7 +2,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import card from "../../js/year-card.json";
 import { OfficialStop } from "./OfficialStop.jsx";
-import { YearRails } from "./YearRails.jsx";
 
 export function YearRail({ year, star, trail, also, all, guided, stopByKey, startTitle, startBody, about }) {
   const [view, setView] = useState("start");
@@ -86,15 +85,42 @@ export function YearRail({ year, star, trail, also, all, guided, stopByKey, star
         {view === "start" && star ? <span className="year-star">{star}</span> : null}
         <em>{label}</em>
       </header>
-      <YearRails
-        guided={guided}
-        trail={trail}
-        also={also}
-        deep={deep}
-        onStart={openStart}
-        onGuided={openGuided}
-        onOpenStop={openStop}
-      />
+      <div className="rails">
+        <section>
+          <h2>Guided six</h2>
+          <button type="button" onClick={openStart}>Starting Point</button>
+          {guided.map(([name, target]) => (
+            <button key={target} type="button" onClick={() => openGuided(name, target)}>{name}</button>
+          ))}
+        </section>
+        <section>
+          <h2>Official ten</h2>
+          <ol>
+            {trail.map((row) => (
+              <li key={row.whenKey}>
+                <button type="button" onClick={() => openStop(row)}>{row.n} {row.name}</button>
+                <code>{row.whenKey}</code>
+              </li>
+            ))}
+          </ol>
+        </section>
+        {deep && also.length ? (
+          <section className="also-year">
+            <h2>Also this year</h2>
+            <details>
+              <summary>Leftover list</summary>
+              <ol>
+                {also.map((row) => (
+                  <li key={row.whenKey}>
+                    <button type="button" onClick={() => openStop(row)}>{row.n} {row.name}</button>
+                    <code>{row.whenKey}</code>
+                  </li>
+                ))}
+              </ol>
+            </details>
+          </section>
+        ) : null}
+      </div>
       {view === "start" ? (
         <article className="stop">
           <p className="kicker">{year}</p>
@@ -120,7 +146,7 @@ export function YearRail({ year, star, trail, also, all, guided, stopByKey, star
             {all.map((row) => (
               <li key={row.whenKey}>
                 <button type="button" onClick={() => openGuided(row.name, row.whenKey)}>{row.n}. {row.name}</button>
-                <span> → {row.next}</span>
+                <span> · {row.next}</span>
               </li>
             ))}
           </ol>

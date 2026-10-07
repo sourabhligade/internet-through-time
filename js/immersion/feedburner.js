@@ -34,13 +34,13 @@
   }
   function load() {
     try {
-      return JSON.parse(localStorage.getItem(KEY()) || "null");
+      return window.ITT.User.take(KEY(), null);
     } catch (e) {
       return null;
     }
   }
   function save(rec) {
-    localStorage.setItem(KEY(), JSON.stringify(rec));
+    window.ITT.User.store(KEY(), rec);
   }
   function esc(s) {
     return String(s || "")

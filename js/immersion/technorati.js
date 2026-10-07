@@ -67,7 +67,7 @@
       var hosts = seedHosts();
       var rec = { url: url, hosts: hosts, ts: Date.now() };
       try {
-        localStorage.setItem(key(), JSON.stringify(rec));
+        window.ITT.User.store(key(), rec);
       } catch (e) { /* */ }
       if (st) {
         var ue = ITT.util && ITT.util.escapeHtml ? ITT.util.escapeHtml(url) : String(url || "").replace(/</g, "&lt;");
@@ -96,7 +96,7 @@
     /* restore last query if no ?url= handoff */
     if (!fromQ) {
       try {
-        var prev = JSON.parse(localStorage.getItem(key()) || "null");
+        var prev = window.ITT.User.take(key(), null);
         if (prev && prev.url) {
           var inp = form.querySelector('[name="url"]');
           if (inp) inp.value = prev.url;

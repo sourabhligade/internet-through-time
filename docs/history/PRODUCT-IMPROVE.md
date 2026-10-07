@@ -1,11 +1,11 @@
 # Product improve map
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](../DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 **Date:** 2026-09-27
-**Status:** Historical recommendation. Not ship law. Live year list is [`DISK-TRUTH.md`](DISK-TRUTH.md).
-**Canonical year law (2026-09-29):** hub **22** years (1994–2007 + 2010 + 2012–2017 + 2022). 2015 and 2017 are React doors. 2009 is boarded. 2011, 2018–2021, and 2023–2025 are absent. Counts below are an older snapshot.
+**Status:** Historical recommendation. Not ship law. Live year list is [`DISK-TRUTH.md`](../DISK-TRUTH.md).
+**Snapshot (2026-09-29), not live law:** hub **22** years (1994–2007 + 2010 + 2012–2017 + 2022). That snapshot called 2015 and 2017 React doors, called 2009 boarded, and called 2011, 2018–2021, and 2023–2025 absent. Counts below are that snapshot. Live doors are the header and [`DISK-TRUTH.md`](../DISK-TRUTH.md): **26 doors**, 1994–2016 and 2020–2022, React 2015 only.
 
 ---
 
@@ -27,7 +27,7 @@ Year-locked, clickable rooms in period chrome. Not a screenshot gallery. Not a r
 
 ## 2. Data on disk (audit snapshot)
 
-The counts in this section are the 2026-09-13 snapshot. That snapshot is not the live list. Live law is the 22-door header above and [`DISK-TRUTH.md`](DISK-TRUTH.md): 2015 and 2017 are React doors, 2009 is boarded, and 2011, 2018–2021, and 2023–2025 are absent.
+The counts in this section are the 2026-09-13 snapshot. That snapshot is not the live list. Live law is the header and [`DISK-TRUTH.md`](../DISK-TRUTH.md): **26 doors**, 1994–2016 and 2020–2022, React 2015 only. 2017–2019 and 2023–2025 are absent.
 
 | Layer | Count (2026-09-13 working tree) |
 |---|---|
@@ -125,7 +125,7 @@ Same pass as / 2012 / : dests = `urlMap` ∩ disk, then delete the rest. Shared 
 
 Order suggestion (largest leftover risk first):
 
-- [x] Snapshot called 2015 wiped and treated later years as React doors. Live law: 2015 and 2017 are the React doors. 2011 and 2018–2021 are absent.
+- [x] Snapshot called 2015 wiped and treated later years as React doors. Live law: **2015 is the only React door.** 2011 and 2020–2022 are live HTML. 2017–2019 and 2023–2025 are absent.
 - [ ] 2004, 1999–2003, 2005–2007, 2010 — **STOP.** Do not dest-lock forests. Later museum law forbids this box.
 - [ ] 2009 only after Slice 2 — **STOP** unless a later named pass un-boards. DISK-TRUTH keeps 2009 boarded.
 

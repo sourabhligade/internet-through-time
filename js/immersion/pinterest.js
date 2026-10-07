@@ -14,13 +14,13 @@
   }
   function load() {
     try {
-      return JSON.parse(localStorage.getItem(storageKey()) || "[]") || [];
+      return (function (v) { return Array.isArray(v) ? v : []; })(window.ITT.User.take(storageKey(), [])) || [];
     } catch (e) {
       return [];
     }
   }
   function save(list) {
-    localStorage.setItem(storageKey(), JSON.stringify(list));
+    window.ITT.User.store(storageKey(), list);
   }
   function esc(s) {
     return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");

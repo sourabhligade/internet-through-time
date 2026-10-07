@@ -18,7 +18,7 @@
   }
   function saveJSON(k, o) {
     try {
-      localStorage.setItem(k, JSON.stringify(o));
+      window.ITT.User.store(k, o);
       return true;
     } catch (e) {
       try {

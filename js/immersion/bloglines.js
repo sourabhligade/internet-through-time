@@ -35,14 +35,14 @@
 
   function load() {
     try {
-      var raw = localStorage.getItem(storageKey());
-      if (raw) return JSON.parse(raw);
+      var raw = window.ITT.User.take(storageKey());
+      if (raw) return raw;
       /* migrate legacy */
       if (storageKey() !== "itt03-bloglines-feeds") {
-        var leg = localStorage.getItem("itt03-bloglines-feeds");
+        var leg = window.ITT.User.take("itt03-bloglines-feeds");
         if (leg) {
-          localStorage.setItem(storageKey(), leg);
-          return JSON.parse(leg);
+          window.ITT.User.store(storageKey(), leg);
+          return leg;
         }
       }
       return [];
@@ -51,7 +51,7 @@
     }
   }
   function save(list) {
-    localStorage.setItem(storageKey(), JSON.stringify(list));
+    window.ITT.User.store(storageKey(), list);
   }
 
   function esc(s) {

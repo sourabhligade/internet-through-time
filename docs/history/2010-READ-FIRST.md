@@ -1,6 +1,6 @@
 # 2010 — READ FIRST
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](../DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 **Date:** 2026-08-17
@@ -11,7 +11,7 @@
 | [`references/2010/`](references/2010/) | Wikipedia 2010 list · extlinks · CDX · visit log |
 | Parent live year | `years/2009/` · `itt09` |
 
-**Disk truth:** Hub is **27 years open** (1994–2017 and 2020–2022) · **2015 and 2017 are React** · **2018, 2019, and 2023–2025 are absent**. 2013 Vine and 2022 ChatGPT are live lean doors. `years/2010/` is a **dest-lock lean door**. Prior 2010 forest is **not** the source of truth. Do not restore it.
+**Disk truth:** Hub is **26 doors** (1994–2016 and 2020–2022) · **2015 is the React door** · **2017–2019 and 2023–2025 are absent**. 2013 Vine and 2022 ChatGPT are live lean doors. `years/2010/` is a **dest-lock lean door**. Prior 2010 forest is **not** the source of truth. Do not restore it.
 
 ---
 

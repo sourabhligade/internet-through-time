@@ -20,7 +20,7 @@
     {
       "title": "1 \u00b7 From",
       "body": "123 Market St, San Jose, CA",
-      "nextLabel": "To \u2192"
+      "nextLabel": "To"
     },
     {
       "title": "2 \u00b7 To",

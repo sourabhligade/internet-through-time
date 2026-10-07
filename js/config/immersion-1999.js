@@ -57,7 +57,7 @@
         label: "Google search",
         href: "sites/google/index.html",
         match: "/google/",
-        hint: "type a word → Google Search (or I'm Feeling Lucky)",
+        hint: "type a word · Google Search (or I'm Feeling Lucky)",
         doneMessage: "Google — funded, recommended, still not the default portal."
       },
       {

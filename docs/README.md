@@ -2,7 +2,7 @@
 
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json` · live `years/` · `scripts/itt_gate.py` `SHIP_YEARS`.
 
-Hub is **26 years open** (1994–2016 and 2020–2022). **2015 is the React door** (`/app/index.html#/year/2015`, no `years/2015` tree). **leanBoot** is 2007–2014, 2016, and 2020–2022. **2008** App Store `itt08-apps`. **2009** Facebook Like `itt09-like`. **2011** Google+ `itt11-gplus`. **2020** Zoom Leave `itt20-zoom`. **2021** Ask App Not to Track `itt21-att`. **2022** ChatGPT Send `itt22-chatgpt`. **Absent:** 2017, 2018, 2019, and 2023–2025. Leftover-3× unique catalogs are **empty**. Leftover-2× unique links: **1,158** across 21 years in `e2e/leftover-2x-unique-links.matrix.json` (2015 row is 0; 2011 and 2020–2022 have no row). Dest doubling waits on `2x`.
+Hub is **26 years open** (1994–2016 and 2020–2022). **2015 is the React door** (`/app/index.html#/year/2015`, no `years/2015` tree). **leanBoot** is 2007–2014, 2016, and 2020–2022. **2008** App Store `itt08-apps`. **2009** Facebook Like `itt09-like`. **2011** Google+ `itt11-gplus`. **2020** Zoom Leave `itt20-zoom`. **2021** Ask App Not to Track `itt21-att`. **2022** ChatGPT Send `itt22-chatgpt`. **Absent:** 2017, 2018, 2019, and 2023–2025. Leftover-3× unique catalogs are **empty**. Leftover-2× unique links: **1,158** across 22 matrix rows in `e2e/leftover-2x-unique-links.matrix.json` (2015 row is 0; 2011 and 2020–2022 have no row). Dest doubling waits on `2x`.
 
 27-door maps and the old finding lists are in [`history/`](history/). They are not ship law. Do not restore them as implement lists. Do not dest-farm.
 
@@ -11,7 +11,7 @@ Hub is **26 years open** (1994–2016 and 2020–2022). **2015 is the React door
 1. [`DISK-TRUTH.md`](DISK-TRUTH.md) — what is playable. Wins when anything else disagrees.
 1b. [`CODE-STRUCTURE.md`](CODE-STRUCTURE.md) — SRP: config vs engine vs dest HTML vs dest-true e2e. Dest-true CI pack is **12** specs.
 2. [`ARCHITECTURE.md`](ARCHITECTURE.md) — year differences live in config + HTML. Shared engines live in `js/`.
-3. That year’s `YYYY-READ-FIRST.md` when it still sits in this folder (2020–2022) — thesis and bans only. Files whose header still says 27 doors or React 2017 are in [`history/`](history/). Live list is DISK-TRUTH.
+3. That year’s `YYYY-READ-FIRST.md` when it still sits in this folder (2020–2022) — thesis and bans only. Files whose header said 27 doors or React 2017 are in [`history/`](history/). Live list is DISK-TRUTH.
 4. [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) — visitor I/O pass/fail for lean HTML doors. 2020–2022 are live HTML. 2017 is absent.
 5. [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) — same bar for 2013 Vine 6s.
 6. 2017 is absent. `2017-UNIQUE-FLOWS.md` was removed with the door. Do not restore it.

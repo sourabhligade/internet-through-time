@@ -67,13 +67,13 @@
   }
   function load() {
     try {
-      return JSON.parse(localStorage.getItem(storageKey()) || "null");
+      return window.ITT.User.take(storageKey(), null);
     } catch (e) {
       return null;
     }
   }
   function save(list) {
-    localStorage.setItem(storageKey(), JSON.stringify(list));
+    window.ITT.User.store(storageKey(), list);
   }
   function openUrl(doc, url, note) {
     url = String(url || "http://www.google.com/").replace(/^\s+|\s+$/g, "");
@@ -183,7 +183,7 @@
     var key = ottKey();
     function restore() {
       try {
-        var raw = localStorage.getItem(key);
+        var raw = window.ITT.User.take(key);
         if (raw && st) st.textContent = "Saved in this browser · " + key;
       } catch (eR) { /* */ }
     }
@@ -209,7 +209,7 @@
       };
       var wrote = false;
       try {
-        localStorage.setItem(key, JSON.stringify(payload));
+        window.ITT.User.store(key, payload);
         wrote = true;
       } catch (eS) {
         try {

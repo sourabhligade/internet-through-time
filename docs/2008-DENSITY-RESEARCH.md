@@ -3,7 +3,7 @@
 **Date:** 2026-09-30  
 **Status:** Deep research **complete (Partial).** **Not ship law.** Do not dest-farm. Do not `git checkout` the wiped forest. Implement dest HTML only after this note is read and a pack is named.  
 **Workflow:** `/workflows` · `deep-research` (cited cross-check landed).  
-**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json` · `scripts/itt_gate.py` `SHIP_YEARS`. Live hub is **23 doors**. 2008 is a **live HTML lean door** (`kind: html`, star `itt08-apps`).  
+**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json` · `scripts/itt_gate.py` `SHIP_YEARS`. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** 2008 is a **live HTML lean door** (`kind: html`, star `itt08-apps`).  
 **Parent corpus (wiped from this branch, still in git / worktree `hi`):** `docs/2008-RESEARCH.md` · `docs/2008-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md` · `docs/2008-DOUBLE-5K-RESEARCH-FAMOUS-AMBITIOUS-2026-09-06.md` at `3498b60b1^`. Worktree copies: `/Users/sourabhligade/.grok/worktrees/sourabhligade-internet-through-time/hi/docs/`.
 
 Wipe: `3498b60b1` removed `years/2008/` (**591** dest folders · **857** HTML). That forest is dest-farm. It is the anti-model.
@@ -44,7 +44,7 @@ Chrome / iPhone / G1 are **rooms**, not January chrome. Mass shell is XP-class d
 | Netcraft June | same cell | [WA 28 Jul 2008](https://web.archive.org/web/20080728234417/http://news.netcraft.com/archives/2008/06/22/june_2008_web_server_survey.html) |
 | Guided | **exactly 6** | About → App Store → Chrome → GitHub issue → Android G1 · Hulu → map |
 | Leftover-3× unique | **empty** | live catalogs |
-| Unique leftover-20 | **2017 only** | do not dest-farm a leftover-20 onto 2008 |
+| Unique leftover-20 | **absent** · 2017 is not a door | do not dest-farm a leftover-20 onto 2008 |
 
 ---
 
@@ -75,7 +75,7 @@ Year game at wipe: Goo Span `itt08-game-goospan` (cabinet, not a leftover dest).
 
 ## Leftover KEEP (year-true 2008 · dest-disjoint)
 
-Official 10 dests are **not** leftover KEEP. Remaining Pack A/B/C slots are a **ceiling to miss**. Unique leftover-20 is 2017 only. Leftover-3× unique stays empty.
+Official 10 dests are **not** leftover KEEP. Remaining Pack A/B/C slots are a **ceiling to miss**. Unique leftover-20 is not a live rail. 2017 is absent. Leftover-3× unique stays empty.
 
 Cited leftover KEEP this pass:
 

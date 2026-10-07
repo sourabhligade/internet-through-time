@@ -33,13 +33,13 @@
 
   function loadLib() {
     try {
-      var raw = localStorage.getItem(storageKey());
-      if (raw) return JSON.parse(raw);
+      var raw = window.ITT.User.take(storageKey());
+      if (raw) return raw;
       if (storageKey() !== "itt03-itunes-library") {
-        var leg = localStorage.getItem("itt03-itunes-library");
+        var leg = window.ITT.User.take("itt03-itunes-library");
         if (leg) {
-          localStorage.setItem(storageKey(), leg);
-          return JSON.parse(leg);
+          window.ITT.User.store(storageKey(), leg);
+          return leg;
         }
       }
       return [];
@@ -48,7 +48,7 @@
     }
   }
   function saveLib(list) {
-    localStorage.setItem(storageKey(), JSON.stringify(list));
+    window.ITT.User.store(storageKey(), list);
   }
 
   function renderLib(doc) {

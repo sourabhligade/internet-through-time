@@ -1,6 +1,6 @@
 # 2016–2021 · visitor I/O criteria
 
-**Historical research.** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** **2020–2022 are live HTML.** The year lists below are research, not a second door list. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md).
+**Historical research.** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** **2020–2022 are live HTML.** The year lists below are research, not a second door list. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](history/INCOMPLETE-MAP.md).
 
 
 **Date:** 2026-09-14  
@@ -162,6 +162,6 @@ Mark **Y / N**. A year is I/O-done when the row is all Y.
 |-----|------|
 | [`DISK-TRUTH.md`](DISK-TRUTH.md) | What is playable |
 | `YYYY-READ-FIRST.md` | Thesis + bans only (dest math in several of these is stale) |
-| [`PRODUCT-IMPROVE.md`](PRODUCT-IMPROVE.md) | Broader product sequence |
+| [`PRODUCT-IMPROVE.md`](history/PRODUCT-IMPROVE.md) | Broader product sequence |
 | `ui/year/start-data.js` | Guided 6 source |
 | `js/museum-progress.js` | First night + year-start paths |

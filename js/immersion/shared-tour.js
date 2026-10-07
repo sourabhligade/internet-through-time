@@ -237,7 +237,7 @@
     /* ---------- Hit counters ---------- */
     function renderCounter(el) {
       var key = storageKey("hits", el.getAttribute("data-counter") || "default");
-      var stored = localStorage.getItem(key);
+      var stored = window.ITT.User.take(key);
       var n;
       if (stored !== null) {
         n = parseInt(stored, 10) || 0;
@@ -249,7 +249,7 @@
         n = 1000 + Math.abs(hash % 9000); // 1000-9999 range
       }
       n += 1;
-      localStorage.setItem(key, String(n));
+      window.ITT.User.store(key, String(n));
 
       var digitBase = el.getAttribute("data-digit-base");
       if (digitBase) {

@@ -23,13 +23,13 @@
 
   function load() {
     try {
-      return JSON.parse(localStorage.getItem(stateKey()) || "null");
+      return window.ITT.User.take(stateKey(), null);
     } catch (e) {
       return null;
     }
   }
   function save(st) {
-    localStorage.setItem(stateKey(), JSON.stringify(st));
+    window.ITT.User.store(stateKey(), st);
   }
   function seedListings() {
     return [
@@ -150,10 +150,8 @@
           try {
             var ok = doc.documentElement && doc.documentElement.getAttribute("data-official-key");
             if (ok === "itt05-hm") {
-              if (!localStorage.getItem("itt05-hm")) {
-                localStorage.setItem(
-                  "itt05-hm",
-                  JSON.stringify({
+              if (!window.ITT.User.take("itt05-hm")) {
+                window.ITT.User.store("itt05-hm", {
                     multiStep: true,
                     real: true,
                     official: true,
@@ -161,8 +159,7 @@
                     city: String(st.city).slice(0, 40),
                     kind: String(st.kind || "").slice(0, 16),
                     ts: Date.now()
-                  })
-                );
+                  });
               }
               if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
             }

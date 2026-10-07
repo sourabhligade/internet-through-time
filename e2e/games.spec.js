@@ -211,7 +211,8 @@ test.describe('games wing', () => {
   test('last portal stored when visiting miniclip', async ({ page }) => {
     await page.goto('/games/portals/miniclip/index.html');
     const last = await page.evaluate(() => localStorage.getItem('itt-games-last-portal'));
-    expect(last).toBe('miniclip');
+    const parsedLast = JSON.parse(last);
+    expect(parsedLast && parsedLast.body != null ? parsedLast.body : last).toBe('miniclip');
   });
 
   test('period announcements UI: ticker · news · welcome popup', async ({ page }) => {

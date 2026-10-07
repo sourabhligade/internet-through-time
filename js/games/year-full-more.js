@@ -71,9 +71,7 @@
         if (wrote && api.markStep) api.markStep("save", host);
       } else {
         try {
-          localStorage.setItem(
-            prefixFor(year) + "-game-" + gid,
-            JSON.stringify({
+          window.ITT.User.store(prefixFor(year) + "-game-" + gid, {
               gameId: gid,
               year: String(year),
               best: score,
@@ -84,8 +82,7 @@
               multiStep: true,
               fullMore: true,
               engine: engine
-            })
-          );
+            });
           wrote = true;
         } catch (eS) {
           wrote = false;

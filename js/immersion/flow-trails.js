@@ -132,7 +132,7 @@
           esc(n + " · " + (t.name || "flow")) +
           "</a>"
       );
-      if (t.nextLabel) bits.push(" → " + esc(t.nextLabel));
+      if (t.nextLabel) bits.push(" · " + esc(t.nextLabel));
       bits.push(n === hereN ? "</b></li>" : "</li>");
     }
     bits.push("</ol>");

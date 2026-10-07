@@ -70,7 +70,8 @@ async function runFlow(page, spec) {
   expect(blob.real, spec.key + ' must be REAL not mock').toBe(true);
   expect(blob.multiStep, spec.key + ' must be multi-step').toBe(true);
   expect(String(blob.year)).toBe(spec.year);
-  expect(blob.kind).toBe(spec.kind);
+  expect(blob.kind).toBe('leftover');
+  expect(blob.step).toBe(spec.kind);
   expect(blob.flow).toBe(suffix);
   expect(await leaks(page, spec.yy)).toEqual([]);
 }

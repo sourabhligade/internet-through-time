@@ -1,10 +1,10 @@
 # Flow implement checklist
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](history/INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](history/UNDONE-UNPLANNED-MD.md).
 
 
 **Date:** 2026-09-14  
-**Law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md)
+**Law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) · [`INCOMPLETE-MAP.md`](history/INCOMPLETE-MAP.md)
 **This pass:** implement every criterion those files allow. Do **not** dest-farm. Do **not** invent dests or brand pixels.
 
 Boxes flip to `[x]` only after disk + e2e (or a named skip with reason).

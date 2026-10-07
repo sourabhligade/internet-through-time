@@ -77,14 +77,14 @@
             : pfx + "-lucky";
           var destShow = rank(q);
           var destHref = destShow.length ? entryHref(destShow[0].e) : searchHref(q, form);
-          localStorage.setItem(lk, JSON.stringify({
+          window.ITT.User.store(lk, {
             q: q,
             dest: destHref,
             multiStep: true,
             real: true,
             year: String((config && config.year) || "1998"),
             ts: Date.now()
-          }));
+          });
           try {
             if (ITT.revealNextFlow) ITT.revealNextFlow(document);
           } catch (eN) {
@@ -129,13 +129,13 @@
                 var gk = ITT.util && ITT.util.immersionStorageKey
                   ? ITT.util.immersionStorageKey("google", pfx)
                   : pfx + "-google";
-                localStorage.setItem(gk, JSON.stringify({
+                window.ITT.User.store(gk, {
                   q: qTrim.slice(0, 80),
                   multiStep: true,
                   real: true,
                   year: year,
                   ts: Date.now()
-                }));
+                });
                 try { if (ITT.revealNextFlow) ITT.revealNextFlow(document); } catch (eN0) { /* */ }
               } catch (eG) { /* */ }
               location.href = searchHref(qTrim, f);

@@ -50,9 +50,9 @@
 
   function loadBest(key) {
     try {
-      var raw = localStorage.getItem(key);
+      var raw = window.ITT.User.take(key);
       if (!raw) return 0;
-      var o = JSON.parse(raw);
+      var o = raw;
       if (o && typeof o.best === "number") return o.best;
       if (o && typeof o.score === "number") return o.score;
     } catch (e) {

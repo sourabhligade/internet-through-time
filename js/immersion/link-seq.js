@@ -93,7 +93,7 @@
       }
     }
     if (next) {
-      bits.push(' · <a href="../' + encodeURIComponent(next).replace(/%2F/gi, "/") + '/index.html">next →</a>');
+      bits.push(' · <a href="../' + encodeURIComponent(next).replace(/%2F/gi, "/") + '/index.html">next</a>');
     }
     return bits.join("");
   }

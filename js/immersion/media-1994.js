@@ -45,7 +45,7 @@ function initFishCam(root) {
       caption: "Tank view " + String.fromCharCode(65 + i)
     });
   }
-  var n = parseInt(localStorage.getItem(storageKey("fishcam-n")) || "0", 10) || 0;
+  var n = parseInt(window.ITT.User.take(storageKey("fishcam-n")) || "0", 10) || 0;
   var reduce = false;
   try {
     reduce = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
@@ -54,7 +54,7 @@ function initFishCam(root) {
 
   function writeFishGold() {
     try {
-      if (localStorage.getItem(goldKey)) return;
+      if (window.ITT.User.take(goldKey)) return;
     } catch (eHas) { /* */ }
     var payload = {
       multiStep: true,
@@ -65,7 +65,7 @@ function initFishCam(root) {
     };
     try {
       if (saveJSON) saveJSON(goldKey, payload);
-      else localStorage.setItem(goldKey, JSON.stringify(payload));
+      else window.ITT.User.store(goldKey, payload);
     } catch (eW) { /* */ }
     try {
       if (markTourUsed) markTourUsed();
@@ -93,7 +93,7 @@ function initFishCam(root) {
   function advance() {
     n += 1;
     try {
-      localStorage.setItem(storageKey("fishcam-n"), String(n));
+      window.ITT.User.store(storageKey("fishcam-n"), String(n));
     } catch (eN) { /* */ }
     paint(n);
     writeFishGold();

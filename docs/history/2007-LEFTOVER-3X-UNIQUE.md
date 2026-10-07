@@ -1,13 +1,13 @@
 # 2007 leftover-3× unique dest-true
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](../DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 **Date:** 2026-09-19  
 **Status:** Leftover-3× catalogs are empty. Do not dest-farm nine unique dests. This file is the retired map.  
-**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`2007-READ-FIRST.md`](2007-READ-FIRST.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
+**Ship law:** [`DISK-TRUTH.md`](../DISK-TRUTH.md) · [`2007-READ-FIRST.md`](2007-READ-FIRST.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **Leftover-3× unique dest-true law:** [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md).  
-**Template shape:** [`2010-LEFTOVER-3X-UNIQUE.md`](2010-LEFTOVER-3X-UNIQUE.md) · [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md).  
+**Template shape:** [`2010-LEFTOVER-3X-UNIQUE.md`](2010-LEFTOVER-3X-UNIQUE.md) · 2017-UNIQUE-FLOWS.md (not on disk; 2017 is absent).  
 **Mock:** `scripts/audit-mock-flows.js` — `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` fail.  
 **Prefix:** `itt07`  
 **Star:** iPhone Safari `itt07-iphone` · `sites/iphone/index.html`  

@@ -1,11 +1,11 @@
 # 2009 — READ FIRST (live lean door)
 
-**Live hub is 27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. **Live hub is 26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](../DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 **Date:** 2026-09-30  
 **Status:** **live lean HTML door.** Hub card `years/2009/`. Star is Facebook Like `itt09-like`. Dest-true official-verb. Leftover never writes the star. Leftover-2× rails wait on `2x`.  
-**Disk law:** [`DISK-TRUTH.md`](DISK-TRUTH.md).  
+**Disk law:** [`DISK-TRUTH.md`](../DISK-TRUTH.md).  
 **Prefix:** `itt09-*`
 
 ## One line

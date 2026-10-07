@@ -13,11 +13,11 @@
       : "itt08-chrome";
   }
   function load() {
-    try { return JSON.parse(localStorage.getItem(storageKey()) || "null"); }
+    try { return window.ITT.User.take(storageKey(), null); }
     catch (e) { return null; }
   }
   function save(obj) {
-    localStorage.setItem(storageKey(), JSON.stringify(obj));
+    window.ITT.User.store(storageKey(), obj);
   }
   function checksOk(doc) {
     var reqs = doc.querySelectorAll("[data-chrome-req]");

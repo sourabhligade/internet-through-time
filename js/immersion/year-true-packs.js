@@ -104,7 +104,7 @@
     } else if (skin === "game") {
       stage.innerHTML = "<span class='ytp-sil'></span> In world as " + (safe || "adventurer") + " · silhouette only";
     } else if (skin === "maps") {
-      stage.innerHTML = '<span class="ytp-pin">A</span> → <span class="ytp-pin">B</span> · ' + (safe || "route residual");
+      stage.innerHTML = '<span class="ytp-pin">A</span> · <span class="ytp-pin">B</span> · ' + (safe || "route residual");
     } else if (skin === "plugin") {
       stage.textContent = "Plugin enabled · page theater unlocked.";
     } else if (skin === "note") {

@@ -24,7 +24,7 @@
   var best = 0;
 
   try {
-    var prev = YG && YG.loadJSON ? YG.loadJSON(key, null) : JSON.parse(localStorage.getItem(key) || "null");
+    var prev = YG && YG.loadJSON ? YG.loadJSON(key, null) : window.ITT.User.take(key, null);
     if (prev && typeof prev.best === "number") best = prev.best;
   } catch (e0) { /* */ }
 
@@ -62,9 +62,7 @@
       YG.saveBest("tilefold", n, { year: "2014", merge: { multiStep: true, folds: n } });
     } else {
       try {
-        localStorage.setItem(
-          key,
-          JSON.stringify({
+        window.ITT.User.store(key, {
             gameId: "tilefold",
             year: "2014",
             best: Math.max(best, n),
@@ -73,8 +71,7 @@
             real: true,
             multiStep: true,
             ts: Date.now()
-          })
-        );
+          });
       } catch (eS) { /* */ }
     }
     if (n > best) best = n;

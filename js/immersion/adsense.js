@@ -40,9 +40,9 @@
 
     /* restore prior signup */
     try {
-      var prev = JSON.parse(localStorage.getItem(storageKey()) || "null");
+      var prev = window.ITT.User.take(storageKey(), null);
       if (!prev && storageKey() !== "itt03-adsense") {
-        prev = JSON.parse(localStorage.getItem("itt03-adsense") || "null");
+        prev = window.ITT.User.take("itt03-adsense", null);
       }
       if (prev && prev.site) {
         var siteIn = form.querySelector('[name="site"]');
@@ -70,7 +70,7 @@
         return;
       }
       var rec = { site: site, ts: Date.now() };
-      localStorage.setItem(storageKey(), JSON.stringify(rec));
+      window.ITT.User.store(storageKey(), rec);
       var code = doc.querySelector("[data-adsense-code]");
       if (code) {
         code.textContent =

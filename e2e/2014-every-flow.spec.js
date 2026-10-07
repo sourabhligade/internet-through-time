@@ -226,6 +226,7 @@ const OFFICIAL = [
       expect(await getKey(page, "itt14-game-tilefold")).toBeFalsy();
     },
     complete: async (page) => {
+      await page.locator("[data-game-start]").click();
       await page.locator('[data-tile-fold="a"]').click();
       await page.locator('[data-tile-fold="b"]').click();
     },

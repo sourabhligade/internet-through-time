@@ -2,7 +2,7 @@
 
 **2018–2019 and 2023–2025 paths in this note are not live doors.** 2020–2022 are live HTML. Do not restore 2018, 2019, or 2023–2025 from this note.
 
-**Wait-2x (2026-09-30 docs pass).** Leftover-2× unique dest **links** already live. Dest **doubling** waits on the word `2x`. Do not dest-farm from this note. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Wait-2x (2026-09-30 docs pass).** Leftover-2× unique dest **links** already live. Dest **doubling** waits on the word `2x`. Do not dest-farm from this note. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`UNDONE-UNPLANNED-MD.md`](history/UNDONE-UNPLANNED-MD.md).
 
 **Date:** 2026-09-21  
 **Status:** Implemented 2026-09-21. Leftover-2× unique dest **links** on leftover dest HTML. Official dest leftover-2× first paint **0**. Dest-true leftover dest I/O unchanged. Not dest-farm. Leftover-3× unique flows and links were removed. Do not treat =3 or 2021=5 as a live cap. Dest **doubling** waits on the word `2x`.  
@@ -141,7 +141,7 @@ Leftover dest KEEP dests already have dest-true leftover I/O. This pass only **h
 | 2014 | leftover dest KEEP: `alibabaipo` `oculusfb` `inbox` `echo` `flappybird` `game2048` `ios8` · Hosting.com `facebook` `youtube` `wikipedia` `twitter` | Alibaba IPO 2014 · Flappy Bird 2014 · Echo Nov 2014 · Hosting.com June 2014 |
 | 2015 | extra dest KEEP 15 of 31: `androidpay` `applenews` `applepencil` `applewatch` `beats1` `dx12` `elcapitan` `ethereum` `fblive` `http2` `instantarticles` `ipadpro` + Hosting.com already in KEEP original | Apple Watch 24 Apr 2015 · AMP 7 Oct 2015 · Ethereum 2015 · [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md) |
 | 2016 | leftover dest KEEP 23 (douyin…letsencrypt) | IG Stories is star · Douyin 2016 · Houseparty Feb 2016 · Jio 5 Sep 2016 · Super Mario Run 15 Dec 2016 |
-| 2017 | leftover-20 unique dests not already in KEEP original leftover-2× unique dests: `botw` `cuphead` `gettingoverit` `hangoutschat` `hollowknight` `instagram17` `messengerday` + extra dest KEEP `cardano` `codww2` `destiny2` `galaxys8` … | [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) · extra dest KEEP 39 |
+| 2017 | leftover-20 unique dests not already in KEEP original leftover-2× unique dests: `botw` `cuphead` `gettingoverit` `hangoutschat` `hollowknight` `instagram17` `messengerday` + extra dest KEEP `cardano` `codww2` `destiny2` `galaxys8` … | 2017-UNIQUE-FLOWS.md (not on disk; 2017 is absent) · extra dest KEEP 39 |
 | | leftover dest KEEP 11 + leftover-3× unique dests as href targets (`reddit` `youtube` `wikipedia`) + Hosting.com `instagram` | GDPR is star · Google+ shutdown · leftover-3× unique dests stay **3** |
 | | extra dest KEEP 27 of 54: `apex` `airpods2` `android10` `applewatch5` … | Apex Legends 4 Feb · Android 10 3 Sep · extra dest KEEP 54 |
 | 2021 | leftover dest KEEP `nft` `coinbaseipo` `epicapple` · leftover-3× unique dests / Hosting.com as href targets | ATT Ask is star · Coinbase IPO Apr 2021 · leftover-3× unique dests stay **5** |

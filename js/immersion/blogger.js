@@ -36,28 +36,28 @@
   function loadBlog() {
     try {
       var k = KEY();
-      var raw = localStorage.getItem(k);
+      var raw = window.ITT.User.take(k);
       if (!raw) {
         /* migrate common legacy keys */
         var alts = ["itt05-blog", "itt04-blog", "itt03-blog", "itt99-blog"];
         var i;
         for (i = 0; i < alts.length; i++) {
           if (alts[i] === k) continue;
-          raw = localStorage.getItem(alts[i]);
+          raw = window.ITT.User.take(alts[i]);
           if (raw) {
-            localStorage.setItem(k, raw);
+            window.ITT.User.store(k, raw);
             break;
           }
         }
       }
       if (!raw) return { title: "My Weblog", posts: [], user: "guest" };
-      return JSON.parse(raw);
+      return raw;
     } catch (e) {
       return { title: "My Weblog", posts: [], user: "guest" };
     }
   }
   function saveBlog(blog) {
-    localStorage.setItem(KEY(), JSON.stringify(blog));
+    window.ITT.User.store(KEY(), blog);
   }
   function esc(s) {
     return String(s || "")

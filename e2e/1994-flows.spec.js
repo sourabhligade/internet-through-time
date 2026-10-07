@@ -209,7 +209,14 @@ test.describe('1994 flow: hit counter', () => {
       return page.evaluate(() => {
         const keys = Object.keys(localStorage).filter((k) => k.indexOf('hits') !== -1);
         return keys.some((k) => {
-          const n = parseInt(localStorage.getItem(k) || '0', 10);
+          const raw = localStorage.getItem(k) || '0';
+          let n = parseInt(raw, 10);
+          if (String(n) !== raw) {
+            try {
+              const blob = JSON.parse(raw);
+              n = parseInt(blob && blob.body != null ? blob.body : '', 10);
+            } catch (e) { n = 0; }
+          }
           return n > 0;
         });
       });

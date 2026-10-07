@@ -37,39 +37,39 @@
   function load() {
     try {
       var k = KEY();
-      var raw = localStorage.getItem(k);
+      var raw = window.ITT.User.take(k);
       if (!raw && k === "itt05-thefacebook") {
-        raw = localStorage.getItem("itt04-thefacebook");
-        if (raw) localStorage.setItem(k, raw);
+        raw = window.ITT.User.take("itt04-thefacebook");
+        if (raw) window.ITT.User.store(k, raw);
       }
       if (!raw && k === "itt06-thefacebook") {
-        raw = localStorage.getItem("itt05-thefacebook") || localStorage.getItem("itt04-thefacebook");
-        if (raw) localStorage.setItem(k, raw);
+        raw = window.ITT.User.take("itt05-thefacebook") || window.ITT.User.take("itt04-thefacebook");
+        if (raw) window.ITT.User.store(k, raw);
       }
       if (!raw && k === "itt07-thefacebook") {
         raw =
-          localStorage.getItem("itt06-thefacebook") ||
-          localStorage.getItem("itt05-thefacebook") ||
-          localStorage.getItem("itt04-thefacebook");
-        if (raw) localStorage.setItem(k, raw);
+          window.ITT.User.take("itt06-thefacebook") ||
+          window.ITT.User.take("itt05-thefacebook") ||
+          window.ITT.User.take("itt04-thefacebook");
+        if (raw) window.ITT.User.store(k, raw);
       }
-      return raw ? JSON.parse(raw) : null;
+      return raw ? raw : null;
     } catch (e) {
       return null;
     }
   }
   function save(p) {
-    localStorage.setItem(KEY(), JSON.stringify(p));
+    window.ITT.User.store(KEY(), p);
   }
   function loadFeed() {
     try {
-      return JSON.parse(localStorage.getItem(feedKey()) || "null");
+      return window.ITT.User.take(feedKey(), null);
     } catch (e) {
       return null;
     }
   }
   function saveFeed(list) {
-    localStorage.setItem(feedKey(), JSON.stringify(list));
+    window.ITT.User.store(feedKey(), list);
   }
   function esc(s) {
     return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -94,13 +94,13 @@
   }
   function loadApps() {
     try {
-      return JSON.parse(localStorage.getItem(appsKey()) || "null");
+      return window.ITT.User.take(appsKey(), null);
     } catch (e) {
       return null;
     }
   }
   function saveApps(list) {
-    localStorage.setItem(appsKey(), JSON.stringify(list));
+    window.ITT.User.store(appsKey(), list);
   }
   function defaultProfile() {
     var y = year();
@@ -306,13 +306,13 @@
           ? ITT.util.immersionStorageKey("feed", "itt06")
           : "itt06-feed";
         try {
-          localStorage.setItem(feedKeyL, JSON.stringify({
+          window.ITT.User.store(feedKeyL, {
             multiStep: true,
             real: true,
             year: "2006",
             ts: Date.now(),
             story: String(who).slice(0, 40)
-          }));
+          });
         } catch (eFeed) { /* */ }
         var fst = doc.querySelector("[data-feed-status]");
         if (fst) fst.textContent = "Story persist · itt06-feed";
@@ -394,11 +394,11 @@
       return fb + "-fb-likes";
     }
     function loadLikes() {
-      try { return JSON.parse(localStorage.getItem(likesKey()) || "{}") || {}; }
+      try { return (function (v) { return v && typeof v === "object" && !Array.isArray(v) ? v : {}; })(window.ITT.User.take(likesKey(), {})) || {}; }
       catch (e) { return {}; }
     }
     function saveLikes(map) {
-      localStorage.setItem(likesKey(), JSON.stringify(map));
+      window.ITT.User.store(likesKey(), map);
       try {
         if (ITT.revealNextFlow) ITT.revealNextFlow(document);
       } catch (eN) {

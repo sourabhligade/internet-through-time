@@ -1,6 +1,6 @@
 # 2000 double trail — implement checklist
 
-**STOP (2026-09-30 docs pass).** Unique leftover-20 is **2017 only**. Do not dest-farm a second leftover-20 onto 2000 from the unchecked Phase 0 reserve rows. Stops 21–40 already on disk stay. Not ship law. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**STOP (2026-09-30 docs pass).** 2017 is absent, so leftover-20 is not a live rail. Do not dest-farm a second leftover-20 onto 2000 from the unchecked Phase 0 reserve rows. Stops 21–40 already on disk stay. Not ship law. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`UNDONE-UNPLANNED-MD.md`](history/UNDONE-UNPLANNED-MD.md).
 
 Stops 21–40 are on disk. The live 2000 trail is 40 stops in `js/config/flow-trails.js` (501 site folders). Do not add a second copy of these rows.
 

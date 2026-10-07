@@ -1,6 +1,6 @@
 # 1999 leftover-2× unique dest links — double research
 
-**Wait-2x (2026-09-30 docs pass).** Further dest **doubling** waits on the word `2x`. Do not dest-farm from this note. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Wait-2x (2026-09-30 docs pass).** Further dest **doubling** waits on the word `2x`. Do not dest-farm from this note. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`UNDONE-UNPLANNED-MD.md`](history/UNDONE-UNPLANNED-MD.md).
 
 **Date:** 2026-09-26  
 **Kind:** leftover-2× unique dest **links** (hrefs). Not dest-farm. Not leftover dest KEEP.  

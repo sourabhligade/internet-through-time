@@ -1,11 +1,11 @@
 # 2009 leftover-3× unique dest-true — boarded
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](../DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 **Date:** 2026-09-19  
 **Status:** 2009 is **boarded**. Leftover-3× catalogs exist. They are **not** visitor flows. Do not restore 2009 as a playable door. Do not dest-true leftover-3× unique dest-true dests.  
-**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`2009-READ-FIRST.md`](2009-READ-FIRST.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
+**Ship law:** [`DISK-TRUTH.md`](../DISK-TRUTH.md) · [`2009-READ-FIRST.md`](2009-READ-FIRST.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **Leftover-3× unique dest-true law:** [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md) — **2009 boarded. Ignore leftover-3× catalogs.**  
 **Star on disk (not a playable door):** Facebook Like `itt09-like` · `sites/facebook/index.html`  
 **Disk:** `years/2009/` stays. Year-shell `index.html` is a plaque. `/pages/home.html` redirects to the plaque. No hub card.

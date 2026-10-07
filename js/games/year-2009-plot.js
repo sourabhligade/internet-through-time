@@ -41,7 +41,7 @@
     if (YG && YG.saveJSON) YG.saveJSON(key, s);
     else {
       try {
-        localStorage.setItem(key, JSON.stringify(s));
+        window.ITT.User.store(key, s);
       } catch (eS) { /* */ }
     }
   }

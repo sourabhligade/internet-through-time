@@ -39,13 +39,13 @@
 
   function loadPosts() {
     try {
-      var raw = localStorage.getItem(postsKey());
-      if (raw) return JSON.parse(raw);
+      var raw = window.ITT.User.take(postsKey());
+      if (raw) return raw;
       if (postsKey() !== "itt03-wp-posts") {
-        var leg = localStorage.getItem("itt03-wp-posts");
+        var leg = window.ITT.User.take("itt03-wp-posts");
         if (leg) {
-          localStorage.setItem(postsKey(), leg);
-          return JSON.parse(leg);
+          window.ITT.User.store(postsKey(), leg);
+          return leg;
         }
       }
       return [];
@@ -54,7 +54,7 @@
     }
   }
   function savePosts(p) {
-    localStorage.setItem(postsKey(), JSON.stringify(p));
+    window.ITT.User.store(postsKey(), p);
   }
 
   function esc(s) {
@@ -165,9 +165,7 @@
             return;
           }
           try {
-            localStorage.setItem(
-              installKey(),
-              JSON.stringify({
+            window.ITT.User.store(installKey(), {
                 multiStep: true,
                 real: true,
                 steps: 3,
@@ -176,8 +174,7 @@
                 db: db.slice(0, 40),
                 user: user.slice(0, 40),
                 ts: Date.now()
-              })
-            );
+              });
           } catch (eInst) { /* */ }
           showStep(3);
           if (st) st.textContent = 'Installed "' + blog.slice(0, 60) + '" (this browser only).';

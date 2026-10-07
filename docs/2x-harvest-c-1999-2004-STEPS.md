@@ -1,6 +1,6 @@
 # Board C leftover-2× — 1999–2004 implementer steps (minute-detailed)
 
-**Wait-2x (2026-09-30 docs pass).** Research lock. Do not dest-farm more dest folders from this note. Dest **doubling** waits on `2x`. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Wait-2x (2026-09-30 docs pass).** Research lock. Do not dest-farm more dest folders from this note. Dest **doubling** waits on `2x`. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`UNDONE-UNPLANNED-MD.md`](history/UNDONE-UNPLANNED-MD.md).
 
 **Date:** 2026-09-13  
 **Kind:** leftover-**2×** dest-true. Not leftover-3×. Not official 10. Not leftover-4×.  

@@ -70,7 +70,9 @@ test.describe('2003 flows', () => {
     await page.locator('form[data-itunes-buy] button[type="submit"]').click();
     const raw = await page.evaluate(() => localStorage.getItem('itt03-itunes-library'));
     expect(raw).toBeTruthy();
-    expect(JSON.parse(raw)[0].title).toBe('Let It Snow');
+    const parsed = JSON.parse(raw);
+    const list = Array.isArray(parsed) ? parsed : parsed.body;
+    expect(list[0].title).toBe('Let It Snow');
   });
 
   test('WordPress publish writes posts', async ({ page }) => {
@@ -81,7 +83,9 @@ test.describe('2003 flows', () => {
     await page.locator('form[data-wp-publish] button[type="submit"]').click();
     const raw = await page.evaluate(() => localStorage.getItem('itt03-wp-posts'));
     expect(raw).toBeTruthy();
-    expect(JSON.parse(raw)[0].title).toBe('Hello 0.7');
+    const parsed = JSON.parse(raw);
+    const list = Array.isArray(parsed) ? parsed : parsed.body;
+    expect(list[0].title).toBe('Hello 0.7');
   });
 
   test('LinkedIn empty invite does not add a connection', async ({ page }) => {

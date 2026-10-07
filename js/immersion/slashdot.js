@@ -64,13 +64,22 @@ function initSlashdotComments() {
       officialKey = document.documentElement.getAttribute("data-official-key") || "";
     } catch (eK) { /* */ }
     if (officialKey && officialKey === key) {
-      saveJSON(key, {
+      var pack = {
         real: true,
         official: true,
         year: String(YEAR || ""),
         multiStep: true,
         comments: slice
-      });
+      };
+      if (ITT.User && typeof ITT.User.store === "function") {
+        try {
+          ITT.User.store(key, pack, { kind: "official" });
+        } catch (eS) {
+          saveJSON(key, pack);
+        }
+      } else {
+        saveJSON(key, pack);
+      }
     } else {
       saveJSON(key, slice);
     }

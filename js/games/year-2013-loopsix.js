@@ -23,7 +23,7 @@
   var best = 0;
 
   try {
-    var prev = YG && YG.loadJSON ? YG.loadJSON(key, null) : JSON.parse(localStorage.getItem(key) || "null");
+    var prev = YG && YG.loadJSON ? YG.loadJSON(key, null) : window.ITT.User.take(key, null);
     if (prev && typeof prev.best === "number") best = prev.best;
   } catch (e0) { /* */ }
 
@@ -60,9 +60,7 @@
       YG.saveBest("loopsix", beats, { year: "2013", merge: { multiStep: true, loop: beats } });
     } else {
       try {
-        localStorage.setItem(
-          key,
-          JSON.stringify({
+        window.ITT.User.store(key, {
             gameId: "loopsix",
             year: "2013",
             best: Math.max(best, beats),
@@ -70,8 +68,7 @@
             real: true,
             multiStep: true,
             ts: Date.now()
-          })
-        );
+          });
       } catch (eS) { /* */ }
     }
     if (beats > best) best = beats;

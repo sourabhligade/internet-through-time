@@ -54,17 +54,14 @@
   }
   function markDidUpload(title) {
     try {
-      localStorage.setItem(
-        didUploadKey(),
-        JSON.stringify({
+      window.ITT.User.store(didUploadKey(), {
           title: title,
           multiStep: true,
           real: true,
           official: true,
           year: String(yearNum()),
           ts: Date.now()
-        })
-      );
+        });
     } catch (eM) { /* */ }
   }
   function yearShareBits(title) {
@@ -156,23 +153,23 @@
 
   function load() {
     try {
-      return JSON.parse(localStorage.getItem(uploadsKey()) || "null");
+      return window.ITT.User.take(uploadsKey(), null);
     } catch (e) {
       return null;
     }
   }
   function save(list) {
-    localStorage.setItem(uploadsKey(), JSON.stringify(list));
+    window.ITT.User.store(uploadsKey(), list, { kind: "official" });
   }
   function loadViews() {
     try {
-      return JSON.parse(localStorage.getItem(viewsKey()) || "{}") || {};
+      return (function (v) { return v && typeof v === "object" && !Array.isArray(v) ? v : {}; })(window.ITT.User.take(viewsKey(), {})) || {};
     } catch (e) {
       return {};
     }
   }
   function saveViews(map) {
-    localStorage.setItem(viewsKey(), JSON.stringify(map));
+    window.ITT.User.store(viewsKey(), map);
   }
   function sampleClips() {
     return [
@@ -594,8 +591,8 @@
     }
 
     try {
-      var didRaw = localStorage.getItem(didUploadKey());
-      var did = didRaw ? JSON.parse(didRaw) : null;
+      var didRaw = window.ITT.User.take(didUploadKey());
+      var did = didRaw ? didRaw : null;
       if (did && did.title) pointNextWatch(doc, did.title);
     } catch (eDid) { /* */ }
 

@@ -33,13 +33,13 @@
   }
   function load() {
     try {
-      return JSON.parse(localStorage.getItem(storageKey()) || "null");
+      return window.ITT.User.take(storageKey(), null);
     } catch (e) {
       return null;
     }
   }
   function save(list) {
-    localStorage.setItem(storageKey(), JSON.stringify(list));
+    window.ITT.User.store(storageKey(), list);
   }
   function seed() {
     var list = load();
@@ -93,14 +93,14 @@
           var trailKey = U().immersionStorageKey
             ? U().immersionStorageKey("aws", "itt06")
             : "itt06-aws";
-          localStorage.setItem(trailKey, JSON.stringify({
+          window.ITT.User.store(trailKey, {
             multiStep: true,
             real: true,
             official: true,
             year: U().immersionYear ? U().immersionYear("2006") : "2006",
             ts: Date.now(),
             bucket: name
-          }));
+          });
         } catch (eTrail) { /* */ }
         try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
         var st = doc.querySelector("[data-aws-status]");

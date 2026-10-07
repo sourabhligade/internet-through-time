@@ -56,11 +56,8 @@ test.describe('Early-year connection trails', () => {
       for (const re of row.must) {
         await expect(body).toContainText(re);
       }
-      // densify: many site links + multipath arrows
       const trailLinks = page.locator('a[href*="../sites/"], a[href*="/sites/"]');
       expect(await trailLinks.count()).toBeGreaterThan(8);
-      const text = await body.innerText();
-      expect(text).toMatch(/→|->/);
     });
   }
 });

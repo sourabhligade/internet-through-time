@@ -141,7 +141,8 @@ test.describe('2010 flows A–T', () => {
     await completeRealGate(page, '[data-4sq-checkin="Coffee House"]');
     await page.locator('[data-4sq-checkin="Coffee House"]').click();
     await expect.poll(() => getKey(page, 'itt10-4sq')).toMatch(/Coffee House/i);
-    const list = JSON.parse((await getKey(page, 'itt10-4sq')) || '[]');
+    const parsed = JSON.parse((await getKey(page, 'itt10-4sq')) || '[]');
+    const list = Array.isArray(parsed) ? parsed : parsed && parsed.body;
     expect(Array.isArray(list) ? list.length : 0).toBeGreaterThanOrEqual(2);
   });
 

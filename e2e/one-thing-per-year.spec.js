@@ -10,6 +10,14 @@ const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 
+function ytUploads(raw) {
+  let parsed = null;
+  try { parsed = JSON.parse(raw || "null"); } catch (e) { parsed = null; }
+  if (Array.isArray(parsed)) return parsed;
+  if (parsed && Array.isArray(parsed.body)) return parsed.body;
+  return [];
+}
+
 /** @type {{ year: string, path: string, key: string, steps: (p: import('@playwright/test').Page) => Promise<void> }[]} */
 const THINGS = [
   {
@@ -301,8 +309,8 @@ test.describe("One-thing per year — load + REAL gate", () => {
       await page.waitForTimeout(150);
       if (t.seedOk && t.key === "itt05-yt-uploads") {
         const raw = await page.evaluate((k) => localStorage.getItem(k), t.key);
-        const list = JSON.parse(raw || "[]");
-        expect(Array.isArray(list) ? list.some((x) => x && /residual/i.test(x.title || "")) : false).toBeFalsy();
+        const list = ytUploads(raw);
+        expect(list.some((x) => x && /residual/i.test(x.title || ""))).toBeFalsy();
       } else {
         expect(await page.evaluate((k) => localStorage.getItem(k), t.key)).toBeFalsy();
       }
@@ -326,8 +334,8 @@ test.describe("One-thing per year — load + REAL gate", () => {
         await expect
           .poll(async () => {
             const raw = await page.evaluate((k) => localStorage.getItem(k), t.key);
-            const list = JSON.parse(raw || "[]");
-            return Array.isArray(list) && list.some((x) => x && /residual/i.test(x.title || ""));
+            const list = ytUploads(raw);
+            return list.some((x) => x && /residual/i.test(x.title || ""));
           }, { timeout: 8000 })
           .toBeTruthy();
       } else {

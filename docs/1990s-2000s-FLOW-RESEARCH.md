@@ -36,7 +36,7 @@ Year locks and flow notes on disk:
 | `docs/2x-harvest-c-1999.md` through `2004.md`, plus STEPS and RESERVED | Harvest. Wait on `2x`. |
 | `docs/FAMOUS-DOUBLE-CRITERIA.md` | 1994–2006 stop. 2008 and 2009 holes only. |
 | `docs/FLOWS-MAP.md` · `docs/FLOW-E2E-FINDINGS.md` | Historical flow maps. |
-| `docs/INCOMPLETE-MAP.md` | Open product holes. Some 1990s/2000s rows below are already closed. |
+| `docs/history/INCOMPLETE-MAP.md` | Open product holes. Some 1990s/2000s rows below are already closed. |
 
 ## Live official trails
 

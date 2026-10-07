@@ -20,7 +20,7 @@
         return ITT.util.joinRoot(ITT._immersionYear, path);
       } catch (e) { /* fall through */ }
     }
-    /* pages/map.html → relative links */
+    /* pages/map.html · relative links */
     if (path.indexOf("pages/") === 0) return path.replace(/^pages\//, "");
     if (path.indexOf("sites/") === 0) return "../" + path;
     return path;
@@ -126,7 +126,7 @@
         } else {
           html.push("<b>" + esc(tr.name || "") + "</b>");
         }
-        if (tr.nextLabel) html.push(" → " + esc(tr.nextLabel));
+        if (tr.nextLabel) html.push(" · " + esc(tr.nextLabel));
         html.push("</li>");
       }
       html.push("</ol></section>");

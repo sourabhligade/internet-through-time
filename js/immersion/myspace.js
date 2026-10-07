@@ -30,24 +30,24 @@
     return "itt03-myspace-" + k;
   }
   function getItem(k) {
-    var v = localStorage.getItem(key(k));
+    var v = window.ITT.User.take(key(k));
     if (v != null) return v;
-    var leg = localStorage.getItem(legacyKey(k));
+    var leg = window.ITT.User.take(legacyKey(k));
     if (leg != null && key(k) !== legacyKey(k)) {
       try {
-        localStorage.setItem(key(k), leg);
+        window.ITT.User.store(key(k), leg);
       } catch (e) { /* */ }
       return leg;
     }
     return null;
   }
   function setItem(k, v) {
-    localStorage.setItem(key(k), v);
+    window.ITT.User.store(key(k), v);
   }
 
   function loadProfile() {
     try {
-      return JSON.parse(getItem("profile") || "null");
+      return (function (v) { return v && typeof v === "object" ? v : null; })(getItem("profile"));
     } catch (e) {
       return null;
     }
@@ -57,7 +57,7 @@
   }
   function loadComments() {
     try {
-      return JSON.parse(getItem("comments") || "[]");
+      return (function (v) { return Array.isArray(v) ? v : []; })(getItem("comments"));
     } catch (e) {
       return [];
     }
@@ -67,7 +67,7 @@
   }
   function loadInvites() {
     try {
-      return JSON.parse(getItem("invites") || "[]");
+      return (function (v) { return Array.isArray(v) ? v : []; })(getItem("invites"));
     } catch (e) {
       return [];
     }
@@ -77,7 +77,7 @@
   }
   function loadContacts() {
     try {
-      return JSON.parse(getItem("contacts") || "[]");
+      return (function (v) { return Array.isArray(v) ? v : []; })(getItem("contacts"));
     } catch (e) {
       return [];
     }
@@ -263,7 +263,7 @@
             : "itt03-photobucket-album";
         var album = null;
         try {
-          album = JSON.parse(localStorage.getItem(albumKey) || "null");
+          album = window.ITT.User.take(albumKey, null);
         } catch (eA) {
           album = null;
         }
@@ -316,7 +316,7 @@
         }
       }
       try {
-        var prevTop8 = JSON.parse(localStorage.getItem(top8Key) || "null");
+        var prevTop8 = window.ITT.User.take(top8Key, null);
         if (prevTop8 && prevTop8.real) {
           paintTop8(prevTop8);
           if (top8St) top8St.textContent = "Saved · " + top8Key;
@@ -358,7 +358,7 @@
           };
           var wroteTop8 = false;
           try {
-            localStorage.setItem(top8Key, JSON.stringify(blob));
+            window.ITT.User.store(top8Key, blob);
             wroteTop8 = true;
           } catch (eW) {
             try {

@@ -21,13 +21,19 @@
   }
   function load() {
     try {
-      return JSON.parse(localStorage.getItem(storageKey()) || "[]") || [];
+      return (function (v) { return Array.isArray(v) ? v : []; })(window.ITT.User.take(storageKey(), [])) || [];
     } catch (e) {
       return [];
     }
   }
   function save(list) {
-    localStorage.setItem(storageKey(), JSON.stringify(list));
+    var k = storageKey();
+    var opts;
+    try {
+      var off = document.documentElement.getAttribute("data-official-key") || "";
+      if (off && off === k) opts = { kind: "official" };
+    } catch (eK) { /* */ }
+    window.ITT.User.store(k, list, opts);
   }
   function esc(s) {
     return String(s || "")

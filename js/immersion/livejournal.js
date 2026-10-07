@@ -21,23 +21,23 @@
   }
   function loadPosts() {
     try {
-      return JSON.parse(localStorage.getItem(key("posts")) || "[]");
+      return (function (v) { return Array.isArray(v) ? v : []; })(window.ITT.User.take(key("posts"), []));
     } catch (e) {
       return [];
     }
   }
   function savePosts(p) {
-    localStorage.setItem(key("posts"), JSON.stringify(p));
+    window.ITT.User.store(key("posts"), p);
   }
   function loadFriends() {
     try {
-      return JSON.parse(localStorage.getItem(key("friends")) || "[]");
+      return (function (v) { return Array.isArray(v) ? v : []; })(window.ITT.User.take(key("friends"), []));
     } catch (e) {
       return [];
     }
   }
   function saveFriends(f) {
-    localStorage.setItem(key("friends"), JSON.stringify(f));
+    window.ITT.User.store(key("friends"), f);
   }
   function esc(s) {
     return String(s || "")

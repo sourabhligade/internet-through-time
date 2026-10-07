@@ -20,7 +20,7 @@
 
     function show() {
       try {
-        if (localStorage.getItem(k) && st) {
+        if (window.ITT.User.take(k) && st) {
           st.textContent = "Friend Connect enabled · OpenSocial · " + k;
         }
       } catch (e) {

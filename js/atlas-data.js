@@ -31,7 +31,7 @@
       { id: "gray", label: "Gray / directories", blurb: "Directories, SSL cart, portal hop.", years: ["1994", "1995", "1996"] },
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
       { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
- { id: "phone", label: "Phone eats the web", blurb: "App Store · Like · Chrome · G1 → Instagram iOS → Google+. Vine 6s is the 2013 door.", years: ["2008", "2009", "2010", "2011", "2012", "2013"] },
+ { id: "phone", label: "Phone eats the web", blurb: "App Store · Like · Chrome · G1 · Instagram iOS · Google+. Vine 6s is the 2013 door.", years: ["2008", "2009", "2010", "2011", "2012", "2013"] },
       { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Periscope Go LIVE, Stories.", years: ["2014", "2015", "2016"] }
     ],
 
@@ -108,7 +108,7 @@
       ],
       "2012": [
         { label: "About 2012", href: "years/2012/pages/about.html" },
-        { label: "Instagram Android — filter → share", href: "years/2012/sites/instagram/android.html" },
+        { label: "Instagram Android — filter · share", href: "years/2012/sites/instagram/android.html" },
         { label: "Facebook IPO — $38", href: "years/2012/sites/facebook/ipo.html" },
         { label: "SOPA blackout — 18 Jan", href: "years/2012/sites/wikipedia/sopa.html" },
         { label: "iPhone Maps flop — iOS 6", href: "years/2012/sites/iphone/maps.html" },
@@ -430,7 +430,7 @@
       {
         id: "yahoo",
         label: "Yahoo",
-        blurb: "Directory → packed portal. Still there after Google.",
+        blurb: "Directory · packed portal. Still there after Google.",
         stops: [
           { year: "1994", href: "years/1994/sites/yahoo/index.html", note: "Stanford" },
           { year: "1995", href: "years/1995/sites/yahoo/index.html", note: "yahoo.com" },
@@ -450,7 +450,7 @@
       {
         id: "amazon",
         label: "Amazon",
-        blurb: "Bookstore → music aisle → smile. Continuity after 2000.",
+        blurb: "Bookstore · music aisle · smile. Continuity after 2000.",
         stops: [
           { year: "1995", href: "years/1995/sites/amazon/ssl-checkout.html", note: "SSL gold" },
           { year: "1996", href: "years/1996/sites/amazon/index.html", note: "catalog" },
@@ -462,7 +462,7 @@
       {
         id: "google",
         label: "Google",
-        blurb: "Sparse search → habit → Maps → Photos.",
+        blurb: "Sparse search · habit · Maps · Photos.",
         stops: [
           { year: "1998", href: "years/1998/sites/google/lucky.html", note: "Lucky gold" },
           { year: "1999", href: "years/1999/sites/google/index.html", note: "funded" },
@@ -479,7 +479,7 @@
       {
         id: "facebook",
         label: "Facebook",
-        blurb: "College wall → Feed → Like → Open Graph → Timeline.",
+        blurb: "College wall · Feed · Like · Open Graph · Timeline.",
         stops: [
           { year: "2004", href: "years/2004/sites/facebook/networks.html", note: "thefacebook" },
           { year: "2010", href: "years/2010/sites/facebook/index.html", note: "Open Graph" },
@@ -489,7 +489,7 @@
       {
         id: "youtube",
         label: "YouTube",
-        blurb: "Independent upload → Google-owned → leftover lean rooms.",
+        blurb: "Independent upload · Google-owned · leftover lean rooms.",
         stops: [
           { year: "2005", href: "years/2005/sites/youtube/upload.html", note: "upload" },
           { year: "2010", href: "years/2010/sites/youtube/index.html", note: "lean" },
@@ -499,7 +499,7 @@
       {
         id: "mail",
         label: "Mail",
-        blurb: "Free webmail → invite Gmail → open Gmail.",
+        blurb: "Free webmail · invite Gmail · open Gmail.",
         stops: [
           { year: "1996", href: "years/1996/sites/hotmail/index.html", note: "HoTMaiL" },
           { year: "1997", href: "years/1997/sites/hotmail/index.html", note: "inbox" },
@@ -510,7 +510,7 @@
       {
         id: "search",
         label: "Finding things",
-        blurb: "Browse a directory → type a query → pan a map.",
+        blurb: "Browse a directory · type a query · pan a map.",
         stops: [
           { year: "1994", href: "years/1994/sites/yahoo/index.html", note: "browse, don’t search" },
           { year: "1995", href: "years/1995/sites/altavista/index.html", note: "AltaVista" },
@@ -520,7 +520,7 @@
       {
         id: "phone",
         label: "Phone eats the web",
-        blurb: "iOS filter → WhatsApp install.",
+        blurb: "iOS filter · WhatsApp install.",
         stops: [
           { year: "2010", href: "years/2010/sites/instagram/index.html", note: "iOS filter" },
           { year: "2016", href: "years/2016/sites/whatsapp/e2e.html", note: "E2E" }
@@ -529,7 +529,7 @@
       {
         id: "im",
         label: "Chat / IM",
-        blurb: "ICQ → AIM → Hangouts. Not iMessage.",
+        blurb: "ICQ · AIM · Hangouts. Not iMessage.",
         stops: [
           { year: "1997", href: "years/1997/sites/icq/index.html", note: "ICQ" },
           { year: "1999", href: "years/1999/sites/aim/index.html", note: "AIM gold" },
@@ -542,7 +542,7 @@
       {
         id: "first-night",
         label: "First night",
-        blurb: "The built-in 5-stop walk. CSotD → Google → thefacebook → Twttr → Instagram. Stops in 2010.",
+        blurb: "The built-in 5-stop walk. CSotD · Google · thefacebook · Twttr · Instagram. Stops in 2010.",
         href: "../index.html",
         startYear: "1994",
         startPath: "years/1994/?trail=first-night",
@@ -557,7 +557,7 @@
       {
         id: "find",
         label: "How we found things",
-        blurb: "Yahoo catalog → AltaVista → Lucky → Maps → Bing.",
+        blurb: "Yahoo catalog · AltaVista · Lucky · Maps · Bing.",
         steps: [
           { year: "1994", label: "Yahoo directory", href: "years/1994/sites/yahoo/index.html" },
           { year: "1995", label: "AltaVista", href: "years/1995/sites/altavista/index.html" },
@@ -567,7 +567,7 @@
       {
         id: "buy",
         label: "How we bought",
-        blurb: "SSL cart → auction → 99¢ song.",
+        blurb: "SSL cart · auction · 99¢ song.",
         steps: [
           { year: "1995", label: "Amazon SSL", href: "years/1995/sites/amazon/ssl-checkout.html" },
           { year: "1997", label: "eBay bid", href: "years/1997/sites/ebay/item-laptop.html" },
@@ -577,7 +577,7 @@
       {
         id: "talk",
         label: "How we talked",
-        blurb: "Free mail → ICQ → AIM → Gmail → 140.",
+        blurb: "Free mail · ICQ · AIM · Gmail · 140.",
         steps: [
           { year: "1996", label: "HoTMaiL", href: "years/1996/sites/hotmail/index.html" },
           { year: "1997", label: "ICQ", href: "years/1997/sites/icq/index.html" },
@@ -588,7 +588,7 @@
       {
         id: "phone-trail",
         label: "Phone ate the web",
-        blurb: "iOS filter → WhatsApp install.",
+        blurb: "iOS filter · WhatsApp install.",
         steps: [
           { year: "2010", label: "Instagram iOS", href: "years/2010/sites/instagram/index.html" },
           { year: "2016", label: "WhatsApp E2E", href: "years/2016/sites/whatsapp/e2e.html" }
@@ -597,7 +597,7 @@
       {
         id: "broadcast",
         label: "Broadcast yourself",
-        blurb: "Upload → live → 24-hour slide. Vine is the 2013 gold.",
+        blurb: "Upload · live · 24-hour slide. Vine is the 2013 gold.",
         steps: [
           { year: "2016", label: "Instagram Stories", href: "years/2016/sites/instagram/stories.html" }
         ]

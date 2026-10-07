@@ -30,11 +30,11 @@
     return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
   function loadApps() {
-    try { return JSON.parse(localStorage.getItem(appsKey()) || "[]") || []; }
+    try { return (function (v) { return Array.isArray(v) ? v : []; })(window.ITT.User.take(appsKey(), [])) || []; }
     catch (e) { return []; }
   }
   function saveApps(list) {
-    localStorage.setItem(appsKey(), JSON.stringify(list));
+    window.ITT.User.store(appsKey(), list);
   }
   function render(doc) {
     var el = doc.querySelector("[data-android-apps]");
@@ -79,10 +79,7 @@
         ev.preventDefault();
         var st = doc.querySelector("[data-android-status]");
         if (!gateOk(claim, st)) return;
-        localStorage.setItem(
-          prefKey(),
-          JSON.stringify({ interested: true, multiStep: true, real: true, ts: Date.now() })
-        );
+        window.ITT.User.store(prefKey(), { interested: true, multiStep: true, real: true, ts: Date.now() });
         if (st) {
           st.textContent = "Noted interest · G1 first · " + prefKey();
           ittFeedback(st.textContent, st);

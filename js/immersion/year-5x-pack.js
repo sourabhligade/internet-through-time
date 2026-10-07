@@ -44,7 +44,7 @@
         flow: spec.suffix
       };
       try {
-        localStorage.setItem(keyOf(), JSON.stringify(blob));
+        window.ITT.User.store(keyOf(), blob);
       } catch (e) {
         return false;
       }
@@ -125,7 +125,7 @@
     var hit = false;
     if (key) {
       try {
-        hit = !!localStorage.getItem(key);
+        hit = !!window.ITT.User.take(key);
       } catch (e) {
         hit = false;
       }

@@ -54,7 +54,28 @@ function getHotmailUser() {
 }
 
 function setHotmailUser(u) {
-  saveJSON(storageKey("hotmail-user"), u);
+  var k = storageKey("hotmail-user");
+  var off = "";
+  try {
+    off = document.documentElement.getAttribute("data-official-key") || "";
+  } catch (eO) { /* */ }
+  if (off && off === k && window.ITT && ITT.User && typeof ITT.User.store === "function") {
+    try {
+      if (u && typeof u === "object") {
+        var pack = {};
+        var name;
+        for (name in u) {
+          if (Object.prototype.hasOwnProperty.call(u, name)) pack[name] = u[name];
+        }
+        pack.official = true;
+        ITT.User.store(k, pack, { kind: "official" });
+      } else {
+        ITT.User.store(k, u);
+      }
+      return;
+    } catch (eS) { /* raw fallback keeps sign-in if the envelope writer throws */ }
+  }
+  saveJSON(k, u);
 }
 
 function getMail() {

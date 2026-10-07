@@ -8,6 +8,14 @@ const { test, expect } = require("@playwright/test");
  * 1999 has no AllAdvantage room. The live empty-check is the 2000 page.
  */
 
+function ytUploads(raw) {
+  let parsed = null;
+  try { parsed = JSON.parse(raw || "null"); } catch (e) { parsed = null; }
+  if (Array.isArray(parsed)) return parsed;
+  if (parsed && Array.isArray(parsed.body)) return parsed.body;
+  return [];
+}
+
 async function item(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
 }
@@ -134,6 +142,7 @@ test("2001 Wikipedia one character never writes", async ({ page }) => {
 test("2003 LinkedIn load and empty invite never write", async ({ page }) => {
   await page.goto("/years/2003/sites/linkedin/invite.html", { waitUntil: "domcontentloaded" });
   expect(await item(page, "itt03-li-connections")).toBeNull();
+  await expect(page.locator("[data-li-connections]")).toContainText("Reid Hoffman");
   await page.locator("form[data-li-invite] button[type=submit]").click();
   expect(await item(page, "itt03-li-connections")).toBeNull();
   await page.locator("form[data-li-invite] input[name=name]").fill("Ada");
@@ -152,7 +161,7 @@ test("2005 YouTube empty description never writes", async ({ page }) => {
   await page.locator("form[data-yt-upload] textarea[name=desc]").fill("circus");
   await page.locator("form[data-yt-upload] button[type=submit]").click();
   const raw = await item(page, "itt05-yt-uploads");
-  const parsed = JSON.parse(raw || "null");
+  const parsed = ytUploads(raw);
   expect(Array.isArray(parsed)).toBe(true);
   expect(JSON.stringify(parsed)).toContain("elephant");
 });

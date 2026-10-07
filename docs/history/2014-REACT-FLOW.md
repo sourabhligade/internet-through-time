@@ -1,6 +1,6 @@
 # 2014 — existing flow, then the React flow
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](../DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 **Date:** 2026-09-25
@@ -9,7 +9,7 @@
 **Trail:** `js/config/flow-trails.js` year `"2014"`. Nine stops. There is no stop 10. Stop 9 returns to WhatsApp.
 **Star:** `itt14-wa-install` on `sites/whatsapp/index.html`.
 
-**Live 2014 door is HTML leanBoot** (`/years/2014/`). React hash `#/year/2014` bounces to that HTML tree (`hashToHtml`). Unmounted `Year2014.jsx` is gone. 2015 and 2017 are the live React doors.
+**Live 2014 door is HTML leanBoot** (`/years/2014/`). React hash `#/year/2014` bounces to that HTML tree (`hashToHtml`). Unmounted `Year2014.jsx` is gone. **2015 is the live React door. 2017 is absent.**
 
 ## Existing flow
 

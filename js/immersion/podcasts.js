@@ -29,13 +29,13 @@
   }
   function load() {
     try {
-      return JSON.parse(localStorage.getItem(KEY()) || "[]");
+      return (function (v) { return Array.isArray(v) ? v : []; })(window.ITT.User.take(KEY(), []));
     } catch (e) {
       return [];
     }
   }
   function save(list) {
-    localStorage.setItem(KEY(), JSON.stringify(list));
+    window.ITT.User.store(KEY(), list);
   }
   function esc(s) {
     return String(s || "")
@@ -98,18 +98,15 @@
         try {
           var ok = doc.documentElement && doc.documentElement.getAttribute("data-official-key");
           if (ok === "itt05-pod" && name) {
-            if (!localStorage.getItem("itt05-pod")) {
-              localStorage.setItem(
-                "itt05-pod",
-                JSON.stringify({
+            if (!window.ITT.User.take("itt05-pod")) {
+              window.ITT.User.store("itt05-pod", {
                   multiStep: true,
                   real: true,
                   official: true,
                   year: "2005",
                   show: String(name).slice(0, 80),
                   ts: Date.now()
-                })
-              );
+                });
             }
             if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
           }

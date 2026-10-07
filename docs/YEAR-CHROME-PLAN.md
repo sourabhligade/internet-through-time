@@ -1,14 +1,14 @@
 # Year chrome — production plan
 
 **Date:** 2026-10-01
-**Status:** Implemented in the working tree on 2026-10-01. A recheck the same day closed three shortfalls: 2016 uses the dark Chrome-habit taskbar and tab (the blue taskbar rule is gone), 2006–2009 home addresses stay on `home.microsoft.com` after boot, and the React doors show that habit address. Shell choices below stay locked. Not ship law. Not committed.
-**Law:** `js/year-card.json` · live hub · [`DISK-TRUTH.md`](DISK-TRUTH.md). This file does not add dest folders.
+**Status:** Implemented in the working tree on 2026-10-01. A recheck the same day closed three shortfalls: 2016 uses the dark Chrome-habit taskbar and tab (the blue taskbar rule is gone), 2006–2009 home addresses stay on `home.microsoft.com` after boot, and the React door shows that habit address. Shell choices below stay locked. Not ship law. Counts of 22 or 24 doors in this plan are that day's scope.
+**Law:** `js/year-card.json` · live hub · [`DISK-TRUTH.md`](DISK-TRUTH.md). Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** This file does not add dest folders.
 
-The years and the save data are far enough along to grade. The shell that frames them is not. Twenty-two HTML doors share one painter (`ui/year/shell.js`) and three toolbar builders, but the record in `ui/year/years.js` often names a browser the painter does not draw. The two React doors (2015, 2017) do not use that painter at all. Production grade is one chrome contract, two renderers, dest HTML left where it is.
+The years and the save data are far enough along to grade. The shell that frames them is not. The HTML doors share one painter (`ui/year/shell.js`) and three toolbar builders, but the record in `ui/year/years.js` often names a browser the painter does not draw. The React door (2015) does not use that painter. Production grade is one chrome contract, two renderers, dest HTML left where it is.
 
 ## What production grade means here
 
-A visitor opens one of the 24 hub cards, lands in that year's desktop, and can finish the star without the page teaching them a storage key or an absent year. Empty, trap, and incomplete still write nothing. Leftover still does not write the star. Hub cards stay the year number on one gray border (`css/hub-lean.css`). No accounts, no metrics vendor, no new dest folders, no restore of 2018–2025. The public Vercel project stays down until a separate publish decision. Local check is `python3 -m http.server 8080 --bind 127.0.0.1`.
+A visitor opens a live hub card, lands in that year's desktop, and can finish the star without the page teaching them a storage key or an absent year. Empty, trap, and incomplete still write nothing. Leftover still does not write the star. Hub cards stay the year number on one gray border (`css/hub-lean.css`). No accounts, no metrics vendor, no new dest folders, no restore of 2017–2019 or 2023–2025. The public Vercel project stays down until a separate publish decision. Local check is `python3 -m http.server 8080 --bind 127.0.0.1`.
 
 `npm test` (full warehouse) stays red on purpose. A chrome PR is green when the shell specs below pass, not when the warehouse count moves.
 
@@ -83,7 +83,7 @@ Mass desktop is the machine a typical person had at the start of that year. The 
 | 2017 | Win10 + Chrome habit | React, star Face ID. No HTML tree | Same React flaws as 2015 | No period shell | Same Chrome-habit frame as 2015, one React component |
 | 2022 | Win10 still mass, Win11 exists, Chrome | `os-win10 browser-chrome-habit`, `toolbar: "chrome22"`, location `https://www.google.com/web2022/`. `chrome` field is still `"2007"` | `shell.js` ignores GIFs for `chrome22` and paints the text omnibox. Legend hidden. `chrome22Toolbar()` in `chrome.js` is an empty stub | Closest year. Asset field is a lie. Legend is gone. Painter is split across two files | Locked: stay Win10. Move the omnibox markup from `shell.js` into `chrome.js` `chrome22Toolbar`. Set `assetYear` to null. Un-hide the legend |
 
-2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 are absent. They do not get a row, a hub card, or a sentence on the React hall. 2011 is a live HTML door (Win7 + IE 8).
+2017–2019 and 2023–2025 are absent. They do not get a hub card or a sentence on the React hall. 2011, 2020, 2021, and 2022 are live HTML doors. 2011 is Win7 + IE 8. The 2017 row above is the 2026-10-01 plan, not a live door.
 
 ## One chrome record, two renderers
 
@@ -196,7 +196,7 @@ Decided 2026-10-01. The PRs above use these. Do not reopen them in an implement 
 1. **2007** stays XP and IE6. The iPhone stays a room. Vista does not become the shell.
 2. **2009** stays XP and IE8. Win7 styling begins at 2010, where the class is already `os-win7`.
 3. **2013 and 2014** stay Win7 and IE9. Chrome habit starts at the 2015 React door. WhatsApp stays a room.
-4. **2015 and 2017** wear the Win10 Chrome-habit frame around the existing React trail. They do not gain a `years/YYYY/` tree, and they do not stay a flat exhibit.
+4. **2015** wears the Win10 Chrome-habit frame around the existing React trail. It does not gain a `years/2015/` tree, and it does not stay a flat exhibit. 2017 is absent and does not get that frame.
 5. **2022** stays Windows 10. Win11 is out of this plan.
 
 ## Non-goals

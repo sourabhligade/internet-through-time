@@ -48,7 +48,7 @@
       '<span class="year-label">' +
       esc(spec.yearLabel || spec.year) +
       '</span><a href="../../index.html" title="Exit">← Exit</a>' +
-      '<a id="itt-follow-next" class="itt-follow-next" hidden href="#">Same brand, next year →</a></div>' +
+      '<a id="itt-follow-next" class="itt-follow-next" hidden href="#">Same brand, next year</a></div>' +
       deskIcons +
       '<div class="' +
       browserClass +
@@ -288,7 +288,7 @@
       } else {
         link.href = "../../years/" + rec.year + "/?room=" + encodeURIComponent(rec.path);
       }
-      link.textContent = rec.label + " · " + rec.year + " →";
+      link.textContent = rec.label + " · " + rec.year;
       link.title = "Same brand, next year" + (rec.note ? " · " + rec.note : "");
     }
     if (iframe && !iframe.getAttribute("data-itt-follow-bound")) {

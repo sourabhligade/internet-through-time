@@ -49,7 +49,7 @@ export function OfficialStop({ stop, year, onNext }) {
         };
     if (needsField) payload.q = typed.slice(0, fieldMax);
     try {
-      localStorage.setItem(stop.whenKey, JSON.stringify(payload));
+      window.ITT.User.store(stop.whenKey, payload);
     } catch (err) {
       say("This browser blocked the save.");
       return;

@@ -32,15 +32,15 @@
   }
   function loadJSON(k, fb) {
     try {
-      var r = localStorage.getItem(k);
-      return r != null && r !== "" ? JSON.parse(r) : fb;
+      var r = window.ITT.User.take(k);
+      return r != null && r !== "" ? r : fb;
     } catch (e) {
       return fb;
     }
   }
   function saveJSON(k, v) {
     try {
-      localStorage.setItem(k, JSON.stringify(v));
+      window.ITT.User.store(k, v);
     } catch (e) { /* */ }
   }
 

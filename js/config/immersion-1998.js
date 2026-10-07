@@ -46,7 +46,7 @@
         label: "Google! search",
         href: "sites/google/index.html",
         match: "/google/",
-        hint: "type a word → Search — then open Yahoo and feel the difference",
+        hint: "type a word · Search — then open Yahoo and feel the difference",
         doneMessage: "Google! — new in 1998, not yet the whole web."
       },
       {

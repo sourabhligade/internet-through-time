@@ -14,14 +14,14 @@
   }
   function load() {
     try {
-      var parsed = JSON.parse(localStorage.getItem(storageKey()) || "[]");
+      var parsed = (function (v) { return Array.isArray(v) ? v : []; })(window.ITT.User.take(storageKey(), []));
       return Array.isArray(parsed) ? parsed : [];
     } catch (e) {
       return [];
     }
   }
   function save(list) {
-    localStorage.setItem(storageKey(), JSON.stringify(list));
+    window.ITT.User.store(storageKey(), list);
   }
   function esc(s) {
     return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -142,7 +142,7 @@
           return;
         }
         var prev = null;
-        try { prev = JSON.parse(localStorage.getItem(storageKey()) || "null"); } catch (eP) { prev = null; }
+        try { prev = window.ITT.User.take(storageKey(), null); } catch (eP) { prev = null; }
         /* official-verb writes this same key on click capture. Replacing that
            object with a post array drops real/year. Keep the official blob. */
         if (prev && typeof prev === "object" && !Array.isArray(prev)) {

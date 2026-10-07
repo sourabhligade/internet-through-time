@@ -1,14 +1,14 @@
 # 2010 leftover-3× unique dest-true
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](../DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
 
 
 **Date:** 2026-09-19  
 **Status:** Unique leftover dests on disk. This file is the leftover-3× unique dest-true map + implement steps. Not dest-farm.  
-**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`2010-READ-FIRST.md`](2010-READ-FIRST.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
+**Ship law:** [`DISK-TRUTH.md`](../DISK-TRUTH.md) · [`2010-READ-FIRST.md`](2010-READ-FIRST.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **Leftover-3× unique dest-true law:** [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md).  
-**I/O:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14 (lean-door I/O).  
-**Template shape:** [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) — unique dest / unique verb / unique key. 2017 unique leftover-20 is a **different** map. Do not add leftover dests to make 20.  
+**I/O:** [`2016-2021-IO-CRITERIA.md`](../2016-2021-IO-CRITERIA.md) I1–I14 (lean-door I/O).  
+**Template shape:** 2017-UNIQUE-FLOWS.md (not on disk; 2017 is absent) — unique dest / unique verb / unique key. 2017 unique leftover-20 is a **different** map. Do not add leftover dests to make 20.  
 **Mock:** `scripts/audit-mock-flows.js` — `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` fail.  
 **Prefix:** `itt10`  
 **Star:** Instagram iOS filter → share `itt10-ig-posts` · `sites/instagram/index.html`  

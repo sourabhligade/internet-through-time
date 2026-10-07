@@ -26,8 +26,8 @@
 
   function loadSaved(k) {
     try {
-      var raw = localStorage.getItem(k);
-      return raw ? JSON.parse(raw) : null;
+      var raw = window.ITT.User.take(k);
+      return raw ? raw : null;
     } catch (eL) {
       return null;
     }
@@ -215,7 +215,7 @@
       };
       var wrote = false;
       try {
-        localStorage.setItem(k, JSON.stringify(payload));
+        window.ITT.User.store(k, payload);
         wrote = true;
       } catch (eS) {
         try {

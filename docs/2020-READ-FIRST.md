@@ -1,7 +1,7 @@
 # 2020 — read first
 
 **Date:** 2026-09-14  
-**Status:** **LIVE lean door.** Hub card open. Dest-lock reverted (dest-lock parent had no 2020 tree). `years/2020/` on disk (**38 dests**). Hub **27 years open** (1994–2017 and 2020–2022). **2022 ChatGPT live.** **2018, 2019, and 2023–2025 are absent.**
+**Status:** **LIVE lean door.** Hub card open. Dest-lock reverted (dest-lock parent had no 2020 tree). `years/2020/` on disk (**38 dests**). Hub **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2022 ChatGPT live.** **2017–2019 and 2023–2025 are absent.**
 
 Do not `git checkout` an old 2020 forest.
 

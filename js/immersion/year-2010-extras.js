@@ -65,7 +65,7 @@
         return;
       }
       var k = key("iphone4");
-      saveJSON(k, blob({ facetime: "wifi", antenna: true }));
+      saveJSON(k, blob({ facetime: "wifi", antenna: true, official: true }));
       feedback("iPhone 4 literacy saved.", st);
       try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
     });
@@ -225,7 +225,7 @@
       var text = (val(doc, "[data-tw-text]") || "").replace(/^\s+|\s+$/g, "");
       if (mode && mode.checked) {
         var k0 = key("tweets");
-        saveJSON(k0, blob({ lurk: true }));
+        saveJSON(k0, blob({ lurk: true, official: true }));
         feedback("Lurker path · you don’t have to tweet · " + k0, st);
         return;
       }
@@ -234,7 +234,7 @@
         return;
       }
       var k = key("tweets");
-      saveJSON(k, blob({ text: text, n: text.length }));
+      saveJSON(k, blob({ text: text, n: text.length, official: true }));
       feedback("Tweeted " + text.length + " · " + k, st);
     });
   }
@@ -257,7 +257,7 @@
     }
     function snap() {
       before = null;
-      try { before = localStorage.getItem(key("ig-posts")); } catch (e0) { /* */ }
+      try { before = window.ITT.User.take(key("ig-posts")); } catch (e0) { /* */ }
     }
     function finishedShare() {
       if (!filterPicked) return false;
@@ -277,9 +277,9 @@
     share.addEventListener("click", function () {
       setTimeout(function () {
         try {
-          var raw = localStorage.getItem(key("ig-posts"));
+          var raw = window.ITT.User.take(key("ig-posts"));
           if (!raw) return;
-          if (raw !== before) localStorage.setItem(key("ig"), raw);
+          if (raw !== before) window.ITT.User.store(key("ig"), raw);
           if (!finishedShare()) return;
           n += 1;
           if (n >= 2) {

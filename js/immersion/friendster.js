@@ -37,12 +37,12 @@
     return "itt02-friendster-" + k;
   }
   function getRaw(k) {
-    var v = localStorage.getItem(key(k));
+    var v = window.ITT.User.take(key(k));
     if (v != null) return v;
-    var leg = localStorage.getItem(legacyKey(k));
+    var leg = window.ITT.User.take(legacyKey(k));
     if (leg != null && key(k) !== legacyKey(k)) {
       try {
-        localStorage.setItem(key(k), leg);
+        window.ITT.User.store(key(k), leg);
       } catch (e) { /* */ }
       return leg;
     }
@@ -50,23 +50,23 @@
   }
   function loadProfile() {
     try {
-      return JSON.parse(getRaw("profile") || "null");
+      return (function (v) { return v && typeof v === "object" ? v : null; })(getRaw("profile"));
     } catch (e) {
       return null;
     }
   }
   function saveProfile(p) {
-    localStorage.setItem(key("profile"), JSON.stringify(p));
+    window.ITT.User.store(key("profile"), p);
   }
   function loadFriends() {
     try {
-      return JSON.parse(getRaw("friends") || "[]");
+      return (function (v) { return Array.isArray(v) ? v : []; })(getRaw("friends"));
     } catch (e) {
       return [];
     }
   }
   function saveFriends(list) {
-    localStorage.setItem(key("friends"), JSON.stringify(list));
+    window.ITT.User.store(key("friends"), list);
   }
 
   function defaultFriends() {
@@ -165,14 +165,14 @@
           var fsKey = ITT.util && ITT.util.immersionStorageKey
             ? ITT.util.immersionStorageKey(suffix, y === "2003" ? "itt03" : "itt02")
             : (y === "2003" ? "itt03-fs-mass" : "itt02-fs");
-          localStorage.setItem(fsKey, JSON.stringify({
+          window.ITT.User.store(fsKey, {
             multiStep: true,
             real: true,
             year: y,
             ts: Date.now(),
             friend: name.slice(0, 40),
             note: about.slice(0, 80)
-          }));
+          });
         } catch (eFs) { /* */ }
         if (st) st.textContent = "Posted leftover · " + (year() === "2003" ? "itt03-fs-mass" : "itt02-fs");
         try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }

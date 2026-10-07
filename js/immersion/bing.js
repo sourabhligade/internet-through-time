@@ -39,7 +39,7 @@
       var q = (form.querySelector('[name="q"]') || {}).value || "";
       q = String(q).replace(/^\s+|\s+$/g, "");
       var payload = { q: q, ts: Date.now(), searched: true };
-      localStorage.setItem(storageKey(), JSON.stringify(payload));
+      window.ITT.User.store(storageKey(), payload);
       var st = doc.querySelector("[data-bing-status]");
       if (st) {
         st.textContent = "Searched: “" + q + "” · " + storageKey() + " · stub results (not live Bing)";

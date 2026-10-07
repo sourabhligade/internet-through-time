@@ -493,8 +493,12 @@
   function loadAll(base, rels) {
     var jobs = [];
     var i;
+    var src;
     for (i = 0; i < rels.length; i++) {
-      jobs.push(loadScript(base + rels[i]));
+      src = base + rels[i];
+      /* Same path stays in the tab's memory cache and keeps painting the old list. */
+      if (rels[i] === "immersion/flow-trails.js") src += "?itt=20261007a";
+      jobs.push(loadScript(src));
     }
     return Promise.all(jobs);
   }

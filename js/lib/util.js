@@ -331,9 +331,158 @@
     return !!(rec && rec.real === true);
   }
 
+  function userFailStore() {
+    var err = new Error("This browser blocked the save.");
+    err.name = "QuotaExceededError";
+    throw err;
+  }
+
+  function userEnvelope(value) {
+    return !!(
+      value &&
+      typeof value === "object" &&
+      !Array.isArray(value) &&
+      value.v === 1 &&
+      value.real === true &&
+      typeof value.key === "string" &&
+      USER_KINDS[String(value.kind)]
+    );
+  }
+
+  /* A read-modify-write of an envelope must edit the original payload, not the wrapper. */
+  function userUnwrap(value) {
+    if (!userEnvelope(value)) return value;
+    if (Object.prototype.hasOwnProperty.call(value, "body")) return value.body;
+    var copy = {};
+    var skip = { v: 1, real: 1, key: 1, ts: 1, year: 1, kind: 1, step: 1 };
+    var name;
+    for (name in value) {
+      if (!Object.prototype.hasOwnProperty.call(value, name)) continue;
+      if (skip[name]) continue;
+      copy[name] = value[name];
+    }
+    return copy;
+  }
+
+  function userAdopt(value) {
+    var payload = userUnwrap(value);
+    if (typeof payload !== "string") return payload;
+    var text = payload.replace(/^\s+/, "");
+    if (text.charAt(0) !== "{" && text.charAt(0) !== "[") return payload;
+    try {
+      var decoded = JSON.parse(payload);
+      if (decoded && typeof decoded === "object") return userUnwrap(decoded);
+    } catch (e) { /* invite counters and mute flags stay strings */ }
+    return payload;
+  }
+
+  function userInferYear(key, payload) {
+    if (
+      payload &&
+      typeof payload === "object" &&
+      !Array.isArray(payload) &&
+      payload.year != null &&
+      /^\d{4}$/.test(String(payload.year))
+    ) {
+      return String(payload.year);
+    }
+    var m = String(key).match(/^itt(\d{2})-/);
+    if (m) {
+      var n = parseInt(m[1], 10);
+      return (n >= 94 ? "19" : "20") + m[1];
+    }
+    try {
+      var y = immersionYear("");
+      if (y) return y;
+    } catch (eY) { /* */ }
+    return "";
+  }
+
+  function userInferKind(key, payload) {
+    var k = String(key);
+    if (payload && typeof payload === "object" && !Array.isArray(payload)) {
+      if (payload.official === true) return "official";
+      if (payload.leftover === true || payload.pack || payload.pop) return "leftover";
+      if (payload.gameId) return "game";
+      if (USER_KINDS[String(payload.kind || "")]) return String(payload.kind);
+    }
+    if (/^itt-yg-/.test(k) || /^itt-games-/.test(k)) return "shell";
+    if (/-game(?:-|$)/.test(k)) return "game";
+    return "toy";
+  }
+
+  /**
+   * Brand, game, and toy writes. Objects keep their fields on the envelope.
+   * Arrays, strings, and numbers live on body so readers can unwrap them.
+   * Throws when the browser refuses the write (existing try/catch stays honest).
+   * null clears the key.
+   */
+  function userStore(key, value, opts) {
+    opts = opts || {};
+    key = key != null ? String(key).replace(/^\s+|\s+$/g, "") : "";
+    if (!key) userFailStore();
+    if (value === null || value === undefined) {
+      try {
+        localStorage.removeItem(key);
+        return true;
+      } catch (eRm) {
+        userFailStore();
+      }
+    }
+    var payload = userAdopt(value);
+    var kind = opts.kind != null && USER_KINDS[String(opts.kind)] ? String(opts.kind) : userInferKind(key, payload);
+    var year = opts.year != null && String(opts.year) !== "" ? String(opts.year) : userInferYear(key, payload);
+    var extra;
+    var name;
+    if (payload && typeof payload === "object" && !Array.isArray(payload)) {
+      extra = {};
+      for (name in payload) {
+        if (!Object.prototype.hasOwnProperty.call(payload, name)) continue;
+        if (payload[name] === undefined) continue;
+        extra[name] = payload[name];
+      }
+      extra.body = payload;
+    } else {
+      extra = { body: payload };
+    }
+    if (userSave({ key: key, year: year, kind: kind, extra: extra }) !== true) userFailStore();
+    return true;
+  }
+
+  /** Original payload. Legacy raw JSON still parses. Plain "1" / "6" stay strings. */
+  function userTake(key, fallback) {
+    var hasFallback = arguments.length > 1;
+    try {
+      var raw = localStorage.getItem(key);
+      if (raw == null || raw === "") return hasFallback ? fallback : null;
+      var parsed;
+      try {
+        parsed = JSON.parse(raw);
+      } catch (eRaw) {
+        return raw;
+      }
+      if (
+        parsed &&
+        typeof parsed === "object" &&
+        !Array.isArray(parsed) &&
+        parsed.v === 1 &&
+        Object.prototype.hasOwnProperty.call(parsed, "body")
+      ) {
+        return parsed.body;
+      }
+      if (parsed && typeof parsed === "object") return parsed;
+      if (parsed === null) return hasFallback ? fallback : null;
+      return raw;
+    } catch (e) {
+      return hasFallback ? fallback : null;
+    }
+  }
+
   ITT.User = {
     save: userSave,
     read: userRead,
-    finished: userFinished
+    finished: userFinished,
+    store: userStore,
+    take: userTake
   };
 })(typeof window !== "undefined" ? window : this);

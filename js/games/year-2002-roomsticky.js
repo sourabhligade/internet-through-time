@@ -18,11 +18,10 @@
     s.multiStep = true;
     s.year = "2002";
     s.gameId = "roomsticky";
-    var raw = JSON.stringify(s);
-    try {
-      localStorage.setItem(key, raw);
-    } catch (eS) { /* */ }
     if (YG && typeof YG.saveJSON === "function") YG.saveJSON(key, s);
+    else {
+      try { window.ITT.User.store(key, s); } catch (eS) { /* */ }
+    }
   }
   var state = load();
   var placeId = "chair";

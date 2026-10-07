@@ -37,6 +37,7 @@
     var o = { multiStep: true, real: true, year: yearOf(doc), ts: Date.now() };
     var k;
     if (extra) for (k in extra) if (Object.prototype.hasOwnProperty.call(extra, k)) o[k] = extra[k];
+    o.leftover = true;
     return o;
   }
 
@@ -77,9 +78,9 @@
     }
 
     try {
-      var raw0 = localStorage.getItem(k);
+      var raw0 = window.ITT.User.take(k);
       if (raw0) {
-        var saved0 = JSON.parse(raw0);
+        var saved0 = raw0;
         var field0 = root.querySelector("[data-4x-field]");
         if (field0 && saved0 && saved0.q) field0.value = saved0.q;
         say(st, "Still open · " + k);
@@ -175,7 +176,7 @@
       var payload = blob(doc, extra);
       var wrote = false;
       try {
-        localStorage.setItem(k, JSON.stringify(payload));
+        window.ITT.User.store(k, payload);
         wrote = true;
       } catch (eS) {
         try {

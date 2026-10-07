@@ -422,7 +422,7 @@
     }
 
     html += "<p class='doors'>";
-    html += a(yearHome(year), "Enter " + year + " →", "start-btn start-primary");
+    html += a(yearHome(year), "Enter " + year, "start-btn start-primary");
     html += " ";
     html += a(yearRoom(year, "pages/home.html"), "Starting Point");
     html += " · ";
@@ -455,7 +455,7 @@
     html +=
       "<p class='muted'>Postcard first. Open a layer for the rest of this year — leftover 2×, popular 3×, official 10, games. Incomplete never writes. Stars do not move.</p>";
 
-    html += detailsList("atlas-guided-" + year, "Guided start", guided, year, "The year-start walk. About → gold → rooms → map.");
+    html += detailsList("atlas-guided-" + year, "Guided start", guided, year, "The year-start walk. About · gold · rooms · map.");
 
     if (rec.leftoverGold) {
       html +=
@@ -472,7 +472,7 @@
       stops.forEach(function (s) {
         var path = yearRoom(year, s.href);
         html += "<li>" + a(path, s.name || "stop");
-        if (s.nextLabel) html += " <span class='muted'>→ " + esc(s.nextLabel) + "</span>";
+        if (s.nextLabel) html += " <span class='muted'>" + esc(s.nextLabel) + "</span>";
         html += "</li>";
       });
       html += "</ol></details>";
@@ -559,7 +559,7 @@
     var html =
       "<p class='walk-lead'><b>This is a walk, not only a floor plan.</b> " +
       "Start first night, or pick a brand and step year to year in that year’s chrome. " +
-      "The year-shell control is <code>Same brand, next year →</code> on the exit bar.</p>";
+      "The year-shell control is <code>Same brand, next year</code> on the exit bar.</p>";
     data.threads.forEach(function (th) {
       html +=
         '<article class="thread" id="thread-' +
@@ -597,7 +597,7 @@
         "</p>";
       if (tr.id === "first-night") {
         html +=
-          '<p><button type="button" class="start-btn start-primary" id="atlas-first-night">Start first night →</button></p>';
+          '<p><button type="button" class="start-btn start-primary" id="atlas-first-night">Start first night</button></p>';
       }
       html += "<ol>";
       (tr.steps || []).forEach(function (st) {

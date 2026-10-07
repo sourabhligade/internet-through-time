@@ -31,13 +31,13 @@
   }
   function loadHistory() {
     try {
-      return JSON.parse(localStorage.getItem(storageKey()) || "[]") || [];
+      return (function (v) { return Array.isArray(v) ? v : []; })(window.ITT.User.take(storageKey(), [])) || [];
     } catch (e) {
       return [];
     }
   }
   function saveHistory(list) {
-    localStorage.setItem(storageKey(), JSON.stringify(list));
+    window.ITT.User.store(storageKey(), list);
   }
   function esc(s) {
     return String(s || "")

@@ -80,7 +80,7 @@
       year: "2010",
       path: "sites/instagram/index.html",
       title: "2010 · Instagram",
-      blurb: "iOS filter → share. The 2010 object.",
+      blurb: "iOS filter · share. The 2010 object.",
       mode: "visit",
       match: "/instagram/"
     }
@@ -175,10 +175,10 @@
       { path: "sites/facebook/index.html", label: "Facebook Like", blurb: "9 Feb. Two partner Likes. Not Reactions.", match: "/facebook/" },
       { path: "sites/farmville/index.html", label: "FarmVille", blurb: "Plant / harvest. Social game year.", match: "/farmville/" }),
     "2010": yearVisitTour("2010",
-      { path: "sites/instagram/index.html", label: "Instagram", blurb: "iOS filter → share. The 2010 object.", match: "/instagram/" },
+      { path: "sites/instagram/index.html", label: "Instagram", blurb: "iOS filter · share. The 2010 object.", match: "/instagram/" },
       { path: "sites/ipad/index.html", label: "iPad", blurb: "$499 · no camera · magazine Safari.", match: "/ipad/" }),
     "2012": yearVisitTour("2012",
-      { path: "sites/instagram/android.html", label: "Instagram Android", blurb: "Named filter → share. The 2012 object.", match: "/instagram/android" },
+      { path: "sites/instagram/android.html", label: "Instagram Android", blurb: "Named filter · share. The 2012 object.", match: "/instagram/android" },
       { path: "sites/facebook/ipo.html", label: "Facebook IPO", blurb: "$38 · Nasdaq delay · 18 May.", match: "/facebook/ipo" }),
     "2013": yearVisitTour("2013",
       { path: "sites/vine/record.html", label: "Vine 6s", blurb: "Six seconds. The 2013 loop.", match: "/vine/" },
@@ -642,14 +642,14 @@
         "<button type='button' data-itt-night-continue style='padding:5px 10px;" +
         "background:" +
         accent +
-        ";color:#000;border:none;font-weight:bold;cursor:pointer;font-size:12px'>Continue →</button>";
+        ";color:#000;border:none;font-weight:bold;cursor:pointer;font-size:12px'>Continue</button>";
     } else if (!onStepYear) {
       html +=
         "<a href='" +
         escapeHtml(stepHref(step, n.trail)) +
         "' style='color:#80deea;font-weight:bold'>Open " +
         step.year +
-        " →</a>";
+        "</a>";
     } else if (step.mode === "stamp") {
       html +=
         "<span style='opacity:.85;font-size:11px'>Finish REAL to advance</span>";
@@ -767,7 +767,7 @@
     html += '<div class="first-night-card year-2010-start-card">';
     html +=
       "<b>2010 start</b> — tablet · filter · Like: Instagram iOS · iPad · Open Graph." +
-      '<br><a class="start-btn start-primary" href="/years/2010/?trail=2010-start">Start 2010 tour →</a>' +
+      '<br><a class="start-btn start-primary" href="/years/2010/?trail=2010-start">Start 2010 tour</a>' +
       ' <a class="start-btn" href="/years/2010/">Open 2010 shell</a>';
     html += "</div>";
 
@@ -782,7 +782,7 @@
     html += '<div class="first-night-card">';
     if (night.finished && night.trail === "first-night") {
       html +=
-        "<b>First night complete</b> — you walked 1994→2010. " +
+        "<b>First night complete</b> — you walked 1994 to 2010. " +
         '<button type="button" data-itt-night-restart class="start-btn">Replay first night</button>';
     } else if (night.active && !night.finished) {
       var st = activeSteps(night)[night.step] || activeSteps(night)[0];
@@ -798,13 +798,13 @@
         escapeHtml(st.title) +
         ' · <a class="start-btn start-primary" data-itt-night-resume href="' +
         escapeHtml(stepHref(st, night.trail)) +
-        '">Resume trail →</a>' +
+        '">Resume trail</a>' +
         ' <button type="button" data-itt-night-abort class="start-btn">Pause</button>';
     } else {
       html +=
         "<b>First night</b> — a ~20 minute arc across decades: " +
-        "1994 → 1998 Google → 2004 thefacebook → 2006 Twttr → 2010 Instagram." +
-        '<br><button type="button" data-itt-night-start class="start-btn">Start first night →</button>';
+        "1994 · 1998 Google · 2004 thefacebook · 2006 Twttr · 2010 Instagram." +
+        '<br><button type="button" data-itt-night-start class="start-btn">Start first night</button>';
     }
     html += "</div></div>";
     root.innerHTML = html;

@@ -40,13 +40,13 @@
   }
   function getJSON(k, leg) {
     try {
-      var raw = localStorage.getItem(k);
-      if (raw) return JSON.parse(raw);
+      var raw = window.ITT.User.take(k);
+      if (raw) return raw;
       if (leg && leg !== k) {
-        raw = localStorage.getItem(leg);
+        raw = window.ITT.User.take(leg);
         if (raw) {
-          localStorage.setItem(k, raw);
-          return JSON.parse(raw);
+          window.ITT.User.store(k, raw);
+          return raw;
         }
       }
     } catch (e) { /* */ }
@@ -57,14 +57,14 @@
     return getJSON(pkey(), "itt03-li-profile");
   }
   function saveP(p) {
-    localStorage.setItem(pkey(), JSON.stringify(p));
+    window.ITT.User.store(pkey(), p);
   }
   function loadC() {
     var v = getJSON(ckey(), "itt03-li-connections");
     return v || [];
   }
   function saveC(c) {
-    localStorage.setItem(ckey(), JSON.stringify(c));
+    window.ITT.User.store(ckey(), c);
   }
 
   function defaults() {

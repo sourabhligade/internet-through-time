@@ -73,7 +73,7 @@
     if (nameEl) nameEl.textContent = meta.name;
     if (blurbEl) blurbEl.textContent = meta.blurb;
     try {
-      var prev = localStorage.getItem(key());
+      var prev = window.ITT.User.take(key());
       if (prev && st) feedback("Saved · " + key(), st, false);
     } catch (e0) { /* */ }
     btn.addEventListener("click", function () {
@@ -83,9 +83,7 @@
         return;
       }
       try {
-        localStorage.setItem(
-          key(),
-          JSON.stringify({
+        window.ITT.User.store(key(), {
             project: id,
             name: meta.name,
             real: true,
@@ -93,8 +91,7 @@
             year: "1999",
             notGithub: true,
             ts: Date.now()
-          })
-        );
+          });
       } catch (e1) { /* */ }
       feedback("Download queued · " + meta.name + " · " + key(), st, false);
       try {

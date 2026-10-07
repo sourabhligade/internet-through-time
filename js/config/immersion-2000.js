@@ -49,7 +49,7 @@
         href: "sites/amazon/index.html",
         match: "/amazon/",
         hint: "see the smile logo · browse tabs · Add to Cart",
-        doneMessage: "Amazon smile — first correct year for the A→Z arrow."
+        doneMessage: "Amazon smile — first correct year for the A to Z arrow."
       },
       {
         id: "napster",

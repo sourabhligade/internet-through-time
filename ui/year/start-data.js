@@ -214,7 +214,7 @@
  "label": "★ One-thing · Instagram Android REAL",
  "items": [
  " <a href=\"about.html\" style=\"color:#9fd4f0\">About 2012</a> — 697,089,489 · bans",
- " <a href=\"../sites/instagram/android.html\" style=\"color:#9fd4f0\">Instagram Android</a> — filter → share",
+ " <a href=\"../sites/instagram/android.html\" style=\"color:#9fd4f0\">Instagram Android</a> — filter · share",
  " <a href=\"../sites/facebook/ipo.html\" style=\"color:#9fd4f0\">Facebook IPO</a> — $38 · Nasdaq delay",
  " <a href=\"../sites/wikipedia/sopa.html\" style=\"color:#9fd4f0\">SOPA blackout</a> — 18 Jan",
  " <a href=\"../sites/iphone/maps.html\" style=\"color:#9fd4f0\">iPhone Maps flop</a> — iOS 6",

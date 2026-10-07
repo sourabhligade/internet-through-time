@@ -1,12 +1,12 @@
 # Lean-door leftover double — criteria only
 
-**2018–2025, including 2021 and 2022, are absent.** Lists for those years in this file are research. Do not restore `years/`. Live doors are 1994–2017. Ship law is [`DISK-TRUTH.md`](DISK-TRUTH.md).
+**2017–2019 and 2023–2025 are absent.** Lists for absent years in this file are research. Do not restore `years/` for an absent year. Live doors are 1994–2016 and 2020–2022. **2015 is the React door.** 2020–2022 are live HTML. Ship law is [`DISK-TRUTH.md`](DISK-TRUTH.md).
 
 **Date:** 2026-09-20  
 **Status:** Implemented 2026-09-20 (Step 2 named). Not dest-farm. Not leftover-3× unique growth. Leftover dests on thin lean doors only. Cap is not a quota.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **I/O:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).  
-**Leftover-3× unique dest-true:** [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md) U1–U11 · M1–M4.  
+**Leftover-3× unique dest-true:** [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](history/LEFTOVER-3X-UNIQUE-CRITERIA.md) U1–U11 · M1–M4.  
 **Visitor 100%:** [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) — 100% is dest-true flows, not dest-folder count.  
 **Density sibling:** [`--DEST-DENSITY.md`](--DEST-DENSITY.md) — 2× unique leftover dests, not forests.  
 **Mock:** `scripts/audit-mock-flows.js` — `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` fail.
@@ -50,7 +50,7 @@ A dest **fails** if any row is N. One miss is a fail. Inherits leftover-3× **U1
 | **D12** | Cite or drop | Primary or labeled secondary cite, or drop the row | Invent a dest to hit the double |
 | **D13** | Not a forest | Target is lean-door 2×, not 2004 **810** / **597** | Board C again · dest-lock revert of dest-lock years |
 | **D14** | Leftover-3× stop | leftover-3× unique stays **3**. 2021 stays **5**. Extra dests are leftover dests, not leftover-3× unique dest-true dests | Growing leftover-3× unique to 9 on / 2021 |
-| **D15** | Unique leftover-20 | Only **2017** has unique leftover-20. Do not dest-farm leftover-20 maps on other years | 20 unique leftover dests on 2022 to “look like 2017” |
+| **D15** | Unique leftover-20 | **2017 is absent.** Do not dest-farm leftover-20 maps on any year | 20 unique leftover dests on 2022 to “look like 2017” |
 | **M1–M4** | Dest-true leftover | keep vs trap · field · 2 ticks · Go | `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` |
 
 If a year cannot pass without new dests **and** no cite exists, **stop**. Do not dest-farm a substitute.
@@ -237,10 +237,10 @@ Do not skip ahead to dest HTML.
 | [`DISK-TRUTH.md`](DISK-TRUTH.md) | Playable years · dest counts |
 | [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) | 100% is dest-true flows |
 | [`FLOW-CHECK-DIAGRAM.md`](FLOW-CHECK-DIAGRAM.md) | Check links then dest-true I/O |
-| [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](LEFTOVER-3X-UNIQUE-CRITERIA.md) | Leftover-3× unique dest-true stop map |
+| [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](history/LEFTOVER-3X-UNIQUE-CRITERIA.md) | Leftover-3× unique dest-true stop map |
 | [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) | I1–I14 |
 | [`--DEST-DENSITY.md`](--DEST-DENSITY.md) | Earlier 2× leftover dest pass |
-| [`2017-UNIQUE-FLOWS.md`](2017-UNIQUE-FLOWS.md) | Only shipped unique leftover-20 map |
+| 2017-UNIQUE-FLOWS.md | Not on disk. 2017 is absent. Leftover-20 is not a live rail |
 | [`2x-harvest-c-1999-2004.md`](2x-harvest-c-1999-2004.md) | Forest Board C — already shipped · do not re-run |
 | `js/config/flow-trails.js` | Official 10 |
 | `scripts/leftover-3x-unique.json` | Leftover-3× unique dest-true dests |
@@ -272,7 +272,7 @@ CNIL-shaped leftover dest. One writer. Cream panel. Not leftover-3× unique.
 | Guided Starting Point | exactly 6 `<li>` |
 | Star | Only the year chip writes gold |
 | Leftover-3× unique | =3 · 2021=5 · other double years stay at shipped stop |
-| Unique leftover-20 | 2017 only |
+| Unique leftover-20 | not a live rail · 2017 is absent |
 | leftover-4× unique | 2012 chrome / twitter / soundcloud only |
 | Empty / trap | never write leftover or star |
 | Mock | `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` = 0 on new dests |

@@ -300,7 +300,7 @@ function initBabelFish() {
           "<b>Babel Fish says:</b> <font size=\"1\" color=\"#666\">(demo translation)</font><br><br>" +
           escapeHtml(out).replace(/\n/g, "<br>") +
           "</font>";
-        showFlash("Babel Fish translated (" + escapeHtml(lp.replace("_", " → ")) + ").");
+        showFlash("Babel Fish translated (" + escapeHtml(lp.replace("_", " · ")) + ").");
         markTourUsed();
       });
     })(forms[i]);

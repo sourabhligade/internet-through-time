@@ -19,13 +19,13 @@
   }
   function load() {
     try {
-      return JSON.parse(localStorage.getItem(storageKey()) || "null") || { plots: [], log: [], coins: 100 };
+      return window.ITT.User.take(storageKey(), null) || { plots: [], log: [], coins: 100 };
     } catch (e) {
       return { plots: [], log: [], coins: 100 };
     }
   }
   function save(s) {
-    localStorage.setItem(storageKey(), JSON.stringify(s));
+    window.ITT.User.store(storageKey(), s);
   }
   function esc(s) {
     return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -189,13 +189,13 @@
             ? U().immersionStorageKey("fv-neighbor", "itt09")
             : "itt09-fv-neighbor";
           try {
-            localStorage.setItem(nk, JSON.stringify({
+            window.ITT.User.store(nk, {
               multiStep: true,
               real: true,
               year: "2009",
               ts: Date.now(),
               names: names.slice(0, 4)
-            }));
+            });
           } catch (eNk) { /* */ }
         }
         render(doc);

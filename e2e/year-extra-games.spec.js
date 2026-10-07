@@ -187,7 +187,8 @@ test.describe("year extra games — minute machines", () => {
         expect(blob.real).toBe(true);
         expect(String(blob.year)).toBe(year);
         expect(blob.multiStep).toBe(true);
-        expect(blob.kind).toBe(kind);
+        expect(blob.kind).toBe("official");
+        expect(blob.step).toBe(kind);
       });
     }
   }

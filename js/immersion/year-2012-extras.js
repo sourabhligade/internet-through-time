@@ -41,7 +41,13 @@
         feedback("Tick both literacy boxes first. Incomplete never writes.", st, { error: true });
         return;
       }
-      if (!saveJSON(key(suffix), blob(extra || {}))) {
+      var pack = blob(extra || {});
+      var storageKey = key(suffix);
+      try {
+        var off = doc.documentElement.getAttribute("data-official-key") || "";
+        if (off && off === storageKey) pack.official = true;
+      } catch (eOff) { /* */ }
+      if (!saveJSON(storageKey, pack)) {
         feedback("This browser blocked the save.", st, { error: true });
         return;
       }

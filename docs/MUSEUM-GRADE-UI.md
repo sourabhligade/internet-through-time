@@ -3,7 +3,7 @@
 **Date:** 2026-10-04
 **Status:** Map. Phases 1–6 are done. Phase 7 is not started.
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json`. Hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** **2009 is live** (Like `itt09-like`). Forests **1994–2006** stay frozen.
-**Supersedes for this job:** [`UI-FIX-LIST.md`](history/UI-FIX-LIST.md) and [`UI-FIX-MAP.md`](history/UI-FIX-MAP.md) still say 27 doors and a React 2017. Do not follow those counts.
+**Supersedes for this job:** [`UI-FIX-LIST.md`](history/UI-FIX-LIST.md) and [`UI-FIX-MAP.md`](history/UI-FIX-MAP.md) are history. The live door count is 26 in [`DISK-TRUTH.md`](DISK-TRUTH.md).
 **Looked at:** every year 1994–2022 on `http://127.0.0.1:8080`, desktop 1100px. HTML doors are `years/YYYY/pages/home.html`. 2015 is `/app/index.html#/year/2015`.
 
 Museum grade means a visitor can enter any live door, tell what year they are in from the window, do the one star, and leave by a trail that is the same year. It does not mean more rooms, a shared Chrome skin, or a modern lobby.
@@ -204,7 +204,7 @@ A new room is not part of this phase. A verb that is only "Open leftover" is not
 
 ## Phase 6 — The walk, then the tick
 
-**Walked 2026-10-05.** 592 checklist lines against `http://127.0.0.1:8080`. 548 boxes are ticked. 44 stayed open. A box was ticked only after that URL did what the line says.
+**Walked 2026-10-05.** 592 checklist lines against `http://127.0.0.1:8080`. A box was ticked only after that URL did what the line says. The files on 2026-10-07 hold 561 ticked boxes and 31 open boxes.
 
 `docs/checklists/2020.md` and `docs/checklists/2021.md` were written from the live trails and walked: 14 of 14 each. 2022 was already a file: 14 of 14. 2017–2019 and 2023–2025 still have no file.
 
@@ -235,7 +235,7 @@ Breaks, before any of these years can be ticked all the way through:
 | 2006 | Twitter empty-check misses |
 | 2007 | iPhone empty-check misses |
 
-Checklists. Counts are the open boxes on 2026-10-04.
+Checklists. Open counts are the 2026-10-04 list, except 2020 and 2021, which are the files now.
 
 | File | Open | Rule for this phase |
 | --- | ---: | --- |
@@ -255,8 +255,8 @@ Checklists. Counts are the open boxes on 2026-10-04.
 | 2014 | 19 | |
 | 2015 | 14 | React URL is the right one |
 | 2016 | 33 | |
-| 2020 | no file | Write `docs/checklists/2020.md` from the live trail, then walk it |
-| 2021 | no file | Write `docs/checklists/2021.md` from the live trail, then walk it |
+| 2020 | 0 | 14 of 14 in `docs/checklists/2020.md` |
+| 2021 | 0 | 14 of 14 in `docs/checklists/2021.md` |
 | 2022 | 14 | |
 | 2017–2019, 2023–2025 | no file | Do not add one |
 

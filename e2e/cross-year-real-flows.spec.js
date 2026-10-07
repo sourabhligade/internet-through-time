@@ -333,7 +333,9 @@ test.describe('cross-year digg (dig + submit + year key)', () => {
       });
       const raw = await page.evaluate((k) => localStorage.getItem(k), key);
       expect(raw || '', `storage ${key}`).toBeTruthy();
-      expect(JSON.parse(raw || '[]').length).toBeGreaterThan(0);
+      const parsed = JSON.parse(raw || '[]');
+      const list = Array.isArray(parsed) ? parsed : parsed && parsed.body;
+      expect(Array.isArray(list) ? list.length : 0).toBeGreaterThan(0);
     });
 
     test(`digg ${year}: submit → list + ${ittKey(year, 'digg-links')}`, async ({ page }) => {

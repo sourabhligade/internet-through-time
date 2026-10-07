@@ -39,7 +39,7 @@
       out.push({
         name: p[1] || p[0],
         href: "sites/" + p[0] + "/index.html",
-        do: "Popular · empty never writes → itt" + String(year).slice(2) + "-pop-" + p[0]
+        do: "Popular · empty never writes · itt" + String(year).slice(2) + "-pop-" + p[0]
       });
     }
     return out;

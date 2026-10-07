@@ -4,12 +4,25 @@
  */
 (function (global) {
   "use strict";
+
+  if (!(global.ITT && global.ITT.User && global.ITT.User.take) &&
+      typeof document !== "undefined" && document.readyState === "loading") {
+    try {
+      var cur = document.currentScript;
+      var src = cur && cur.src ? String(cur.src) : "";
+      var utilSrc = src.replace(/\/games\/[^/?#]+\.js(?:\?[^#]*)?$/, "/lib/util.js");
+      if (utilSrc && utilSrc !== src) {
+        document.write('<script src="' + utilSrc.replace(/"/g, "") + '"><\/script>');
+      }
+    } catch (eUser) { /* */ }
+  }
+
   var KEY = "itt-games-ann-dismissed";
   var VERSION = "2026-07-games-v1"; /* bump to re-show popup after major wing updates */
 
   function dismissed() {
     try {
-      return localStorage.getItem(KEY) === VERSION;
+      return window.ITT.User.take(KEY) === VERSION;
     } catch (e) {
       return false;
     }
@@ -17,7 +30,7 @@
 
   function setDismissed() {
     try {
-      localStorage.setItem(KEY, VERSION);
+      window.ITT.User.store(KEY, VERSION);
     } catch (e) { /* */ }
   }
 

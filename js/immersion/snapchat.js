@@ -60,12 +60,12 @@
       }
       var n = 0;
       try {
-        n = parseInt(localStorage.getItem(key("snap-count")) || "0", 10) || 0;
+        n = parseInt(window.ITT.User.take(key("snap-count")) || "0", 10) || 0;
       } catch (e) { /* */ }
       n += 1;
       try {
-        localStorage.setItem(key("snap-count"), String(n));
-        localStorage.setItem(key("snap-last-timer"), String(secs));
+        window.ITT.User.store(key("snap-count"), String(n));
+        window.ITT.User.store(key("snap-last-timer"), String(secs));
       } catch (e2) { /* */ }
       if (status) {
         status.innerHTML =

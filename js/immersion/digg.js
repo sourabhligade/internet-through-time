@@ -40,23 +40,23 @@
 
   function load() {
     try {
-      return JSON.parse(localStorage.getItem(storageKey()) || "null");
+      return window.ITT.User.take(storageKey(), null);
     } catch (e) {
       return null;
     }
   }
   function save(list) {
-    localStorage.setItem(storageKey(), JSON.stringify(list));
+    window.ITT.User.store(storageKey(), list);
   }
   function loadComments() {
     try {
-      return JSON.parse(localStorage.getItem(commentsKey()) || "{}") || {};
+      return (function (v) { return v && typeof v === "object" && !Array.isArray(v) ? v : {}; })(window.ITT.User.take(commentsKey(), {})) || {};
     } catch (e) {
       return {};
     }
   }
   function saveComments(map) {
-    localStorage.setItem(commentsKey(), JSON.stringify(map));
+    window.ITT.User.store(commentsKey(), map);
   }
   function esc(s) {
     if (ITT.util && ITT.util.escapeHtml) return ITT.util.escapeHtml(s);
@@ -320,10 +320,8 @@
                 trailKey;
               if (want === "itt05-digg" || trailKey === "itt05-digg") {
                 try {
-                  if (!localStorage.getItem("itt05-digg")) {
-                    localStorage.setItem(
-                      "itt05-digg",
-                      JSON.stringify({
+                  if (!window.ITT.User.take("itt05-digg")) {
+                    window.ITT.User.store("itt05-digg", {
                         multiStep: true,
                         real: true,
                         official: true,
@@ -331,8 +329,7 @@
                         ts: Date.now(),
                         bury: delta < 0,
                         story: String(row.title || "").slice(0, 80)
-                      })
-                    );
+                      });
                   }
                 } catch (eTrail) { /* */ }
                 try {
@@ -340,10 +337,8 @@
                 } catch (eN) { /* */ }
               } else if (want === "itt06-digg") {
                 try {
-                  if (!localStorage.getItem("itt06-digg")) {
-                    localStorage.setItem(
-                      "itt06-digg",
-                      JSON.stringify({
+                  if (!window.ITT.User.take("itt06-digg")) {
+                    window.ITT.User.store("itt06-digg", {
                         multiStep: true,
                         real: true,
                         leftover: true,
@@ -351,8 +346,7 @@
                         ts: Date.now(),
                         bury: delta < 0,
                         story: String(row.title || "").slice(0, 80)
-                      })
-                    );
+                      });
                   }
                 } catch (e06) { /* */ }
                 try {

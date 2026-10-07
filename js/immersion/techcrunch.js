@@ -33,18 +33,15 @@
         return;
       }
       try {
-        if (!localStorage.getItem("itt05-tc")) {
-          localStorage.setItem(
-            "itt05-tc",
-            JSON.stringify({
+        if (!window.ITT.User.take("itt05-tc")) {
+          window.ITT.User.store("itt05-tc", {
               multiStep: true,
               real: true,
               official: true,
               year: "2005",
               post: post.slice(0, 80),
               ts: Date.now()
-            })
-          );
+            });
         }
         if (st) {
           st.textContent = "Opened · " + post + " · itt05-tc";

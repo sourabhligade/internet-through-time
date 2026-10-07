@@ -24,17 +24,17 @@
 
   function load() {
     try {
-      return JSON.parse(localStorage.getItem(linksKey()) || "null");
+      return window.ITT.User.take(linksKey(), null);
     } catch (e) {
       return null;
     }
   }
   function save(list) {
-    localStorage.setItem(linksKey(), JSON.stringify(list));
+    window.ITT.User.store(linksKey(), list);
   }
   function loadSort() {
     try {
-      var s = localStorage.getItem(sortKey()) || "hottest";
+      var s = window.ITT.User.take(sortKey()) || "hottest";
       return s === "newest" ? "newest" : "hottest";
     } catch (e) {
       return "hottest";
@@ -42,7 +42,7 @@
   }
   function saveSort(mode) {
     try {
-      localStorage.setItem(sortKey(), mode);
+      window.ITT.User.store(sortKey(), mode);
     } catch (e) { /* */ }
   }
   function esc(s) {
@@ -189,14 +189,14 @@
               ? U().immersionStorageKey("reddit", "itt05")
               : "itt05-reddit";
             try {
-              localStorage.setItem(trailKey, JSON.stringify({
+              window.ITT.User.store(trailKey, {
                 multiStep: true,
                 real: true,
                 official: true,
                 year: U().immersionYear ? U().immersionYear("2005") : "2005",
                 ts: Date.now(),
                 id: String(id || "").slice(0, 40)
-              }));
+              });
             } catch (eTrail) { /* */ }
             try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
           }
@@ -261,7 +261,7 @@
             U().immersionStorageKey
               ? U().immersionStorageKey("imgur-album", "itt10")
               : "itt10-imgur-album";
-          var ig = JSON.parse(localStorage.getItem(igKey) || "null");
+          var ig = window.ITT.User.take(igKey, null);
           var item = ig && ig.items && ig.items[0];
           if (item && item.url) {
             ui.value = item.url;

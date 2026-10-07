@@ -431,3 +431,42 @@ test("Drudge wander blocked save writes no official key", async ({ page }) => {
   expect(seen).toEqual(["ie4", "pathfinder"]);
   await assertNextHidden(page);
 });
+
+test("ITT.User.store and take round-trip an official object, an array, and a string", async ({ page }) => {
+  await page.goto(MOZILLA);
+  await waitUser(page);
+  const out = await page.evaluate(() => {
+    const objKey = "itt98-store-obj";
+    const arrKey = "itt98-store-arr";
+    const strKey = "itt98-store-str";
+    [objKey, arrKey, strKey].forEach((k) => localStorage.removeItem(k));
+    ITT.User.store(objKey, { official: true, year: "1998", email: "a@b.c", q: "hi" });
+    ITT.User.store(arrKey, [{ title: "clip" }], { kind: "official" });
+    ITT.User.store(strKey, "6");
+    const obj = ITT.User.take(objKey);
+    const arr = ITT.User.take(arrKey);
+    const str = ITT.User.take(strKey);
+    const envO = JSON.parse(localStorage.getItem(objKey));
+    const envA = JSON.parse(localStorage.getItem(arrKey));
+    const envS = JSON.parse(localStorage.getItem(strKey));
+    const fin = ITT.User.finished(objKey);
+    [objKey, arrKey, strKey].forEach((k) => localStorage.removeItem(k));
+    return { obj, arr, str, envO, envA, envS, fin };
+  });
+  expect(out.obj.email).toBe("a@b.c");
+  expect(out.obj.official).toBe(true);
+  expect(out.fin).toBe(true);
+  expect(out.envO.v).toBe(1);
+  expect(out.envO.kind).toBe("official");
+  expect(out.envO.real).toBe(true);
+  expect(out.envO.email).toBe("a@b.c");
+  expect(Array.isArray(out.arr)).toBe(true);
+  expect(out.arr[0].title).toBe("clip");
+  expect(out.envA.v).toBe(1);
+  expect(out.envA.kind).toBe("official");
+  expect(Array.isArray(out.envA.body)).toBe(true);
+  expect(out.str).toBe("6");
+  expect(out.envS.v).toBe(1);
+  expect(out.envS.kind).toBe("toy");
+  expect(out.envS.body).toBe("6");
+});

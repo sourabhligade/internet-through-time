@@ -123,7 +123,9 @@ test.describe('2004 real flows — direct pages (no shell)', () => {
       timeout: 10000,
     });
     await expect(page.locator('[data-gmail-invites]')).toContainText('3');
-    expect(await page.evaluate(() => localStorage.getItem('itt04-gmail-invites'))).toBe('3');
+    const invites = await page.evaluate(() => localStorage.getItem('itt04-gmail-invites'));
+    const parsedInvites = JSON.parse(invites);
+    expect(String(parsedInvites && parsedInvites.body != null ? parsedInvites.body : invites)).toBe('3');
   });
 
   test('flickr: upload persists on index stream', async ({ page }) => {

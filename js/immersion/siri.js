@@ -81,13 +81,13 @@
     function pushHistory(q, a) {
       var h = [];
       try {
-        h = JSON.parse(localStorage.getItem(key("siri-history")) || "[]") || [];
+        h = (function (v) { return Array.isArray(v) ? v : []; })(window.ITT.User.take(key("siri-history"), [])) || [];
       } catch (e) {
         h = [];
       }
       h.unshift({ q: q, a: a, ts: Date.now() });
       try {
-        localStorage.setItem(key("siri-history"), JSON.stringify(h.slice(0, 20)));
+        window.ITT.User.store(key("siri-history"), h.slice(0, 20));
       } catch (e2) { /* */ }
     }
 

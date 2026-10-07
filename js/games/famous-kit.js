@@ -63,9 +63,7 @@
       } else {
         try {
           var key = prefixFor(year) + "-game-" + gid;
-          localStorage.setItem(
-            key,
-            JSON.stringify({
+          window.ITT.User.store(key, {
               gameId: gid,
               year: String(year),
               best: score,
@@ -75,8 +73,7 @@
               real: true,
               multiStep: true,
               famous: engine
-            })
-          );
+            });
           wrote = true;
         } catch (eS) {
           wrote = false;

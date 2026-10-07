@@ -5,6 +5,18 @@
 (function (global) {
   "use strict";
 
+  if (!(global.ITT && global.ITT.User && global.ITT.User.take) &&
+      typeof document !== "undefined" && document.readyState === "loading") {
+    try {
+      var cur = document.currentScript;
+      var src = cur && cur.src ? String(cur.src) : "";
+      var utilSrc = src.replace(/\/games\/[^/?#]+\.js(?:\?[^#]*)?$/, "/lib/util.js");
+      if (utilSrc && utilSrc !== src) {
+        document.write('<script src="' + utilSrc.replace(/"/g, "") + '"><\/script>');
+      }
+    } catch (eUser) { /* */ }
+  }
+
   function yearOf() {
     try {
       if (global.ITT && ITT._immersionYear) return String(ITT._immersionYear);
@@ -38,8 +50,8 @@
 
   function loadJSON(key, fallback) {
     try {
-      var raw = localStorage.getItem(key);
-      if (raw != null && raw !== "") return JSON.parse(raw);
+      var raw = window.ITT.User.take(key);
+      if (raw != null && raw !== "") return raw;
     } catch (e) { /* */ }
     return fallback;
   }
@@ -50,7 +62,7 @@
         localStorage.removeItem(key);
         return true;
       }
-      localStorage.setItem(key, JSON.stringify(value));
+      window.ITT.User.store(key, value);
       return true;
     } catch (e) {
       return false;
@@ -386,7 +398,7 @@
   var paused = false;
   var muted = false;
   try {
-    muted = localStorage.getItem("itt-yg-muted") === "1";
+    muted = window.ITT.User.take("itt-yg-muted") === "1";
   } catch (eM0) { /* */ }
 
   var DEFAULT_GOALS = {
@@ -482,7 +494,7 @@
   function toggleMute(host) {
     muted = !muted;
     try {
-      localStorage.setItem("itt-yg-muted", muted ? "1" : "0");
+      window.ITT.User.store("itt-yg-muted", muted ? "1" : "0");
     } catch (eM1) { /* */ }
     paintMuteBtn(host);
     return muted;

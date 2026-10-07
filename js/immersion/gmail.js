@@ -40,42 +40,42 @@
   }
   function loadDrafts() {
     try {
-      return JSON.parse(localStorage.getItem(DRAFTKEY()) || "[]") || [];
+      return (function (v) { return Array.isArray(v) ? v : []; })(window.ITT.User.take(DRAFTKEY(), [])) || [];
     } catch (e) {
       return [];
     }
   }
   function saveDrafts(list) {
-    localStorage.setItem(DRAFTKEY(), JSON.stringify(list));
+    window.ITT.User.store(DRAFTKEY(), list);
   }
   function migrate(primary, legacy) {
     try {
-      if (localStorage.getItem(primary)) return;
-      var leg = localStorage.getItem(legacy);
-      if (leg) localStorage.setItem(primary, leg);
+      if (window.ITT.User.take(primary)) return;
+      var leg = window.ITT.User.take(legacy);
+      if (leg) window.ITT.User.store(primary, leg);
     } catch (e) { /* */ }
   }
   function loadUser() {
     if (pref() === "itt05") migrate(KEY(), "itt04-gmail");
     try {
-      return JSON.parse(localStorage.getItem(KEY()) || "null");
+      return window.ITT.User.take(KEY(), null);
     } catch (e) {
       return null;
     }
   }
   function saveUser(u) {
-    localStorage.setItem(KEY(), JSON.stringify(u));
+    window.ITT.User.store(KEY(), u);
   }
   function loadMsgs() {
     if (pref() === "itt05") migrate(MSG(), "itt04-gmail-msgs");
     try {
-      return JSON.parse(localStorage.getItem(MSG()) || "null");
+      return window.ITT.User.take(MSG(), null);
     } catch (e) {
       return null;
     }
   }
   function saveMsgs(m) {
-    localStorage.setItem(MSG(), JSON.stringify(m));
+    window.ITT.User.store(MSG(), m);
   }
   function esc(s) {
     return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -138,11 +138,13 @@
         try {
           pageKey = (doc.documentElement && doc.documentElement.getAttribute("data-official-key")) || "";
         } catch (eKey) { /* */ }
-        /* 2005 leftover stop 15. 2004 and 2006 Gmail stay their own official saves. */
-        if (year() === "2005" && pageKey === "itt05-gmail") {
+        /* Login on the year key is the finish. 2005 is leftover. Other years are official. */
+        if (pageKey && pageKey === KEY()) {
           user.real = true;
-          user.leftover = true;
-          user.year = "2005";
+          user.multiStep = true;
+          user.year = year();
+          if (year() === "2005") user.leftover = true;
+          else user.official = true;
         }
         saveUser(user);
         var msg = "Signed in. Opening inbox…";
@@ -248,14 +250,14 @@
       if (pref() === "itt05") migrate(INVKEY(), "itt04-gmail-invites");
       function invLeft() {
         try {
-          var n = parseInt(localStorage.getItem(INVKEY()) || "6", 10);
+          var n = parseInt(window.ITT.User.take(INVKEY()) || "6", 10);
           return isNaN(n) ? 6 : n;
         } catch (e) {
           return 6;
         }
       }
       function setInv(n) {
-        localStorage.setItem(INVKEY(), String(n));
+        window.ITT.User.store(INVKEY(), String(n));
       }
       var el = doc.querySelector("[data-gmail-invites]");
       if (el) el.textContent = String(invLeft());
