@@ -19,7 +19,15 @@ Open [http://127.0.0.1:8080](http://127.0.0.1:8080).
 
 ## Production deploy
 
-This repo is **static only** (no build step, no backend, no API keys).
+Deploy is the **repo root as static files** (no backend, no API keys). Hosts should not run a build. The 2015 door is already built into `app/`.
+
+Rebuild that door from the repo root:
+
+```bash
+npm run build
+```
+
+That runs the Vite build in `react/` and writes `app/`. Do not hand-edit `app/assets/`. The HTML years do not use this build.
 
 | Host | How |
 |------|-----|

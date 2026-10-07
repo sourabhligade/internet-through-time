@@ -31,7 +31,7 @@ flowchart TD
   rail --> stop["OfficialStop.jsx prints whenKey"]
 ```
 
-HTML boot is classic scripts, not modules. React is a Vite bundle in `app/assets/`. Rebuild with `cd react && npm run build`. Do not hand-edit `app/assets/`.
+HTML boot is classic scripts, not modules. React is a Vite bundle in `app/assets/`. Rebuild with `npm run build` from the repo root. That runs `npm run build --prefix react`. Do not hand-edit `app/assets/`.
 
 `chrome.js` `ieToolbar(spec)` always loads `assets/period/{spec.chrome}/chrome/btn-*.gif`. `chrome22Toolbar()` returns `""`. The Chrome habit bar is painted inline in `shell.js` when `toolbar === "chrome22"`: text arrows `← → ↻ ⌂`, no GIF, address from `spec.location`. Only 2022 sets that toolbar.
 

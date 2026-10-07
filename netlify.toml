@@ -1,5 +1,7 @@
-# Static museum deploy
+# Static museum deploy. command is empty so Netlify does not run npm run build.
+# That script only refreshes the 2015 door into app/. Publish the repo root as-is.
 [build]
+  command = ""
   publish = "."
 
 [[headers]]

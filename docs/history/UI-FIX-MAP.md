@@ -43,7 +43,7 @@ One CSS rule covers the HTML rooms. Do not edit the 4,268 pages.
 | `?stop=itt17-musically` | “Not TikTok US mass .” | same file, stop n=8 |
 | `/app/index.html#/` | “2023–2025 stay wiped.” | `react/src/App.jsx` `Hall` |
 
-After the React edits, rebuild with `cd react && npm run build`. Do not hand-edit `app/assets/`.
+After the React edits, rebuild with `npm run build` from the repo root. Do not hand-edit `app/assets/`.
 
 ## Pass B — phone shell
 

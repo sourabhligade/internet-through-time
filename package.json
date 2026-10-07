@@ -1,10 +1,11 @@
 {
   "name": "internet-through-time",
   "private": true,
-  "description": "Museum static site \u2014 historical web reconstruction year by year (no build for deploy)",
+  "description": "Museum static site \u2014 historical web reconstruction year by year (deploy serves the repo root; npm run build refreshes the 2015 door)",
   "license": "MIT",
   "scripts": {
     "serve": "python3 -m http.server 8080 --bind 127.0.0.1",
+    "build": "npm run build --prefix react",
     "react:dev": "npm run dev --prefix react",
     "smoke": "python3 scripts/smoke-production.py",
     "smoke:http": "python3 scripts/smoke-production.py --base http://127.0.0.1:8080",
