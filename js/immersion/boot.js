@@ -370,8 +370,9 @@
        leftover markup is common but not universal; deferring unused writers
        cuts the first-visit waterfall on gold rooms. */
     add("immersion/shared.js");
-    add("config/link-seqs.js");
-    add("immersion/link-seq.js");
+    /* Link walks are not a leftover pack. Lean GATE omits them; still load. */
+    addEngine("config/link-seqs.js");
+    addEngine("immersion/link-seq.js");
     add("immersion/residual-placard.js");
     add("immersion/real-gate.js");
     add("immersion/residual-real.js");
@@ -444,8 +445,9 @@
       add("immersion/flow-map.js");
     }
     if (path.indexOf("/playable") !== -1) {
-      add("config/year-extra-games.js");
-      add("immersion/year-playable.js");
+      /* Cabinet data is not a leftover pack. Lean GATE omits it; still load. */
+      addEngine("config/year-extra-games.js");
+      addEngine("immersion/year-playable.js");
     }
     /* Pets.com shop reuses Amazon cart hooks — load the engine off /amazon/. */
     if (path.indexOf("/pets/") !== -1) addEngine("immersion/amazon.js");

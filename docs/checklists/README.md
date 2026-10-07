@@ -6,7 +6,7 @@ One file per year. Tick a line after the link finishes. An empty click stores no
 
 Leftover-2× unique dest catalog `n` is from `e2e/leftover-2x-unique-links.matrix.json`. Forest leftover-10 rows are leftover trail n=11–20 (a sample), not that catalog. Lean leftover rows are the leftover-2× unique dests already on disk. Rails fold unless `?deep=1`. Official dest leftover-2× first paint stays 0.
 
-Ship law: [`../DISK-TRUTH.md`](../DISK-TRUTH.md). Current maps: [`../INCOMPLETE-MAP.md`](../INCOMPLETE-MAP.md) · [`../UNDONE-UNPLANNED-MD.md`](../UNDONE-UNPLANNED-MD.md).
+Ship law: [`../DISK-TRUTH.md`](../DISK-TRUTH.md). Old finding maps live in [`../history/`](../history/).
 
 - [1994](1994.md) — 10 official, leftover trail 10, leftover-2× unique 71, 20 pictures
 - [1995](1995.md) — 10 official, leftover trail 10, leftover-2× unique 117, 27 pictures

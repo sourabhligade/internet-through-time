@@ -262,38 +262,43 @@
           }
         }
         var year = yearOf(doc);
-        var payload = {
-          multiStep: true,
-          real: true,
-          year: year,
-          official: true,
-          ts: Date.now()
-        };
-        if (v) payload.q = v.slice(0, 80);
+        var extra = { official: true, multiStep: true };
+        if (v) extra.q = v.slice(0, 80);
         var wrote = false;
+        var err = null;
         try {
-          localStorage.setItem(key, JSON.stringify(payload));
-          wrote = true;
+          if (!ITT.User || typeof ITT.User.save !== "function") {
+            err = new Error("ITT.User missing");
+          } else {
+            wrote = ITT.User.save({
+              key: key,
+              year: year,
+              kind: "official",
+              extra: extra
+            }) === true;
+            if (!wrote) err = new Error("save refused");
+          }
         } catch (eS) {
           wrote = false;
+          err = eS;
+        }
+        if (!wrote) {
           try {
             if (ITT.debug && ITT.debug.record) {
               ITT.debug.record({
                 year: year,
                 key: key,
                 feature: "official-verb",
-                error: eS && (eS.name || String(eS)),
+                error: err && (err.name || String(err)),
                 note: "official save blocked"
               });
             }
           } catch (eRec) { /* */ }
-        }
-        if (!wrote) {
           hold();
           say(st, "This browser blocked the save.", true);
           return;
         }
-        say(st, "Saved · " + key, false);
+        say(st, "Saved.", false);
         try {
           if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
         } catch (eN) { /* */ }

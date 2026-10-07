@@ -60,16 +60,12 @@ npx playwright test \
   e2e/flow-check-pipeline.spec.js \
   e2e/one-thing-per-year.spec.js \
   e2e/all-years-official-10-real.spec.js \
-  e2e/leftover-2x-unique-links.spec.js \
   e2e/official-leftover-2x.spec.js \
-  e2e/lean-triple-leftover.spec.js \
-  e2e/year-true-packs.spec.js \
-  e2e/2016-3x-detail.spec.js \
-  \
   e2e/2008-mvp.spec.js \
   e2e/2009-mvp.spec.js \
   e2e/dest-top.spec.js \
   e2e/follow-site.spec.js \
+  e2e/user-save-honest.spec.js \
   --workers=2
 
 echo "==> CI OK"

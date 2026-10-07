@@ -1,7 +1,7 @@
 # Prod user-data — 5 phases
 
 **Date:** 2026-10-06  
-**Status:** Phase 2 implemented 2026-10-06. Phase 3 implemented 2026-10-07. Phases 1, 4, and 5 stay research. Implement phase 1 only after `1` / `lgtm`.  
+**Status:** Phase 1 implemented 2026-10-07. Phase 2 implemented 2026-10-06. Phase 3 implemented 2026-10-07. Phase 4 implemented 2026-10-07. Phase 5 stays research.  
 **Law:** `js/year-card.json` + `scripts/itt_gate.py` `SHIP_YEARS`. Hub **26 doors** (HTML 1994–2014, 2016, 2020–2022 + React **2015 only**). Absent: 2017–2019, 2023–2025. Frozen: 1994–2006. Local: http://127.0.0.1:8080. Publish stays gated.
 
 Do not dest-farm, restore 2017, unfreeze forests, or run 1999–2004 `2x` doubling.
@@ -169,6 +169,8 @@ Specs to add or retarget (dest-true pack, not the warehouse):
 
 Do not dest-farm, unfreeze 1994–2006, or run 1999–2004 `2x` doubling. Do not change dest HTML hooks unless a frozen-year double-bind cannot be made honest in JS; prefer JS.
 
+**Implemented 2026-10-07:** `ITT.User` on `js/lib/util.js`. Official, leftover, gold, year-true leftover, Wikipedia, and StumbleUpon write through it. Next reads `finished`. Status is `Saved.` A machine `extra.kind` is stored as `step`, so the envelope `kind` stays `official` or `leftover`. `saveJSON`’s return contract is unchanged.
+
 ---
 
 ## 2 — Lean loads lean
@@ -216,6 +218,8 @@ Lock user-data. Quarantine 22/27-door maps.
 **Quarantine to `docs/history/`:** `PROD-GRADE-AUDIT.md`, `PROD-GRADE-REAUDIT.md`, `PRODUCT-IMPROVE.md`, `UI-FIX-LIST.md`, `UI-FIX-MAP.md`, `INCOMPLETE-MAP.md`, `UNDONE-UNPLANNED-MD.md`, leftover-3× unique year notes, `2014-REACT-FLOW.md`, and every `*-READ-FIRST.md` whose header still says 27 doors / React 2017.
 
 **Keep:** `MUSEUM-GRADE-UI.md`, `docs/checklists/1994.md`–`2022.md`, `FAMOUS-DOUBLE-CRITERIA.md`.
+
+**Implemented 2026-10-07:** Dest-true CI is 12 visitor specs. Dropped from `ci.sh`, `ci.yml`, and `test:e2e:dest-true`: leftover-2× unique link walk, `lean-triple-leftover`, `year-true-packs`, `2016-3x-detail`. `user-save-honest` stays. The allowlist must match those three lists exactly. `YEAR_STARTS` now includes 2011 and 2020–2022, so the hub registers 26 `YYYY-start` trails. `e2e/helpers.js` already treats 2009 as live HTML because the card says `kind: "html"`. 2017 Face ID specs already skip when the year tree is gone. Atlas loads `ui/year/start-data.js`. `js/year-ui/` is deleted. `scripts/gen_year_card.py` writes `js/year-card.js`. Law docs say 26 doors, React 2015 only, and the leanBoot list. 27-door maps and leftover-3× unique notes are in `docs/history/`.
 
 ---
 

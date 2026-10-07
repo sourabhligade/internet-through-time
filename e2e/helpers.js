@@ -7,13 +7,13 @@ const path = require("path");
 const YEAR_CARD = JSON.parse(
   fs.readFileSync(path.join(__dirname, "..", "js", "year-card.json"), "utf8")
 ).years;
-/** Plaque plus 2023–2025 (no tree). 2008 is a live HTML year and is not in this set. */
+/** Plaque plus 2023–2025 (no tree). 2008 and 2009 are live HTML years (kind html on the card) and are not in this set. */
 const BOARDED_YEARS = new Set(
   Object.keys(YEAR_CARD).filter(
     (y) => YEAR_CARD[y].kind === "boarded" || (YEAR_CARD[y].kind === "absent" && Number(y) >= 2023)
   )
 );
-/** Absent doors (2008 is a live HTML year). */
+/** Absent doors. 2008 and 2009 are live HTML, so they are not in this set. */
 const WIPED_YEARS = new Set(
   Object.keys(YEAR_CARD).filter((y) => YEAR_CARD[y].kind === "absent")
 );

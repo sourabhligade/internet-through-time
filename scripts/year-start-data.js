@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Load js/year-ui/start-data.js in Node.
+ * Load ui/year/start-data.js in Node.
  * Star + 6-item directory live there — not in years/YYYY/pages/home.html source.
  */
 "use strict";

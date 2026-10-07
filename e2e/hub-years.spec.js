@@ -73,11 +73,13 @@ test.describe('hub + year shells', () => {
     expect(live.y2024).toBe(false);
     expect(live.y2025).toBe(false);
     expect(live.y).toBe(false);
-    expect(live.trails).toEqual(expect.arrayContaining(['2016-start']));
-    expect(live.trails).not.toEqual(expect.arrayContaining(['2022-start']));
-    expect(live.trails).not.toEqual(expect.arrayContaining(['2021-start']));
+    expect(live.trails).toEqual(expect.arrayContaining([
+      '2011-start', '2016-start', '2020-start', '2021-start', '2022-start',
+    ]));
     expect(live.trails).not.toEqual(expect.arrayContaining(['-start']));
-    expect(live.trails).not.toEqual(expect.arrayContaining(['2023-start', '2024-start', '2025-start']));
+    expect(live.trails).not.toEqual(expect.arrayContaining([
+      '2017-start', '2018-start', '2019-start', '2023-start', '2024-start', '2025-start',
+    ]));
   });
 
   test('hub has no how-to / legal / social footer', async ({ page }) => {

@@ -1,4 +1,4 @@
-/** Year start directory — used by js/year-ui/start.js */
+/** Year start directory — used by ui/year/start.js */
 (function (global) {
  "use strict";
  var ITT = global.ITT || (global.ITT = {});

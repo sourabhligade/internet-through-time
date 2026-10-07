@@ -35,33 +35,50 @@
   }
 
   function saveGold(year, suffix, extra) {
-    var a = api();
-    var payload = { multiStep: true, real: true, year: year, ts: Date.now() };
-    var k;
-    if (extra) for (k in extra) if (Object.prototype.hasOwnProperty.call(extra, k)) payload[k] = extra[k];
     var key = keyOf(year, suffix);
+    var pack = { multiStep: true };
+    var name;
+    if (extra) {
+      for (name in extra) {
+        if (Object.prototype.hasOwnProperty.call(extra, name) && extra[name] !== undefined) {
+          pack[name] = extra[name];
+        }
+      }
+    }
+    pack.multiStep = true;
+    pack.official = true;
     var wrote = false;
+    var err = null;
     try {
-      if (a && a.saveJSON) wrote = a.saveJSON(key, payload) !== false;
-      else {
-        localStorage.setItem(key, JSON.stringify(payload));
-        wrote = true;
+      if (!ITT.User || typeof ITT.User.save !== "function") {
+        err = new Error("ITT.User missing");
+      } else {
+        wrote = ITT.User.save({
+          key: key,
+          year: year != null ? String(year) : "",
+          kind: "official",
+          extra: pack
+        }) === true;
+        if (!wrote) err = new Error("save refused");
       }
     } catch (eS) {
       wrote = false;
+      err = eS;
+    }
+    if (!wrote) {
       try {
         if (ITT.debug && ITT.debug.record) {
           ITT.debug.record({
             year: year,
             key: key,
             feature: "official-dest-gold",
-            error: eS && (eS.name || String(eS)),
+            error: err && (err.name || String(err)),
             note: "gold save blocked"
           });
         }
       } catch (eRec) { /* */ }
+      return "";
     }
-    if (!wrote) return "";
     try {
       if (ITT.revealNextFlow) ITT.revealNextFlow(document);
     } catch (eN) { /* */ }
@@ -97,7 +114,7 @@
         feedback("This browser blocked the save.", st, true);
         return;
       }
-      feedback("Saved · " + key, st);
+      feedback("Saved.", st);
     });
   }
 
@@ -108,7 +125,7 @@
     var sessKey = prefix(year) + "-" + sessSuffix;
     function seen() {
       try {
-        var raw = sessionStorage.getItem(sessKey) || localStorage.getItem(sessKey);
+        var raw = sessionStorage.getItem(sessKey);
         var arr = raw ? JSON.parse(raw) : [];
         return Array.isArray(arr) ? arr : [];
       } catch (e) {
@@ -116,13 +133,9 @@
       }
     }
     function persistSeen(list) {
-      var blob = JSON.stringify(list);
       try {
-        sessionStorage.setItem(sessKey, blob);
+        sessionStorage.setItem(sessKey, JSON.stringify(list));
       } catch (eS) { /* */ }
-      try {
-        localStorage.setItem(sessKey, blob);
-      } catch (eL) { /* */ }
     }
     var arr = seen();
     var i;
@@ -219,7 +232,8 @@
         var input = nap.querySelector("input[name='q'], input[type='text']");
         var q = input ? String(input.value || "").replace(/^\s+|\s+$/g, "") : "";
         if (q.length < 2) return;
-        saveGold(yearOf(doc), "napster", { q: q.slice(0, 80) });
+        var gk = saveGold(yearOf(doc), "napster", { q: q.slice(0, 80) });
+        if (!gk) feedback("This browser blocked the save.", doc.querySelector("[data-official-status]"), true);
       });
     }
   }

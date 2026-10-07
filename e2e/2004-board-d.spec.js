@@ -54,7 +54,7 @@ test("2004 OpenOffice trap writes nothing and the keep writes once", async ({ pa
     () => page.evaluate(() => localStorage.getItem("itt04-openoffice")),
     { timeout: 8000 }
   ).toBeTruthy();
-  await expect(panel.locator("[data-lo-status]")).toContainText("Saved · itt04-openoffice");
+  await expect(panel.locator("[data-lo-status]")).toHaveText("Saved.");
   await expect(panel.locator("[data-next-flow]")).toBeVisible();
   expect(await page.evaluate(() => localStorage.getItem("itt04-thefacebook-networks"))).toBeFalsy();
 });

@@ -3,7 +3,7 @@
 **Date:** 2026-10-04
 **Status:** Map. Phases 1–6 are done. Phase 7 is not started.
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json`. Hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** **2009 is live** (Like `itt09-like`). Forests **1994–2006** stay frozen.
-**Supersedes for this job:** [`UI-FIX-LIST.md`](UI-FIX-LIST.md) and [`UI-FIX-MAP.md`](UI-FIX-MAP.md) still say 27 doors and a React 2017. Do not follow those counts.
+**Supersedes for this job:** [`UI-FIX-LIST.md`](history/UI-FIX-LIST.md) and [`UI-FIX-MAP.md`](history/UI-FIX-MAP.md) still say 27 doors and a React 2017. Do not follow those counts.
 **Looked at:** every year 1994–2022 on `http://127.0.0.1:8080`, desktop 1100px. HTML doors are `years/YYYY/pages/home.html`. 2015 is `/app/index.html#/year/2015`.
 
 Museum grade means a visitor can enter any live door, tell what year they are in from the window, do the one star, and leave by a trail that is the same year. It does not mean more rooms, a shared Chrome skin, or a modern lobby.
@@ -262,7 +262,7 @@ Checklists. Counts are the open boxes on 2026-10-04.
 
 ## Phase 7 — Publish
 
-Not started from a UI edit. `docs/PRODUCT-IMPROVE.md` Slice 0 is still the gate: Actions billing, and one public URL.
+Not started from a UI edit. `docs/history/PRODUCT-IMPROVE.md` Slice 0 is still the gate: Actions billing, and one public URL.
 
 The tree that gets published is the tree after Phases 1–6. It serves the same 26 doors. It does not serve 2017, 2018, 2019, or 2023–2025. It does not turn the hub into a marketing page.
 

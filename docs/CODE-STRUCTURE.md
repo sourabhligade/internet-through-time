@@ -1,10 +1,8 @@
 # Code structure — SRP map
 
-**Date:** 2026-09-20 · **Docs pass:** 2026-09-30  
-**Law:** Year differences live in **config + dest HTML**. Shared behavior lives **once**. See [`ARCHITECTURE.md`](ARCHITECTURE.md).  
-**Do not** dest-farm leftover-20, dest-lock forests, or grow leftover-3× unique catalogs (they are **empty**). Unique leftover-20 is **2017 only**.
-
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **27 doors** (1994–2017 and 2020–2022). **2011 is live HTML** (`years/2011/`, `itt11-gplus`). **2015 and 2017 are React.** **2018, 2019, and 2023–2025 are absent.** Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](UNDONE-UNPLANNED-MD.md).
+**Date:** 2026-10-07  
+**Law:** 26 doors. HTML 1994–2014, 2016, 2020–2022. React **2015 only**. Absent: 2017–2019 and 2023–2025. **leanBoot:** 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2016, 2020, 2021, 2022. Year differences live in **config + dest HTML**. Shared behavior lives **once**. See [`ARCHITECTURE.md`](ARCHITECTURE.md) and [`DISK-TRUTH.md`](DISK-TRUTH.md).  
+**Do not** dest-farm leftover-20, unfreeze 1994–2006, or grow leftover-3× unique catalogs (they are **empty** and off CI).
 
 ## Target layout
 
@@ -17,11 +15,10 @@ js/config/immersion-YYYY.js feature list for that year (data)
 js/browser/ chrome: create, navigate, year-boot
 js/immersion/ dest I/O engines (one job each)
 js/immersion/boot.js year-agnostic loader (reads data-itt-year or /years/YYYY/)
-ui/year/ Starting Point / shell (canonical)
-js/year-ui/ shims → ui/year/ (atlas still loads start-data here)
+ui/year/ Starting Point / shell (canonical). Atlas loads ui/year/start-data.js
 e2e/ Playwright
- dest-true CI pack 18 specs in package.json test:e2e:dest-true / scripts/ci.sh
- warehouse specs leftover densify / leftover-999 — not CI
+ dest-true CI pack 12 specs in package.json test:e2e:dest-true / scripts/ci.sh / .github/workflows/ci.yml
+ warehouse specs (leftover-2× link walk, lean-triple, year-true-packs, 2016-3x-detail, densify, leftover-999, 4×, 5×) stay off that pack
 docs/DISK-TRUTH.md live dest-folder counts
 ```
 

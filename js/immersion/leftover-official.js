@@ -191,7 +191,17 @@
           root = root.parentNode;
         }
         if (!root || !root.querySelector) root = go.parentNode || doc;
-        if (root.setAttribute) root.setAttribute("data-lo-panel", "1");
+        if (root.setAttribute) {
+          root.setAttribute("data-lo-panel", "1");
+          /* YES faces are the dest. Mark them so the fold CSS keeps them on first paint. */
+          if (
+            root.getAttribute("data-itt-yeslo") != null ||
+            root.getAttribute("data-yeslo-panel") != null ||
+            /\bitt-yeslo-flow\b/.test(String(root.className || ""))
+          ) {
+            root.setAttribute("data-itt-dest-true", "1");
+          }
+        }
         renameHook(root, "data-pop-pick", "data-lo-pick");
         renameHook(root, "data-pop-trap", "data-lo-trap");
         renameHook(root, "data-pop-field", "data-lo-field");
@@ -255,6 +265,18 @@
     return out;
   }
 
+  function revealFoldedFiveNext(root) {
+    if (!root || !root.querySelectorAll) return;
+    var fiveNext = root.querySelectorAll("[data-5x-next]");
+    var ni;
+    for (ni = 0; ni < fiveNext.length; ni++) {
+      try {
+        fiveNext[ni].removeAttribute("hidden");
+        fiveNext[ni].style.display = "";
+      } catch (eNx) { /* */ }
+    }
+  }
+
   function bootOne(save) {
     if (!save || save.getAttribute("data-lo-bound") === "1") return;
     save.setAttribute("data-lo-bound", "1");
@@ -284,13 +306,9 @@
     var k = keyOf(year, suffix);
     var multiOn = minPick > 1;
 
-    var saved = null;
-    try {
-      var raw = localStorage.getItem(k);
-      saved = raw ? JSON.parse(raw) : null;
-    } catch (eL) { /* */ }
-    if (saved && saved.real) {
-      say(st, "Saved · " + k, false);
+    if (ITT.User && ITT.User.finished && ITT.User.finished(k)) {
+      say(st, "Saved.", false);
+      if (save.getAttribute("data-lo-5x-folded") === "1") revealFoldedFiveNext(root);
       try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eR) { /* */ }
     }
 
@@ -349,8 +367,7 @@
         if (save.getAttribute("data-lo-pick")) {
           var already = false;
           try {
-            var prev = JSON.parse(localStorage.getItem(k) || "null");
-            already = !!(prev && prev.real);
+            already = !!(ITT.User && ITT.User.finished && ITT.User.finished(k));
           } catch (eAlready) { already = false; }
           if (!already) {
             save.className = String(save.className || "").replace(/\bis-on\b/g, "").replace(/\s+/g, " ").replace(/^\s+|\s+$/g, "");
@@ -398,25 +415,35 @@
         refuse("Wait first. Incomplete never writes.");
         return;
       }
+      var trapOn = false;
+      var trapNodes = root.querySelectorAll("[data-lo-pick]");
+      var ti2;
+      var trapId;
+      for (ti2 = 0; ti2 < trapNodes.length; ti2++) {
+        if (!(/\bis-on\b/.test(trapNodes[ti2].className) || trapNodes[ti2].getAttribute("aria-pressed") === "true" || trapNodes[ti2].getAttribute("data-lo-on") === "1")) continue;
+        trapId = trapNodes[ti2].getAttribute("data-lo-pick") || "";
+        if (trapId === "trap" || trapNodes[ti2].getAttribute("data-lo-trap") === "1" || trapNodes[ti2].getAttribute("data-pop-trap") === "1") trapOn = true;
+      }
+      if (trapOn) {
+        refuse("That pick is the trap. It never writes.");
+        return;
+      }
       if (!field && !picks.length && !reqs.need && !waitBtn) {
         refuse("Dest-true leftover needs a field, pick, tick, or wait. Empty never writes.");
         return;
       }
       var foldedFive = save.getAttribute("data-lo-5x-folded") === "1";
-      var payload = {
-        multiStep: true,
-        real: true,
+      var extra = {
         leftover: true,
-        year: year,
-        kind: kind,
-        pick: needPick || (ids[0] || ""),
-        picks: ids.length ? ids : undefined,
-        q: v ? v.slice(0, 80) : undefined,
-        ts: Date.now()
+        multiStep: true,
+        pick: needPick || (ids[0] || "")
       };
+      if (ids.length) extra.picks = ids;
+      if (v) extra.q = v.slice(0, 80);
+      if (kind) extra.kind = kind;
       if (foldedFive) {
-        payload.pack = "5x";
-        payload.flow = suffix;
+        extra.pack = "5x";
+        extra.flow = suffix;
       }
       try {
         /* Official 10 is n=1–10. Leftover-trail dests (n>10) use leftover
@@ -435,40 +462,43 @@
         }
       } catch (eO) { /* */ }
       var wrote = false;
+      var err = null;
       try {
-        localStorage.setItem(k, JSON.stringify(payload));
-        wrote = true;
+        if (!ITT.User || typeof ITT.User.save !== "function") {
+          err = new Error("ITT.User missing");
+        } else {
+          wrote = ITT.User.save({
+            key: k,
+            year: year,
+            kind: "leftover",
+            extra: extra
+          }) === true;
+          if (!wrote) err = new Error("save refused");
+        }
       } catch (eS) {
         wrote = false;
+        err = eS;
+      }
+      if (!wrote) {
         try {
           if (ITT.debug && ITT.debug.record) {
             ITT.debug.record({
               year: year,
               key: k,
               feature: "leftover-official",
-              error: eS && (eS.name || String(eS)),
+              error: err && (err.name || String(err)),
               note: "leftover save blocked"
             });
           }
         } catch (eRec) { /* */ }
-      }
-      if (!wrote) {
         refuse("This browser blocked the save.");
         return;
       }
-      say(st, "Saved · " + k, false);
-      if (foldedFive) {
-        var fiveNext = root.querySelectorAll("[data-5x-next]");
-        var ni;
-        for (ni = 0; ni < fiveNext.length; ni++) {
-          try {
-            fiveNext[ni].removeAttribute("hidden");
-            fiveNext[ni].style.display = "";
-          } catch (eNx) { /* */ }
-        }
-      }
+      say(st, "Saved.", false);
+      if (foldedFive) revealFoldedFiveNext(root);
       try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
     });
+    if (save.getAttribute("data-lo-pop-folded") === "1") save.setAttribute("data-pop-bound", "1");
   }
 
   function bootProductVerb(doc) {

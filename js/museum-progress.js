@@ -199,6 +199,18 @@
     "2008": yearVisitTour("2008",
       { path: "sites/appstore/index.html", label: "App Store", blurb: "Empty / millions-day-one / Play Store never write. FREE/BUY does.", match: "/appstore/" },
       { path: "sites/chrome/index.html", label: "Chrome leftover", blurb: "Download theater. Not January OS.", match: "/chrome/" }),
+    "2011": yearVisitTour("2011",
+      { path: "sites/googleplus/index.html", label: "Google+ Circle", blurb: "Put people in a circle. The 2011 object.", match: "/googleplus/" },
+      { path: "sites/spotify/index.html", label: "Spotify US", blurb: "Listen. US launch year.", match: "/spotify/" }),
+    "2020": yearVisitTour("2020",
+      { path: "sites/zoom/meeting.html", label: "Zoom Leave", blurb: "Stay / empty never writes. Leave does.", match: "/zoom/meeting" },
+      { path: "sites/houseparty/index.html", label: "Houseparty", blurb: "Not Zoom gold.", match: "/houseparty/" }),
+    "2021": yearVisitTour("2021",
+      { path: "sites/att/index.html", label: "Ask App Not to Track", blurb: "Ask is the save. Allow never writes.", match: "/att/" },
+      { path: "sites/signal/index.html", label: "Signal", blurb: "15 May delay. Not the chip.", match: "/signal/" }),
+    "2022": yearVisitTour("2022",
+      { path: "sites/chatgpt/index.html", label: "ChatGPT Send", blurb: "Empty / GPT-4 never writes. Send does.", match: "/chatgpt/" },
+      { path: "sites/wordle/index.html", label: "Wordle", blurb: "NYT 31 Jan. Not the chip.", match: "/wordle/" }),
   };
 
   var TRAILS = {

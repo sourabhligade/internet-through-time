@@ -282,4 +282,58 @@
     immersionStoragePrefix: immersionStoragePrefix,
     immersionStorageKey: immersionStorageKey
   };
+
+  var USER_KINDS = { official: true, leftover: true, game: true, toy: true, shell: true };
+
+  /**
+   * One visitor write. Envelope kind is the user kind.
+   * A machine kind on extra (query, hops, checks, wait, toggle) is stored as step.
+   */
+  function userSave(opts) {
+    opts = opts || {};
+    var key = opts.key != null ? String(opts.key).replace(/^\s+|\s+$/g, "") : "";
+    if (!key) return false;
+    var kind = opts.kind != null ? String(opts.kind) : "";
+    if (!USER_KINDS[kind]) return false;
+    var year = opts.year != null ? String(opts.year) : "";
+    var rec = { v: 1, year: year, key: key, kind: kind, real: true, ts: Date.now() };
+    var extra = opts.extra;
+    if (extra && typeof extra === "object" && !Array.isArray(extra)) {
+      var name;
+      for (name in extra) {
+        if (!Object.prototype.hasOwnProperty.call(extra, name)) continue;
+        if (extra[name] === undefined) continue;
+        if (name === "v" || name === "real" || name === "key" || name === "ts" || name === "year") continue;
+        if (name === "kind") {
+          if (!USER_KINDS[String(extra[name])]) rec.step = extra[name];
+          continue;
+        }
+        rec[name] = extra[name];
+      }
+    }
+    rec.v = 1;
+    rec.year = year;
+    rec.key = key;
+    rec.kind = kind;
+    rec.real = true;
+    return saveJSON(key, rec) === true;
+  }
+
+  function userRead(key) {
+    if (key == null || String(key).replace(/^\s+|\s+$/g, "") === "") return null;
+    var rec = loadJSON(String(key), null);
+    if (!rec || typeof rec !== "object" || Array.isArray(rec)) return null;
+    return rec;
+  }
+
+  function userFinished(key) {
+    var rec = userRead(key);
+    return !!(rec && rec.real === true);
+  }
+
+  ITT.User = {
+    save: userSave,
+    read: userRead,
+    finished: userFinished
+  };
 })(typeof window !== "undefined" ? window : this);

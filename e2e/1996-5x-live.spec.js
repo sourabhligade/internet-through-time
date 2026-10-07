@@ -41,7 +41,7 @@ test.describe('1996 5× live F1–F5', () => {
       const planet = page.locator('[data-sj-planet="' + id + '"][data-official-gold="1"]');
       await expect(planet).toBeVisible({ timeout: 15000 });
       await planet.click();
-      await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt96-sj-seen') || '')).toContain(id);
+      await expect.poll(async () => page.evaluate(() => sessionStorage.getItem('itt96-sj-seen') || '')).toContain(id);
       if (id !== 'bball') await page.goto('/years/1996/sites/spacejam/index.html');
     }
     await expect.poll(async () => getKey(page, 'itt96-jam'), { timeout: 8000 }).toBeTruthy();

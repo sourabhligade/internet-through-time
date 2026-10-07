@@ -9,20 +9,15 @@ visitor-door.spec.js
 flow-check-pipeline.spec.js
 one-thing-per-year.spec.js
 all-years-official-10-real.spec.js
-leftover-3x-unique.spec.js
-leftover-2x-unique-links.spec.js
-leftover-3x-unique-links.spec.js
 official-leftover-2x.spec.js
-lean-triple-leftover.spec.js
-year-true-packs.spec.js
-2016-3x-detail.spec.js
-2022-mvp.spec.js
-2022-flows.spec.js
+2008-mvp.spec.js
+2009-mvp.spec.js
 dest-top.spec.js
 follow-site.spec.js
+user-save-honest.spec.js
 ```
 
-Shared dest-true I/O: `dest-true-io.js` (`getKey`, `clickOfficialVerb`). Year helpers: `helpers.js`.
+Shared dest-true I/O: `dest-true-io.js` (`getKey`, `clickOfficialVerb`, `assertNoWrite`, `assertEnvelope`, `assertNextHidden`). Year helpers: `helpers.js`. 2009 is a live HTML year on the year card.
 
 **Warehouse specs** (mvp / densify / leftover-999 / leftover-3× matrices) are not dest-true CI. Many skip when a dest folder is gone. Do not add them to the dest-true pack. Do not dest-farm dests to unskip them.
 

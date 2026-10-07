@@ -29,4 +29,4 @@ Home stub:
 <script>ITT.YearUI.paintStart("2016");</script>
 ```
 
-`js/year-ui/*` re-exports these files so older paths still work.
+Atlas and the year shell load these files directly. The `js/year-ui/` shims are gone.

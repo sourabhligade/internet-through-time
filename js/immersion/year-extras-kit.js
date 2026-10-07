@@ -253,6 +253,13 @@
     }
   }
 
+  function storageFinished(k) {
+    try {
+      if (ITT.User && typeof ITT.User.finished === "function") return ITT.User.finished(k) === true;
+    } catch (eF) { /* */ }
+    return false;
+  }
+
   function revealNextFlow(doc) {
     doc = doc || document;
     var els = doc.querySelectorAll("[data-next-flow]");
@@ -269,7 +276,7 @@
         hit = false;
         for (j = 0; j < keys.length; j++) {
           try {
-            if (localStorage.getItem(keys[j])) {
+            if (storageFinished(keys[j])) {
               hit = true;
               break;
             }
@@ -305,7 +312,7 @@
       hit = false;
       for (j = 0; j < keys.length; j++) {
         try {
-          if (localStorage.getItem(keys[j])) {
+          if (storageFinished(keys[j])) {
             hit = true;
             break;
           }

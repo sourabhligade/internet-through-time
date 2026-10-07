@@ -95,14 +95,10 @@
       });
     }
 
-    try {
-      var raw = localStorage.getItem(k);
-      var saved = raw ? JSON.parse(raw) : null;
-      if (saved && saved.real) {
-        say(st, "Still open · " + k, false);
-        try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eR) { /* */ }
-      }
-    } catch (eL) { /* */ }
+    if (ITT.User && ITT.User.finished && ITT.User.finished(k)) {
+      say(st, "Saved.", false);
+      try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eR) { /* */ }
+    }
 
     if (!go) return;
     go.addEventListener("click", function () {
@@ -130,20 +126,30 @@
         say(st, "Type the leftover field (min " + minField + "). Empty never writes.", true);
         return;
       }
-      var payload = {
-        multiStep: true,
-        real: true,
-        leftover: true,
-        year: year,
-        verb: verb,
-        picked: picked,
-        q: v.slice(0, 80),
-        ts: Date.now()
-      };
+      var wrote = false;
       try {
-        localStorage.setItem(k, JSON.stringify(payload));
-      } catch (eS) { /* */ }
-      say(st, verb + " · " + k, false);
+        if (ITT.User && typeof ITT.User.save === "function") {
+          wrote = ITT.User.save({
+            key: k,
+            year: year,
+            kind: "leftover",
+            extra: {
+              leftover: true,
+              multiStep: true,
+              verb: verb,
+              picked: picked,
+              q: v.slice(0, 80)
+            }
+          }) === true;
+        }
+      } catch (eS) {
+        wrote = false;
+      }
+      if (!wrote) {
+        say(st, "This browser blocked the save.", true);
+        return;
+      }
+      say(st, "Saved.", false);
       try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
     });
   }

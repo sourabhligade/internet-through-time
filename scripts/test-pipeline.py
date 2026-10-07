@@ -139,15 +139,12 @@ CI_E2E_ALLOWLIST = (
     "e2e/flow-check-pipeline.spec.js",
     "e2e/one-thing-per-year.spec.js",
     "e2e/all-years-official-10-real.spec.js",
-    "e2e/leftover-2x-unique-links.spec.js",
     "e2e/official-leftover-2x.spec.js",
-    "e2e/lean-triple-leftover.spec.js",
-    "e2e/year-true-packs.spec.js",
-    "e2e/2016-3x-detail.spec.js",
     "e2e/2008-mvp.spec.js",
     "e2e/2009-mvp.spec.js",
     "e2e/dest-top.spec.js",
     "e2e/follow-site.spec.js",
+    "e2e/user-save-honest.spec.js",
 )
 
 
@@ -163,23 +160,30 @@ def test_e2e_suite_present() -> None:
     ok(f"e2e-suite ({len(specs)} specs)")
 
 
+def listed_specs(text: str) -> set[str]:
+    return set(re.findall(r"e2e/[A-Za-z0-9._-]+\.spec\.js", text))
+
+
 def test_ci_e2e_allowlist() -> None:
     """CI runs a named ship-subset visitor/gold pack, not `playwright test` of all e2e/."""
     wf = read(ROOT / ".github/workflows/ci.yml")
     sh = read(ROOT / "scripts/ci.sh")
-    missing = [rel for rel in CI_E2E_ALLOWLIST if rel not in wf or rel not in sh]
-    if missing:
-        fail("ci-e2e-allowlist", "ci.yml/ci.sh missing " + ", ".join(missing))
-        return
-    extra_hint = "This is a subset of e2e/; npm test runs the full tree"
+    dest = json.loads((ROOT / "package.json").read_text(encoding="utf-8"))["scripts"]["test:e2e:dest-true"]
+    want = set(CI_E2E_ALLOWLIST)
     if "dest-true" not in sh.lower() and "dest-true" not in wf.lower():
         fail("ci-e2e-allowlist", "ci.sh / ci.yml should label the pack dest-true I/O")
         return
+    for label, text in (("ci.yml", wf), ("ci.sh", sh), ("package.json dest-true", dest)):
+        got = listed_specs(text)
+        if got != want:
+            missing = sorted(want - got)
+            extra = sorted(got - want)
+            fail("ci-e2e-allowlist", label + " missing " + ", ".join(missing) + " extra " + ", ".join(extra))
+            return
     for rel in CI_E2E_ALLOWLIST:
         if not (ROOT / rel).is_file():
             fail("ci-e2e-allowlist", f"missing {rel}")
             return
-    _ = extra_hint
     ok(f"ci-e2e-allowlist ({len(CI_E2E_ALLOWLIST)} files · not full npm test)")
 
 

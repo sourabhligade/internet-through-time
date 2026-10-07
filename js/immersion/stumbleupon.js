@@ -37,22 +37,43 @@
           if (st) st.textContent = "Stumble first. Empty never writes.";
           return;
         }
-        var wrote = false;
+        var finished = false;
         try {
-          localStorage.setItem("itt02-stumble", JSON.stringify({ multiStep: true, real: true, year: "2002", ts: Date.now(), topic: last }));
-          wrote = true;
+          finished = !!(ITT.User && ITT.User.finished && ITT.User.finished("itt02-stumble"));
+        } catch (eF) { finished = false; }
+        if (finished) {
+          if (st) st.textContent = "Saved.";
+          try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eHave) { /* */ }
+          return;
+        }
+        var wrote = false;
+        var err = null;
+        try {
+          if (!ITT.User || typeof ITT.User.save !== "function") {
+            err = new Error("ITT.User missing");
+          } else {
+            wrote = ITT.User.save({
+              key: "itt02-stumble",
+              year: "2002",
+              kind: "official",
+              extra: { multiStep: true, topic: last }
+            }) === true;
+            if (!wrote) err = new Error("save refused");
+          }
         } catch (eS) {
-          try {
-            if (ITT.debug && ITT.debug.record) {
-              ITT.debug.record({ year: "2002", key: "itt02-stumble", feature: "stumbleupon", error: eS && eS.name, note: "save blocked" });
-            }
-          } catch (eR) { /* */ }
+          wrote = false;
+          err = eS;
         }
         if (!wrote) {
+          try {
+            if (ITT.debug && ITT.debug.record) {
+              ITT.debug.record({ year: "2002", key: "itt02-stumble", feature: "stumbleupon", error: err && (err.name || String(err)), note: "save blocked" });
+            }
+          } catch (eR) { /* */ }
           if (st) st.textContent = "This browser blocked the save.";
           return;
         }
-        if (st) st.textContent = "Saved in this browser.";
+        if (st) st.textContent = "Saved.";
         try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
       });
     }
