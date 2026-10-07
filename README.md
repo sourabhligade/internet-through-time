@@ -37,7 +37,7 @@ npm run ci
 npm run check
 ```
 
-CI on GitHub: `.github/workflows/ci.yml` (static job + a **named ship Playwright pack**, not the full `e2e/` tree). Triggers on `main` / `master` / `museum/*`. `npm test` is the full suite and is **not** what GitHub Actions runs.
+The file `.github/workflows/ci.yml` is the static job plus a named ship Playwright pack, not the full `e2e/` tree. It is set to run on `main`, `master`, and `museum/*`. GitHub does not start those jobs: the account is billing-locked (issue #17). `npm run ci` is the gate that actually runs. `npm test` is the full suite.
 
 **Requirements for production:**
 - Single origin for hub + years (iframe + localStorage + script injection)

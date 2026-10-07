@@ -81,7 +81,7 @@ A 9,588-page museum that is not on a URL is a private corpus.
 
 - [x] `museum/1994-2020-lean` pushed. The 2026-09-13 snapshot said 26 hub cards. The live hub is 22. 2022 is a live lean door.
 - [x] Deploy configs: `netlify.toml` publish `.`, `vercel.json` trailingSlash + year page rewrites, `.github/workflows/pages.yml` is **workflow_dispatch only**. Repo root is the document root.
-- [ ] Unlock GitHub Actions billing or stop claiming CI (not verified this pass).
+- [x] Stop claiming GitHub Actions CI. Jobs do not start while the account is billing-locked (issue #17). The gate that runs is local `npm run ci`. Billing is not unlocked.
 - [x] Public URL: https://sourabhligade.github.io/internet-through-time/ (GitHub Pages legacy, branch `museum/1994-2020-lean`, 2026-10-07). Actions billing is still locked, so `.github/workflows/pages.yml` was not the publisher.
 
 ### Slice 1 — Visitor product is 22 open doors + the walks
