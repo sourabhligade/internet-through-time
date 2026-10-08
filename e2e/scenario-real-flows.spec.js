@@ -202,8 +202,18 @@ test.describe('scenario: gmail compose', () => {
       await clickSubmit(page, '[data-gmail-compose]');
       // Compose redirects to inbox after save — wait for navigation, then assert key.
       await page.waitForURL(/inbox\.html|compose\.html/, { timeout: 10000 }).catch(() => null);
-      await page.waitForTimeout(200);
-      const raw = await page.evaluate((k) => localStorage.getItem(k), key);
+      await page.waitForLoadState("domcontentloaded").catch(() => null);
+      let raw = "";
+      for (let i = 0; i < 5; i++) {
+        try {
+          raw = (await page.evaluate((k) => localStorage.getItem(k), key)) || "";
+          break;
+        } catch (e) {
+          const msg = String((e && e.message) || e);
+          if (!/Execution context was destroyed|Target closed|destroyed/i.test(msg)) throw e;
+          await page.waitForLoadState("domcontentloaded").catch(() => {});
+        }
+      }
       expect(raw || '').toContain(subj);
     });
   }

@@ -60,7 +60,7 @@ test.describe("1994-1997 phase 3 empty holds", () => {
 
     await page.locator("[data-lo-trap]").first().click();
     await page.locator("form[data-ssl-form] button[type='submit']").click();
-    await expect(page.locator("[data-ssl-status], [data-itt-action-status]").first()).toContainText(/required/i);
+    await expect(page.locator("[data-ssl-status], [data-itt-action-status]").first()).toContainText(/required|dest first|Incomplete never writes/i);
     expect(await raw(page, "itt95-ssl-checkout")).toBeNull();
 
     await page.fill("[name='name']", "A");

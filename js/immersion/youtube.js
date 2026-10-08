@@ -159,7 +159,12 @@
     }
   }
   function save(list) {
-    window.ITT.User.store(uploadsKey(), list, { kind: "official" });
+    try {
+      window.ITT.User.store(uploadsKey(), list, { kind: "official" });
+      return true;
+    } catch (e) {
+      return false;
+    }
   }
   function loadViews() {
     try {
@@ -362,20 +367,16 @@
           multiStep: true,
           year: String(yearNum())
         });
-        save(cur.slice(0, 40));
+        if (!save(cur.slice(0, 40))) {
+          if (st) st.textContent = "This browser blocked the save.";
+          return false;
+        }
         views = loadViews();
         if (!views[title]) views[title] = 1;
         saveViews(views);
         markDidUpload(title);
         if (st) {
-          var extra = yearShareBits(title);
-          st.innerHTML =
-            "Upload complete — your video is on the list. " +
-            '<a href="index.html">Videos</a> · ' +
-            '<a href="' +
-            watchHref(title) +
-            '"><b>Watch</b></a>' +
-            (extra.length ? " · " + extra.join(" · ") : "");
+          st.textContent = "Saved.";
         }
         form.reset();
         var homeList = doc.querySelector("[data-yt-list]");

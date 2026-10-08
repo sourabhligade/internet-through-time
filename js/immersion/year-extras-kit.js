@@ -258,7 +258,7 @@
     try {
       if (!(ITT.User && typeof ITT.User.finished === "function")) return false;
       if (ITT.User.finished(k) !== true) return false;
-      /* 1994–1997 stars and 1998–2001 Lucky/Wikipedia wait for kind official.
+      /* 1994–2001 year stars wait for kind official.
          Additive keys only. revealNextFlow(doc) signature stays. */
       if (
         k === "itt94-csotd" ||
@@ -268,7 +268,25 @@
         k === "itt98-lucky" ||
         k === "itt99-aim" ||
         k === "itt00-mapquest" ||
-        k === "itt01-wiki"
+        k === "itt01-wiki" ||
+        k === "itt02-stumble" ||
+        k === "itt03-photobucket" ||
+        k === "itt04-thefacebook-networks" ||
+        k === "itt05-yt-uploads" ||
+        k === "itt06-tweets" ||
+        k === "itt07-iphone" ||
+        k === "itt08-apps" ||
+        k === "itt09-like" ||
+        k === "itt10-ig-posts" ||
+        k === "itt11-gplus" ||
+        k === "itt12-ig-android" ||
+        k === "itt12-facebook" ||
+        k === "itt13-vine-posts" ||
+        k === "itt14-wa-install" ||
+        k === "itt16-ig-stories" ||
+        k === "itt20-zoom" ||
+        k === "itt21-att" ||
+        k === "itt22-chatgpt"
       ) {
         var rec = null;
         try {
@@ -328,6 +346,7 @@
     var keys;
     var hit;
     for (i = 0; i < els.length; i++) {
+      if (inside4x(els[i])) continue;
       keys = String(els[i].getAttribute("data-next-when-key") || "")
         .split(/[\s,]+/)
         .filter(Boolean);

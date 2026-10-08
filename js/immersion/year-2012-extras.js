@@ -51,7 +51,7 @@
         feedback("This browser blocked the save.", st, { error: true });
         return;
       }
-      feedback("Saved · " + key(suffix), st);
+      feedback("Saved.", st);
       reveal(doc);
     });
   }
@@ -78,25 +78,30 @@
       });
     }
     var share = doc.querySelector("[data-ig12-share]");
+    var verbOwned = share.getAttribute("data-official-verb") != null;
     share.addEventListener("click", function () {
       if (!selected) {
-        if (st) st.textContent = "Pick a named 2012 filter first (X-Pro II / Lo-Fi / Earlybird).";
+        if (!verbOwned && st) st.textContent = "Pick a named 2012 filter first (X-Pro II / Lo-Fi / Earlybird).";
         return;
       }
       var cap = val(doc, "[data-ig12-caption]");
       var payload = blob({
         filter: selected,
         platform: "android",
-        photo: photo || ""
+        photo: photo || "",
+        official: true
       });
       if (cap) payload.caption = cap;
-      saveJSON(key("ig-android"), payload);
+      if (!saveJSON(key("ig-android"), payload)) {
+        feedback("This browser blocked the save.", st, { error: true });
+        return;
+      }
       if (feed) {
         feed.innerHTML = "<div class='feed-item'><b>" + selected + "</b> · Android" +
           (photo ? " · " + photo : "") +
           (cap ? " · " + cap : "") + "</div>" + (feed.innerHTML || "");
       }
-      feedback("Shared · " + selected + " · " + key("ig-android"), st);
+      feedback("Saved.", st);
       reveal(doc);
     });
   }
@@ -231,7 +236,7 @@
         feedback("This browser blocked the save.", st, { error: true });
         return;
       }
-      feedback("Saved · " + key(suffix), st);
+      feedback("Saved.", st);
       reveal(doc);
     });
   }
@@ -408,8 +413,7 @@
     var btn = doc.querySelector("[data-game-start]");
     if (!host || !btn) return;
     btn.addEventListener("click", function () {
-      saveJSON(key("game-guessdoodle"), blob({ started: true, gameId: "guessdoodle" }));
-      reveal(doc);
+      /* Start writes nothing. A score above 0 still may. */
     });
   }
 

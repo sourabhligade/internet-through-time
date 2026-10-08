@@ -28,6 +28,11 @@ async function clear(page, keys) {
 
 test("1995 Pathfinder empty and trap never write", async ({ page }) => {
   await page.goto("/years/1995/sites/pathfinder/index.html", { waitUntil: "domcontentloaded" });
+  await page.waitForFunction(() => {
+    const verbs = document.querySelectorAll("[data-official-verb]");
+    if (!verbs.length) return document.readyState === "complete";
+    return [...verbs].every((el) => el.getAttribute("data-official-verb-bound") === "1");
+  }, null, { timeout: 15000 });
   await clear(page, ["itt95-pathfinder"]);
   await page.locator("[data-official-verb]").click();
   expect(await item(page, "itt95-pathfinder")).toBeNull();
@@ -129,6 +134,11 @@ test("2000 AllAdvantage, Boo.com, and Webvan empty clicks never write", async ({
 
 test("2001 Wikipedia one character never writes", async ({ page }) => {
   await page.goto("/years/2001/sites/wikipedia/edit.html", { waitUntil: "domcontentloaded" });
+  await page.waitForFunction(() => {
+    const verbs = document.querySelectorAll("[data-official-verb], [data-wiki-save]");
+    if (!verbs.length) return document.readyState === "complete";
+    return [...verbs].every((el) => el.getAttribute("data-official-verb-bound") === "1" || el.getAttribute("data-wiki-bound") === "1");
+  }, null, { timeout: 15000 });
   await clear(page, ["itt01-wiki", "itt01-wiki-pages"]);
   await page.locator("[data-wiki-body]").fill("x");
   await page.locator("[data-wiki-save]").click();
@@ -152,6 +162,10 @@ test("2003 LinkedIn load and empty invite never write", async ({ page }) => {
 
 test("2005 YouTube empty description never writes", async ({ page }) => {
   await page.goto("/years/2005/sites/youtube/upload.html", { waitUntil: "domcontentloaded" });
+  await page.waitForFunction(() => {
+    const f = document.querySelector("form[data-yt-upload]");
+    return !!(f && f.getAttribute("data-yt-bound") === "1");
+  }, null, { timeout: 15000 });
   await clear(page, ["itt05-yt-uploads"]);
   await page.locator("form[data-yt-upload] input[name=title]").fill("elephant");
   await page.locator("form[data-yt-upload] [data-yt-req]").nth(0).check();

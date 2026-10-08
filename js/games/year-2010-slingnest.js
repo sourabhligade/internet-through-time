@@ -55,16 +55,6 @@
   function spawnPebble(vx, vy) {
     pebble = { x: sling.x, y: sling.y, vx: vx, vy: vy, r: 9, live: true };
   }
-  function autoDemo() {
-    /* Practice pebble: land on the near nest so Start always scores. */
-    spawnPebble(6.2, -7.4);
-    if (nests[0] && !nests[0].hit) {
-      nests[0].hit = true;
-      score += 50;
-      if (scoreEl) scoreEl.textContent = String(score);
-      persist();
-    }
-  }
   function draw() {
     ctx.clearRect(0, 0, W, H);
     ctx.fillStyle = "#87ceeb";
@@ -139,8 +129,7 @@
     score = 0;
     if (scoreEl) scoreEl.textContent = "0";
     resetNests();
-    autoDemo();
-    setStatus("Demo pebble away · drag from the sling for more");
+    setStatus("Drag from the sling. Start never writes.");
     if (raf) cancelAnimationFrame(raf);
     raf = requestAnimationFrame(step);
   }

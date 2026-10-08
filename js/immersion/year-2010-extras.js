@@ -28,8 +28,10 @@
   function bootIpad(doc) {
     var btn = doc.querySelector("[data-ipad-order]");
     if (!btn) return;
+    var verbOwned = btn.getAttribute("data-official-verb") != null;
     var st = doc.querySelector("[data-ipad-status]");
     btn.addEventListener("click", function () {
+      if (verbOwned) return;
       var cap = "";
       var radio = "";
       var caps = doc.querySelectorAll("[name='ipad-cap']");
@@ -41,10 +43,10 @@
         feedback("Pick capacity and Wi-Fi or 3G first. Empty order writes nothing.", st, { error: true });
         return;
       }
-      var payload = blob({ capacity: cap, radio: radio });
+      var payload = blob({ capacity: cap, radio: radio, official: true });
       saveJSON(key("ipad"), payload);
       saveJSON(key("ipad-order"), payload);
-      feedback("Ordered iPad " + cap + " · " + radio, st);
+      feedback("Saved.", st);
       try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
     });
   }

@@ -16,9 +16,9 @@
     if (extra) for (k in extra) if (Object.prototype.hasOwnProperty.call(extra, k)) o[k] = extra[k];
     return o;
   }
-  function saveJSON(k, o) {
+  function saveJSON(k, o, opts) {
     try {
-      window.ITT.User.store(k, o);
+      window.ITT.User.store(k, o, opts || {});
       return true;
     } catch (e) {
       try {
@@ -80,27 +80,19 @@
         say(st, "280 / For You never writes.", true);
       });
     }
+    var verbOwned = btn.getAttribute("data-official-verb") != null;
     btn.addEventListener("click", function () {
       if (ticks(doc, "[data-tw06-req]") < 2) {
-        say(st, "Tick both honesties first. Incomplete never writes.", true);
+        if (!verbOwned) say(st, "Tick both honesties first. Incomplete never writes.", true);
         return;
       }
       var t = val(doc, "[data-tw06-body]");
       if (!t || t.length < 2) {
-        say(st, "Empty update never writes.", true);
+        if (!verbOwned) say(st, "Empty update never writes.", true);
         return;
       }
       if (t.length > 140) {
-        say(st, "Still 140 in 2006. Over 140 never writes.", true);
-        return;
-      }
-      if (!saveJSON(key("tweets"), blob({
-        text: t.slice(0, 140),
-        chars: t.length,
-        sms: "40404",
-        limit: 140
-      }))) {
-        say(st, "This browser blocked the save.", true);
+        if (!verbOwned) say(st, "Still 140 in 2006. Over 140 never writes.", true);
         return;
       }
       if (tl) {
@@ -109,7 +101,18 @@
       }
       if (ta) ta.value = "";
       paint();
-      say(st, "Posted · 140 · " + key("tweets"));
+      if (verbOwned) return;
+      if (!saveJSON(key("tweets"), blob({
+        text: t.slice(0, 140),
+        chars: t.length,
+        sms: "40404",
+        limit: 140,
+        official: true
+      }), { kind: "official" })) {
+        say(st, "This browser blocked the save.", true);
+        return;
+      }
+      say(st, "Saved.");
       reveal(doc);
     });
   }
@@ -184,7 +187,7 @@
         say(st, "Click a clip in the list first. Empty Watch never writes.", true);
         return;
       }
-      if (!saveJSON(key("yt"), blob({ watch: true, independent: true }))) {
+      if (!saveJSON(key("yt"), blob({ watch: true, independent: true, official: true }), { kind: "official" })) {
         say(st, "This browser blocked the save.", true);
         return;
       }

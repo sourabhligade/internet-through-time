@@ -2868,6 +2868,7 @@
       "dest": "aim",
       "path": "years/1999/sites/aim/index.html",
       "hooks": [
+        "data-official-verb",
         "data-lo-save"
       ],
       "leftover2x": false,

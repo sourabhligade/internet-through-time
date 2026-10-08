@@ -98,13 +98,17 @@
         feedback("Vine is 6 seconds. 15s never writes.", st, { error: true });
       });
     }
+    var verbOwned = btn.getAttribute("data-official-verb") != null;
     btn.addEventListener("click", function () {
       if (held < 6) {
-        feedback("Hold a loop first. Empty never writes.", st, { error: true });
+        if (!verbOwned) feedback("Hold a loop first. Empty never writes.", st, { error: true });
         return;
       }
-      saveJSON(key("vine-posts"), blob({ seconds: Math.min(held, 6), date: "2013-01-24" }));
-      feedback("Vine 6s · " + key("vine-posts"), st);
+      if (!saveJSON(key("vine-posts"), blob({ seconds: Math.min(held, 6), date: "2013-01-24", official: true }))) {
+        feedback("This browser blocked the save.", st, { error: true });
+        return;
+      }
+      feedback("Saved.", st);
       reveal(doc);
     });
   }

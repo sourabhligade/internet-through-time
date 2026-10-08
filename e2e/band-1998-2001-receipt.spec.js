@@ -53,9 +53,7 @@ test.describe("1998-2001 phase 4 receipt", () => {
     const saved = await envelope(page, "itt98-lucky");
     expect(saved && saved.kind).toBe("official");
     expect(saved.real).toBe(true);
-
-    await page.goto("/years/1998/sites/google/lucky.html");
-    await verbReady(page);
+    await expect(page).toHaveURL(/\/years\/1998\/sites\/google\/lucky\.html/);
     await expect(luckyStatus(page)).toHaveText("Saved.");
     await expect(luckyStatus(page)).not.toContainText(/itt98-/);
     await expect(nextFor(page, "itt98-lucky")).toBeVisible();

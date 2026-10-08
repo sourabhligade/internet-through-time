@@ -89,7 +89,7 @@ test.describe("Chrome habit shell labels", () => {
     const room = await openReactStop(page, "2015", "itt15-periscope");
     await completeReactStop(page, room);
     const status = room.locator(".status");
-    await expect(status).toHaveText("Saved in this browser.");
+    await expect(status).toHaveText("Saved.");
     await expect(status).not.toContainText("itt15-");
     await expect(status).not.toContainText("itt17-");
     await expect(room).toHaveAttribute("id", "itt15-periscope");

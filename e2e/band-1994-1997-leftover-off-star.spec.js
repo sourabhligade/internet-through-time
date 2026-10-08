@@ -55,6 +55,14 @@ test.describe("1994-1997 phase 5 leftover off the star", () => {
       localStorage.removeItem("itt94-csotd");
       localStorage.removeItem("itt94-gold-lx");
     });
+    expect(
+      await page.evaluate(() => {
+        const gold = document.querySelector("[data-itt-gold-lx]");
+        const exhibit = document.querySelector("[data-official-verb]");
+        if (!gold || !exhibit) return false;
+        return gold.getBoundingClientRect().top + 1 >= exhibit.getBoundingClientRect().bottom;
+      })
+    ).toBe(true);
     const panel = page.locator("[data-itt-gold-lx]");
     await panel.locator("[data-lo-trap]").click();
     await expect(panel.locator("[data-lo-status]")).toContainText(/never writes/i);

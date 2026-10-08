@@ -1,0 +1,2425 @@
+{
+  "band": "2010-2013",
+  "source": "scripts/gen_band_register.py",
+  "hooks": [
+    "data-official-verb",
+    "data-lo-save",
+    "data-ytl-go",
+    "data-yt-upload",
+    "data-game-start",
+    "data-wiki-save",
+    "data-su-stumble"
+  ],
+  "census": {
+    "html": 222,
+    "savePages": 182,
+    "destFolders": 150,
+    "trailRows": 39,
+    "leftover2x": 51,
+    "officialStops": 39,
+    "byYear": {
+      "2010": {
+        "html": 61,
+        "savePages": 48,
+        "destFolders": 29,
+        "trailRows": 10,
+        "leftover2x": 12
+      },
+      "2011": {
+        "html": 38,
+        "savePages": 38,
+        "destFolders": 37,
+        "trailRows": 10,
+        "leftover2x": 0
+      },
+      "2012": {
+        "html": 70,
+        "savePages": 49,
+        "destFolders": 32,
+        "trailRows": 10,
+        "leftover2x": 12
+      },
+      "2013": {
+        "html": 53,
+        "savePages": 47,
+        "destFolders": 52,
+        "trailRows": 9,
+        "leftover2x": 27
+      }
+    }
+  },
+  "rows": [
+    {
+      "year": "2010",
+      "dest": "android",
+      "path": "years/2010/sites/android/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "angry",
+      "path": "years/2010/sites/angry/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "chrome",
+      "path": "years/2010/sites/chrome/about.html",
+      "hooks": [
+        "data-ytl-go"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "chromewebstore",
+      "path": "years/2010/sites/chromewebstore/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "cityville",
+      "path": "years/2010/sites/cityville/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "facebook",
+      "path": "years/2010/sites/facebook/about.html",
+      "hooks": [
+        "data-ytl-go"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "facebook",
+      "path": "years/2010/sites/facebook/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 4,
+      "whenKey": "itt10-fb-og",
+      "name": "Open Graph"
+    },
+    {
+      "year": "2010",
+      "dest": "farmville",
+      "path": "years/2010/sites/farmville/about.html",
+      "hooks": [
+        "data-ytl-go"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "farmville",
+      "path": "years/2010/sites/farmville/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 5,
+      "whenKey": "itt10-farm",
+      "name": "FarmVille peak"
+    },
+    {
+      "year": "2010",
+      "dest": "flipboard",
+      "path": "years/2010/sites/flipboard/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "foursquare",
+      "path": "years/2010/sites/foursquare/about.html",
+      "hooks": [
+        "data-ytl-go"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "foursquare",
+      "path": "years/2010/sites/foursquare/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 7,
+      "whenKey": "itt10-4sq",
+      "name": "Foursquare"
+    },
+    {
+      "year": "2010",
+      "dest": "google",
+      "path": "years/2010/sites/google/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "googlebuzz",
+      "path": "years/2010/sites/googlebuzz/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "hulu",
+      "path": "years/2010/sites/hulu/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "ibooks",
+      "path": "years/2010/sites/ibooks/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "imgur",
+      "path": "years/2010/sites/imgur/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 6,
+      "whenKey": "itt10-imgur",
+      "name": "Imgur"
+    },
+    {
+      "year": "2010",
+      "dest": "instagram",
+      "path": "years/2010/sites/instagram/about.html",
+      "hooks": [
+        "data-ytl-go"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "instagram",
+      "path": "years/2010/sites/instagram/index.html",
+      "hooks": [
+        "data-official-verb",
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 1,
+      "whenKey": "itt10-ig-posts",
+      "name": "Instagram"
+    },
+    {
+      "year": "2010",
+      "dest": "ipad",
+      "path": "years/2010/sites/ipad/about.html",
+      "hooks": [
+        "data-ytl-go"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "ipad",
+      "path": "years/2010/sites/ipad/order.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 3,
+      "whenKey": "itt10-ipad",
+      "name": "iPad"
+    },
+    {
+      "year": "2010",
+      "dest": "iphone",
+      "path": "years/2010/sites/iphone/about.html",
+      "hooks": [
+        "data-ytl-go"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "iphone",
+      "path": "years/2010/sites/iphone/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 2,
+      "whenKey": "itt10-iphone4",
+      "name": "iPhone 4"
+    },
+    {
+      "year": "2010",
+      "dest": "kinect",
+      "path": "years/2010/sites/kinect/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "minecraft",
+      "path": "years/2010/sites/minecraft/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "path",
+      "path": "years/2010/sites/path/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/extra-a.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/extra-b.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/extra-c.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/extra-d.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/extra-e.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/extra-f.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/extra-g.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/extra-h.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/extra-i.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/famous.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/game-2.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/game-3.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/game-4.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/game-5.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/game.html",
+      "hooks": [
+        "data-official-verb",
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 10,
+      "whenKey": "itt10-game-slingnest",
+      "name": "Sling Nest"
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/more-a.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/more-b.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/more-c.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "playable",
+      "path": "years/2010/sites/playable/more-d.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "twitter",
+      "path": "years/2010/sites/twitter/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 8,
+      "whenKey": "itt10-tweets",
+      "name": "Twitter"
+    },
+    {
+      "year": "2010",
+      "dest": "youtube",
+      "path": "years/2010/sites/youtube/about.html",
+      "hooks": [
+        "data-ytl-go"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "youtube",
+      "path": "years/2010/sites/youtube/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 9,
+      "whenKey": "itt10-yt",
+      "name": "YouTube"
+    },
+    {
+      "year": "2011",
+      "dest": "airbnb",
+      "path": "years/2011/sites/airbnb/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 6,
+      "whenKey": "itt11-airbnb",
+      "name": "Airbnb"
+    },
+    {
+      "year": "2011",
+      "dest": "chromebook",
+      "path": "years/2011/sites/chromebook/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "codecademy",
+      "path": "years/2011/sites/codecademy/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "facebook",
+      "path": "years/2011/sites/facebook/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 4,
+      "whenKey": "itt11-timeline",
+      "name": "Timeline"
+    },
+    {
+      "year": "2011",
+      "dest": "gmusic",
+      "path": "years/2011/sites/gmusic/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "googleplus",
+      "path": "years/2011/sites/googleplus/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 1,
+      "whenKey": "itt11-gplus",
+      "name": "Google+"
+    },
+    {
+      "year": "2011",
+      "dest": "googlewallet",
+      "path": "years/2011/sites/googlewallet/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "grouponipo",
+      "path": "years/2011/sites/grouponipo/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "honeycomb",
+      "path": "years/2011/sites/honeycomb/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "icloud",
+      "path": "years/2011/sites/icloud/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "ics",
+      "path": "years/2011/sites/ics/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "imessage",
+      "path": "years/2011/sites/imessage/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "instagram",
+      "path": "years/2011/sites/instagram/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 7,
+      "whenKey": "itt11-ig",
+      "name": "Instagram iOS"
+    },
+    {
+      "year": "2011",
+      "dest": "ios5",
+      "path": "years/2011/sites/ios5/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "ipad",
+      "path": "years/2011/sites/ipad/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 5,
+      "whenKey": "itt11-ipad2",
+      "name": "iPad 2"
+    },
+    {
+      "year": "2011",
+      "dest": "iphone",
+      "path": "years/2011/sites/iphone/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 3,
+      "whenKey": "itt11-siri",
+      "name": "Siri"
+    },
+    {
+      "year": "2011",
+      "dest": "kindlefire",
+      "path": "years/2011/sites/kindlefire/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "line",
+      "path": "years/2011/sites/line/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "linkedin",
+      "path": "years/2011/sites/linkedin/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "minecraft",
+      "path": "years/2011/sites/minecraft/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "nintendo3ds",
+      "path": "years/2011/sites/nintendo3ds/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "nytpaywall",
+      "path": "years/2011/sites/nytpaywall/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "pandora",
+      "path": "years/2011/sites/pandora/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "pinterest",
+      "path": "years/2011/sites/pinterest/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "playable",
+      "path": "years/2011/sites/playable/famous.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "playable",
+      "path": "years/2011/sites/playable/game.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 10,
+      "whenKey": "itt11-game-letterswap",
+      "name": "Letter Swap"
+    },
+    {
+      "year": "2011",
+      "dest": "psnhack",
+      "path": "years/2011/sites/psnhack/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "qwikster",
+      "path": "years/2011/sites/qwikster/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 9,
+      "whenKey": "itt11-qwikster",
+      "name": "Qwikster"
+    },
+    {
+      "year": "2011",
+      "dest": "skypebuy",
+      "path": "years/2011/sites/skypebuy/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "skyrim",
+      "path": "years/2011/sites/skyrim/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "snapchat",
+      "path": "years/2011/sites/snapchat/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "spotify",
+      "path": "years/2011/sites/spotify/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 2,
+      "whenKey": "itt11-spotify",
+      "name": "Spotify US"
+    },
+    {
+      "year": "2011",
+      "dest": "stripe",
+      "path": "years/2011/sites/stripe/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "temple",
+      "path": "years/2011/sites/temple/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "twitch",
+      "path": "years/2011/sites/twitch/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "twitter",
+      "path": "years/2011/sites/twitter/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 8,
+      "whenKey": "itt11-tweets",
+      "name": "Twitter"
+    },
+    {
+      "year": "2011",
+      "dest": "wechat",
+      "path": "years/2011/sites/wechat/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2011",
+      "dest": "zyngaipo",
+      "path": "years/2011/sites/zyngaipo/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "coinbase",
+      "path": "years/2012/sites/coinbase/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "coursera",
+      "path": "years/2012/sites/coursera/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "duolingo",
+      "path": "years/2012/sites/duolingo/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "edx",
+      "path": "years/2012/sites/edx/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "facebook",
+      "path": "years/2012/sites/facebook/about.html",
+      "hooks": [
+        "data-ytl-go"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "facebook",
+      "path": "years/2012/sites/facebook/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 10,
+      "whenKey": "itt12-facebook",
+      "name": "Facebook 1B"
+    },
+    {
+      "year": "2012",
+      "dest": "facebook",
+      "path": "years/2012/sites/facebook/ipo.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 3,
+      "whenKey": "itt12-fb-ipo",
+      "name": "Facebook IPO"
+    },
+    {
+      "year": "2012",
+      "dest": "flipboard",
+      "path": "years/2012/sites/flipboard/about.html",
+      "hooks": [
+        "data-ytl-go"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "flipboard",
+      "path": "years/2012/sites/flipboard/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 8,
+      "whenKey": "itt12-pop-flipboard",
+      "name": "Flipboard"
+    },
+    {
+      "year": "2012",
+      "dest": "googleplay",
+      "path": "years/2012/sites/googleplay/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "instagram",
+      "path": "years/2012/sites/instagram/about.html",
+      "hooks": [
+        "data-ytl-go"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "instagram",
+      "path": "years/2012/sites/instagram/android.html",
+      "hooks": [
+        "data-official-verb",
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 1,
+      "whenKey": "itt12-ig-android",
+      "name": "Instagram Android"
+    },
+    {
+      "year": "2012",
+      "dest": "ios6",
+      "path": "years/2012/sites/ios6/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "iphone",
+      "path": "years/2012/sites/iphone/maps.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 4,
+      "whenKey": "itt12-maps",
+      "name": "Maps flop"
+    },
+    {
+      "year": "2012",
+      "dest": "jellybean",
+      "path": "years/2012/sites/jellybean/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "kindlefirehd",
+      "path": "years/2012/sites/kindlefirehd/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "medium",
+      "path": "years/2012/sites/medium/about.html",
+      "hooks": [
+        "data-ytl-go"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "medium",
+      "path": "years/2012/sites/medium/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 6,
+      "whenKey": "itt12-pop-medium",
+      "name": "Medium"
+    },
+    {
+      "year": "2012",
+      "dest": "nexus7",
+      "path": "years/2012/sites/nexus7/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "path",
+      "path": "years/2012/sites/path/about.html",
+      "hooks": [
+        "data-ytl-go"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "path",
+      "path": "years/2012/sites/path/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 7,
+      "whenKey": "itt12-pop-path",
+      "name": "Path"
+    },
+    {
+      "year": "2012",
+      "dest": "pinterest",
+      "path": "years/2012/sites/pinterest/about.html",
+      "hooks": [
+        "data-ytl-go"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "pinterest",
+      "path": "years/2012/sites/pinterest/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 2,
+      "whenKey": "itt12-pin",
+      "name": "Pinterest"
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/extra-a.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/extra-b.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/extra-c.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/extra-d.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/extra-e.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/extra-f.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/extra-g.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/extra-h.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/extra-i.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/famous.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/game-2.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/game-3.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/game-4.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/game-5.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/game.html",
+      "hooks": [
+        "data-official-verb",
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 9,
+      "whenKey": "itt12-game-guessdoodle",
+      "name": "Guess Doodle"
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/more-a.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/more-b.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/more-c.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "playable",
+      "path": "years/2012/sites/playable/more-d.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "reddit",
+      "path": "years/2012/sites/reddit/about.html",
+      "hooks": [
+        "data-ytl-go"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "soundcloud",
+      "path": "years/2012/sites/soundcloud/pop.html",
+      "hooks": [
+        "data-ytl-go"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "tinder",
+      "path": "years/2012/sites/tinder/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "udacity",
+      "path": "years/2012/sites/udacity/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "wikipedia",
+      "path": "years/2012/sites/wikipedia/sopa.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 5,
+      "whenKey": "itt12-sopa",
+      "name": "SOPA"
+    },
+    {
+      "year": "2012",
+      "dest": "windows8",
+      "path": "years/2012/sites/windows8/about.html",
+      "hooks": [
+        "data-ytl-go"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "youtube",
+      "path": "years/2012/sites/youtube/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "bitcoin",
+      "path": "years/2013/sites/bitcoin/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "bustle",
+      "path": "years/2013/sites/bustle/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "canva13",
+      "path": "years/2013/sites/canva13/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "chromecast",
+      "path": "years/2013/sites/chromecast/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "deliveroo",
+      "path": "years/2013/sites/deliveroo/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "dogecoin",
+      "path": "years/2013/sites/dogecoin/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "doordash",
+      "path": "years/2013/sites/doordash/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "emojipedia",
+      "path": "years/2013/sites/emojipedia/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "facebookhome",
+      "path": "years/2013/sites/facebookhome/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "giphy",
+      "path": "years/2013/sites/giphy/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "googlekeep",
+      "path": "years/2013/sites/googlekeep/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "graphsearch",
+      "path": "years/2013/sites/graphsearch/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "gta5",
+      "path": "years/2013/sites/gta5/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "hangouts13",
+      "path": "years/2013/sites/hangouts13/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "healthcare",
+      "path": "years/2013/sites/healthcare/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "hummingbird",
+      "path": "years/2013/sites/hummingbird/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "instagram",
+      "path": "years/2013/sites/instagram/video.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 2,
+      "whenKey": "itt13-ig-posts",
+      "name": "IG Video"
+    },
+    {
+      "year": "2013",
+      "dest": "internetorg",
+      "path": "years/2013/sites/internetorg/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "ios7",
+      "path": "years/2013/sites/ios7/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "iphone",
+      "path": "years/2013/sites/iphone/ios7.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 4,
+      "whenKey": "itt13-ios7",
+      "name": "iOS 7"
+    },
+    {
+      "year": "2013",
+      "dest": "iphone",
+      "path": "years/2013/sites/iphone/touchid.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "iphone5s",
+      "path": "years/2013/sites/iphone5s/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "itch",
+      "path": "years/2013/sites/itch/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "itunesradio",
+      "path": "years/2013/sites/itunesradio/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "kahoot",
+      "path": "years/2013/sites/kahoot/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "kitkat",
+      "path": "years/2013/sites/kitkat/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "mega",
+      "path": "years/2013/sites/mega/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "patreon",
+      "path": "years/2013/sites/patreon/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "playable",
+      "path": "years/2013/sites/playable/game.html",
+      "hooks": [
+        "data-official-verb",
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 9,
+      "whenKey": "itt13-game-loopsix",
+      "name": "Loop Six"
+    },
+    {
+      "year": "2013",
+      "dest": "pluto",
+      "path": "years/2013/sites/pluto/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "prism13",
+      "path": "years/2013/sites/prism13/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "producthunt13",
+      "path": "years/2013/sites/producthunt13/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "ps413",
+      "path": "years/2013/sites/ps413/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "react",
+      "path": "years/2013/sites/react/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "snapchat",
+      "path": "years/2013/sites/snapchat/story.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 3,
+      "whenKey": "itt13-snap-story",
+      "name": "Stories"
+    },
+    {
+      "year": "2013",
+      "dest": "snowden",
+      "path": "years/2013/sites/snowden/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 5,
+      "whenKey": "itt13-snowden-ack",
+      "name": "Snowden"
+    },
+    {
+      "year": "2013",
+      "dest": "telegram",
+      "path": "years/2013/sites/telegram/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 6,
+      "whenKey": "itt13-telegram-chat",
+      "name": "Telegram"
+    },
+    {
+      "year": "2013",
+      "dest": "tumblr",
+      "path": "years/2013/sites/tumblr/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 7,
+      "whenKey": "itt13-tumblr-yahoo",
+      "name": "Yahoo×Tumblr"
+    },
+    {
+      "year": "2013",
+      "dest": "twitter",
+      "path": "years/2013/sites/twitter/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "unsplash",
+      "path": "years/2013/sites/unsplash/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "vicenews",
+      "path": "years/2013/sites/vicenews/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "vine",
+      "path": "years/2013/sites/vine/record.html",
+      "hooks": [
+        "data-official-verb",
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 1,
+      "whenKey": "itt13-vine-posts",
+      "name": "Vine 6s"
+    },
+    {
+      "year": "2013",
+      "dest": "waitbutwhy",
+      "path": "years/2013/sites/waitbutwhy/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "windows81",
+      "path": "years/2013/sites/windows81/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 8,
+      "whenKey": "itt13-win81",
+      "name": "Win8.1"
+    },
+    {
+      "year": "2013",
+      "dest": "xboxone13",
+      "path": "years/2013/sites/xboxone13/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "yikyak",
+      "path": "years/2013/sites/yikyak/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2013",
+      "dest": "youtube",
+      "path": "years/2013/sites/youtube/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    }
+  ]
+}

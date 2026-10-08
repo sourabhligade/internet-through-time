@@ -5,7 +5,8 @@ const isCI = !!process.env.CI;
 
 module.exports = defineConfig({
   testDir: './e2e',
-  testIgnore: [/202[3-5][-.]/],
+  // Absent years 2023–2025. Anchor at the filename start so band-2022-2025*.spec.js still runs.
+  testIgnore: [/(^|\/)202[3-5][-.]/],
   timeout: 60_000,
   retries: isCI ? 1 : 0,
   workers: isCI ? 2 : undefined,

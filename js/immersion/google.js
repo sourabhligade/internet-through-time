@@ -103,9 +103,16 @@
           actionFeedback("Type a query first (Lucky does not guess).", { error: true, flash: true });
           return;
         }
-        /* On the Lucky dest, jump only after an official envelope so a
-           blocked save keeps the receipt on this page. */
-        if (onLuckyDest(form) && !luckyOfficial()) return;
+        /* On the Lucky dest, stay after an official envelope so Saved.
+           and Next are on this page. Next is the Yahoo jump. */
+        if (onLuckyDest(form)) {
+          if (!luckyOfficial()) return;
+          paintLuckyReceipt();
+          try {
+            if (ITT.revealNextFlow) ITT.revealNextFlow(document);
+          } catch (eN) { /* */ }
+          return;
+        }
         var show = rank(q);
         if (show.length) {
           location.href = entryHref(show[0].e);

@@ -233,6 +233,23 @@
     if (!form) return;
     var st = doc.querySelector("[data-ssl-status], [data-itt-action-status]");
     var key = sk("ssl-checkout");
+    function syncOfficialReady() {
+      var name = trim((form.querySelector("[name='name']") || {}).value);
+      var card = trim((form.querySelector("[name='card']") || {}).value).replace(/\s+/g, "");
+      var city = trim((form.querySelector("[name='city']") || {}).value);
+      try {
+        doc.documentElement.setAttribute(
+          "data-official-product-ready",
+          name.length >= 2 && card.length >= 4 && city.length >= 2 ? "1" : "0"
+        );
+      } catch (eR) { /* */ }
+    }
+    syncOfficialReady();
+    var fields = form.querySelectorAll("input");
+    var fi;
+    for (fi = 0; fi < fields.length; fi++) {
+      fields[fi].addEventListener("input", syncOfficialReady);
+    }
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
       var name = trim((form.querySelector("[name='name']") || {}).value);
@@ -553,12 +570,15 @@
     var btn = doc.querySelector("[data-su-stumble]");
     if (btn) {
       btn.addEventListener("click", function () {
+        var verbOwned = btn.getAttribute("data-official-verb") != null;
         var ints = [];
         var boxes = doc.querySelectorAll("[data-su-interest]:checked");
+        var topic = doc.querySelector("[data-su-topic]");
         var i;
         for (i = 0; i < boxes.length; i++) ints.push(boxes[i].getAttribute("data-su-interest") || "x");
+        if (topic && topic.value) ints.push(topic.value);
         if (!ints.length) {
-          feedback("Pick at least one interest first.", st, true);
+          if (!verbOwned) feedback("Pick at least one interest first.", st, true);
           return;
         }
         var pool = [];
@@ -594,7 +614,6 @@
               up = up.slice(0, 12);
               saved.up = up;
               persistWalk(saved.seen, saved.interests || ints);
-              if (saved.n >= 2) saveJSON(key, saved);
               feedback("Thumbed up · next Stumble biases this card.", st);
             });
           }
@@ -606,14 +625,18 @@
               }
               if (down.indexOf(hit.t) === -1) down.push(hit.t);
               saved.down = down;
-              saveJSON(key, saved);
+              persistWalk(saved.seen, saved.interests || ints);
               feedback("Thumbed down · next stumble skips this card.", st);
             });
           }
         }
         if (n < 2) {
           persistWalk(seen, ints);
-          feedback("Stumble again to keep a habit (2+ writes itt02-stumble).", st, true);
+          if (!verbOwned) feedback("Stumble again to keep a habit (2+ writes itt02-stumble).", st, true);
+          return;
+        }
+        if (verbOwned) {
+          persistWalk(seen, ints);
           return;
         }
         saved = blob({
@@ -623,12 +646,13 @@
           down: down,
           up: up,
           seen: seen.slice(0, 20),
-          multiStep: true
+          multiStep: true,
+          official: true
         });
         saveJSON(key, saved);
         stamp();
         renderHist();
-        feedback("Stumble habit saved (museum rooms only · 2+).", st);
+        feedback("Saved.", st);
         revealNext(doc);
       });
     }
@@ -663,11 +687,11 @@
         feedback("Name required.", st, true);
         return;
       }
-      saveJSON(key, blob({ network: net, name: name }));
+      saveJSON(key, blob({ network: net, name: name, official: true }));
       stamp();
       if (out) out.textContent = "Network: " + net + " · " + name;
       if (typeof renderMates === "function") renderMates();
-      feedback("Joined " + net + " (college-only theater).", st);
+      feedback("Saved.", st);
       revealNext(doc);
     }
     if (form) {

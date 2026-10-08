@@ -62,7 +62,7 @@
       var inp = doc.querySelector("[data-ig-story-text]");
       if (inp && !inp.value) inp.value = saved.text;
       paintRail(doc, saved.text);
-      feedback("Still up · 24h · itt16-ig-stories", st);
+      feedback("Saved.", st);
       reveal(doc);
     }
     btn.addEventListener("click", function () {
@@ -72,9 +72,9 @@
         return;
       }
       var clean = t.replace(/^\s+|\s+$/g, "").slice(0, 140);
-      saveJSON(key("ig-stories"), blob({ text: clean, hours: 24 }));
+      saveJSON(key("ig-stories"), blob({ text: clean, hours: 24, official: true }));
       paintRail(doc, clean);
-      feedback("Added to Story · 24h · itt16-ig-stories", st);
+      feedback("Saved.", st);
       reveal(doc);
     });
   }
@@ -101,7 +101,7 @@
     var saved = YX.loadJSON(key("pogo"));
     if (saved && saved.team) {
       picked = saved.team;
-      feedback("Team " + picked + " · itt16-pogo", st);
+      feedback("Saved.", st);
       reveal(doc);
     }
     for (i = 0; i < teams.length; i++) {
@@ -123,8 +123,8 @@
         feedback("Ack sidewalk AR / no live GPS first.", st, { error: true });
         return;
       }
-      saveJSON(key("pogo"), blob({ team: picked, outdoor: true }));
-      feedback("Caught (theater) · " + picked + " · itt16-pogo", st);
+      saveJSON(key("pogo"), blob({ team: picked, outdoor: true, official: true }));
+      feedback("Saved.", st);
       reveal(doc);
     });
   }
@@ -139,13 +139,13 @@
         feedback("Pick a face. Tray-only never writes.", st, { error: true });
         return;
       }
-      saveJSON(key("fb-react"), blob({ face: face }));
-      feedback("Reacted · " + face + " · itt16-fb-react", st);
+      saveJSON(key("fb-react"), blob({ face: face, official: true }));
+      feedback("Saved.", st);
       reveal(doc);
     }
     var saved = YX.loadJSON(key("fb-react"));
     if (saved && saved.face) {
-      feedback("Reacted · " + saved.face + " · itt16-fb-react", st);
+      feedback("Saved.", st);
       reveal(doc);
     }
     var i;

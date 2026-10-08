@@ -14,9 +14,8 @@
   }
 
   function key(k) {
-    if (ITT.util && ITT.util.immersionStorageKey) {
-      return ITT.util.immersionStorageKey("orkut-" + k, "itt04");
-    }
+    /* 2004 Orkut engine. Current-year prefix would stamp itt06-orkut-friends
+       as toy on 2006 leftover dests. */
     return "itt04-orkut-" + k;
   }
   function loadFriends() {

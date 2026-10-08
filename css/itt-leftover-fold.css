@@ -89,6 +89,8 @@ html:not([data-official-key]):not([data-itt-start]) [data-itt-dest-true][data-po
 [data-lo-panel][data-itt-trail-stop],
 html[data-official-key] [data-lo-panel][data-itt-gold-lx] {
   display: block;
+  clear: both;
+  margin-top: 1.5em;
 }
 
 html[data-itt-deep] [data-lo-panel]:not([data-itt-dest-true]),

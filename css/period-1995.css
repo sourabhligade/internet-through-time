@@ -10,15 +10,17 @@
   line-height: 1.5;
 }
 
-/* 1995 document defaults — tables for layout, commercial web */
-html { background: #ffffff; min-height: 0; height: auto; color-scheme: only light; }
-body {
+/* 1995 document defaults — tables for layout, commercial web.
+   Scoped: later years @import this file for leftover-fold / nav helpers. */
+html[data-itt-year="1995"] { background: #ffffff; min-height: 0; height: auto; color-scheme: only light; }
+html[data-itt-year="1995"] body {
   font-family: "Times New Roman", Times, serif;
   font-size: 14px;
   margin: 8px;
   min-height: 0;
   height: auto;
   line-height: 1.25;
+  max-width: 920px;
 }
 /* A page's text/bgcolor/link attributes are the page. These defaults apply
    only when the page did not set them. Later !important year skins still win. */
@@ -104,7 +106,7 @@ tr[bgcolor="#003366" i] a:link {
 [data-itt-flow-trail] a:visited {
   color: #0000ee;
 }
-a img { border: 2px solid #0000ee; }
+html[data-itt-year="1995"] a img { border: 2px solid #0000ee; }
 img[border="0"], img.noborder { border: 0 !important; }
 table.layout { width: 100%; border-collapse: collapse; }
 table.layout td { vertical-align: top; }
@@ -120,10 +122,14 @@ h2 { font-size: 1.25em; margin: 0.6em 0 0.3em; }
 .small, font[size="2"] { /* keep native */ }
 .tiny { font-size: 11px; }
 .hit-counter { font-family: "Courier New", monospace; font-weight: bold; color: #060; }
-* { border-radius: 0 !important; box-shadow: none !important; }
+html[data-itt-year="1995"] * { border-radius: 0 !important; box-shadow: none !important; }
 
-/* Win95-ish form widgets */
-input[type="text"], input[type="password"], input:not([type]), textarea, select {
+/* Win95-ish form widgets — 1995 dests only */
+html[data-itt-year="1995"] input[type="text"],
+html[data-itt-year="1995"] input[type="password"],
+html[data-itt-year="1995"] input:not([type]),
+html[data-itt-year="1995"] textarea,
+html[data-itt-year="1995"] select {
   font-family: "MS Sans Serif", Tahoma, sans-serif;
   font-size: 12px;
   background: #fff;
@@ -133,7 +139,9 @@ input[type="text"], input[type="password"], input:not([type]), textarea, select 
   border-bottom: 2px solid #fff;
   padding: 2px 3px;
 }
-input[type="submit"], input[type="button"], button {
+html[data-itt-year="1995"] input[type="submit"],
+html[data-itt-year="1995"] input[type="button"],
+html[data-itt-year="1995"] button {
   font-family: "MS Sans Serif", Tahoma, sans-serif;
   font-size: 12px;
   background: #c0c0c0;
@@ -146,7 +154,9 @@ input[type="submit"], input[type="button"], button {
   border-radius: 0 !important;
   box-shadow: none !important;
 }
-input[type="submit"]:active, input[type="button"]:active, button:active {
+html[data-itt-year="1995"] input[type="submit"]:active,
+html[data-itt-year="1995"] input[type="button"]:active,
+html[data-itt-year="1995"] button:active {
   border-top: 2px solid #404040;
   border-left: 2px solid #404040;
   border-right: 2px solid #fff;
@@ -259,11 +269,6 @@ blink { animation: blink 1s step-end infinite; }
 /* Dest chrome (wayfind, exhibit-foot clearance) lives in css/itt-dest-page.css.
  * This file is @imported by 1996–2022. Do not put html/body height or
  * sticky-footer chrome here. */
-
-/* Cleaner content rhythm */
-body {
-  max-width: 920px;
-}
 
 /* Museum UX helpers (shell content pages) */
 .itt-nav-slot {

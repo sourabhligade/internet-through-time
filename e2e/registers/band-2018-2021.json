@@ -1,0 +1,573 @@
+{
+  "band": "2018-2021",
+  "source": "scripts/gen_band_register.py",
+  "hooks": [
+    "data-official-verb",
+    "data-lo-save",
+    "data-ytl-go",
+    "data-yt-upload",
+    "data-game-start",
+    "data-wiki-save",
+    "data-su-stumble"
+  ],
+  "census": {
+    "html": 84,
+    "savePages": 40,
+    "destFolders": 40,
+    "trailRows": 20,
+    "leftover2x": 0,
+    "officialStops": 20,
+    "byYear": {
+      "2018": {
+        "html": 0,
+        "savePages": 0,
+        "destFolders": 0,
+        "trailRows": 0,
+        "leftover2x": 0
+      },
+      "2019": {
+        "html": 0,
+        "savePages": 0,
+        "destFolders": 0,
+        "trailRows": 0,
+        "leftover2x": 0
+      },
+      "2020": {
+        "html": 24,
+        "savePages": 22,
+        "destFolders": 22,
+        "trailRows": 10,
+        "leftover2x": 0
+      },
+      "2021": {
+        "html": 60,
+        "savePages": 18,
+        "destFolders": 18,
+        "trailRows": 10,
+        "leftover2x": 0
+      }
+    }
+  },
+  "rows": [
+    {
+      "year": "2020",
+      "dest": "amazon",
+      "path": "years/2020/sites/amazon/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2020",
+      "dest": "amongus",
+      "path": "years/2020/sites/amongus/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 8,
+      "whenKey": "itt20-amongus",
+      "name": "Among Us leftover"
+    },
+    {
+      "year": "2020",
+      "dest": "animalcrossing",
+      "path": "years/2020/sites/animalcrossing/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 9,
+      "whenKey": "itt20-acnh",
+      "name": "Animal Crossing leftover"
+    },
+    {
+      "year": "2020",
+      "dest": "classroom",
+      "path": "years/2020/sites/classroom/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 5,
+      "whenKey": "itt20-classroom",
+      "name": "Classroom leftover"
+    },
+    {
+      "year": "2020",
+      "dest": "clubhouse",
+      "path": "years/2020/sites/clubhouse/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2020",
+      "dest": "discord",
+      "path": "years/2020/sites/discord/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 3,
+      "whenKey": "itt20-discord",
+      "name": "Discord leftover"
+    },
+    {
+      "year": "2020",
+      "dest": "facebook",
+      "path": "years/2020/sites/facebook/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2020",
+      "dest": "google",
+      "path": "years/2020/sites/google/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2020",
+      "dest": "hbomax",
+      "path": "years/2020/sites/hbomax/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2020",
+      "dest": "houseparty",
+      "path": "years/2020/sites/houseparty/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 2,
+      "whenKey": "itt20-houseparty",
+      "name": "Houseparty leftover"
+    },
+    {
+      "year": "2020",
+      "dest": "instagram",
+      "path": "years/2020/sites/instagram/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2020",
+      "dest": "netflix",
+      "path": "years/2020/sites/netflix/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 6,
+      "whenKey": "itt20-netflix",
+      "name": "Netflix leftover"
+    },
+    {
+      "year": "2020",
+      "dest": "nyt",
+      "path": "years/2020/sites/nyt/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2020",
+      "dest": "peacock",
+      "path": "years/2020/sites/peacock/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2020",
+      "dest": "playable",
+      "path": "years/2020/sites/playable/game.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 10,
+      "whenKey": "itt20-game-leave",
+      "name": "Year game leftover"
+    },
+    {
+      "year": "2020",
+      "dest": "reddit",
+      "path": "years/2020/sites/reddit/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2020",
+      "dest": "slack",
+      "path": "years/2020/sites/slack/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2020",
+      "dest": "teams",
+      "path": "years/2020/sites/teams/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 4,
+      "whenKey": "itt20-teams",
+      "name": "Teams leftover"
+    },
+    {
+      "year": "2020",
+      "dest": "tiktok",
+      "path": "years/2020/sites/tiktok/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 7,
+      "whenKey": "itt20-tiktok",
+      "name": "TikTok leftover"
+    },
+    {
+      "year": "2020",
+      "dest": "wikipedia",
+      "path": "years/2020/sites/wikipedia/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2020",
+      "dest": "youtube",
+      "path": "years/2020/sites/youtube/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2020",
+      "dest": "zoom",
+      "path": "years/2020/sites/zoom/meeting.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 1,
+      "whenKey": "itt20-zoom",
+      "name": "Zoom Leave"
+    },
+    {
+      "year": "2021",
+      "dest": "amazon",
+      "path": "years/2021/sites/amazon/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2021",
+      "dest": "att",
+      "path": "years/2021/sites/att/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 1,
+      "whenKey": "itt21-att",
+      "name": "ATT Ask"
+    },
+    {
+      "year": "2021",
+      "dest": "chrome",
+      "path": "years/2021/sites/chrome/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 7,
+      "whenKey": "itt21-chrome",
+      "name": "Chrome habit"
+    },
+    {
+      "year": "2021",
+      "dest": "coinbaseipo",
+      "path": "years/2021/sites/coinbaseipo/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2021",
+      "dest": "copilot",
+      "path": "years/2021/sites/copilot/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 3,
+      "whenKey": "itt21-copilot",
+      "name": "Copilot waitlist"
+    },
+    {
+      "year": "2021",
+      "dest": "epicapple",
+      "path": "years/2021/sites/epicapple/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2021",
+      "dest": "facebook",
+      "path": "years/2021/sites/facebook/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 9,
+      "whenKey": "itt21-pop-facebook",
+      "name": "Facebook"
+    },
+    {
+      "year": "2021",
+      "dest": "flash",
+      "path": "years/2021/sites/flash/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 6,
+      "whenKey": "itt21-flash-brick",
+      "name": "Flash brick"
+    },
+    {
+      "year": "2021",
+      "dest": "google",
+      "path": "years/2021/sites/google/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2021",
+      "dest": "instagram",
+      "path": "years/2021/sites/instagram/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2021",
+      "dest": "meta",
+      "path": "years/2021/sites/meta/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 4,
+      "whenKey": "itt21-meta",
+      "name": "Meta rename"
+    },
+    {
+      "year": "2021",
+      "dest": "nft",
+      "path": "years/2021/sites/nft/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2021",
+      "dest": "playable",
+      "path": "years/2021/sites/playable/game.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 10,
+      "whenKey": "itt21-game-five",
+      "name": "Five Letter"
+    },
+    {
+      "year": "2021",
+      "dest": "signal",
+      "path": "years/2021/sites/signal/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 2,
+      "whenKey": "itt21-signal",
+      "name": "Signal"
+    },
+    {
+      "year": "2021",
+      "dest": "twitter",
+      "path": "years/2021/sites/twitter/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2021",
+      "dest": "windows10",
+      "path": "years/2021/sites/windows10/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 8,
+      "whenKey": "itt21-win10",
+      "name": "Windows 10 residual"
+    },
+    {
+      "year": "2021",
+      "dest": "windows11",
+      "path": "years/2021/sites/windows11/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 5,
+      "whenKey": "itt21-win11",
+      "name": "Windows 11"
+    },
+    {
+      "year": "2021",
+      "dest": "youtube",
+      "path": "years/2021/sites/youtube/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    }
+  ]
+}

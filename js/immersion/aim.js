@@ -293,7 +293,7 @@
         saveJSON(userKey, { sn: sn, signedOn: true, ts: Date.now() });
         buds();
         writeSummary({ signedOn: true });
-        feedback("Signed on as " + sn + " (theater · no AOL network).", status);
+        feedback("Saved.", status);
         stamp();
         renderSession();
         renderList();

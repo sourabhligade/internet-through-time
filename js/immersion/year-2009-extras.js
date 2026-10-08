@@ -48,6 +48,7 @@
   function bootLike(doc) {
     var btn = doc.querySelector("[data-lk09-like]");
     if (!btn) return;
+    var verbOwned = btn.getAttribute("data-official-verb") != null;
     var st = doc.querySelector("[data-lk09-status]");
     var trap = doc.querySelector("[data-lk09-beacon]");
     var wall = doc.querySelector("[data-lk09-wall]");
@@ -68,13 +69,14 @@
       });
     }
     btn.addEventListener("click", function () {
+      if (verbOwned) return;
       if (Object.keys(liked).length < 2) {
         feedback("Like two partner pages first. 0–1 never writes.", st, { error: true });
         return;
       }
-      saveJSON(key("like"), blob({ pages: Object.keys(liked), date: "2009-02-09" }));
-      saveJSON(key("fb-likes"), blob({ pages: Object.keys(liked), date: "2009-02-09" }));
-      feedback("Like · two partners · " + key("like"), st);
+      saveJSON(key("like"), blob({ pages: Object.keys(liked), date: "2009-02-09", official: true }));
+      saveJSON(key("fb-likes"), blob({ pages: Object.keys(liked), date: "2009-02-09", official: true }));
+      feedback("Saved.", st);
       reveal(doc);
     });
   }
@@ -323,9 +325,7 @@
       score = 0;
       plots = {};
       if (scoreEl) scoreEl.textContent = "0";
-      saveJSON(key("game-plot"), blob({ started: true, gameId: "plot" }));
       if (status) status.textContent = "Planting. Pay-to-skip never scores.";
-      reveal(doc);
     });
     var walks = doc.querySelectorAll("[data-peg-city]");
     var i;

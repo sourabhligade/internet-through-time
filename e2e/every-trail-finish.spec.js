@@ -462,7 +462,7 @@ test.describe("2015 React stops write an envelope", () => {
       const room = page.locator("article.stop#" + stop.whenKey);
       await room.waitFor({ timeout: 15000 });
       await completeReactStop(page, room);
-      await expect(room.locator(".status")).toHaveText("Saved in this browser.");
+      await expect(room.locator(".status")).toHaveText("Saved.");
       await assertEnvelope(page, { year: "2015", whenKey: stop.whenKey, href: "", n: stop.n }, "official");
     });
   }

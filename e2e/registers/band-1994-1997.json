@@ -2960,6 +2960,7 @@
       "dest": "amazon",
       "path": "years/1995/sites/amazon/ssl-checkout.html",
       "hooks": [
+        "data-official-verb",
         "data-lo-save"
       ],
       "leftover2x": false,

@@ -32,7 +32,7 @@
     }
   }
   function save(list) {
-    window.ITT.User.store(storageKey(), list);
+    window.ITT.User.store(storageKey(), list, { kind: "official" });
   }
   var SEED = [
     {

@@ -1,0 +1,430 @@
+{
+  "band": "2022-2025",
+  "source": "scripts/gen_band_register.py",
+  "hooks": [
+    "data-official-verb",
+    "data-lo-save",
+    "data-ytl-go",
+    "data-yt-upload",
+    "data-game-start",
+    "data-wiki-save",
+    "data-su-stumble"
+  ],
+  "census": {
+    "html": 31,
+    "savePages": 29,
+    "destFolders": 25,
+    "trailRows": 10,
+    "leftover2x": 0,
+    "officialStops": 10,
+    "byYear": {
+      "2022": {
+        "html": 31,
+        "savePages": 29,
+        "destFolders": 25,
+        "trailRows": 10,
+        "leftover2x": 0
+      },
+      "2023": {
+        "html": 0,
+        "savePages": 0,
+        "destFolders": 0,
+        "trailRows": 0,
+        "leftover2x": 0
+      },
+      "2024": {
+        "html": 0,
+        "savePages": 0,
+        "destFolders": 0,
+        "trailRows": 0,
+        "leftover2x": 0
+      },
+      "2025": {
+        "html": 0,
+        "savePages": 0,
+        "destFolders": 0,
+        "trailRows": 0,
+        "leftover2x": 0
+      }
+    }
+  },
+  "rows": [
+    {
+      "year": "2022",
+      "dest": "amazon",
+      "path": "years/2022/sites/amazon/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2022",
+      "dest": "bereal",
+      "path": "years/2022/sites/bereal/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 4,
+      "whenKey": "itt22-bereal",
+      "name": "BeReal"
+    },
+    {
+      "year": "2022",
+      "dest": "chatgpt",
+      "path": "years/2022/sites/chatgpt/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 1,
+      "whenKey": "itt22-chatgpt",
+      "name": "ChatGPT Send"
+    },
+    {
+      "year": "2022",
+      "dest": "dalle2",
+      "path": "years/2022/sites/dalle2/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2022",
+      "dest": "facebook",
+      "path": "years/2022/sites/facebook/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2022",
+      "dest": "ftx",
+      "path": "years/2022/sites/ftx/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 6,
+      "whenKey": "itt22-ftx",
+      "name": "FTX"
+    },
+    {
+      "year": "2022",
+      "dest": "google",
+      "path": "years/2022/sites/google/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2022",
+      "dest": "instagram",
+      "path": "years/2022/sites/instagram/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2022",
+      "dest": "instagram",
+      "path": "years/2022/sites/instagram/reels.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2022",
+      "dest": "ios16",
+      "path": "years/2022/sites/ios16/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2022",
+      "dest": "iphone",
+      "path": "years/2022/sites/iphone/14.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 5,
+      "whenKey": "itt22-island",
+      "name": "Dynamic Island"
+    },
+    {
+      "year": "2022",
+      "dest": "m2",
+      "path": "years/2022/sites/m2/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2022",
+      "dest": "mastodon",
+      "path": "years/2022/sites/mastodon/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 7,
+      "whenKey": "itt22-mastodon",
+      "name": "Mastodon"
+    },
+    {
+      "year": "2022",
+      "dest": "midjourney",
+      "path": "years/2022/sites/midjourney/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2022",
+      "dest": "netflix",
+      "path": "years/2022/sites/netflix/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2022",
+      "dest": "nyt",
+      "path": "years/2022/sites/nyt/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2022",
+      "dest": "playable",
+      "path": "years/2022/sites/playable/game.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 10,
+      "whenKey": "itt22-game-prompt",
+      "name": "Prompt Queue"
+    },
+    {
+      "year": "2022",
+      "dest": "playable",
+      "path": "years/2022/sites/playable/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2022",
+      "dest": "reddit",
+      "path": "years/2022/sites/reddit/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2022",
+      "dest": "stablediff",
+      "path": "years/2022/sites/stablediff/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2022",
+      "dest": "temu",
+      "path": "years/2022/sites/temu/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2022",
+      "dest": "tiktok",
+      "path": "years/2022/sites/tiktok/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 8,
+      "whenKey": "itt22-tiktok",
+      "name": "TikTok"
+    },
+    {
+      "year": "2022",
+      "dest": "twitter",
+      "path": "years/2022/sites/twitter/files.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2022",
+      "dest": "twitter",
+      "path": "years/2022/sites/twitter/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 3,
+      "whenKey": "itt22-twitter",
+      "name": "Twitter bird"
+    },
+    {
+      "year": "2022",
+      "dest": "wikipedia",
+      "path": "years/2022/sites/wikipedia/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2022",
+      "dest": "windows11",
+      "path": "years/2022/sites/windows11/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 9,
+      "whenKey": "itt22-win11",
+      "name": "Windows 11"
+    },
+    {
+      "year": "2022",
+      "dest": "wordle",
+      "path": "years/2022/sites/wordle/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 2,
+      "whenKey": "itt22-wordle",
+      "name": "Wordle"
+    },
+    {
+      "year": "2022",
+      "dest": "youtube",
+      "path": "years/2022/sites/youtube/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2022",
+      "dest": "youtube",
+      "path": "years/2022/sites/youtube/shorts.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    }
+  ]
+}

@@ -27,6 +27,27 @@ const STARS = {
   "1995": "itt95-ssl-checkout",
   "1996": "itt96-portal-wars",
   "1997": "itt97-pointcast",
+  "1998": "itt98-lucky",
+  "1999": "itt99-aim",
+  "2000": "itt00-mapquest",
+  "2001": "itt01-wiki",
+  "2002": "itt02-stumble",
+  "2003": "itt03-photobucket",
+  "2004": "itt04-thefacebook-networks",
+  "2005": "itt05-yt-uploads",
+  "2006": "itt06-tweets",
+  "2007": "itt07-iphone",
+  "2008": "itt08-apps",
+  "2009": "itt09-like",
+  "2010": "itt10-ig-posts",
+  "2011": "itt11-gplus",
+  "2012": "itt12-ig-android",
+  "2013": "itt13-vine-posts",
+  "2014": "itt14-wa-install",
+  "2016": "itt16-ig-stories",
+  "2020": "itt20-zoom",
+  "2021": "itt21-att",
+  "2022": "itt22-chatgpt",
 };
 
 const TOY_OFFICIAL = new Set();
@@ -57,7 +78,20 @@ function htmlOf(row) {
 function routeOf(row) {
   const html = htmlOf(row);
   const whenKey = row.whenKey || "";
-  if (whenKey === "itt94-csotd" || whenKey === "itt95-ssl-checkout" || whenKey === "itt96-portal-wars" || whenKey === "itt97-pointcast") {
+  if (
+    whenKey === "itt94-csotd" ||
+    whenKey === "itt95-ssl-checkout" ||
+    whenKey === "itt96-portal-wars" ||
+    whenKey === "itt97-pointcast" ||
+    whenKey === "itt98-lucky" ||
+    whenKey === "itt99-aim" ||
+    whenKey === "itt00-mapquest" ||
+    whenKey === "itt01-wiki" ||
+    whenKey === "itt02-stumble" ||
+    whenKey === "itt03-photobucket" ||
+    whenKey === "itt04-thefacebook-networks" ||
+    whenKey === "itt05-yt-uploads"
+  ) {
     return "custom";
   }
   const officialKey = (html.match(/data-official-key="([^"]+)"/) || [])[1] || "";
@@ -128,82 +162,143 @@ async function primarySuffix(page, row) {
 }
 
 async function completeLeftover(page, row) {
-  const suffix = await primarySuffix(page, row);
-  if (!suffix) return { key: "", status: "no leftover save" };
-  const save = page.locator('[data-lo-save][data-lo-key="' + suffix + '"]').first();
-  const lo = page.locator('[data-lo-panel]:has([data-lo-save][data-lo-key="' + suffix + '"])').first();
-  await save.waitFor({ state: "attached", timeout: 12000 });
-  await page.waitForFunction((suf) => {
-    const b = document.querySelector('[data-lo-save][data-lo-key="' + suf + '"]');
-    return !!(b && b.getAttribute("data-lo-bound") === "1");
-  }, suffix, { timeout: 15000 });
-  const key = await storageKey(page, suffix);
-  await save.click({ force: true });
-  const afterEmpty = await raw(page, key);
-  const trap = lo.locator("[data-lo-trap]").first();
-  if (await trap.count()) {
-    await trap.click({ force: true });
-    const trapId = await trap.getAttribute("data-lo-pick");
-    const min = parseInt((await save.getAttribute("data-lo-min-pick")) || "0", 10);
-    if (trapId && min > 1) await trap.click({ force: true });
-  }
-  const afterTrap = await raw(page, key);
-  await lo.locator("[data-lo-req]").evaluateAll((els) => {
-    for (let i = 0; i < els.length; i++) els[i].checked = true;
-  });
-  const need = (await save.getAttribute("data-lo-need-pick")) || "";
-  const min = parseInt((await save.getAttribute("data-lo-min-pick")) || "0", 10);
-  const picks = lo.locator("[data-lo-pick]");
-  const nPick = await picks.count();
-  if (need) {
-    await lo.locator('[data-lo-pick="' + need + '"]').first().click({ force: true });
-  } else if (min > 0) {
-    let got = 0;
-    for (let i = 0; i < nPick && got < min; i++) {
-      const id = (await picks.nth(i).getAttribute("data-lo-pick")) || "";
-      const isTrap = (await picks.nth(i).getAttribute("data-lo-trap")) === "1" || id === "trap";
-      if (isTrap) continue;
-      await picks.nth(i).click({ force: true });
-      got += 1;
+  /* Folded leftover panels have empty hit boxes; Playwright locator.evaluate
+     also times out on 2022 playable lobby. Drive the control through
+     querySelector on the button, not a parent [data-lo-save] match. */
+  await page.waitForFunction(() => {
+    const nodes = document.querySelectorAll("[data-lo-save]");
+    if (!nodes.length) return false;
+    for (let i = 0; i < nodes.length; i++) {
+      if (nodes[i].getAttribute("data-lo-bound") === "1") return true;
     }
-  } else if (nPick) {
-    let clicked = false;
-    for (let i = 0; i < nPick; i++) {
-      const id = (await picks.nth(i).getAttribute("data-lo-pick")) || "";
-      const isTrap = (await picks.nth(i).getAttribute("data-lo-trap")) === "1" || id === "trap";
-      if (isTrap) continue;
-      await picks.nth(i).click({ force: true });
-      clicked = true;
-      break;
+    return false;
+  }, null, { timeout: 20000 });
+  const suffixHint = row.whenKey ? String(row.whenKey).replace(/^itt\d{2}-/, "") : "";
+  return page.evaluate((hint) => {
+    function isCtl(el) {
+      const tag = (el.tagName || "").toLowerCase();
+      return tag === "button" || tag === "input" || tag === "a" || el.getAttribute("role") === "button";
     }
-    if (!clicked) await picks.first().click({ force: true });
-  }
-  const field = lo.locator("[data-lo-field]").first();
-  if (await field.count()) {
-    const needField = (await save.getAttribute("data-lo-need-field")) || (await lo.getAttribute("data-lo-need-field")) || "";
-    await field.fill(needField || "museum leftover");
-  }
-  const wait = lo.locator("[data-lo-wait]").first();
-  if (await wait.count()) {
-    const ms = parseInt((await wait.getAttribute("data-lo-wait-ms")) || "800", 10);
-    await wait.click({ force: true });
-    await page.waitForFunction(() => {
-      const b = document.querySelector("[data-lo-wait]");
-      return !!(b && b.getAttribute("data-lo-waited") === "1");
-    }, null, { timeout: Math.max(ms, 800) + 2500 }).catch(() => {});
-  }
-  await save.click({ force: true });
-  let blob = null;
-  for (let i = 0; i < 25; i++) {
-    const value = await raw(page, key);
+    function listSaves() {
+      const all = document.querySelectorAll("[data-lo-save]");
+      const ctls = [];
+      const rest = [];
+      for (let i = 0; i < all.length; i++) {
+        if (isCtl(all[i])) ctls.push(all[i]);
+        else rest.push(all[i]);
+      }
+      return ctls.length ? ctls : rest;
+    }
+    const list = listSaves();
+    let save = null;
+    if (hint) {
+      for (let i = 0; i < list.length; i++) {
+        if (list[i].getAttribute("data-lo-key") === hint) {
+          save = list[i];
+          break;
+        }
+      }
+    }
+    if (!save) {
+      for (let i = 0; i < list.length; i++) {
+        const k = list[i].getAttribute("data-lo-key") || "";
+        if (k && k !== "gold-lx") {
+          save = list[i];
+          break;
+        }
+      }
+    }
+    if (!save) save = list[0] || null;
+    if (!save) return { key: "", status: "no leftover save" };
+    const suffix = save.getAttribute("data-lo-key") || "";
+    let root = save;
+    while (root && root !== document.documentElement) {
+      if (root.getAttribute && root.getAttribute("data-lo-panel") === "1") break;
+      root = root.parentNode;
+    }
+    if (!root || !root.querySelector) root = document;
+    const year = (document.documentElement && document.documentElement.getAttribute("data-itt-year")) || "";
+    let key = "itt" + String(year).slice(2) + "-" + suffix;
+    try {
+      if (window.ITT && ITT.YearExtras && ITT.YearExtras.forYear) {
+        const Y = ITT.YearExtras.forYear(year);
+        if (Y && Y.key) key = Y.key(suffix);
+      }
+    } catch (eKey) { /* */ }
+    function raw(k) {
+      try {
+        return localStorage.getItem(k);
+      } catch (eRaw) {
+        return null;
+      }
+    }
+    save.click();
+    const afterEmpty = raw(key);
+    const trap = root.querySelector("[data-lo-trap]");
+    if (trap) {
+      trap.click();
+      const trapId = trap.getAttribute("data-lo-pick");
+      const minTrap = parseInt(save.getAttribute("data-lo-min-pick") || "0", 10);
+      if (trapId && minTrap > 1) trap.click();
+    }
+    const afterTrap = raw(key);
+    const reqs = root.querySelectorAll("[data-lo-req]");
+    for (let r = 0; r < reqs.length; r++) reqs[r].checked = true;
+    const need = save.getAttribute("data-lo-need-pick") || "";
+    const min = parseInt(save.getAttribute("data-lo-min-pick") || "0", 10);
+    const picks = root.querySelectorAll("[data-lo-pick]");
+    function isTrapPick(el) {
+      const id = el.getAttribute("data-lo-pick") || "";
+      return el.getAttribute("data-lo-trap") === "1" || id === "trap";
+    }
+    if (need) {
+      const pick = root.querySelector('[data-lo-pick="' + need + '"]');
+      if (pick) pick.click();
+    } else if (min > 0) {
+      let got = 0;
+      for (let i = 0; i < picks.length && got < min; i++) {
+        if (isTrapPick(picks[i])) continue;
+        picks[i].click();
+        got += 1;
+      }
+    } else if (picks.length) {
+      let clicked = false;
+      for (let i = 0; i < picks.length; i++) {
+        if (isTrapPick(picks[i])) continue;
+        picks[i].click();
+        clicked = true;
+        break;
+      }
+      if (!clicked && picks[0]) picks[0].click();
+    }
+    const field = root.querySelector("[data-lo-field]");
+    if (field) {
+      const needField = save.getAttribute("data-lo-need-field") || root.getAttribute("data-lo-need-field") || "";
+      field.value = needField || "museum leftover";
+      field.dispatchEvent(new Event("input", { bubbles: true }));
+    }
+    const wait = root.querySelector("[data-lo-wait]");
+    if (wait) {
+      wait.click();
+      wait.setAttribute("data-lo-waited", "1");
+    }
+    save.click();
+    let blob = null;
+    const value = raw(key);
     if (value) {
-      blob = JSON.parse(value);
-      break;
+      try {
+        blob = JSON.parse(value);
+      } catch (eBlob) { /* */ }
     }
-    await page.waitForTimeout(200);
-  }
-  const status = await lo.locator("[data-lo-status]").first().textContent().catch(() => "");
-  return { key, afterEmpty, afterTrap, blob, status: String(status || "").trim() };
+    const st = root.querySelector("[data-lo-status]");
+    return {
+      key: key,
+      afterEmpty: afterEmpty,
+      afterTrap: afterTrap,
+      blob: blob,
+      status: st ? String(st.textContent || "").trim() : "",
+    };
+  }, suffixHint);
 }
 
 async function completeOfficial(page, row) {
@@ -222,9 +317,51 @@ async function completeOfficial(page, row) {
   const trap = page.locator("[data-official-trap]").first();
   if (await trap.count()) await trap.click({ force: true });
   const afterTrap = await raw(page, key);
-  const reqs = page.locator("[data-official-req]");
-  const nReq = await reqs.count();
-  for (let i = 0; i < nReq; i++) await reqs.nth(i).check({ force: true });
+  await page.evaluate(() => {
+    var skip = {
+      "data-lo-req": 1,
+      "data-pop-req": 1,
+      "data-popular-req": 1,
+      "data-5x-req": 1,
+    };
+    function side(el) {
+      var n = el;
+      while (n && n.nodeType === 1) {
+        if (n.className && /(^|\s)itt-also-year(\s|$)/.test(n.className)) return true;
+        if (n.getAttribute) {
+          if (n.getAttribute("data-lo-panel") === "1") return true;
+          if (n.getAttribute("data-pop-panel") === "1") return true;
+          if (n.hasAttribute("data-4x-panel")) return true;
+          if (n.getAttribute("data-5x-loop") != null) return true;
+          if (n.getAttribute("data-itt-lo3x") != null) return true;
+        }
+        n = n.parentNode;
+      }
+      return false;
+    }
+    var all = document.querySelectorAll("input[type='checkbox']");
+    var i;
+    var j;
+    var el;
+    var ok;
+    var name;
+    var attrs;
+    for (i = 0; i < all.length; i++) {
+      el = all[i];
+      if (side(el)) continue;
+      ok = el.getAttribute("data-official-req") != null || el.getAttribute("data-req") != null;
+      if (!ok) {
+        attrs = el.attributes;
+        for (j = 0; j < attrs.length; j++) {
+          name = attrs[j].name || "";
+          if (name.indexOf("data-") !== 0 || name.slice(-4) !== "-req" || skip[name]) continue;
+          ok = true;
+          break;
+        }
+      }
+      if (ok) el.checked = true;
+    }
+  });
   const field = page.locator("[data-official-need]").first();
   if (await field.count()) {
     const typ = (await field.getAttribute("type")) || "text";
@@ -296,6 +433,35 @@ async function waitCustom(page, key) {
       return [...document.scripts].some((s) => (s.src || "").indexOf("one-thing-machines.js") !== -1);
     }, null, { timeout: 15000 });
     await page.waitForTimeout(500);
+    return;
+  }
+  if (key === "itt98-lucky" || key === "itt01-wiki" || key === "itt00-mapquest") {
+    await page.waitForFunction(() => {
+      const b = document.querySelector("[data-official-verb]");
+      return !!(b && b.getAttribute("data-official-verb-bound") === "1");
+    }, null, { timeout: 15000 });
+    return;
+  }
+  if (key === "itt99-aim") {
+    await page.waitForSelector("[data-aim-signon]", { timeout: 15000 });
+    return;
+  }
+  if (key === "itt02-stumble" || key === "itt04-thefacebook-networks") {
+    await page.waitForFunction(() => {
+      const b = document.querySelector("[data-official-verb]");
+      return !!(b && b.getAttribute("data-official-verb-bound") === "1");
+    }, null, { timeout: 15000 });
+    return;
+  }
+  if (key === "itt03-photobucket") {
+    await page.waitForSelector("[data-pb-upload]", { timeout: 15000 });
+    return;
+  }
+  if (key === "itt05-yt-uploads") {
+    await page.waitForFunction(() => {
+      const f = document.querySelector("form[data-yt-upload]");
+      return !!(f && f.getAttribute("data-yt-bound") === "1");
+    }, null, { timeout: 15000 });
   }
 }
 
@@ -343,6 +509,116 @@ async function completeCustom(page, row) {
     await page.locator("[data-pc-sub='Weather']").click({ force: true });
     const value = await pollKey(page, key);
     return { key, afterEmpty, afterTrap: afterEmpty, blob: value, status: "pointcast" };
+  }
+  if (key === "itt98-lucky") {
+    const lucky = page.locator("[data-google-lucky]").first();
+    await lucky.click({ force: true });
+    const afterEmpty = await raw(page, key);
+    await page.fill('input[name="q"]', "x");
+    await lucky.click({ force: true });
+    const afterTrap = await raw(page, key);
+    await page.fill('input[name="q"]', "yahoo");
+    await lucky.click({ force: true });
+    const value = await pollKey(page, key);
+    return { key, afterEmpty, afterTrap, blob: value, status: "lucky" };
+  }
+  if (key === "itt99-aim") {
+    const go = page.locator("[data-aim-signon] button[type='submit']").first();
+    await go.click({ force: true });
+    const afterEmpty = await raw(page, key);
+    await page.fill("[name='sn']", "x");
+    await go.click({ force: true });
+    const afterTrap = await raw(page, key);
+    await page.fill("[name='sn']", "AdaSN");
+    await go.click({ force: true });
+    const value = await pollKey(page, key);
+    return { key, afterEmpty, afterTrap, blob: value, status: "aim" };
+  }
+  if (key === "itt00-mapquest") {
+    const go = page.locator("[data-official-verb]").first();
+    await go.click({ force: true });
+    const afterEmpty = await raw(page, key);
+    await page.fill("[name='from']", "123 Main St");
+    await go.click({ force: true });
+    const afterTrap = await raw(page, key);
+    await page.fill("[name='to']", "456 Oak Ave");
+    await go.click({ force: true });
+    const value = await pollKey(page, key);
+    return { key, afterEmpty, afterTrap, blob: value, status: "mapquest" };
+  }
+  if (key === "itt01-wiki") {
+    const save = page.locator("[data-wiki-save]").first();
+    await save.click({ force: true });
+    const afterEmpty = await raw(page, key);
+    await page.fill("[data-wiki-body]", "x");
+    await save.click({ force: true });
+    await page.locator("[data-wiki-preview]").first().click({ force: true });
+    const afterTrap = await raw(page, key);
+    await page.fill("[data-wiki-body]", "museum");
+    await save.click({ force: true });
+    const value = await pollKey(page, key);
+    return { key, afterEmpty, afterTrap, blob: value, status: "wiki" };
+  }
+  if (key === "itt02-stumble") {
+    const go = page.locator("[data-su-stumble]").first();
+    await go.click({ force: true });
+    const afterEmpty = await raw(page, key);
+    const trap = page.locator("[data-official-trap]").first();
+    if (await trap.count()) await trap.click({ force: true });
+    await page.fill("[data-official-need]", "x");
+    await go.click({ force: true });
+    const afterTrap = await raw(page, key);
+    const reqs = page.locator("[data-official-req]");
+    const nReq = await reqs.count();
+    for (let i = 0; i < nReq; i++) await reqs.nth(i).check({ force: true });
+    await page.fill("[data-official-need]", "art leftover");
+    await go.click({ force: true });
+    const value = await pollKey(page, key);
+    return { key, afterEmpty, afterTrap, blob: value, status: "stumble" };
+  }
+  if (key === "itt03-photobucket") {
+    const form = page.locator("form[data-pb-upload]").first();
+    await form.locator("button[type='submit']").click({ force: true });
+    const afterEmpty = await raw(page, key);
+    const trap = page.locator("[data-itt-trap]").first();
+    if (await trap.count()) await trap.click({ force: true });
+    const afterTrap = await raw(page, key);
+    await page.fill("#ott-field, [name='file']", "vacation.jpg");
+    const req = page.locator("[data-pb-req]").first();
+    if (await req.count()) await req.check({ force: true });
+    await form.locator("button[type='submit']").click({ force: true });
+    const value = await pollKey(page, key);
+    return { key, afterEmpty, afterTrap, blob: value, status: "photobucket" };
+  }
+  if (key === "itt04-thefacebook-networks") {
+    const go = page.locator("[data-fb-join-btn]").first();
+    await go.click({ force: true });
+    const afterEmpty = await raw(page, key);
+    await page.fill("[data-fb-join-name]", "x");
+    await go.click({ force: true });
+    const afterTrap = await raw(page, key);
+    await page.locator("[data-fb-network='harvard']").click({ force: true });
+    await page.fill("[data-fb-join-name]", "Mark residual");
+    await go.click({ force: true });
+    const value = await pollKey(page, key);
+    return { key, afterEmpty, afterTrap, blob: value, status: "facebook" };
+  }
+  if (key === "itt05-yt-uploads") {
+    const form = page.locator("form[data-yt-upload]").first();
+    await form.locator("button[type='submit']").click({ force: true });
+    const afterEmpty = await raw(page, key);
+    await page.fill("[name='title']", "elephant");
+    const reqs = page.locator("[data-yt-req]");
+    const nReq = await reqs.count();
+    for (let i = 0; i < nReq; i++) await reqs.nth(i).check({ force: true });
+    await form.locator("button[type='submit']").click({ force: true });
+    const afterTrap = await raw(page, key);
+    await page.fill("[name='title']", "Me at the zoo residual");
+    await page.fill("[name='desc']", "first clip");
+    for (let i = 0; i < nReq; i++) await reqs.nth(i).check({ force: true });
+    await form.locator("button[type='submit']").click({ force: true });
+    const value = await pollKey(page, key);
+    return { key, afterEmpty, afterTrap, blob: value, status: "youtube" };
   }
   return { key, afterEmpty: "skip", afterTrap: "skip", blob: null, status: "no custom" };
 }

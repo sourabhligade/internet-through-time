@@ -55,7 +55,7 @@ export function OfficialStop({ stop, year, onNext }) {
       return;
     }
     setSaved(true);
-    say("Saved in this browser.");
+    say("Saved.");
   }
 
   return (

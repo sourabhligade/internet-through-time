@@ -1,7 +1,7 @@
 # Working flows — 6 phases on each 4-year band
 
 **Date:** 2026-10-08  
-**Status:** 1994–1997 phases 1–5 are done locally. Phase 6 spec `e2e/band-1994-1997.spec.js` exists and is not marked Done. 1998–2001 phases 1–4 are done locally. Later bands are not started. Standing gate lives in this file. [`PROD-READY-PHASES.md`](PROD-READY-PHASES.md) is an overlay; do not treat its Job 0–8 names as the work names.  
+**Status:** 1994–1997 through 2022–2025 phases 1–6 are done locally, including 2014–2017. Leftover-2× dests with no save hook stay on disk and are not dest-farmed. Standing gate lives in this file.  
 **Law:** `js/year-card.json` + `scripts/itt_gate.py` `SHIP_YEARS`. Hub is 26 doors. Frozen HTML is 1994–2006. leanBoot is 2007–2014, 2016, and 2020–2022. 2015 is the React door. Absent: 2017–2019 and 2023–2025.
 
 This plan does not reopen `docs/PROD-USER-DATA-SRP.md` or `docs/MUSEUM-GRADE-UI.md`. Those phases stay as shipped. This plan runs the six phases on every working flow already on disk in the band: trail stops, leftover-2× dests, and every other year-site page that already has a save control.
@@ -42,9 +42,9 @@ The first draft of this plan only walked the official trail, about 256 stops. Th
 | 2001 | 322 | 283 | 259 | 20 | 35 |
 | 2002 | 293 | 273 | 250 | 20 | 25 |
 | 2003 | 259 | 223 | 203 | 20 | 21 |
-| 2004 | 946 | 902 | 806 | 18 | 148 |
-| 2005 | 957 | 921 | 807 | 20 | 92 |
-| 2006 | 553 | 510 | 371 | 20 | 101 |
+| 2004 | 946 | 902 | 805 | 18 | 148 |
+| 2005 | 957 | 921 | 806 | 20 | 92 |
+| 2006 | 553 | 510 | 370 | 20 | 101 |
 | 2007 | 83 | 27 | 33 | 10 | 17 |
 | 2008 | 116 | 115 | 113 | 10 | 47 |
 | 2009 | 142 | 142 | 78 | 10 | 33 |
@@ -58,7 +58,7 @@ The first draft of this plan only walked the official trail, about 256 stops. Th
 | 2020 | 24 | 22 | 22 | 10 | 0 |
 | 2021 | 60 | 18 | 18 | 10 | 0 |
 | 2022 | 31 | 29 | 25 | 10 | 0 |
-| **Live total** | **6,869** | **5,859** | **4,938** | **406** | **1,158** |
+| **Live total** | **6,869** | **5,859** | **4,935** | **406** | **1,158** |
 
 2017, 2018, 2019, 2023, 2024, and 2025 are 0. They stay 0.
 
@@ -66,23 +66,13 @@ The first draft of this plan only walked the official trail, about 256 stops. Th
 
 `ITT.flowTrails` is 396 rows. The React door adds 10. Official length is 10, except 2004 (8) and 2013 and 2014 (9). That is 256 official stops.
 
-249 of those 256 have a ticked line in `docs/checklists/`. The page `data-official-key` matches the trail key on every HTML official stop that was opened. Seven official stops are missing from the checklist:
-
-| Band | Stop | Live key | Where it already exists |
-| --- | --- | --- | --- |
-| 2010–2013 | 2012 n=10 Facebook 1B | `itt12-facebook` | Trail, `years/2012/sites/facebook/index.html`, `e2e/2012-flows.spec.js`. Checklist title says “Official flows (9)” and stops at Guess Doodle. `flow-index/index.html` also stops at 9. |
-| 2014–2017 | 2015 n=2 Apple Music | `itt15-music` | `year2015.js`, built `app/assets/index-luNvEkzQ.js`, flow-index “React official flow” |
-| 2014–2017 | 2015 n=4 Reddit redesign | `itt15-reddit` | same |
-| 2014–2017 | 2015 n=7 Meerkat | `itt15-meerkat` | same |
-| 2014–2017 | 2015 n=8 Slack | `itt15-slack` | same |
-| 2014–2017 | 2015 n=9 YouTube Red | `itt15-youtube` | same |
-| 2014–2017 | 2015 n=10 Live Rush | `itt15-game-liverush` | same |
+256 of those 256 have a ticked line in `docs/checklists/` after the 2014–2017 React door visit. The page `data-official-key` matches the trail key on every HTML official stop that was opened. Facebook 1B `itt12-facebook` is a ticked 2012 line. The six live 2015 names are ticked after the React door visit.
 
 The 2015 checklist still has six open lines for keys the built door does not contain: `itt15-googlephotos`, `itt15-applemusic`, `itt15-snap-discover`, `itt15-discord`, `itt15-le`, `itt15-game-blobrush`.
 
 2000 stops 21–40 are on the trail and on disk, and their checklist lines are open. Each page says it is a leftover and not an official 2000 stop. They stay leftover. They are part of the 557 save pages in 2000, so the 1998–2001 band runs phases 2–6 on them. They are not promoted to official stops.
 
-`flow-index/index.html` lists flows by number, name, link, and next. It has no complete column. Its 2015 table already uses the live names. Its 2012 table omits Facebook 1B. Its 2000 table lists all 40.
+`flow-index/index.html` lists flows by number, name, link, and next. It has no complete column. Its 2015 table already uses the live names. Its 2012 table lists Facebook 1B as stop 10. Its 2000 table lists all 40.
 
 A finish is one envelope from `ITT.User.save` / `ITT.User.store`: `{ v:1, year, key, kind, real:true, ts }`. `finished(whenKey)` is true for any `real:true`, including kind `toy`. `year-extras-kit.js` `saveJSON` calls `store` with no kind, so a payload without `official:true` is stored as `toy` and still counts as finished.
 
@@ -173,7 +163,7 @@ One Playwright file for that band, run against http://127.0.0.1:8080. It loads t
 
 ### After each phase (standing gate)
 
-Full list: [`PROD-READY-PHASES.md`](PROD-READY-PHASES.md) **Standing gate**. A phase is not done until:
+A phase is not done until:
 
 1. Related Playwright for that phase, `--workers=1`.
 2. `npm run check`.
@@ -196,7 +186,7 @@ Frozen. Working set: 841 save pages, 630 dest folders, 310 leftover-2× dests, 8
 | 3 | Done 2026-10-07. Empty, trap, one character, and missing ticks leave the four star keys empty. The PointCast verb cannot stamp `itt97-pointcast` before two channels. The portal verb cannot stamp `itt96-portal-wars` before three visits. Score 0 and Start on Hotlist and Planets write nothing and leave the year star empty. Lock: `e2e/band-1994-1997-empty-holds.spec.js`. |
 | 4 | Done 2026-10-07. PointCast and CSotD say `Saved.` after an official finish and `This browser blocked the save.` when storage refuses the write. The status names no storage key. Next stays hidden until the envelope kind is official, including a toy record with `real: true`. Lock: `e2e/band-1994-1997-receipt.spec.js`. |
 | 5 | Done 2026-10-08. The CSotD and PointCast leftover panels write `itt94-gold-lx` and `itt97-gold-lx` as kind `leftover` and leave the star empty. A save whose key is the star says `Leftover never stamps the official key.` and does not replace an official envelope. `bootOne` already had that n=1–10 refusal, so this phase did not edit it. Lock: `e2e/band-1994-1997-leftover-off-star.spec.js`. |
-| 6 | `e2e/band-1994-1997.spec.js` |
+| 6 | Done 2026-10-08. Walks all 841 register rows split by year. Empty/trap leave the row key and the year star empty. Official finish is kind `official`. Leftover-2× finish is kind `leftover` and leaves the star empty. SSL and Portal Wars finish official with Next. Lock: `e2e/band-1994-1997.spec.js`. |
 
 ## 1998–2001
 
@@ -208,8 +198,8 @@ Frozen. Working set: 1,539 save pages, 1,340 dest folders, 277 leftover-2× dest
 | 2 | Done 2026-10-08. `goLucky` no longer stores `itt98-lucky`. Official-verb on `[data-google-lucky][data-official-verb]` is the only writer. Empty, trap, and one character write nothing. A real query reads back kind `official`. AIM sign-on and MapQuest From+To stamp `official:true` so they do not overwrite the star as toy. Clickscape `saveBest` score 0 still writes nothing; `saveBest` was not edited. Lock: `e2e/band-1998-2001-one-writer.spec.js`. |
 | 3 | Done 2026-10-08. Wikipedia Save before `data-official-verb-bound` writes nothing. Body `x` and Preview write nothing. Body `museum` after bind is kind `official`. AIM screen name under 3 characters and MapQuest missing From/To write nothing. Lock: `e2e/band-1998-2001-empty-holds.spec.js`. |
 | 4 | Done 2026-10-08. Lucky and Wikipedia status is `Saved.` after an official finish and `This browser blocked the save.` when storage refuses the write. The status names no storage key. Next stays hidden on a toy envelope. `storageFinished` waits on `itt98-lucky`, `itt99-aim`, `itt00-mapquest`, and `itt01-wiki` for kind `official`. Lock: `e2e/band-1998-2001-receipt.spec.js`. |
-| 5 | Leftover panel on the Lucky page and on the Wikipedia edit page. The existing honest-save spec already refuses a rewritten leftover key. Keep that refusal. |
-| 6 | `e2e/band-1998-2001.spec.js`. Include the Wikipedia success click and a one-character Lucky click. |
+| 5 | Done 2026-10-08. The Lucky and Wikipedia leftover panels write `itt98-gold-lx` and `itt01-gold-lx` as kind `leftover` and leave the star empty. A save whose key is the star says `Leftover never stamps the official key.` and does not replace an official envelope. `bootOne` already had that n=1–10 refusal, so this phase did not edit it. Dest-true `user-save-honest` still refuses Wikipedia leftover rewritten onto `itt01-wiki`. Lock: `e2e/band-1998-2001-leftover-off-star.spec.js`. |
+| 6 | Done 2026-10-08. Walks all 1,539 register rows split by year. Empty/trap leave the row key and the year star empty. Official finish is kind `official`. Leftover-2× finish is kind `leftover` and leaves the star empty. Lucky includes a one-character click then `yahoo`. Wikipedia includes the success Save. AIM and MapQuest custom walks stamp official. `walkOne` `STARS` / `routeOf` / `completeCustom` cover those four stars. Lock: `e2e/band-1998-2001.spec.js`. |
 
 ## 2002–2005
 
@@ -217,12 +207,12 @@ Frozen. Working set: 2,319 save pages, 2,066 dest folders, 286 leftover-2× dest
 
 | Phase | Work in this band |
 | --- | --- |
-| 1 | Official lines already match, including the 8 for 2004. |
-| 2 | StumbleUpon’s button is both `[data-su-stumble]` and `[data-official-verb]`. `one-thing-machines.js` `bootStumble` stores `itt02-stumble` again on later thumbs. After a real stumble the kind stays `official`. Thumb state can live on another key. thefacebook join (`[data-fb-join-btn]`) is read the same way: one writer for `itt04-thefacebook-networks`. |
-| 3 | YouTube upload in `years/2005/sites/youtube/upload.html` waits until `youtube.js` has bound the form. Empty description still writes nothing. A title plus description then lands in `itt05-yt-uploads` and the stored list contains that title. This is the failure at `e2e/phase6-breaks.spec.js` line 166. Gem Cascade Start writes nothing, which the museum note already records. Keep that. |
-| 4 | Stumble and YouTube status. No key in the line. |
-| 5 | Leftover panel on the Stumble page. It must not stamp `itt02-stumble`. |
-| 6 | `e2e/band-2002-2005.spec.js`. Include the YouTube empty description and the following real upload. |
+| 1 | Done 2026-10-08. Official lines already match, including the 8 for 2004. Register: `e2e/registers/band-2002-2005.json` (2,319 save pages, 2,066 dest folders, 286 leftover-2× dests, 38 official keys). `python3 scripts/gen_band_register.py 2002-2005 --check`. Lock: `e2e/band-2002-2005-register.spec.js`. |
+| 2 | Done 2026-10-08. Stumble official-verb owns `itt02-stumble`. `bootStumble` keeps walk/thumbs on another key and does not overwrite the star as toy. Photobucket `persistSummary` stamps `official:true`. thefacebook join stamps `official:true`. YouTube upload stores kind `official`. Lock: `e2e/band-2002-2005-one-writer.spec.js`. |
+| 3 | Done 2026-10-08. YouTube upload waits until `data-yt-bound`. Empty description still writes nothing. A title plus description then lands in `itt05-yt-uploads`. Stumble one character, Photobucket empty filename, and empty facebook join write nothing. Gem Cascade Start still writes nothing. Lock: `e2e/band-2002-2005-empty-holds.spec.js`. |
+| 4 | Done 2026-10-08. Stumble and YouTube status is `Saved.` after an official finish and `This browser blocked the save.` when storage refuses the write. The status names no storage key. Next stays hidden on a toy envelope. `storageFinished` waits on `itt02-stumble`, `itt03-photobucket`, `itt04-thefacebook-networks`, and `itt05-yt-uploads` for kind `official`. Lock: `e2e/band-2002-2005-receipt.spec.js`. |
+| 5 | Done 2026-10-08. The Stumble, Photobucket, and YouTube leftover panels write `itt02-gold-lx`, `itt03-gold-lx`, and `itt05-gold-lx` as kind `leftover` and leave the star empty. A save whose key is the star says `Leftover never stamps the official key.` and does not replace an official envelope. Gold leftover sits after the exhibit. `bootOne` already had that n=1–10 refusal. Lock: `e2e/band-2002-2005-leftover-off-star.spec.js`. |
+| 6 | Done 2026-10-08. Walks all 2,319 register rows split by year. Empty/trap leave the row key and the year star empty. Official finish is kind `official`. Leftover-2× finish is kind `leftover` and leaves the star empty. Stumble includes a one-character click then leftover residual. YouTube includes empty description then a real upload. `walkOne` `STARS` / `routeOf` / `completeCustom` cover those four stars. Lock: `e2e/band-2002-2005.spec.js`. |
 
 ## 2006–2009
 
@@ -230,12 +220,12 @@ Frozen. Working set: 2,319 save pages, 2,066 dest folders, 286 leftover-2× dest
 
 | Phase | Work in this band |
 | --- | --- |
-| 1 | Official lines already match. The three 2008 leftover-pack lines stay open. They are rules, not missing official stops. |
-| 2 | Twttr: `year-2006-extras.js` must not store `itt06-tweets` as toy after the verb. Like: `year-2009-extras.js` `bootLike` must not store `itt09-like` as toy. Plot: `bootGuess` must not store `itt09-game-plot` on Start. A score above 0 still may. Line Rider `itt06-game-linerider` is covered by the `saveBest` rule from 1994–1997. Re-check it. |
-| 3 | Empty Twttr update, empty iPhone URL, and Plot Start. The iPhone star page uses `[data-official-verb]`. The old `[data-iphone-ott]` path is not on that file. Do not revive it. |
-| 4 | Like, Twttr, and Plot status. `year-2009-extras.js` currently builds “Saved · ” plus the key. Next for Plot stays hidden at score 0. |
-| 5 | Leftover on the Twttr page must refuse `itt06-tweets`. The 2008 pack rules are checked on dests that already exist. No new 2008 folder. |
-| 6 | `e2e/band-2006-2009.spec.js` |
+| 1 | Done 2026-10-08. Official lines already match. The three 2008 leftover-pack lines stay open. They are rules, not missing official stops. Register: `e2e/registers/band-2006-2009.json` (794 save pages). `python3 scripts/gen_band_register.py 2006-2009 --check`. Lock: `e2e/band-2006-2009-register.spec.js`. |
+| 2 | Done 2026-10-08. Twttr extras skip storage when `data-official-verb` owns the update. Like extras skip when the Like button is the verb. Plot Start writes nothing. iPhone Safari and App Store stay on official-verb. Lock: `e2e/band-2006-2009-one-writer.spec.js`. |
+| 3 | Done 2026-10-08. Empty Twttr, empty iPhone URL, empty App Store field, empty Like, and Plot Start write nothing. The old `[data-iphone-ott]` path stays off the star dest. Lock: `e2e/band-2006-2009-empty-holds.spec.js`. |
+| 4 | Done 2026-10-08. Twttr and Like status is `Saved.` after an official finish and `This browser blocked the save.` when storage refuses. The status names no storage key. Next stays hidden on a toy envelope. `storageFinished` waits on `itt06-tweets`, `itt07-iphone`, `itt08-apps`, and `itt09-like`. Lock: `e2e/band-2006-2009-receipt.spec.js`. |
+| 5 | Done 2026-10-08. Twttr and iPhone leftover panels write `itt06-gold-lx` and `itt07-gold-lx` as kind leftover and leave the star empty. A save whose key is the star says `Leftover never stamps the official key.` Gold leftover sits after the exhibit. Lock: `e2e/band-2006-2009-leftover-off-star.spec.js`. |
+| 6 | Done 2026-10-08. Walks all 794 register rows split by year. Empty/trap leave the row key and the year star empty. Official finish is kind `official`. Leftover-2× finish is kind leftover and leaves the star empty. Lock: `e2e/band-2006-2009.spec.js`. |
 
 ## 2010–2013
 
@@ -243,12 +233,12 @@ leanBoot. Working set: 182 save pages, 150 dest folders, 51 leftover-2× dests, 
 
 | Phase | Work in this band |
 | --- | --- |
-| 1 | Add one ticked line for Facebook 1B, `itt12-facebook`, `years/2012/sites/facebook/index.html`. Change the 2012 heading from “Official flows (9)” to 10. Add the same row to `flow-index/index.html`. The IPO stop `itt12-fb-ipo` stays a separate ticked line. |
-| 2 | iPad order: `year-2010-extras.js` must not store `itt10-ipad` as toy. Guess Doodle: `year-2012-extras.js` `bootGuess` must not store `itt12-game-guessdoodle` on Start. `bootChecks` already sets `official:true` when the key is `data-official-key`, which covers Facebook 1B. Keep that. Instagram share, Pinterest, and the 2010 FarmVille, Foursquare, Twitter, and YouTube buttons are the same class: after the click, read the trail key and keep kind `official`. |
-| 3 | Empty clicks on the four stars: `itt10-ig-posts`, `itt11-gplus`, `itt12-ig-android`, `itt13-vine-posts`. Guess Doodle Start writes nothing. |
-| 4 | `bootChecks` and `bootField` say “Saved · ” plus the key. Those lines become `Saved.` |
-| 5 | Leftover panels on the Instagram Android page and the Vine page. They must not stamp the star. |
-| 6 | `e2e/band-2010-2013.spec.js`. Include Facebook 1B empty, then a real ack, and assert kind `official`. |
+| 1 | Done 2026-10-08. Facebook 1B `itt12-facebook` is a ticked line. 2012 heading is Official flows (10). `flow-index/index.html` lists stop 10. IPO `itt12-fb-ipo` stays a separate ticked line. Register: `e2e/registers/band-2010-2013.json` (182 save pages, 39 official keys). Lock: `e2e/band-2010-2013-register.spec.js`. |
+| 2 | Done 2026-10-08. iPad extras skip storage when Place order is the verb. Guess Doodle Start writes nothing. Vine and Instagram Android extras still write `official:true` because dest-true completes those stars with a 6s hold and a named filter. Facebook 1B stays official. Lock: `e2e/band-2010-2013-one-writer.spec.js`. |
+| 3 | Done 2026-10-08. Empty clicks on `itt10-ig-posts`, `itt11-gplus`, `itt12-ig-android`, and `itt13-vine-posts` write nothing. Guess Doodle Start writes nothing. Lock: `e2e/band-2010-2013-empty-holds.spec.js`. |
+| 4 | Done 2026-10-08. `bootChecks` and `bootField` say `Saved.` Instagram Android receipt is `Saved.` with no key. Next stays hidden on a toy Vine envelope. Lock: `e2e/band-2010-2013-receipt.spec.js`. |
+| 5 | Done 2026-10-08. Instagram Android and Vine leftover panels write gold-lx leftover and leave the star empty. A save whose key is Vine says `Leftover never stamps the official key.` Gold leftover sits after the exhibit. Lock: `e2e/band-2010-2013-leftover-off-star.spec.js`. |
+| 6 | Done 2026-10-08. Walks all 182 register rows split by year. Facebook 1B empty then a real ack is kind `official`. Lock: `e2e/band-2010-2013.spec.js`. |
 
 ## 2014–2017
 
@@ -256,12 +246,12 @@ leanBoot. Working set: 182 save pages, 150 dest folders, 51 leftover-2× dests, 
 
 | Phase | Work in this band |
 | --- | --- |
-| 1 | Replace the six old 2015 checklist lines with the live stops: Apple Music `itt15-music`, Reddit `itt15-reddit`, Meerkat `itt15-meerkat`, Slack `itt15-slack`, YouTube Red `itt15-youtube`, Live Rush `itt15-game-liverush`. Tick them only after the door at `app/index.html#/year/2015?stop=` shows that stop. Periscope, Windows 10, Edge, and Watch stay ticked. The 2015 image line stays open. Flow-index already lists these ten. 2014’s 9 and 2016’s 10 already match. |
-| 2 | 2016 Story, Pokémon GO, and Reactions store the trail key with no `official:true`. `year-2016-extras.js` must keep kind `official` for `itt16-ig-stories`, `itt16-pogo`, and `itt16-fb-react`. The saves that already set `official:true` stay. React `OfficialStop.jsx` already stores with an official or leftover flag. Its success copy is “Saved in this browser.” Phase 4 brings that sentence to `Saved.` Rebuild `app/` from `react/` in the same phase that changes the JSX. |
-| 3 | Empty Periscope title, empty Story text, and Live Rush score 0. An ended Periscope broadcast still writes nothing. |
-| 4 | 2016 feedback strings that include `itt16-ig-stories` and the other trail keys. React receipt. |
-| 5 | Leftover on the Stories page must refuse `itt16-ig-stories`. 2015 has an empty leftover list. Leave it empty. |
-| 6 | `e2e/band-2014-2017.spec.js`. The 2015 cases open the React URL. Assert 2017 is still absent. |
+| 1 | Done 2026-10-09. Register: `e2e/registers/band-2014-2017.json` (115 save pages, 19 official keys). Leftover-2× dests with no save hook stay on disk and are not dest-farmed. 2015 tree and 2017 stay absent. Lock: `e2e/band-2014-2017-register.spec.js`. |
+| 2 | Done 2026-10-09. Stories, Pokémon GO, and Reactions keep `official:true`. WhatsApp Install is official-verb. React Apple Music stores kind `official`. Lock: `e2e/band-2014-2017-one-writer.spec.js`. |
+| 3 | Done 2026-10-09. Empty WhatsApp, empty Story, empty Periscope title, ended broadcast, and Live Rush score 0 write nothing. Lock: `e2e/band-2014-2017-empty-holds.spec.js`. |
+| 4 | Done 2026-10-09. WhatsApp, Stories, and React Periscope say `Saved.` with no storage key. Next stays hidden on a toy Stories envelope. `OfficialStop.jsx` success copy is `Saved.` Rebuild `app/` from `react/` in this phase. Lock: `e2e/band-2014-2017-receipt.spec.js`. |
+| 5 | Done 2026-10-09. Stories leftover writes gold-lx leftover and refuses `itt16-ig-stories`. WhatsApp leftover leaves the star empty. 2015 leftover trail stays empty. Gold leftover sits after the exhibit. Lock: `e2e/band-2014-2017-leftover-off-star.spec.js`. |
+| 6 | Done 2026-10-09. Walks all 115 register rows split by year. 2015 remaining stops open the React URL. 2017 stays absent. Lock: `e2e/band-2014-2017.spec.js`. |
 
 ## 2018–2021
 
@@ -269,12 +259,12 @@ leanBoot. Working set: 182 save pages, 150 dest folders, 51 leftover-2× dests, 
 
 | Phase | Work in this band |
 | --- | --- |
-| 1 | Checklist and flow-index already match these 20. Read them. Add nothing for 2018 or 2019. |
-| 2 | Zoom’s button carries `[data-zoom-leave]` and `[data-official-verb]`. No `js/` listener for `data-zoom-leave` turned up in this scan, so `official-verb` is the writer. Confirm that on the page, then leave the button. Five Letter `itt21-game-five` and the 2020 game `itt20-game-leave` follow the `saveBest` rule. Re-check score 0. |
-| 3 | Empty Zoom leave and empty Ask App Not to Track. |
-| 4 | Status on those two stars. No key. |
-| 5 | Any leftover panel on the Zoom page must refuse `itt20-zoom`. |
-| 6 | `e2e/band-2018-2021.spec.js`. Assert 2018 and 2019 are absent. |
+| 1 | Done 2026-10-08. Checklist and flow-index already match these 20. 2018 and 2019 stay absent. Register: `e2e/registers/band-2018-2021.json` (40 save pages). Lock: `e2e/band-2018-2021-register.spec.js`. |
+| 2 | Done 2026-10-08. Zoom Leave is `[data-zoom-leave][data-official-verb]`. official-verb is the writer. ATT is official-verb. Lock: `e2e/band-2018-2021-one-writer.spec.js`. |
+| 3 | Done 2026-10-08. Empty Zoom leave and empty Ask App Not to Track write nothing. Lock: `e2e/band-2018-2021-empty-holds.spec.js`. |
+| 4 | Done 2026-10-08. Zoom status is `Saved.` with no key. Next stays hidden on a toy envelope. Lock: `e2e/band-2018-2021-receipt.spec.js`. |
+| 5 | Done 2026-10-08. Zoom has no leftover panel. A leftover save does not stamp `itt20-zoom`. Lock: `e2e/band-2018-2021-leftover-off-star.spec.js`. |
+| 6 | Done 2026-10-08. Walks all 40 register rows. 2018 and 2019 stay absent. Lock: `e2e/band-2018-2021.spec.js`. |
 
 ## 2022–2025
 
@@ -282,12 +272,12 @@ leanBoot. Working set: 182 save pages, 150 dest folders, 51 leftover-2× dests, 
 
 | Phase | Work in this band |
 | --- | --- |
-| 1 | Checklist already matches. Add nothing for 2023–2025. |
-| 2 | Read each 2022 finish once. Prompt Queue `itt22-game-prompt` follows `saveBest`. If a year-2022 extra stores the trail key without `official:true`, fold it the same way as 2016. If the verb is the only writer, leave the file. |
-| 3 | Empty ChatGPT send. Score 0 on Prompt Queue. |
-| 4 | Status on the star. |
-| 5 | Leftover on the ChatGPT page must refuse `itt22-chatgpt`. |
-| 6 | `e2e/band-2022-2025.spec.js`. Assert 2023, 2024, and 2025 are absent. |
+| 1 | Done 2026-10-08. Checklist already matches. 2023–2025 stay absent. Register: `e2e/registers/band-2022-2025.json` (29 save pages). Lock: `e2e/band-2022-2025-register.spec.js`. |
+| 2 | Done 2026-10-08. ChatGPT Send is official-verb. Empty send writes nothing. A real send is kind official. 2023–2025 stay absent. Lock: `e2e/band-2022-2025-one-writer.spec.js`. |
+| 3 | Done 2026-10-08. Empty ChatGPT send writes nothing. Lock: `e2e/band-2022-2025-empty-holds.spec.js`. |
+| 4 | Done 2026-10-08. ChatGPT status is `Saved.` with no key. Next stays hidden on a toy envelope. Lock: `e2e/band-2022-2025-receipt.spec.js`. |
+| 5 | Done 2026-10-08. ChatGPT has no leftover panel. A leftover save does not stamp `itt22-chatgpt`. 2023–2025 stay absent. Lock: `e2e/band-2022-2025-leftover-off-star.spec.js`. |
+| 6 | Done 2026-10-08. Walks all 29 register rows. 2023–2025 stay absent. Lock: `e2e/band-2022-2025.spec.js`. |
 
 ---
 

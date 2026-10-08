@@ -69,6 +69,7 @@
       saveJSON(sumKey, {
         multiStep: true,
         real: true,
+        official: true,
         year: "2003",
         count: album.items.length,
         last: album.items[0] && album.items[0].file,

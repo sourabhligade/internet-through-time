@@ -933,9 +933,46 @@
 
   ITT.foldLeftoverRails = foldLeftoverRails;
 
+  /** Body-level ancestor of the official verb or YouTube upload form — the dest exhibit, not the gold plaque. */
+  function exhibitRoot(doc, panel) {
+    var verb = doc.querySelector("[data-official-verb]");
+    var form = doc.querySelector("[data-yt-upload], [data-pb-upload], [data-fb-join]");
+    var stumble = doc.querySelector("[data-su-stumble]");
+    var node;
+    if (!verb && !form && !stumble) return null;
+    node = verb || form || stumble;
+    while (node.parentNode && node.parentNode !== doc.body) {
+      node = node.parentNode;
+    }
+    if (!node || node === panel || node.parentNode !== doc.body) return null;
+    return node;
+  }
+
+  function parkOfficialGold(doc) {
+    doc = doc || document;
+    var root = doc.documentElement;
+    var panel;
+    var anchor;
+    if (!root || !root.getAttribute("data-official-key")) return;
+    panel = doc.querySelector("[data-lo-panel][data-itt-gold-lx]");
+    if (!panel || !doc.body) return;
+    anchor = exhibitRoot(doc, panel);
+    try {
+      panel.setAttribute("data-itt-gold-parked", "1");
+      if (anchor && anchor.parentNode) {
+        if (anchor.nextSibling === panel) return;
+        if (anchor.nextSibling) anchor.parentNode.insertBefore(panel, anchor.nextSibling);
+        else anchor.parentNode.appendChild(panel);
+        return;
+      }
+      doc.body.appendChild(panel);
+    } catch (eP) { /* */ }
+  }
+
   function boot(doc) {
     doc = doc || document;
     foldDeadPackHooks(doc);
+    parkOfficialGold(doc);
     var btns = doc.querySelectorAll("[data-lo-save]");
     var i;
     for (i = 0; i < btns.length; i++) bootOne(btns[i]);
