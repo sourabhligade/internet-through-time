@@ -64,33 +64,48 @@
         return base + (q ? ("?q=" + encodeURIComponent(q)) : "");
       }
 
+      function onLuckyDest(form) {
+        try {
+          if (form && form.getAttribute && form.getAttribute("data-google-lucky-page") != null) return true;
+        } catch (eF) { /* */ }
+        try {
+          return document.documentElement.getAttribute("data-official-key") === "itt98-lucky";
+        } catch (eK) {
+          return false;
+        }
+      }
+
+      function luckyOfficial() {
+        try {
+          var rec = ITT.User && typeof ITT.User.read === "function" ? ITT.User.read("itt98-lucky") : null;
+          return !!(rec && rec.real === true && rec.kind === "official");
+        } catch (eR) {
+          return false;
+        }
+      }
+
+      function paintLuckyReceipt() {
+        if (!onLuckyDest(document.querySelector("[data-google-lucky-page]"))) return;
+        var st = document.querySelector("[data-official-status], [data-itt-action-status]");
+        if (!st) return;
+        if (luckyOfficial()) {
+          st.textContent = "Saved.";
+          try { st.style.color = "#060"; } catch (eC) { /* */ }
+        }
+      }
+
       function goLucky(q, form) {
         q = String(q || "").replace(/^\s+|\s+$/g, "");
-        if (!q) {
+        /* Official-verb on lucky.html owns itt98-lucky. One character
+           must not finish the star. This handler only jumps after a
+           real query. */
+        if (q.length < 2) {
           actionFeedback("Type a query first (Lucky does not guess).", { error: true, flash: true });
           return;
         }
-        try {
-          var pfx = (config && config.storagePrefix) || "itt98";
-          var lk = ITT.util && ITT.util.immersionStorageKey
-            ? ITT.util.immersionStorageKey("lucky", pfx)
-            : pfx + "-lucky";
-          var destShow = rank(q);
-          var destHref = destShow.length ? entryHref(destShow[0].e) : searchHref(q, form);
-          window.ITT.User.store(lk, {
-            q: q,
-            dest: destHref,
-            multiStep: true,
-            real: true,
-            year: String((config && config.year) || "1998"),
-            ts: Date.now()
-          });
-          try {
-            if (ITT.revealNextFlow) ITT.revealNextFlow(document);
-          } catch (eN) {
-            /* */
-          }
-        } catch (eLk) { /* */ }
+        /* On the Lucky dest, jump only after an official envelope so a
+           blocked save keeps the receipt on this page. */
+        if (onLuckyDest(form) && !luckyOfficial()) return;
         var show = rank(q);
         if (show.length) {
           location.href = entryHref(show[0].e);
@@ -165,6 +180,7 @@
         if (first && !first.value && typeof first.focus === "function") {
           try { first.focus(); } catch (e) { /* ignore */ }
         }
+        paintLuckyReceipt();
       }
 
       function initResults() {

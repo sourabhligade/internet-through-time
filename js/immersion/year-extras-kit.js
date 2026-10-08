@@ -258,8 +258,18 @@
     try {
       if (!(ITT.User && typeof ITT.User.finished === "function")) return false;
       if (ITT.User.finished(k) !== true) return false;
-      /* These two stars wait for kind official. Every other key stays on finished(). */
-      if (k === "itt94-csotd" || k === "itt97-pointcast") {
+      /* 1994–1997 stars and 1998–2001 Lucky/Wikipedia wait for kind official.
+         Additive keys only. revealNextFlow(doc) signature stays. */
+      if (
+        k === "itt94-csotd" ||
+        k === "itt95-ssl-checkout" ||
+        k === "itt96-portal-wars" ||
+        k === "itt97-pointcast" ||
+        k === "itt98-lucky" ||
+        k === "itt99-aim" ||
+        k === "itt00-mapquest" ||
+        k === "itt01-wiki"
+      ) {
         var rec = null;
         try {
           rec = ITT.User.read ? ITT.User.read(k) : null;

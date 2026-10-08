@@ -71,6 +71,7 @@
     var blob = {
       multiStep: true,
       real: true,
+      official: true,
       year: "1999",
       sn: user && user.sn,
       ts: Date.now()

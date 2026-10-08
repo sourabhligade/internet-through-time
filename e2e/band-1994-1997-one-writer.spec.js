@@ -166,6 +166,67 @@ test.describe("1994-1997 phase 2 one writer", () => {
     await expect(page.locator("[data-csotd-last]")).toContainText(/Glenn residual/i);
   });
 
+  test("SSL checkout real order is official and empty fields write nothing", async ({ page }) => {
+    await page.goto("/years/1995/sites/amazon/ssl-checkout.html");
+    await page.waitForFunction(
+      () => !!document.querySelector("[data-ssl-form]"),
+      null,
+      { timeout: 15000 }
+    );
+    await page.evaluate(() => localStorage.removeItem("itt95-ssl-checkout"));
+    await page.locator("form[data-ssl-form] button[type='submit']").click();
+    expect(await raw(page, "itt95-ssl-checkout")).toBeNull();
+    await page.fill("[name='name']", "Ada Lovelace");
+    await page.fill("[name='card']", "4111");
+    await page.fill("[name='city']", "Seattle");
+    await page.locator("form[data-ssl-form] button[type='submit']").click();
+    await expect.poll(() => raw(page, "itt95-ssl-checkout"), { timeout: 8000 }).toBeTruthy();
+    const saved = await envelope(page, "itt95-ssl-checkout");
+    expect(saved && saved.kind).toBe("official");
+    expect(saved.real).toBe(true);
+    expect(saved.year).toBe("1995");
+    expect(saved.last4).toBe("4111");
+    await page.reload();
+    const again = await envelope(page, "itt95-ssl-checkout");
+    expect(again && again.kind).toBe("official");
+    expect(again.real).toBe(true);
+  });
+
+  test("Portal Wars three visits are official and fewer visits write nothing", async ({ page }) => {
+    await page.goto("/years/1996/sites/portals/wars.html");
+    await page.waitForFunction(
+      () => !!document.querySelector("[data-portal-wars]"),
+      null,
+      { timeout: 15000 }
+    );
+    await page.evaluate(() => {
+      localStorage.removeItem("itt96-portal-wars");
+      sessionStorage.removeItem("itt96-portal-progress");
+    });
+    await page.reload();
+    await page.waitForFunction(
+      () => !!document.querySelector("[data-portal-wars]"),
+      null,
+      { timeout: 15000 }
+    );
+    await page.locator("[data-portal='yahoo']").first().click();
+    expect(await raw(page, "itt96-portal-wars")).toBeNull();
+    await page.goto("/years/1996/sites/portals/wars.html");
+    await page.locator("[data-portal='excite']").first().click();
+    expect(await raw(page, "itt96-portal-wars")).toBeNull();
+    await page.goto("/years/1996/sites/portals/wars.html");
+    await page.locator("[data-portal='altavista']").first().click();
+    await expect.poll(() => raw(page, "itt96-portal-wars"), { timeout: 8000 }).toBeTruthy();
+    const saved = await envelope(page, "itt96-portal-wars");
+    expect(saved && saved.kind).toBe("official");
+    expect(saved.real).toBe(true);
+    expect(saved.year).toBe("1996");
+    await page.goto("/years/1996/sites/portals/wars.html");
+    const again = await envelope(page, "itt96-portal-wars");
+    expect(again && again.kind).toBe("official");
+    expect(again.real).toBe(true);
+  });
+
   test("IUMA play does not store itt94-iuma", async ({ page }) => {
     await page.goto("/years/1994/sites/iuma/listen.html");
     await page.locator("[data-player-play]").waitFor({ state: "attached", timeout: 15000 });

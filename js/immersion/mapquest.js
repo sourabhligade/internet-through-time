@@ -167,6 +167,19 @@
       var toEl = form.querySelector("#mq-to") || form.querySelector("[name='to']");
       if (fromEl && trip && trip.from) fromEl.value = trip.from;
       if (toEl && trip && trip.to) toEl.value = trip.to;
+      function syncOfficialReady() {
+        var from = fromEl && fromEl.value != null ? String(fromEl.value).replace(/^\s+|\s+$/g, "") : "";
+        var to = toEl && toEl.value != null ? String(toEl.value).replace(/^\s+|\s+$/g, "") : "";
+        try {
+          doc.documentElement.setAttribute(
+            "data-official-product-ready",
+            from.length >= 2 && to.length >= 2 ? "1" : "0"
+          );
+        } catch (eR) { /* */ }
+      }
+      syncOfficialReady();
+      if (fromEl) fromEl.addEventListener("input", syncOfficialReady);
+      if (toEl) toEl.addEventListener("input", syncOfficialReady);
       form.addEventListener("submit", function (ev) {
         ev.preventDefault();
         var from = fromEl && fromEl.value != null ? String(fromEl.value).replace(/^\s+|\s+$/g, "") : "";
@@ -185,6 +198,7 @@
           mins: eta.mins,
           multiStep: true,
           real: true,
+          official: true,
           year: "2000",
           ts: Date.now()
         };

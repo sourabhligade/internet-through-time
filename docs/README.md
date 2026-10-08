@@ -38,3 +38,5 @@ Hub is **26 years open** (1994–2016 and 2020–2022). **2015 is the React door
 Year visitor-tick lists: [`checklists/`](checklists/README.md). Combined: [`FLOW-CHECKLIST.md`](FLOW-CHECKLIST.md). Board C harvest for 1999–2004 stays research until `2x`.
 
 Working-flow plan: [`WORKING-FLOW-PHASES.md`](WORKING-FLOW-PHASES.md). 1994–1997 phases 1–5 are in. Phase 6 of that band, and later bands, are not started. Six phases on each 4-year band. Existing stops only.
+
+Production-ready overlay: [`PROD-READY-PHASES.md`](PROD-READY-PHASES.md). Jobs 0–8 close remaining done-whens, dual writers, checklists, census, glass, and git. Does not dest-farm. Does not reopen museum-grade UI or user-data as new programs. After every phase: related Playwright, `npm run check`, dest-true 12, `npm run build`, recheck touched flows on :8080, mermaid diagrams in the reply. Do not run the warehouse suite.

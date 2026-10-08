@@ -2,8 +2,8 @@
 """Write e2e/registers/band-YYYY-YYYY.json from pages already on disk.
 
 Phase 1 of docs/WORKING-FLOW-PHASES.md. One row per save page. Does not
-add dest folders. The 1994–1997 census is fixed so a later edit cannot
-shrink the register without failing --check.
+add dest folders. The 1994–1997 and 1998–2001 censuses are fixed so a
+later edit cannot shrink those registers without failing --check.
 """
 from __future__ import annotations
 
@@ -42,7 +42,21 @@ EXPECTED = {
             "1996": {"html": 287, "savePages": 202, "destFolders": 153, "trailRows": 20, "leftover2x": 76},
             "1997": {"html": 256, "savePages": 212, "destFolders": 166, "trailRows": 20, "leftover2x": 46},
         },
-    }
+    },
+    "1998-2001": {
+        "html": 1793,
+        "savePages": 1539,
+        "destFolders": 1340,
+        "trailRows": 100,
+        "leftover2x": 277,
+        "officialStops": 40,
+        "byYear": {
+            "1998": {"html": 281, "savePages": 206, "destFolders": 151, "trailRows": 20, "leftover2x": 28},
+            "1999": {"html": 568, "savePages": 493, "destFolders": 429, "trailRows": 20, "leftover2x": 138},
+            "2000": {"html": 622, "savePages": 557, "destFolders": 501, "trailRows": 40, "leftover2x": 76},
+            "2001": {"html": 322, "savePages": 283, "destFolders": 259, "trailRows": 20, "leftover2x": 35},
+        },
+    },
 }
 
 

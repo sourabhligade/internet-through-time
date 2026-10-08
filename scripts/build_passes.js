@@ -9,8 +9,7 @@
  * A finished pass: the empty click and the trap leave the row key empty and
  * leave the year star empty, then a real finish writes that key. Leftover
  * rows must be kind leftover. Official verb and scored game rows must be
- * kind official. SSL checkout and portal wars store kind toy; that is the
- * page's writer, so the row passes when the envelope is toy.
+ * kind official. SSL checkout and portal wars store kind official.
  */
 "use strict";
 
@@ -30,7 +29,7 @@ const STARS = {
   "1997": "itt97-pointcast",
 };
 
-const TOY_OFFICIAL = new Set(["itt95-ssl-checkout", "itt96-portal-wars"]);
+const TOY_OFFICIAL = new Set();
 
 function arg(name, fallback) {
   const i = process.argv.indexOf(name);
@@ -577,7 +576,17 @@ function renderIndex(payload, list, isOpen) {
   return "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>" + title + "</title><style>body{margin:0;background:#0d1117;color:#e6edf3;font:14px/1.45 Segoe UI,Tahoma,sans-serif}main{max-width:1100px;margin:0 auto;padding:24px 20px 64px}a{color:#58a6ff}h1{font-size:22px;margin:0 0 8px}p{color:#8b949e}h2{font-size:18px;margin:28px 0 8px}h2 span{color:#3fb950;font-size:14px}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:6px 8px;border-bottom:1px solid #30363d;vertical-align:top}code{font-size:12px}.path{color:#8b949e;font-size:11px}nav a{margin-right:12px}</style></head><body><main><h1>" + title + "</h1><p>Walked " + payload.walked + " register rows. " + payload.passed + " passed. " + payload.open + " open. Built " + payload.built + " against " + esc(payload.base) + ".</p><nav><a href=\"index.html\">Passes</a><a href=\"open.html\">Open</a><a href=\"1994-1997.json\">JSON</a></nav>" + body + "</main></body></html>\n";
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  walkOne,
+  routeOf,
+  expectedKind,
+  STARS,
+  TOY_OFFICIAL,
+};

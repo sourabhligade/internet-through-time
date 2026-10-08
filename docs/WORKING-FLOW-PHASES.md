@@ -1,7 +1,7 @@
 # Working flows — 6 phases on each 4-year band
 
-**Date:** 2026-10-07  
-**Status:** 1994–1997 phases 1–5 are in. Phase 5 locks the leftover panel on CSotD and PointCast: a save aimed at the star says `Leftover never stamps the official key.` and leaves that star unchanged, and a real `gold-lx` write is kind `leftover`. Phase 6 of that band is not started. Later bands are not started.  
+**Date:** 2026-10-08  
+**Status:** 1994–1997 phases 1–5 are done locally. Phase 6 spec `e2e/band-1994-1997.spec.js` exists and is not marked Done. 1998–2001 phases 1–4 are done locally. Later bands are not started. Standing gate lives in this file. [`PROD-READY-PHASES.md`](PROD-READY-PHASES.md) is an overlay; do not treat its Job 0–8 names as the work names.  
 **Law:** `js/year-card.json` + `scripts/itt_gate.py` `SHIP_YEARS`. Hub is 26 doors. Frozen HTML is 1994–2006. leanBoot is 2007–2014, 2016, and 2020–2022. 2015 is the React door. Absent: 2017–2019 and 2023–2025.
 
 This plan does not reopen `docs/PROD-USER-DATA-SRP.md` or `docs/MUSEUM-GRADE-UI.md`. Those phases stay as shipped. This plan runs the six phases on every working flow already on disk in the band: trail stops, leftover-2× dests, and every other year-site page that already has a save control.
@@ -171,6 +171,18 @@ One Playwright file for that band, run against http://127.0.0.1:8080. It loads t
 
 **Done when:** every register row has been opened. An empty or trap control on that page leaves its key null and leaves the year star null. Official rows, after a real finish, are one envelope of kind `official` with Next visible. Leftover-2× rows, after a real leftover finish, are kind `leftover` and the star key is still absent. The register count still matches the census. The spec is green locally.
 
+### After each phase (standing gate)
+
+Full list: [`PROD-READY-PHASES.md`](PROD-READY-PHASES.md) **Standing gate**. A phase is not done until:
+
+1. Related Playwright for that phase, `--workers=1`.
+2. `npm run check`.
+3. `npm run test:e2e:dest-true` (the 12). Do not run the warehouse suite.
+4. `npm run build`.
+5. Recheck every flow that phase added or repaired on http://127.0.0.1:8080.
+6. Server stays on `python3 -m http.server 8080 --bind 127.0.0.1`.
+7. The reply includes a mermaid flowchart of each touched flow plus local URLs.
+
 ---
 
 ## 1994–1997
@@ -192,10 +204,10 @@ Frozen. Working set: 1,539 save pages, 1,340 dest folders, 277 leftover-2× dest
 
 | Phase | Work in this band |
 | --- | --- |
-| 1 | Official lines already match. Leave 2000 n=21–40 open. Do not add those 20 to the official list. |
-| 2 | `google.js` `goLucky` stores `itt98-lucky` as toy and reveals Next. Lucky either lets `official-verb` be the only writer, or `store` is called with kind `official` after the same empty and trap rules the verb uses. One character must not finish the star. Re-check `saveBest` on `itt01-game-clickscape`. Do not edit it again if 1994–1997 already fixed score 0. |
-| 3 | Wikipedia Save of “museum” writes `itt01-wiki` only after `data-official-verb-bound` is set. “x” still writes nothing. This is the failure in `e2e/phase6-breaks.spec.js` line 139. |
-| 4 | Lucky and Wikipedia status is `Saved.` with no key. Next for `itt98-lucky` stays hidden when the envelope is toy. |
+| 1 | Done 2026-10-08. Official names already matched the checklist and `flow-index/index.html`. 2000 n=21–40 stay `leftover-trail` and stay unticked. Register: `e2e/registers/band-1998-2001.json` (1,539 save pages, 1,340 dest folders, 277 leftover-2× dests, 40 official keys). `python3 scripts/gen_band_register.py 1998-2001 --check`. Lock: `e2e/band-1998-2001-register.spec.js`. |
+| 2 | Done 2026-10-08. `goLucky` no longer stores `itt98-lucky`. Official-verb on `[data-google-lucky][data-official-verb]` is the only writer. Empty, trap, and one character write nothing. A real query reads back kind `official`. AIM sign-on and MapQuest From+To stamp `official:true` so they do not overwrite the star as toy. Clickscape `saveBest` score 0 still writes nothing; `saveBest` was not edited. Lock: `e2e/band-1998-2001-one-writer.spec.js`. |
+| 3 | Done 2026-10-08. Wikipedia Save before `data-official-verb-bound` writes nothing. Body `x` and Preview write nothing. Body `museum` after bind is kind `official`. AIM screen name under 3 characters and MapQuest missing From/To write nothing. Lock: `e2e/band-1998-2001-empty-holds.spec.js`. |
+| 4 | Done 2026-10-08. Lucky and Wikipedia status is `Saved.` after an official finish and `This browser blocked the save.` when storage refuses the write. The status names no storage key. Next stays hidden on a toy envelope. `storageFinished` waits on `itt98-lucky`, `itt99-aim`, `itt00-mapquest`, and `itt01-wiki` for kind `official`. Lock: `e2e/band-1998-2001-receipt.spec.js`. |
 | 5 | Leftover panel on the Lucky page and on the Wikipedia edit page. The existing honest-save spec already refuses a rewritten leftover key. Keep that refusal. |
 | 6 | `e2e/band-1998-2001.spec.js`. Include the Wikipedia success click and a one-character Lucky click. |
 

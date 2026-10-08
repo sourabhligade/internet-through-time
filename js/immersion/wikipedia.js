@@ -16,18 +16,27 @@
     var hist = doc.querySelector("[data-wiki-history]");
     function wikiFinished() {
       try {
-        if (ITT.User && typeof ITT.User.finished === "function") return ITT.User.finished("itt01-wiki") === true;
+        if (ITT.User && typeof ITT.User.read === "function") {
+          var rec = ITT.User.read("itt01-wiki");
+          return !!(rec && rec.real === true && rec.kind === "official");
+        }
       } catch (eU) { /* */ }
-      /* This file runs before async boot.js loads util.js. Same rule as finished(). */
+      /* This file runs before async boot.js loads util.js. Same rule as finished() plus kind. */
       try {
         var raw = localStorage.getItem("itt01-wiki");
         if (!raw) return false;
-        var rec = JSON.parse(raw);
-        return !!(rec && typeof rec === "object" && !Array.isArray(rec) && rec.real === true);
+        var rec2 = JSON.parse(raw);
+        return !!(rec2 && typeof rec2 === "object" && !Array.isArray(rec2) && rec2.real === true && rec2.kind === "official");
       } catch (eP) { /* */ }
       return false;
     }
-    if (hist && wikiFinished()) hist.textContent = "Local revision saved in this browser.";
+    if (st && st.getAttribute("data-official-status") == null) {
+      st.setAttribute("data-official-status", "1");
+    }
+    if (wikiFinished()) {
+      if (st) st.textContent = "Saved.";
+      if (hist) hist.textContent = "Local revision saved in this browser.";
+    }
     if (!body || !save) return;
     if (prev) {
       prev.addEventListener("click", function () {
@@ -36,14 +45,19 @@
         if (st) st.textContent = "Preview is not Save. Nothing written.";
       });
     }
-    var verbOwns = save.getAttribute("data-official-verb") != null;
     save.addEventListener("click", function () {
       var t = String(body.value || "").replace(/^\s+|\s+$/g, "");
       if (t.length < 2) {
         if (st) st.textContent = "Empty never writes.";
         return;
       }
-      if (verbOwns) {
+      /* Official-verb owns Save. A click before data-official-verb-bound
+         writes nothing. After bind, this handler only paints if the
+         envelope is already official. */
+      if (save.getAttribute("data-official-verb") != null) {
+        if (save.getAttribute("data-official-verb-bound") !== "1") {
+          return;
+        }
         if (wikiFinished()) {
           if (st) st.textContent = "Saved.";
           if (hist) hist.textContent = "Local revision saved in this browser.";

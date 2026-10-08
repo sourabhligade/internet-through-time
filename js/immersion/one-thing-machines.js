@@ -242,15 +242,22 @@
         feedback("Name, card digits (min 4), and city required.", st, true);
         return;
       }
-      saveJSON(key, blob({ name: name, last4: card.slice(-4), city: city }));
+      if (!saveJSON(key, blob({ name: name, last4: card.slice(-4), city: city, official: true }))) {
+        feedback("This browser blocked the save.", st, true);
+        return;
+      }
       stamp();
-      feedback("Order queued locally · padlock theater · no payment.", st);
+      feedback("Saved.", st);
       revealNext(doc);
     });
-    if (loadJSON(key, null)) revealNext(doc);
+    if (envelopeKind(key) === "official") {
+      feedback("Saved.", st);
+      revealNext(doc);
+    }
   }
 
   var PORTAL_PROGRESS = "itt96-portal-progress";
+  var lastPortalBlocked = false;
   function loadPortalProgress() {
     try {
       return JSON.parse(sessionStorage.getItem(PORTAL_PROGRESS) || "[]") || [];
@@ -264,12 +271,16 @@
     } catch (e) { /* */ }
   }
   function markPortalVisit(id) {
+    lastPortalBlocked = false;
     if (!id) return loadPortalProgress();
     var list = loadPortalProgress();
     if (list.indexOf(id) === -1) list.push(id);
     savePortalProgress(list);
     if (list.length >= 3) {
-      saveJSON(sk("portal-wars"), blob({ visited: list.slice() }));
+      if (!saveJSON(sk("portal-wars"), blob({ visited: list.slice(), official: true }))) {
+        lastPortalBlocked = true;
+        return list;
+      }
       stamp();
       revealNext(document);
     }
@@ -308,15 +319,22 @@
       if (!id) return;
       var list = markPortalVisit(id);
       if (list.length >= 3) {
-        feedback("Portal trail complete (this browser).", st);
-        revealNext(doc);
+        if (lastPortalBlocked) {
+          feedback("This browser blocked the save.", st, true);
+        } else {
+          feedback("Saved.", st);
+          revealNext(doc);
+        }
       } else {
         feedback("Visited " + id + " · " + list.length + "/3", st);
       }
       render();
     }
     render();
-    if (loadJSON(key, null)) revealNext(doc);
+    if (envelopeKind(key) === "official") {
+      feedback("Saved.", st);
+      revealNext(doc);
+    }
     var btns = root.querySelectorAll("[data-portal]");
     var i;
     for (i = 0; i < btns.length; i++) {
