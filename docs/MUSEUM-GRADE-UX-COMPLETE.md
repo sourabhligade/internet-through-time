@@ -135,7 +135,7 @@ Lock already on disk: `e2e/phase4-phone.spec.js`. Re-run it. Fix only the group 
 | Header | The stop you are on, not Periscope on every stop |
 | Verb | In the first screen. Storage key not readable on the glass. `YearRail` no longer prints `<code>{whenKey}</code>` on official ten / leftover lists. |
 | Envelope | `ITT.User.store` → `{real:true}`. Copy `Saved.` / blocked |
-| Leftover | ALSO_2015 10 leftover rooms. No leftover list without `?deep=1`. Do not dest-farm `years/2015` |
+| Leftover | ALSO_2015 20 leftover rooms. No leftover list without `?deep=1`. Do not dest-farm `years/2015` |
 | `#/year/2017` | Not-a-door. Never Periscope |
 
 Rebuild: `npm run build` from repo root. Do not hand-edit `app/assets/`. Image-readme stays `[ ]`.

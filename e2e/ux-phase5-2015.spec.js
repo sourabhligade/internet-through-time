@@ -64,6 +64,7 @@ test.describe("UX phase 5 2015 React glass", () => {
     expect(src).not.toMatch(/export const ALSO_2015 = \[\]/);
     expect(src).toMatch(/itt15-googlephotos/);
     expect(src).toMatch(/itt15-dx12/);
+    expect(src).toMatch(/itt15-marshmallow/);
     await page.goto("/app/index.html#/year/2015");
     await expect(page.locator(".year-star")).toHaveText("Periscope");
     await expect(page.locator("section.also-year")).toHaveCount(0);
@@ -72,7 +73,7 @@ test.describe("UX phase 5 2015 React glass", () => {
     await page.goto("/app/index.html#/year/2015?deep=1");
     await expect(page.locator("section.also-year")).toHaveCount(1);
     await page.locator("section.also-year summary").click();
-    await expect(page.locator("section.also-year ol li")).toHaveCount(10);
+    await expect(page.locator("section.also-year ol li")).toHaveCount(20);
   });
 
   test("2017 hash is not a door and never shows Periscope", async ({ page }) => {

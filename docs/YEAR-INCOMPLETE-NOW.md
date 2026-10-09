@@ -57,7 +57,7 @@ Named packs added (off dest-true 12): 2005 mvp+flows+densify+trail; 2008 / 2009 
 | 2012 | HTML lean | 10 | one-thing + official-10 | mvp flows densify trail | — |
 | 2013 | HTML lean | **9** | one-thing + official-10 | mvp flows densify trail | trail n=9 |
 | 2014 | HTML lean | **9** | one-thing + official-10 | mvp flows densify trail | trail n=9 |
-| 2015 | React | 10 | one-thing + 2015-mvp | mvp flows densify trail + 3x-cut | image-readme line · leftover React 10 · leftover-2× dest catalog 0 |
+| 2015 | React | 10 | one-thing + 2015-mvp | mvp flows densify trail + 3x-cut | image-readme line · leftover React 20 · leftover-2× dest catalog 0 |
 | 2020 | HTML lean | 10 | one-thing + 2020-mvp | mvp flows densify trail | leftover-2× catalog 0 |
 | 2021 | HTML lean | 10 | one-thing + 2021-mvp | mvp flows densify trail + start-habit | leftover-2× catalog 0 |
 | 2022 | HTML lean | 10 | one-thing + 2022-mvp | mvp flows densify trail | leftover-2× catalog 0 |

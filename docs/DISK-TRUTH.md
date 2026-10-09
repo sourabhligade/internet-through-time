@@ -24,7 +24,7 @@ Hub **25 years open** (1994–2015 and 2020–2022). **2015 is the React door** 
 | **2012** | Live lean · IG Android · dest-lock official 10 + leftover-4× unique **3** (chrome · twitter · soundcloud) + leftover dests · leftover-3× unique **0** · leftover-2× unique **12** · dest folders **32** · stacked leftover-4× **0** |
 | **2013** | **Live lean door** · Vine 6s `itt13-vine-posts` · leftover 2× ×2 on every dest · leftover-3× unique **0** · leftover-4× unique **3** (askfm · whisper · facebook) · leftover-2× unique **27** |
 | **2014** | **Live lean door** · WhatsApp Install `itt14-wa-install` · dest-lock official 10 + leftover dests · leftover-3× unique **0** · leftover-4× **0** (no room outside official, trail, and leftover-2×) · dest folders **25** · Win7 + IE 9 |
-| **2015** | **Live React door** · Periscope Go LIVE `itt15-periscope` · no HTML tree · official 10 · leftover React 10 (`ALSO_2015`) · hub `/app/index.html#/year/2015` · leftover-2× unique catalog **0** |
+| **2015** | **Live React door** · Periscope Go LIVE `itt15-periscope` · no HTML tree · official 10 · leftover React 20 (`ALSO_2015`) · hub `/app/index.html#/year/2015` · leftover-2× unique catalog **0** |
 | **2016** | **Omitted** · no year-card key · no hub card · no `years/2016/` tree · `/years/2016/` is 404 · pending user rework |
 | **2017** | **Absent** · no HTML tree · no hub card · no React door · no trail |
 | **2018** | **Absent** · no HTML tree · no hub card · no React door · no trail |

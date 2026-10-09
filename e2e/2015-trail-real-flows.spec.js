@@ -25,6 +25,16 @@ const LEFTOVER = [
   "itt15-androidpay",
   "itt15-ipadpro",
   "itt15-dx12",
+  "itt15-hbonow",
+  "itt15-sling",
+  "itt15-twmoments",
+  "itt15-amp",
+  "itt15-pencil",
+  "itt15-appletv",
+  "itt15-reactnative",
+  "itt15-atom",
+  "itt15-swift",
+  "itt15-marshmallow",
 ];
 
 test.describe("2015 official trail dests exist", () => {

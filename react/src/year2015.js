@@ -44,7 +44,17 @@ export const ALSO_2015 = [
   leftover(17, "Instant Articles", "itt15-instantarticles", "Android Pay", "Open Instant", "Slow mobile web", "May 2015. Open Instant is the save."),
   leftover(18, "Android Pay", "itt15-androidpay", "iPad Pro", "Tap and pay", "Wallet only", "10 Sep 2015. Tap is the save."),
   leftover(19, "iPad Pro", "itt15-ipadpro", "DirectX 12", "Order", "iPad Air as gold", "November 2015. Order is the save."),
-  leftover(20, "DirectX 12", "itt15-dx12", "Periscope Go LIVE", "Enable", "DirectX 11 only", "29 Jul 2015. The graphics API, not the OS upgrade."),
+  leftover(20, "DirectX 12", "itt15-dx12", "HBO Now", "Enable", "DirectX 11 only", "29 Jul 2015. The graphics API, not the OS upgrade."),
+  leftover(21, "HBO Now", "itt15-hbonow", "Sling TV", "Watch Now", "HBO Go / Cable only", "April 2015. Watch Now is the save."),
+  leftover(22, "Sling TV", "itt15-sling", "Twitter Moments", "Sign up", "Cable as gold", "February 2015. Sign up is the save."),
+  leftover(23, "Twitter Moments", "itt15-twmoments", "AMP", "Open Moment", "Timeline only", "October 2015. Open Moment is the save."),
+  leftover(24, "AMP", "itt15-amp", "Apple Pencil", "Publish AMP", "Slow mobile page", "7 Oct 2015. Publish is the save."),
+  leftover(25, "Apple Pencil", "itt15-pencil", "Apple TV", "Draw", "Finger only", "November 2015. Draw is the save."),
+  leftover(26, "Apple TV", "itt15-appletv", "React Native", "Install", "Old Apple TV", "October 2015. Install is the save."),
+  leftover(27, "React Native", "itt15-reactnative", "Atom 1.0", "Init", "Cordova as gold", "March 2015. Open-source native apps is the save."),
+  leftover(28, "Atom 1.0", "itt15-atom", "Swift open source", "Install 1.0", "Stay on beta", "June 2015. GitHub’s editor hits 1.0."),
+  leftover(29, "Swift open source", "itt15-swift", "Android 6.0 Marshmallow", "Clone", "Objective-C only", "3 Dec 2015. The language on GitHub, not the 2014 announce."),
+  leftover(30, "Android 6.0 Marshmallow", "itt15-marshmallow", "Periscope Go LIVE", "Update", "Stay on Lollipop", "5 Oct 2015. The OTA is the save."),
 ];
 export const ALL_2015 = TRAIL_2015.concat(ALSO_2015);
 export const GUIDED_2015 = [
@@ -70,7 +80,7 @@ export const DOOR_2015 = {
     "Apple Music, Windows 10, and the Reddit cards are the other guided rooms.",
   ],
   about: [
-    "2015 is a lean door. Ten official stops. Ten leftover rooms. No forest.",
+    "2015 is a lean door. Ten official stops. Twenty leftover rooms. No forest.",
     "Periscope Go LIVE is the star. No invented brand pixel.",
   ],
 };

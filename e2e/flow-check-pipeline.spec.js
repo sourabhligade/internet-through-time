@@ -109,7 +109,7 @@ test.describe("FLOW-CHECK pipeline · every playable year", () => {
         expect(keys, "2015 official 10").toHaveLength(10);
         const also = src.slice(src.indexOf("export const ALSO_2015"), src.indexOf("export const ALL_2015"));
         const leftover = [...new Set([...also.matchAll(/"(itt15-[a-z0-9-]+)"/g)].map((m) => m[1]))];
-        expect(leftover, "2015 leftover 10").toHaveLength(10);
+        expect(leftover, "2015 leftover 20").toHaveLength(20);
         for (const key of leftover) {
           expect(keys.includes(key), key + " dest-disjoint official").toBe(false);
         }
