@@ -26,7 +26,7 @@ Ship law: [`../DISK-TRUTH.md`](../DISK-TRUTH.md). Old finding maps live in [`../
 - [2009](2009.md) — live HTML door · Facebook Like `itt09-like` · 10 official on disk · leftover-2× unique 33 · 17 pictures
 - [2010](2010.md) — 10 official, leftover-2× unique 12, 3 pictures
 - [2011](2011.md) — 10 official · Google+ `itt11-gplus` · no leftover-2× row · no pictures
-- [2012](2012.md) — 9 official, leftover-2× unique 12 (keep), 0 pictures
+- [2012](2012.md) — 10 official, leftover-2× unique 12 (keep), 0 pictures
 - [2013](2013.md) — 9 official, leftover-2× unique 27, 0 pictures
 - [2014](2014.md) — 9 official, leftover-2× unique 16, 0 pictures
 - [2015](2015.md) — React official 10, leftover 0, 0 pictures

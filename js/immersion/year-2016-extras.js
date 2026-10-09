@@ -57,6 +57,7 @@
     var btn = doc.querySelector("[data-ig-story-add]");
     if (!btn) return;
     var st = doc.querySelector("[data-ig-story-status]");
+    var verbOwned = btn.getAttribute("data-official-verb") != null;
     var saved = YX.loadJSON(key("ig-stories"));
     if (saved && saved.text) {
       var inp = doc.querySelector("[data-ig-story-text]");
@@ -68,12 +69,13 @@
     btn.addEventListener("click", function () {
       var t = val(doc, "[data-ig-story-text]");
       if (!t || t.replace(/^\s+|\s+$/g, "").length < 2) {
-        feedback("Type a slide first. Empty never writes.", st, { error: true });
+        if (!verbOwned) feedback("Type a slide first. Empty never writes.", st, { error: true });
         return;
       }
       var clean = t.replace(/^\s+|\s+$/g, "").slice(0, 140);
-      saveJSON(key("ig-stories"), blob({ text: clean, hours: 24, official: true }));
       paintRail(doc, clean);
+      if (verbOwned) return;
+      saveJSON(key("ig-stories"), blob({ text: clean, hours: 24, official: true }));
       feedback("Saved.", st);
       reveal(doc);
     });
@@ -95,6 +97,7 @@
     var btn = doc.querySelector("[data-pogo-catch]");
     if (!btn) return;
     var st = doc.querySelector("[data-pogo-status]");
+    var verbOwned = btn.getAttribute("data-official-verb") != null;
     var picked = "";
     var teams = doc.querySelectorAll("[data-pogo-team]");
     var i;
@@ -114,6 +117,7 @@
       });
     }
     btn.addEventListener("click", function () {
+      if (verbOwned) return;
       var gps = doc.querySelector("[data-pogo-gps]");
       if (!picked) {
         feedback("Pick Valor, Mystic, or Instinct first. Empty never writes.", st, { error: true });
@@ -134,7 +138,9 @@
     var likeBtn = doc.querySelector("[data-fb-like]");
     if (!faces.length && !likeBtn) return;
     var st = doc.querySelector("[data-fb-react-status]");
+    var verbOwned = !!doc.querySelector("[data-official-verb]");
     function apply(face) {
+      if (verbOwned) return;
       if (!face) {
         feedback("Pick a face. Tray-only never writes.", st, { error: true });
         return;

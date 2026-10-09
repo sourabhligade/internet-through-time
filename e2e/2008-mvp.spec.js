@@ -82,4 +82,11 @@ test.describe("2008 mvp", () => {
     expect(blob.real).toBe(true);
     expect(String(blob.year)).toBe("2008");
   });
+
+  test("Pack A leftover Next is a 2008 dest", async ({ page }) => {
+    await page.goto("/years/2008/sites/cuil/index.html");
+    const href = await page.locator("[data-next-flow] a").getAttribute("href");
+    expect(href).toBe("../bitcoin/index.html");
+    expect(fs.existsSync(path.join(__dirname, "..", "years", "2008", "sites", "bitcoin", "index.html"))).toBe(true);
+  });
 });

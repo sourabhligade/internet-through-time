@@ -36,7 +36,9 @@
     if (!btn) return;
     var st = doc.querySelector(stSel);
     need = need || 2;
+    var verbOwned = btn.getAttribute("data-official-verb") != null;
     btn.addEventListener("click", function () {
+      if (verbOwned) return;
       if (countChecked(doc, reqSel) < need) {
         feedback("Tick both literacy boxes first. Incomplete never writes.", st, { error: true });
         return;
@@ -85,6 +87,12 @@
         return;
       }
       var cap = val(doc, "[data-ig12-caption]");
+      if (feed) {
+        feed.innerHTML = "<div class='feed-item'><b>" + selected + "</b> · Android" +
+          (photo ? " · " + photo : "") +
+          (cap ? " · " + cap : "") + "</div>" + (feed.innerHTML || "");
+      }
+      if (verbOwned) return;
       var payload = blob({
         filter: selected,
         platform: "android",
@@ -95,11 +103,6 @@
       if (!saveJSON(key("ig-android"), payload)) {
         feedback("This browser blocked the save.", st, { error: true });
         return;
-      }
-      if (feed) {
-        feed.innerHTML = "<div class='feed-item'><b>" + selected + "</b> · Android" +
-          (photo ? " · " + photo : "") +
-          (cap ? " · " + cap : "") + "</div>" + (feed.innerHTML || "");
       }
       feedback("Saved.", st);
       reveal(doc);

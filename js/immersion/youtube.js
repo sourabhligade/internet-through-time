@@ -314,6 +314,21 @@
     var form = doc.querySelector("[data-yt-upload]");
     if (form && form.getAttribute("data-yt-bound") !== "1") {
       form.setAttribute("data-yt-bound", "1");
+      var verbOwned = form.querySelector("[data-official-verb]") != null;
+      function syncOfficialReady() {
+        if (!verbOwned) return;
+        var titleInput = form.querySelector('[name="title"]');
+        var descInput = form.querySelector('[name="desc"]');
+        var title = String((titleInput && titleInput.value) || "").replace(/^\s+|\s+$/g, "");
+        var desc = String((descInput && descInput.value) || "").replace(/^\s+|\s+$/g, "");
+        var ok = title.length >= 2;
+        if (yearNum() === 2005) ok = ok && !!desc;
+        try {
+          doc.documentElement.setAttribute("data-official-product-ready", ok ? "1" : "0");
+        } catch (eR) { /* */ }
+      }
+      syncOfficialReady();
+      form.addEventListener("input", syncOfficialReady);
       form.addEventListener("submit", function (ev) {
         /* Capture before chrome shell can navigate away */
         if (ev.preventDefault) ev.preventDefault();
@@ -367,7 +382,7 @@
           multiStep: true,
           year: String(yearNum())
         });
-        if (!save(cur.slice(0, 40))) {
+        if (!verbOwned && !save(cur.slice(0, 40))) {
           if (st) st.textContent = "This browser blocked the save.";
           return false;
         }
@@ -379,6 +394,7 @@
           st.textContent = "Saved.";
         }
         form.reset();
+        syncOfficialReady();
         var homeList = doc.querySelector("[data-yt-list]");
         if (homeList) renderList(homeList, cur);
         try {

@@ -53,6 +53,7 @@
         feedback("Messenger stays a separate app. That click never writes.", st, { error: true });
       });
     }
+    var verbOwned = install.getAttribute("data-official-verb") != null;
     var saved = YX.loadJSON(key("wa-install"));
     if (saved && saved.real) {
       feedback("Install ·" + key("wa-install"), st);
@@ -60,17 +61,19 @@
     }
     install.addEventListener("click", function () {
       if (!notes["16b"] || !notes["rsu"]) {
-        feedback("Tick both deal notes first. Incomplete never writes.", st, { error: true });
+        if (!verbOwned) feedback("Tick both deal notes first. Incomplete never writes.", st, { error: true });
         return;
       }
+      if (verbOwned) return;
       saveJSON(key("wa-install"), blob({
         installed: true,
         deal16: true,
         rsu3: true,
         total: "19B",
-        date: "2014-02-19"
+        date: "2014-02-19",
+        official: true
       }));
-      feedback("WhatsApp Install · " + key("wa-install"), st);
+      feedback("Saved.", st);
       reveal(doc);
     });
   }

@@ -153,7 +153,6 @@ const STAR = {
     },
   },
   "itt05-yt-uploads": {
-    seedOk: true,
     incomplete: async (page) => {
       await page.locator("form[data-yt-upload] button[type='submit']").click();
     },
@@ -226,6 +225,7 @@ const STAR = {
     },
     complete: async (page) => {
       await page.locator('[data-ig12-filter="X-Pro II"]').click();
+      await page.fill("[data-ig12-caption]", "museum square");
       await page.locator("[data-ig12-share]").click();
     },
   },
@@ -247,6 +247,9 @@ const STAR = {
       await page.locator("[data-vn13-post]").click();
     },
     complete: async (page) => {
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-need]").fill("leftover residual");
       const hold = page.locator("[data-vn13-hold]");
       await hold.waitFor({ state: "visible", timeout: 15000 });
       await hold.dispatchEvent("pointerdown");
@@ -262,6 +265,9 @@ const STAR = {
     complete: async (page) => {
       await page.locator('[data-wa14-deal="16b"]').click();
       await page.locator('[data-wa14-deal="rsu"]').click();
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-need]").fill("leftover residual");
       await page.locator("[data-wa14-install]").click();
     },
   },
@@ -280,6 +286,8 @@ const STAR = {
     },
     complete: async (page) => {
       await page.fill("[data-ig-story-text]", "museum rooftop 24h");
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
       await page.locator("[data-ig-story-add]").click();
     },
   },
@@ -302,18 +310,6 @@ const STAR = {
     },
     complete: async (page) => {
       await page.locator("[data-official-need]").fill("Museum App");
-      await page.locator("[data-official-req]").nth(0).check();
-      await page.locator("[data-official-req]").nth(1).check();
-      await page.locator("[data-official-verb]").click();
-    },
-  },
-  "itt24-gpt4o": {
-    incomplete: async (page) => {
-      await page.locator("[data-official-trap]").first().click();
-    },
-    complete: async (page) => {
-      await page.locator('[data-official-pick="4o"]').click();
-      await page.locator("[data-official-need]").fill("leftover");
       await page.locator("[data-official-req]").nth(0).check();
       await page.locator("[data-official-req]").nth(1).check();
       await page.locator("[data-official-verb]").click();
@@ -407,26 +403,13 @@ async function runDest(page, d) {
     await star.incomplete(page);
     if (star.seedOk) {
       const afterEmpty = await getKey(page, d.whenKey);
-      if (d.whenKey === "itt05-yt-uploads") {
-        const a = ytUploads(afterEmpty);
-        expect(a.some((x) => x && /residual/i.test(x.title || "")), d.whenKey + " empty title").toBeFalsy();
-      } else {
-        expect(afterEmpty, d.whenKey + " incomplete").toBe(before);
-      }
+      expect(afterEmpty, d.whenKey + " incomplete").toBe(before);
     } else {
       expect(await getKey(page, d.whenKey), d.whenKey + " incomplete").toBeFalsy();
     }
     await star.complete(page);
     await page.waitForLoadState("domcontentloaded").catch(() => {});
-    if (d.whenKey === "itt05-yt-uploads") {
-      await expect.poll(async () => {
-        const raw = await getKey(page, d.whenKey);
-        const list = ytUploads(raw);
-        return list.some((x) => x && /residual/i.test(x.title || ""));
-      }, { timeout: 8000 }).toBeTruthy();
-    } else {
-      await expect.poll(() => getKey(page, d.whenKey), { timeout: 10000 }).toBeTruthy();
-    }
+    await expect.poll(() => getKey(page, d.whenKey), { timeout: 10000 }).toBeTruthy();
     return;
   }
 

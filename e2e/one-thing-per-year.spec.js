@@ -6,19 +6,11 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
-const { revealLeftoverRails } = require("./helpers");
+const { completeReactStop, revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 
-function ytUploads(raw) {
-  let parsed = null;
-  try { parsed = JSON.parse(raw || "null"); } catch (e) { parsed = null; }
-  if (Array.isArray(parsed)) return parsed;
-  if (parsed && Array.isArray(parsed.body)) return parsed.body;
-  return [];
-}
-
-/** @type {{ year: string, path: string, key: string, steps: (p: import('@playwright/test').Page) => Promise<void> }[]} */
+/** @type {{ year: string, path: string, key: string, react?: boolean, incomplete?: (p: import('@playwright/test').Page) => Promise<void>, complete?: (p: import('@playwright/test').Page) => Promise<void>, steps?: (p: import('@playwright/test').Page) => Promise<void> }[]} */
 const THINGS = [
   {
     year: "1994",
@@ -216,6 +208,9 @@ const THINGS = [
     complete: async (page) => {
       await page.locator('[data-wa14-deal="16b"]').click();
       await page.locator('[data-wa14-deal="rsu"]').click();
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-need]").fill("leftover residual");
       await page.locator("[data-wa14-install]").click();
     },
   },
@@ -227,6 +222,9 @@ const THINGS = [
       await page.locator("[data-vn13-post]").click();
     },
     complete: async (page) => {
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-need]").fill("leftover residual");
       const hold = page.locator("[data-vn13-hold]");
       await hold.dispatchEvent("pointerdown");
       await page.waitForTimeout(6200);
@@ -237,7 +235,7 @@ const THINGS = [
   {
     year: "2010",
     path: "/years/2010/sites/instagram/index.html",
-    key: "itt10-ig",
+    key: "itt10-ig-posts",
     incomplete: async (page) => {
       await page.locator("[data-ig-share]").click();
     },
@@ -256,6 +254,7 @@ const THINGS = [
     },
     complete: async (page) => {
       await page.locator('[data-ig12-filter="X-Pro II"]').click();
+      await page.fill("[data-ig12-caption]", "museum square");
       await page.locator("[data-ig12-share]").click();
     },
   },
@@ -269,6 +268,8 @@ const THINGS = [
     },
     complete: async (page) => {
       await page.fill("[data-ig-story-text]", "museum rooftop 24h");
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
       await page.locator("[data-ig-story-add]").click();
     },
   },
@@ -283,6 +284,112 @@ const THINGS = [
       await page.locator("[data-official-need]").fill("apple.com");
       await page.locator("[data-official-req]").nth(0).check();
       await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-verb]").click();
+    },
+  },
+  {
+    year: "2005",
+    path: "/years/2005/sites/youtube/upload.html",
+    key: "itt05-yt-uploads",
+    incomplete: async (page) => {
+      await page.locator("form[data-yt-upload] [data-official-verb]").click();
+    },
+    complete: async (page) => {
+      await page.fill("[name='title']", "elephant residual");
+      await page.fill("[name='desc']", "tag residual");
+      await page.locator("[data-yt-req]").nth(0).check();
+      await page.locator("[data-yt-req]").nth(1).check();
+      await page.locator("form[data-yt-upload] [data-official-verb]").click();
+    },
+  },
+  {
+    year: "2008",
+    path: "/years/2008/sites/appstore/index.html",
+    key: "itt08-apps",
+    incomplete: async (page) => {
+      await page.locator("[data-official-trap]").first().click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-official-need]").fill("Koi Pond");
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-verb]").click();
+    },
+  },
+  {
+    year: "2011",
+    path: "/years/2011/sites/googleplus/index.html",
+    key: "itt11-gplus",
+    incomplete: async (page) => {
+      await page.locator("[data-official-trap]").first().click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-official-need]").fill("Friends");
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-verb]").click();
+    },
+  },
+  {
+    year: "2015",
+    path: "/app/index.html#/year/2015?stop=itt15-periscope",
+    key: "itt15-periscope",
+    react: true,
+    incomplete: async (page) => {
+      await page.waitForFunction(() => !!(window.ITT && window.ITT.User && window.ITT.User.store), null, {
+        timeout: 15000,
+      });
+      const room = page.locator("article.stop#itt15-periscope");
+      await room.waitFor({ timeout: 15000 });
+      await room.locator(".actions button").last().click();
+    },
+    complete: async (page) => {
+      await page.waitForFunction(() => !!(window.ITT && window.ITT.User && window.ITT.User.store), null, {
+        timeout: 15000,
+      });
+      const room = page.locator("article.stop#itt15-periscope");
+      await room.waitFor({ timeout: 15000 });
+      await completeReactStop(page, room);
+    },
+  },
+  {
+    year: "2020",
+    path: "/years/2020/sites/zoom/meeting.html",
+    key: "itt20-zoom",
+    incomplete: async (page) => {
+      await page.locator("[data-official-trap]").first().click();
+    },
+    complete: async (page) => {
+      const reqs = page.locator("[data-official-verb-host] [data-official-req]");
+      const n = await reqs.count();
+      for (let i = 0; i < n; i++) await reqs.nth(i).check();
+      await page.locator("[data-official-need]").fill("brb leftover");
+      await page.locator("[data-official-verb]").click();
+    },
+  },
+  {
+    year: "2021",
+    path: "/years/2021/sites/att/index.html",
+    key: "itt21-att",
+    incomplete: async (page) => {
+      await page.locator("[data-official-trap]").first().click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-official-need]").fill("Museum App");
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.locator("[data-official-verb]").click();
+    },
+  },
+  {
+    year: "2022",
+    path: "/years/2022/sites/chatgpt/index.html",
+    key: "itt22-chatgpt",
+    incomplete: async (page) => {
+      await page.locator("[data-official-trap]").first().click();
+    },
+    complete: async (page) => {
+      await page.locator("[data-official-need]").fill("leftover");
       await page.locator("[data-official-verb]").click();
     },
   },
@@ -307,13 +414,7 @@ test.describe("One-thing per year — load + REAL gate", () => {
         await save.click();
       }
       await page.waitForTimeout(150);
-      if (t.seedOk && t.key === "itt05-yt-uploads") {
-        const raw = await page.evaluate((k) => localStorage.getItem(k), t.key);
-        const list = ytUploads(raw);
-        expect(list.some((x) => x && /residual/i.test(x.title || ""))).toBeFalsy();
-      } else {
-        expect(await page.evaluate((k) => localStorage.getItem(k), t.key)).toBeFalsy();
-      }
+      expect(await page.evaluate((k) => localStorage.getItem(k), t.key)).toBeFalsy();
     });
 
     test(`${t.year} complete writes ${t.key}`, async ({ page }) => {
@@ -330,19 +431,9 @@ test.describe("One-thing per year — load + REAL gate", () => {
         await t.steps(page);
         await page.locator("[data-itt-real-save]").first().click();
       }
-      if (t.seedOk && t.key === "itt05-yt-uploads") {
-        await expect
-          .poll(async () => {
-            const raw = await page.evaluate((k) => localStorage.getItem(k), t.key);
-            const list = ytUploads(raw);
-            return list.some((x) => x && /residual/i.test(x.title || ""));
-          }, { timeout: 8000 })
-          .toBeTruthy();
-      } else {
-        await expect
-          .poll(async () => page.evaluate((k) => localStorage.getItem(k), t.key), { timeout: 8000 })
-          .toBeTruthy();
-      }
+      await expect
+        .poll(async () => page.evaluate((k) => localStorage.getItem(k), t.key), { timeout: 8000 })
+        .toBeTruthy();
     });
   }
 

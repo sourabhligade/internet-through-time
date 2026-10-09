@@ -131,6 +131,7 @@
 
     var form = doc.querySelector("[data-pb-upload]");
     if (form) {
+      var verbOwned = form.querySelector("[data-official-verb]") != null;
       form.addEventListener("submit", function (ev) {
         ev.preventDefault();
         var inp = form.querySelector("#ott-field") || form.querySelector("[name='file']");
@@ -150,7 +151,7 @@
         });
         album.items = album.items.slice(0, 20);
         saveJSON(albumKey, album);
-        persistSummary();
+        if (!verbOwned) persistSummary();
         if (inp) inp.value = "";
         feedback("Uploaded residual · " + file + " (no CDN · this browser only).", status);
         try {

@@ -104,6 +104,7 @@
         if (!verbOwned) feedback("Hold a loop first. Empty never writes.", st, { error: true });
         return;
       }
+      if (verbOwned) return;
       if (!saveJSON(key("vine-posts"), blob({ seconds: Math.min(held, 6), date: "2013-01-24", official: true }))) {
         feedback("This browser blocked the save.", st, { error: true });
         return;
