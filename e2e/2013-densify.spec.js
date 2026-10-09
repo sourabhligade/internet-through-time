@@ -31,6 +31,11 @@ test.describe("2013 leftover densify", () => {
     await page.locator("[data-vn13-hold]").dispatchEvent("pointerdown");
     await page.waitForTimeout(6200);
     await page.locator("[data-vn13-hold]").dispatchEvent("pointerup");
+    const reqs = page.locator("[data-official-req]");
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check({ force: true });
+    const need = page.locator("[data-official-need]").first();
+    if (await need.count()) await need.fill("6 second loop");
     await page.locator("[data-vn13-post]").click();
     await expect.poll(() => getKey(page, "itt13-vine-posts")).toBeTruthy();
   });

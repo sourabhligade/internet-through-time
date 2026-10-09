@@ -60,6 +60,23 @@ test.describe("lean leftover dests", () => {
   });
 
   test("2009 5×-only farmville folds onto leftover-official", async ({ page }) => {
-    await leftoverOfficialDest(page, "/years/2009/sites/farmville/index.html", "fv5", "itt09-like");
+    await page.goto("/years/2009/sites/farmville/index.html");
+    await page.evaluate(() => {
+      try {
+        localStorage.removeItem("itt09-fv5");
+        localStorage.removeItem("itt09-like");
+      } catch (e) { /* */ }
+    });
+    await page.reload();
+    const save = page.locator("[data-5x-save]").first();
+    await expect(save).toBeVisible({ timeout: 20000 });
+    await save.click();
+    expect(await page.evaluate(() => localStorage.getItem("itt09-fv5"))).toBeFalsy();
+    const reqs = page.locator("[data-5x-req]");
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check({ force: true });
+    await save.click();
+    await expect.poll(() => page.evaluate(() => localStorage.getItem("itt09-fv5")), { timeout: 8000 }).toBeTruthy();
+    expect(await page.evaluate(() => localStorage.getItem("itt09-like"))).toBeFalsy();
   });
 });

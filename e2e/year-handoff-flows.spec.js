@@ -19,7 +19,7 @@ async function twoStepClick(page, selector) {
   await el.click();
 }
 
-const { enterYear, goImmersion, contentFrame, killOverlays } = require('./helpers');
+const { enterYear, goImmersion, contentFrame, killOverlays, tickHonestyBoxes } = require('./helpers');
 const fs = require('fs');
 const path = require('path');
 
@@ -206,6 +206,7 @@ const SIGNATURE = {
       const form = frame.locator('form[data-pb-upload]');
       await expect(form).toBeVisible({ timeout: 15000 });
       await form.locator('[name="file"]').fill('party-pic.jpg');
+      await tickHonestyBoxes(frame);
       await form.locator('button[type="submit"], [data-ott-click="upload"]').first().click();
     },
   },
@@ -300,6 +301,9 @@ const SIGNATURE = {
       const frame = contentFrame(page);
       await expect(frame.locator('[data-ig12-share]')).toBeVisible({ timeout: 15000 });
       await frame.locator('[data-ig12-filter="X-Pro II"]').click();
+      const cap = frame.locator('[data-ig12-caption], [data-official-need]').first();
+      if (await cap.count()) await cap.fill('handoff android');
+      await tickHonestyBoxes(frame);
       await frame.locator('[data-ig12-share]').click();
     },
   },
@@ -311,6 +315,7 @@ const SIGNATURE = {
       const frame = contentFrame(page);
       await expect(frame.locator('[data-ig-story-add]')).toBeVisible({ timeout: 15000 });
       await frame.locator('[data-ig-story-text]').fill('handoff 24h');
+      await tickHonestyBoxes(frame);
       await frame.locator('[data-ig-story-add]').click();
     },
   },

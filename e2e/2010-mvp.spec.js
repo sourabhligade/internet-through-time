@@ -4,7 +4,7 @@
  */
 const { test, expect } = require('@playwright/test');
 
-const { completeRealGate, destOnDisk, enterYear, twoStepClick } = require('./helpers');
+const { completeRealGate, destOnDisk, enterYear, twoStepClick, slingNestHit } = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -58,6 +58,11 @@ test.describe('2010 MVP · year door + star + P0', () => {
     expect(await page.evaluate(() => localStorage.getItem('itt10-ipad'))).toBeFalsy();
     await page.locator('[name="ipad-cap"][value="16GB"]').check();
     await page.locator('[name="ipad-radio"][value="Wi-Fi"]').check();
+    const reqs = page.locator('[data-official-req]');
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check({ force: true });
+    const need = page.locator('[data-official-need]').first();
+    if (await need.count()) await need.fill('Buy iPad');
     await page.locator('[data-ipad-order]').click();
     await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt10-ipad'))).toMatch(/16GB|Wi-Fi|real/i);
   });
@@ -227,7 +232,7 @@ test.describe('2010 MVP · peak / leftovers / funerals', () => {
 
   test('T — Sling Nest start scores', async ({ page }) => {
     await page.goto('/years/2010/sites/playable/game.html');
-    await page.locator('#play-start').click();
+    await slingNestHit(page);
     await expect
       .poll(async () => Number((await page.locator('#play-score').textContent()) || '0'), { timeout: 8000 })
       .toBeGreaterThan(0);

@@ -222,6 +222,7 @@ test.describe("capture-backed dests — chips + REAL machines", () => {
     expect(await getKey(page, "itt10-ipad")).toBeFalsy();
     await page.locator('[name="ipad-cap"][value="16GB"]').check();
     await page.locator('[name="ipad-radio"][value="Wi-Fi"]').check();
+    await finishOfficial(page);
     await page.locator("[data-ipad-order]").click();
     await expect.poll(() => getKey(page, "itt10-ipad")).toMatch(/16GB|Wi-Fi|real/i);
   });

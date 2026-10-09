@@ -820,6 +820,56 @@ async function leftoverOfficialDest(page, href, suffix, goldKey) {
   return key;
 }
 
+/**
+ * Tick official / product honesty boxes. data-pb-req counts as a product req.
+ * @param {import("@playwright/test").Page | import("@playwright/test").FrameLocator} root
+ */
+async function tickHonestyBoxes(root) {
+  const boxes = root.locator(
+    'input[type="checkbox"][data-official-req], input[type="checkbox"][data-req], input[type="checkbox"][data-pb-req]'
+  );
+  const n = await boxes.count();
+  for (let i = 0; i < n; i++) {
+    await boxes.nth(i).check({ force: true }).catch(() => {});
+  }
+}
+
+/**
+ * Sling Nest Start leaves score 0. Drag from the sling so a nest hit scores.
+ * @param {import("@playwright/test").Page} page
+ * @param {import("@playwright/test").Page | import("@playwright/test").FrameLocator} [root]
+ */
+async function slingNestHit(page, root) {
+  root = root || page;
+  await root.locator("#play-start").click();
+  const canvas = root.locator("canvas").first();
+  await canvas.waitFor({ state: "visible" });
+  async function pull(nx1, nyFromBottom) {
+    await canvas.evaluate(
+      (el, args) => {
+        const r = el.getBoundingClientRect();
+        const toClient = (nx, ny) => ({
+          clientX: r.left + (nx / el.width) * r.width,
+          clientY: r.top + (ny / el.height) * r.height,
+        });
+        const slingY = el.height - 78;
+        const d = toClient(86, slingY);
+        const u = toClient(args.nx1, el.height - args.nyFromBottom);
+        el.dispatchEvent(new MouseEvent("mousedown", { bubbles: true, clientX: d.clientX, clientY: d.clientY }));
+        el.dispatchEvent(new MouseEvent("mousemove", { bubbles: true, clientX: u.clientX, clientY: u.clientY }));
+        window.dispatchEvent(new MouseEvent("mouseup", { bubbles: true, clientX: u.clientX, clientY: u.clientY }));
+      },
+      { nx1, nyFromBottom }
+    );
+  }
+  /* Flat pull: (20, H-60) hits the first nest. Steeper (20, H-30) flies over. */
+  await pull(20, 60);
+  await page.waitForTimeout(700);
+  const n = Number((await root.locator("#play-score").textContent()) || "0");
+  if (n > 0) return;
+  await pull(10, 70);
+}
+
 module.exports = {
   BOARDED_YEARS,
   WIPED_YEARS,
@@ -858,4 +908,6 @@ module.exports = {
   leftoverTrioStrip,
   leftoverOfficialDest,
   revealLeftoverRails,
+  tickHonestyBoxes,
+  slingNestHit,
 };

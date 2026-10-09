@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const { test, expect } = require('@playwright/test');
 
-const { enterYear, goImmersion, contentFrame, killOverlays, waitKey, waitYearGame, isLiveYear } = require('./helpers');
+const { enterYear, goImmersion, contentFrame, killOverlays, waitKey, waitYearGame, isLiveYear, slingNestHit } = require('./helpers');
 
 function yearOnDisk(year) {
   return fs.existsSync(path.join(__dirname, '..', 'years', String(year)));
@@ -191,7 +191,7 @@ test.describe('year game flows — full matrix', () => {
   test('2010 Sling Nest: start → score', async ({ page }) => {
     const frame = await openGame(page, '2010', '', 'itt10');
     await expect(frame.locator('[data-game-id="slingnest"]')).toBeVisible();
-    await frame.locator('#play-start').click();
+    await slingNestHit(page, frame);
     await expect
       .poll(async () => Number((await frame.locator('#play-score').textContent()) || '0'), { timeout: 8000 })
       .toBeGreaterThan(0);

@@ -5561,6 +5561,7 @@
       "dest": "photobucket",
       "path": "years/2003/sites/photobucket/index.html",
       "hooks": [
+        "data-official-verb",
         "data-lo-save"
       ],
       "leftover2x": false,
@@ -30149,6 +30150,7 @@
       "dest": "youtube",
       "path": "years/2005/sites/youtube/upload.html",
       "hooks": [
+        "data-official-verb",
         "data-lo-save",
         "data-yt-upload"
       ],

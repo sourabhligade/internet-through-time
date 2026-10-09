@@ -31,6 +31,13 @@ test.describe("Bar A named dests · Phase 0–2", () => {
     await expect(player).toBeVisible();
     await player.click();
     await page.locator("[data-yt06-watch]").click();
+    expect(await getKey(page, "itt06-yt")).toBeFalsy();
+    const reqs = page.locator("[data-official-req]");
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check({ force: true });
+    const need = page.locator("[data-official-need]").first();
+    if (await need.count()) await need.fill("Watch theater");
+    await page.locator("[data-official-verb]").first().click();
     await expect.poll(() => getKey(page, "itt06-yt"), { timeout: 8000 }).toBeTruthy();
     expect(await getKey(page, "itt06-yt-lx")).toBeFalsy();
     await expect(page.locator('[data-next-flow][data-next-when-key="itt06-yt"]')).toBeVisible();

@@ -320,7 +320,6 @@
       "immersion/farmville.js",
       "immersion/bing.js",
       "immersion/one-thing-machines.js",
-      "immersion/year-5x-pack.js",
       "immersion/year-2009-extras.js",
       "immersion/year-4x-flows.js"
     ],

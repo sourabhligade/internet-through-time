@@ -1,7 +1,7 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
-const { twoStepClick } = require('./helpers');
+const { twoStepClick, tickHonestyBoxes } = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -43,6 +43,9 @@ test.describe('2010 leftover trail', () => {
     await page.reload();
     await page.locator('[name="ipad-cap"][value="16GB"]').check();
     await page.locator('[name="ipad-radio"][value="Wi-Fi"]').check();
+    await tickHonestyBoxes(page);
+    const need = page.locator('[data-official-need]').first();
+    if (await need.count()) await need.fill('Buy iPad');
     await page.locator('[data-ipad-order]').click();
     await expect.poll(() => getKey(page, 'itt10-ipad')).toMatch(/16GB|real/i);
   });

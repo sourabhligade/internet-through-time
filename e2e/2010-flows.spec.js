@@ -5,7 +5,7 @@
  */
 const { test, expect } = require('@playwright/test');
 
-const { enterYear, completeRealGate, destOnDisk, twoStepClick, leftoverOfficialDest, killOverlays } = require('./helpers');
+const { enterYear, completeRealGate, destOnDisk, twoStepClick, leftoverOfficialDest, killOverlays, slingNestHit } = require('./helpers');
 
 async function clearKeys(page, keys) {
   await page.evaluate((ks) => {
@@ -328,7 +328,7 @@ test.describe('2010 flows A–T', () => {
 
   test('T Sling Nest start scores · famous cabinets load', async ({ page }) => {
     await page.goto('/years/2010/sites/playable/game.html');
-    await page.locator('#play-start').click();
+    await slingNestHit(page);
     await expect
       .poll(async () => Number((await page.locator('#play-score').textContent()) || '0'), { timeout: 8000 })
       .toBeGreaterThan(0);

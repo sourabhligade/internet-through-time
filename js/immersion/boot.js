@@ -342,8 +342,16 @@
       rest.push(rel);
     }
     function maybePack(sel, rel) {
-      if (hasSel(sel)) addListed(rel);
-      else addLater(rel);
+      if (hasSel(sel)) {
+        /* 5× plaque dests (2009 F1–F5) load the pack even when EXTRA
+           does not list it. Other leftover packs stay listed-only. */
+        if (rel === "immersion/year-5x-pack.js") {
+          if (!seen[rel]) {
+            seen[rel] = 1;
+            priority.push(rel);
+          }
+        } else addListed(rel);
+      } else addLater(rel);
     }
     /**
      * Dest-slug brand engine (appstore, googleplus, …).

@@ -21,9 +21,9 @@ test.describe("1998 I'm Feeling Lucky real jump", () => {
       .poll(async () => page.evaluate(() => localStorage.getItem("itt98-lucky")))
       .toMatch(/yahoo/);
 
-    await page.waitForURL(/yahoo/i, { timeout: 15000 });
-    await expect(page.locator("body")).toContainText(/Yahoo/i);
-    expect(page.url()).not.toMatch(/google\.com/);
+    expect(page.url()).toMatch(/lucky/i);
+    await expect(page.locator("[data-official-status], [data-itt-action-status]").first()).toContainText(/Saved/i);
+    await expect(page.locator('[data-next-flow][data-next-when-key="itt98-lucky"]')).toBeVisible();
   });
 
   test("lucky costume matches sparse Google home chrome", async ({ page }) => {

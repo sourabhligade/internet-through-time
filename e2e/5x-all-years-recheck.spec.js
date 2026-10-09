@@ -66,7 +66,7 @@ async function tickChecks(page, n) {
   const letters = ['a', 'b', 'c', 'd'];
   for (let i = 0; i < n; i++) {
     const box = page.locator(`[data-5x-req="${letters[i]}"]`).first();
-    if (await box.count()) await box.check();
+    if (await box.count()) await box.check({ force: true });
   }
 }
 
@@ -105,7 +105,7 @@ for (const yearPack of matrix.panel) {
         await save.click();
         await expect.poll(async () => getKey(page, fl.key)).toBeFalsy();
 
-        await page.locator('[data-5x-req="a"]').first().check();
+        await page.locator('[data-5x-req="a"]').first().check({ force: true });
         await save.click();
         await expect.poll(async () => getKey(page, fl.key)).toBeFalsy();
 

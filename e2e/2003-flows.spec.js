@@ -1,7 +1,7 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
-const { enterYear, contentFrame, waitForImmersion } = require('./helpers');
+const { enterYear, contentFrame, waitForImmersion, tickHonestyBoxes } = require('./helpers');
 
 test.describe('2003 flows', () => {
   test('star Photobucket empty never writes', async ({ page }) => {
@@ -23,6 +23,7 @@ test.describe('2003 flows', () => {
     await page.waitForTimeout(400);
     const f = page;
     await f.locator('[name="file"], #ott-field').first().fill('vacation.jpg');
+    await tickHonestyBoxes(f);
     await f.locator('form[data-pb-upload] button[type="submit"]').click();
     await page.waitForTimeout(300);
     const raw = await page.evaluate(() => localStorage.getItem('itt03-photobucket'));

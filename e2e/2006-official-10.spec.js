@@ -114,6 +114,13 @@ test.describe("2006 official 10 · dest machines", () => {
     expect(await getKey(page, "itt06-yt")).toBeFalsy();
     await page.locator("[data-yt-player]").click();
     await page.locator("[data-yt06-watch]").click();
+    expect(await getKey(page, "itt06-yt")).toBeFalsy();
+    const reqs = page.locator("[data-official-req]");
+    const n = await reqs.count();
+    for (let i = 0; i < n; i++) await reqs.nth(i).check({ force: true });
+    const need = page.locator("[data-official-need]").first();
+    if (await need.count()) await need.fill("Watch theater");
+    await page.locator("[data-official-verb]").first().click();
     await expect.poll(() => getKey(page, "itt06-yt"), { timeout: 8000 }).toBeTruthy();
     expect(await getKey(page, "itt06-yt-lx")).toBeFalsy();
     expect(await getKey(page, "itt06-tweets")).toBeFalsy();
