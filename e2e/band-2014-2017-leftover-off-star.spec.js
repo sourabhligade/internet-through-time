@@ -1,9 +1,10 @@
 // @ts-check
 /**
  * Phase 5 lock for 2014–2017. Leftover on WhatsApp does not stamp the
- * star. 2015 leftover trail stays empty.
+ * star. 2015 leftover never stamps Periscope.
  */
 const { test, expect } = require("@playwright/test");
+const { completeReactStop } = require("./helpers.js");
 
 async function raw(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
@@ -74,9 +75,25 @@ test.describe("2014-2017 phase 5 leftover off the star", () => {
     expect((await envelope(page, "itt14-gold-lx")).kind).toBe("leftover");
   });
 
-  test("2015 leftover trail stays empty", async ({ page }) => {
-    await page.goto("/app/index.html#/year/2015");
-    await page.waitForFunction(() => !!(window.ITT && window.ITT.User), null, { timeout: 15000 });
+  test("2015 leftover never stamps the Periscope star", async ({ page }) => {
+    await page.goto("/app/index.html#/year/2015?stop=itt15-googlephotos");
+    await page.waitForFunction(() => !!(window.ITT && window.ITT.User && window.ITT.User.store), null, {
+      timeout: 15000,
+    });
+    const room = page.locator("article.stop#itt15-googlephotos");
+    await room.waitFor({ timeout: 15000 });
+    await page.evaluate(() => {
+      localStorage.removeItem("itt15-periscope");
+      localStorage.removeItem("itt15-googlephotos");
+    });
     await expect(page.locator("[data-lo-save], [data-itt-gold-lx]")).toHaveCount(0);
+    await room.locator(".actions button").first().click();
+    expect(await raw(page, "itt15-googlephotos")).toBeNull();
+    expect(await raw(page, "itt15-periscope")).toBeNull();
+    await completeReactStop(page, room);
+    await expect.poll(() => raw(page, "itt15-googlephotos"), { timeout: 8000 }).toBeTruthy();
+    expect(await raw(page, "itt15-periscope")).toBeNull();
+    expect((await envelope(page, "itt15-googlephotos")).kind).toBe("leftover");
+    expect((await envelope(page, "itt15-googlephotos")).leftover).toBe(true);
   });
 });

@@ -46,4 +46,33 @@ test.describe("2015 mvp", () => {
     expect(String(blob.year)).toBe("2015");
     expect(blob.key).toBe("itt15-periscope");
   });
+
+  test("leftover empty and trap never write · Backup writes leftover itt15-googlephotos", async ({ page }) => {
+    await page.goto("/app/index.html#/year/2015?stop=itt15-googlephotos");
+    await page.waitForFunction(() => !!(window.ITT && window.ITT.User && window.ITT.User.store), null, {
+      timeout: 15000,
+    });
+    const room = page.locator("article.stop#itt15-googlephotos");
+    await room.waitFor({ timeout: 15000 });
+    await page.evaluate(() => {
+      localStorage.removeItem("itt15-googlephotos");
+      localStorage.removeItem("itt15-periscope");
+    });
+    await expect(room.locator(".kicker")).toHaveText("Leftover 11");
+    await room.locator(".actions button").first().click();
+    expect(await getKey(page, "itt15-googlephotos")).toBeFalsy();
+    expect(await getKey(page, "itt15-periscope")).toBeFalsy();
+    await room.locator(".actions button").last().click();
+    expect(await getKey(page, "itt15-googlephotos")).toBeFalsy();
+    await completeReactStop(page, room);
+    await expect.poll(() => getKey(page, "itt15-googlephotos"), { timeout: 8000 }).toBeTruthy();
+    const blob = JSON.parse((await getKey(page, "itt15-googlephotos")) || "{}");
+    expect(blob.v).toBe(1);
+    expect(blob.real).toBe(true);
+    expect(blob.leftover).toBe(true);
+    expect(blob.kind).toBe("leftover");
+    expect(String(blob.year)).toBe("2015");
+    expect(blob.key).toBe("itt15-googlephotos");
+    expect(await getKey(page, "itt15-periscope")).toBeFalsy();
+  });
 });

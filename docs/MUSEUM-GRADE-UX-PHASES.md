@@ -121,7 +121,7 @@ Full 25-door lock: `e2e/phase4-phone.spec.js`. This phase rewalks the groups abo
 | Header | The stop you are on. Starting Point shows Periscope as the star. Apple Music header is Apple Music. |
 | Verb | In the first screen. No visible `itt15-` leaf. |
 | Envelope | `ITT.User.store` → `{real:true, kind:official}` after ticks + title + Go LIVE. Copy `Saved.` |
-| Leftover | `ALSO_2015` empty. No leftover list without `?deep=1`. |
+| Leftover | `ALSO_2015` 10 leftover rooms. No leftover list without `?deep=1`. |
 | `#/year/2017` | Heading “2017 is not a door”. Never Periscope. |
 
 Rebuild: `npm run build` from repo root when `react/src/` changes. Do not hand-edit `app/assets/`. Image-readme stays `[ ]`.

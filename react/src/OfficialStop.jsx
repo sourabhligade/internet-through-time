@@ -41,7 +41,7 @@ export function OfficialStop({ stop, year, onNext }) {
       return;
     }
     const payload = stop.leftover
-      ? { real: true, leftover: true, year: saveYear, ts: Date.now() }
+      ? { real: true, leftover: true, kind: "leftover", year: saveYear, ts: Date.now() }
       : {
           multiStep: true,
           real: true,

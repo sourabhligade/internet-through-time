@@ -59,15 +59,20 @@ test.describe("UX phase 5 2015 React glass", () => {
     await expect(room.locator(".status")).not.toContainText(/itt15-/);
   });
 
-  test("ALSO_2015 stays empty and leftover list stays off the glass", async ({ page }) => {
+  test("leftover list stays off the glass until ?deep=1", async ({ page }) => {
     const src = fs.readFileSync(path.join(__dirname, "../react/src/year2015.js"), "utf8");
-    expect(src).toMatch(/export const ALSO_2015 = \[\]/);
+    expect(src).not.toMatch(/export const ALSO_2015 = \[\]/);
+    expect(src).toMatch(/itt15-googlephotos/);
+    expect(src).toMatch(/itt15-dx12/);
     await page.goto("/app/index.html#/year/2015");
     await expect(page.locator(".year-star")).toHaveText("Periscope");
     await expect(page.locator("section.also-year")).toHaveCount(0);
     await expect(page.getByText("Leftover list")).toHaveCount(0);
+    await expect(page.locator("h2", { hasText: "Official ten" }).locator("..").locator("ol li")).toHaveCount(10);
     await page.goto("/app/index.html#/year/2015?deep=1");
-    await expect(page.locator("section.also-year")).toHaveCount(0);
+    await expect(page.locator("section.also-year")).toHaveCount(1);
+    await page.locator("section.also-year summary").click();
+    await expect(page.locator("section.also-year ol li")).toHaveCount(10);
   });
 
   test("2017 hash is not a door and never shows Periscope", async ({ page }) => {

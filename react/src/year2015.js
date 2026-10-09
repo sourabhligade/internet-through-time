@@ -21,10 +21,31 @@ export const TRAIL_2015 = [
   row(7, "Meerkat", "itt15-meerkat", "Slack", "Go live", "Still the default", "The earlier live app. Periscope is the star.", "live"),
   row(8, "Slack", "itt15-slack", "YouTube Red", "Send", "Email as the room", "A channel. Send is the save.", "chat"),
   row(9, "YouTube Red", "itt15-youtube", "Live Rush", "Subscribe", "Free only", "The paid row. Subscribe is the save.", "title"),
-  row(10, "Live Rush", "itt15-game-liverush", "Periscope Go LIVE", "Start", "Score 0", "The year toy. A score of 0 writes nothing.", "game"),
+  row(10, "Live Rush", "itt15-game-liverush", "Google Photos", "Start", "Score 0", "The year toy. A score of 0 writes nothing.", "game"),
 ];
 
-export const ALSO_2015 = [];
+function leftover(n, name, whenKey, next, verb, trap, fact) {
+  return {
+    n, name, whenKey, next, verb, trap, fact,
+    year: "2015",
+    leftover: true,
+    checks: ["Honesty. Empty never writes.", "This dest, not the Periscope star."],
+    placeholder: name,
+  };
+}
+
+export const ALSO_2015 = [
+  leftover(11, "Google Photos", "itt15-googlephotos", "Snapchat Discover", "Backup", "Local only", "May 2015. Unlimited backup is the save."),
+  leftover(12, "Snapchat Discover", "itt15-snap-discover", "Let's Encrypt", "Open edition", "Stories only", "January 2015. Open edition is the save."),
+  leftover(13, "Let's Encrypt", "itt15-le", "Discord", "Issue cert", "HTTP only", "Dec 2015 public beta. Issue is the save."),
+  leftover(14, "Discord", "itt15-discord", "Ethereum Frontier", "Join", "Skype as gold", "May 2015. Join is the save."),
+  leftover(15, "Ethereum Frontier", "itt15-ethereum", "Apple News", "Load genesis", "Homestead UI", "30 Jul 2015. The genesis block is the save."),
+  leftover(16, "Apple News", "itt15-news", "Instant Articles", "Follow", "Newsstand only", "September 2015. Follow is the save."),
+  leftover(17, "Instant Articles", "itt15-instantarticles", "Android Pay", "Open Instant", "Slow mobile web", "May 2015. Open Instant is the save."),
+  leftover(18, "Android Pay", "itt15-androidpay", "iPad Pro", "Tap and pay", "Wallet only", "10 Sep 2015. Tap is the save."),
+  leftover(19, "iPad Pro", "itt15-ipadpro", "DirectX 12", "Order", "iPad Air as gold", "November 2015. Order is the save."),
+  leftover(20, "DirectX 12", "itt15-dx12", "Periscope Go LIVE", "Enable", "DirectX 11 only", "29 Jul 2015. The graphics API, not the OS upgrade."),
+];
 export const ALL_2015 = TRAIL_2015.concat(ALSO_2015);
 export const GUIDED_2015 = [
   ["About 2015", "about"],
@@ -49,7 +70,7 @@ export const DOOR_2015 = {
     "Apple Music, Windows 10, and the Reddit cards are the other guided rooms.",
   ],
   about: [
-    "2015 is a lean door. Ten official stops. No forest.",
+    "2015 is a lean door. Ten official stops. Ten leftover rooms. No forest.",
     "Periscope Go LIVE is the star. No invented brand pixel.",
   ],
 };

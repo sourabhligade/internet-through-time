@@ -110,12 +110,12 @@ Eight calendar bands. Two of them are short because the absent years stay absent
 | 2002–2005 | 2002, 2003, 2004, 2005 | frozen | 2,319 | 2,066 | 286 | 78 |
 | 2006–2009 | 2006 frozen. 2007–2009 lean | mixed | 794 | 595 | 198 | 50 |
 | 2010–2013 | 2010–2013 | lean | 182 | 150 | 51 | 39 |
-| 2014–2017 | 2014, 2015 React. 2017 absent | mixed | 115 + 10 React | 92 | 36 | 29 |
+| 2014–2017 | 2014, 2015 React. 2017 absent | mixed | 115 + 20 React | 92 | 36 | 29 |
 | 2018–2021 | 2020 and 2021. 2018 and 2019 absent | lean | 40 | 40 | 0 | 20 |
 | 2022–2025 | 2022. 2023–2025 absent | lean | 29 | 25 | 0 | 10 |
 | **All live** | 25 doors |  | **5,859** | **4,938** | **1,158** | **406** |
 
-2014–2017 is 18 save pages in 2014, 10 React stops. 115 + 10 = 125 working flows in that band. The total row’s 5,859 is HTML save pages only. Add the 10 React stops and the working set is 5,869. 2017 adds nothing.
+2014–2017 is 18 save pages in 2014, 20 React stops (10 official + 10 leftover). 115 + 20 = 135 working flows in that band. The total row’s 5,859 is HTML save pages only. Add the 20 React stops and the working set is 5,879. 2017 adds nothing.
 
 Inside a phase, the done-when is fixed. The sentence on the button and which listener folds into `official-verb` can change, as long as the envelope rule holds and no new stop appears.
 
@@ -238,7 +238,7 @@ leanBoot. Working set: 182 save pages, 150 dest folders, 51 leftover-2× dests, 
 
 ## 2014–2017
 
-2014 is leanBoot. 2015 is React. 2017 stays absent. Working set: 18 HTML save pages plus 10 React stops. Do not create `years/2017` until named.
+2014 is leanBoot. 2015 is React. 2017 stays absent. Working set: 18 HTML save pages plus 20 React stops (10 official + 10 leftover). Do not create `years/2017` until named.
 
 | Phase | Work in this band |
 | --- | --- |
@@ -246,7 +246,7 @@ leanBoot. Working set: 182 save pages, 150 dest folders, 51 leftover-2× dests, 
 | 2 | Done 2026-10-09. WhatsApp Install is official-verb. React Apple Music stores kind `official`. Lock: `e2e/band-2014-2017-one-writer.spec.js`. |
 | 3 | Done 2026-10-09. Empty WhatsApp, empty Periscope title, ended broadcast, and Live Rush score 0 write nothing. Lock: `e2e/band-2014-2017-empty-holds.spec.js`. |
 | 4 | Done 2026-10-09. WhatsApp and React Periscope say `Saved.` with no storage key. `OfficialStop.jsx` success copy is `Saved.` Rebuild `app/` from `react/` in this phase. Lock: `e2e/band-2014-2017-receipt.spec.js`. |
-| 5 | Done 2026-10-09. WhatsApp leftover writes gold-lx leftover and leaves the star empty. 2015 leftover trail stays empty. Gold leftover sits after the exhibit. Lock: `e2e/band-2014-2017-leftover-off-star.spec.js`. |
+| 5 | Done 2026-10-09. WhatsApp leftover writes gold-lx leftover and leaves the star empty. 2015 leftover never stamps Periscope. Gold leftover sits after the exhibit. Lock: `e2e/band-2014-2017-leftover-off-star.spec.js`. |
 | 6 | Done 2026-10-09. Walks all 115 register rows split by year. 2015 remaining stops open the React URL. 2017 stays absent. Lock: `e2e/band-2014-2017.spec.js`. |
 
 ## 2018–2021

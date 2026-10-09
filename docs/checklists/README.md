@@ -29,7 +29,7 @@ Ship law: [`../DISK-TRUTH.md`](../DISK-TRUTH.md). Current holes: [`../YEAR-INCOM
 - [2012](2012.md) — 10 official, leftover-2× unique 12 (keep), 0 pictures
 - [2013](2013.md) — 9 official, leftover-2× unique 27, 0 pictures
 - [2014](2014.md) — 9 official, leftover-2× unique 16, 0 pictures
-- [2015](2015.md) — React official 10, leftover 0, 0 pictures
+- [2015](2015.md) — React official 10, leftover 10, leftover-2× unique dest catalog 0, 0 pictures
 - [2020](2020.md) — 10 official · Zoom Leave `itt20-zoom` · readme only, no pictures
 - [2021](2021.md) — 10 official · Ask App Not to Track `itt21-att` · readme only, no pictures
 - [2022](2022.md) — 10 official · ChatGPT Send `itt22-chatgpt` · readme only, no pictures

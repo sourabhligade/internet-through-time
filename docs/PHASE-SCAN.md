@@ -77,7 +77,7 @@ Locks: `e2e/ux-phase1-honesty.spec.js` … `e2e/ux-phase5-2015.spec.js`. Helper:
 | 2 Dest in window | Implemented. B1 first-boot abort closed | Hub → 1998 / 2022 → Starting Point chip → dest in `#content`. Gold leftover in Lucky iframe writes leftover. Direct Lucky HTTP 200. First `pages/home.html` is not `ERR_ABORTED` | Other doors untested here. Home/reload bounce documented, not asserted |
 | 3 Receipt | Implemented | Lucky + Periscope `Saved.` Hold **color** `#a00` on empty/trap and Periscope incomplete | Receipt inside iframe unproven on other stars |
 | 4 Phone 390 | Implemented | Chrome **groups**: 1994, 1998, 2004, 2008, 2009, 2011, 2013, 2014, 2022 + 2015 React. HABIT years skip menubar | Full 25-door lock remains `e2e/phase4-phone.spec.js`. UX file omits 1995–97, 1999–2003, 2005–07, 2010, 2012, 2020, 2021 |
-| 5 2015 React | Implemented | Hub card, no `years/2015`, header is the stop, no visible `itt15-` leaf, Periscope envelope, `ALSO_2015=[]`, `#/year/2017` not a door | Uses `?stop=` so it never hits the dead `clickRailKey` helper |
+| 5 2015 React | Implemented | Hub card, no `years/2015`, header is the stop, no visible `itt15-` leaf, Periscope envelope, `ALSO_2015` 10 leftover rooms folded unless `?deep=1`, `#/year/2017` not a door | Uses `?stop=` so it never hits the dead `clickRailKey` helper |
 
 **B1 closed (uncommitted):** `seedHistory` leaves relative `pages/home.html` loading. `hideOverlay()` already seeds. First-boot does not seed twice. `setIframeSrc` bounce stays for same-path **absolute** Home/reload. Sandbox stays `allow-same-origin allow-scripts`.
 
@@ -156,7 +156,7 @@ Map: [`WORKING-FLOW-PHASES.md`](WORKING-FLOW-PHASES.md). Registers: `e2e/registe
 | 2002–2005 | frozen four | 2,319 | Done. Stumble / Photobucket / thefacebook / YouTube upload. 2004 trail n=8 |
 | 2006–2009 | 2006 frozen, 2007–2009 lean | 794 | Done. Twttr / Like extras skip when verb owns. Plot Start writes nothing |
 | 2010–2013 | lean | 182 | Done. iPad extras skip. Guess Doodle Start writes nothing. 2013 trail n=9 |
-| 2014–2017 | 2014, 2015 React. 2017 absent | 115 HTML + 10 React | Done. 2017 stays 0 |
+| 2014–2017 | 2014, 2015 React. 2017 absent | 115 HTML + 20 React | Done. 2017 stays 0 |
 | 2018–2021 | 2020, 2021. 2018–2019 absent | 40 | Done. 2018–2019 stay 0 |
 | 2022–2025 | 2022. 2023–2025 absent | 29 | Done. 2023–2025 stay 0 |
 

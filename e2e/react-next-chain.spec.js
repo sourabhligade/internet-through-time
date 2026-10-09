@@ -28,8 +28,13 @@ test("2015 Windows 10 Next opens Reddit redesign", async ({ page }) => {
   await saveAndNext(page, room, "2015", "itt15-win10", "Reddit redesign", "Reddit redesign", "itt15-reddit");
 });
 
-test("2015 Live Rush Next returns to Periscope", async ({ page }) => {
+test("2015 Live Rush Next opens leftover Google Photos", async ({ page }) => {
   const room = await openDirect(page, "2015", "itt15-game-liverush");
-  await saveAndNext(page, room, "2015", "itt15-game-liverush", "Periscope Go LIVE", "Periscope Go LIVE", "itt15-periscope");
+  await saveAndNext(page, room, "2015", "itt15-game-liverush", "Google Photos", "Google Photos", "itt15-googlephotos");
+});
+
+test("2015 leftover DirectX 12 Next returns to Periscope", async ({ page }) => {
+  const room = await openDirect(page, "2015", "itt15-dx12");
+  await saveAndNext(page, room, "2015", "itt15-dx12", "Periscope Go LIVE", "Periscope Go LIVE", "itt15-periscope");
 });
 
