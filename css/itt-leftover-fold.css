@@ -86,11 +86,17 @@ html:not([data-official-key]):not([data-itt-start]) [data-itt-dest-true][data-po
   display: block;
 }
 [data-lo-panel][data-itt-dest-true],
-[data-lo-panel][data-itt-trail-stop],
-html[data-official-key] [data-lo-panel][data-itt-gold-lx] {
+[data-lo-panel][data-itt-trail-stop] {
   display: block;
   clear: both;
   margin-top: 1.5em;
+}
+/* Gold leftover sits after the period verb. Gap only — dest bodies stay frozen. */
+html[data-official-key] [data-lo-panel][data-itt-gold-lx] {
+  display: block;
+  clear: both;
+  float: none;
+  margin-top: 3em;
 }
 
 html[data-itt-deep] [data-lo-panel]:not([data-itt-dest-true]),

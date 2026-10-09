@@ -7,6 +7,7 @@
 **Phase locks (A–E):** [`MUSEUM-GRADE-UX-PHASES.md`](MUSEUM-GRADE-UX-PHASES.md) · `e2e/ux-phase1-honesty.spec.js` through `e2e/ux-phase5-2015.spec.js`. Off dest-true 12.  
 **Honesty / envelope:** [`PROD-USER-DATA-SRP.md`](PROD-USER-DATA-SRP.md) · [`WORKING-FLOW-PHASES.md`](WORKING-FLOW-PHASES.md).  
 **Current holes:** [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).  
+**All-phase scan:** [`PHASE-SCAN.md`](PHASE-SCAN.md) — improvisation, shortfalls, inconsistencies, broken flows. Not ship law.  
 **Local:** http://127.0.0.1:8080 · **Public:** https://sourabhligade.github.io/internet-through-time/ (origin tree; local is ahead until **push**).
 
 Museum grade is a visitor who can enter any of the **26 live doors**, tell the year from the window, finish **one star verb**, and leave on a trail that stays that year. Empty, trap, and incomplete write nothing. Status is `Saved.` or `This browser blocked the save.` Leftover never stamps official n=1–10. It is **not** more dest folders, a shared Chrome skin, a modern lobby, leftover-3×, or restoring 2017–2019 / 2023–2025.
@@ -70,7 +71,7 @@ Same extras class, scanned after A1–A3 (no dest-farm): 2006 YouTube Watch / Tw
 
 **Done when:** dest-true 436 still green. GO and Reactions warehouse complete paths write `{v:1, kind:official}`. Visitor sees one sentence: `Saved.`
 
-### Slice B — Dest in the year window (`dest in window`) — standing + one remaining
+### Slice B — Dest in the year window (`dest in window`) — implemented; B1 first-boot abort closed
 
 Museum-grade look is the dest **inside** that year’s OS/browser frame.
 
@@ -84,7 +85,7 @@ Direct dest URLs stay HTTP 200. They are not the grade path. Opening `lucky.html
 
 | # | Gap | Where | Fix class |
 |---|-----|-------|-----------|
-| B1 | `setIframeSrc` can abort the first `pages/home.html` load (`net::ERR_ABORTED`) and cancel the CSS import chain | `js/browser/create.js` | **Remaining.** GitNexus impact **CRITICAL** (62 symbols, 29 processes). This pass did not edit it. Named chrome PR later. Keep sandbox `allow-same-origin allow-scripts` so dest JS and localStorage share origin. |
+| B1 | `setIframeSrc` can abort the first `pages/home.html` load (`net::ERR_ABORTED`) and cancel the CSS import chain | `js/browser/create.js` | **Closed.** `seedHistory` leaves relative `pages/home.html` loading (no halt/`about:blank` upgrade). `hideOverlay()` already seeds; first-boot does not seed twice. `setIframeSrc` bounce stays for same-path Home/reload. Keep sandbox `allow-same-origin allow-scripts` so dest JS and localStorage share origin. Lock: `e2e/ux-phase2-window.spec.js`. |
 | B2 | Year shell `height: 100%` vs dest `itt-dest-page.css` overflow fight | [`ITT-CSS-LAYERS.md`](ITT-CSS-LAYERS.md) | Standing. Shell owns the window. Dest owns the room. Do not paint 1994 with Chrome-habit. |
 | B3 | Gold leftover packing first paint on 1994–2001 official stars | `itt-leftover-fold.css` shows `[data-lo-panel][data-itt-gold-lx]` on `html[data-official-key]` | Standing. Gold stays leftover (`display:block; clear:both; margin-top:1.5em`). Do not make it the star verb. Did not restyle dest body flex/order (would unfreeze dest layout). |
 | B4 | Lean leftover dests use period leftover face (2008 XP face is on disk) | `css/leftover-dest-face.css` | Standing. Recheck 2007–2009 leftover dests at 1100px after any selector edit. |
@@ -101,7 +102,7 @@ Visitor-facing copy. Keys stay in storage. They leave the glass.
 | Quota / private mode | `This browser blocked the save.` |
 | Empty / trap / incomplete | Hold sentence in red. Nothing stored. |
 
-2016 extras official dests (Stories, GO, Reactions, E2E, iPhone 7, Vine end, Spectacles, musical.ly, Win10 end) print `Saved.` Leftover extras writers in the same file (AirPods, Dyn) also print `Saved.` Keys stay in storage. Do not rewrite every leftover dest in other years in one pass.
+2016 extras official dests (Stories, GO, Reactions, E2E, iPhone 7, Vine end, Spectacles, musical.ly, Win10 end) print `Saved.` Leftover extras writers in the same file (AirPods, Dyn) also print `Saved.` Keys stay in storage. Do not rewrite every leftover dest in other years in one pass. HTML official-verb hold is `#a00`; `Saved.` is `#060`. 2015 `OfficialStop` uses `.status.is-hold` / `.status.is-ok` the same way.
 
 Clip stays: `.itt-pixel-failed`, `code[data-itt-clip]`. Leave `[failed-final]` in HTML. Wikipedia reconstruction line is exhibit copy; do not treat it as a JS exception.
 
@@ -229,10 +230,11 @@ Full warehouse `npm test` is not the UX gate.
 
 ## Name next
 
-Slices A–E are in. Remaining museum-grade close:
+Slices A–E are in. B1 first-boot abort is closed. Remaining museum-grade close:
 
 1. Recheck the visitor URLs on :8080 (no browser MCP).
 2. **push** (slice F) — public tree matches local. GitHub Actions still will not run (#17).
-3. Named chrome PR for B1 `setIframeSrc` abort — GitNexus **CRITICAL**, wait for that name.
 
 Pack B/C, `2x`, famous-double step 2, and restore bands are other files. They do not make the window a museum.
+
+All-phase scan (every program vs disk): [`PHASE-SCAN.md`](PHASE-SCAN.md).

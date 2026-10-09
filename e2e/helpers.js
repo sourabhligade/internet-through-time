@@ -30,24 +30,30 @@ function yearHtmlOnDisk(year) {
 }
 
 /**
- * Open a React year door and click the rail button whose code is `key`.
+ * Open a React stop via `?stop=` (YearRail prints names, not storage keys).
+ * @param {import('@playwright/test').Page} page
+ * @param {string} key
+ */
+async function clickRailKey(page, key) {
+  const yearMatch = String(page.url() || "").match(/#\/year\/(\d{4})/);
+  const year = yearMatch ? yearMatch[1] : "2015";
+  await openReactStop(page, year, key);
+}
+
+/**
+ * Open a React year door on one stop. Same path as UX phase 5.
  * @param {import('@playwright/test').Page} page
  * @param {string} year
  * @param {string} key
  */
-async function clickRailKey(page, key) {
-  const li = page.locator(".rails li", { has: page.locator("code", { hasText: key }) });
-  const details = li.locator("xpath=ancestor::details[1]");
-  if ((await details.count()) && !(await details.evaluate((el) => el.open))) {
-    await details.locator("summary").click();
-  }
-  await li.getByRole("button").click();
-}
-
 async function openReactStop(page, year, key) {
-  await page.goto("/app/index.html#/year/" + year + "?deep=1");
-  await clickRailKey(page, key);
-  return page.locator("article.stop");
+  await page.goto("/app/index.html#/year/" + year + "?stop=" + encodeURIComponent(key));
+  await page.waitForFunction(() => !!(window.ITT && window.ITT.User && window.ITT.User.store), null, {
+    timeout: 15000,
+  });
+  const room = page.locator("article.stop#" + key);
+  await room.waitFor({ timeout: 15000 });
+  return room;
 }
 
 /**
@@ -154,10 +160,7 @@ async function enterYear(page, year) {
     throw new Error(year + ' boarded — year shell redirects; use a dest URL or expectYearBoarded');
   }
   await page.goto(`/years/${year}/`);
-  const skip = page.locator('#skip-connect');
-  if (await skip.isVisible().catch(() => false)) {
-    await skip.click();
-  }
+  await page.locator("#skip-connect").click({ force: true, timeout: 3000 }).catch(() => {});
   for (let i = 0; i < 4; i++) {
     const alert = page.locator('#dlg-alert:not(.hidden)');
     if (await alert.isVisible().catch(() => false)) {

@@ -162,7 +162,7 @@
     }
     if (likeBtn && likeBtn.getAttribute("data-fb-like-bound") !== "1") {
       likeBtn.setAttribute("data-fb-like-bound", "1");
-      if (!likeBtn.getAttribute("data-official-verb")) {
+      if (likeBtn.getAttribute("data-official-verb") == null) {
         likeBtn.addEventListener("click", function () {
           feedback("Like-only never writes. Hold a reaction.", st, { error: true });
         });

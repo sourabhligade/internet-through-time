@@ -424,6 +424,7 @@
       if (likeBtns[li].getAttribute("data-like-bound") === "1") continue;
       likeBtns[li].setAttribute("data-like-bound", "1");
       likeBtns[li].addEventListener("click", function (ev) {
+        if (ev.currentTarget.getAttribute("data-official-verb") != null) return;
         var id = ev.currentTarget.getAttribute("data-fb-like") || "post";
         var map = loadLikes();
         map[id] = (map[id] || 0) + 1;

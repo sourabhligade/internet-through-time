@@ -355,6 +355,12 @@ h1 {
   min-height: 1.2em;
   font-weight: 650;
 }
+.status.is-hold {
+  color: #a00;
+}
+.status.is-ok {
+  color: #060;
+}
 
 @media (max-width: 720px) {
   .rails {

@@ -127,8 +127,30 @@
     }
 
     /**
+     * Kind for User.store. extra.official / leftover / pack / pop / gameId
+     * already infer; passing opts.kind keeps a trail write off the toy default.
+     */
+    function kindOpts(src) {
+      src = src || {};
+      if (src.official === true) return { kind: "official" };
+      if (
+        src.kind === "official" ||
+        src.kind === "leftover" ||
+        src.kind === "game" ||
+        src.kind === "toy" ||
+        src.kind === "shell"
+      ) {
+        return { kind: String(src.kind) };
+      }
+      if (src.leftover === true || src.pack || src.pop) return { kind: "leftover" };
+      if (src.gameId) return { kind: "game" };
+      return {};
+    }
+
+    /**
      * Literacy save: all checks must be on, then write REAL blob.
      * Copies extra so callers' object literals are not mutated.
+     * Glass is Saved. Keys stay in storage.
      *
      * Positional: bootChecks(doc, saveSel, statusSel, checks, suffix, extra)
      * Spec:       bootChecks(doc, { save, status, checks, suffix, extra, err, okMsg, minLen })
@@ -136,7 +158,7 @@
     function bootChecks(doc, saveSel, statusSel, checks, suffix, extra) {
       doc = doc || document;
       var err = "Tick every check first.";
-      var okMsg = "Saved";
+      var okMsg = "Saved.";
       var minLen = null;
       if (saveSel && typeof saveSel === "object" && saveSel.save) {
         extra = saveSel.extra;
@@ -153,7 +175,7 @@
       var st = doc.querySelector(statusSel);
       var prev = loadJSON(key(suffix), null);
       if (prev && st) {
-        feedback(okMsg + " · " + key(suffix), st);
+        feedback(okMsg, st);
         showNext(doc);
       }
       btn.addEventListener("click", function () {
@@ -183,8 +205,11 @@
         blob.year = fallbackYear;
         blob.ts = Date.now();
         if (minLen) blob.title = title;
-        saveJSON(key(suffix), blob);
-        feedback(okMsg + " · " + key(suffix), st);
+        if (!saveJSON(key(suffix), blob, kindOpts(src))) {
+          feedback("This browser blocked the save.", st, { error: true });
+          return;
+        }
+        feedback(okMsg, st);
         markUsed();
         showNext(doc);
       });

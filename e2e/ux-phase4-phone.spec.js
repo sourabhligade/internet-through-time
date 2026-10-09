@@ -13,8 +13,7 @@ async function openShell(page, year) {
   await page.setViewportSize(VIEW);
   const res = await page.goto("/years/" + year + "/");
   expect(res && res.ok(), year + " shell").toBeTruthy();
-  const skip = page.locator("#skip-connect");
-  if (await skip.isVisible().catch(() => false)) await skip.click();
+  await page.locator("#skip-connect").click({ force: true, timeout: 3000 }).catch(() => {});
   await page.waitForSelector("#dirbar");
   await page.waitForFunction(() => {
     const frame = document.getElementById("content");

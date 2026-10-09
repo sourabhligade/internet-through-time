@@ -28,8 +28,7 @@ test.describe("Chrome habit shell labels", () => {
 
   test("2016 google host opens home, and a room address stays on that room", async ({ page }) => {
     await page.goto("/years/2016/");
-    const skip = page.locator("#skip-connect");
-    if (await skip.isVisible().catch(() => false)) await skip.click();
+    await page.locator("#skip-connect").click({ force: true, timeout: 3000 }).catch(() => {});
     const box = page.locator("#location");
     async function go(value) {
       await box.fill(value);

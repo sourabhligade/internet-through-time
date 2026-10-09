@@ -22,7 +22,7 @@ Fill thin lean doors up to the cap in the criteria, with leftover dests that wer
 |---|---|---|
 | Double leftover dests | 2007, 2010, 2012, 2014, 2016, 2021, 2022 | New leftover dests, one writer each, dest-disjoint |
 | Holes only | 2013 | A row only when a cite names a real hole |
-| Stop | Forests 1994–2006 and , boarded 2009, dense 2015 / 2017 / , wiped 2023–2025 | No new dests |
+| Stop | Forests 1994–2006, dense 2015 React / 2017–2019 absent, wiped 2023–2025 | No new dests. **2009 is live HTML** (Like), not boarded. Hub is **26 doors**. |
 
 ** conflict.** The criteria still lists as a thin door (GDPR Manage, aim 26). Live disk has no tree. Do not restore it in this pass unless a later note says the wipe was a mistake.
 
@@ -164,7 +164,7 @@ For each KEEP dest, in order:
 2. Mock gate: `DEST_FIELD`, `WEAK_REAL`, and `HASH_CTA` stay 0 on the new dests.
 3. Recount official stops. They are still 10 (2012, 2013, and 2014 stay at their current shorter trails until a separate pass says otherwise).
 4. Leftover-3× catalogs stay empty. 2012 leftover-4× stays the three named dests.
-5. Hub still says 25 years. 2009 stays boarded. 2015 and stay wiped.
+5. Hub is 26 doors. 2009 is live HTML (Like). 2015 is the React door. 2017–2019 and 2023–2025 stay 0.
 
 **Done when:** Those checks pass on every year that received a new dest, and Stop years are unchanged.
 

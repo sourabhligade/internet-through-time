@@ -9,33 +9,35 @@ export function OfficialStop({ stop, year, onNext }) {
   const [text, setText] = useState("");
   const [ticks, setTicks] = useState(() => stop.checks.map(() => false));
   const [status, setStatus] = useState("");
+  const [hold, setHold] = useState(false);
   const [saved, setSaved] = useState(false);
 
-  function say(message) {
+  function say(message, isHold) {
     setStatus(message);
+    setHold(!!isHold);
   }
 
   function onTrap() {
-    say("Trap. That click never writes.");
+    say("Trap. That click never writes.", true);
   }
 
   function onSave() {
     const typed = text.replace(/^\s+|\s+$/g, "");
     if (ticks.some((on) => !on)) {
-      say("Tick honesty first. Incomplete never writes.");
+      say("Tick honesty first. Incomplete never writes.", true);
       return;
     }
     if (needsField && typed.length < 2) {
-      say("Type something first. Empty never writes.");
+      say("Type something first. Empty never writes.", true);
       return;
     }
     if (needsField && (typed.length < fieldMin || typed.length > fieldMax)) {
-      say(stop.rangeNote || "Type something first. Empty never writes.");
+      say(stop.rangeNote || "Type something first. Empty never writes.", true);
       return;
     }
     const saveYear = stop.year || year;
     if (!saveYear) {
-      say("No year on this stop. Nothing was saved.");
+      say("No year on this stop. Nothing was saved.", true);
       return;
     }
     const payload = stop.leftover
@@ -51,11 +53,11 @@ export function OfficialStop({ stop, year, onNext }) {
     try {
       window.ITT.User.store(stop.whenKey, payload);
     } catch (err) {
-      say("This browser blocked the save.");
+      say("This browser blocked the save.", true);
       return;
     }
     setSaved(true);
-    say("Saved.");
+    say("Saved.", false);
   }
 
   return (
@@ -105,7 +107,7 @@ export function OfficialStop({ stop, year, onNext }) {
           {stop.verb}
         </button>
       </p>
-      <p className="status" role="status">
+      <p className={"status" + (status ? (hold ? " is-hold" : " is-ok") : "")} role="status">
         {status}
       </p>
       {saved ? (

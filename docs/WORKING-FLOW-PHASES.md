@@ -4,7 +4,7 @@
 **Status:** 1994–1997 through 2022–2025 phases 1–6 are done locally, including 2014–2017. Leftover-2× dests with no save hook stay on disk and are not dest-farmed. Standing gate lives in this file.  
 **Law:** `js/year-card.json` + `scripts/itt_gate.py` `SHIP_YEARS`. Hub is 26 doors. Frozen HTML is 1994–2006. leanBoot is 2007–2014, 2016, and 2020–2022. 2015 is the React door. Absent: 2017–2019 and 2023–2025.
 
-This plan does not reopen `docs/PROD-USER-DATA-SRP.md` or `docs/MUSEUM-GRADE-UI.md`. Those phases stay as shipped. This plan runs the six phases on every working flow already on disk in the band: trail stops, leftover-2× dests, and every other year-site page that already has a save control.
+This plan does not reopen `docs/PROD-USER-DATA-SRP.md` or `docs/MUSEUM-GRADE-UI.md`. Those phases stay as shipped. This plan runs the six phases on every working flow already on disk in the band: trail stops, leftover-2× dests, and every other year-site page that already has a save control. Scan of remaining overclaim vs disk: [`PHASE-SCAN.md`](PHASE-SCAN.md).
 
 Do not dest-farm. Do not add a room or a year. Do not restore the old leftover-3× set. Do not restore 2017–2019 or 2023–2025. Do not unfreeze 1994–2006. Do not run 1999–2004 `2x`. A frozen band is edited in `js/` and in the band register. One existing button may lose a second save hook. The year forest stays.
 
@@ -74,28 +74,26 @@ The 2015 checklist still has six open lines for keys the built door does not con
 
 `flow-index/index.html` lists flows by number, name, link, and next. It has no complete column. Its 2015 table already uses the live names. Its 2012 table lists Facebook 1B as stop 10. Its 2000 table lists all 40.
 
-A finish is one envelope from `ITT.User.save` / `ITT.User.store`: `{ v:1, year, key, kind, real:true, ts }`. `finished(whenKey)` is true for any `real:true`, including kind `toy`. `year-extras-kit.js` `saveJSON` calls `store` with no kind, so a payload without `official:true` is stored as `toy` and still counts as finished.
+A finish is one envelope from `ITT.User.save` / `ITT.User.store`: `{ v:1, year, key, kind, real:true, ts }`. `finished(whenKey)` is true for any `real:true`, including kind `toy`. `year-extras-kit.js` `bootChecks` now passes `opts.kind` from `extra.official` / leftover / pack / pop / gameId. A payload with `official:true` still infers official even without opts.
 
-Two listeners on one official button are the repeating bug. Capture-phase `official-verb.js` writes kind `official`. The bubble listener then `store`s the same key. Where that second payload has no `official:true`, the envelope becomes `toy`.
+Two listeners on one official button was the repeating bug. Capture-phase `official-verb.js` writes kind `official`. Extras on those dests now **return** when `verbOwned` (`[data-official-verb]` on the control or dest). They do not overwrite the envelope as toy. Catch / Love stay silent on the extras path; the official verb paints the hold.
 
-Proved second stores on a trail key:
+Historical second stores (closed on disk by verbOwned / official-verb / dest-true):
 
-| Year | Control | Second writer | Kind after the click |
-| --- | --- | --- | --- |
-| 1997 | PointCast `[data-pc-sub]` | `one-thing-machines.js` `bootPointcast` stores `itt97-pointcast` with no `official:true` | toy |
-| 1998 | I’m Feeling Lucky `[data-google-lucky]` | `google.js` `goLucky` stores `itt98-lucky` with no `official:true`, then reveals Next. Empty string is the only refusal. | toy, and Next can show |
-| 2001 | Wikipedia Save `[data-wiki-save]` | `wikipedia.js` returns without writing when `data-official-verb` is present. A click before `data-official-verb-bound` writes nothing. | missing. `e2e/phase6-breaks.spec.js` failed on “museum” |
-| 2005 | YouTube upload | First submit can navigate `action="#"` before `youtube.js` binds. The reload clears the title. | `itt05-yt-uploads` stays empty. Same spec failed on “elephant” |
-| 2006 | Twttr `[data-tw06-post]` | `year-2006-extras.js` stores `itt06-tweets` without `official:true` | toy |
-| 2009 | Like `[data-lk09-like]` | `year-2009-extras.js` `bootLike` | toy |
-| 2009 | Plot Start | `year-2009-extras.js` `bootGuess` stores `itt09-game-plot` on Start and reveals Next | toy, Next shows at score 0 |
-| 2010 | iPad order `[data-ipad-order]` | `year-2010-extras.js` stores `itt10-ipad` without `official:true` | toy |
-| 2012 | Guess Doodle Start | `year-2012-extras.js` `bootGuess` stores `itt12-game-guessdoodle` on Start | toy, Next shows |
-| 2016 | Story, Pokémon GO, Reactions | `year-2016-extras.js` stores `itt16-ig-stories`, `itt16-pogo`, `itt16-fb-react` with no `official:true`. Status text includes the key. | toy |
+| Year | Control | Live writer |
+| --- | --- | --- |
+| 1997 | PointCast `[data-pc-sub]` | official-verb owns the star |
+| 1998 | I’m Feeling Lucky `[data-google-lucky]` | official-verb, stay-after-write |
+| 2001 | Wikipedia Save `[data-wiki-save]` | extras return when the verb is present |
+| 2005 | YouTube upload | official-verb |
+| 2006 | Twttr `[data-tw06-post]` | extras skip when the verb owns Update |
+| 2009 | Like `[data-lk09-like]` | extras skip when Like is the verb |
+| 2009 | Plot Start | Start writes nothing |
+| 2010 | iPad order `[data-ipad-order]` | extras skip when Place order is the verb |
+| 2012 | Guess Doodle Start | Start writes nothing |
+| 2016 | Story, Pokémon GO, Reactions | extras skip; dest-true is official `Saved.` |
 
-`year-game-boot.js` `saveBest` writes the game key even when the score is 0 (the `saveJSON` at the top of the function). The later official-key write is inside `if (sc > 0)`. When the trail `whenKey` is that game key, Start finishes the stop. The comment above the score check describes the second key only.
-
-These second listeners already set `official:true` when the key equals `data-official-key`, so the kind holds and the work is the receipt: `year-2012-extras.js` `bootChecks` (Facebook 1B, IPO, Maps, SOPA, and the same helper), and the 2016 saves for WhatsApp E2E, iPhone 7, Vine, Spectacles, musical.ly, and the Windows 10 end. Their status line is `Saved · ` plus the key.
+`year-2012-extras.js` `bootChecks` (Facebook 1B, IPO, Maps, SOPA) already prints `Saved.` and honors a blocked save. Kit `bootChecks` matches that receipt. Keys stay in storage.
 
 IUMA `[data-player-play]` is the 1994 audio player in `media-1994.js`. It does not store the trail key. Leave the player.
 
@@ -229,7 +227,7 @@ Frozen. Working set: 2,319 save pages, 2,066 dest folders, 286 leftover-2× dest
 
 ## 2010–2013
 
-leanBoot. Working set: 182 save pages, 150 dest folders, 51 leftover-2× dests, 39 trail rows. 2013’s trail is 9. Facebook 1B is the missing checklist line. The register still lists every save page, not only that one gap.
+leanBoot. Working set: 182 save pages, 150 dest folders, 51 leftover-2× dests, 39 trail rows. 2013’s trail is 9. Facebook 1B `itt12-facebook` is a ticked 2012 line (heading Official flows (10)). The register lists every save page.
 
 | Phase | Work in this band |
 | --- | --- |

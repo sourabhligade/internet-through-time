@@ -1404,12 +1404,13 @@
       if (locationInput) locationInput.value = displayUrl(HOME);
       if (windowTitle) windowTitle.textContent = displayTitle(HOME);
       highlightDirButtons(HOME);
-      // Ensure absolute iframe src for reliable nested navigation (esp. 1995)
+      // Relative pages/home.html is already loading. Do not halt/bounce it
+      // through about:blank — that aborts the first CSS import (B1).
+      // Nested dest nav uses navigate() which sets an absolute dest src.
       var currentSrc = iframe.getAttribute("src") || "";
-      if (!currentSrc || normalizePath(currentSrc).split("?")[0] !== HOME) {
-        setIframeSrc(HOME);
-      } else if (currentSrc.indexOf("/years/") === -1 && currentSrc.indexOf("http") !== 0) {
-        // upgrade relative src to absolute year root
+      var currentNorm = normalizePath(currentSrc).split("?")[0];
+      var homeNorm = normalizePath(HOME).split("?")[0];
+      if (!currentSrc || currentNorm !== homeNorm) {
         setIframeSrc(HOME);
       }
       // Coach after chrome is ready
@@ -1505,7 +1506,6 @@
 
     if (already || isStartLanding()) {
       hideOverlay();
-      seedHistory();
     } else {
       applyChromePrefs();
     }

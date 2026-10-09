@@ -38,6 +38,37 @@ async function finishOfficial(page) {
 }
 
 /**
+ * Official-verb bound inside the year iframe.
+ * @param {import("@playwright/test").Page} page
+ */
+async function verbReadyInFrame(page) {
+  await page.waitForFunction(() => {
+    try {
+      const doc = document.getElementById("content") && document.getElementById("content").contentDocument;
+      if (!doc) return false;
+      const verbs = doc.querySelectorAll("[data-official-verb]");
+      if (!verbs.length) return doc.readyState === "complete";
+      return [...verbs].every((el) => el.getAttribute("data-official-verb-bound") === "1");
+    } catch (e) {
+      return false;
+    }
+  }, null, { timeout: 20000 });
+}
+
+/**
+ * Tick honesty + need, then the first official verb in a frame.
+ * @param {import("@playwright/test").FrameLocator} frame
+ */
+async function finishOfficialIn(frame) {
+  const boxes = frame.locator("[data-official-req], [data-req]");
+  const n = await boxes.count();
+  for (let i = 0; i < n; i++) await boxes.nth(i).check();
+  const need = frame.locator("[data-official-need]").first();
+  if (await need.count()) await need.fill("leftover residual");
+  await frame.locator("[data-official-verb]").first().click();
+}
+
+/**
  * @param {import("@playwright/test").Page} page
  * @param {string} key
  */
@@ -67,4 +98,12 @@ async function statusText(page) {
   });
 }
 
-module.exports = { getKey, verbReady, finishOfficial, envelope, statusText };
+module.exports = {
+  getKey,
+  verbReady,
+  finishOfficial,
+  verbReadyInFrame,
+  finishOfficialIn,
+  envelope,
+  statusText,
+};

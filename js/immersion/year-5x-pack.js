@@ -44,12 +44,16 @@
         flow: spec.suffix
       };
       try {
-        window.ITT.User.store(keyOf(), blob);
+        window.ITT.User.store(keyOf(), blob, { kind: "leftover" });
       } catch (e) {
+        if (st) {
+          st.textContent = "This browser blocked the save.";
+          st.style.color = "#a00";
+        }
         return false;
       }
       if (st) {
-        st.textContent = (spec.okMsg || "5× REAL") + " · " + keyOf();
+        st.textContent = spec.okMsg || "Saved.";
         st.style.color = "#060";
       }
       return true;
@@ -80,7 +84,7 @@
       suffix: suffix,
       extra: { pack: "5x", flow: suffix },
       err: "Tick every 5× check first. Incomplete never writes.",
-      okMsg: "5× REAL"
+      okMsg: "Saved."
     };
     var q = panel.querySelector("[data-5x-q]");
     if (q) {

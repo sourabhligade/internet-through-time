@@ -19,7 +19,7 @@ ITT.User.save({ key, year, kind: "official"|"leftover"|"game"|"toy"|"shell", ext
 
 Line is “Saved.” / “This browser blocked the save.” Empty, trap, incomplete write nothing. Next and passport read this store.
 
-Today: **155** `localStorage.setItem` sites. Gold, Wikipedia, StumbleUpon, leftover-3×/4×/5×, and `year-true-leftover` stamp the same keys. Ytl paints success after a failed write. Passport is a second schema. DISK-TRUTH “lean” 2007–2013 still load CORE leftover packs. GATE dests (2014/2016/2020) still have leftover-2× / `data-ytl` / pop hooks those engines will not boot.
+Today: immersion `localStorage.setItem` is **0**. Writers go through `ITT.User.save` / `ITT.User.store`. The 155-site inventory was the 2026-10-06 start of this file. Passport remains a second schema. GATE dest leftover-2× / `data-ytl` / pop hooks on dests those engines do not boot stay folded.
 
 ---
 

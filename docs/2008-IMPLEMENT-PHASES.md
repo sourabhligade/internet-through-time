@@ -1,10 +1,10 @@
 # 2008 · implement phases (lean door)
 
 **Date:** 2026-09-30  
-**Status:** Phases **0–3 on disk** (lean HTML door · App Store star · official 10 · Pack A 35). Pack B/C wait. Dest-true e2e in Phase 7. Do not dest-farm. Do not `git checkout` the wiped forest. Flip `[x]` only when Pass is true **on disk** and the e2e in the row is green.  
+**Status:** Phases **0–3 on disk** (lean HTML door · App Store star · official 10 · Pack A 35). Pack B’s **35 rooms are already on disk** (verify HTTP 200, no new folders). Pack C wait. Dest-true e2e in Phase 7. Do not dest-farm. Do not `git checkout` the wiped forest. Flip `[x]` only when Pass is true **on disk** and the e2e in the row is green.  
 **Research:** [`2008-DENSITY-RESEARCH.md`](2008-DENSITY-RESEARCH.md) · deep-research **complete (Partial)**.  
 **Law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) **I1–I14** · [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) **D1–D15** · [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) · look **L1–L5**.  
-**Clone shape:** live `years/2007/` (HTML lean · iPhone Safari). **2009 stays boarded.**  
+**Clone shape:** live `years/2007/` (HTML lean · iPhone Safari). **2009 is live HTML** (Like).  
 **Parent corpus:** DOUBLE-5K C1–C20 · CUT-DOUBLE dest minutes (verb / trap / Next / cite). Those files still gold GitHub. **I1 wins** on this rebuild.
 
 How to use: phases **0 → 7 in order**. Do not skip a dest. Do not start Phase 1 until Phase 0 star is named. Miss the cap rather than invent.
@@ -173,10 +173,10 @@ Order: hi5 · Orkut · Bebo · Ning · Scribd · Live Spaces · Craigslist · We
 
 | # | Gate |
 |---|------|
-| [ ] | Phase 3 Pack A named rows are on disk and dest-true |
-| [ ] | Dest count still under **~210** |
-| [ ] | Each B row has a cite or labeled secondary · else **drop** |
-| [ ] | DDG / IE8 / Win7 are leftover rooms, never chips |
+| [x] | Phase 3 Pack A named rows are on disk and dest-true |
+| [x] | Dest count still under **~210** (113 dest folders) |
+| [x] | Each B slug already has `years/2008/sites/<slug>/index.html` HTTP 200. Lock: `e2e/ux-phase-scan.spec.js`. Do not add folders |
+| [x] | DDG / IE8 / Win7 (`duckduckgo`, `ie8`, `windows7`) are leftover rooms, never chips |
 
 ---
 
@@ -186,7 +186,7 @@ Portals in **2008 costume** (Facebook passes MySpace worldwide; US still MySpace
 
 | # | Gate |
 |---|------|
-| [ ] | Pack B done or named skip (miss the cap) |
+| [x] | Pack B rooms on disk verified HTTP 200. Pack C still waits. Do not add folders |
 | [ ] | No clone DROP list dests: `altavista` · `askjeeves` · `bowienet` · `daypop` · `encarta` · `gnutella` · `hampsterdance` · `hotbot` · `housingmaps` · `infoseek` · `kazaa` · `loudcloud` · `milliondollar` · `moreover` · `napster` · `netcenter` · `netscape` · `pets` · `phoenix` · `y2k` · `youvegotmail` · `zombo` · `blogdex` · `dmoz` |
 | [ ] | Continuity dests (Gmail, Maps, Wiki, Amazon, eBay, Digg, MySpace, Flickr, Delicious) are **2008 costume leftover**, dest-disjoint from official 10 |
 | [ ] | C105-style Next may point at the **star dest**. That Next **does not write** `itt08-apps` |
@@ -245,8 +245,8 @@ Visitor 100% on 2008 is dest-true I/O on dests **this pass put on disk**, not ma
 
 - Write dest HTML, hub card, or `SHIP_YEARS` by editing `year-card.json`.
 - Restore 2008 from `3498b60b1^`.
-- Un-board 2009.
-- Add Pack B or Pack C dests. Pack A leftover-2× rails were named on 2026-10-02 and are on the rooms already on disk.
+- Treat 2009 as boarded (2009 is live HTML).
+- Add Pack B or Pack C dests. Pack B’s 35 rooms are already on disk; verify only. Pack A leftover-2× rails were named on 2026-10-02 and are on the rooms already on disk.
 - Grow leftover-3× unique or leftover-20.
 
 **Name next:** `implement 2008` (Phase 0.1 App Store star is the default). Or name Pack A row ids only.
