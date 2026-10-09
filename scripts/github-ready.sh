@@ -75,9 +75,10 @@ for f in README.md LICENSE package.json package-lock.json .github/workflows/ci.y
 done
 # Hub-open years on disk. Keep in sync with scripts/itt_gate.py.
 # Absent years must have no index. Boarded years must redirect. Open years must have an index.
-eval "$(python3 -c 'import sys; sys.path.insert(0,"scripts"); from itt_gate import _BOARDED, _WIPED
+eval "$(python3 -c 'import sys; sys.path.insert(0,"scripts"); from itt_gate import _BOARDED, _WIPED, _YEARS
 print("BOARDED=\"" + " ".join(sorted(_BOARDED)) + "\"")
-print("WIPED=\"" + " ".join(sorted(_WIPED)) + "\"")')"
+print("WIPED=\"" + " ".join(sorted(_WIPED)) + "\"")
+print("REACT=\"" + " ".join(sorted(y for y, r in _YEARS.items() if r.get("kind") == "react")) + "\"")')"
 for y in $(seq 1994 2025); do
   if [[ " $WIPED " == *" $y "* ]]; then
     if [[ -f "years/$y/index.html" ]]; then bad "wiped years/$y still on disk"; else ok "years/$y wiped"; fi
@@ -90,6 +91,11 @@ for y in $(seq 1994 2025); do
     else
       bad "years/$y index does not redirect"
     fi
+    continue
+  fi
+  if [[ " $REACT " == *" $y "* ]]; then
+    if [[ -f "years/$y/index.html" ]]; then bad "react years/$y must have no HTML tree"; else ok "years/$y react door (no HTML tree)"; fi
+    if [[ -f "app/index.html" ]]; then ok "app/index.html react hall"; else bad "missing app/index.html"; fi
     continue
   fi
   if [[ -f "years/$y/index.html" ]]; then ok "years/$y/index.html"; else bad "missing years/$y"; fi

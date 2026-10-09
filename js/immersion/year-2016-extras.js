@@ -210,12 +210,14 @@
     var btn = doc.querySelector("[data-airpods-order]");
     if (!btn) return;
     var st = doc.querySelector("[data-airpods-status]");
+    var verbOwned = btn.getAttribute("data-official-verb") != null;
     btn.addEventListener("click", function () {
       if (countChecked(doc, "[data-airpods-req], [data-req]") < 2) {
-        feedback("Announce Sep 7 · orders Dec 13. Tick both.", st, { error: true });
+        if (!verbOwned) feedback("Announce Sep 7 · orders Dec 13. Tick both.", st, { error: true });
         return;
       }
-      saveJSON(key("airpods"), blob({ order: "dec13" }));
+      if (verbOwned) return;
+      saveJSON(key("airpods"), blob({ order: "dec13", official: true }));
       feedback("Ordered (theater) · itt16-airpods", st);
       reveal(doc);
     });
@@ -294,12 +296,14 @@
     var btn = doc.querySelector("[data-dyn-ack]");
     if (!btn) return;
     var st = doc.querySelector("[data-dyn-status]");
+    var verbOwned = btn.getAttribute("data-official-verb") != null;
     btn.addEventListener("click", function () {
       if (countChecked(doc, "[data-dyn-req], [data-req]") < 2) {
-        feedback("Read both notes. No exploit on this page.", st, { error: true });
+        if (!verbOwned) feedback("Read both notes. No exploit on this page.", st, { error: true });
         return;
       }
-      saveJSON(key("dyn"), blob({ day: "2016-10-21" }));
+      if (verbOwned) return;
+      saveJSON(key("dyn"), blob({ day: "2016-10-21", official: true }));
       feedback("I was there (literacy) · itt16-dyn", st);
       reveal(doc);
     });

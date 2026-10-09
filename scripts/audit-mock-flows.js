@@ -52,7 +52,7 @@ const PRODUCT_HOOK = new RegExp(
     "data-ch21-",
     "data-gpt22-",
     "data-tw22-",
-    "data-wd22-",
+    "data-wdl22-",
     "data-sd22-",
     "data-md22-",
     "data-br22-",

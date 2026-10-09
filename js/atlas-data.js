@@ -284,7 +284,7 @@
             "2010": {
         era: "iPad · Instagram iOS · Open Graph",
         thesis: "Filter on iPhone only. Android is next year.",
-        gold: { label: "Instagram iOS filter+share", href: "years/2010/sites/instagram/index.html", key: "itt10-ig" },
+        gold: { label: "Instagram iOS filter+share", href: "years/2010/sites/instagram/index.html", key: "itt10-ig-posts" },
         guided: [
           { label: "iPad", href: "years/2010/sites/ipad/index.html" },
           { label: "Open Graph", href: "years/2010/sites/facebook/index.html" }

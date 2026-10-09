@@ -11,7 +11,7 @@ const { revealLeftoverRails } = require('./helpers');
 const matrix = require('./2x-links.matrix.json');
 const ROOT = path.join(__dirname, '..');
 const FOREST = new Set(['1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006']);
-const BOARDED = new Set(['2009', '2023', '2024', '2025']);
+const BOARDED = new Set(['2023', '2024', '2025']);
 
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);

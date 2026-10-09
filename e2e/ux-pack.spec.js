@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * UX pack (js/ux/*) — maps to docs/UX-IMPROVEMENT-PHASES-… U1–U5
- * Disable pack: localStorage itt-ux-off=1 should hide coach strip.
+ * Disable pack: localStorage itt-ux-off=1 or ?ux=0 should hide coach strip.
  */
 const { test, expect } = require("@playwright/test");
 

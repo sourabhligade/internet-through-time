@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * 2004 leftover-2× · 10 unique dest-true flows.
+ * 2004 leftover-2× · 9 unique dest-true flows.
  * Dest folders unused vs official 10 and leftover-3× first/second/third.
  * Empty / trap / 0 ticks never write. Leftover keys never write the star.
  */

@@ -42,7 +42,7 @@ SIGNATURE: dict[str, list[str]] = {
     "2001": ["pages/home.html", "sites/wikipedia/index.html", "sites/apple/ipod.html", "sites/wikipedia/edit.html"],
     "2002": ["pages/home.html", "sites/stumbleupon/index.html", "sites/friendster/index.html", "sites/kazaa/index.html"],
     "2003": ["pages/home.html", "sites/photobucket/index.html", "sites/myspace/index.html", "sites/itunes/index.html", "sites/wordpress/index.html"],
-    "2004": ["pages/home.html", "sites/facebook/index.html", "sites/flickr/index.html", "sites/gmail/index.html"],
+    "2004": ["pages/home.html", "sites/facebook/networks.html", "sites/facebook/index.html", "sites/flickr/index.html", "sites/gmail/index.html"],
     "2005": ["pages/home.html", "pages/about.html", "sites/youtube/upload.html", "sites/maps/index.html", "sites/reddit/index.html", "sites/digg/index.html", "sites/playable/game.html"],
     "2006": ["pages/home.html", "pages/about.html", "sites/twitter/index.html", "sites/facebook/feed.html", "sites/youtube/index.html", "sites/googledocs/index.html", "sites/playable/linerider.html"],
     "2007": ["pages/home.html", "pages/about.html", "sites/iphone/index.html", "sites/streetview/index.html", "sites/gmail/index.html", "sites/fbplat/index.html", "sites/playable/game.html"],
@@ -108,15 +108,7 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/iphone/maps.html",
         "sites/playable/game.html"
     ],
-    "2015": [
-        "pages/home.html",
-        "pages/about.html",
-        "sites/periscope/index.html",
-        "sites/googlephotos/index.html",
-        "sites/windows10/index.html",
-        "sites/applemusic/index.html",
-        "sites/playable/game.html"
-    ],
+    "2015": [],  # React door. No years/2015 tree. check_year returns early on kind react.
     "2016": [
         "pages/home.html",
         "pages/about.html",

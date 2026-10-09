@@ -110,11 +110,7 @@
                               "href": "sites/iuma/index.html",
                               "do": "4\u00d7 · itt94-iuma-dl"
                     },
-                    {
-                              "name": "N9 JumpStation",
-                              "href": "sites/jumpstation/index.html",
-                              "do": "4\u00d7 · itt94-jump"
-                    },
+
                     {
                               "name": "N10 Galaxy",
                               "href": "sites/galaxy/index.html",
@@ -2292,14 +2288,14 @@ ITT.flowMaps["2005"] = {
     "shell": "Windows 7 · IE 8 · iPad · iPhone 4 · Instagram iOS · Open Graph",
     "how": [
       "Hub · 2010 · Win7 desktop · IE 8 · Starting Point",
-      "Instagram: filter then share (itt10-ig)",
+      "Instagram: filter then share (itt10-ig-posts)",
       "iPad order · iPhone 4 FaceTime Wi-Fi · Open Graph Like ×2"
     ],
     "branches": [
       {
         "label": "★ Star",
         "do": "iOS filter · share · incomplete never writes",
-        "sites": [{ "name": "Instagram", "href": "sites/instagram/index.html", "do": "Filter + caption · itt10-ig" }]
+        "sites": [{ "name": "Instagram", "href": "sites/instagram/index.html", "do": "Filter + caption · itt10-ig-posts" }]
       },
       {
         "label": "P0 machines",
@@ -2326,7 +2322,7 @@ ITT.flowMaps["2005"] = {
         "do": "REAL loops · incomplete never writes",
         "sites": [
           { "name": "F1 Ask.com", "href": "sites/ask/index.html", "do": "Query persist · itt10-ask" },
-          { "name": "F2 Instagram", "href": "sites/instagram/index.html", "do": "Star filter/share · itt10-ig" },
+          { "name": "F2 Instagram", "href": "sites/instagram/index.html", "do": "Star filter/share · itt10-ig-posts" },
           { "name": "F3 Imgur", "href": "sites/imgur/index.html", "do": "Upload residual · itt10-imgur" },
           { "name": "F4 Facebook OG", "href": "sites/facebook/index.html", "do": "Like · itt10-facebook" },
           { "name": "F5 YouTube", "href": "sites/youtube/index.html", "do": "35h honesty · itt10-youtube" }

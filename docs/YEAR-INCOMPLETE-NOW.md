@@ -3,6 +3,7 @@
 **Not ship law.** Live playable state is [`DISK-TRUTH.md`](DISK-TRUTH.md).  
 **Branch:** `museum/1994-2020-lean` · local **ahead of** origin `81c652c65`.  
 **Visitor gate:** `npm run check` 0 · dest-true **436** · warehouse year-flow aligned · named packs filled.  
+**Scan close (2026-10-09):** YouTube rebind assigns `ITT.youtube.boot`. 2016 AirPods/Dyn stamp `official: true` and skip when verb owns. 2020 extras year-gated. Atlas skips 2017. JumpStation DROP row removed from flow-maps. github-ready React 2015 has no HTML tree. leftover-2× unique catalog **1,158**. 2009 is live (BOARDED sets).  
 **Push:** dest-true is green. GitHub Actions will not run (#17 billing lock). Say **push**.
 
 Do not dest-farm. Do not restore 2017–2019 or 2023–2025. Do not unfreeze 1994–2006. Do not run 1999–2004 `2x` until named. Do not start 2008 Pack B/C until named.

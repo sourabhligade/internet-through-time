@@ -50,12 +50,16 @@
   }
 
   function boot(doc) {
+    doc = doc || document;
+    var year = (doc.documentElement && doc.documentElement.getAttribute("data-itt-year")) || "";
+    if (year !== "2020" && year !== "2021") return;
     doc.addEventListener("click", function (ev) {
       var t = ev.target;
       var btn = t && t.closest ? t.closest("[data-lo-save]") : null;
       if (!btn) return;
       var host = btn.closest("[data-lo-panel]");
       if (!host || host.hasAttribute("data-y22-kind")) return;
+      if (host.getAttribute("data-official-key") || (doc.documentElement && doc.documentElement.getAttribute("data-official-key"))) return;
       var field = host.querySelector("[data-lo-field]");
       var out = host.querySelector("[data-era-result]");
       if (!field || !out) return;

@@ -665,5 +665,7 @@
     setTimeout(rebindIfNeeded, 50);
     setTimeout(rebindIfNeeded, 400);
   }
+  ITT.youtube = ITT.youtube || {};
+  ITT.youtube.boot = boot;
   register();
 })(typeof window !== "undefined" ? window : this);

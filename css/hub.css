@@ -675,7 +675,7 @@ body {
   content: "";
 }
 
-/* Boarded 2001–2003 — one compact strip, cards stay .year-card.locked.yYYYY */
+/* Legacy boarded-strip (unused on the 26-door hub). 2001–2003 are live HTML. */
 .closed-rooms {
   grid-column: 1 / -1;
   margin: 2px 0;
@@ -1348,11 +1348,22 @@ body {
 .year-card.y2015 .year { color: #0d47a1; }
 .year-card.y2015 .era-chip { background: #0078d7; color: #fff; }
 .year-card.y2015 .motif { background: linear-gradient(135deg, #111, #0078d7); }
+.year-card.y2008 { border-color: #1d6adb #404040 #404040 #111; }
+.year-card.y2008 .year-card-inner { background: linear-gradient(180deg, #e3f2fd 0%, #eceff1 55%); }
+.year-card.y2008 .year { color: #0d47a1; }
+.year-card.y2008 .era-chip { background: #1d6adb; color: #fff; }
+.year-card.y2008 .motif { background: linear-gradient(135deg, #1d6adb, #111); }
+.year-card.y2011 { border-color: #dd4b39 #404040 #404040 #111; }
+.year-card.y2011 .year-card-inner { background: linear-gradient(180deg, #fce8e6 0%, #e8f0fe 55%); }
+.year-card.y2011 .year { color: #c5221f; }
+.year-card.y2011 .era-chip { background: #dd4b39; color: #fff; }
+.year-card.y2011 .motif { background: linear-gradient(135deg, #dd4b39, #3367d6); }
 .year-card.y2016 { border-color: #c13584 #404040 #404040 #111; }
 .year-card.y2016 .year-card-inner { background: linear-gradient(180deg, #fce4ec 0%, #e8f5e9 55%); }
 .year-card.y2016 .year { color: #880e4f; }
 .year-card.y2016 .era-chip { background: #c13584; color: #fff; }
 .year-card.y2016 .motif { background: linear-gradient(135deg, #c13584, #3d5a3d); }
+/* 2017 is absent. Keep the locked skin if a card is re-added as boarded. */
 .year-card.y2017 { border-color: #5e35b1 #404040 #404040 #111; }
 .year-card.y2017 .year-card-inner { background: linear-gradient(180deg, #f3e5f5 0%, #e8eaf6 55%); }
 .year-card.y2017 .year { color: #4a148c; }

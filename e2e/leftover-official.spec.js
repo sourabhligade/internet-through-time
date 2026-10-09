@@ -12,7 +12,7 @@ const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 const MATRIX = JSON.parse(fs.readFileSync(path.join(__dirname, "leftover-official.matrix.json"), "utf8"));
-const BOARDED = new Set(["2009", "2023", "2024", "2025"]);
+const BOARDED = new Set(["2023", "2024", "2025"]);
 const FOREST = new Set(["1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006"]);
 /** @type {{ year: string, href: string, key: string, suffix: string, needPick: string, minPick: number, field: boolean, placeholder: string }[]} */
 const DESTS = MATRIX.dests.filter((d) => {
@@ -231,8 +231,10 @@ test.describe("leftover official · disk + trail", () => {
       "itt05-yt-uploads",
       "itt06-tweets",
       "itt07-iphone",
+      "itt08-apps",
       "itt08-github",
       "itt09-like",
+      "itt10-ig-posts",
       "itt10-ig",
       "itt11-gplus",
       "itt12-ig-android",
@@ -265,6 +267,7 @@ test.describe("leftover official · disk + trail", () => {
   test("2010 and 2012–2014 leftover dests have a 2× row for every leftover dest key", () => {
     const years = new Set(["2010", "2012", "2013", "2014"]);
     const gold = new Set([
+      "itt10-ig-posts",
       "itt10-ig",
       "itt12-ig-android",
       "itt13-vine-posts",

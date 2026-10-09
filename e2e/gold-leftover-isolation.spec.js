@@ -27,7 +27,7 @@ const GOLD = [
   { year: "2005", dest: "sites/youtube/upload.html", star: "itt05-yt-uploads" },
   { year: "2006", dest: "sites/twitter/index.html", star: "itt06-tweets" },
   { year: "2007", dest: "sites/iphone/index.html", star: "itt07-iphone" },
-    { year: "2010", dest: "sites/instagram/index.html", star: "itt10-ig" },
+    { year: "2010", dest: "sites/instagram/index.html", star: "itt10-ig-posts" },
   { year: "2012", dest: "sites/instagram/android.html", star: "itt12-ig-android" },
   { year: "2013", dest: "sites/vine/record.html", star: "itt13-vine-posts" },
   { year: "2014", dest: "sites/whatsapp/index.html", star: "itt14-wa-install" },
