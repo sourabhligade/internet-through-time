@@ -4,6 +4,7 @@
 **Status:** Slices A–E implemented on dests already on disk. Slice F public tree waits on **push**. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json` · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **Already shipped chrome map:** [`MUSEUM-GRADE-UI.md`](MUSEUM-GRADE-UI.md) phases 1–7. Do not reopen those as a new program.  
+**Phase locks (A–E):** [`MUSEUM-GRADE-UX-PHASES.md`](MUSEUM-GRADE-UX-PHASES.md) · `e2e/ux-phase1-honesty.spec.js` through `e2e/ux-phase5-2015.spec.js`. Off dest-true 12.  
 **Honesty / envelope:** [`PROD-USER-DATA-SRP.md`](PROD-USER-DATA-SRP.md) · [`WORKING-FLOW-PHASES.md`](WORKING-FLOW-PHASES.md).  
 **Current holes:** [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).  
 **Local:** http://127.0.0.1:8080 · **Public:** https://sourabhligade.github.io/internet-through-time/ (origin tree; local is ahead until **push**).

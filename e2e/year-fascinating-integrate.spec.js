@@ -8,6 +8,7 @@ const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
 const { revealLeftoverRails, destOnDisk } = require("./helpers");
+const { verbReady, finishOfficial } = require("./ux-phase-io.js");
 function skipIfWiped(year) {
   test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
 }
@@ -253,8 +254,9 @@ test.describe("Fascinating integrate leftovers", () => {
     expect(await getKey(page, "itt10-ig")).toBeFalsy();
   });
 
-  test("2016 PoGO skip never writes · team+honesty writes itt16-pogo", async ({ page }) => {
+  test("2016 PoGO Catch extras skip · dest-true team is official", async ({ page }) => {
     await openClean(page, "/years/2016/sites/pokemongo/index.html", ["itt16-pogo", "itt16-ig-stories"]);
+    await verbReady(page);
     await page.locator("[data-pogo-catch]").click();
     expect(await getKey(page, "itt16-pogo")).toBeFalsy();
     await page.locator('[data-pogo-team="valor"]').click();
@@ -262,7 +264,10 @@ test.describe("Fascinating integrate leftovers", () => {
     expect(await getKey(page, "itt16-pogo")).toBeFalsy();
     await page.locator("[data-pogo-gps]").check();
     await page.locator("[data-pogo-catch]").click();
-    await expect.poll(() => getKey(page, "itt16-pogo")).toBeTruthy();
+    expect(await getKey(page, "itt16-pogo")).toBeFalsy();
+    await finishOfficial(page);
+    await expect.poll(() => getKey(page, "itt16-pogo"), { timeout: 8000 }).toBeTruthy();
+    expect((await blobOf(page, "itt16-pogo")).kind).toBe("official");
     expect(await getKey(page, "itt16-ig-stories")).toBeFalsy();
   });
 

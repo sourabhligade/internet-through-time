@@ -6,6 +6,7 @@
 const { test, expect } = require("@playwright/test");
 const fs = require('fs');
 const path = require('path');
+const { verbReady, finishOfficial } = require("./ux-phase-io.js");
 function skipIfWiped(year) {
   test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
 }
@@ -225,15 +226,21 @@ test.describe("capture-backed dests — chips + REAL machines", () => {
     await expect.poll(() => getKey(page, "itt10-ipad")).toMatch(/16GB|Wi-Fi|real/i);
   });
 
-  test("2016 Reactions tray-only never writes · Love writes · no Care", async ({ page }) => {
+  test("2016 Reactions Love never writes · dest-true Like is official · no Care", async ({ page }) => {
     await page.goto("/years/2016/sites/facebook/reactions.html");
     await chipOk(page, { allowHidden: true });
     await expect(page.locator('[data-fb-react="care"]')).toHaveCount(0);
     await clearKeys(page, ["itt16-fb-react"]);
     await page.reload();
+    await verbReady(page);
     expect(await getKey(page, "itt16-fb-react")).toBeFalsy();
     await page.locator('[data-fb-react="love"]').click();
-    await expect.poll(() => getKey(page, "itt16-fb-react")).toMatch(/love/i);
+    expect(await getKey(page, "itt16-fb-react")).toBeFalsy();
+    await finishOfficial(page);
+    await expect.poll(() => getKey(page, "itt16-fb-react"), { timeout: 8000 }).toBeTruthy();
+    const blob = JSON.parse((await getKey(page, "itt16-fb-react")) || "{}");
+    expect(blob.v).toBe(1);
+    expect(blob.kind).toBe("official");
   });
 
 });

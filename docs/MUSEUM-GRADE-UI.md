@@ -8,7 +8,7 @@
 
 Museum grade means a visitor can enter any live door, tell what year they are in from the window, do the one star, and leave by a trail that is the same year. It does not mean more rooms, a shared Chrome skin, or a modern lobby.
 
-Phases 1–7 below stay shipped. Remaining visitor UI+UX on dests already on disk (honesty writers, dest-in-window, receipt glass, 390 rewalk, 2015 React glass, public tree vs local) lives in [`MUSEUM-GRADE-UX-COMPLETE.md`](MUSEUM-GRADE-UX-COMPLETE.md). Do not reopen these seven phases as a new program.
+Phases 1–7 below stay shipped. Remaining visitor UI+UX on dests already on disk (honesty writers, dest-in-window, receipt glass, 390 rewalk, 2015 React glass, public tree vs local) lives in [`MUSEUM-GRADE-UX-COMPLETE.md`](MUSEUM-GRADE-UX-COMPLETE.md). Five UX phase locks: [`MUSEUM-GRADE-UX-PHASES.md`](MUSEUM-GRADE-UX-PHASES.md). Do not reopen these seven chrome phases as a new program.
 
 ## Done when
 

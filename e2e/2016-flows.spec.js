@@ -46,7 +46,7 @@ test.describe("2016 flows", () => {
     expect(pogo.kind).toBe("official");
   });
 
-  test("Reactions tray-only never writes; face writes", async ({ page }) => {
+  test("Reactions Love never writes; dest-true Like is official", async ({ page }) => {
     await page.goto("/years/2016/sites/facebook/reactions.html");
     await page.evaluate(() => localStorage.removeItem("itt16-fb-react"));
     await page.reload();
