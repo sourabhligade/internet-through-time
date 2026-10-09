@@ -85,7 +85,7 @@ h1 {
   height: 100vh;
   height: 100dvh;
   display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr);
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
 }
 
 .door header,
@@ -183,12 +183,14 @@ h1 {
   border-color: #dadce0;
 }
 .react-status {
-  margin: 12px 0 0;
+  grid-row: 4;
+  margin: 0;
   padding: 4px 10px;
   background: #f8f9fa;
   color: #202124;
   border-top: 1px solid #dadce0;
   font: 12px/18px "Segoe UI", Arial, sans-serif;
+  pointer-events: none;
 }
 
 .rails {
@@ -272,6 +274,9 @@ h1 {
   border: 2px solid #222;
   background: #fff;
 }
+.product-face.is-hit {
+  cursor: pointer;
+}
 .product-face .product-kicker { margin: 0 0 6px; font-weight: 700; }
 .product-face .counter { display: block; margin: 8px 0; }
 .product-face .counter input {
@@ -303,6 +308,7 @@ h1 {
 .face-loop .mark { background: #00bfa5; }
 .face-lips .mark { background: #111; border-radius: 8px; }
 .stop {
+  grid-row: 3;
   overflow: auto;
   min-height: 0;
   width: min(40rem, 100%);
@@ -340,6 +346,11 @@ h1 {
 .actions {
   display: flex;
   gap: 8px;
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  padding: 8px 0;
+  background: #dce6f0;
 }
 
 .stop button {
@@ -368,12 +379,5 @@ h1 {
   }
   .stop {
     padding: 16px 16px 28px;
-  }
-  .actions {
-    position: sticky;
-    bottom: 0;
-    z-index: 2;
-    padding: 8px 0;
-    background: #dce6f0;
   }
 }

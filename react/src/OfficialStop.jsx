@@ -71,6 +71,7 @@ export function OfficialStop({ stop, year, onNext }) {
           text={text}
           onText={setText}
           maxLength={faceOwns ? fieldMax + 1 : undefined}
+          onActivate={onSave}
         />
       )}
       {needsField && !faceOwns ? (

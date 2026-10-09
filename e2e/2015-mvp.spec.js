@@ -75,4 +75,52 @@ test.describe("2015 mvp", () => {
     expect(blob.key).toBe("itt15-googlephotos");
     expect(await getKey(page, "itt15-periscope")).toBeFalsy();
   });
+
+  test("short viewport Play Pair Follow hit the verb, not Document Done", async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 560 });
+    const rooms = [
+      { stop: "itt15-music", verb: /play/i, face: true, deep: false },
+      { stop: "itt15-watch", verb: /pair/i, face: true, deep: false },
+      { stop: "itt15-win10", verb: /upgrade/i, face: true, deep: false },
+      { stop: "itt15-news", verb: /follow/i, face: false, deep: true },
+      { stop: "itt15-ipadpro", verb: /order/i, face: false, deep: true },
+    ];
+    for (const room of rooms) {
+      const hash = room.deep
+        ? `#/year/2015?deep=1&stop=${room.stop}`
+        : `#/year/2015?stop=${room.stop}`;
+      await page.goto("/app/index.html" + hash);
+      await page.waitForFunction(() => !!(window.ITT && window.ITT.User && window.ITT.User.store), null, {
+        timeout: 15000,
+      });
+      const article = page.locator("article.stop#" + room.stop);
+      await article.waitFor({ timeout: 15000 });
+      if (room.deep) {
+        const leftover = page.locator(".also-year summary");
+        if (await leftover.count()) await leftover.click();
+      }
+      const verb = article.locator(".actions button").last();
+      await expect(verb).toHaveText(room.verb);
+      const hit = await verb.evaluate((el) => {
+        const box = el.getBoundingClientRect();
+        const x = box.x + box.width / 2;
+        const y = box.y + box.height / 2;
+        const top = document.elementFromPoint(x, y);
+        return {
+          inView: box.top >= 0 && box.bottom <= (window.innerHeight || 0),
+          cls: top ? String(top.className || "") : "",
+          isVerb: !!(top && (top === el || el.contains(top))),
+        };
+      });
+      expect(hit.inView, room.stop + " verb in view").toBe(true);
+      expect(hit.isVerb, room.stop + " click hits " + hit.cls).toBe(true);
+      await page.evaluate((key) => localStorage.removeItem(key), room.stop);
+      await verb.click();
+      await expect(article.locator("[role='status']")).toContainText(/never writes/i);
+      if (room.face) {
+        await article.locator("[data-product-face]").click();
+        await expect(article.locator("[role='status']")).toContainText(/never writes/i);
+      }
+    }
+  });
 });

@@ -16,12 +16,17 @@ const MARK = {
   lock: "Lock",
 };
 
-export function ProductFace({ stop, text, onText, maxLength }) {
+export function ProductFace({ stop, text, onText, maxLength, onActivate }) {
   const kind = stop && stop.face;
   if (!kind) return null;
   const typed = String(text || "");
+  const clickable = typeof onActivate === "function" && kind !== "counter" && kind !== "lock";
   return (
-    <div className={"product-face face-" + kind} data-product-face={kind}>
+    <div
+      className={"product-face face-" + kind + (clickable ? " is-hit" : "")}
+      data-product-face={kind}
+      onClick={clickable ? onActivate : undefined}
+    >
       <p className="product-kicker">{MARK[kind] || kind}</p>
       {kind === "counter" ? (
         <label className="counter">
