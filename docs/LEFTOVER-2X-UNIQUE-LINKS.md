@@ -461,7 +461,7 @@ flowchart TD
  RAIL --> MISS["MISS remainder years unique dests less than 2x cap"]
 ```
 
-Live unique dests in leftover-2× rails (matrix): 1994 **88** · 1995 **98** · 1996 **94** · 1997 **62** · 1998 **46** · 1999 **86** · 2000 **92** · 2001 **51** · 2002 **38** · 2003 **36** · 2004 **160** · 2005 **105** · 2006 **116** · 2007 **33** · **124** · 2010 **29** · **38** · 2012 **32** · 2013 **47** · 2014 **25** · 2015 **29** · 2017 **49** · **20** · **5216** · 2021 **18** · 2022 **24**. Catalog dests require `index.html`.
+Live unique dests in leftover-2× rails (`e2e/leftover-2x-unique-links.matrix.json`, sum **1,138**): 1994 **71** · 1995 **117** · 1996 **76** · 1997 **46** · 1998 **28** · 1999 **138** · 2000 **76** · 2001 **35** · 2002 **25** · 2003 **21** · 2004 **148** · 2005 **92** · 2006 **101** · 2007 **17** · 2008 **47** · 2009 **33** · 2010 **12** · 2012 **12** · 2013 **27** · 2014 **16** · 2015 **0**. No matrix row for 2011 or 2020–2022 (catalog **0**). Absent 2017–2019 and 2023–2025 stay **0**. Do not dest-farm `years/2015/`. Catalog dests require `index.html`.
 
 ### A. Leftover dest leftover-2× unique dest rail (hrefs)
 

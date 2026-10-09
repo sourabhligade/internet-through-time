@@ -720,7 +720,7 @@ Dossier: [`docs/2005-RESEARCH.md`](2005-RESEARCH.md) · **Detailed gather:** [`d
 
 **P0 planned rooms:** YouTube · Google Maps · Reddit · Digg · Google · MySpace · Flickr · Facebook (rename era) · Yahoo · Amazon · Wikipedia · iTunes podcasts.
 
-**Hub state:** **24 years open** (1994–2007 + 2010 + 2012–2014  + 2017 + 2022). **2015 wiped.** Research stack §16–§23 remains bibliography for densify/pixels.
+**Hub state:** **25 doors open** (1994–2015 and 2020–2022). **2015 is the React door.** Research stack §16–§23 remains bibliography for densify/pixels.
 
 **Anachronism bans:** Twitter (2006) · Facebook open registration (2006) · Google owns YouTube (2006) · iPhone · Chrome browser · modern YouTube/Maps/Reddit UI · Street View as 2005 default · consumer “cloud” branding.
 
@@ -744,7 +744,7 @@ Dossier: [`docs/2006-RESEARCH.md`](2006-RESEARCH.md) · **Fresh deep research:**
 
 **P0 planned rooms:** Twitter/Twttr · Facebook (open + News Feed) · YouTube (two-era Google) · Digg peak · Google Docs · AWS · continuity MySpace/Flickr/Maps.
 
-**Hub state:** **24 years open** (1994–2007 + 2010 + 2012–2014  + 2017 + 2022). **2015 wiped.** 2006 is live.
+**Hub state:** **25 doors open** (1994–2015 and 2020–2022). **2015 is the React door.** 2006 is live.
 
 **Anachronism bans:** iPhone · Chrome · Street View default · Gmail open-as-year-start (Feb 2007) · Vista retail default (Jan 2007) · Google owns YouTube before Oct/Nov 2006 · modern X · campus-only Facebook after Sep 26 as product truth.
 
