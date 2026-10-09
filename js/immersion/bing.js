@@ -38,9 +38,16 @@
       ev.preventDefault();
       var q = (form.querySelector('[name="q"]') || {}).value || "";
       q = String(q).replace(/^\s+|\s+$/g, "");
+      var st = doc.querySelector("[data-bing-status]");
+      if (!q) {
+        if (st) {
+          st.textContent = "Type a query first. Empty never writes.";
+          ittFeedback(st.textContent, st);
+        }
+        return;
+      }
       var payload = { q: q, ts: Date.now(), searched: true };
       window.ITT.User.store(storageKey(), payload);
-      var st = doc.querySelector("[data-bing-status]");
       if (st) {
         st.textContent = "Searched: “" + q + "” · " + storageKey() + " · stub results (not live Bing)";
         ittFeedback(st.textContent, st);

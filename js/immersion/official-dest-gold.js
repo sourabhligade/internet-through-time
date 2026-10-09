@@ -98,11 +98,11 @@
     var form = doc.querySelector(sel);
     if (!form || form.getAttribute("data-official-gold") === "1") return;
     form.setAttribute("data-official-gold", "1");
+    /* Official-verb owns the key and the one sentence. Gold stays for FAIL-year dests. */
+    if (form.querySelector("[data-official-verb]")) return;
     var st = doc.querySelector("[data-official-status]") || form.querySelector("[data-official-status]");
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
-      /* PayPal Send: official-verb owns the key and the one sentence. */
-      if (form.getAttribute("data-paypal-send") !== null && form.querySelector("[data-official-verb]")) return;
       var year = yearOf(doc);
       var got = read(form, doc);
       if (!got.ok) {
@@ -228,7 +228,7 @@
     var nap = doc.querySelector("form[data-napster-search]");
     if (nap && nap.getAttribute("data-official-gold") !== "1") {
       nap.setAttribute("data-official-gold", "1");
-      nap.addEventListener("submit", function () {
+      if (!nap.querySelector("[data-official-verb]")) nap.addEventListener("submit", function () {
         var input = nap.querySelector("input[name='q'], input[type='text']");
         var q = input ? String(input.value || "").replace(/^\s+|\s+$/g, "") : "";
         if (q.length < 2) return;

@@ -3,7 +3,7 @@
 **Not ship law.** Live playable state is [`DISK-TRUTH.md`](DISK-TRUTH.md).  
 **Branch:** `museum/1994-2020-lean` · local **ahead of** origin `81c652c65`.  
 **Visitor gate:** `npm run check` 0 · dest-true **436** · warehouse year-flow aligned · named packs filled.  
-**Scan close (2026-10-09):** YouTube rebind assigns `ITT.youtube.boot`. 2016 AirPods/Dyn stamp `official: true` and skip when verb owns. 2020 extras year-gated. Atlas skips 2017. JumpStation DROP row removed from flow-maps. github-ready React 2015 has no HTML tree. leftover-2× unique catalog **1,158**. 2009 is live (BOARDED sets).  
+**Scan close (2026-10-09):** YouTube rebind assigns `ITT.youtube.boot`. 2016 AirPods/Dyn stamp `official: true` and skip when verb owns. 2020 extras year-gated. Atlas skips 2017. JumpStation DROP row removed from flow-maps. github-ready React 2015 has no HTML tree. leftover-2× unique catalog **1,158**. 2009 is live (BOARDED sets). Dest-gold skips any `[data-official-verb]` form. Bing empty and Technorati empty never write. HousingMaps persists on filter submit. Clickscape persists on bank/chop/mine. Kit official-kind includes `itt15-periscope`. Follow-site skip is absent years only. `--chrome-light` is defined. 2008 leftover dests use the XP leftover face. 2009 hidden Like-gold buttons carry `data-lo-trap`.  
 **Push:** dest-true is green. GitHub Actions will not run (#17 billing lock). Say **push**.
 
 Do not dest-farm. Do not restore 2017–2019 or 2023–2025. Do not unfreeze 1994–2006. Do not run 1999–2004 `2x` until named. Do not start 2008 Pack B/C until named.
@@ -49,8 +49,8 @@ Named packs added (off dest-true 12): 2005 mvp+flows+densify+trail; 2008 / 2009 
 | 2005 | HTML frozen | 10 | one-thing + official-10 | mvp flows densify trail | — |
 | 2006 | HTML frozen | 10 | one-thing + official-10 | mvp flows densify trail | Watch extras skip when verb owns |
 | 2007 | HTML lean | 10 | one-thing + official-10 | mvp flows densify trail | — |
-| 2008 | HTML lean | 10 | one-thing + 2008-mvp | mvp flows densify trail | Pack B/C wait |
-| 2009 | HTML lean | 10 | one-thing + 2009-mvp | mvp flows densify trail + 5x-live | UNWIRED 17 Like-gold leftover dests (warn) |
+| 2008 | HTML lean | 10 | one-thing + 2008-mvp | mvp flows densify trail | Pack B/C wait · leftover face on disk |
+| 2009 | HTML lean | 10 | one-thing + 2009-mvp | mvp flows densify trail + 5x-live | — |
 | 2010 | HTML lean | 10 | one-thing + official-10 | mvp flows densify trail | — |
 | 2011 | HTML lean | 10 | one-thing + 2011-mvp | mvp flows densify trail | leftover-2× catalog 0 · image-readme line |
 | 2012 | HTML lean | 10 | one-thing + official-10 | mvp flows densify trail | — |
@@ -88,7 +88,6 @@ Working-flow phases 1–6 are marked done through 2022–2025, including the 201
 | Dest doubling | Waits on the word `2x`. |
 | Famous-double step 2 | Wait until named. |
 | 2001 no 5x-live | Thin extra, not a missing door. |
-| 2009 UNWIRED 17 | Like-gold leftover dests without product hooks. Warn only. |
 | 2011 / 2015 image-readme | Do not invent period logos. |
 
 Push waits on the word **push**.

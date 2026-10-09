@@ -99,7 +99,6 @@
           he(st.max || "—") +
           " · sample pins (not live Craigslist)";
       }
-      save(st);
     }
     /* Real handoff from Maps Local Search: ?city=Austin */
     try {
@@ -147,6 +146,7 @@
             return;
           }
           paint();
+          save(st);
           try {
             var ok = doc.documentElement && doc.documentElement.getAttribute("data-official-key");
             if (ok === "itt05-hm") {

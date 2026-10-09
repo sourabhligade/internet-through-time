@@ -59,11 +59,17 @@
     }
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
-      var url = (form.querySelector('[name="url"]') || {}).value || "http://example.com/";
-      if (/^\s*javascript:/i.test(url)) url = "http://example.com/";
+      var url = ((form.querySelector('[name="url"]') || {}).value || "").replace(/^\s+|\s+$/g, "");
       var box = doc.querySelector("[data-technorati-results]");
       var list = doc.querySelector("[data-technorati-list]");
       var st = doc.querySelector("[data-technorati-status]");
+      if (!url || /^\s*javascript:/i.test(url)) {
+        if (st) {
+          st.textContent = "Type a blog URL first. Empty never writes.";
+          ittFeedback(st.textContent, st);
+        }
+        return;
+      }
       var hosts = seedHosts();
       var rec = { url: url, hosts: hosts, ts: Date.now() };
       try {

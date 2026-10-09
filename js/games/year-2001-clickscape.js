@@ -276,7 +276,6 @@
     var step = path.shift();
     state.x = step.x;
     state.y = step.y;
-    save(state);
   }
 
   function tickAction() {

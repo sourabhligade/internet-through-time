@@ -283,6 +283,7 @@
         k === "itt12-facebook" ||
         k === "itt13-vine-posts" ||
         k === "itt14-wa-install" ||
+        k === "itt15-periscope" ||
         k === "itt16-ig-stories" ||
         k === "itt20-zoom" ||
         k === "itt21-att" ||

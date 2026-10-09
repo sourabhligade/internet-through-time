@@ -3,6 +3,7 @@
 :root {
   color-scheme: only light;
   --chrome-face: #c0c0c0;
+  --chrome-light: #dfdfdf;
   --chrome-shadow: #808080;
   --chrome-dark: #404040;
   --chrome-highlight: #ffffff;
