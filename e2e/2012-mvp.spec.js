@@ -37,13 +37,14 @@ test.describe('2012 MVP', () => {
     await page.locator('[data-ig12-share]').click();
     expect(await page.evaluate(() => localStorage.getItem('itt12-ig-android'))).toBeFalsy();
     await page.locator('[data-ig12-filter="X-Pro II"]').click();
+    await page.fill('[data-official-need]', 'X-Pro II leftover');
     await page.locator('[data-ig12-share]').click();
-    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt12-ig-android'))).toMatch(/X-Pro II|android|real/i);
+    await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt12-ig-android'))).toMatch(/real|official|2012/i);
     const raw = await page.evaluate(() => localStorage.getItem('itt12-ig-android'));
     const blob = JSON.parse(raw || '{}');
     expect(blob.real).toBe(true);
-    expect(blob.platform).toBe('android');
-    expect(blob.year).toBe('2012');
+    expect(blob.kind).toBe('official');
+    expect(String(blob.year)).toBe('2012');
     const leaks = await page.evaluate(() => {
       const bad = [];
       for (let i = 0; i < localStorage.length; i++) {

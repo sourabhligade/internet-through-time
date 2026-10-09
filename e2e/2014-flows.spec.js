@@ -33,6 +33,9 @@ test.describe("2014 flows", () => {
     expect(await getKey(page, "itt14-wa-install")).toBeFalsy();
     await page.locator('[data-wa14-deal="16b"]').click();
     await page.locator('[data-wa14-deal="rsu"]').click();
+    await page.locator("[data-official-req]").nth(0).check();
+    await page.locator("[data-official-req]").nth(1).check();
+    await page.fill("[data-official-need]", "leftover residual");
     await page.locator("[data-wa14-install]").click();
     await expect.poll(() => getKey(page, "itt14-wa-install")).toBeTruthy();
   });

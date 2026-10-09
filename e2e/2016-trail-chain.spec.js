@@ -28,6 +28,8 @@ const YEARS = [
         next: /pokemongo/,
         complete: async (page) => {
           await page.fill("[data-ig-story-text]", "museum rooftop 24h");
+          await page.locator("[data-official-req]").nth(0).check();
+          await page.locator("[data-official-req]").nth(1).check();
           await page.locator("[data-ig-story-add]").click();
         },
       },

@@ -150,6 +150,7 @@ const CUSTOM = {
   },
   "itt12-ig-android": async (page) => {
     await page.locator('[data-ig12-filter="X-Pro II"]').click();
+    await page.fill("[data-official-need]", "X-Pro II leftover");
     await page.locator("[data-ig12-share]").click();
   },
   "itt12-pin": async (page) => {
@@ -166,15 +167,23 @@ const CUSTOM = {
     await hold.dispatchEvent("pointerdown");
     await page.waitForTimeout(6200);
     await hold.dispatchEvent("pointerup");
+    await page.locator("[data-official-req]").nth(0).check();
+    await page.locator("[data-official-req]").nth(1).check();
+    await page.fill("[data-official-need]", "leftover residual");
     await page.locator("[data-vn13-post]").click();
   },
   "itt14-wa-install": async (page) => {
     await page.locator('[data-wa14-deal="16b"]').click();
     await page.locator('[data-wa14-deal="rsu"]').click();
+    await page.locator("[data-official-req]").nth(0).check();
+    await page.locator("[data-official-req]").nth(1).check();
+    await page.fill("[data-official-need]", "leftover residual");
     await page.locator("[data-wa14-install]").click();
   },
   "itt16-ig-stories": async (page) => {
     await page.fill("[data-ig-story-text]", "museum rooftop 24h");
+    await page.locator("[data-official-req]").nth(0).check();
+    await page.locator("[data-official-req]").nth(1).check();
     await page.locator("[data-ig-story-add]").click();
   },
   "itt20-zoom": async (page) => {

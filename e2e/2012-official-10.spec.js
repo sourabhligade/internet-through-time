@@ -67,6 +67,7 @@ const YEARS = [
       await page.locator("[data-ig12-share]").click();
       expect(await getKey(page, "itt12-ig-android")).toBeFalsy();
       await page.locator('[data-ig12-filter="X-Pro II"]').click();
+      await page.fill("[data-official-need]", "X-Pro II leftover");
       await page.locator("[data-ig12-share]").click();
       await expect.poll(() => getKey(page, "itt12-ig-android"), { timeout: 8000 }).toBeTruthy();
     },
@@ -90,6 +91,8 @@ const YEARS = [
       await page.locator("[data-ig-story-add]").click();
       expect(await getKey(page, "itt16-ig-stories")).toBeFalsy();
       await page.fill("[data-ig-story-text]", "museum leftover 24h");
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
       await page.locator("[data-ig-story-add]").click();
       await expect.poll(() => getKey(page, "itt16-ig-stories"), { timeout: 8000 }).toBeTruthy();
     },
@@ -118,6 +121,9 @@ const YEARS = [
       await page.locator("[data-wa14-install]").click();
       expect(await getKey(page, "itt14-wa-install")).toBeFalsy();
       await page.locator('[data-wa14-deal="rsu"]').click();
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.fill("[data-official-need]", "leftover residual");
       await page.locator("[data-wa14-install]").click();
       await expect.poll(() => getKey(page, "itt14-wa-install"), { timeout: 8000 }).toBeTruthy();
     },

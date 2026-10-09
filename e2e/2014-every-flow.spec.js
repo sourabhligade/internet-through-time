@@ -90,6 +90,9 @@ const OFFICIAL = [
     complete: async (page) => {
       await page.locator('[data-wa14-deal="16b"]').click();
       await page.locator('[data-wa14-deal="rsu"]').click();
+      await page.locator("[data-official-req]").nth(0).check();
+      await page.locator("[data-official-req]").nth(1).check();
+      await page.fill("[data-official-need]", "leftover residual");
       await page.locator("[data-wa14-install]").click();
     },
   },

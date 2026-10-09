@@ -181,12 +181,18 @@
         }
       });
     }
+    var verbOwned =
+      btn.getAttribute("data-official-verb") != null ||
+      (doc.documentElement &&
+        doc.documentElement.getAttribute("data-official-key") === key("yt") &&
+        doc.querySelector("[data-official-verb]") != null);
     btn.addEventListener("click", function () {
       var played = doc.querySelector("[data-yt-played='1']");
       if (!played) {
         say(st, "Click a clip in the list first. Empty Watch never writes.", true);
         return;
       }
+      if (verbOwned) return;
       if (!saveJSON(key("yt"), blob({ watch: true, independent: true, official: true }), { kind: "official" })) {
         say(st, "This browser blocked the save.", true);
         return;

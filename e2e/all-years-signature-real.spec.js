@@ -255,7 +255,7 @@ test.describe('all-years signature REAL · 2000s boom', () => {
     const n = await ticks.count();
     for (let i = 0; i < n; i++) await ticks.nth(i).check();
     await frame.locator('[data-yt-upload] button[type="submit"]').first().click();
-    await expect(frame.locator('[data-yt-upload-status]')).toContainText(/Upload|list|videos/i, {
+    await expect(frame.locator('[data-yt-upload-status]')).toContainText(/Saved\.|Upload|list|videos/i, {
       timeout: 10000,
     });
     await requireKey(page, 'itt05-yt-uploads', new RegExp(title));

@@ -14,6 +14,8 @@ test.describe("2016 flows", () => {
     await page.locator("[data-ig-story-add]").click();
     expect(await getKey(page, "itt16-ig-stories")).toBeFalsy();
     await page.fill("[data-ig-story-text]", "museum rooftop 24h");
+    await page.locator("[data-official-req]").nth(0).check();
+    await page.locator("[data-official-req]").nth(1).check();
     await page.locator("[data-ig-story-add]").click();
     await expect.poll(async () => getKey(page, "itt16-ig-stories"), { timeout: 8000 }).toBeTruthy();
   });
@@ -36,6 +38,12 @@ test.describe("2016 flows", () => {
     await page.reload();
     expect(await getKey(page, "itt16-fb-react")).toBeFalsy();
     await page.locator('[data-fb-react="love"]').click();
+    expect(await getKey(page, "itt16-fb-react")).toBeFalsy();
+    const reqsA = page.locator("[data-official-req]");
+    const nA = await reqsA.count();
+    for (let i = 0; i < nA; i++) await reqsA.nth(i).check();
+    await page.fill("[data-official-need]", "leftover residual");
+    await page.locator("[data-fb-like]").click();
     await expect.poll(async () => getKey(page, "itt16-fb-react"), { timeout: 8000 }).toBeTruthy();
   });
 
@@ -45,10 +53,15 @@ test.describe("2016 flows", () => {
     await page.reload();
     await page.locator("[data-fb-like]").click();
     expect(await getKey(page, "itt16-fb-react")).toBeFalsy();
-    await page.locator('[data-fb-react="love"]').click();
+    const reqsB = page.locator("[data-official-req]");
+    const nB = await reqsB.count();
+    for (let i = 0; i < nB; i++) await reqsB.nth(i).check();
+    await page.fill("[data-official-need]", "leftover residual");
+    await page.locator("[data-fb-like]").click();
     await expect.poll(async () => getKey(page, "itt16-fb-react"), { timeout: 8000 }).toBeTruthy();
     const blob = JSON.parse((await getKey(page, "itt16-fb-react")) || "{}");
-    expect(blob.face).toBe("love");
+    expect(blob.real).toBe(true);
+    expect(blob.kind).toBe("official");
   });
 
   test("E2E one tick never writes", async ({ page }) => {

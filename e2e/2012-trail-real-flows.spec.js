@@ -17,6 +17,7 @@ test.describe('2012 leftover trail', () => {
     await clearKeys(page, ['itt12-ig-android']);
     await page.reload();
     await page.locator('[data-ig12-filter="Lo-Fi"]').click();
+    await page.fill('[data-official-need]', 'Lo-Fi leftover');
     await page.locator('[data-ig12-share]').click();
     await expect.poll(() => getKey(page, 'itt12-ig-android')).toBeTruthy();
     await expect(page.locator('[data-next-flow] a[href*="pinterest"]')).toBeVisible();

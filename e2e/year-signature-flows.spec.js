@@ -320,7 +320,7 @@ test.describe('year-signature 2005', () => {
     const n = await reqs.count();
     for (let i = 0; i < n; i++) await reqs.nth(i).check();
     await form.locator('input[type="submit"], button[type="submit"]').first().click();
-    await expect(frame.locator('[data-yt-upload-status]')).toContainText(/Upload|local|list|videos/i, { timeout: 8000 });
+    await expect(frame.locator('[data-yt-upload-status]')).toContainText(/Saved\.|Upload|local|list|videos/i, { timeout: 8000 });
     const raw = await page.evaluate(() => localStorage.getItem('itt05-yt-uploads'));
     expect(raw || '').toContain(title);
   });
@@ -668,6 +668,7 @@ test.describe('year-signature 2012', () => {
     await frame.locator('[data-ig12-share]').click();
     expect(await page.evaluate(() => localStorage.getItem('itt12-ig-android'))).toBeFalsy();
     await frame.locator('[data-ig12-filter="X-Pro II"]').click();
+    await frame.locator('[data-official-need]').fill('X-Pro II leftover');
     await frame.locator('[data-ig12-share]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt12-ig-android')), { timeout: 8000 })
@@ -693,6 +694,10 @@ test.describe('year-signature 2013', () => {
     await frame.locator('[data-vn13-hold]').dispatchEvent('pointerdown');
     await page.waitForTimeout(6200);
     await frame.locator('[data-vn13-hold]').dispatchEvent('pointerup');
+    const vReqs = frame.locator("[data-official-req]");
+    const nV = await vReqs.count();
+    for (let i = 0; i < nV; i++) await vReqs.nth(i).check();
+    await frame.locator("[data-official-need]").fill("leftover residual");
     await frame.locator('[data-vn13-post]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt13-vine-posts')), { timeout: 8000 })
@@ -717,6 +722,10 @@ test.describe('year-signature 2014', () => {
     expect(await page.evaluate(() => localStorage.getItem('itt14-wa-install'))).toBeFalsy();
     await frame.locator('[data-wa14-deal="16b"]').click();
     await frame.locator('[data-wa14-deal="rsu"]').click();
+    const waReqs = frame.locator("[data-official-req]");
+    const nWa = await waReqs.count();
+    for (let i = 0; i < nWa; i++) await waReqs.nth(i).check();
+    await frame.locator("[data-official-need]").fill("leftover residual");
     await frame.locator('[data-wa14-install]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt14-wa-install')), { timeout: 8000 })
@@ -763,6 +772,9 @@ test.describe('year-signature 2016', () => {
     await frame.locator('[data-ig-story-add]').click();
     expect(await page.evaluate(() => localStorage.getItem('itt16-ig-stories'))).toBeFalsy();
     await frame.locator('[data-ig-story-text]').fill('museum rooftop 24h');
+    const stReqs = frame.locator("[data-official-req]");
+    const nSt = await stReqs.count();
+    for (let i = 0; i < nSt; i++) await stReqs.nth(i).check();
     await frame.locator('[data-ig-story-add]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt16-ig-stories')), { timeout: 8000 })

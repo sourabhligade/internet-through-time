@@ -60,6 +60,9 @@ test.describe('2012 flows', () => {
     expect(await getKey(page, 'itt12-fb-ipo')).toBeFalsy();
     await page.locator('[data-ipo-req]').nth(0).check();
     await page.locator('[data-ipo-req]').nth(1).check();
+    await page.locator('[data-official-req]').nth(0).check();
+    await page.locator('[data-official-req]').nth(1).check();
+    await page.fill('[data-official-need]', 'nasdaq leftover');
     await page.locator('[data-ipo-ack]').click();
     await expect.poll(() => getKey(page, 'itt12-fb-ipo')).toMatch(/38|nasdaq|real/i);
   });
@@ -72,6 +75,9 @@ test.describe('2012 flows', () => {
     expect(await getKey(page, 'itt12-sopa')).toBeFalsy();
     await page.locator('[data-sopa-req]').nth(0).check();
     await page.locator('[data-sopa-req]').nth(1).check();
+    await page.locator('[data-official-req]').nth(0).check();
+    await page.locator('[data-official-req]').nth(1).check();
+    await page.fill('[data-official-need]', 'blackout leftover');
     await page.locator('[data-sopa-save]').click();
     await expect.poll(() => getKey(page, 'itt12-sopa')).toMatch(/blackout|sopa|real/i);
   });
@@ -203,6 +209,9 @@ test.describe('2012 flows', () => {
     const boxes = page.locator('[data-fb1b-req]');
     await boxes.nth(0).check();
     await boxes.nth(1).check();
+    await page.locator('[data-official-req]').nth(0).check();
+    await page.locator('[data-official-req]').nth(1).check();
+    await page.fill('[data-official-need]', '1B leftover');
     await page.locator('[data-fb1b-ack]').click();
     await expect.poll(() => getKey(page, 'itt12-facebook')).toBeTruthy();
     expect(await getKey(page, 'itt12-ig-android')).toBeFalsy();

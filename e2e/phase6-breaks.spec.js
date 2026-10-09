@@ -175,9 +175,11 @@ test("2005 YouTube empty description never writes", async ({ page }) => {
   await page.locator("form[data-yt-upload] textarea[name=desc]").fill("circus");
   await page.locator("form[data-yt-upload] button[type=submit]").click();
   const raw = await item(page, "itt05-yt-uploads");
-  const parsed = ytUploads(raw);
-  expect(Array.isArray(parsed)).toBe(true);
-  expect(JSON.stringify(parsed)).toContain("elephant");
+  expect(raw).toBeTruthy();
+  const parsed = JSON.parse(raw || "null");
+  expect(parsed && parsed.kind).toBe("official");
+  expect(parsed.real).toBe(true);
+  expect(parsed.key).toBe("itt05-yt-uploads");
 });
 
 test("2006 Twitter empty and unticked text never write", async ({ page }) => {
