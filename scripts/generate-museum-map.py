@@ -174,8 +174,8 @@ def render(data: dict) -> str:
 
     open_labels = [rec["year"] for rec in years]
     n_open = len(open_labels)
-    expected = [str(y) for y in range(1994, 2017)] + ["2020", "2021", "2022"]
-    span = "1994–2016 and 2020–2022" if open_labels == expected else ", ".join(open_labels)
+    expected = [str(y) for y in range(1994, 2016)] + ["2020", "2021", "2022"]
+    span = "1994–2015 and 2020–2022" if open_labels == expected else ", ".join(open_labels)
     lede = (
         f"{n_open} years open ({span}). "
         "2017, 2018, 2019, and 2023–2025 are absent. "
@@ -238,7 +238,7 @@ def render(data: dict) -> str:
   <div class="card">
     <h3>E2E ship pack</h3>
     <ul class="plain">
-      <li>oss-visitor-gate — enter all 26</li>
+      <li>oss-visitor-gate — enter all 25</li>
       <li>hub · atlas · 3× links · all-years smoke</li>
       <li>Gold-A · popular 3× · one-thing</li>
       <li>2005–2010 leftover-4× ·  CUT-DOUBLE + 5×</li>

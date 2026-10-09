@@ -16,7 +16,6 @@
     "suffix": "yahoo-dir",
     "path": "/years/1994/sites/yahoo/index.html",
     "kind": "reuse",
-    "field": null,
     "next": "../webcrawler/index.html"
   },
   {
@@ -36,7 +35,6 @@
     "suffix": "whatsnew",
     "path": "/years/1994/sites/ncsa/index.html",
     "kind": "reuse",
-    "field": null,
     "next": "../mcom/index.html"
   },
   {
@@ -66,7 +64,6 @@
     "suffix": "prodigy",
     "path": "/years/1995/sites/prodigy/index.html",
     "kind": "new",
-    "field": null,
     "next": "../infoseek/index.html"
   },
   {
@@ -96,7 +93,6 @@
     "suffix": "yahoo",
     "path": "/years/1995/sites/yahoo/index.html",
     "kind": "reuse",
-    "field": null,
     "next": "../amazon/ssl-checkout.html"
   },
   {
@@ -126,7 +122,6 @@
     "suffix": "prodigy",
     "path": "/years/1996/sites/prodigy/index.html",
     "kind": "new",
-    "field": null,
     "next": "../excite/index.html"
   },
   {
@@ -136,7 +131,6 @@
     "suffix": "myexcite",
     "path": "/years/1996/sites/excite/index.html",
     "kind": "reuse",
-    "field": null,
     "next": "../hotmail/index.html"
   },
   {
@@ -166,7 +160,6 @@
     "suffix": "bbc",
     "path": "/years/1997/sites/bbc/index.html",
     "kind": "new",
-    "field": null,
     "next": "../aol/index.html"
   },
   {
@@ -236,7 +229,6 @@
     "suffix": "bbc",
     "path": "/years/1998/sites/bbc/index.html",
     "kind": "new",
-    "field": null,
     "next": "../google/lucky.html"
   },
   {
@@ -246,7 +238,6 @@
     "suffix": "lucky",
     "path": "/years/1998/sites/google/lucky.html",
     "kind": "star",
-    "field": null,
     "next": ""
   },
   {
@@ -306,7 +297,6 @@
     "suffix": "bbc",
     "path": "/years/2000/sites/bbc/index.html",
     "kind": "new",
-    "field": null,
     "next": "../msn/index.html"
   },
   {
@@ -336,7 +326,6 @@
     "suffix": "mapquest",
     "path": "/years/2000/sites/mapquest/index.html",
     "kind": "star",
-    "field": null,
     "next": ""
   },
   {
@@ -386,7 +375,6 @@
     "suffix": "networks",
     "path": "/years/2004/sites/facebook/networks.html",
     "kind": "star",
-    "field": null,
     "next": ""
   },
   {
@@ -396,7 +384,6 @@
     "suffix": "ig",
     "path": "/years/2010/sites/instagram/index.html",
     "kind": "star",
-    "field": null,
     "next": ""
   },
   {
@@ -406,7 +393,6 @@
     "suffix": "imgur",
     "path": "/years/2010/sites/imgur/index.html",
     "kind": "star",
-    "field": null,
     "next": ""
   },
   {
@@ -416,7 +402,6 @@
     "suffix": "facebook",
     "path": "/years/2010/sites/facebook/index.html",
     "kind": "reuse",
-    "field": null,
     "next": "../youtube/index.html"
   },
   {
@@ -426,7 +411,6 @@
     "suffix": "youtube",
     "path": "/years/2010/sites/youtube/index.html",
     "kind": "reuse",
-    "field": null,
     "next": "../instagram/index.html"
   },
   {
@@ -436,7 +420,6 @@
     "suffix": "pin",
     "path": "/years/2012/sites/pinterest/index.html",
     "kind": "new",
-    "field": null,
     "next": "../facebook/ipo.html"
   },
   {
@@ -446,7 +429,6 @@
     "suffix": "fb-ipo",
     "path": "/years/2012/sites/facebook/ipo.html",
     "kind": "reuse",
-    "field": null,
     "next": "../facebook/index.html"
   },
   {
@@ -456,7 +438,6 @@
     "suffix": "facebook",
     "path": "/years/2012/sites/facebook/index.html",
     "kind": "reuse",
-    "field": null,
     "next": "../iphone/maps.html"
   },
   {
@@ -466,7 +447,6 @@
     "suffix": "maps",
     "path": "/years/2012/sites/iphone/maps.html",
     "kind": "reuse",
-    "field": null,
     "next": "../wikipedia/sopa.html"
   },
   {
@@ -476,7 +456,6 @@
     "suffix": "sopa",
     "path": "/years/2012/sites/wikipedia/sopa.html",
     "kind": "reuse",
-    "field": null,
     "next": "../instagram/android.html"
   },
   {
@@ -506,7 +485,6 @@
     "suffix": "wiki",
     "path": "/years/2013/sites/youtube/index.html",
     "kind": "reuse",
-    "field": null,
     "next": "../vine/index.html"
   },
   {
@@ -516,7 +494,6 @@
     "suffix": "snap",
     "path": "/years/2013/sites/snapchat/story.html",
     "kind": "reuse",
-    "field": null,
     "next": "../vine/index.html"
   },
   {
@@ -536,7 +513,6 @@
     "suffix": "fb",
     "path": "/years/2014/sites/facebook/index.html",
     "kind": "new",
-    "field": null,
     "next": "../youtube/index.html"
   },
   {
@@ -546,7 +522,6 @@
     "suffix": "youtube",
     "path": "/years/2014/sites/youtube/index.html",
     "kind": "new",
-    "field": null,
     "next": "../whatsapp/index.html"
   },
   {
@@ -556,7 +531,6 @@
     "suffix": "icebucket",
     "path": "/years/2014/sites/icebucket/index.html",
     "kind": "reuse",
-    "field": null,
     "next": "../whatsapp/index.html"
   },
   {
@@ -566,57 +540,6 @@
     "suffix": "wa",
     "path": "/years/2014/sites/whatsapp/index.html",
     "kind": "star",
-    "field": null,
     "next": ""
-  },
-  {
-    "year": "2016",
-    "id": "F1",
-    "key": "itt16-tweets",
-    "suffix": "tweets",
-    "path": "/years/2016/sites/facebook/reactions.html",
-    "kind": "new",
-    "field": "tweet",
-    "next": "../instagram/stories.html"
-  },
-  {
-    "year": "2016",
-    "id": "F2",
-    "key": "itt16-youtube",
-    "suffix": "youtube",
-    "path": "/years/2016/sites/youtube/index.html",
-    "kind": "new",
-    "field": null,
-    "next": "../reddit/index.html"
-  },
-  {
-    "year": "2016",
-    "id": "F3",
-    "key": "itt16-google",
-    "suffix": "google",
-    "path": "/years/2016/sites/reddit/index.html",
-    "kind": "new",
-    "field": "query",
-    "next": "../instagram/stories.html"
-  },
-  {
-    "year": "2016",
-    "id": "F4",
-    "key": "itt16-stories",
-    "suffix": "stories",
-    "path": "/years/2016/sites/instagram/stories.html",
-    "kind": "star",
-    "field": null,
-    "next": ""
-  },
-  {
-    "year": "2016",
-    "id": "F5",
-    "key": "itt16-pogo",
-    "suffix": "pogo",
-    "path": "/years/2016/sites/pokemongo/index.html",
-    "kind": "reuse",
-    "field": null,
-    "next": "../instagram/stories.html"
   }
 ]

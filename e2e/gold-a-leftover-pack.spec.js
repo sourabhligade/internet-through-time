@@ -33,7 +33,6 @@ const GOLD = [
   { year: "2012", writer: "sites/instagram/android.html", key: "itt12-ig-android", nextNeedle: "pinterest", chipHref: "sites/instagram/android.html" },
   { year: "2013", writer: "sites/vine/record.html", key: "itt13-vine-posts", nextNeedle: "instagram/video", chipHref: "sites/vine/record.html" },
   { year: "2014", writer: "sites/whatsapp/index.html", key: "itt14-wa-install", nextNeedle: "chat", chipHref: "sites/whatsapp/index.html" },
-  { year: "2016", writer: "sites/instagram/stories.html", key: "itt16-ig-stories", nextNeedle: "pokemongo", chipHref: "sites/instagram/stories.html" },
   { year: "2020", writer: "sites/zoom/meeting.html", key: "itt20-zoom", nextNeedle: "houseparty", chipHref: "sites/zoom/meeting.html" },
   { year: "2021", writer: "sites/att/index.html", key: "itt21-att", nextNeedle: "signal", chipHref: "sites/att/index.html" },
   { year: "2022", writer: "sites/chatgpt/index.html", key: "itt22-chatgpt", nextNeedle: "wordle", chipHref: "sites/chatgpt/index.html" },

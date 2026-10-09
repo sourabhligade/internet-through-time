@@ -24,10 +24,7 @@
     "2010": ["netflix|Netflix", "tumblr|Tumblr", "formspring|Formspring"],
     "2012": ["drawsomething|Draw Something", "googledrive|Drive", "snapchat|Snapchat"],
     "2013": ["askfm|Ask.fm", "whisper|Whisper", "youtube|YouTube"],
-    "2014": ["snapchat|Snapchat", "instagram|Instagram", "uber|Uber"],
-    "2016": ["slack|Slack", "reddit|Reddit", "netflix|Netflix"],
-    
-  };
+    "2014": ["snapchat|Snapchat", "instagram|Instagram", "uber|Uber"]};
 
   function sites(year) {
     var rows = POP[year] || [];

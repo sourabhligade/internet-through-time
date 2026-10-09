@@ -27,7 +27,6 @@
     "2007": { machine: "Windows XP · Internet Explorer 6", star: "iPhone Safari", starHref: "sites/iphone/index.html", game: "" },
     "2013": { machine: "Windows 7 residual · IE 9", star: "Vine 6s", starHref: "sites/vine/record.html", game: "" },
     "2014": { machine: "Windows 7 residual · IE 9", star: "WhatsApp Install", starHref: "sites/whatsapp/index.html", game: "" },
-    "2016": { machine: "Windows 10 rising · Chrome habit", star: "Instagram Stories", starHref: "sites/instagram/stories.html", game: "" },
   };
 
   function yearOf() {
@@ -231,7 +230,7 @@
       path = "";
     }
     if (!/\/pages\/home\.html$/.test(path)) return;
-    if (["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2020", "2021", "2022"].indexOf(String(y)) !== -1) return;
+    if (["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2017", "2020", "2021", "2022"].indexOf(String(y)) !== -1) return;
     if (doc.getElementById("itt-layer-assess")) return;
     var meta = META[y] || {};
     var links = webLinks(y);

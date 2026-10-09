@@ -83,6 +83,8 @@ async function firstBootHome(page, year) {
 
 test.describe("UX phase 2 dest in the year window", () => {
   test("2016 year door Starting Point loads in the iframe", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await enterYear(page, "2016");
     await waitGuided(page);
     const sandbox = await page.locator("#content").getAttribute("sandbox");
@@ -95,6 +97,8 @@ test.describe("UX phase 2 dest in the year window", () => {
   });
 
   test("2016 Stories sits in the year iframe and the parent stays 2016", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await enterYear(page, "2016");
     await waitGuided(page);
     await goInFrame(page, "sites/instagram/stories.html");
@@ -150,6 +154,8 @@ test.describe("UX phase 2 dest in the year window", () => {
   });
 
   test("hub to 2016 Starting Point chip opens Stories in the year iframe", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await hubEnterYear(page, "2016");
     await expect(page).toHaveURL(/\/years\/2016\//);
     await expect(page.locator("body")).toHaveClass(/browser-chrome-habit/);
@@ -185,6 +191,8 @@ test.describe("UX phase 2 dest in the year window", () => {
   });
 
   test("2016 year door first pages/home.html is not aborted and Stories still opens in the iframe", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     const aborted = await firstBootHome(page, "2016");
     expect(aborted, "first-boot home.html abort").toEqual([]);
     const src = await page.locator("#content").getAttribute("src");
@@ -249,6 +257,8 @@ test.describe("UX phase 2 dest in the year window", () => {
   });
 
   test("Home from 2016 Stories still lands Starting Point after the bounce", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await enterYear(page, "2016");
     await waitGuided(page);
     await goInFrame(page, "sites/instagram/stories.html");

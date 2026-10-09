@@ -52,16 +52,6 @@ const YEARS = [
       { href: "/years/2014/sites/icebucket/index.html", suffix: "ice-lx" },
     ],
   },
-  {
-    year: "2016",
-    star: "itt16-ig-stories",
-    gold: "/years/2016/sites/instagram/stories.html",
-    leftover: [
-      { href: "/years/2016/sites/facebook/reactions.html", suffix: "fb-react" },
-      { href: "/years/2016/sites/pokemongo/index.html", suffix: "pogo" },
-      { href: "/years/2016/sites/whatsapp/e2e.html", suffix: "wa-e2e" },
-    ],
-  },
 ].filter((y) => fs.existsSync(path.join(ROOT, "years", y.year, "index.html")))
   .map((y) => {
     y.leftover = (y.leftover || []).filter((row) => destOnDisk(row.href));

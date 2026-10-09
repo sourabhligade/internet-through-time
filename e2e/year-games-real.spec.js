@@ -256,6 +256,8 @@ test.describe('REAL complete writes', () => {
   });
 
   test('2016 gymrush API real writes itt16-game-gymrush', async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     test.skip(!yearOnDisk('2016'), '2016 not on disk');
     await enterYear(page, '2016');
     await clearPrefixGames(page, 'itt16');

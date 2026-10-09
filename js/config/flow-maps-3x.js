@@ -2440,8 +2440,7 @@
       "do": "Existing room · 3× link pass",
       "href": "sites/youtube/index.html",
       "name": "YouTube"
-    },
-  ],
+    }],
   "2013": [
     {
       "do": "Existing room · 3× link pass",
@@ -2550,100 +2549,7 @@
       "href": "sites/wikipedia/index.html",
       "name": "Wikipedia"
     }
-  ],
-  "2016": [
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/alphago/index.html",
-      "name": "AlphaGo"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/assistant/index.html",
-      "name": "Assistant 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/facebook/about.html",
-      "name": "Reactions"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/fblive/index.html",
-      "name": "Facebook Live"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/houseparty/index.html",
-      "name": "Houseparty 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/instagram/about.html",
-      "name": "Stories"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/jio/index.html",
-      "name": "Jio 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/linkedinms/index.html",
-      "name": "LinkedIn 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/moments/index.html",
-      "name": "Twitter Moments"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/netflix/index.html",
-      "name": "Netflix"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/playable/index.html",
-      "name": "2016 playables"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/reddit/index.html",
-      "name": "reddit"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/slack/index.html",
-      "name": "Slack"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/smario/index.html",
-      "name": "Super Mario Run 6×"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/snapchat/index.html",
-      "name": "Snapchat"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/vine/index.html",
-      "name": "Vine"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/whatsapp/about.html",
-      "name": "E2E"
-    },
-    {
-      "do": "Existing room · 3× link pass",
-      "href": "sites/youtube/index.html",
-      "name": "YouTube"
-    }
-  ],
-};
+  ]};
   Object.keys(extra).forEach(function (y) {
     var m = ITT.flowMaps && ITT.flowMaps[y];
     if (!m || !extra[y] || !extra[y].length) return;

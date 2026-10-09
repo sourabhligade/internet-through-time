@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-08  
 **Status:** 1994–1997 through 2022–2025 phases 1–6 are done locally, including 2014–2017. Leftover-2× dests with no save hook stay on disk and are not dest-farmed. Standing gate lives in this file.  
-**Law:** `js/year-card.json` + `scripts/itt_gate.py` `SHIP_YEARS`. Hub is 26 doors. Frozen HTML is 1994–2006. leanBoot is 2007–2014, 2016, and 2020–2022. 2015 is the React door. Absent: 2017–2019 and 2023–2025.
+**Law:** `js/year-card.json` + `scripts/itt_gate.py` `SHIP_YEARS`. Hub is 25 doors. Frozen HTML is 1994–2006. leanBoot is 2007–2014 and 2020–2022. 2015 is the React door. Absent: 2016–2019 and 2023–2025.
 
 This plan does not reopen `docs/PROD-USER-DATA-SRP.md` or `docs/MUSEUM-GRADE-UI.md`. Those phases stay as shipped. This plan runs the six phases on every working flow already on disk in the band: trail stops, leftover-2× dests, and every other year-site page that already has a save control. Scan of remaining overclaim vs disk: [`PHASE-SCAN.md`](PHASE-SCAN.md).
 
@@ -54,7 +54,7 @@ The first draft of this plan only walked the official trail, about 256 stops. Th
 | 2013 | 53 | 47 | 52 | 9 | 27 |
 | 2014 | 36 | 18 | 25 | 9 | 16 |
 | 2015 | React door | 10 stops | — | 10 | 0 |
-| 2016 | 107 | 97 | 67 | 10 | 20 |
+| 2016 | 0 | 0 | 0 | 0 | 0 |
 | 2020 | 24 | 22 | 22 | 10 | 0 |
 | 2021 | 60 | 18 | 18 | 10 | 0 |
 | 2022 | 31 | 29 | 25 | 10 | 0 |
@@ -240,7 +240,7 @@ leanBoot. Working set: 182 save pages, 150 dest folders, 51 leftover-2× dests, 
 
 ## 2014–2017
 
-2014 and 2016 are leanBoot. 2015 is React. 2017 stays absent. Working set: 115 HTML save pages plus 10 React stops (18 in 2014, 97 in 2016). 2016’s 107 HTML files are this one year, not the museum. Do not create `years/2017` or a 2017 checklist.
+2014 is leanBoot. 2015 is React. 2016 and 2017 stay absent. Working set: 18 HTML save pages plus 10 React stops. Do not create `years/2016` or `years/2017` until named.
 
 | Phase | Work in this band |
 | --- | --- |

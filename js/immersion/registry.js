@@ -366,20 +366,7 @@
       "immersion/one-thing-machines.js"
     ],
 
-    "2016": [
-      "immersion/leftover-official.js",
-      "immersion/no-mock-gfc.js",
-      "immersion/no-mock-sopa.js",
-      "immersion/no-mock-uber.js",
-      "immersion/no-mock-wave.js",
-      "immersion/no-mock-fb-connect.js",
-      "immersion/no-mock-culture-ack.js",
-      "immersion/no-mock-common.js",
-      "immersion/year-2016-extras.js",
-      "immersion/one-thing-machines.js",
-      "immersion/year-4x-flows.js"
-    ],
-    "2007": [
+        "2007": [
       "immersion/leftover-official.js",
       "immersion/no-mock-gfc.js",
       "immersion/no-mock-sopa.js",
@@ -436,9 +423,7 @@
       "immersion/no-mock-common.js",
       "immersion/one-thing-machines.js",
       "immersion/year-2022-extras.js"
-    ],
-
-  };
+    ]};
 
   ITT.IMMERSION_FEATURES_BY_YEAR = {};
   (function buildYearLists() {

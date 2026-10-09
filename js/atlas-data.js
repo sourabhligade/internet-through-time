@@ -1,7 +1,7 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2007–2016 and 2020–2022 lean doors live. 2011 is live HTML. 2015 is the React door. 2017–2019 and 2023–2025 are absent. Do not invent rooms.
+ * 2007–2014 and 2020–2022 lean doors live. 2011 is live HTML. 2015 is the React door. 2016–2019 and 2023–2025 are absent. Do not invent rooms.
  */
 (function (global) {
   "use strict";
@@ -10,7 +10,7 @@
   var OPEN = (function openFromCard() {
     var years = ITT.YEAR_CARD && ITT.YEAR_CARD.years;
     var fallback = [
-      "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2020", "2021", "2022"
+      "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2020", "2021", "2022"
     ];
     if (!years) return fallback;
     var out = [];
@@ -32,12 +32,12 @@
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
       { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
  { id: "phone", label: "Phone eats the web", blurb: "App Store · Like · Chrome · G1 · Instagram iOS · Google+. Vine 6s is the 2013 door.", years: ["2008", "2009", "2010", "2011", "2012", "2013"] },
-      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Periscope Go LIVE, Stories.", years: ["2014", "2015", "2016"] }
+      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Periscope Go LIVE.", years: ["2014", "2015"] }
     ],
 
     leanYears: [
  "2007", "2008", "2009", "2010", "2011", "2012",
-      "2013", "2014", "2015", "2016", "2020", "2021", "2022"
+      "2013", "2014", "2015", "2020", "2021", "2022"
     ],
 
     notThisYear: {
@@ -63,7 +63,6 @@
       "2013": "Stories here are Snapchat, not Instagram.",
       "2014": "Messenger is the trap. Install is the save.",
       "2015": "Meerkat was earlier. Periscope is the star.",
-      "2016": "Snapchat invented the 24-hour slide.",
       "2020": "Disney+ Continue is last year. Empty never writes.",
       "2021": "Allow never writes. ChatGPT is next year.",
       "2022": "Empty and GPT-4 never write. X and Threads are next years.",
@@ -93,7 +92,6 @@
       "2013": "The loop was six seconds. Stories here are Snapchat, not Instagram.",
       "2014": "Nineteen billion dollars. Install is the save. Messenger is the trap.",
       "2015": "You typed a title and went live. Apple Music played. The Windows 10 upgrade was free.",
-      "2016": "The slide lasted twenty-four hours. Snapchat invented the format. People walked into lamp posts.",
     },
 
     /* Guided 6 for years whose Starting Point is inline. 2011 is in start-data.js. */
@@ -137,14 +135,6 @@
         { label: "Windows 10", href: "/app/index.html#/year/2015?stop=itt15-win10" },
         { label: "Reddit redesign", href: "/app/index.html#/year/2015?stop=itt15-reddit" },
         { label: "Year flow map", href: "/app/index.html#/year/2015?stop=map" }
-      ],
-      "2016": [
-        { label: "About 2016", href: "years/2016/pages/about.html" },
-        { label: "Instagram Stories — 24h slide", href: "years/2016/sites/instagram/stories.html" },
-        { label: "Pokémon GO", href: "years/2016/sites/pokemongo/index.html" },
-        { label: "Reactions — five faces", href: "years/2016/sites/facebook/reactions.html" },
-        { label: "WhatsApp E2E — default lock", href: "years/2016/sites/whatsapp/e2e.html" },
-        { label: "Year flow map", href: "years/2016/pages/map.html" }
       ],
       },
 
@@ -384,16 +374,6 @@
         ]
       },
 
-      "2016": {
-        era: "Stories · sidewalks · five faces",
-        thesis: "Lean door. 24-hour slide. Snapchat invented the format.",
-        gold: { label: "Instagram Stories", href: "years/2016/sites/instagram/stories.html", key: "itt16-ig-stories" },
-        guided: [
-          { label: "Pokémon GO", href: "years/2016/sites/pokemongo/index.html" },
-          { label: "Reactions", href: "years/2016/sites/facebook/reactions.html" }
-        ],
-        game: { label: "Gym Rush", href: "years/2016/sites/playable/game.html" }
-      },
       "2020": {
         era: "Zoom Leave · the meeting is the room",
         thesis: "Lean door. Mute, then chat, then Leave. Empty never writes.",
@@ -483,7 +463,6 @@
         stops: [
           { year: "2004", href: "years/2004/sites/facebook/networks.html", note: "thefacebook" },
           { year: "2010", href: "years/2010/sites/facebook/index.html", note: "Open Graph" },
-          { year: "2016", href: "years/2016/sites/facebook/reactions.html", note: "Reactions" }
         ]
       },
       {
@@ -493,7 +472,6 @@
         stops: [
           { year: "2005", href: "years/2005/sites/youtube/upload.html", note: "upload" },
           { year: "2010", href: "years/2010/sites/youtube/index.html", note: "lean" },
-          { year: "2016", href: "years/2016/sites/youtube/index.html", note: "lean" }
         ]
       },
       {
@@ -523,7 +501,7 @@
         blurb: "iOS filter · WhatsApp install.",
         stops: [
           { year: "2010", href: "years/2010/sites/instagram/index.html", note: "iOS filter" },
-          { year: "2016", href: "years/2016/sites/whatsapp/e2e.html", note: "E2E" }
+          { year: "2014", href: "years/2014/sites/whatsapp/index.html", note: "Install" }
         ]
       },
       {
@@ -591,7 +569,7 @@
         blurb: "iOS filter · WhatsApp install.",
         steps: [
           { year: "2010", label: "Instagram iOS", href: "years/2010/sites/instagram/index.html" },
-          { year: "2016", label: "WhatsApp E2E", href: "years/2016/sites/whatsapp/e2e.html" }
+          { year: "2014", label: "WhatsApp Install", href: "years/2014/sites/whatsapp/index.html" }
         ]
       },
       {
@@ -599,7 +577,8 @@
         label: "Broadcast yourself",
         blurb: "Upload · live · 24-hour slide. Vine is the 2013 gold.",
         steps: [
-          { year: "2016", label: "Instagram Stories", href: "years/2016/sites/instagram/stories.html" }
+          { year: "2013", label: "Vine 6s", href: "years/2013/sites/vine/record.html" },
+          { year: "2015", label: "Periscope Go LIVE", href: "/app/index.html#/year/2015?stop=itt15-periscope" }
         ]
       },
       {

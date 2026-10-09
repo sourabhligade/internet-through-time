@@ -9,7 +9,7 @@ const { test, expect } = require("@playwright/test");
 
 const OWN = ["1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2004", "2005", "2006"];
 const BORROWED = { 2003: "2004", 2007: "2004", 2008: "2004", 2009: "2007" };
-const LEAN = ["2010", "2011", "2012", "2013", "2014", "2016", "2020", "2021", "2022"];
+const LEAN = ["2010", "2011", "2012", "2013", "2014", "2020", "2021", "2022"];
 
 async function openShell(page, year) {
   await page.setViewportSize({ width: 1100, height: 800 });
@@ -83,6 +83,8 @@ for (const year of LEAN) {
 }
 
 test("2016 window is Win10 Chrome habit, not an IE bar", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
   await openShell(page, "2016");
   await expect(page.locator("body")).toHaveClass(/os-win10/);
   await expect(page.locator("body")).toHaveClass(/browser-chrome-habit/);
@@ -123,7 +125,6 @@ const ADDR = {
   2012: "http://home.microsoft.com/intl/web2012/",
   2013: "http://home.microsoft.com/intl/web2013/",
   2014: "http://home.microsoft.com/intl/web2014/",
-  2016: "https://www.google.com/web2016/",
   2020: "http://home.microsoft.com/intl/web2020/",
   2021: "http://home.microsoft.com/intl/web2021/",
   2022: "https://www.google.com/web2022/",
@@ -175,7 +176,7 @@ test("2015 header names the stop, and the star stays on the start", async ({ pag
   await expect(page.locator(".stop h1").first()).toHaveText("Apple Music");
 });
 
-for (const year of ["2017", "2018", "2019", "2023", "2024", "2025"]) {
+for (const year of ["2016", "2017", "2018", "2019", "2023", "2024", "2025"]) {
   test(year + " hash is not a door", async ({ page }) => {
     await page.setViewportSize({ width: 1100, height: 800 });
     const res = await page.goto("/app/index.html#/year/" + year);

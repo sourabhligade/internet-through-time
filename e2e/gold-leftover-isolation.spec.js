@@ -31,8 +31,6 @@ const GOLD = [
   { year: "2012", dest: "sites/instagram/android.html", star: "itt12-ig-android" },
   { year: "2013", dest: "sites/vine/record.html", star: "itt13-vine-posts" },
   { year: "2014", dest: "sites/whatsapp/index.html", star: "itt14-wa-install" },
-
-  { year: "2016", dest: "sites/instagram/stories.html", star: "itt16-ig-stories" },
 ];
 
 async function getKey(page, key) {

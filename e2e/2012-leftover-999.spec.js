@@ -14,7 +14,6 @@ const ROOT = path.join(__dirname, "..");
 
 const YEARS = [
   { year: "2012", star: "itt12-ig-android", honesty: "Instagram Android" },
-  { year: "2016", star: "itt16-ig-stories", honesty: "Instagram Stories" },
 ];
 
 function yearHomePath(year) {
@@ -105,6 +104,7 @@ test.describe("wiped years stay boarded", () => {
       expect(fs.existsSync(path.join(ROOT, "years", y, "index.html"))).toBe(false);
     }
     expect(fs.existsSync(path.join(ROOT, "years", "2015", "index.html"))).toBe(false);
+    expect(fs.existsSync(path.join(ROOT, "years", "2016", "index.html"))).toBe(false);
     expect(fs.existsSync(path.join(ROOT, "years", "2017", "index.html"))).toBe(false);
     expect(fs.existsSync(path.join(ROOT, "years", "2021", "index.html"))).toBe(true);
     expect(fs.existsSync(path.join(ROOT, "years", "2022", "index.html"))).toBe(true);

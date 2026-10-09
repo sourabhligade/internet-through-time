@@ -245,19 +245,7 @@
  " <a href=\"map.html\" style=\"color:#cfe8ff\">Year flow map</a> "
  ]
 },
- "2016": {
- "href": "../sites/instagram/stories.html",
- "label": "★ One-thing · Instagram Stories REAL",
- "items": [
- " <a href=\"about.html\">About 2016</a> — dual scale · bans",
- " <a href=\"../sites/instagram/stories.html\">Instagram Stories</a> — 24h slide",
- " <a href=\"../sites/pokemongo/index.html\">Pokémon GO</a> — sidewalks",
- " <a href=\"../sites/facebook/reactions.html\">Reactions</a> — five faces",
- " <a href=\"../sites/whatsapp/e2e.html\">WhatsApp E2E</a> — default lock",
- " <a href=\"map.html\">Year flow map</a> "
- ]
-},
- 
+  
  "2007": {
  "href": "../sites/iphone/index.html",
  "label": "★ One-thing · iPhone Safari REAL",

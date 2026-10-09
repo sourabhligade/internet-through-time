@@ -18,7 +18,7 @@ Do not dest-farm. Do not unfreeze 1994–2006 dest HTML unless a dest-attribute 
 
 ## Standing (2026-10-09)
 
-Intended ship is about **98%**. Visitor dest-true **436** is green. Hub **26 / 26**. Named packs on every live year. Working-flow phases 1–6 marked done on all eight 4-year bands. leftover-2× unique **1,158** on disk. leftover-3× unique catalogs **empty**.
+Intended ship is about **98%**. Visitor dest-true **436** is green. Hub **25 / 25**. Named packs on every live year. Working-flow phases 1–6 marked done on all eight 4-year bands. leftover-2× unique **1,138** on disk. leftover-3× unique catalogs **empty**.
 
 Chrome phases 1–5 and 7 in [`MUSEUM-GRADE-UI.md`](MUSEUM-GRADE-UI.md) already passed their e2e locks (cards, footer/clock, year window, 390px, builder words clipped, public URL). Phase 6 was a checklist walk, not a dest-farm.
 

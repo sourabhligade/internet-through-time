@@ -236,19 +236,7 @@
       accent: "#25d366"
     },
 
-    "2016": {
-      id: "gymrush",
-      title: "Gym Rush",
-      href: "game.html",
-      key: "itt16-game-gymrush",
-      inspire: "Pokémon GO-class map walk — not official art; slither is 2016 but not this game",
-      blurb: "Walk gyms. Incomplete never writes.",
-      why: "Sidewalks filled. The star is still Stories.",
-      era: "Stories. Sidewalks. Five faces. Vine dies.",
-      famous: "Gym Rush",
-      accent: "#c2185b"
-    },
-    
+        
     "2007": {
       id: "safariq",
       title: "Safari Queue",
@@ -260,6 +248,5 @@
       era: "App Store is highlighted. Go leftover is the real click.",
       famous: "Safari Queue",
       accent: "#0a246a"
-    },
-    };
+    }};
 })(typeof window !== "undefined" ? window : this);

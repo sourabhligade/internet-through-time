@@ -66,7 +66,6 @@ test.describe("Fascinating integrate leftovers", () => {
       "/years/1999/sites/seti/index.html",
       "/years/2013/sites/askfm/index.html",
       "/years/2010/sites/instant/index.html",
-      "/years/2016/sites/pokemongo/index.html",
     ];
     const mockRe = /I (saw|watched|visited|acknowledge|was there|read the blackout|see the 503)/i;
     const destFieldRe = /I read the \d{4} period note/i;
@@ -255,6 +254,8 @@ test.describe("Fascinating integrate leftovers", () => {
   });
 
   test("2016 PoGO Catch extras skip · dest-true team is official", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await openClean(page, "/years/2016/sites/pokemongo/index.html", ["itt16-pogo", "itt16-ig-stories"]);
     await verbReady(page);
     await page.locator("[data-pogo-catch]").click();
@@ -285,7 +286,6 @@ test.describe("Fascinating integrate leftovers", () => {
       ["2010", /instagram/],
       ["2012", /instagram\/android/],
       ["2013", /vine\/record/],
-      ["2016", /instagram\/stories/],
     ];
     for (const [year, star] of rows) {
       if (!yearOnDisk(year)) continue;

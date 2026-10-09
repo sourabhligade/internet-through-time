@@ -198,25 +198,5 @@
     "kind": "quiz",
     "title": "IPO Note",
     "next": "/years/2012/sites/playable/game.html"
-  },
-  {
-    "year": "2016",
-    "role": "h",
-    "path": "/years/2016/sites/playable/extra-h.html",
-    "key": "itt16-game-slide2",
-    "id": "slide2",
-    "kind": "parlor",
-    "title": "Slide Two",
-    "next": "/years/2016/sites/playable/extra-i.html"
-  },
-  {
-    "year": "2016",
-    "role": "i",
-    "path": "/years/2016/sites/playable/extra-i.html",
-    "key": "itt16-game-reactnote",
-    "id": "reactnote",
-    "kind": "quiz",
-    "title": "React Note",
-    "next": "/years/2016/sites/playable/game.html"
   }
 ]

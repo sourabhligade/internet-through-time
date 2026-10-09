@@ -62,6 +62,8 @@ async function rewriteLoKey(page, from, to) {
 
 test.describe("2014-2017 phase 5 leftover off the star", () => {
   test("Stories gold-lx writes leftover and leaves the star empty", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await page.goto("/years/2016/sites/instagram/stories.html");
     await readyGold(page, "2016");
     await page.evaluate(() => {
@@ -84,6 +86,8 @@ test.describe("2014-2017 phase 5 leftover off the star", () => {
   });
 
   test("Stories leftover aimed at the star refuses and leaves the official key", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await rewriteLoKey(page, "gold-lx", "ig-stories");
     await page.goto("/years/2016/sites/instagram/stories.html");
     const planted = JSON.stringify({

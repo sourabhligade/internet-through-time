@@ -13,7 +13,6 @@ const ROOT = path.join(__dirname, "..");
 const REGISTER = path.join(ROOT, "e2e/registers/band-2014-2017.json");
 const YEAR_TIMEOUT = {
   "2014": 10 * 60 * 1000,
-  "2016": 15 * 60 * 1000,
 };
 
 const doc = JSON.parse(fs.readFileSync(REGISTER, "utf8"));
@@ -50,13 +49,16 @@ async function finishOfficial(page) {
 
 test.describe("2014-2017 phase 6 band check", () => {
   test("register still matches the census and 2017 stays absent", () => {
-    expect(doc.census.savePages).toBe(115);
-    expect(doc.rows).toHaveLength(115);
+    expect(doc.census.savePages).toBe(18);
+    expect(doc.rows).toHaveLength(18);
     expect(fs.existsSync(path.join(ROOT, "years/2015"))).toBe(false);
+    expect(fs.existsSync(path.join(ROOT, "years/2016"))).toBe(false);
     expect(fs.existsSync(path.join(ROOT, "years/2017"))).toBe(false);
   });
 
   test("Stories empty then a real add is official with Next", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await page.goto("/years/2016/sites/instagram/stories.html");
     await verbReady(page);
     await page.evaluate(() => localStorage.removeItem("itt16-ig-stories"));
@@ -92,7 +94,7 @@ test.describe("2014-2017 phase 6 band check", () => {
     }
   });
 
-  for (const year of ["2014", "2016"]) {
+  for (const year of ["2014"]) {
     const rows = doc.rows.filter((row) => row.year === year);
     test("walk " + year + " (" + rows.length + " save pages)", async ({ browser }) => {
       test.setTimeout(YEAR_TIMEOUT[year]);

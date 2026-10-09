@@ -146,22 +146,7 @@
       "href": "extra-b.html",
       "key": "itt12-game-ipopin"
     }
-  ],
-  "2016": [
-    {
-      "id": "storytap",
-      "title": "Story tap",
-      "href": "extra-a.html",
-      "key": "itt16-game-storytap"
-    },
-    {
-      "id": "gymtap",
-      "title": "Gym tap",
-      "href": "extra-b.html",
-      "key": "itt16-game-gymtap"
-    }
-  ],
-  };
+  ]};
   /* ITT-3G:start */
   ;(ITT.yearExtraGames['1994'] = ITT.yearExtraGames['1994'] || []).push({id:'gopherdig',title:'Gopher Dig',href:"extra-c.html",key:"itt94-game-gopherdig"});
   ;(ITT.yearExtraGames['1994'] = ITT.yearExtraGames['1994'] || []).push({id:'hang144',title:'14.4 Hang',href:"extra-d.html",key:"itt94-game-hang144"});
@@ -211,9 +196,6 @@
   ;(ITT.yearExtraGames['2014'] = ITT.yearExtraGames['2014'] || []).push({id:'slackchan',title:'Slack Chan',href:"extra-c.html",key:"itt14-game-slackchan"});
   ;(ITT.yearExtraGames['2014'] = ITT.yearExtraGames['2014'] || []).push({id:'icepour',title:'Ice Pour',href:"extra-d.html",key:"itt14-game-icepour"});
   ;(ITT.yearExtraGames['2014'] = ITT.yearExtraGames['2014'] || []).push({id:'rotatels',title:'Rotate TLS',href:"extra-e.html",key:"itt14-game-rotatels"});
-  ;(ITT.yearExtraGames['2016'] = ITT.yearExtraGames['2016'] || []).push({id:'coilsnake',title:'Coil Snake',href:"extra-c.html",key:"itt16-game-coilsnake"});
-  ;(ITT.yearExtraGames['2016'] = ITT.yearExtraGames['2016'] || []).push({id:'tankslice',title:'Tank Slice',href:"extra-d.html",key:"itt16-game-tankslice"});
-  ;(ITT.yearExtraGames['2016'] = ITT.yearExtraGames['2016'] || []).push({id:'slideexpire',title:'Slide Expire',href:"extra-e.html",key:"itt16-game-slideexpire"});
   /* ITT-3G:end */
   /* ITT-2G:start */
   ;(ITT.yearExtraGames['1994'] = ITT.yearExtraGames['1994'] || []).push({id:'fingerwho',title:'Finger Who',href:"extra-f.html",key:"itt94-game-fingerwho"});
@@ -248,8 +230,6 @@
   ;(ITT.yearExtraGames['2013'] = ITT.yearExtraGames['2013'] || []).push({id:'snap24',title:'Snap 24',href:"extra-g.html",key:"itt13-game-snap24"});
   ;(ITT.yearExtraGames['2014'] = ITT.yearExtraGames['2014'] || []).push({id:'wa2step',title:'WA Two-Step',href:"extra-f.html",key:"itt14-game-wa2step"});
   ;(ITT.yearExtraGames['2014'] = ITT.yearExtraGames['2014'] || []).push({id:'bleednote',title:'Bleed Note',href:"extra-g.html",key:"itt14-game-bleednote"});
-  ;(ITT.yearExtraGames['2016'] = ITT.yearExtraGames['2016'] || []).push({id:'story24b',title:'Story 24b',href:"extra-f.html",key:"itt16-game-story24b"});
-  ;(ITT.yearExtraGames['2016'] = ITT.yearExtraGames['2016'] || []).push({id:'pokehunt',title:'Poke Hunt',href:"extra-g.html",key:"itt16-game-pokehunt"});
   /* ITT-2G:end */
   /* ITT-2G2:start */
   ;(ITT.yearExtraGames['1994'] = ITT.yearExtraGames['1994'] || []).push({id:'gophermap',title:'Gopher Map',href:"extra-h.html",key:"itt94-game-gophermap"});
@@ -284,7 +264,5 @@
   ;(ITT.yearExtraGames['2013'] = ITT.yearExtraGames['2013'] || []).push({id:'flatnote',title:'Flat Note',href:"extra-i.html",key:"itt13-game-flatnote"});
   ;(ITT.yearExtraGames['2014'] = ITT.yearExtraGames['2014'] || []).push({id:'install2',title:'Install Two',href:"extra-h.html",key:"itt14-game-install2"});
   ;(ITT.yearExtraGames['2014'] = ITT.yearExtraGames['2014'] || []).push({id:'icenote',title:'Ice Note',href:"extra-i.html",key:"itt14-game-icenote"});
-  ;(ITT.yearExtraGames['2016'] = ITT.yearExtraGames['2016'] || []).push({id:'slide2',title:'Slide Two',href:"extra-h.html",key:"itt16-game-slide2"});
-  ;(ITT.yearExtraGames['2016'] = ITT.yearExtraGames['2016'] || []).push({id:'reactnote',title:'React Note',href:"extra-i.html",key:"itt16-game-reactnote"});
   /* ITT-2G2:end */
 })(typeof window !== "undefined" ? window : this);

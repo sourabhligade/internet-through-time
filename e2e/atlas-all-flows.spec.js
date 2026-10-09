@@ -11,19 +11,19 @@ const trio = require("../scripts/popular-3x3-sites.json");
 const OPEN = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003",
   "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012",
-  "2013", "2014", "2015", "2016", "2020", "2021", "2022"
+  "2013", "2014", "2015", "2020", "2021", "2022"
 ];
 const WIPED = ["2023", "2024", "2025"];
 const LEAN = [
   "2007", "2008", "2009", "2010", "2011", "2012",
-  "2013", "2014", "2015", "2016", "2020", "2021", "2022"
+  "2013", "2014", "2015", "2020", "2021", "2022"
 ];
 const WINGS = {
   gray: ["1994", "1995", "1996"],
   bubble: ["1997", "1998", "1999", "2000"],
   rebuild: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"],
   phone: ["2008", "2009", "2010", "2011", "2012", "2013"],
-  stream: ["2014", "2015", "2016"]
+  stream: ["2014", "2015"]
 };
 /** @type {Record<string, RegExp>} */
 const GOLD = {
@@ -49,7 +49,6 @@ const GOLD = {
   "2013": /Vine/i,
   "2014": /WhatsApp Install/i,
   "2015": /Periscope/i,
-  "2016": /Instagram Stories/i,
   "2020": /Zoom Leave/i,
   "2021": /Ask App Not to Track/i,
   "2022": /ChatGPT/i,
@@ -91,7 +90,7 @@ test.describe("atlas hallway — all flows", () => {
     await page.goto("/");
     await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
     await expect(page.locator(".start-hint")).toHaveCount(0);
-    await expect(page.locator("a.year-card.available")).toHaveCount(26);
+    await expect(page.locator("a.year-card.available")).toHaveCount(25);
   });
 
   test("remember lines are year-true and wiped years stay off the spine", async ({ page }) => {
@@ -230,13 +229,13 @@ test.describe("atlas hallway — all flows", () => {
     }
   });
 
-  test("museum-wide Every flow lists 26 golds and live official trails", async ({ page }) => {
+  test("museum-wide Every flow lists 25 golds and live official trails", async ({ page }) => {
     await page.goto("/atlas/");
     await waitCatalog(page);
     const golds = page.locator("#atlas-all-golds ol li");
-    await expect(golds).toHaveCount(26);
+    await expect(golds).toHaveCount(25);
     const goldHrefs = await page.locator("#atlas-all-golds a").evaluateAll((els) => els.map((a) => a.getAttribute("href") || ""));
-    expect(goldHrefs.length).toBe(26);
+    expect(goldHrefs.length).toBe(25);
     for (const h of goldHrefs) await expectLive(page, h, "all-golds");
 
     await expect(page.locator("#atlas-all-guided")).toBeVisible();

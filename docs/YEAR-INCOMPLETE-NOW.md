@@ -3,11 +3,11 @@
 **Not ship law.** Live playable state is [`DISK-TRUTH.md`](DISK-TRUTH.md).  
 **Branch:** `museum/1994-2020-lean` · local **ahead of** origin `81c652c65`.  
 **Visitor gate:** `npm run check` 0 · dest-true **436** · warehouse year-flow aligned · named packs filled.  
-**Scan close (2026-10-09):** YouTube rebind assigns `ITT.youtube.boot`. 2016 AirPods/Dyn stamp `official: true` and skip when verb owns. 2020 extras year-gated. Atlas skips 2017. JumpStation DROP row removed from flow-maps. github-ready React 2015 has no HTML tree. leftover-2× unique catalog **1,158**. 2009 is live (BOARDED sets). Dest-gold skips any `[data-official-verb]` form. Bing empty and Technorati empty never write. HousingMaps persists on filter submit. Clickscape persists on bank/chop/mine. Kit official-kind includes `itt15-periscope`. Follow-site skip is absent years only. `--chrome-light` is defined. 2008 leftover dests use the XP leftover face. 2009 hidden Like-gold buttons carry `data-lo-trap`.  
+**Scan close (2026-10-09):** YouTube rebind assigns `ITT.youtube.boot`. 2016 AirPods/Dyn stamp `official: true` and skip when verb owns. 2020 extras year-gated. Atlas skips 2017. JumpStation DROP row removed from flow-maps. github-ready React 2015 has no HTML tree. leftover-2× unique catalog **1,138**. 2009 is live (BOARDED sets). Dest-gold skips any `[data-official-verb]` form. Bing empty and Technorati empty never write. HousingMaps persists on filter submit. Clickscape persists on bank/chop/mine. Kit official-kind includes `itt15-periscope`. Follow-site skip is absent years only. `--chrome-light` is defined. 2008 leftover dests use the XP leftover face. 2009 hidden Like-gold buttons carry `data-lo-trap`.  
 **Push:** dest-true is green. GitHub Actions will not run (#17 billing lock). Say **push**.  
 **Museum-grade UI+UX remainder:** [`MUSEUM-GRADE-UX-COMPLETE.md`](MUSEUM-GRADE-UX-COMPLETE.md). Chrome phases 1–7 shipped. Slices A–E implemented. UX phases 1–5 implemented (honesty, dest in window, receipt glass, phone 390, 2015 React glass). B1 first-boot `pages/home.html` abort closed (`seedHistory` leaves relative HOME loading; same-path Home/reload bounce remains). Slice F public tree waits on **push**. Not dest-farm. Five UX phase locks: [`MUSEUM-GRADE-UX-PHASES.md`](MUSEUM-GRADE-UX-PHASES.md) (`e2e/ux-phase1-honesty.spec.js` … `e2e/ux-phase5-2015.spec.js`). Off dest-true 12. All-phase scan: [`PHASE-SCAN.md`](PHASE-SCAN.md).
 
-Do not dest-farm. Do not restore 2017–2019 or 2023–2025. Do not unfreeze 1994–2006. Do not run 1999–2004 `2x` until named. Do not start 2008 Pack B/C until named.
+Do not dest-farm. Do not restore 2016–2019 or 2023–2025 until named. Do not unfreeze 1994–2006. Do not run 1999–2004 `2x` until named. Do not start 2008 Pack B/C until named.
 
 ---
 
@@ -58,7 +58,6 @@ Named packs added (off dest-true 12): 2005 mvp+flows+densify+trail; 2008 / 2009 
 | 2013 | HTML lean | **9** | one-thing + official-10 | mvp flows densify trail | trail n=9 |
 | 2014 | HTML lean | **9** | one-thing + official-10 | mvp flows densify trail | trail n=9 |
 | 2015 | React | 10 | one-thing + 2015-mvp | mvp flows densify trail + 3x-cut | image-readme line · ALSO_2015 empty |
-| 2016 | HTML lean | 10 | one-thing + official-10 | mvp flows densify trail | — |
 | 2020 | HTML lean | 10 | one-thing + 2020-mvp | mvp flows densify trail | leftover-2× catalog 0 |
 | 2021 | HTML lean | 10 | one-thing + 2021-mvp | mvp flows densify trail + start-habit | leftover-2× catalog 0 |
 | 2022 | HTML lean | 10 | one-thing + 2022-mvp | mvp flows densify trail | leftover-2× catalog 0 |
@@ -69,6 +68,7 @@ Named packs added (off dest-true 12): 2005 mvp+flows+densify+trail; 2008 / 2009 
 
 | Year | Disk |
 |------|------|
+| 2016 | wiped pending rework · no tree · no hub card · no React door |
 | 2017 | no tree · no hub card · no React door |
 | 2018 | no tree · no hub card · no React door |
 | 2019 | no tree · no hub card · no React door |

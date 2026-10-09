@@ -143,34 +143,4 @@
       "ph": "truecrypt",
       "btn": "Volume leftover"
     }
-  ],
-  "2016": [
-    {
-      "id": "youtube",
-      "name": "YouTube",
-      "title": "YouTube leftover — 2016",
-      "why": "2016 leftover-3× second. Unique dest. Not the chip.",
-      "verb": "Watch leftover",
-      "ph": "youtube",
-      "btn": "Watch leftover"
-    },
-    {
-      "id": "alphago",
-      "name": "AlphaGo",
-      "title": "AlphaGo leftover — 2016",
-      "why": "2016 leftover-3× second. Unique dest. Not the chip.",
-      "verb": "Match leftover",
-      "ph": "alphago",
-      "btn": "Match leftover"
-    },
-    {
-      "id": "assistant",
-      "name": "Assistant",
-      "title": "Assistant leftover — 2016",
-      "why": "2016 leftover-3× second. Unique dest. Not the chip.",
-      "verb": "Ask leftover",
-      "ph": "assistant",
-      "btn": "Ask leftover"
-    }
-  ]
-}
+  ]}

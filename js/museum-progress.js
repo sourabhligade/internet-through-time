@@ -190,9 +190,6 @@
     "2015": yearVisitTour("2015",
       { path: "app/index.html#/year/2015?stop=itt15-periscope", label: "Periscope Go LIVE", blurb: "Type a title, then Go LIVE.", match: "stop=itt15-periscope" },
       { path: "app/index.html#/year/2015?stop=itt15-music", label: "Apple Music", blurb: "June 2015. Play is the save.", match: "stop=itt15-music" }),
-    "2016": yearVisitTour("2016",
-      { path: "sites/instagram/stories.html", label: "Instagram Stories", blurb: "24h slide. Snapchat deserve the credit.", match: "/instagram/stories" },
-      { path: "sites/pokemongo/index.html", label: "Pokémon GO", blurb: "Outdoor AR. Empty / trap never write. Not the chip.", match: "/pokemongo/" }),
     "2007": yearVisitTour("2007",
       { path: "sites/iphone/index.html", label: "iPhone Safari", blurb: "Empty / App Store / Chrome never write. Go does.", match: "/iphone/" },
       { path: "sites/streetview/index.html", label: "Street View leftover", blurb: "29 May leftover. Not the chip.", match: "/streetview/" }),
@@ -210,8 +207,7 @@
       { path: "sites/signal/index.html", label: "Signal", blurb: "15 May delay. Not the chip.", match: "/signal/" }),
     "2022": yearVisitTour("2022",
       { path: "sites/chatgpt/index.html", label: "ChatGPT Send", blurb: "Empty / GPT-4 never writes. Send does.", match: "/chatgpt/" },
-      { path: "sites/wordle/index.html", label: "Wordle", blurb: "NYT 31 Jan. Not the chip.", match: "/wordle/" }),
-  };
+      { path: "sites/wordle/index.html", label: "Wordle", blurb: "NYT 31 Jan. Not the chip.", match: "/wordle/" })};
 
   var TRAILS = {
     "first-night": {

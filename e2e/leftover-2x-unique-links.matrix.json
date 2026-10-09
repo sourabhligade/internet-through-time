@@ -1261,31 +1261,5 @@
     "year": "2015",
     "dests": [],
     "n": 0
-  },
-  {
-    "year": "2016",
-    "dests": [
-      "houseparty",
-      "jio",
-      "linkedinms",
-      "smario",
-      "pixel",
-      "nougat",
-      "duo",
-      "oculusrift",
-      "psvr",
-      "overwatch",
-      "doom2016",
-      "uncharted4",
-      "nomanssky",
-      "clashroyale",
-      "panamapapers",
-      "douyin",
-      "airpods",
-      "allo",
-      "googlehome",
-      "youtube"
-    ],
-    "n": 20
   }
 ]

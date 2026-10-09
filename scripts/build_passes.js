@@ -44,7 +44,6 @@ const STARS = {
   "2012": "itt12-ig-android",
   "2013": "itt13-vine-posts",
   "2014": "itt14-wa-install",
-  "2016": "itt16-ig-stories",
   "2020": "itt20-zoom",
   "2021": "itt21-att",
   "2022": "itt22-chatgpt",

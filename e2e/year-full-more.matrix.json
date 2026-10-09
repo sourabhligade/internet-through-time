@@ -178,23 +178,5 @@
     "engine": "cards",
     "path": "/years/2012/sites/playable/more-d.html",
     "next": "/years/2012/sites/playable/game.html"
-  },
-  {
-    "year": "2016",
-    "slot": "c",
-    "id": "owpayload",
-    "key": "itt16-game-owpayload",
-    "engine": "corridor",
-    "path": "/years/2016/sites/playable/more-c.html",
-    "next": "/years/2016/sites/playable/more-d.html"
-  },
-  {
-    "year": "2016",
-    "slot": "d",
-    "id": "stardewpl",
-    "key": "itt16-game-stardewpl",
-    "engine": "craft",
-    "path": "/years/2016/sites/playable/more-d.html",
-    "next": "/years/2016/sites/playable/game.html"
   }
 ]

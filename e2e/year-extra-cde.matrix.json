@@ -328,35 +328,5 @@
     "kind": "quiz",
     "title": "Rotate TLS",
     "next": "/years/2014/sites/playable/game.html"
-  },
-  {
-    "year": "2016",
-    "role": "c",
-    "path": "/years/2016/sites/playable/extra-c.html",
-    "key": "itt16-game-coilsnake",
-    "id": "coilsnake",
-    "kind": "runner",
-    "title": "Coil Snake",
-    "next": "/years/2016/sites/playable/extra-d.html"
-  },
-  {
-    "year": "2016",
-    "role": "d",
-    "path": "/years/2016/sites/playable/extra-d.html",
-    "key": "itt16-game-tankslice",
-    "id": "tankslice",
-    "kind": "parlor",
-    "title": "Tank Slice",
-    "next": "/years/2016/sites/playable/extra-e.html"
-  },
-  {
-    "year": "2016",
-    "role": "e",
-    "path": "/years/2016/sites/playable/extra-e.html",
-    "key": "itt16-game-slideexpire",
-    "id": "slideexpire",
-    "kind": "hold",
-    "title": "Slide Expire",
-    "next": "/years/2016/sites/playable/game.html"
   }
 ]

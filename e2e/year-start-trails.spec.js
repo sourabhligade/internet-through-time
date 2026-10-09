@@ -11,7 +11,7 @@ test.describe("Per-year guided start trails", () => {
       const ids = Object.keys(T).filter((k) => /-start$/.test(k)).sort();
       return ids;
     });
-    expect(trails.length).toBe(26);
+    expect(trails.length).toBe(25);
     expect(trails[0]).toBe("1994-start");
     expect(trails).toContain("2005-start");
     expect(trails).toContain("2006-start");
@@ -20,10 +20,10 @@ test.describe("Per-year guided start trails", () => {
     expect(trails).toContain("2009-start");
     expect(trails).toContain("2011-start");
     expect(trails).toContain("2015-start");
-    expect(trails).toContain("2016-start");
     expect(trails).toContain("2020-start");
     expect(trails).toContain("2021-start");
     expect(trails).toContain("2022-start");
+    expect(trails).not.toContain("2016-start");
     expect(trails).not.toContain("2017-start");
     expect(trails).not.toContain("2018-start");
     expect(trails).not.toContain("2019-start");

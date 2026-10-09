@@ -18,7 +18,6 @@ const LEAN_DESTS = [
   { year: "2012", href: "/years/2012/sites/coinbase/index.html", suffix: "coinbase-lx", star: "itt12-ig-android" },
   { year: "2013", href: "/years/2013/sites/bitcoin/index.html", suffix: "bitcoin-lx", star: "itt13-vine-posts" },
   { year: "2014", href: "/years/2014/sites/alibabaipo/index.html", suffix: "alibabaipo-lx", star: "itt14-wa-install" },
-  { year: "2016", href: "/years/2016/sites/airpods/index.html", suffix: "airpods-lx", star: "itt16-ig-stories" },
   { year: "2020", href: "/years/2020/sites/amazon/index.html", suffix: "amazon-lx", star: "itt20-zoom" },
   { year: "2021", href: "/years/2021/sites/amazon/index.html", suffix: "amazon-lx", star: "itt21-att" },
   { year: "2022", href: "/years/2022/sites/amazon/index.html", suffix: "amazon-lx", star: "itt22-chatgpt" },
@@ -56,6 +55,8 @@ test.describe("lean leftover dests", () => {
   });
 
   test("2016 ytl-only pokemongo about folds onto leftover-official", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await leftoverOfficialDest(page, "/years/2016/sites/pokemongo/about.html", "pop7-go16", "itt16-ig-stories");
   });
 

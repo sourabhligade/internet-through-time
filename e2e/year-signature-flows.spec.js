@@ -758,6 +758,8 @@ test.describe('year-signature 2015', () => {
 
 test.describe('year-signature 2016', () => {
   test('Instagram Stories 24h REAL → itt16-ig-stories', async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     skipIfWiped('2016');
     await enterYear(page, '2016');
     await page.evaluate(() => {

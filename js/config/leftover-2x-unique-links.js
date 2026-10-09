@@ -3921,9 +3921,7 @@
     {
       "id": "memeorandum",
       "name": "Memeorandum"
-    },
-
-  ],
+    }],
   "2007": [
     { "id": "hackernews", "name": "Hacker News leftover" },
     { "id": "friendfeed", "name": "FriendFeed leftover" },
@@ -4176,86 +4174,6 @@
     { "id": "instagram", "name": "Instagram" },
     { "id": "snapchat", "name": "Snapchat" },
     { "id": "uber", "name": "Uber" }
-  ],
-  "2016": [
-    {
-      "id": "houseparty",
-      "name": "Houseparty"
-    },
-    {
-      "id": "jio",
-      "name": "Jio"
-    },
-    {
-      "id": "linkedinms",
-      "name": "LinkedIn"
-    },
-    {
-      "id": "smario",
-      "name": "Super Mario Run"
-    },
-    {
-      "id": "pixel",
-      "name": "Pixel leftover"
-    },
-    {
-      "id": "nougat",
-      "name": "Android Nougat leftover"
-    },
-    {
-      "id": "duo",
-      "name": "Duo leftover"
-    },
-    {
-      "id": "oculusrift",
-      "name": "Oculus Rift leftover"
-    },
-    {
-      "id": "psvr",
-      "name": "PlayStation VR leftover"
-    },
-    {
-      "id": "overwatch",
-      "name": "Overwatch leftover"
-    },
-    {
-      "id": "doom2016",
-      "name": "DOOM leftover"
-    },
-    {
-      "id": "uncharted4",
-      "name": "Uncharted 4 leftover"
-    },
-    {
-      "id": "nomanssky",
-      "name": "No Man&#x27;s Sky leftover"
-    },
-    {
-      "id": "clashroyale",
-      "name": "Clash Royale leftover"
-    },
-    {
-      "id": "panamapapers",
-      "name": "Panama Papers leftover"
-    },
-    {
-      "id": "douyin",
-      "name": "Douyin leftover"
-    },
-    {
-      "id": "airpods",
-      "name": "AirPods leftover"
-    },
-    {
-      "id": "allo",
-      "name": "Allo leftover"
-    },
-    {
-      "id": "googlehome",
-      "name": "Google Home leftover"
-    },
-    { "id": "youtube", "name": "YouTube.com \u00b7 June 2016 visits #3" }
-  ],
-}
+  ]}
 ;
 })(typeof window !== "undefined" ? window : this);

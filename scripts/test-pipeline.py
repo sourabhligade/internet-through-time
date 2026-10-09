@@ -289,8 +289,8 @@ def test_year_card() -> None:
     if open_years != list(SHIP_YEARS):
         fail("year-card", "SHIP_YEARS drifted from the card")
         return
-    if len(open_years) != 26:
-        fail("year-card", f"expected 26 open doors, got {len(open_years)}")
+    if len(open_years) != 25:
+        fail("year-card", f"expected 25 open doors, got {len(open_years)}")
         return
     if years.get("2011", {}).get("kind") != "html" or years.get("2011", {}).get("star") != "itt11-gplus":
         fail("year-card", "2011 must be html with star itt11-gplus")
@@ -304,7 +304,7 @@ def test_year_card() -> None:
     if years.get("2022", {}).get("kind") != "html" or years.get("2022", {}).get("star") != "itt22-chatgpt":
         fail("year-card", "2022 must be html with star itt22-chatgpt")
         return
-    for wiped in ("2017", "2018", "2019", "2023", "2024", "2025"):
+    for wiped in ("2016", "2017", "2018", "2019", "2023", "2024", "2025"):
         if years.get(wiped, {}).get("kind") != "absent":
             fail("year-card", f"{wiped} must stay absent")
             return
@@ -313,7 +313,7 @@ def test_year_card() -> None:
         fail("year-card", f"frozen years {sorted(frozen)}")
         return
     lean = sorted(y for y, r in years.items() if r.get("leanBoot"))
-    if lean != ["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2016", "2020", "2021", "2022"]:
+    if lean != ["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2020", "2021", "2022"]:
         fail("year-card", f"leanBoot {lean}")
         return
     if years.get("2008", {}).get("kind") != "html":

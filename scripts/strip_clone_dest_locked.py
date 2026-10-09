@@ -148,6 +148,8 @@ def pass_c_2012_yahoo() -> None:
 
 def pass_c_2016_dyn() -> None:
     p = ROOT / "years/2016/sites/dyn/index.html"
+    if not p.is_file():
+        return
     t = read(p)
     # keep dest-unique dyn-ack + leftover-3× cream
     t = re.sub(

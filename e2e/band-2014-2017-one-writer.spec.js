@@ -36,8 +36,9 @@ async function finishOfficial(page) {
 }
 
 test.describe("2014-2017 phase 2 one writer", () => {
-  test("2015 tree and 2017 stay absent", () => {
+  test("2015 tree, 2016, and 2017 stay absent", () => {
     expect(fs.existsSync(path.join(__dirname, "../years/2015"))).toBe(false);
+    expect(fs.existsSync(path.join(__dirname, "../years/2016"))).toBe(false);
     expect(fs.existsSync(path.join(__dirname, "../years/2017"))).toBe(false);
   });
 
@@ -53,6 +54,8 @@ test.describe("2014-2017 phase 2 one writer", () => {
   });
 
   test("Stories empty write nothing then a real add is official", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await page.goto("/years/2016/sites/instagram/stories.html");
     await verbReady(page);
     await page.evaluate(() => localStorage.removeItem("itt16-ig-stories"));
@@ -64,6 +67,8 @@ test.describe("2014-2017 phase 2 one writer", () => {
   });
 
   test("Pokémon GO empty catch writes nothing then a real team is official", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await page.goto("/years/2016/sites/pokemongo/index.html");
     await verbReady(page);
     await page.evaluate(() => localStorage.removeItem("itt16-pogo"));
@@ -75,6 +80,8 @@ test.describe("2014-2017 phase 2 one writer", () => {
   });
 
   test("Reactions Like-only writes nothing then a real Like with reqs is official", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await page.goto("/years/2016/sites/facebook/reactions.html");
     await verbReady(page);
     await page.evaluate(() => localStorage.removeItem("itt16-fb-react"));

@@ -1024,36 +1024,7 @@
       "btn": "Ride leftover"
     }
   ],
-  "2016": [
-    {
-      "id": "slack",
-      "name": "Slack",
-      "title": "Slack leftover — 2016",
-      "why": "2016 leftover-3× first. Unique dest. Not the chip.",
-      "verb": "Channel leftover",
-      "ph": "slack",
-      "btn": "Channel leftover"
-    },
-    {
-      "id": "reddit",
-      "name": "Reddit",
-      "title": "Reddit leftover — 2016",
-      "why": "2016 leftover-3× first. Unique dest. Not the chip.",
-      "verb": "Open leftover",
-      "ph": "reddit",
-      "btn": "Open leftover"
-    },
-    {
-      "id": "netflix",
-      "name": "Netflix",
-      "title": "Netflix leftover — 2016",
-      "why": "2016 leftover-3× first. Unique dest. Not the chip.",
-      "verb": "Queue leftover",
-      "ph": "netflix",
-      "btn": "Queue leftover"
-    }
-  ],
-  "2001": [
+    "2001": [
     {
       "id": "google",
       "name": "Google",

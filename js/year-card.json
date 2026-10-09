@@ -345,22 +345,7 @@
       }
     },
     "2016": {
-      "kind": "html",
-      "href": "years/2016/",
-      "star": "itt16-ig-stories",
-      "leanBoot": true,
-      "hashToHtml": true,
-      "chrome": {
-        "os": "win10",
-        "browser": "chrome-habit",
-        "toolbar": "chrome22",
-        "assetYear": null,
-        "location": "https://www.google.com/web2016/",
-        "maximized": true,
-        "hasTaskbar": true,
-        "osPhrase": "Windows 10 rising",
-        "roomClause": "Edge Spartan residual"
-      }
+      "kind": "absent"
     },
     "2017": {
       "kind": "absent"

@@ -37,7 +37,6 @@ const YEARS = [
   '2012',
   '2013',
   '2014',
-  '2016',
 ];
 
 /** @param {string} year */

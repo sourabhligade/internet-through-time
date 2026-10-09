@@ -80,6 +80,12 @@ function isLiveYear(year) {
   return !!(rec && (rec.kind === "html" || rec.kind === "react"));
 }
 
+function skipIfWiped(year) {
+  const { test } = require("@playwright/test");
+  const y = String(year);
+  test.skip(!isLiveYear(y) || !yearHtmlOnDisk(y), y + " wiped");
+}
+
 /**
  * Boarded year: no hub card, no dirbar.
  * 2023+: no tree — /years/YYYY/ 404s; still no hub card.
@@ -879,6 +885,7 @@ module.exports = {
   openReactStop,
   completeReactStop,
   isLiveYear,
+  skipIfWiped,
   expectYearBoarded,
   enterYear,
   goInFrame,

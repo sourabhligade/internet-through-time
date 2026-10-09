@@ -1302,63 +1302,6 @@
   "hasTaskbar": true,
   "maximized": true
 },
-  "2016": {
-  "title": "Chrome habit — 2016",
-  "css": [
-    "win95-netscape.css",
-    "chrome-habit.css",
-      "period-2016.css"],
-  "bodyClass": "year-2016 os-win10 browser-chrome-habit",
-  "boot": "browser-2016.js",
-  "dir": [
-    {
-      "go": "pages/home.html",
-      "label": "Start"
-    },
-    {
-      "go": "sites/instagram/stories.html",
-      "label": "Stories"
-    },
-    {
-      "go": "sites/pokemongo/index.html",
-      "label": "GO"
-    },
-    {
-      "go": "sites/facebook/reactions.html",
-      "label": "Reactions"
-    },
-    {
-      "go": "sites/whatsapp/e2e.html",
-      "label": "E2E"
-    },
-    {
-      "go": "pages/about.html",
-      "label": "About"
-    }
-  ],
-  "chrome": null,
-  "toolbar": "chrome22",
-  "family": "chrome",
-  "location": "https://www.google.com/web2016/",
-  "prefHome": "https://www.google.com/web2016/",
-  "yearLabel": "2016 · Windows 10 rising · Chrome habit · Edge Spartan residual",
-  "windowTitle": "Welcome to the World Wide Web — Chrome habit",
-  "connectH2": "Network Connections",
-  "connectBtn": "Connect (always-on broadband)",
-  "skipBtn": "Skip connect",
-  "thesis": "Initializing network adapter... Connect (always-on broadband) Skip connect 2016 thesis: Stories at the top · sidewalks · five faces on Like. Instagram Stories · Pokémon GO leftover · Reactions · WhatsApp E2E.",
-  "openLoc": "Open Location:",
-  "aboutHtml": "<p><b>Chrome habit</b></p><p>Museum desktop. Educational historical Web exhibit.</p>",
-  "startBanner": "Windows<b>10</b>",
-  "taskBtn": "Chrome habit",
-  "icon": "e",
-  "aria": "Chrome habit",
-  "locLabel": "Address",
-  "bookmarksTitle": "Favorites",
-  "mailPh": "you@example.com",
-  "hasTaskbar": true,
-  "maximized": true
-},
   "2020": {
   "title": "Chrome habit — 2020",
   "css": [

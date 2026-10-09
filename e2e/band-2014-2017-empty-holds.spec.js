@@ -27,6 +27,8 @@ test.describe("2014-2017 phase 3 empty holds", () => {
   });
 
   test("Stories empty Add writes nothing", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await page.goto("/years/2016/sites/instagram/stories.html");
     await verbReady(page);
     await page.evaluate(() => localStorage.removeItem("itt16-ig-stories"));

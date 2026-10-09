@@ -307,18 +307,6 @@ const SIGNATURE = {
       await frame.locator('[data-ig12-share]').click();
     },
   },
-  '2016': {
-    path: 'sites/instagram/stories.html',
-    keySuffix: 'ig-stories',
-    body: /Stor(y|ies)|24h|Instagram/i,
-    act: async (page) => {
-      const frame = contentFrame(page);
-      await expect(frame.locator('[data-ig-story-add]')).toBeVisible({ timeout: 15000 });
-      await frame.locator('[data-ig-story-text]').fill('handoff 24h');
-      await tickHonestyBoxes(frame);
-      await frame.locator('[data-ig-story-add]').click();
-    },
-  },
 };
 
 const YEARS = [
@@ -335,7 +323,6 @@ const YEARS = [
   '2004',
   '2010',
   '2012',
-  '2016',
 ];
 
 /**

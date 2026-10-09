@@ -1,5 +1,5 @@
 /**
- * Dest-unique official trail per year. 1994–2016 and 2020–2022 are live. 2017, 2018, 2019, and 2023–2025 are absent.
+ * Dest-unique official trail per year. 1994–2015 and 2020–2022 are live. 2016–2019 and 2023–2025 are absent.
  * One dest slug once. Pack dests and leftover-3× unique dests stay off this trail.
  * Consumed by js/immersion/flow-trails.js.
  */
@@ -406,19 +406,7 @@
       {"n": 9, "name": "Tile Fold", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt14-game-tilefold", "nextHref": "sites/whatsapp/index.html", "nextLabel": "WhatsApp"}
     ],
 
-    "2016": [
-      {"n": 1, "name": "Instagram Stories", "href": "sites/instagram/stories.html", "match": "/instagram/stories", "whenKey": "itt16-ig-stories", "nextHref": "sites/pokemongo/index.html", "nextLabel": "Pokémon GO"},
-      {"n": 2, "name": "Pokémon GO", "href": "sites/pokemongo/index.html", "match": "/pokemongo/", "whenKey": "itt16-pogo", "nextHref": "sites/facebook/reactions.html", "nextLabel": "Reactions"},
-      {"n": 3, "name": "Reactions", "href": "sites/facebook/reactions.html", "match": "/facebook/", "whenKey": "itt16-fb-react", "nextHref": "sites/whatsapp/e2e.html", "nextLabel": "WhatsApp E2E"},
-      {"n": 4, "name": "WhatsApp E2E", "href": "sites/whatsapp/e2e.html", "match": "/whatsapp/", "whenKey": "itt16-wa-e2e", "nextHref": "sites/iphone/index.html", "nextLabel": "iPhone 7"},
-      {"n": 5, "name": "iPhone 7", "href": "sites/iphone/index.html", "match": "/iphone/", "whenKey": "itt16-iphone7", "nextHref": "sites/vine/goodbye.html", "nextLabel": "Vine goodbye"},
-      {"n": 6, "name": "Vine goodbye", "href": "sites/vine/goodbye.html", "match": "/vine/", "whenKey": "itt16-vine-end", "nextHref": "sites/snapchat/spectacles.html", "nextLabel": "Spectacles"},
-      {"n": 7, "name": "Spectacles", "href": "sites/snapchat/spectacles.html", "match": "/snapchat/", "whenKey": "itt16-spectacles", "nextHref": "sites/musically/index.html", "nextLabel": "musical.ly"},
-      {"n": 8, "name": "musical.ly", "href": "sites/musically/index.html", "match": "/musically/", "whenKey": "itt16-musically", "nextHref": "sites/windows10/end.html", "nextLabel": "Win10 upgrade ends"},
-      {"n": 9, "name": "Win10 upgrade ends", "href": "sites/windows10/end.html", "match": "/windows10/", "whenKey": "itt16-win10-end", "nextHref": "sites/playable/game.html", "nextLabel": "Gym Rush"},
-      {"n": 10, "name": "Gym Rush", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt16-game-gymrush", "nextHref": "sites/instagram/stories.html", "nextLabel": "Instagram Stories"}
-    ],
-  "2020": [
+      "2020": [
       {"n": 1, "name": "Zoom Leave", "href": "sites/zoom/meeting.html", "match": "/zoom/", "whenKey": "itt20-zoom", "nextHref": "sites/houseparty/index.html", "nextLabel": "Houseparty leftover"},
       {"n": 2, "name": "Houseparty leftover", "href": "sites/houseparty/index.html", "match": "/houseparty/", "whenKey": "itt20-houseparty", "nextHref": "sites/discord/index.html", "nextLabel": "Discord leftover"},
       {"n": 3, "name": "Discord leftover", "href": "sites/discord/index.html", "match": "/discord/", "whenKey": "itt20-discord", "nextHref": "sites/teams/index.html", "nextLabel": "Teams leftover"},

@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-06  
 **Status:** Phase 1 implemented 2026-10-07. Phase 2 implemented 2026-10-06. Phase 3 implemented 2026-10-07. Phase 4 implemented 2026-10-07. Phase 5 implemented 2026-10-07.  
-**Law:** `js/year-card.json` + `scripts/itt_gate.py` `SHIP_YEARS`. Hub **26 doors** (HTML 1994–2014, 2016, 2020–2022 + React **2015 only**). Absent: 2017–2019, 2023–2025. Frozen: 1994–2006. Local: http://127.0.0.1:8080. Publish stays gated.
+**Law:** `js/year-card.json` + `scripts/itt_gate.py` `SHIP_YEARS`. Hub **26 doors** (HTML 1994–2014 and 2020–2022 + React **2015 only**). Absent: 2016–2019, 2023–2025. Frozen: 1994–2006. Local: http://127.0.0.1:8080. Publish stays gated.
 
 Do not dest-farm, restore 2017, unfreeze forests, or run 1999–2004 `2x` doubling.
 
@@ -175,9 +175,9 @@ Do not dest-farm, unfreeze 1994–2006, or run 1999–2004 `2x` doubling. Do not
 
 ## 2 — Lean loads lean
 
-Card `leanBoot` is 2007–2014, 2016, and 2020–2022. Those years do not load the CORE leftover packs.
+Card `leanBoot` is 2007–2014 and 2020–2022. Those years do not load the CORE leftover packs.
 
-- `leanBoot: true` is set on 2007–2014, 2016, and 2020–2022. 2015 is React and is not leanBoot.
+- `leanBoot: true` is set on 2007–2014 and 2020–2022. 2015 is React and is not leanBoot.
 - EXTRA lists `leftover-official.js` on every lean year that still has leftover dests.
 - `boot.js` may defer modules already in the year list. `addEngine` refuses the CORE leftover packs. It still loads link walks, and on `/playable` the year cabinet, when GATE omits them.
 - GATE dest leftover-2× / `data-ytl` / pop: fold onto leftover-official hooks, or strip the dead hooks. 2016 EXTRA `year-4x-flows.js` stays listed, or alphago/figma/ethereum move to leftover-official.
@@ -185,7 +185,7 @@ Card `leanBoot` is 2007–2014, 2016, and 2020–2022. Those years do not load t
 - `registry.js` is the only GATE/CORE/EXTRA list.
 
 **Test:** lean year script list has no `year-popular-3x` / `year-5x-pack` / leftover-2× engine; leftover dests on 2007–2013 still save.  
-**Risk:** HIGH if EXTRA omits leftover-official on a lean year. Implemented: `leanBoot` 2007–2014, 2016, and 2020–2022; EXTRA leftover-official on every lean year; 2009/2016 keep `year-4x-flows.js`; leftover-official folds ytl / pop-go / 5× when those engines are off the year list; `addEngine` refuses CORE leftover packs and still loads link walks plus the `/playable` cabinet; `ensureFill` drops 2017.
+**Risk:** HIGH if EXTRA omits leftover-official on a lean year. Implemented: `leanBoot` 2007–2014 and 2020–2022; EXTRA leftover-official on every lean year; 2009/2016 keep `year-4x-flows.js`; leftover-official folds ytl / pop-go / 5× when those engines are off the year list; `addEngine` refuses CORE leftover packs and still loads link walks plus the `/playable` cabinet; `ensureFill` drops 2017.
 
 ---
 

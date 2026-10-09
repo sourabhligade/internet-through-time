@@ -258,21 +258,6 @@ const THINGS = [
       await page.locator("[data-ig12-share]").click();
     },
   },
-
-  {
-    year: "2016",
-    path: "/years/2016/sites/instagram/stories.html",
-    key: "itt16-ig-stories",
-    incomplete: async (page) => {
-      await page.locator("[data-ig-story-add]").click();
-    },
-    complete: async (page) => {
-      await page.fill("[data-ig-story-text]", "museum rooftop 24h");
-      await page.locator("[data-official-req]").nth(0).check();
-      await page.locator("[data-official-req]").nth(1).check();
-      await page.locator("[data-ig-story-add]").click();
-    },
-  },
   {
     year: "2007",
     path: "/years/2007/sites/iphone/index.html",

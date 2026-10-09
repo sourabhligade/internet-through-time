@@ -7,7 +7,7 @@ const { test, expect } = require("@playwright/test");
 
 const OPEN = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003",
-  "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016",
+  "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015",
   "2020", "2021", "2022",
 ];
 const REACT_DOORS = new Set(["2015"]);
@@ -42,15 +42,15 @@ test.describe("museum atlas", () => {
     await expect(page.locator("a[href='../index.html']").first()).toBeVisible();
   });
 
-  test("hallway has five wings and 26 open years · no boarded ticks", async ({ page }) => {
+  test("hallway has five wings and 25 open years · no boarded ticks", async ({ page }) => {
     await page.goto("/atlas/");
     await expect(page.locator("h1")).toContainText(/whole museum/i);
     await expect(page.locator(".lede")).toBeVisible();
     await expect(page.locator("#atlas-spine .atlas-wing")).toHaveCount(5);
     await expect(page.locator('#atlas-spine .atlas-wing[data-wing="wiped-late"]')).toHaveCount(0);
     await expect(page.locator('#atlas-spine .atlas-wing[data-wing="late-lean"]')).toHaveCount(0);
-    await expect(page.locator("#atlas-spine .spine-year")).toHaveCount(26);
-    await expect(page.locator("#atlas-spine .spine-year.open")).toHaveCount(26);
+    await expect(page.locator("#atlas-spine .spine-year")).toHaveCount(25);
+    await expect(page.locator("#atlas-spine .spine-year.open")).toHaveCount(25);
     await expect(page.locator("#atlas-spine .spine-year.wiped")).toHaveCount(0);
     for (const y of OPEN) {
       await expect(page.locator(`#atlas-spine .spine-year.open[data-atlas-year="${y}"]`)).toBeVisible();

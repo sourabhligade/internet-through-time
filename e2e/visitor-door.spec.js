@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Museum door — docs/FLOW-CHECK-DIAGRAM.md §4 + docs/DISK-TRUTH.md.
- * Hub 26 years (1994–2016 and 2020–2022). 2015 is the React door. 2017–2019 and 2023–2025 are absent.
+ * Hub 25 years (1994–2015 and 2020–2022). 2015 is the React door. 2016–2019 and 2023–2025 are absent.
  * Links first, then dest-true I/O. Dest-folder count is not a pass.
  */
 const fs = require("fs");
@@ -12,7 +12,7 @@ const { destOnDisk, expectYearBoarded } = require("./helpers");
 const ROOT = path.join(__dirname, "..");
 const SHIP = [];
 for (let y = 1994; y <= 2022; y++) {
- if (y === 2017 || y === 2018 || y === 2019) continue;
+ if (y === 2016 || y === 2017 || y === 2018 || y === 2019) continue;
   SHIP.push(String(y));
 }
 const BOARDED = ["2023", "2024", "2025"];
@@ -45,8 +45,8 @@ async function getKey(page, key) {
 }
 
 test.describe("visitor door", () => {
- test("hub lists 26 years including 2015, 2011, 2009, 2008, 2005, and 2020–2022", async ({ page }) => {
- expect(SHIP).toHaveLength(26);
+ test("hub lists 25 years including 2015, 2011, 2009, 2008, 2005, and 2020–2022", async ({ page }) => {
+ expect(SHIP).toHaveLength(25);
     await page.goto("/");
  await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
     await expect(page.locator("body")).not.toContainText(/27 years open/i);

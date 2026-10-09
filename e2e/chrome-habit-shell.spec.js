@@ -5,7 +5,7 @@ const { test, expect } = require("@playwright/test");
 const { openReactStop, completeReactStop } = require("./helpers");
 
 test.describe("Chrome habit shell labels", () => {
-  for (const year of ["2016"]) {
+  for (const year of ["2020", "2021", "2022"]) {
     test(`${year} shell names Chrome habit, not Internet Explorer`, async ({ page }) => {
       await page.goto(`/years/${year}/`);
       await expect(page).toHaveTitle(/Chrome habit/);
@@ -20,14 +20,14 @@ test.describe("Chrome habit shell labels", () => {
     });
   }
 
-  test("2016 address is google.com/web2016", async ({ page }) => {
-    await page.goto("/years/2016/");
-    await expect(page.locator("#location")).toHaveValue(/google\.com\/web2016/);
+  test("2020 address is microsoft web2020", async ({ page }) => {
+    await page.goto("/years/2020/");
+    await expect(page.locator("#location")).toHaveValue(/web2020/);
     await expect(page.locator("#btn-back")).toHaveText("←");
   });
 
-  test("2016 google host opens home, and a room address stays on that room", async ({ page }) => {
-    await page.goto("/years/2016/");
+  test("2020 host opens home, and a room address stays on that room", async ({ page }) => {
+    await page.goto("/years/2020/");
     await page.locator("#skip-connect").click({ force: true, timeout: 3000 }).catch(() => {});
     const box = page.locator("#location");
     async function go(value) {

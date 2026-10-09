@@ -75,7 +75,6 @@
         stop("2012", "sites/facebook/index.html", "IPO"),
         stop("2013", "sites/facebook/index.html", "Vine year"),
         stop("2014", "sites/facebook/index.html", "Install year"),
-        stop("2016", "sites/facebook/reactions.html", "Reactions"),
       ]
     },
     youtube: {
@@ -112,7 +111,6 @@
         stop("2011", "sites/instagram/index.html", "iPhone app"),
         stop("2012", "sites/instagram/android.html", "Android"),
         stop("2014", "sites/instagram/index.html", "Install year"),
-        stop("2016", "sites/instagram/stories.html", "Stories"),
       ]
     },
     iphone: {
@@ -125,7 +123,6 @@
         stop("2012", "sites/iphone/index.html", "Maps flop leftover"),
         stop("2013", "sites/iphone/ios7.html", "iOS 7"),
         stop("2014", "sites/iphone/index.html", "Install year"),
-        stop("2016", "sites/iphone/index.html", "iPhone 7 · no jack"),
       ]
     }
   };
@@ -146,6 +143,7 @@
   }
 
   var SKIP_YEARS = {
+    "2016": 1,
     "2017": 1,
     "2018": 1,
     "2019": 1,

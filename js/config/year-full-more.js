@@ -57,10 +57,5 @@
     "2014": [
       { id: "hearthand", slot: "c", title: "Hearth Hand", engine: "cards", key: "itt14-game-hearthand", inspire: "Hearthstone · 11 Mar 2014", trap: "Official card art" },
       { id: "destinytw", slot: "d", title: "Destiny Tower", engine: "corridor", key: "itt14-game-destinytw", inspire: "Destiny · 9 Sep 2014", trap: "Official ghost" }
-    ],
-    "2016": [
-      { id: "owpayload", slot: "c", title: "Payload Push", engine: "corridor", key: "itt16-game-owpayload", inspire: "Overwatch · 24 May 2016", trap: "Official spray" },
-      { id: "stardewpl", slot: "d", title: "Valley Plant", engine: "craft", key: "itt16-game-stardewpl", inspire: "Stardew Valley · 26 Feb 2016", trap: "Official chicken" }
-    ],
-    };
+    ]};
 })(typeof window !== "undefined" ? window : this);

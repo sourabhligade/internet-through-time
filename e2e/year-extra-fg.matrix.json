@@ -198,25 +198,5 @@
     "kind": "quiz",
     "title": "SOPA Note",
     "next": "/years/2012/sites/playable/game.html"
-  },
-  {
-    "year": "2016",
-    "role": "f",
-    "path": "/years/2016/sites/playable/extra-f.html",
-    "key": "itt16-game-story24b",
-    "id": "story24b",
-    "kind": "hold",
-    "title": "Story 24b",
-    "next": "/years/2016/sites/playable/extra-g.html"
-  },
-  {
-    "year": "2016",
-    "role": "g",
-    "path": "/years/2016/sites/playable/extra-g.html",
-    "key": "itt16-game-pokehunt",
-    "id": "pokehunt",
-    "kind": "parlor",
-    "title": "Poke Hunt",
-    "next": "/years/2016/sites/playable/game.html"
   }
 ]

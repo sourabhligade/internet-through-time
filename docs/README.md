@@ -2,7 +2,7 @@
 
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json` · live `years/` · `scripts/itt_gate.py` `SHIP_YEARS`.
 
-Hub is **26 years open** (1994–2016 and 2020–2022). **2015 is the React door** (`/app/index.html#/year/2015`, no `years/2015` tree). **leanBoot** is 2007–2014, 2016, and 2020–2022. **2008** App Store `itt08-apps`. **2009** Facebook Like `itt09-like`. **2011** Google+ `itt11-gplus`. **2020** Zoom Leave `itt20-zoom`. **2021** Ask App Not to Track `itt21-att`. **2022** ChatGPT Send `itt22-chatgpt`. **Absent:** 2017, 2018, 2019, and 2023–2025. Leftover-3× unique catalogs are **empty**. Leftover-2× unique links: **1,158** across 22 matrix rows in `e2e/leftover-2x-unique-links.matrix.json` (2015 row is 0; 2011 and 2020–2022 have no row). Dest doubling waits on `2x`.
+Hub is **25 years open** (1994–2015 and 2020–2022). **2015 is the React door** (`/app/index.html#/year/2015`, no `years/2015` tree). **leanBoot** is 2007–2014 and 2020–2022. **2008** App Store `itt08-apps`. **2009** Facebook Like `itt09-like`. **2011** Google+ `itt11-gplus`. **2020** Zoom Leave `itt20-zoom`. **2021** Ask App Not to Track `itt21-att`. **2022** ChatGPT Send `itt22-chatgpt`. **Absent:** 2016, 2017, 2018, 2019, and 2023–2025. Leftover-3× unique catalogs are **empty**. Leftover-2× unique links: **1,138** across 22 matrix rows in `e2e/leftover-2x-unique-links.matrix.json` (2015 row is 0; 2011 and 2020–2022 have no row). Dest doubling waits on `2x`.
 
 Finished-work maps (27-door lists, leftover-3× unique notes, closed implement checklists, dated snapshots) were removed. Do not restore them. Do not dest-farm. Current holes: [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 

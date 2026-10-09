@@ -12,7 +12,7 @@ const { killOverlays } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-const WIPED_YEARS = new Set(["2009", "2015", "2017", "2018", "2019", "2023", "2024", "2025"]);
+const WIPED_YEARS = new Set(["2009", "2015", "2016", "2017", "2018", "2019", "2023", "2024", "2025"]);
 for (let y = 1994; y <= 2022; y++) {
   const s = String(y);
   if (WIPED_YEARS.has(s)) continue;
@@ -137,7 +137,7 @@ async function completeMinute(root, page) {
 }
 
 test.describe("H13 lean cabinets 2016 — game-2…5 minute machines", () => {
-  for (const year of ["2016"]) {
+  for (const year of []) {
     for (const file of /** @type {const} */ ([
       "game-2.html",
       "game-3.html",
@@ -194,6 +194,8 @@ test.describe("year extra games — minute machines", () => {
   }
 
   test("2016 extra dests exist (not Starting Point first paint)", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     for (const slug of ["extra-a.html", "extra-b.html"]) {
       const res = await page.goto("/years/2016/sites/playable/" + slug);
       expect(res && res.status(), slug).toBeLessThan(400);

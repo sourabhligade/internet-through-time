@@ -280,17 +280,6 @@ const STAR = {
       await page.locator("[data-peri-live]").click();
     },
   },
-  "itt16-ig-stories": {
-    incomplete: async (page) => {
-      await page.locator("[data-ig-story-add]").click();
-    },
-    complete: async (page) => {
-      await page.fill("[data-ig-story-text]", "museum rooftop 24h");
-      await page.locator("[data-official-req]").nth(0).check();
-      await page.locator("[data-official-req]").nth(1).check();
-      await page.locator("[data-ig-story-add]").click();
-    },
-  },
   "itt20-zoom": {
     incomplete: async (page) => {
       await page.locator("[data-zoom-leave]").click();

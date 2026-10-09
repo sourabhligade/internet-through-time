@@ -24,6 +24,8 @@ async function trapNeverWrites(page, key) {
 
 test.describe("UX phase 1 honesty writers", () => {
   test("Pokémon GO Catch extras skip then a real team is official", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await openDest(page, "/years/2016/sites/pokemongo/index.html", "itt16-pogo");
     await trapNeverWrites(page, "itt16-pogo");
     await page.locator("[data-pogo-catch]").click();
@@ -37,6 +39,8 @@ test.describe("UX phase 1 honesty writers", () => {
   });
 
   test("Reactions Love and Like-only write nothing then dest-true is official", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await openDest(page, "/years/2016/sites/facebook/reactions.html", "itt16-fb-react");
     await trapNeverWrites(page, "itt16-fb-react");
     await page.locator('[data-fb-react="love"]').click();
@@ -49,6 +53,8 @@ test.describe("UX phase 1 honesty writers", () => {
   });
 
   test("Stories empty Add writes nothing then a real add is official", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await openDest(page, "/years/2016/sites/instagram/stories.html", "itt16-ig-stories");
     await trapNeverWrites(page, "itt16-ig-stories");
     await page.locator("[data-official-verb]").first().click();
@@ -59,6 +65,8 @@ test.describe("UX phase 1 honesty writers", () => {
   });
 
   test("E2E Open with no ticks writes nothing then dest-true is official", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await openDest(page, "/years/2016/sites/whatsapp/e2e.html", "itt16-wa-e2e");
     await trapNeverWrites(page, "itt16-wa-e2e");
     await page.locator("[data-official-verb]").first().click();

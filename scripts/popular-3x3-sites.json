@@ -1024,36 +1024,7 @@
       "btn": "Watch leftover"
     }
   ],
-  "2016": [
-    {
-      "id": "dyn",
-      "name": "Dyn leftover",
-      "title": "Dyn leftover leftover — 2016",
-      "why": "2016 leftover-3× third. Unique dest. Not the chip.",
-      "verb": "Outage leftover",
-      "ph": "dyn",
-      "btn": "Outage leftover"
-    },
-    {
-      "id": "fblive",
-      "name": "Facebook Live",
-      "title": "Facebook Live leftover — 2016",
-      "why": "2016 leftover-3× third. Unique dest. Not the chip.",
-      "verb": "Live leftover",
-      "ph": "fblive",
-      "btn": "Live leftover"
-    },
-    {
-      "id": "moments",
-      "name": "Moments",
-      "title": "Moments leftover — 2016",
-      "why": "2016 leftover-3× third. Unique dest. Not the chip.",
-      "verb": "Moment leftover",
-      "ph": "moments",
-      "btn": "Moment leftover"
-    }
-  ],
-  "2001": [
+    "2001": [
     {
       "id": "ebay",
       "name": "eBay",

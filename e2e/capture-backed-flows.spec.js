@@ -228,6 +228,8 @@ test.describe("capture-backed dests — chips + REAL machines", () => {
   });
 
   test("2016 Reactions Love never writes · dest-true Like is official · no Care", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await page.goto("/years/2016/sites/facebook/reactions.html");
     await chipOk(page, { allowHidden: true });
     await expect(page.locator('[data-fb-react="care"]')).toHaveCount(0);

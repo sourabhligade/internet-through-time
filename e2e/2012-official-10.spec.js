@@ -84,31 +84,6 @@ const YEARS = [
   },
 
   {
-    year: "2016",
-    star: "itt16-ig-stories",
-    gold: async (page) => {
-      await openClear(page, "/years/2016/sites/instagram/stories.html", "itt16-ig-stories");
-      await page.locator("[data-ig-story-add]").click();
-      expect(await getKey(page, "itt16-ig-stories")).toBeFalsy();
-      await page.fill("[data-ig-story-text]", "museum leftover 24h");
-      await page.locator("[data-official-req]").nth(0).check();
-      await page.locator("[data-official-req]").nth(1).check();
-      await page.locator("[data-ig-story-add]").click();
-      await expect.poll(() => getKey(page, "itt16-ig-stories"), { timeout: 8000 }).toBeTruthy();
-    },
-    leftover: [
-      ["/years/2016/sites/pokemongo/index.html", "itt16-pogo-lx"],
-      ["/years/2016/sites/facebook/reactions.html", "itt16-fb-react-lx"],
-      ["/years/2016/sites/whatsapp/e2e.html", "itt16-wa-e2e-lx"],
-      ["/years/2016/sites/iphone/index.html", "itt16-iphone7-lx"],
-      ["/years/2016/sites/vine/goodbye.html", "itt16-vine-end-lx"],
-      ["/years/2016/sites/snapchat/spectacles.html", "itt16-spectacles-lx"],
-      ["/years/2016/sites/musically/index.html", "itt16-musically-lx"],
-      ["/years/2016/sites/windows10/end.html", "itt16-win10-end-lx"],
-      ["/years/2016/sites/playable/game.html", "itt16-game-gymrush-lx"],
-    ],
-  },
-  {
     year: "2014",
     star: "itt14-wa-install",
     gold: async (page) => {

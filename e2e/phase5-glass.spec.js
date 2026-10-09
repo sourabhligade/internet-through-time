@@ -29,7 +29,6 @@ const PAGES = [
   ["2012", "/years/2012/sites/flipboard/index.html"],
   ["2013", "/years/2013/sites/ios7/index.html"],
   ["2014", "/years/2014/sites/oculusfb/index.html"],
-  ["2016", "/years/2016/sites/assistant/index.html"],
   ["2020", "/years/2020/sites/hbomax/index.html"],
   ["2021", "/years/2021/sites/nft/index.html"],
   ["2022", "/years/2022/sites/twitter/index.html"],

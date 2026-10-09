@@ -1,6 +1,6 @@
 # Lean double — phases, steps, goals
 
-**Not ship law.** Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
+**Not ship law.** Live hub is **25 doors** (1994–2015 and 2020–2022). **2015 is the React door.** **2016–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 
 **Date:** 2026-09-24  
@@ -163,7 +163,7 @@ For each KEEP dest, in order:
 2. Mock gate: `DEST_FIELD`, `WEAK_REAL`, and `HASH_CTA` stay 0 on the new dests.
 3. Recount official stops. They are still 10 (2012, 2013, and 2014 stay at their current shorter trails until a separate pass says otherwise).
 4. Leftover-3× catalogs stay empty. 2012 leftover-4× stays the three named dests.
-5. Hub is 26 doors. 2009 is live HTML (Like). 2015 is the React door. 2017–2019 and 2023–2025 stay 0.
+5. Hub is 25 doors. 2009 is live HTML (Like). 2015 is the React door. 2017–2019 and 2023–2025 stay 0.
 
 **Done when:** Those checks pass on every year that received a new dest, and Stop years are unchanged.
 

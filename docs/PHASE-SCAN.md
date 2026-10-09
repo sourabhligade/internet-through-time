@@ -195,7 +195,7 @@ Map: [`LEAN-DOUBLE-PHASES.md`](LEAN-DOUBLE-PHASES.md). Header: **Historical**. N
 |-----|------|
 | 2009 boarded | 2009 is live HTML (Like `itt09-like`) |
 | Hub 25 | Hub **26** |
-| Phase 4 named implement waits on a word | leftover-2× unique catalog **1,158** already on disk |
+| Phase 4 named implement waits on a word | leftover-2× unique catalog **1,138** already on disk |
 | Caps as aims | Live dest counts still under those caps. Further dest growth waits on **`2x`** |
 
 ---

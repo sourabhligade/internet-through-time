@@ -7,14 +7,13 @@ const { test, expect } = require('@playwright/test');
 
 const { enterYear, goImmersion, contentFrame, killOverlays } = require('./helpers');
 
-const SAMPLE = ['1994', '2005', '2010', '2016'];
+const SAMPLE = ['1994', '2005', '2010'];
 
 const PACK = {
   1994: { file: 'game-2.html', gid: 'whatsnew', key: 'itt94-game-whatsnew', need: 6 },
   2005: { file: 'game-2.html', gid: 'poke', key: 'itt05-game-poke', need: 3 },
   2010: { file: 'game-2.html', gid: 'igfilter', key: 'itt10-game-igfilter', need: 2 },
   2015: { file: 'game-2.html', gid: 'meerkathop', key: 'itt15-game-meerkathop', need: 2 },
-  2016: { file: 'game-2.html', gid: 'storyrail', key: 'itt16-game-storyrail', need: 3, minute: true },
 };
 
 async function openPack(page, year, file) {
@@ -81,12 +80,6 @@ for (const year of SAMPLE) {
 
   test(`5x cabinet ${year} hosts the year game`, async ({ page }) => {
     await page.goto(`/years/${year}/sites/playable/index.html`);
-    if (year === '2016') {
-      await expect(page.locator('[data-itt-year-cabinets="2016"]')).toBeVisible({ timeout: 20000 });
-      await expect(page.locator('a[href="game.html"]').first()).toBeVisible();
-      await expect(page.locator('a[href*="g=15"]')).toHaveCount(0);
-      return;
-    }
     await expect(page.locator('[data-year-playable]')).toBeVisible({ timeout: 20000 });
     await expect(page.locator('[data-yp-cabinet], a[href="game.html"]').first()).toBeVisible();
     await expect(page.locator('a[href*="g=15"]')).toHaveCount(0);

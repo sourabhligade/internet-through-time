@@ -126,9 +126,9 @@ test.describe('shell chrome (cross-year)', () => {
     await expect(contentFrame(page).locator('body')).toContainText(/Google/i, { timeout: 15000 });
   });
 
-  test('2016 address is the Google museum host', async ({ page }) => {
-    await page.goto('/years/2016/');
-    await expect(page.locator('#location')).toHaveValue(/google\.com\/web2016/);
+  test('2022 address is the Google museum host', async ({ page }) => {
+    await page.goto('/years/2022/');
+    await expect(page.locator('#location')).toHaveValue(/google\.com\/web2022/);
   });
 
   test('home address stays on the period host after boot', async ({ page }) => {
@@ -188,8 +188,8 @@ test.describe('shell chrome (cross-year)', () => {
 
     await page.setViewportSize({ width: 390, height: 844 });
     expect(await paddingLeft('1994')).toBeLessThan(20);
-    await page.goto('/years/2016/');
-    await expect(page.locator('#location')).toHaveValue(/google\.com\/web2016/);
+    await page.goto('/years/2022/');
+    await expect(page.locator('#location')).toHaveValue(/google\.com\/web2022/);
     await expect(page.locator('#dirbar')).toBeVisible();
     const sameRow = await page.evaluate(() => {
       const link = document.querySelector('#exit-bar a');

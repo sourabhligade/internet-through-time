@@ -61,7 +61,7 @@ test.describe("dest-as-tab footer", () => {
     await expect(page.locator("#itt-year-menu-link")).toBeVisible({ timeout: 15000 });
     await page.locator("#itt-year-menu-link").click();
     await expect(page).toHaveURL(/\/(index\.html)?$/);
-    await expect(page.locator("a.year-card.available")).toHaveCount(26);
+    await expect(page.locator("a.year-card.available")).toHaveCount(25);
 
     await page.goto("/years/1995/sites/amazon/ssl-checkout.html");
     await expect(page.locator("#itt-exhibit-foot a.itt-foot-home")).toBeVisible({ timeout: 15000 });

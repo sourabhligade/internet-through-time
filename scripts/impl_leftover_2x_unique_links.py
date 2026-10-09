@@ -178,12 +178,6 @@ CITED_ADD: dict[str, list[str]] = {
         "elcapitan", "ethereum", "fblive", "http2", "instantarticles", "ipadpro",
         "ipfs", "iphone6s", "k8s",
     ],
-    "2016": [
-        "douyin", "airpods", "pixel", "nougat", "allo", "duo", "googlehome",
-        "oculusrift", "psvr", "overwatch", "doom2016", "uncharted4", "nomanssky",
-        "clashroyale", "panamapapers", "figma", "thedao", "ethereum", "ios10",
-        "sierra", "daydream", "battlefield1", "letsencrypt",
-    ],
     "2017": [
         "cuphead", "twitterlite", "hangoutschat", "snapmap", "instagram17", "botw",
         "splatoon2", "tbh", "messengerday", "gettingoverit", "hollowknight", "cardano",
@@ -417,16 +411,6 @@ def dest_disjoint_owned_dests(
         ban |= official_slugs(year)
         ban |= leftover_trail_slugs(year)
         ban |= lo4.get(year) or set()
-        if year == "2016":
-            try:
-                trip = json.loads(
-                    (ROOT / "e2e" / "lean-triple-leftover.matrix.json").read_text(
-                        encoding="utf-8"
-                    )
-                )
-                ban |= {r["id"] for r in trip if str(r.get("year")) == "2016"}
-            except OSError:
-                pass
         if ban:
             skip[year] = ban
     return _drop_ids(catalog, skip)

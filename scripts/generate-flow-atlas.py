@@ -20,7 +20,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "dev" / "flow-atlas"
 # HTML doors only. 2015 and 2017 are React (no years/ tree). 2018, 2019, and 2023–2025 are absent.
-_HTML_YEARS = [str(y) for y in range(1994, 2015)] + ["2016", "2020", "2021", "2022"]
+_HTML_YEARS = [str(y) for y in range(1994, 2015)] + ["2020", "2021", "2022"]
 YEARS = [y for y in _HTML_YEARS if (ROOT / "years" / y).is_dir()]
 
 

@@ -2,7 +2,7 @@
 
 One file per year. Tick a line after the link finishes. An empty click stores nothing.
 
-**Live hub 26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2011 is a live HTML door.** 2017–2019 and 2023–2025 have no checklist.
+**Live hub 25 doors** (1994–2015 and 2020–2022). **2015 is the React door.** **2011 is a live HTML door.** 2017–2019 and 2023–2025 have no checklist.
 
 Leftover-2× unique dest catalog `n` is from `e2e/leftover-2x-unique-links.matrix.json`. Forest leftover-10 rows are leftover trail n=11–20 (a sample), not that catalog. Lean leftover rows are the leftover-2× unique dests already on disk. Rails fold unless `?deep=1`. Official dest leftover-2× first paint stays 0.
 
@@ -30,7 +30,6 @@ Ship law: [`../DISK-TRUTH.md`](../DISK-TRUTH.md). Current holes: [`../YEAR-INCOM
 - [2013](2013.md) — 9 official, leftover-2× unique 27, 0 pictures
 - [2014](2014.md) — 9 official, leftover-2× unique 16, 0 pictures
 - [2015](2015.md) — React official 10, leftover 0, 0 pictures
-- [2016](2016.md) — 10 official, leftover-2× unique 20, 0 pictures
 - [2020](2020.md) — 10 official · Zoom Leave `itt20-zoom` · readme only, no pictures
 - [2021](2021.md) — 10 official · Ask App Not to Track `itt21-att` · readme only, no pictures
 - [2022](2022.md) — 10 official · ChatGPT Send `itt22-chatgpt` · readme only, no pictures

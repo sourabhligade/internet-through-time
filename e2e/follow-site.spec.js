@@ -16,22 +16,22 @@ test.describe("follow-a-site", () => {
     await expect(next).toContainText("Yahoo");
   });
 
-  test("2016 Instagram is the last Instagram room", async ({ page }) => {
-    await page.goto("/years/2016/?room=sites/instagram/stories.html");
+  test("2014 Instagram is the last Instagram room", async ({ page }) => {
+    await page.goto("/years/2014/?room=sites/instagram/index.html");
     const next = page.locator("#itt-follow-next");
     await expect(next).toBeAttached({ timeout: 15000 });
     await expect(next).toBeHidden();
   });
 
-  test("2016 iPhone is the last iPhone room", async ({ page }) => {
-    await page.goto("/years/2016/?room=sites/iphone/index.html");
+  test("2014 iPhone is the last iPhone room", async ({ page }) => {
+    await page.goto("/years/2014/?room=sites/iphone/index.html");
     const next = page.locator("#itt-follow-next");
     await expect(next).toBeAttached({ timeout: 15000 });
     await expect(next).toBeHidden();
   });
 
-  test("2016 Facebook is the last Facebook room", async ({ page }) => {
-    await page.goto("/years/2016/?room=sites/facebook/reactions.html");
+  test("2014 Facebook is the last Facebook room", async ({ page }) => {
+    await page.goto("/years/2014/?room=sites/facebook/index.html");
     const next = page.locator("#itt-follow-next");
     await expect(next).toBeAttached({ timeout: 15000 });
     await expect(next).toBeHidden();
@@ -46,32 +46,6 @@ test.describe("follow-a-site", () => {
     await expect(next).not.toContainText("Amazon");
   });
 
-  test("2014 Facebook follow next has no 2015 room, so it opens 2016", async ({ page }) => {
-    await page.goto("/years/2014/?room=sites/facebook/index.html");
-    const next = page.locator("#itt-follow-next");
-    await expect(next).toBeVisible({ timeout: 15000 });
-    await expect(next).toHaveAttribute("href", /years\/2016\/\?room=/);
-    await expect(next).toContainText("Facebook");
-    await expect(next).not.toHaveAttribute("href", /years\/2015/);
-});
-
-  test("2014 Instagram follow next has no 2015 room, so it opens 2016", async ({ page }) => {
-    await page.goto("/years/2014/?room=sites/instagram/index.html");
-    const next = page.locator("#itt-follow-next");
-    await expect(next).toBeVisible({ timeout: 15000 });
-    await expect(next).toHaveAttribute("href", /years\/2016\/\?room=/);
-    await expect(next).toContainText("Instagram");
-    await expect(next).not.toHaveAttribute("href", /years\/2015/);
-  });
-
-  test("2014 iPhone follow next has no 2015 room, so it opens 2016", async ({ page }) => {
-    await page.goto("/years/2014/?room=sites/iphone/index.html");
-    const next = page.locator("#itt-follow-next");
-    await expect(next).toBeVisible({ timeout: 15000 });
-    await expect(next).toHaveAttribute("href", /years\/2016\/\?room=/);
-    await expect(next).toContainText("iPhone");
-    await expect(next).not.toHaveAttribute("href", /years\/2015/);
-  });
 
   test("1996 Amazon follow next opens the 1997 IPO room", async ({ page }) => {
     await page.goto("/years/1996/?room=sites/amazon/index.html");

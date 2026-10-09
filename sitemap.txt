@@ -54,10 +54,6 @@
 /years/2013/pages/home.html
 /years/2013/pages/about.html
 /years/2013/sites/vine/record.html
-/years/2016/
-/years/2016/pages/home.html
-/years/2016/pages/about.html
-/years/2016/sites/instagram/stories.html
 /app/index.html#/year/2015
 /app/index.html#/year/2017
 /years/2020/

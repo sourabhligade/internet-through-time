@@ -109,15 +109,6 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/playable/game.html"
     ],
     "2015": [],  # React door. No years/2015 tree. check_year returns early on kind react.
-    "2016": [
-        "pages/home.html",
-        "pages/about.html",
-        "sites/instagram/stories.html",
-        "sites/pokemongo/index.html",
-        "sites/facebook/reactions.html",
-        "sites/whatsapp/e2e.html",
-        "sites/playable/game.html"
-    ],
 }
 
 # Optional research markers (year can be "research-only" without tree)

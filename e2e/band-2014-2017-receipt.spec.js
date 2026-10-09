@@ -53,6 +53,8 @@ test.describe("2014-2017 phase 4 receipt", () => {
   });
 
   test("Stories official finish says Saved. and shows Next", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await page.goto("/years/2016/sites/instagram/stories.html");
     await verbReady(page);
     await page.evaluate(() => localStorage.removeItem("itt16-ig-stories"));
@@ -68,6 +70,8 @@ test.describe("2014-2017 phase 4 receipt", () => {
   });
 
   test("Stories toy envelope keeps Next hidden", async ({ page }) => {
+    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
+
     await page.goto("/years/2016/sites/instagram/stories.html");
     await page.evaluate(() => {
       localStorage.setItem(

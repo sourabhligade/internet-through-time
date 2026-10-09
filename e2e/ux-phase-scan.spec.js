@@ -49,10 +49,7 @@ const PACK_B_2008 = [
 ];
 
 const STATUS_DESTS = [
-  { path: "/years/2016/sites/instagram/stories.html", key: "itt16-ig-stories" },
-  { path: "/years/2016/sites/pokemongo/index.html", key: "itt16-pogo" },
-  { path: "/years/2016/sites/facebook/reactions.html", key: "itt16-fb-react" },
-  { path: "/years/2016/sites/whatsapp/e2e.html", key: "itt16-wa-e2e" },
+  { path: "/years/2014/sites/whatsapp/index.html", key: "itt14-wa-install" },
 ];
 
 test.describe("PHASE-SCAN improvisation", () => {

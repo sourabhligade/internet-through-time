@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 
 
 const OPEN = [
- '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2020', '2021', '2022'
+ '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2020', '2021', '2022'
 ];
 const BOARDED = ['2023', '2024', '2025'];
 const LOCKED = [];
@@ -11,7 +11,7 @@ const LOCKED = [];
 test.describe('hub + year shells', () => {
   test('hub lists playable years; 2026+ off disk', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('a.year-card.available')).toHaveCount(26);
+    await expect(page.locator('a.year-card.available')).toHaveCount(25);
     for (const y of OPEN) {
       if (y === "2015") {
         await expect(page.locator('a.year-card.available[data-year="2015"]')).toHaveAttribute(
@@ -74,7 +74,7 @@ test.describe('hub + year shells', () => {
     expect(live.y2025).toBe(false);
     expect(live.y).toBe(false);
     expect(live.trails).toEqual(expect.arrayContaining([
-      '2011-start', '2016-start', '2020-start', '2021-start', '2022-start',
+      '2011-start', '2020-start', '2021-start', '2022-start',
     ]));
     expect(live.trails).not.toEqual(expect.arrayContaining(['-start']));
     expect(live.trails).not.toEqual(expect.arrayContaining([
@@ -124,7 +124,7 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.y2014.available')).toBeVisible();
     await expect(page.locator('.y2014.locked')).toHaveCount(0);
     await expect(page.locator('.y2015.available')).toBeVisible();
-    await expect(page.locator('.y2016')).toBeVisible();
+    await expect(page.locator('.y2016')).toHaveCount(0);
     await expect(page.locator('.y')).toHaveCount(0);
     await expect(page.locator('.y')).toHaveCount(0);
     await expect(page.locator('.y2020')).toHaveCount(1);
@@ -153,7 +153,7 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('section.decade')).toHaveCount(4);
     await expect(page.locator('#decade-1990s a.year-card.available')).toHaveCount(6);
     await expect(page.locator('#decade-2000s a.year-card.available')).toHaveCount(10);
- await expect(page.locator('#decade-2010s a.year-card.available')).toHaveCount(7);
+ await expect(page.locator('#decade-2010s a.year-card.available')).toHaveCount(6);
     await expect(page.locator('#decade-2020s a.year-card.available')).toHaveCount(3);
     await expect(page.locator('#decade-later')).toHaveCount(0);
     await expect(page.locator('.year-gap')).toHaveCount(0);

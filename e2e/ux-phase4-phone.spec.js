@@ -2,7 +2,7 @@
 /**
  * Museum-grade UX phase 4. Chrome groups still fit 390×844.
  * Guided stays six. No shared phone skin.
- * Full 26-door lock remains e2e/phase4-phone.spec.js.
+ * Full 25-door lock remains e2e/phase4-phone.spec.js.
  * Off dest-true 12. Do not dest-farm.
  */
 const { test, expect } = require("@playwright/test");
@@ -102,7 +102,6 @@ const WITH_MENUBAR = [
 ];
 
 const HABIT = [
-  ["2016", "Chrome habit"],
   ["2022", "Chrome habit"],
 ];
 
