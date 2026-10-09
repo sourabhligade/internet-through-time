@@ -6,6 +6,15 @@ async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
 }
 
+async function destTrueComplete(page) {
+  const reqs = page.locator("[data-official-req], [data-req]");
+  const n = await reqs.count();
+  for (let i = 0; i < n; i++) await reqs.nth(i).check();
+  const need = page.locator("[data-official-need]").first();
+  if (await need.count()) await need.fill("leftover residual");
+  await page.locator("[data-official-verb]").first().click();
+}
+
 test.describe("2016 flows", () => {
   test("Stories empty never writes; titled add writes", async ({ page }) => {
     await page.goto("/years/2016/sites/instagram/stories.html");
@@ -29,7 +38,12 @@ test.describe("2016 flows", () => {
     await page.locator('[data-pogo-team="valor"]').click();
     await page.locator("[data-pogo-gps]").check();
     await page.locator("[data-pogo-catch]").click();
+    expect(await getKey(page, "itt16-pogo")).toBeFalsy();
+    await destTrueComplete(page);
     await expect.poll(async () => getKey(page, "itt16-pogo"), { timeout: 8000 }).toBeTruthy();
+    const pogo = JSON.parse((await getKey(page, "itt16-pogo")) || "{}");
+    expect(pogo.v).toBe(1);
+    expect(pogo.kind).toBe("official");
   });
 
   test("Reactions tray-only never writes; face writes", async ({ page }) => {
@@ -70,9 +84,7 @@ test.describe("2016 flows", () => {
     await page.reload();
     await page.locator("[data-wa-e2e-open]").click();
     expect(await getKey(page, "itt16-wa-e2e")).toBeFalsy();
-    await page.locator("[data-wa-e2e-req]").nth(0).check();
-    await page.locator("[data-wa-e2e-req]").nth(1).check();
-    await page.locator("[data-wa-e2e-open]").click();
+    await destTrueComplete(page);
     await expect.poll(async () => getKey(page, "itt16-wa-e2e"), { timeout: 8000 }).toBeTruthy();
   });
 
@@ -82,9 +94,7 @@ test.describe("2016 flows", () => {
     await page.reload();
     await page.locator("[data-iphone7-save]").click();
     expect(await getKey(page, "itt16-iphone7")).toBeFalsy();
-    await page.locator("[data-iphone7-jack]").check();
-    await page.locator("[data-iphone7-dongle]").check();
-    await page.locator("[data-iphone7-save]").click();
+    await destTrueComplete(page);
     await expect.poll(async () => getKey(page, "itt16-iphone7"), { timeout: 8000 }).toBeTruthy();
   });
 
@@ -94,9 +104,7 @@ test.describe("2016 flows", () => {
     await page.reload();
     await page.locator("[data-vine-end-ack]").click();
     expect(await getKey(page, "itt16-vine-end")).toBeFalsy();
-    await page.locator("[data-vine-end-req]").nth(0).check();
-    await page.locator("[data-vine-end-req]").nth(1).check();
-    await page.locator("[data-vine-end-ack]").click();
+    await destTrueComplete(page);
     await expect.poll(async () => getKey(page, "itt16-vine-end"), { timeout: 8000 }).toBeTruthy();
   });
 
@@ -106,8 +114,7 @@ test.describe("2016 flows", () => {
     await page.reload();
     await page.locator("[data-spec-pair]").click();
     expect(await getKey(page, "itt16-spectacles")).toBeFalsy();
-    await page.locator("[data-spec-req]").check();
-    await page.locator("[data-spec-pair]").click();
+    await destTrueComplete(page);
     await expect.poll(async () => getKey(page, "itt16-spectacles"), { timeout: 8000 }).toBeTruthy();
   });
 
@@ -117,8 +124,7 @@ test.describe("2016 flows", () => {
     await page.reload();
     await page.locator("[data-ml-post]").click();
     expect(await getKey(page, "itt16-musically")).toBeFalsy();
-    await page.fill("[data-ml-caption]", "not tiktok");
-    await page.locator("[data-ml-post]").click();
+    await destTrueComplete(page);
     await expect.poll(async () => getKey(page, "itt16-musically"), { timeout: 8000 }).toBeTruthy();
   });
 
@@ -128,9 +134,7 @@ test.describe("2016 flows", () => {
     await page.reload();
     await page.locator("[data-win10-end-save]").click();
     expect(await getKey(page, "itt16-win10-end")).toBeFalsy();
-    await page.locator("[data-win10-end-req]").nth(0).check();
-    await page.locator("[data-win10-end-req]").nth(1).check();
-    await page.locator("[data-win10-end-save]").click();
+    await destTrueComplete(page);
     await expect.poll(async () => getKey(page, "itt16-win10-end"), { timeout: 8000 }).toBeTruthy();
   });
 

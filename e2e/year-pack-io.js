@@ -36,6 +36,8 @@ async function trapThenOfficial(page, href, key, fill) {
   await expect.poll(() => getKey(page, key), { timeout: 8000 }).toBeTruthy();
   const blob = JSON.parse((await getKey(page, key)) || "{}");
   expect(blob.real, key).toBe(true);
+  expect(blob.v, key + " v").toBe(1);
+  expect(blob.kind, key + " kind").toBe("official");
 }
 
 /**

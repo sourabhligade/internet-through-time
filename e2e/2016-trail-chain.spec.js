@@ -18,6 +18,15 @@ async function checkAll(page, sel) {
   for (let i = 0; i < n; i++) await loc.nth(i).check();
 }
 
+async function destTrueComplete(page) {
+  const reqs = page.locator("[data-official-req], [data-req]");
+  const n = await reqs.count();
+  for (let i = 0; i < n; i++) await reqs.nth(i).check();
+  const need = page.locator("[data-official-need]").first();
+  if (await need.count()) await need.fill("leftover residual");
+  await page.locator("[data-official-verb]").first().click();
+}
+
 const YEARS = [
   {
     year: "2016",
@@ -39,9 +48,7 @@ const YEARS = [
         next: /reactions/,
         prev: /stories/,
         complete: async (page) => {
-          await page.locator('[data-pogo-team="valor"]').click();
-          await page.locator("[data-pogo-gps]").check();
-          await page.locator("[data-pogo-catch]").click();
+          await destTrueComplete(page);
         },
       },
       {
@@ -50,7 +57,7 @@ const YEARS = [
         next: /e2e/,
         prev: /pokemongo/,
         complete: async (page) => {
-          await page.locator('[data-fb-react="love"]').click();
+          await destTrueComplete(page);
         },
       },
       {
@@ -59,8 +66,7 @@ const YEARS = [
         next: /iphone/,
         prev: /reactions/,
         complete: async (page) => {
-          await checkAll(page, "[data-wa-e2e-req]");
-          await page.locator("[data-wa-e2e-open]").click();
+          await destTrueComplete(page);
         },
       },
       {
@@ -69,9 +75,7 @@ const YEARS = [
         next: /vine/,
         prev: /e2e/,
         complete: async (page) => {
-          await page.locator("[data-iphone7-jack]").check();
-          await page.locator("[data-iphone7-dongle]").check();
-          await page.locator("[data-iphone7-save]").click();
+          await destTrueComplete(page);
         },
       },
       {
@@ -80,8 +84,7 @@ const YEARS = [
         next: /spectacles/,
         prev: /iphone/,
         complete: async (page) => {
-          await checkAll(page, "[data-vine-end-req]");
-          await page.locator("[data-vine-end-ack]").click();
+          await destTrueComplete(page);
         },
       },
       {
@@ -90,8 +93,7 @@ const YEARS = [
         next: /musically/,
         prev: /vine/,
         complete: async (page) => {
-          await page.locator("[data-spec-req]").check();
-          await page.locator("[data-spec-pair]").click();
+          await destTrueComplete(page);
         },
       },
       {
@@ -100,8 +102,7 @@ const YEARS = [
         next: /windows10/,
         prev: /spectacles/,
         complete: async (page) => {
-          await page.fill("[data-ml-caption]", "not tiktok");
-          await page.locator("[data-ml-post]").click();
+          await destTrueComplete(page);
         },
       },
       {
@@ -110,8 +111,7 @@ const YEARS = [
         next: /playable\/game/,
         prev: /musically/,
         complete: async (page) => {
-          await checkAll(page, "[data-win10-end-req]");
-          await page.locator("[data-win10-end-save]").click();
+          await destTrueComplete(page);
         },
       },
       {

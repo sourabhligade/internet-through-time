@@ -97,7 +97,7 @@
     var btn = doc.querySelector("[data-pogo-catch]");
     if (!btn) return;
     var st = doc.querySelector("[data-pogo-status]");
-    var verbOwned = btn.getAttribute("data-official-verb") != null;
+    var verbOwned = !!doc.querySelector("[data-official-verb]");
     var picked = "";
     var teams = doc.querySelectorAll("[data-pogo-team]");
     var i;
@@ -113,7 +113,7 @@
         var j;
         for (j = 0; j < teams.length; j++) teams[j].className = teams[j].className.replace(/\bis-on\b/g, "");
         this.className = (this.className + " is-on").replace(/\s+/g, " ");
-        if (st) st.textContent = "Team " + picked + " (pick honesty, then Catch).";
+        if (st && !verbOwned) st.textContent = "Team " + picked + " (pick honesty, then Catch).";
       });
     }
     btn.addEventListener("click", function () {
@@ -162,9 +162,11 @@
     }
     if (likeBtn && likeBtn.getAttribute("data-fb-like-bound") !== "1") {
       likeBtn.setAttribute("data-fb-like-bound", "1");
-      likeBtn.addEventListener("click", function () {
-        feedback("Like-only never writes. Hold a reaction.", st, { error: true });
-      });
+      if (!likeBtn.getAttribute("data-official-verb")) {
+        likeBtn.addEventListener("click", function () {
+          feedback("Like-only never writes. Hold a reaction.", st, { error: true });
+        });
+      }
     }
   }
 
@@ -172,17 +174,19 @@
     var btn = doc.querySelector("[data-wa-e2e-open]");
     if (!btn) return;
     var st = doc.querySelector("[data-wa-e2e-status]");
+    var verbOwned = !!doc.querySelector("[data-official-verb]");
     if (YX.loadJSON(key("wa-e2e"))) {
-      feedback("Lock on · itt16-wa-e2e", st);
+      feedback("Saved.", st);
       reveal(doc);
     }
     btn.addEventListener("click", function () {
       if (countChecked(doc, "[data-wa-e2e-req], [data-req]") < 2) {
-        feedback("Tick both honesty notes. Incomplete never writes.", st, { error: true });
+        if (!verbOwned) feedback("Tick both honesty notes. Incomplete never writes.", st, { error: true });
         return;
       }
+      if (verbOwned) return;
       saveJSON(key("wa-e2e"), blob({ e2e: "default", official: true }));
-      feedback("Default E2E (theater) · itt16-wa-e2e", st);
+      feedback("Saved.", st);
       reveal(doc);
     });
   }
@@ -191,17 +195,19 @@
     var btn = doc.querySelector("[data-iphone7-save]");
     if (!btn) return;
     var st = doc.querySelector("[data-iphone7-status]");
+    var verbOwned = !!doc.querySelector("[data-official-verb]");
     if (YX.loadJSON(key("iphone7"))) {
-      feedback("Jack gone · itt16-iphone7", st);
+      feedback("Saved.", st);
       reveal(doc);
     }
     btn.addEventListener("click", function () {
       if (countChecked(doc, "[data-iphone7-jack], [data-iphone7-dongle], [data-req]") < 2) {
-        feedback("Tick jack-gone and dongle. Incomplete never writes.", st, { error: true });
+        if (!verbOwned) feedback("Tick jack-gone and dongle. Incomplete never writes.", st, { error: true });
         return;
       }
+      if (verbOwned) return;
       saveJSON(key("iphone7"), blob({ jack: false, dongle: true, official: true }));
-      feedback("Reserved (theater) · itt16-iphone7", st);
+      feedback("Saved.", st);
       reveal(doc);
     });
   }
@@ -218,7 +224,7 @@
       }
       if (verbOwned) return;
       saveJSON(key("airpods"), blob({ order: "dec13", official: true }));
-      feedback("Ordered (theater) · itt16-airpods", st);
+      feedback("Saved.", st);
       reveal(doc);
     });
   }
@@ -227,17 +233,19 @@
     var btn = doc.querySelector("[data-vine-end-ack]");
     if (!btn) return;
     var st = doc.querySelector("[data-vine-end-status]");
+    var verbOwned = !!doc.querySelector("[data-official-verb]");
     if (YX.loadJSON(key("vine-end"))) {
-      feedback("Noted · itt16-vine-end", st);
+      feedback("Saved.", st);
       reveal(doc);
     }
     btn.addEventListener("click", function () {
       if (countChecked(doc, "[data-vine-end-req], [data-req]") < 2) {
-        feedback("Read both notes first.", st, { error: true });
+        if (!verbOwned) feedback("Read both notes first.", st, { error: true });
         return;
       }
+      if (verbOwned) return;
       saveJSON(key("vine-end"), blob({ announced: "2016-10-27", official: true }));
-      feedback("Vine winds down · itt16-vine-end", st);
+      feedback("Saved.", st);
       reveal(doc);
     });
   }
@@ -246,13 +254,15 @@
     var btn = doc.querySelector("[data-spec-pair]");
     if (!btn) return;
     var st = doc.querySelector("[data-spec-status]");
+    var verbOwned = !!doc.querySelector("[data-official-verb]");
     btn.addEventListener("click", function () {
       if (countChecked(doc, "[data-spec-req], [data-req]") < 1) {
-        feedback("Ack Snapbot / not every mall first.", st, { error: true });
+        if (!verbOwned) feedback("Ack Snapbot / not every mall first.", st, { error: true });
         return;
       }
+      if (verbOwned) return;
       saveJSON(key("spectacles"), blob({ pair: true, price: "129.99", official: true }));
-      feedback("Paired (theater) · itt16-spectacles", st);
+      feedback("Saved.", st);
       reveal(doc);
     });
   }
@@ -261,14 +271,16 @@
     var btn = doc.querySelector("[data-ml-post]");
     if (!btn) return;
     var st = doc.querySelector("[data-ml-status]");
+    var verbOwned = !!doc.querySelector("[data-official-verb]");
     btn.addEventListener("click", function () {
       var cap = val(doc, "[data-ml-caption]");
       if (!cap || cap.replace(/^\s+|\s+$/g, "").length < 2) {
-        feedback("Caption first. Empty never writes.", st, { error: true });
+        if (!verbOwned) feedback("Caption first. Empty never writes.", st, { error: true });
         return;
       }
+      if (verbOwned) return;
       saveJSON(key("musically"), blob({ caption: cap.slice(0, 80), official: true }));
-      feedback("Posted (theater) · not TikTok · itt16-musically", st);
+      feedback("Saved.", st);
       reveal(doc);
     });
   }
@@ -277,17 +289,19 @@
     var btn = doc.querySelector("[data-win10-end-save]");
     if (!btn) return;
     var st = doc.querySelector("[data-win10-end-status]");
+    var verbOwned = !!doc.querySelector("[data-official-verb]");
     if (YX.loadJSON(key("win10-end"))) {
-      feedback("Offer closed · itt16-win10-end", st);
+      feedback("Saved.", st);
       reveal(doc);
     }
     btn.addEventListener("click", function () {
       if (countChecked(doc, "[data-win10-end-req], [data-req]") < 2) {
-        feedback("Tick offer-ends and Spartan-not-Chromium.", st, { error: true });
+        if (!verbOwned) feedback("Tick offer-ends and Spartan-not-Chromium.", st, { error: true });
         return;
       }
+      if (verbOwned) return;
       saveJSON(key("win10-end"), blob({ ended: "2016-07-29", official: true }));
-      feedback("Tray closed (theater) · itt16-win10-end", st);
+      feedback("Saved.", st);
       reveal(doc);
     });
   }
@@ -304,7 +318,7 @@
       }
       if (verbOwned) return;
       saveJSON(key("dyn"), blob({ day: "2016-10-21", official: true }));
-      feedback("I was there (literacy) · itt16-dyn", st);
+      feedback("Saved.", st);
       reveal(doc);
     });
   }

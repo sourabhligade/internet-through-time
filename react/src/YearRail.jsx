@@ -99,7 +99,6 @@ export function YearRail({ year, star, trail, also, all, guided, stopByKey, star
             {trail.map((row) => (
               <li key={row.whenKey}>
                 <button type="button" onClick={() => openStop(row)}>{row.n} {row.name}</button>
-                <code>{row.whenKey}</code>
               </li>
             ))}
           </ol>
@@ -113,7 +112,6 @@ export function YearRail({ year, star, trail, also, all, guided, stopByKey, star
                 {also.map((row) => (
                   <li key={row.whenKey}>
                     <button type="button" onClick={() => openStop(row)}>{row.n} {row.name}</button>
-                    <code>{row.whenKey}</code>
                   </li>
                 ))}
               </ol>

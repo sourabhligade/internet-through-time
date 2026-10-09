@@ -4,7 +4,8 @@
 **Branch:** `museum/1994-2020-lean` · local **ahead of** origin `81c652c65`.  
 **Visitor gate:** `npm run check` 0 · dest-true **436** · warehouse year-flow aligned · named packs filled.  
 **Scan close (2026-10-09):** YouTube rebind assigns `ITT.youtube.boot`. 2016 AirPods/Dyn stamp `official: true` and skip when verb owns. 2020 extras year-gated. Atlas skips 2017. JumpStation DROP row removed from flow-maps. github-ready React 2015 has no HTML tree. leftover-2× unique catalog **1,158**. 2009 is live (BOARDED sets). Dest-gold skips any `[data-official-verb]` form. Bing empty and Technorati empty never write. HousingMaps persists on filter submit. Clickscape persists on bank/chop/mine. Kit official-kind includes `itt15-periscope`. Follow-site skip is absent years only. `--chrome-light` is defined. 2008 leftover dests use the XP leftover face. 2009 hidden Like-gold buttons carry `data-lo-trap`.  
-**Push:** dest-true is green. GitHub Actions will not run (#17 billing lock). Say **push**.
+**Push:** dest-true is green. GitHub Actions will not run (#17 billing lock). Say **push**.  
+**Museum-grade UI+UX remainder:** [`MUSEUM-GRADE-UX-COMPLETE.md`](MUSEUM-GRADE-UX-COMPLETE.md). Chrome phases 1–7 shipped. Slices A–E implemented (GO/Reactions honesty, receipt glass, 2015 React keys off glass, 390 rewalk lock). B1 `setIframeSrc` abort remains (CRITICAL). Slice F public tree waits on **push**. Not dest-farm.
 
 Do not dest-farm. Do not restore 2017–2019 or 2023–2025. Do not unfreeze 1994–2006. Do not run 1999–2004 `2x` until named. Do not start 2008 Pack B/C until named.
 
