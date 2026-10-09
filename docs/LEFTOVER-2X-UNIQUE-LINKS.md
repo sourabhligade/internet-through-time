@@ -184,9 +184,9 @@ When leftover-2× unique dests now = 0, after = min(2 × unique dest hrefs in th
 | **2005** | 339 | 105 | 206 | **210** | 105 |
 | **2006** | 366 | 116 | 236 | **232** | 116 |
 | 2007 | 33 | 0 | 0 | **33** | 33 |
-| 2009 | 78 | 62 | 132 | **stop boarded** | 0 |
+| 2009 | 78 | 62 | 132 | **live HTML** | 33 |
 | 2010 | 29 | 19 | 29 | **29** | 10 |
-| | 41 | 19 | 41 | **38** | 19 |
+| 2011 | 37 | 0 | 0 | **0** | 0 |
 | 2012 | 32 | 20 | 35 | **32** | 12 |
 | 2013 | 52 | 0 | 0 | **47** | 47 |
 | 2014 | 25 | 0 | 0 | **25** | 25 |
@@ -355,17 +355,13 @@ KEEP original leftover-2× unique dests: **none**.
 ADD leftover dest KEEP first: `alibabaipo` · `oculusfb` · `inbox` · `echo` · `flappybird` · `game2048` · `ios8`  
 Then dests already on disk: `applepay` · `facebook` · `heartbleed` · `icebucket` · `instagram` · `iphone` · `material` · `musically14` · `playable` · `slack` · `snapchat` · `truecrypt` · `twitch` · `twitter` · `uber` · `whatsapp` · `wikipedia` · `youtube`
 
-### 2015 — wiped
+### 2015 — live React door
 
-2015 is off hub. leftover dest leftover-2× unique dest catalog is empty. Do not restore `years/2015/`.
+2015 is on hub as `/app/index.html#/year/2015`. leftover-2× unique dest catalog **n = 0**. Do not dest-farm `years/2015/`.
 
-### 2017 — after 52 · add 26 · star `itt17-faceid`
+### 2017 — absent
 
-KEEP original (26): `bch` · `cloudbleed` · `coreml` · `creditfrz` · `echoshow` · `equifax` · `fortnite` · `homepodann` · `hqtrivia` · `ios11` · `iphone` · `iphone8` · `krack` · `musically` · `notpetya` · `pixel2` · `pixelbook` · `pubgnote` · `slack17` · `snapipo` · `switch` · `teams` · `twitter` · `vine` · `wannacry` · `watch3`
-
-ADD leftover-20 unique dests / extra dest KEEP already on disk: `botw` · `cardano` · `codww2` · `cuphead` · `destiny2` · `essentialph1` · `galaxys8` · `gettingoverit` · `googlehomemini` · `googlelens` · `googlepay` · `hangoutschat` · `highsierra` · `hollowknight` · `horizonzd` · `imacpro` · `injustice2` · `instagram17` · `ipadpro105` · `ipadpro129` · `iphone8plus` · `mariokart8d` · `mariorabbids` · `messengerday` · `model3` · `nier`
-
-Leftover-3× unique dests stay **0**. Unique leftover-20 dests stay 20 dest folders.
+2017 is `kind:absent`. No HTML tree, no hub card, no React door. leftover-2× unique dest catalog stays **0**. Do not dest-farm 2017.
 
 ### — after 20 · add 20 · star `itt18-gdpr`
 

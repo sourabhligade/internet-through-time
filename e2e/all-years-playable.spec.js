@@ -4,9 +4,11 @@
  * Cabinet links the period year game + famous pair.
  */
 const { test, expect } = require('@playwright/test');
+const fs = require('fs');
+const path = require('path');
 
-
-const WIPED = new Set(['2009', '2023', '2024', '2025']);
+const ROOT = path.join(__dirname, '..');
+const WIPED = new Set(['2023', '2024', '2025']);
 const YEARS = [];
 for (let y = 1994; y <= 2010; y++) {
   const s = String(y);
@@ -50,7 +52,15 @@ for (const year of YEARS) {
     await expect(page.locator('[data-year-playable]')).toBeVisible();
     await expect(page.locator('[data-yp-cabinet]')).toBeVisible();
     await expect(page.locator('[data-yp-play]')).toHaveAttribute('href', /game\.html/);
-    await expect(page.locator('a[href="famous.html"]').first()).toBeVisible();
+    const famousFile = path.join(ROOT, 'years', year, 'sites', 'playable', 'famous.html');
+    const famousN = fs.existsSync(famousFile)
+      ? (fs.readFileSync(famousFile, 'utf8').match(/data-famous=/g) || []).length
+      : 0;
+    if (famousN >= 2) {
+      await expect(page.locator('a[href="famous.html"]').first()).toBeVisible();
+    } else {
+      await expect(page.locator('a[href="famous.html"]')).toHaveCount(0);
+    }
     await expect(page.locator('body')).not.toContainText(/Toys 4/);
     await expect(page.locator('a[href*="g=15"]')).toHaveCount(0);
   });

@@ -83,7 +83,7 @@ Checked against the tree on 2026-10-04. Do not reopen these as work.
 - `years/2005/sites/folklore/` no longer has `data-5x-suffix`.
 - 2001, 2002, and 2003 READ-FIRST folder counts match DISK-TRUTH.
 - 2009 is a live HTML door. The error map’s “Boarded / no hub card” line is stale. `docs/2009-READ-FIRST.md` is the current lock.
-- `follow-site.js` `SKIP_YEARS` is 2018–2025. 2009 Like is a real stop. The incomplete-map line that says follow-site skips 2009 is stale.
+- `follow-site.js` `SKIP_YEARS` is 2017–2019 and 2023–2025. 2009 Like is a real stop. Live 2020–2022 stay on the follow-site walk.
 - PayPal 1999 `send.html` puts `data-official-verb` inside `form[data-paypal-send]`. `official-dest-gold.js` returns before a second write in that case.
 
 ## Still open on existing pages

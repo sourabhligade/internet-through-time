@@ -452,10 +452,10 @@ test.describe('year-signature 2006', () => {
   });
 });
 
-test.describe('year-signature ', () => {
+test.describe('year-signature 2008', () => {
   test('Chrome download theater → itt08-chrome', async ({ page }) => {
-    skipIfWiped('');
-    await enterYear(page);
+    skipIfWiped('2008');
+    await enterYear(page, '2008');
     await page.evaluate(() => {
       try {
         localStorage.removeItem('itt08-chrome');
@@ -463,15 +463,14 @@ test.describe('year-signature ', () => {
         /* */
       }
     });
-    await goImmersion(page,'sites/chrome/index.html');
+    await goImmersion(page, '2008', 'sites/chrome/index.html');
     const frame = contentFrame(page);
-    await expect(frame.locator('body')).toContainText(/Chrome|beta|download/i, { timeout: 15000 });
-    const dl = frame.locator('[data-chrome-download]');
-    await expect(dl).toBeVisible({ timeout: 10000 });
-    await frame.locator('[data-chrome-req]').nth(0).check({ force: true });
-    await frame.locator('[data-chrome-req]').nth(1).check({ force: true });
-    await frame.locator('[data-chrome-req]').nth(2).check({ force: true });
-    await dl.click();
+    await frame.locator('[data-official-trap]').first().click();
+    expect(await page.evaluate(() => localStorage.getItem('itt08-chrome'))).toBeFalsy();
+    await frame.locator('[data-official-need]').fill('Download Chrome');
+    await frame.locator('[data-official-req]').nth(0).check();
+    await frame.locator('[data-official-req]').nth(1).check();
+    await frame.locator('[data-official-verb]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt08-chrome')), {
         timeout: 8000,
@@ -480,8 +479,8 @@ test.describe('year-signature ', () => {
   });
 
   test('App Store install theater', async ({ page }) => {
-    skipIfWiped('');
-    await enterYear(page);
+    skipIfWiped('2008');
+    await enterYear(page, '2008');
     await page.evaluate(() => {
       try {
         localStorage.removeItem('itt08-apps');
@@ -489,18 +488,14 @@ test.describe('year-signature ', () => {
         /* */
       }
     });
-    await goImmersion(page,'sites/appstore/index.html');
+    await goImmersion(page, '2008', 'sites/appstore/index.html');
     const frame = contentFrame(page);
-    await expect(frame.locator('body')).toContainText(/App Store|app/i, { timeout: 15000 });
-    await expect(frame.locator('[data-appstore-catalog]')).toBeVisible({ timeout: 15000 });
-    const btn = frame.locator('[data-appstore-install]').first();
-    await expect(btn).toBeVisible({ timeout: 15000 });
-    const checks = frame.locator('[data-appstore-check]');
-    if ((await checks.count()) === 0) await btn.click();
-    await expect(checks.first()).toBeVisible({ timeout: 8000 });
-    const n = await checks.count();
-    for (let i = 0; i < n; i++) await checks.nth(i).check({ force: true });
-    await btn.click();
+    await frame.locator('[data-official-trap]').first().click();
+    expect(await page.evaluate(() => localStorage.getItem('itt08-apps'))).toBeFalsy();
+    await frame.locator('[data-official-need]').fill('Koi Pond');
+    await frame.locator('[data-official-req]').nth(0).check();
+    await frame.locator('[data-official-req]').nth(1).check();
+    await frame.locator('[data-official-verb]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt08-apps')), { timeout: 8000 })
       .toBeTruthy();
@@ -605,7 +600,6 @@ test.describe('year-signature 2007', () => {
 
 test.describe('year-signature 2009', () => {
   test('Facebook Like two partners REAL → itt09-like', async ({ page }) => {
-    test.skip(true, '2009 boarded');
     skipIfWiped('2009');
     await enterYear(page, '2009');
     await page.evaluate(() => {
@@ -617,11 +611,12 @@ test.describe('year-signature 2009', () => {
     });
     await goImmersion(page, '2009', 'sites/facebook/index.html');
     const frame = contentFrame(page);
-    await frame.locator('[data-lk09-like]').click();
+    await frame.locator('[data-official-trap]').first().click();
     expect(await page.evaluate(() => localStorage.getItem('itt09-like'))).toBeFalsy();
-    await frame.locator('[data-lk09-page="news"]').click();
-    await frame.locator('[data-lk09-page="music"]').click();
-    await frame.locator('[data-lk09-like]').click();
+    await frame.locator('[data-official-need]').fill('Like');
+    await frame.locator('[data-official-req]').nth(0).check();
+    await frame.locator('[data-official-req]').nth(1).check();
+    await frame.locator('[data-official-verb]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt09-like')), { timeout: 8000 })
       .toBeTruthy();

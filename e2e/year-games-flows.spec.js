@@ -178,9 +178,9 @@ test.describe('year game flows — full matrix', () => {
     expect(blob.best).toBeGreaterThan(0);
   });
 
-  test(' Goo Span: start fast writes score', async ({ page }) => {
-    test.skip(!isLiveYear(''), ' boarded from visitor UI');
-    const frame = await openGame(page,'?fast=1', 'itt08');
+  test('2008 Goo Span: start fast writes score', async ({ page }) => {
+    test.skip(!isLiveYear('2008'), '2008 is not a live HTML door');
+    const frame = await openGame(page, '2008', '?fast=1', 'itt08');
     await frame.locator('[data-game-start]').click();
     await expect
       .poll(async () => page.evaluate(() => localStorage.getItem('itt08-game-goospan')), { timeout: 5000 })

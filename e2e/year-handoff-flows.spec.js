@@ -45,7 +45,7 @@ function ittKey(year, suffix) {
 async function twoStepInFrame(page, frame, sel) {
   await page.waitForTimeout(450);
   const boxes = frame.locator(
-    'input[type="checkbox"][data-req], [data-appstore-check], [data-farm-check], [data-4sq-check], [data-chrome-req], [data-itunes-req]'
+    'input[type="checkbox"][data-official-req], input[type="checkbox"][data-req], [data-appstore-check], [data-farm-check], [data-4sq-check], [data-chrome-req], [data-itunes-req]'
   );
   const n = await boxes.count();
   for (let i = 0; i < n; i++) {

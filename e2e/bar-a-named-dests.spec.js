@@ -76,7 +76,7 @@ test.describe("Bar A named dests · Phase 0–2", () => {
     expect(await getKey(page, "itt05-maps-lx")).toBeFalsy();
   });
 
-  test(" App Store catalog Get writes itt08-apps", async ({ page }) => {
+  test("2008 App Store catalog Get writes itt08-apps", async ({ page }) => {
     await openClear(page, "/years/2008/sites/appstore/index.html", ["itt08-apps", "itt08-apps-lx"]);
     const verb = page.locator("[data-official-verb]").first();
     await expect(verb).toBeVisible({ timeout: 8000 });

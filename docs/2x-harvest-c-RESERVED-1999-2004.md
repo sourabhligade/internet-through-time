@@ -21,7 +21,7 @@
 | Firefox / Gmail / Facebook | **2004** |
 | YouTube | **2005** — never 1999–2004 dest |
 | MySpace | 2003 leftover ok · not 2002 gold |
-| 2009 | boarded — no harvest |
+| 2009 | live HTML — no Board C harvest |
 | Key shape | Minute 1 `ittYY-<slug>-lx` · Minute 2 `ittYY-<slug>` or `ittYY-<slug>-d2` |
 
 ## Reserved dests on disk (DO NOT PROPOSE)

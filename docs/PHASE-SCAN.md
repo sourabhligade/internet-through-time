@@ -280,7 +280,7 @@ https://sourabhligade.github.io/internet-through-time/ is origin `81c652c65`. Sl
 | S9 | WF dual-writer intro | Stale vs `verbOwned` |
 | S10 | PROD inventory | “155 setItem” vs zero immersion setItem |
 | S11 | 2008 Pack B | Doc wait vs folders on disk |
-| S12 | Lean-double | 2009 boarded / hub 25 vs live 26 / 2009 live |
+| S12 | Lean-double | Closed: 2009 live HTML · hub 25 doors |
 
 Trail n **8 / 9 / 9** (2004 / 2013 / 2014) is disk law. leftover-3× unique catalog is empty. 2017–2019 and 2023–2025 stay 0. Those are standing rules.
 
@@ -297,7 +297,7 @@ Trail n **8 / 9 / 9** (2004 / 2013 / 2014) is disk law. leftover-3× unique cata
 | 2006 Twttr extras | Would `saveJSON` `itt06-tweets` | Button is `data-official-verb`, extras return |
 | 2010 iPad | Extras skip when Place order is the verb | Dual keys `ipad` + `ipad-order` remain if extras run |
 | Facebook 1B | WF 2010–2013 header: missing checklist line | Same file phase 1: ticked, heading 10 |
-| YEAR-CHROME-PLAN | OfficialStop `Saved · key`, 22-door language | Live OfficialStop `Saved.`, hub 26 |
+| YEAR-CHROME-PLAN | OfficialStop `Saved · key`, 22-door language | Live OfficialStop `Saved.`, hub 25 |
 | Phase 7 same tree | UI.md: public serves 25 doors | Public = origin; local 6 ahead + dirty |
 
 ---

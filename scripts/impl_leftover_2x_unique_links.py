@@ -4,7 +4,7 @@
 2× unique dest slugs in leftover-2× rails. One dest once. Dests already on disk.
 2000–2006 KEEP original unique dests. Strip duplicate hrefs. Official dest leftover-2×
 first paint = 0. Do not dest-farm dest folders. Do not grow leftover-3× unique.
-Do not write dest-true leftover dest I/O. 2009 boarded. 2023–2025 wiped.
+Do not write dest-true leftover dest I/O. 2009 is live HTML. 2023–2025 wiped.
 Leftover-2× unique dest links stay dest-disjoint from leftover-3× unique dest links
 (one dest once as a link). Cite: docs/LEFTOVER-2X-UNIQUE-LINKS.md
 docs/DUPLICATE-UNIQUE-LINKS.md
@@ -172,18 +172,6 @@ CITED_ADD: dict[str, list[str]] = {
         "facebook", "youtube", "wikipedia", "twitter", "applepay", "heartbleed",
         "icebucket", "instagram", "iphone", "material", "musically14", "playable",
         "slack", "snapchat", "truecrypt", "twitch", "uber", "whatsapp",
-    ],
-    "2015": [
-        "androidpay", "applenews", "applepencil", "applewatch", "beats1", "dx12",
-        "elcapitan", "ethereum", "fblive", "http2", "instantarticles", "ipadpro",
-        "ipfs", "iphone6s", "k8s",
-    ],
-    "2017": [
-        "cuphead", "twitterlite", "hangoutschat", "snapmap", "instagram17", "botw",
-        "splatoon2", "tbh", "messengerday", "gettingoverit", "hollowknight", "cardano",
-        "codww2", "destiny2", "essentialph1", "galaxys8", "googlehomemini",
-        "googlelens", "googlepay", "highsierra", "horizonzd", "imacpro", "injustice2",
-        "ipadpro105", "ipadpro129", "iphone8plus",
     ],
 }
 

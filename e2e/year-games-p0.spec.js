@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * P0 year-game gates. 2009 boarded — skip.
+ * P0 year-game gates. 2009 is live HTML.
  */
 const { test, expect } = require('@playwright/test');
 
@@ -9,7 +9,7 @@ const { enterYear, goImmersion, contentFrame, killOverlays, waitKey, isLiveYear 
 const fs = require('fs');
 const path = require('path');
 const YEARS = [];
-for (let y = 1994; y <= 2007; y++) {
+for (let y = 1994; y <= 2010; y++) {
   const s = String(y);
   if (fs.existsSync(path.join(__dirname, '..', 'years', s, 'index.html')) && isLiveYear(s)) YEARS.push(s);
 }
@@ -26,7 +26,12 @@ const FEATURED = {
   2002: 'roomsticky',
   2003: 'gagslite',
   2004: 'gemcascade',
-  2009: 'plotneighbors',
+  2005: 'heli',
+  2006: 'sled',
+  2007: 'safariq',
+  2008: 'goospan',
+  2009: 'plot',
+  2010: 'slingnest',
 };
 
 function prefix(year) {
@@ -114,7 +119,7 @@ test.describe('P0 2004 Gem Cascade fixtures', () => {
   });
 });
 
-test.describe('P0  Goo Span far click', () => {
+test.describe('P0 2008 Goo Span far click', () => {
   test('far click does not add a node', async ({ page }) => {
     const frame = await openGame(page, '2008');
     await frame.locator('[data-game-start]').click();

@@ -54,7 +54,7 @@ ALLOW_PLAQUE: frozenset[tuple[int, str]] = frozenset(
         (2012, "sites/wikipedia/sopa.html"),
     }
 )
-# No HTML tree: absent years and React doors. 2009 is boarded (tree stays).
+# No HTML tree: absent years and React doors. 2009 is live HTML.
 WIPED_YEARS: frozenset[int] = frozenset(
     int(y) for y, r in _YEARS.items() if r.get("kind") in ("absent", "react")
 )

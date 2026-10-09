@@ -9,9 +9,9 @@
   var data = (window.ITT && ITT.AtlasData) || {};
   var YEARS_ALL = [];
   var y;
-  var WIPED = { "2017": 1, "2018": 1, "2019": 1, "2023": 1, "2024": 1, "2025": 1 };
+  var SKIP = { "2016": 1, "2017": 1, "2018": 1, "2019": 1, "2023": 1, "2024": 1, "2025": 1 };
   for (y = 1994; y <= 2022; y++) {
-    if (!WIPED[String(y)]) YEARS_ALL.push(String(y));
+    if (!SKIP[String(y)]) YEARS_ALL.push(String(y));
   }
 
   var extra2x = {};

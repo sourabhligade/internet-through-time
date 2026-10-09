@@ -22,7 +22,7 @@ Old walk, not the live list. Live hub is **25 doors**: HTML 1994–2014 and 2020
 flowchart TD
  HUB["Hub index.html<br/>25 year cards"] --> KIND{"Card kind"}
  KIND -->|HTML| YEAR["/years/YYYY/"]
- KIND -->|React 2015 or 2017| REACT["/app/index.html#/year/YYYY"]
+ KIND -->|React 2015| REACT["/app/index.html#/year/2015"]
  YEAR --> ROOM["Room click"]
  REACT --> ROOM
  ROOM --> EMPTY["Empty or trap"]

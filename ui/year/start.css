@@ -50,9 +50,8 @@ html[data-itt-year="2011"] body.itt-start-page,
 html[data-itt-year="2012"] body.itt-start-page,
 html[data-itt-year="2013"] body.itt-start-page,
 html[data-itt-year="2014"] body.itt-start-page,
-html[data-itt-year="2015"] body.itt-start-page,
-html[data-itt-year="2017"] body.itt-start-page,
-html[data-itt-year=""] body.itt-start-page,
+html[data-itt-year="2020"] body.itt-start-page,
+html[data-itt-year="2021"] body.itt-start-page,
 html[data-itt-year="2022"] body.itt-start-page {
   background: #f3f3f3 !important;
   color: #111 !important;
@@ -354,19 +353,17 @@ html[data-itt-year="2013"] .ott-flows a {
   color: #e8fff8;
 }
 
-/* 2015–2021 · Chrome habit landing. Not GeoCities list. Not IE 5. No brand pixels. */
+/* Chrome habit landing for live HTML habit years 2020–2022. 2015 is React (no HTML start). */
 html[data-itt-start-habit],
-html[data-itt-year="2015"],
-html[data-itt-year="2017"],
-html[data-itt-year=""],
+html[data-itt-year="2020"],
+html[data-itt-year="2021"],
 html[data-itt-year="2022"] {
   color-scheme: only light !important;
   background: #f8f9fa !important;
 }
 html[data-itt-start-habit] body.itt-start-page,
-html[data-itt-year="2015"] body.itt-start-page,
-html[data-itt-year="2017"] body.itt-start-page,
-html[data-itt-year=""] body.itt-start-page,
+html[data-itt-year="2020"] body.itt-start-page,
+html[data-itt-year="2021"] body.itt-start-page,
 html[data-itt-year="2022"] body.itt-start-page {
   background: #f8f9fa !important;
   color: #202124 !important;
@@ -376,15 +373,15 @@ html[data-itt-year="2022"] body.itt-start-page {
 html[data-itt-start-habit] #itt-exhibit-nav,
 html[data-itt-start-habit] #itt-wayfind,
 html[data-itt-start-habit] .itt-hub-exit,
-html[data-itt-year="2015"] body.itt-start-page #itt-exhibit-nav,
-html[data-itt-year="2017"] body.itt-start-page #itt-exhibit-nav,
-html[data-itt-year=""] body.itt-start-page #itt-exhibit-nav {
+html[data-itt-year="2020"] body.itt-start-page #itt-exhibit-nav,
+html[data-itt-year="2021"] body.itt-start-page #itt-exhibit-nav,
+html[data-itt-year="2022"] body.itt-start-page #itt-exhibit-nav {
   display: none !important;
 }
 html[data-itt-start-habit] #itt-year-start,
-html[data-itt-year="2015"] body.itt-start-page #itt-year-start,
-html[data-itt-year="2017"] body.itt-start-page #itt-year-start,
-html[data-itt-year=""] body.itt-start-page #itt-year-start {
+html[data-itt-year="2020"] body.itt-start-page #itt-year-start,
+html[data-itt-year="2021"] body.itt-start-page #itt-year-start,
+html[data-itt-year="2022"] body.itt-start-page #itt-year-start {
   max-width: 720px;
   margin: 28px auto 48px;
   padding: 0 20px;
@@ -393,16 +390,16 @@ html[data-itt-year="2022"][data-itt-start-standalone] #itt-year-start {
   margin-bottom: 16px;
 }
 html[data-itt-start-habit] .itt-year-star,
-html[data-itt-year="2015"] .itt-year-star,
-html[data-itt-year="2017"] .itt-year-star,
-html[data-itt-year=""] .itt-year-star {
+html[data-itt-year="2020"] .itt-year-star,
+html[data-itt-year="2021"] .itt-year-star,
+html[data-itt-year="2022"] .itt-year-star {
   margin: 0 0 20px;
   font-size: 15px;
 }
 html[data-itt-start-habit] .itt-year-star a,
-html[data-itt-year="2015"] .itt-year-star a,
-html[data-itt-year="2017"] .itt-year-star a,
-html[data-itt-year=""] .itt-year-star a {
+html[data-itt-year="2020"] .itt-year-star a,
+html[data-itt-year="2021"] .itt-year-star a,
+html[data-itt-year="2022"] .itt-year-star a {
   display: block;
   padding: 18px 20px;
   background: #fff !important;
@@ -414,20 +411,14 @@ html[data-itt-year=""] .itt-year-star a {
   box-shadow: 0 1px 2px rgba(60, 64, 67, 0.12);
 }
 html[data-itt-start-habit] .itt-year-star a:hover,
-html[data-itt-year="2015"] .itt-year-star a:hover,
-html[data-itt-year="2017"] .itt-year-star a:hover,
-html[data-itt-year=""] .itt-year-star a:hover {
+html[data-itt-year="2020"] .itt-year-star a:hover,
+html[data-itt-year="2021"] .itt-year-star a:hover,
+html[data-itt-year="2022"] .itt-year-star a:hover {
   border-color: #1967d2 !important;
   color: #1967d2 !important;
 }
 
-/* 2015 and later · Chrome habit / Win10, not IE 5 black cards */
-html[data-itt-year="2015"] .ott-guided,
-html[data-itt-year="2015"] .ott-flows,
-html[data-itt-year="2017"] .ott-guided,
-html[data-itt-year="2017"] .ott-flows,
-html[data-itt-year=""] .ott-guided,
-html[data-itt-year=""] .ott-flows,
+/* Live HTML habit years · Chrome habit / Win10, not IE 5 black cards */
 html[data-itt-year="2020"] .ott-guided,
 html[data-itt-year="2020"] .ott-flows,
 html[data-itt-year="2021"] .ott-guided,
@@ -442,29 +433,21 @@ html[data-itt-year="2022"] .ott-flows {
   padding: 16px 20px;
   box-shadow: 0 1px 2px rgba(60, 64, 67, 0.08);
 }
-html[data-itt-year="2015"] .ott-guided a,
-html[data-itt-year="2015"] .ott-flows a,
-html[data-itt-year="2017"] .ott-guided a,
-html[data-itt-year="2017"] .ott-flows a,
-html[data-itt-year=""] .ott-guided a,
-html[data-itt-year=""] .ott-flows a,
 html[data-itt-year="2020"] .ott-guided a,
 html[data-itt-year="2020"] .ott-flows a,
 html[data-itt-year="2021"] .ott-guided a,
-html[data-itt-year="2021"] .ott-flows a {
+html[data-itt-year="2021"] .ott-flows a,
+html[data-itt-year="2022"] .ott-guided a,
+html[data-itt-year="2022"] .ott-flows a {
   color: #1967d2 !important;
   text-decoration: none;
 }
-html[data-itt-year="2015"] .ott-guided a:hover,
-html[data-itt-year="2015"] .ott-flows a:hover,
-html[data-itt-year="2017"] .ott-guided a:hover,
-html[data-itt-year="2017"] .ott-flows a:hover,
-html[data-itt-year=""] .ott-guided a:hover,
-html[data-itt-year=""] .ott-flows a:hover,
 html[data-itt-year="2020"] .ott-guided a:hover,
 html[data-itt-year="2020"] .ott-flows a:hover,
 html[data-itt-year="2021"] .ott-guided a:hover,
-html[data-itt-year="2021"] .ott-flows a:hover {
+html[data-itt-year="2021"] .ott-flows a:hover,
+html[data-itt-year="2022"] .ott-guided a:hover,
+html[data-itt-year="2022"] .ott-flows a:hover {
   text-decoration: underline;
 }
 
@@ -664,28 +647,23 @@ html[data-itt-year="1999"] .itt-felt-trail {
   margin: 8px 0 !important;
 }
 
-/* 2015–2022 Starting Point must beat period-1995 * flatten / navy exhibit nav. */
-html[data-itt-year="2015"] #itt-exhibit-nav,
-html[data-itt-year="2017"] #itt-exhibit-nav,
-html[data-itt-year=""] #itt-exhibit-nav,
+/* 2020–2022 Starting Point must beat period-1995 * flatten / navy exhibit nav. */
+html[data-itt-year="2020"] #itt-exhibit-nav,
+html[data-itt-year="2021"] #itt-exhibit-nav,
 html[data-itt-year="2022"] #itt-exhibit-nav,
-html[data-itt-year="2015"] body.itt-start-page .itt-nav-slot,
-html[data-itt-year="2017"] body.itt-start-page .itt-nav-slot,
-html[data-itt-year=""] body.itt-start-page .itt-nav-slot,
+html[data-itt-year="2020"] body.itt-start-page .itt-nav-slot,
+html[data-itt-year="2021"] body.itt-start-page .itt-nav-slot,
 html[data-itt-year="2022"] body.itt-start-page .itt-nav-slot {
   display: none !important;
 }
-html[data-itt-year="2015"] body.itt-start-page .itt-year-star a,
-html[data-itt-year="2017"] body.itt-start-page .itt-year-star a,
-html[data-itt-year=""] body.itt-start-page .itt-year-star a,
+html[data-itt-year="2020"] body.itt-start-page .itt-year-star a,
+html[data-itt-year="2021"] body.itt-start-page .itt-year-star a,
 html[data-itt-year="2022"] body.itt-start-page .itt-year-star a,
-html[data-itt-year="2015"] body.itt-start-page .ott-guided,
-html[data-itt-year="2017"] body.itt-start-page .ott-guided,
-html[data-itt-year=""] body.itt-start-page .ott-guided,
+html[data-itt-year="2020"] body.itt-start-page .ott-guided,
+html[data-itt-year="2021"] body.itt-start-page .ott-guided,
 html[data-itt-year="2022"] body.itt-start-page .ott-guided,
-html[data-itt-year="2015"] body.itt-start-page .ott-flows,
-html[data-itt-year="2017"] body.itt-start-page .ott-flows,
-html[data-itt-year=""] body.itt-start-page .ott-flows,
+html[data-itt-year="2020"] body.itt-start-page .ott-flows,
+html[data-itt-year="2021"] body.itt-start-page .ott-flows,
 html[data-itt-year="2022"] body.itt-start-page .ott-flows {
   border-radius: 8px !important;
   box-shadow: 0 1px 2px rgba(60, 64, 67, 0.12) !important;

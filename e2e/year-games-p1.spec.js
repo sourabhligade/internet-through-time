@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * P1 year-game play gates. 2009 boarded.
+ * P1 year-game play gates. 2009 is live HTML.
  */
 const { test, expect } = require('@playwright/test');
 

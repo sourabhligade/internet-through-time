@@ -164,7 +164,7 @@ for (const year of YEARS) {
   }
 }
 
-test.skip("2009 About prints live ILS users not the stale cell", async ({ page }) => {
+test("2009 About prints live ILS users not the stale cell", async ({ page }) => {
   await page.goto("/years/2009/pages/about.html");
   await expect(page.locator("body")).toContainText("1,766,206,240");
   await expect(page.locator("body")).not.toContainText("1,766,403,814");

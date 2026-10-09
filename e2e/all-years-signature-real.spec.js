@@ -281,20 +281,19 @@ test.describe('all-years signature REAL · late web', () => {
     await requireKey(page, 'itt06-tweets');
   });
 
-  test(' GitHub issue → itt08-github', async ({ page }) => {
-    test.skip(!isLiveYear(''), ' boarded from visitor UI');
-    await enterYear(page);
+  test('2008 GitHub issue → itt08-github', async ({ page }) => {
+    test.skip(!isLiveYear('2008'), '2008 is not a live HTML door');
+    await enterYear(page, '2008');
     await clearPrefix(page, 'itt08-github');
-    await goImmersion(page,'sites/github/issue.html');
+    await goImmersion(page, '2008', 'sites/github/issue.html');
     const frame = contentFrame(page);
-    const form = frame.locator('form[data-gh-issue-form]');
-    await expect(form).toBeVisible({ timeout: 15000 });
-    await form.locator('button[type="submit"]').click();
-    await page.waitForTimeout(80);
+    await expect(frame.locator('[data-official-verb]')).toBeVisible({ timeout: 15000 });
+    await frame.locator('[data-official-trap]').first().click();
     expect(await page.evaluate(() => localStorage.getItem('itt08-github'))).toBeFalsy();
-    await form.locator('[name="title"]').fill('Cannot center logo residual');
-    await form.locator('[name="body"]').fill('Steps to reproduce residual');
-    await form.locator('button[type="submit"]').click();
+    await frame.locator('[data-official-need]').fill('Cannot center logo residual');
+    await frame.locator('[data-official-req]').nth(0).check();
+    await frame.locator('[data-official-req]').nth(1).check();
+    await frame.locator('[data-official-verb]').click();
     await requireKey(page, 'itt08-github');
   });
 

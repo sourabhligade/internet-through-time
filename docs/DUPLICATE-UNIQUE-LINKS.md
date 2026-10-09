@@ -439,7 +439,7 @@ Host pages: **162**.
 - Official dests as leftover unique dest **link targets** on leftover dest pages. Allowed (L6 / T6). Official dest HTML leftover unique-link first paint stays 0.
 - leftover dest KEEP leftover dest-true I/O (`data-lo-panel`). Not a unique dest **link**.
 - leftover-2× harvest MISS forests 1994–1998 / 2005 / 2006 / .
-- 2009 boarded. 2023–2025 wiped.
+- 2009 is live HTML. 2023–2025 wiped.
 
 ## Remaining after leftover-2× ∩ leftover-3× unique dest link kill
 

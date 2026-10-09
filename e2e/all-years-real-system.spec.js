@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * REAL-flow system gate — every ship year (1994–2010 and 2012–2017). 2022 is absent.
+ * REAL-flow system gate — live HTML years with an about thesis page.
  *
  * 1) Universal module boots (data-itt-real-flow / data-itt-feat-realFlow)
  * 2) Thesis literacy panel: incomplete writes nothing; complete writes year-prefixed *-thesis-ack
@@ -33,10 +33,17 @@ const YEARS = [
   '2004',
   '2005',
   '2006',
-'2010',
+  '2007',
+  '2008',
+  '2009',
+  '2010',
+  '2011',
   '2012',
   '2013',
   '2014',
+  '2020',
+  '2021',
+  '2022',
 ];
 
 /** @param {string} year */
@@ -101,7 +108,6 @@ async function getKey(page, key) {
 for (const year of YEARS) {
   test.describe(`REAL system ${year}`, () => {
     test(`about thesis REAL gate · ${year}`, async ({ page }) => {
-      test.skip(year === "2017", "2017 is the React door; thesis literacy is the HTML about page");
       const key = thesisKey(year);
       await openAbout(page, year);
       await clearKey(page, key);
@@ -210,7 +216,7 @@ test.describe('REAL system product samples', () => {
     await expect.poll(async () => page.evaluate(() => localStorage.getItem('itt99-aim'))).toBeTruthy();
   });
 
-  test(' GitHub empty issue blocked; titled+body writes', async ({ page }) => {
+  test('2008 GitHub empty issue blocked; titled+body writes', async ({ page }) => {
     await page.goto('/years/2008/sites/github/issue.html');
     await page.evaluate(() => localStorage.removeItem('itt08-github'));
     await page.reload();

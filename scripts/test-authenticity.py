@@ -1673,7 +1673,7 @@ def test_2009_signature() -> None:
         return
     shell09 = read(ROOT / "years/2009/index.html")
     if "boarded" in shell09.lower() or "location.replace" in shell09:
-        ok("2009-signature")
+        fail("2009-signature", "2009 is live HTML; shell looks boarded")
         return
     if 'data-itt-year="2009"' not in shell09:
         fail("2009-signature", "shell year")

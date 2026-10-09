@@ -7,7 +7,7 @@ const { test, expect } = require('@playwright/test');
 
 const { enterYear, goImmersion, contentFrame, killOverlays } = require('./helpers');
 
-const WIPED = new Set(['2009', '2022', '2023', '2024', '2025']);
+const WIPED = new Set(['2023', '2024', '2025']);
 const YEARS = [];
 for (let y = 1994; y <= 2010; y++) {
   const s = String(y);
@@ -26,9 +26,6 @@ const FLOW = {
   '2004': { id: 'gemcascade', primary: '[data-game-start]', flow: 'click-start' },
   '2009': { id: 'plot', primary: '[data-game-start]', flow: 'plant' },
   '2010': { id: 'slingnest', primary: '#play-start, [data-game-start]', flow: 'click-start' },
-  '': { id: 'letterswap', primary: '[data-game-start]', flow: 'click-start' },
-  '2017': { id: 'stormcircle', primary: '[data-game-start]', flow: 'click-start' },
-  '': { id: 'consentdash', primary: '[data-game-start]', flow: 'click-start' },
 };
 
 /**

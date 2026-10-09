@@ -675,7 +675,7 @@ body {
   content: "";
 }
 
-/* Legacy boarded-strip (unused on the 26-door hub). 2001–2003 are live HTML. */
+/* Legacy boarded-strip (unused on the 25-door hub). 2001–2003 are live HTML. */
 .closed-rooms {
   grid-column: 1 / -1;
   margin: 2px 0;
@@ -1356,18 +1356,6 @@ body {
 .year-card.y2011 .year { color: #c5221f; }
 .year-card.y2011 .era-chip { background: #dd4b39; color: #fff; }
 .year-card.y2011 .motif { background: linear-gradient(135deg, #dd4b39, #3367d6); }
-
-/* 2017 is absent. Keep the locked skin if a card is re-added as boarded. */
-.year-card.y2017 { border-color: #5e35b1 #404040 #404040 #111; }
-.year-card.y2017 .year-card-inner { background: linear-gradient(180deg, #f3e5f5 0%, #e8eaf6 55%); }
-.year-card.y2017 .year { color: #4a148c; }
-.year-card.y2017 .era-chip { background: #5e35b1; color: #fff; }
-.year-card.y2017 .motif { background: linear-gradient(135deg, #5e35b1, #111); }
-.year-card.y { border-color: #1565c0 #404040 #404040 #111; }
-.year-card.y .year-card-inner { background: linear-gradient(180deg, #e3f2fd 0%, #eceff1 55%); }
-.year-card.y .year { color: #0d47a1; }
-.year-card.y .era-chip { background: #1565c0; color: #fff; }
-.year-card.y .motif { background: linear-gradient(135deg, #1565c0, #111); }
 
 /* —— Passport + first night (1994–2013) —— */
 .hub-passport-link {

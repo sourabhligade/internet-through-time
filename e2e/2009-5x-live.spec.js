@@ -1,5 +1,5 @@
 // @ts-check
-/** 2009 5× live — boarded year, five site loops, Like star stays empty. */
+/** 2009 5× live — live HTML year, five site loops, Like star stays empty. */
 const { test, expect } = require("@playwright/test");
 
 async function getKey(page, key) {

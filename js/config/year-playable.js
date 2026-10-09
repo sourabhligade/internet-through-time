@@ -184,7 +184,6 @@
       blurb: "Plant two leftover plots. Pay-to-skip never scores.",
       why: "2009 is when farms nags the feed. The star is still Facebook Like.",
       era: "XP + IE 8. Like. Bing. 3GS. Most people still live on a laptop.",
-      famous: "Pocket Snake + Concentration",
       accent: "#689f38"
     },
         "2010": {
@@ -220,7 +219,6 @@
       blurb: "Loop two leftover beats. 15s never scores.",
       why: "2013 leftover cabinet. The star is still Vine.",
       era: "Win7 + IE 9. Six seconds. Flat phone. Stories last a day.",
-      famous: "Pocket Snake + Concentration",
       accent: "#00bf8f"
     },
     "2014": {
@@ -246,7 +244,6 @@
       blurb: "Queue a leftover URL. App Store never writes.",
       why: "The star is still iPhone Safari.",
       era: "App Store is highlighted. Go leftover is the real click.",
-      famous: "Safari Queue",
       accent: "#0a246a"
     }};
 })(typeof window !== "undefined" ? window : this);

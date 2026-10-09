@@ -670,11 +670,6 @@
                               "do": "4\u00d7 · itt96-angel"
                     },
                     {
-                              "name": "N11 TheGlobe",
-                              "href": "sites/theglobe/index.html",
-                              "do": "4\u00d7 · itt96-globe"
-                    },
-                    {
                               "name": "N12 TotalNY",
                               "href": "sites/totalny/index.html",
                               "do": "4\u00d7 · itt96-tny"
@@ -912,11 +907,6 @@
                               "do": "4\u00d7 · itt97-winamp"
                     },
                     {
-                              "name": "N7 Java nag",
-                              "href": "sites/javaplugin/index.html",
-                              "do": "4\u00d7 · itt97-java"
-                    },
-                    {
                               "name": "N8 BBC",
                               "href": "sites/bbc/index.html",
                               "do": "4\u00d7 · itt97-bbc"
@@ -1021,8 +1011,8 @@
             "do": "Webmail continuity"
           },
           {
-            "name": "Amazon",
-            "href": "sites/amazon/index.html",
+            "name": "Amazon IPO",
+            "href": "sites/amazonipo/index.html",
             "do": "IPO-era · cart · Book of the Day"
           }
         ]
@@ -2310,9 +2300,6 @@ ITT.flowMaps["2005"] = {
         "label": "New · 2010",
         "do": "REAL · incomplete never writes · not the chip",
         "sites": [
-          { "name": "Google Instant", "href": "sites/instant/index.html", "do": "Type 2+ chars · itt10-instant" },
-          { "name": "FaceTime Wi-Fi", "href": "sites/facetime/index.html", "do": "Wi-Fi tick + call theater · itt10-facetime" },
-          { "name": "Kickstarter", "href": "sites/kickstarter/index.html", "do": "Back $1 · itt10-kickstarter" },
           { "name": "IG second share", "href": "sites/instagram/index.html", "do": "Share twice · itt10-ig-2" },
           { "name": "iPad order radios", "href": "sites/ipad/order.html", "do": "Capacity + radio · itt10-ipad-order" }
         ]
@@ -2321,7 +2308,6 @@ ITT.flowMaps["2005"] = {
         "label": "5× F1–F5 · 2010",
         "do": "REAL loops · incomplete never writes",
         "sites": [
-          { "name": "F1 Ask.com", "href": "sites/ask/index.html", "do": "Query persist · itt10-ask" },
           { "name": "F2 Instagram", "href": "sites/instagram/index.html", "do": "Star filter/share · itt10-ig-posts" },
           { "name": "F3 Imgur", "href": "sites/imgur/index.html", "do": "Upload residual · itt10-imgur" },
           { "name": "F4 Facebook OG", "href": "sites/facebook/index.html", "do": "Like · itt10-facebook" },

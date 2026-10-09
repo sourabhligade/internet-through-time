@@ -14,10 +14,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "dev" / "museum-map"
-LOCK_4X = {"2012", "2013", "2017"}
+LOCK_4X = {"2012", "2013"}
 NO_SECOND = {"2013"}
 BOARDED = []
-WIPED = ["2018", "2019", "2023", "2024", "2025"]
+WIPED = ["2017", "2018", "2019", "2023", "2024", "2025"]
 
 
 def dump_disk() -> dict:

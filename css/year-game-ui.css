@@ -252,12 +252,12 @@ html[data-itt-year="2010"] [data-year-game] {
   --yg-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-body.yg-year-,
-html[data-itt-year=""] body {
+body.yg-year-2011,
+html[data-itt-year="2011"] body {
   background: #f0f0f5 !important;
 }
-body.yg-year- .yg-shell,
-html[data-itt-year=""] [data-year-game] {
+body.yg-year-2011 .yg-shell,
+html[data-itt-year="2011"] [data-year-game] {
   --yg-accent: #5856d6;
   --yg-panel: #fff;
   --yg-btn: #5856d6;

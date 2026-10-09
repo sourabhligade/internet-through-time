@@ -230,7 +230,7 @@
       path = "";
     }
     if (!/\/pages\/home\.html$/.test(path)) return;
-    if (["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2017", "2020", "2021", "2022"].indexOf(String(y)) !== -1) return;
+    if (["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2020", "2021", "2022"].indexOf(String(y)) !== -1) return;
     if (doc.getElementById("itt-layer-assess")) return;
     var meta = META[y] || {};
     var links = webLinks(y);

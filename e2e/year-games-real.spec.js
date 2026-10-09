@@ -329,15 +329,15 @@ test.describe('REAL complete writes', () => {
     expect(blob.real).toBe(true);
   });
 
-  test(' goo span writes best via start fast', async ({ page }) => {
-    test.skip(!isLiveYear(''), ' boarded from visitor UI');
-    await enterYear(page);
+  test('2008 goo span writes best via start fast', async ({ page }) => {
+    test.skip(!isLiveYear('2008'), '2008 is not a live HTML door');
+    await enterYear(page, '2008');
     await clearPrefixGames(page, 'itt08');
-    const frame = await openGame(page,'?fast=1');
+    const frame = await openGame(page, '2008', '?fast=1');
     await frame.locator('[data-game-start]').click();
     const blob = JSON.parse((await waitKey(page, 'itt08-game-goospan')) || '{}');
     expect(blob.real).toBe(true);
-    expect(blob.year).toBe('');
+    expect(blob.year).toBe('2008');
     expect(blob.best).toBeGreaterThan(0);
   });
 

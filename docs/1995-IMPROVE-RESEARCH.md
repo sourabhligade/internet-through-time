@@ -35,7 +35,7 @@ Leftover trail 11–20: AOL · Apple · ESPN · HotWired · IBM · Infoseek · N
 - Stamp leftover-2× rails on official dests.  
 - Restore extra dest DROP `apple` as a unique dest (it is leftover trail n=12).  
 - Invent Lycos dest (Hosting.com June 1995 #9, no folder).  
-- Add 5× as live 1995 (live 5× is ; 2009 boarded plaque).
+- Add 5× as live 1995 (live 5× is on 1995 dests; 2009 is live HTML).
 
 ---
 

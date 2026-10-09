@@ -126,9 +126,11 @@
       '">▶ Play ' +
       esc(spec.title) +
       "</a> " +
-      '<a class="yp-btn secondary" href="famous.html">Famous games · ' +
-      esc(spec.famous || "arcade pair") +
-      "</a>" +
+      (spec.famous
+        ? '<a class="yp-btn secondary" href="famous.html">Famous games · ' +
+          esc(spec.famous) +
+          "</a>"
+        : "") +
       extraLinks(y) +
       "</p>" +
       '<p class="yp-honesty yp-best">Museum original · labeled inspiration · no ripped SWF · incomplete runs never write. Start from the game page.</p>' +

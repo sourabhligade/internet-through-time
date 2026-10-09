@@ -116,7 +116,7 @@ Do not skip ahead to dest-farm.
 |------|------|-----------|
 | **A** | Fix star **hrefs** (year-start, first-night, atlas, start-data) to the table in §3 | No star 404 |
 | **B** | Walk each star as a visitor: incomplete, trap, save, reload | I3–I5 pass; key persists |
-| **C** | Fold leftover on first paint (already CSS; confirm 2017//2021 homes) | I7 pass |
+| **C** | Fold leftover on first paint (already CSS; confirm 2021 homes) | I7 pass |
 | **D** | Capture-cite or failed-final on all 6 stars | I8 / L1 |
 | **E** | Phone frame + Chrome habit on Stories / Face ID / ATT / Zoom | L2 / L3 |
 | **F** | Official 10 dests match `flow-trails.js` and have dest-true verbs | I13 |
@@ -147,7 +147,7 @@ Do not skip ahead to dest-farm.
 | | Y | Y | Y | Y | Y | — | Y | Y | Continue on chip / trail / start-extra |
 | 2021 | Y | Y | Y | Y | Y | Y | Y | Y | one-thing + mvp |
 
-Recheck 2026-09-14: 38 e2e passed (mvp + -flows + one-thing lean HTML 2020–2021). Stars walked empty/trap/write. Guided 6. Unique A/B/C hidden. About bans hold. **Not Y:** L5 (2017//2021 dest-farm still on disk, folded). 2013 year-start is `vine/record.html`.
+Recheck 2026-09-14: 38 e2e passed (mvp + -flows + one-thing lean HTML 2020–2021). Stars walked empty/trap/write. Guided 6. Unique A/B/C hidden. About bans hold. **Not Y:** L5 (2021 dest-farm still on disk, folded). 2013 year-start is `vine/record.html`.
 
 Mark **Y / N**. A year is I/O-done when the row is all Y.
 

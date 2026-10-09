@@ -32,7 +32,8 @@ async function waitResidual(page) {
 }
 
 const YEARS = [];
-for (let y = 1994; y <= 2017; y++) YEARS.push(String(y));
+for (let y = 1994; y <= 2014; y++) YEARS.push(String(y));
+for (let y = 2020; y <= 2022; y++) YEARS.push(String(y));
 
 test.describe("residual REAL across years", () => {
   for (const year of YEARS) {
@@ -61,15 +62,6 @@ test.describe("residual REAL across years", () => {
         await page.evaluate((kk) => localStorage.removeItem(kk), k);
         await page.reload();
         await waitResidual(page);
-        const install = page.locator("[data-appstore-install]");
-        if (await install.count()) {
-          await expect(install.first()).toBeVisible({ timeout: 15000 });
-          await install.first().click();
-          expect(await getKey(page, k)).toBeFalsy();
-          await completeRealGate(page, "[data-appstore-install]");
-          await expect.poll(async () => getKey(page, k)).toBeTruthy();
-          return;
-        }
         const live = (await page.locator("html").getAttribute("data-official-key")) || k;
         const verb = page.locator("[data-official-verb]").first();
         await expect(verb).toBeVisible({ timeout: 15000 });

@@ -89,10 +89,10 @@ test.describe("2006-2009 phase 2 one writer", () => {
     await page.goto("/years/2009/sites/facebook/index.html");
     await verbReady(page);
     await page.evaluate(() => localStorage.removeItem("itt09-like"));
-    await page.locator("[data-lk09-like]").click();
+    await page.locator("[data-official-verb]").click();
     expect(await raw(page, "itt09-like")).toBeNull();
     await page.locator("[data-lk09-page]").first().click();
-    await page.locator("[data-lk09-like]").click();
+    await page.locator("[data-official-verb]").click();
     expect(await raw(page, "itt09-like")).toBeNull();
     await finishOfficial(page);
     await expect.poll(() => raw(page, "itt09-like"), { timeout: 8000 }).toBeTruthy();

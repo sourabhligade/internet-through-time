@@ -11,7 +11,11 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-for (let y = 1994; y <= 2022; y++) YEARS.push(String(y));
+const SKIP_YEARS = new Set(["2015", "2016", "2017", "2018", "2019"]);
+for (let y = 1994; y <= 2022; y++) {
+  const s = String(y);
+  if (!SKIP_YEARS.has(s)) YEARS.push(s);
+}
 
 function yearOnDisk(year) {
   return fs.existsSync(path.join(ROOT, "years", year, "pages", "home.html"));

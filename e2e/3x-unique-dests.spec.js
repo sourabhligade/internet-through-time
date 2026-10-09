@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * 3× leftover-2× unique dests: incomplete never writes; complete leftover writes;
- * star stays empty. Samples first dest of every live year plus/2021 last dest.
+ * star stays empty. Samples first dest of every live year plus last dest that has Next.
  */
 const { test, expect } = require("@playwright/test");
 const { revealLeftoverRails } = require("./helpers");
@@ -67,10 +67,25 @@ for (const year of YEARS) {
   });
 }
 
-const rows = manifest[""] || [];
-if (rows.length) {
-  test(" last dest Next is Starting Point after complete", async ({ page }) => {
-    const last = rows[rows.length - 1];
+const liveManifestYears = YEARS.filter((y) => (manifest[y] || []).length);
+let lastManifestYear = "";
+let lastDest = null;
+for (let i = liveManifestYears.length - 1; i >= 0; i--) {
+  const y = liveManifestYears[i];
+  const yearRows = manifest[y] || [];
+  const last = yearRows[yearRows.length - 1];
+  if (!last) continue;
+  const destFile = path.join(ROOT, String(last.path || "").replace(/^\//, ""));
+  if (!fs.existsSync(destFile)) continue;
+  const html = fs.readFileSync(destFile, "utf8");
+  if (html.indexOf('data-next-when-key="' + last.k1 + '"') === -1) continue;
+  lastManifestYear = y;
+  lastDest = last;
+  break;
+}
+if (lastDest) {
+  test(`${lastManifestYear} last dest Next is Starting Point after complete`, async ({ page }) => {
+    const last = lastDest;
     await completeFirst(page, last.path);
     const raw = await page.evaluate((k) => localStorage.getItem(k), last.k1);
     expect(raw).toBeTruthy();

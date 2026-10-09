@@ -15,7 +15,7 @@
 | [`2X-UNIQUE-LINKS-RESEARCH-LOCK-2026-09-13.md`](2X-UNIQUE-LINKS-RESEARCH-LOCK-2026-09-13.md) §2–3 | Minute / payload / HTML recipe |
 | `YYYY-READ-FIRST.md` | Year shell · star · boarded notes |
 
-**2009:** boarded. No Board C harvest. No dest HTML.
+**2009:** live HTML. No Board C harvest.
 
 ---
 

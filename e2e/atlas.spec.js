@@ -166,8 +166,9 @@ test.describe("museum atlas", () => {
     await expect(page).toHaveURL(/\/years\/1994\//);
   });
 
-  test(" is not an open spine door", async ({ page }) => {
+  test("2016 is not an open spine door", async ({ page }) => {
     await page.goto("/atlas/");
+    await expect(page.locator('#atlas-spine a[data-atlas-year="2016"]')).toHaveCount(0);
     await expect(page.locator('#atlas-spine a[data-atlas-year=""]')).toHaveCount(0);
   });
 

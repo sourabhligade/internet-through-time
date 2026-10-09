@@ -565,6 +565,7 @@ async function checkAll(page, selector) {
 
 /** Common REAL literacy checkbox selectors across year packs. */
 const REAL_CHECK_SEL = [
+  '[data-official-req]',
   '[data-req]',
   '[data-dl-check]',
   '[data-itt-download-confirm]',
