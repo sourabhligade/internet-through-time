@@ -3,7 +3,7 @@
 **Date:** 2026-10-04
 **Status:** Map. Phases 1–7 are done. Phase 7 is the public URL, 2026-10-07.
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json`. Hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** **2009 is live** (Like `itt09-like`). Forests **1994–2006** stay frozen.
-**Supersedes for this job:** [`UI-FIX-LIST.md`](history/UI-FIX-LIST.md) and [`UI-FIX-MAP.md`](history/UI-FIX-MAP.md) are history. The live door count is 26 in [`DISK-TRUTH.md`](DISK-TRUTH.md).
+The live door count is 26 in [`DISK-TRUTH.md`](DISK-TRUTH.md).
 **Looked at:** every year 1994–2022 on `http://127.0.0.1:8080`, desktop 1100px. HTML doors are `years/YYYY/pages/home.html`. 2015 is `/app/index.html#/year/2015`.
 
 Museum grade means a visitor can enter any live door, tell what year they are in from the window, do the one star, and leave by a trail that is the same year. It does not mean more rooms, a shared Chrome skin, or a modern lobby.

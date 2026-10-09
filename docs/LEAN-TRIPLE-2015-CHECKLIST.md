@@ -1,6 +1,6 @@
 # 2015 3× — look checklist
 
-**STOP (2026-09-30 docs pass).** F1–F10 fail-look boxes stay `[ ]`. Do not dest-farm from this file. [`LEAN-TRIPLE-2015.md`](LEAN-TRIPLE-2015.md) · [`UNDONE-UNPLANNED-MD.md`](history/UNDONE-UNPLANNED-MD.md).
+**STOP (2026-09-30 docs pass).** F1–F10 fail-look boxes stay `[ ]`. Do not dest-farm from this file. [`LEAN-TRIPLE-2015.md`](LEAN-TRIPLE-2015.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 **Date:** 2026-09-20  
 **Status:** Legal 3× leftover dests on disk 2026-09-20 (2016 **96** · **39**). Famous year-true leftover dests. Not dest-farm. Not leftover-3× unique growth.  

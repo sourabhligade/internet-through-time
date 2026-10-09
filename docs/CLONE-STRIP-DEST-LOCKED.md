@@ -3,7 +3,7 @@
 **Date:** 2026-09-16  
 **Status:** Implemented 2026-09-16. Dest-locked clone dests = 0. 2013 leftover 2× ×2 and forests untouched.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Leftover-3× dest face:** [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](history/LEFTOVER-3X-UNIQUE-CRITERIA.md) U1–U9.  
+**Leftover-3× dest face:** catalogs empty. Do not grow them.  
 **Do not dest-farm. Do not invent dests. Do not invent brand pixels.**
 
 This file is the pass/fail map for the **38 leftover clone dests** left on dest-locked lean years. It is **not** a license to strip forests or 2013 leftover-2×.
@@ -338,7 +338,7 @@ A mechanical pass is allowed: delete `details.itt-also-year` leftover-2× blocks
 | Doc / file | Role |
 |------------|------|
 | [`DISK-TRUTH.md`](DISK-TRUTH.md) | Playable years · dest-lock counts |
-| [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](history/LEFTOVER-3X-UNIQUE-CRITERIA.md) | Leftover-3× dest-true face |
+| [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md) | Leftover-3× dest-true face |
 | [`--DEST-DENSITY.md`](--DEST-DENSITY.md) | dest set · one dest one role |
 | 2017-UNIQUE-FLOWS.md (not on disk; 2017 is absent) | 2017 30 unique dests stay |
 | `years//sites/cnil/index.html` | R1 replacement |

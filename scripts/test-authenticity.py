@@ -1450,7 +1450,6 @@ def test_2006_signature() -> None:
         "js/immersion-2006.js",
         "js/immersion/year-2006-extras.js",
         "css/period-2006.css",
-        "docs/history/2006-READ-FIRST.md",
     ]
     missing = [n for n in need if not (ROOT / n).is_file()]
     if missing:

@@ -6,7 +6,7 @@
 **Status:** Implemented 2026-09-20 (Step 2 named). Not dest-farm. Not leftover-3× unique growth. Leftover dests on thin lean doors only. Cap is not a quota.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **I/O:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).  
-**Leftover-3× unique dest-true:** [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](history/LEFTOVER-3X-UNIQUE-CRITERIA.md) U1–U11 · M1–M4.  
+**Leftover-3× unique dest-true:** catalogs empty. Do not grow them.  
 **Visitor 100%:** [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) — 100% is dest-true flows, not dest-folder count.  
 **Density sibling:** [`--DEST-DENSITY.md`](--DEST-DENSITY.md) — 2× unique leftover dests, not forests.  
 **Mock:** `scripts/audit-mock-flows.js` — `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` fail.
@@ -237,7 +237,7 @@ Do not skip ahead to dest HTML.
 | [`DISK-TRUTH.md`](DISK-TRUTH.md) | Playable years · dest counts |
 | [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) | 100% is dest-true flows |
 | [`FLOW-CHECK-DIAGRAM.md`](FLOW-CHECK-DIAGRAM.md) | Check links then dest-true I/O |
-| [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](history/LEFTOVER-3X-UNIQUE-CRITERIA.md) | Leftover-3× unique dest-true stop map |
+| [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md) | Current year holes. Leftover-3× catalogs empty |
 | [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) | I1–I14 |
 | [`--DEST-DENSITY.md`](--DEST-DENSITY.md) | Earlier 2× leftover dest pass |
 | 2017-UNIQUE-FLOWS.md | Not on disk. 2017 is absent. Leftover-20 is not a live rail |

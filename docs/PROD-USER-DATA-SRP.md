@@ -213,13 +213,13 @@ Lock user-data. Quarantine 22/27-door maps.
 
 **Fix:** `year-start-trails.spec.js` includes 2020–2022, length 26; `e2e/helpers.js` treats 2009 as live HTML; `e2e/README.md` dest-true list matches `ci.sh`; 2017 Face ID specs skip or delete; atlas → `ui/year/start-data.js`, then delete `js/year-ui/`; generate `js/year-card.js` from `js/year-card.json`.
 
-**Docs rewrite:** `ARCHITECTURE.md`, `CODE-STRUCTURE.md` (26 doors, React 2015 only, leanBoot list). `DISK-TRUTH.md` leftover-2× counts match the matrix. `docs/README.md` / `checklists/README.md` drop INCOMPLETE-MAP.
+**Docs rewrite:** `ARCHITECTURE.md`, `CODE-STRUCTURE.md` (26 doors, React 2015 only, leanBoot list). `DISK-TRUTH.md` leftover-2× counts match the matrix. `docs/README.md` / `checklists/README.md` point at live law only.
 
-**Quarantine to `docs/history/`:** `PROD-GRADE-AUDIT.md`, `PROD-GRADE-REAUDIT.md`, `PRODUCT-IMPROVE.md`, `UI-FIX-LIST.md`, `UI-FIX-MAP.md`, `INCOMPLETE-MAP.md`, `UNDONE-UNPLANNED-MD.md`, leftover-3× unique year notes, `2014-REACT-FLOW.md`, and every `*-READ-FIRST.md` whose header said 27 doors / React 2017.
+**Removed:** 27-door maps, leftover-3× unique year notes, closed implement checklists, and dated snapshots. Do not restore them.
 
 **Keep:** `MUSEUM-GRADE-UI.md`, `docs/checklists/1994.md`–`2022.md`, `FAMOUS-DOUBLE-CRITERIA.md`.
 
-**Implemented 2026-10-07:** Dest-true CI is 12 visitor specs. Dropped from `ci.sh`, `ci.yml`, and `test:e2e:dest-true`: leftover-2× unique link walk, `lean-triple-leftover`, `year-true-packs`, `2016-3x-detail`. `user-save-honest` stays. The allowlist must match those three lists exactly. `YEAR_STARTS` now includes 2011 and 2020–2022, so the hub registers 26 `YYYY-start` trails. `e2e/helpers.js` already treats 2009 as live HTML because the card says `kind: "html"`. 2017 Face ID specs already skip when the year tree is gone. Atlas loads `ui/year/start-data.js`. `js/year-ui/` is deleted. `scripts/gen_year_card.py` writes `js/year-card.js`. Law docs say 26 doors, React 2015 only, and the leanBoot list. 27-door maps and leftover-3× unique notes are in `docs/history/`.
+**Implemented 2026-10-07:** Dest-true CI is 12 visitor specs. Dropped from `ci.sh`, `ci.yml`, and `test:e2e:dest-true`: leftover-2× unique link walk, `lean-triple-leftover`, `year-true-packs`, `2016-3x-detail`. `user-save-honest` stays. The allowlist must match those three lists exactly. `YEAR_STARTS` now includes 2011 and 2020–2022, so the hub registers 26 `YYYY-start` trails. `e2e/helpers.js` already treats 2009 as live HTML because the card says `kind: "html"`. 2017 Face ID specs already skip when the year tree is gone. Atlas loads `ui/year/start-data.js`. `js/year-ui/` is deleted. `scripts/gen_year_card.py` writes `js/year-card.js`. Law docs say 26 doors, React 2015 only, and the leanBoot list.
 
 ---
 

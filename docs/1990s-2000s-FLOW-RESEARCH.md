@@ -5,7 +5,7 @@
 **Years:** 1994–2009. The museum does not open 1990–1993.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json` · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **Live trail:** `js/config/flow-trails.js`, read 2026-10-04.  
-**Bibliography:** [`SOURCES.md`](SOURCES.md) · visit note [`SOURCE-PASS-2026-09-22.md`](SOURCE-PASS-2026-09-22.md).
+**Bibliography:** [`SOURCES.md`](SOURCES.md).
 
 Six year-band disk checks finished on 2026-10-04 and the open lines below are what they found on the live pages. A cross-check named `deep-research-3` was also started. This file is criteria. It is not an implement order.
 
@@ -15,7 +15,7 @@ Six year-band disk checks finished on 2026-10-04 and the open lines below are wh
 
 ## Source corpus
 
-External bibliography is `docs/SOURCES.md` (Web Design Museum, Version Museum, Netcraft, Internet Live Stats, company posts). `docs/SOURCE-PASS-2026-09-22.md` is the 2026-09-22 visit of those URLs. Neither file is ship state.
+External bibliography is `docs/SOURCES.md` (Web Design Museum, Version Museum, Netcraft, Internet Live Stats, company posts). It is not ship state.
 
 Year locks and flow notes on disk:
 
@@ -23,20 +23,14 @@ Year locks and flow notes on disk:
 |------|------|
 | `docs/checklists/1994.md`–`2009.md` | Visitor ticks. Not ship law. |
 | `docs/1995-IMPROVE-RESEARCH.md` | 1995 UI/flow pass. Says items 1–7 mostly shipped 2026-09-26. |
-| `docs/1999-LEFTOVER-2X-DOUBLE-RESEARCH.md` | 1999 leftover-2× research. |
-| `docs/2000-DOUBLE-TRAIL.md` | 2000 stops 21–40 research. Error map said it was stale; do not rebuild from it. |
-| `docs/2000-2009-ERROR-MAP.md` | 2026-09-25 disk bugs. Several rows are closed. See below. |
-| `docs/2001-READ-FIRST.md` · `2002` · `2003` | Cut-forest locks. Folder counts now match DISK-TRUTH (259 / 230 / 203). |
-| `docs/2005-READ-FIRST.md` · `2005-REBUILD-PLAN.md` | YouTube-upload lock. Floor table inside it is older than the 806-folder tree. |
+| `docs/1999-LEFTOVER-2X-DOUBLE-RESEARCH.md` | 1999 leftover-2× research. Wait on `2x`. |
+| `docs/2000-DOUBLE-TRAIL.md` | 2000 stops 21–40 research. Do not rebuild leftover-20. |
+| `docs/YEAR-INCOMPLETE-NOW.md` | Current year holes. Not ship law. |
 | `docs/2005-2010-DOUBLE-LINKS.md` | Double-link note. Not a new-folder order. |
-| `docs/2006-READ-FIRST.md` | Twttr lock. Official 10 matches the live trail. |
-| `docs/2007-READ-FIRST.md` · `2007-LEFTOVER-3X-UNIQUE.md` | iPhone Safari lock. Leftover-3× catalog stays empty. |
 | `docs/2008-DENSITY-RESEARCH.md` · `2008-IMPLEMENT-PHASES.md` | Density research. Do not grow 2008. |
-| `docs/2009-READ-FIRST.md` · `2009-LEFTOVER-3X-UNIQUE.md` | Live lean door. Like is the star. |
 | `docs/2x-harvest-c-1999.md` through `2004.md`, plus STEPS and RESERVED | Harvest. Wait on `2x`. |
 | `docs/FAMOUS-DOUBLE-CRITERIA.md` | 1994–2006 stop. 2008 and 2009 holes only. |
-| `docs/FLOWS-MAP.md` · `docs/FLOW-E2E-FINDINGS.md` | Historical flow maps. |
-| `docs/history/INCOMPLETE-MAP.md` | Open product holes. Some 1990s/2000s rows below are already closed. |
+| `docs/DISK-TRUTH.md` | Live playable state. |
 
 ## Live official trails
 
@@ -161,8 +155,8 @@ These are copy and save-law mismatches. They do not need a new folder.
 - Lengthen 2004 to official stops 9 or 10.
 - Implement Board C harvest, `2000-DOUBLE-TRAIL`, or leftover-2× doubling until the user says `2x`.
 - Build 2007 OpenSocial or 2008 Spotify.
-- Treat `docs/2000-2009-ERROR-MAP.md` as a live door list. Its 2009 “boarded” row is wrong.
-- Treat READ-FIRST floor tables (2005 “≥105 folders”) as the live tree. DISK-TRUTH counts win.
+- Treat leftover rows in [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md) as dest-farm orders. Those rows are museum law.
+- Treat old floor tables (2005 “≥105 folders”) as the live tree. DISK-TRUTH counts win.
 - Dest-farm leftover-20 onto these years.
 
 Implement a numbered item above only after it is named.

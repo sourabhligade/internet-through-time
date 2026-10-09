@@ -1,7 +1,7 @@
 # Year-false KEEP / DROP / MISS map
 
 **Date:** 2026-09-20
-**Source:** `year-false-keep-drop` continue · [`DEST-TRUE-FLOW-MAP.md`](DEST-TRUE-FLOW-MAP.md)
+**Source:** `year-false-keep-drop` continue · [`DEST-TRUE-FLOW-NAMES.md`](DEST-TRUE-FLOW-NAMES.md)
 **Status:** Leftover dest DROPs applied on disk (0 leftover dest DROP folders remain). Forest pack DROPs: 11 dests deleted 2026-09-20; 1995 `pathfinder` stays (official n=9). Official 10 DROPs stay on disk. Not dest-farm.
 
 KEEP = famous that year, cited. DROP = year-false, cited. MISS = not evaluated (do not invent). DO-NOT-APPLY = cited DROP that museum law still keeps (playable year-game · leftover-3× unique dest-disjoint leftover dests · Chrome/Win10 residual).

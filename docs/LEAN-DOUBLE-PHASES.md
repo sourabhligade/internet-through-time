@@ -1,6 +1,6 @@
 # Lean double — phases, steps, goals
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](history/INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](history/UNDONE-UNPLANNED-MD.md).
+**Not ship law.** Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 
 **Date:** 2026-09-24  
@@ -73,11 +73,10 @@ Read these in full. They are the sources we already have.
 | Source | What to take |
 |---|---|
 | [`SOURCES.md`](SOURCES.md) | Primary cites and failed-final reasons |
-| [`YEAR-BY-YEAR-RESEARCH-STEPS.md`](YEAR-BY-YEAR-RESEARCH-STEPS.md) | Year-true launches and mass |
+| [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md) | Year-false KEEP/DROP and extra-dest verdicts |
 | [`DEST-TRUE-FLOW-NAMES.md`](DEST-TRUE-FLOW-NAMES.md) | Names already used |
 | [`LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md) | Links already shipped |
 | [`DUPLICATE-UNIQUE-LINKS.md`](DUPLICATE-UNIQUE-LINKS.md) | Slugs that must stay unique |
-| [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md) | Open research rows |
 | `docs/2x-harvest-c-1999.md` through `docs/2x-harvest-c-2004.md` | Forest harvest. Cite only. Do not copy those dests onto lean years |
 | Criteria §5 and §13 | Slugs already on disk |
 

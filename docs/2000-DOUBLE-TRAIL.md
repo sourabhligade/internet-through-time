@@ -1,12 +1,12 @@
 # 2000 double trail — implement checklist
 
-**STOP (2026-09-30 docs pass).** 2017 is absent, so leftover-20 is not a live rail. Do not dest-farm a second leftover-20 onto 2000 from the unchecked Phase 0 reserve rows. Stops 21–40 already on disk stay. Not ship law. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`UNDONE-UNPLANNED-MD.md`](history/UNDONE-UNPLANNED-MD.md).
+**STOP (2026-09-30 docs pass).** 2017 is absent, so leftover-20 is not a live rail. Do not dest-farm a second leftover-20 onto 2000 from the unchecked Phase 0 reserve rows. Stops 21–40 already on disk stay. Not ship law. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 Stops 21–40 are on disk. The live 2000 trail is 40 stops in `js/config/flow-trails.js` (501 site folders). Do not add a second copy of these rows.
 
 The plan below is the record of how n 21–40 were added onto official n 1–10 and leftover n 11–20. The official 10 stay MapQuest through Y2K. Starting Point stays the guided six plus those ten. Stops 21–40 show on the year flow map, not on first paint. `ui/year/start.js` already prints only `n` 1–10 into `#ott-flows-2000`.
 
-Disk when this was written: 481 folders in `years/2000/sites/`. `docs/YEAR-BY-YEAR-RESEARCH-STEPS.md` still says 477 and “extra KEEP = 0”. That older line does not forbid these 20. It forbids restoring the dropped clones and farming unnamed homepages.
+Disk when this was written: 481 folders in `years/2000/sites/`. `docs/YEAR-FALSE-KEEP-DROP.md` still says 477 and “extra KEEP = 0”. That older line does not forbid these 20. It forbids restoring the dropped clones and farming unnamed homepages.
 
 ## Law for every new row
 

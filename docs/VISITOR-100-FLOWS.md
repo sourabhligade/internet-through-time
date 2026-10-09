@@ -1,14 +1,14 @@
 # Visitor 100% — dest-true flows, not dest-farm links
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](history/INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](history/UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 
 **Date:** 2026-09-27 
 **Status:** Implement map. Not dest-farm. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **I/O law:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).  
-**Leftover-3× unique dest-true law:** [`LEFTOVER-3X-UNIQUE-CRITERIA.md`](history/LEFTOVER-3X-UNIQUE-CRITERIA.md).  
-**Leftover list:** [`INCOMPLETE-MAP.md`](history/INCOMPLETE-MAP.md). The old `UNDONE.md` map was removed.
+**Leftover-3× unique dest-true law:** [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).  
+**Leftover list:** [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md). The old `UNDONE.md` map was removed.
 **Scan:** door **100%** of **26** playable years · dest-true I/O **~87%** · look **~81%** · combined **~89%**. **2015 wiped.** Leftover-3× unique catalogs are **empty**.
 
 **One-line law:** 100% is dest-true **flows** on dests already on disk. Dest-farm **links** (new dest folders, dest-lock revert of dest-lock years, leftover dest leftover-3× dest-farm extra dests as leftover-3× unique dest-true dests) fail I/O.
@@ -146,7 +146,7 @@ Do not dest-farm leftover dest leftover-3× unique dest-true dests past these st
 
 - [x] Strike stale 27 / 28 years. Hub **24 years**. **2015 wiped.** **2022 live**. **2023–2025 wiped**.
 - [x] Close GitHub **#11–#14** (A clutter-clear already on tree · dest-lock 2015 reverted · not dest-lock tickets).
-- [x] Link this file from [`docs/README.md`](README.md) + [`INCOMPLETE-MAP.md`](history/INCOMPLETE-MAP.md).
+- [x] Link this file from [`docs/README.md`](README.md) + [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 ### Phase 1 — official dest gold I/O (highest-leverage flows)
 

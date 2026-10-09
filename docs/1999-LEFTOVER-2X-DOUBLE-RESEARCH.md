@@ -1,6 +1,6 @@
 # 1999 leftover-2× unique dest links — double research
 
-**Wait-2x (2026-09-30 docs pass).** Further dest **doubling** waits on the word `2x`. Do not dest-farm from this note. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`UNDONE-UNPLANNED-MD.md`](history/UNDONE-UNPLANNED-MD.md).
+**Wait-2x (2026-09-30 docs pass).** Further dest **doubling** waits on the word `2x`. Do not dest-farm from this note. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 **Date:** 2026-09-26  
 **Kind:** leftover-2× unique dest **links** (hrefs). Not dest-farm. Not leftover dest KEEP.  
@@ -210,7 +210,7 @@ Harvest dests 145–288 exist on disk. Those rows are Wikipedia category dumps (
 | S5 | [`2x-harvest-c-1999.md`](2x-harvest-c-1999.md) | Harvest dests 45–86 + reserved 144 |
 | S7 | [ClickZ Top 50 Sep 1999](https://clickz.com/top-50-sites-and-properties-of-september-1999/58164/) | `angelfire` · `zdnet` · `cnet` · `theglobe` · Hotmail #9 no dest |
 | S9 | [Wikipedia Category Internet properties established in 1999](https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:Internet_properties_established_in_1999&cmlimit=500&format=json) | ~302 members · slug map to dest folders |
-| S13 | [`TODO-EXTRA-DEST-RESEARCH.md`](TODO-EXTRA-DEST-RESEARCH.md) | Extra dest DROP six |
+| S13 | [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md) | Extra dest DROP six |
 | S19 | [`2x-harvest-c-1999.md`](2x-harvest-c-1999.md) reserved 144 + dests 45–86 | Ranked KEEP ADD order |
 
 ---

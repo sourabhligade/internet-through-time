@@ -14,7 +14,7 @@ Local check stays at http://127.0.0.1:8080. Run impact on a symbol before editin
 
 ## Why 107 is the wrong count
 
-107 is the old leftover-3× unique dest-true set. `docs/history/LEFTOVER-3X-UNIQUE-LINKS.md` records it as removed: no rails, no 107-dest set. Phase 3 of the user-data work dropped those empty rails. 107 is also the HTML file count under `years/2016/sites/` alone (107 files, 97 of them with a save control). Neither number is the museum.
+107 is the old leftover-3× unique dest-true set. Those rails are gone and the catalog is empty. Phase 3 of the user-data work dropped them. 107 is also the HTML file count under `years/2016/sites/` alone (107 files, 97 of them with a save control). Neither number is the museum.
 
 Counted from disk on 2026-10-07, live years only:
 

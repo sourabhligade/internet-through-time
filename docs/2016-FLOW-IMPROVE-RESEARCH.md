@@ -3,8 +3,8 @@
 **Date:** 2026-09-26  
 **Status:** Implemented 2026-09-26 (this pass). Research remains the source of the sequence; ship law is still DISK-TRUTH.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) + `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Year lock:** [`2016-READ-FIRST.md`](history/2016-READ-FIRST.md).  
-**Product frame:** [`PRODUCT-IMPROVE.md`](history/PRODUCT-IMPROVE.md).  
+**Year lock:** [`DISK-TRUTH.md`](DISK-TRUTH.md).  
+**Product frame:** [`MUSEUM-GRADE-UX-COMPLETE.md`](MUSEUM-GRADE-UX-COMPLETE.md).  
 **I/O criteria:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md).
 
 This is the full write-up of:
@@ -20,7 +20,7 @@ Disk counts and dest lists were taken from the live tree on 2026-09-26. GitNexus
 
 2016 is a **live lean HTML door**. The visitor gold is one 24-hour Story you actually post, in 2016 Chrome / Win10 habit, that **never writes if you bounce**. Pokémon GO is sidewalks, not the chip. Reactions, WhatsApp E2E, iPhone 7, Vine goodbye, Spectacles, musical.ly, Win10 upgrade end, and Gym Rush are the rest of the official ten. Leftover dests exist; leftover never writes the star.
 
-Do not compete with Wayback on coverage or Web Design Museum on screenshot count. [`PRODUCT-IMPROVE.md`](history/PRODUCT-IMPROVE.md)
+Do not compete with Wayback on coverage or Web Design Museum on screenshot count. [`MUSEUM-GRADE-UX-COMPLETE.md`](MUSEUM-GRADE-UX-COMPLETE.md)
 
 ---
 
@@ -391,7 +391,7 @@ Actions:
 
 ### 6.3 YouTube — drop 2016 as a follow stop
 
-2016 YouTube is **not official**. Official 10 has no YouTube. It is **not** leftover-2× unique. Live leftover-3× catalogs are empty. `DEST-TRUE-FLOW-MAP.md` still lists 2016 leftover-3× unique `youtube` — stale vs disk.
+2016 YouTube is **not official**. Official 10 has no YouTube. It is **not** leftover-2× unique. Live leftover-3× catalogs are empty. `DEST-TRUE-FLOW-NAMES.md` still lists 2016 leftover-3× unique `youtube` — stale vs disk.
 
 On disk: `years/2016/sites/youtube/index.html` is a popular-session stub (`data-itt-popular-save`, title “YouTube — 2016”, no 2016 verb). `about.html` is a leftover Watch panel (`data-ytl-key="pop7-yt16"`). Follow note is `"Stories year"` — Instagram’s identity, not YouTube’s.
 
@@ -553,7 +553,7 @@ Inventing a June Live Stats websites-users digit after is an I11 fail. Do **not*
 
 Period chrome: Win10 rising + Chrome habit. `.ig16-phone`, WA teal, Snap yellow, Win10 `--itt-desktop-bg: #0078d7`. Do not iframe Wayback or oldweb.today.
 
-`2016-2021-IO-CRITERIA.md` scorecard (2026-09-14) still marks 2016 as “reverted to origin 2016 (no I/O chrome pass)” while `FLOW-IMPLEMENT-CHECKLIST.md` later marks I1–I14 done. This research did not re-walk live chrome in a browser beyond dest-true / HTTP smoke / link audit already green on the dirty tree.
+`2016-2021-IO-CRITERIA.md` scorecard (2026-09-14) still marks 2016 as “reverted to origin 2016 (no I/O chrome pass)” while `YEAR-INCOMPLETE-NOW.md` later marks I1–I14 done. This research did not re-walk live chrome in a browser beyond dest-true / HTTP smoke / link audit already green on the dirty tree.
 
 ---
 
@@ -627,7 +627,7 @@ This research **did not** re-run dest-true after writing this file.
 - Whether inserting a Facebook 2017 follow-site stop that only opens the year door is the intended product change was not stated in repo docs (see §6.2 product choice).
 - leftover-official warehouse 137 was counted from `leftover-official.matrix.json` dests with year 2016 by the cream agent; the workflow did not re-count that one-line JSON.
 - HTML leftover writers “on 39 dests” mixed extra dest KEEP pages and playable cabinets; cream agent’s dest-true count is **35 dests with dest-true `-lx`**, **0 with `-d2` on that face**.
-- `docs/YEAR-BY-YEAR-RESEARCH-STEPS.md` still names 2016 leftover-3× unique dest-true dests 9; catalogs are empty.
+- `docs/YEAR-FALSE-KEEP-DROP.md` still names 2016 leftover-3× unique dest-true dests 9; catalogs are empty.
 
 ---
 
@@ -656,8 +656,8 @@ This research **did not** re-run dest-true after writing this file.
 
 ### Repo law and maps
 
-- [S2] [`docs/history/2016-READ-FIRST.md`](history/2016-READ-FIRST.md)
-- [S3] `js/immersion/leftover-official.js` STAR_CITE; [`docs/history/PRODUCT-IMPROVE.md`](history/PRODUCT-IMPROVE.md)
+- [S2] [`DISK-TRUTH.md`](DISK-TRUTH.md)
+- [S3] `js/immersion/leftover-official.js` STAR_CITE; [`MUSEUM-GRADE-UX-COMPLETE.md`](MUSEUM-GRADE-UX-COMPLETE.md)
 - [S6] `js/config/flow-trails.js`; `js/museum-progress.js` YEAR_STARTS; `ui/year/start-data.js`
 - [S7] [`docs/2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md); `scripts/dest_lock_lean.py`; [`DISK-TRUTH.md`](DISK-TRUTH.md)
 - [S8b] `years/2016/pages/about.html`; `e2e/2016-mvp.spec.js`

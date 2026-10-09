@@ -1,6 +1,6 @@
 # Sources, archives & provenance — Internet Through Time
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`INCOMPLETE-MAP.md`](history/INCOMPLETE-MAP.md) · [`UNDONE-UNPLANNED-MD.md`](history/UNDONE-UNPLANNED-MD.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 
 > **This file is a bibliography, not ship state.** Canonical playable years: [`DISK-TRUTH.md`](DISK-TRUTH.md) — **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Deleted research dossiers stay deleted. There is no `SOURCE-AUDIT.md`. §§11–12 still name deleted dossiers (`MASTER-PROVENANCE.md`, year `*-RESEARCH.md`, `docs/references/**`) as historical bibliography — those paths are **not on disk** and must not be restored.
@@ -10,11 +10,11 @@
 **Scope:** Research links used to design the exhibit — not a claim that every pixel is an official brand file.  
 **Use:** Educational reconstruction only. Trademarks belong to their owners.
 
-Visitor-facing capture cites live on **star dests** (`data-itt-capture-cite`), not this file. Product improve map: [`PRODUCT-IMPROVE.md`](history/PRODUCT-IMPROVE.md). Year law: [`DISK-TRUTH.md`](DISK-TRUTH.md).
+Visitor-facing capture cites live on **star dests** (`data-itt-capture-cite`), not this file. Product improve map: [`MUSEUM-GRADE-UX-COMPLETE.md`](MUSEUM-GRADE-UX-COMPLETE.md). Year law: [`DISK-TRUTH.md`](DISK-TRUTH.md).
 
 Deleted research dossiers (`MASTER-PROVENANCE.md`, `LEFT-OUT.md`, `docs/references/**`, year implement notebooks) stay deleted. Do not restore them.
 
-**Last expanded:** 2026-07-24. Ship state lives in DISK-TRUTH, not here. A 2026-09-22 visit of the URLs in this file, plus the off-disk and incomplete lists, is [`SOURCE-PASS-2026-09-22.md`](SOURCE-PASS-2026-09-22.md). That note is not ship law.
+**Last expanded:** 2026-07-24. Ship state lives in DISK-TRUTH, not here.
 
 ---
 

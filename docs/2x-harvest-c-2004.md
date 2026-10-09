@@ -1,6 +1,6 @@
 # Board C leftover-2× — 2004 NEW dest folders (research lock)
 
-**Wait-2x (2026-09-30 docs pass).** Research lock. Do not dest-farm more dest folders from this note. Dest **doubling** waits on `2x`. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`UNDONE-UNPLANNED-MD.md`](history/UNDONE-UNPLANNED-MD.md).
+**Wait-2x (2026-09-30 docs pass).** Research lock. Do not dest-farm more dest folders from this note. Dest **doubling** waits on `2x`. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 **Date:** 2026-09-13
 **Kind:** leftover-**2×** dest-true research. Board C = 2× of **current** dest folders (orig+A+B already on disk).
