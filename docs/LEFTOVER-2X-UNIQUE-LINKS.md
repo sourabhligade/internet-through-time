@@ -49,7 +49,7 @@ A year **fails** if any row is N.
 | **L8** | Leftover-20 | Only 2017 | leftover-20 maps on other years |
 | **L9** | Star | Leftover never writes the year star | Leftover-2× save writes gold |
 | **L10** | Dest-true leftover dests | Dest-true leftover dest counts stay | New leftover dest-true machines from this file |
-| **L11** | Boarded / wiped | 2009 skip · 2023–2025 skip | Un-board 2009 · restore wiped years |
+| **L11** | Boarded / wiped | 2009 is live HTML · 2016 omitted · 2017–2019 and 2023–2025 skip | Restore absent years · dest-farm omitted 2016 |
 | **L12** | Cite | ADD dest has a year-true cite (Hosting.com / Wikipedia / ClickZ / harvest / extra dest KEEP) **and** dest on disk | Alphabetical dests-on-disk (`123-reg`) · invent dests |
 | **L13** | Not leftover-3× clone | Leftover-2× rail must not carry `data-itt-pop-more` | leftover-2× rail pasted as leftover-3× pop-more |
 
@@ -91,7 +91,7 @@ These dests are on disk and missing from leftover-2× unique dest rails. Cite: H
 | 2007 | `myspace` (#4) · `ebay` (#5) | — | Google Yahoo dest folders (dest-lock lean) |
 | 2013 | `facebook` (#2) · `youtube` (#3) · `twitter` (#6) | leftover-3× unique dests | Google Yahoo dest folders |
 | 2014 | `facebook` (#2) · `youtube` (#3) · `wikipedia` (#5) · `twitter` (#6) | leftover-3× unique dests | Google dest folder |
-| | `youtube` (#2) · `wikipedia` (#5) · `instagram` (#8) | leftover-3× unique dests stay **3** | Google dest folder |
+| 2018 | `youtube` (#2) · `wikipedia` (#5) · `instagram` (#8) | leftover-3× unique dests stay **3** | Google dest folder |
 | 2021 | `google` (#1) · `youtube` (#2) · `facebook` (#3) · `twitter` (#4) · `instagram` (#5) | leftover-3× unique dests stay **5** | Wikipedia dest folder |
 | 2022 | `google` (#1) · `youtube` (#2) · `facebook` (#3) · `twitter` (#6) · `wikipedia` (#7) · `reddit` (#8) · `instagram` (#9) | leftover-3× unique dests | — |
 
@@ -135,14 +135,14 @@ Leftover dest KEEP dests already have dest-true leftover I/O. This pass only **h
 |------|-------------|------|
 | 2007 | leftover dest KEEP 14: `hackernews` `friendfeed` `netflix` `appletv` `ipodtouch` `justintv` `icanhas` `funnyordie` `pownce` `androidann` `gears` `iplayer` `amazonmp3` `safari3` · then Hosting.com `myspace` `ebay` | HN Oct 2007 · FriendFeed 2007 · Netflix Watch Instantly 2007 · Justin.tv 2007 · iPhone Safari is the star not leftover · Hosting.com June 2007 MySpace #4 eBay #5 |
 | 2010 | leftover dest KEEP: `flipboard` `minecraft` `hulu` `angry` `googlebuzz` `chromewebstore` `kinect` `cityville` `ibooks` | Cybercultural 2010 Instagram/iPad/Foursquare · Angry Birds Dec 2009 / 2010 mass · Minecraft 2010 · Hulu leftover |
-| | leftover dest KEEP 19 + extra dest KEEP `gmusic` `pandora` | Google Music 16 Nov (The Verge) · Pandora IPO Jun (TechCrunch) · Snapchat · iMessage iOS 5 |
+| 2011 | leftover dest KEEP 19 + extra dest KEEP `gmusic` `pandora` | Google Music 16 Nov (The Verge) · Pandora IPO Jun (TechCrunch) · Snapchat · iMessage iOS 5 |
 | 2012 | leftover dest KEEP: `tinder` `duolingo` `coursera` `udacity` `edx` `nexus7` `jellybean` `ios6` `googleplay` `kindlefirehd` `coinbase` | Cybercultural 2012 IG Android / Pinterest / Facebook IPO · Tinder 2012 · Coursera 2012 |
 | 2013 | extra dest KEEP 34 (first ADD) then leftover-3× unique dests as href targets | [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md) Bitcoin 2013 · Chromecast 24 Jul 2013 · DoorDash 2013 · Hosting.com Facebook #2 YouTube #3 Twitter #6 |
 | 2014 | leftover dest KEEP: `alibabaipo` `oculusfb` `inbox` `echo` `flappybird` `game2048` `ios8` · Hosting.com `facebook` `youtube` `wikipedia` `twitter` | Alibaba IPO 2014 · Flappy Bird 2014 · Echo Nov 2014 · Hosting.com June 2014 |
 | 2015 | extra dest KEEP 15 of 31: `androidpay` `applenews` `applepencil` `applewatch` `beats1` `dx12` `elcapitan` `ethereum` `fblive` `http2` `instantarticles` `ipadpro` + Hosting.com already in KEEP original | Apple Watch 24 Apr 2015 · AMP 7 Oct 2015 · Ethereum 2015 · [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md) |
 | 2017 | leftover-20 unique dests not already in KEEP original leftover-2× unique dests: `botw` `cuphead` `gettingoverit` `hangoutschat` `hollowknight` `instagram17` `messengerday` + extra dest KEEP `cardano` `codww2` `destiny2` `galaxys8` … | 2017-UNIQUE-FLOWS.md (not on disk; 2017 is absent) · extra dest KEEP 39 |
-| | leftover dest KEEP 11 + leftover-3× unique dests as href targets (`reddit` `youtube` `wikipedia`) + Hosting.com `instagram` | GDPR is star · Google+ shutdown · leftover-3× unique dests stay **3** |
-| | extra dest KEEP 27 of 54: `apex` `airpods2` `android10` `applewatch5` … | Apex Legends 4 Feb · Android 10 3 Sep · extra dest KEEP 54 |
+| 2018 | leftover dest KEEP 11 + leftover-3× unique dests as href targets (`reddit` `youtube` `wikipedia`) + Hosting.com `instagram` | GDPR is star · Google+ shutdown · leftover-3× unique dests stay **3** |
+| 2019 | extra dest KEEP 27 of 54: `apex` `airpods2` `android10` `applewatch5` … | Apex Legends 4 Feb · Android 10 3 Sep · extra dest KEEP 54 |
 | 2021 | leftover dest KEEP `nft` `coinbaseipo` `epicapple` · leftover-3× unique dests / Hosting.com as href targets | ATT Ask is star · Coinbase IPO Apr 2021 · leftover-3× unique dests stay **5** |
 | 2022 | leftover dest KEEP `temu` `stablediff` `midjourney` `dalle2` `ios16` `m2` · Hosting.com `google` `youtube` `facebook` `twitter` `wikipedia` `reddit` `instagram` | ChatGPT is star · Hosting.com Nov 2022 Reddit #8 |
 
@@ -190,10 +190,12 @@ When leftover-2× unique dests now = 0, after = min(2 × unique dest hrefs in th
 | 2012 | 32 | 20 | 35 | **32** | 12 |
 | 2013 | 52 | 0 | 0 | **47** | 47 |
 | 2014 | 25 | 0 | 0 | **25** | 25 |
-| 2015 | 50 | 15 | 0 | **30** | 15 |
-| 2017 | 68 | 26 | 27 | **52** | 26 |
-| | 24 | 0 | 0 | **20** | 20 |
-| | 73 | 27 | 0 | **54** | 27 |
+| 2015 | live React · leftover-2× **n = 0** | 0 | — | **0** | 0 |
+| 2016 | omitted | — | — | **omitted** | 0 |
+| 2017 | absent | — | — | **0** | 0 |
+| 2018 | absent | 0 | 0 | **0** | 0 |
+| 2019 | absent | 0 | 0 | **0** | 0 |
+| 2020 | 22 | 0 | 0 | **16** | 16 |
 | 2021 | 18 | 0 | 0 | **18** | 18 |
 | 2022 | 25 | 0 | 0 | **24** | 24 |
 | 2023–2025 | 0 | — | — | **stop wiped** | 0 |
@@ -326,7 +328,7 @@ KEEP original (19): `android` · `chrome` · `facebook` · `farmville` · `forms
 
 ADD leftover dest KEEP: `flipboard` · `minecraft` · `hulu` · `angry` · `googlebuzz` · `chromewebstore` · `kinect` · `cityville` · `ibooks` · then `playable`
 
-### — after 38 · add 19 · star `itt11-gplus`
+### 2011 — after 38 · add 19 · star `itt11-gplus`
 
 KEEP original (19): `airbnb` · `chromebook` · `dropbox` · `facebook` · `gmusic` · `googleplus` · `icloud` · `instagram` · `ipad` · `iphone` · `kindlefire` · `linkedin` · `minecraft` · `pinterest` · `qwikster` · `spotify` · `twitch` · `twitter` · `youtube`
 
@@ -363,7 +365,9 @@ Then dests already on disk: `applepay` · `facebook` · `heartbleed` · `icebuck
 
 2017 is `kind:absent`. No HTML tree, no hub card, no React door. leftover-2× unique dest catalog stays **0**. Do not dest-farm 2017.
 
-### — after 20 · add 20 · star `itt18-gdpr`
+### 2018 — after 20 · add 20 · star `itt18-gdpr`
+
+2018 is `kind:absent`. No HTML tree, no hub card. Dest lists below wait on restore. Do not dest-farm 2018.
 
 KEEP original leftover-2× unique dests: **none**. Leftover-3× unique dests stay **3**: `reddit` · `youtube` · `wikipedia`.
 
@@ -372,7 +376,9 @@ Then dests already on disk as href targets: `chrome` · `fortnite` · `gdpr` · 
 
 Official dest `gdpr` leftover-2× first paint stays **0**. GDPR may be an href target from leftover dest rails.
 
-### — after 54 · add 27 · star `itt19-disneyplus`
+### 2019 — after 54 · add 27 · star `itt19-disneyplus`
+
+2019 is `kind:absent`. No HTML tree, no hub card. Dest lists below wait on restore. Do not dest-farm 2019.
 
 KEEP original (27): `airpodspro` · `amazon` · `applecard` · `appletv` · `arcade` · `area51` · `chrome` · `disneyplus` · `facebook` · `google` · `hidelikes` · `huawei` · `instagram` · `ios13` · `ipados` · `iphone` · `libra` · `nyt` · `oculusquest` · `playable` · `stadia` · `tiktok` · `twitter` · `wework` · `windows10` · `yahoo` · `youtube`
 
@@ -380,7 +386,7 @@ ADD extra dest KEEP already on disk: `airpods2` · `android10` · `anthem19` · 
 
 Do not dest-farm leftover dest leftover-20 dests. Dest folders stay **73**.
 
-### — after 16 · add 16 · star `itt20-zoom`
+### 2020 — after 16 · add 16 · star `itt20-zoom`
 
 KEEP original leftover-2× unique dests: **none**. leftover-3× unique dests stay **9**. leftover dest KEEP: `clubhouse`. Extra dest KEEP: `hbomax` · `peacock`.
 
@@ -412,8 +418,8 @@ Official dest leftover-2× first paint stays **0**. leftover-2× dest-farm dests
 - [ ] Do not grow leftover-3× unique past **=3** / **2021=5**.
 - [ ] Do not dest-farm leftover-20 except **2017**.
 - [ ] Do not dest-lock 2015 / forests / 2013 / 2022 again.
-- [ ] Do not un-board **2009**.
-- [ ] Do not restore **2023–2025**.
+- [ ] 2009 is live HTML. Do not restore **2017–2019** or **2023–2025**.
+- [ ] Do not dest-farm omitted **2016**.
 - [ ] Do not restore DROP dests.
 - [ ] Do not stamp leftover-2× rails on official dest HTML.
 - [ ] Do not 2× dest-true leftover dest I/O from this file.

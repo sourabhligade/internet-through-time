@@ -17,16 +17,18 @@ const { enterYear, contentFrame } = require('./helpers');
 const fs = require('fs');
 const path = require('path');
 
-/** Boarded / wiped: tree may stay; year-shell redirects. Not a visitor door. */
+/** Boarded plaque years: no visitor door. 2023–2025 have no tree. */
 const BOARDED = new Set(['2023', '2024', '2025']);
+/** Calendar 2016 is omitted from year-card (no tree, no hub card). Restoring years/2016/index.html must not promote a smoke door. */
+const OMITTED = new Set(['2016']);
 
-/** Discover years/YYYY with index.html (skip research-only and boarded). */
+/** Discover years/YYYY with index.html (skip research-only, boarded, and omitted). */
 function shippedYears() {
   const yearsDir = path.join(__dirname, '..', 'years');
   return fs
     .readdirSync(yearsDir)
     .filter((name) => /^\d{4}$/.test(name))
-    .filter((name) => !BOARDED.has(name))
+    .filter((name) => !BOARDED.has(name) && !OMITTED.has(name))
     .filter((name) => fs.existsSync(path.join(yearsDir, name, 'index.html')))
     .sort();
 }
@@ -74,6 +76,16 @@ test.describe('all years smoke — home page direct', () => {
       expect(hasImmersion).toBeGreaterThan(0);
     });
   }
+});
+
+test.describe('omitted 2016 is not a door', () => {
+  test('/years/2016/ 404s and hub has no y2016 card', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.locator('a.year-card[href*="years/2016"]')).toHaveCount(0);
+    await expect(page.locator('.year-card.y2016')).toHaveCount(0);
+    const res = await page.goto('/years/2016/');
+    expect(res && res.status()).toBe(404);
+  });
 });
 
 test.describe('hub unlock consistency', () => {

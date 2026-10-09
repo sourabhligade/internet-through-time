@@ -66,7 +66,7 @@ for (const yearPack of matrix.panel) {
   const f2 = yearPack.flows[1];
 
   test(`${year} shell F1 empty never writes · complete · Next → F2`, async ({ page }) => {
-    test.skip(!isLiveYear(year), year + ' boarded from visitor UI');
+    test.skip(!isLiveYear(year), year + ' is not a live HTML door');
     await enterYear(page, year);
     await iframeClear(page, f1.key);
     await goInFrame(page, f1.room);

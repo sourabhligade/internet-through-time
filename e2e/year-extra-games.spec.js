@@ -3,7 +3,7 @@
  * Two leftover extra games per shipped year (extra-a / extra-b).
  * Minute machines: empty Finish never writes · year-true verbs write ittYY-game-*.
  * 2012 extra-a/b are on disk (Android share · IPO pin). Dest-missing extras still skip.
- * No HTML extras tree: 2015 React, 2016 omitted, 2017–2019 and 2023–2025 absent.
+ * No HTML extras tree: 2015 React (live door), 2016 omitted, 2017–2019 and 2023–2025 absent.
  */
 const fs = require("fs");
 const path = require("path");
@@ -13,10 +13,10 @@ const { killOverlays } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-const WIPED_YEARS = new Set(["2015", "2016", "2017", "2018", "2019", "2023", "2024", "2025"]);
+const SKIP_HTML_EXTRAS = new Set(["2015", "2016", "2017", "2018", "2019", "2023", "2024", "2025"]);
 for (let y = 1994; y <= 2022; y++) {
   const s = String(y);
-  if (WIPED_YEARS.has(s)) continue;
+  if (SKIP_HTML_EXTRAS.has(s)) continue;
   YEARS.push(s);
 }
 
