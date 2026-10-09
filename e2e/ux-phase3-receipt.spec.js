@@ -46,58 +46,6 @@ async function expectSavedGlass(page, key) {
 }
 
 test.describe("UX phase 3 receipt glass", () => {
-  test("Stories empty and trap hold in red and write nothing", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    await openDest(page, "/years/2016/sites/instagram/stories.html", "itt16-ig-stories");
-    await page.locator("[data-official-verb]").first().click();
-    expect(await getKey(page, "itt16-ig-stories")).toBeNull();
-    const empty = await statusPaint(page, "[data-official-status]");
-    expect(empty, "empty hold").toBeTruthy();
-    expect(empty.text).toMatch(/never writes/);
-    expect(empty.color).toBe("rgb(170, 0, 0)");
-    const trap = page.locator("[data-official-trap]").first();
-    if (await trap.count()) {
-      await trap.click();
-      expect(await getKey(page, "itt16-ig-stories")).toBeNull();
-      const held = await statusPaint(page, "[data-official-status]");
-      expect(held.text).toMatch(/never writes/);
-      expect(held.color).toBe("rgb(170, 0, 0)");
-    }
-  });
-
-  test("Stories official finish says Saved. with no key on the glass", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    await openDest(page, "/years/2016/sites/instagram/stories.html", "itt16-ig-stories");
-    await finishOfficial(page);
-    await expectSavedGlass(page, "itt16-ig-stories");
-  });
-
-  test("Pokémon GO official finish says Saved. with no key on the glass", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    await openDest(page, "/years/2016/sites/pokemongo/index.html", "itt16-pogo");
-    await finishOfficial(page);
-    await expectSavedGlass(page, "itt16-pogo");
-  });
-
-  test("Reactions official finish says Saved. with no key on the glass", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    await openDest(page, "/years/2016/sites/facebook/reactions.html", "itt16-fb-react");
-    await finishOfficial(page);
-    await expectSavedGlass(page, "itt16-fb-react");
-  });
-
-  test("E2E official finish says Saved. with no key on the glass", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    await openDest(page, "/years/2016/sites/whatsapp/e2e.html", "itt16-wa-e2e");
-    await finishOfficial(page);
-    await expectSavedGlass(page, "itt16-wa-e2e");
-  });
-
   for (const row of [
     { name: "WhatsApp Install", path: "/years/2014/sites/whatsapp/index.html", key: "itt14-wa-install" },
   ]) {
@@ -119,51 +67,6 @@ test.describe("UX phase 3 receipt glass", () => {
       }
     });
   }
-
-  test("Stories honesty and Saved. sit inside the 2016 year iframe", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    await enterYear(page, "2016");
-    await page.waitForFunction(() => {
-      try {
-        const frame = document.getElementById("content");
-        const doc = frame && frame.contentDocument;
-        return !!(doc && doc.querySelector(".ott-guided"));
-      } catch (e) {
-        return false;
-      }
-    }, null, { timeout: 20000 });
-    await goInFrame(page, "sites/instagram/stories.html");
-    await verbReadyInFrame(page);
-    await page.evaluate(() => localStorage.removeItem("itt16-ig-stories"));
-    const frame = contentFrame(page);
-    await expect(frame.locator("html")).toHaveAttribute("data-official-key", "itt16-ig-stories");
-    await frame.locator("[data-official-verb]").first().click();
-    expect(await getKey(page, "itt16-ig-stories")).toBeNull();
-    const empty = await frame.locator("[data-official-status]").first().evaluate((el) => {
-      const cs = getComputedStyle(el);
-      return {
-        text: String(el.textContent || "").replace(/\s+/g, " ").trim(),
-        color: cs.color,
-      };
-    });
-    expect(empty.text).toMatch(/never writes/);
-    expect(empty.color).toBe("rgb(170, 0, 0)");
-    await finishOfficialIn(frame);
-    await expect.poll(() => getKey(page, "itt16-ig-stories"), { timeout: 8000 }).toBeTruthy();
-    await envelope(page, "itt16-ig-stories");
-    const saved = await frame.locator("[data-official-status]").first().evaluate((el) => {
-      const cs = getComputedStyle(el);
-      return {
-        text: String(el.textContent || "").replace(/\s+/g, " ").trim(),
-        color: cs.color,
-      };
-    });
-    expect(saved.text).toBe("Saved.");
-    expect(saved.color).toBe("rgb(0, 102, 0)");
-    await expect(frame.locator("[data-official-status]").first()).not.toContainText(/itt16-/);
-    await expect(page).toHaveURL(/\/years\/2016\//);
-  });
 
   test("2015 Periscope incomplete hold is red and writes nothing", async ({ page }) => {
     await page.goto("/app/index.html#/year/2015?stop=itt15-periscope");

@@ -197,40 +197,6 @@ test.describe('year game flows — full matrix', () => {
       .toBeGreaterThan(0);
   });
 
-
-
-  test('2016 Gym Rush: start → canvas + status', async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    const frame = await openGame(page, '2016');
-    await frame.locator('[data-game-start]').click();
-    await expect(frame.locator('#game-canvas')).toBeVisible();
-    await frame.locator('#game-canvas').click({ force: true });
-    await expect(frame.locator('[data-itt-action-status], [data-game-score]').first()).toBeVisible({
-      timeout: 5000,
-    });
-    await expect(frame.locator('body')).toContainText(/Gym Rush|Jul 6 2016|no official/i);
-  });
-
-  test('2016 Gym Rush end API + pause honors YearGame', async ({ page }) => {
-    const frame = await openGame(page, '2016', '?fast=1');
-    await frame.locator('[data-game-start]').click();
-    await page.waitForTimeout(200);
-    const endOk = await page.evaluate(() => {
-      try {
-        const w = document.getElementById('content') && document.getElementById('content').contentWindow;
-        const host = w && w.document.querySelector('[data-year-game]');
-        if (!host || typeof host.__ittGymRushEnd !== 'function') return false;
-        host.__ittGymRushEnd(40);
-        return true;
-      } catch (e) {
-        return false;
-      }
-    });
-    expect(endOk).toBeTruthy();
-    await expect(frame.locator('[data-itt-action-status]')).toContainText(/score|gold|Gym|Battery|test end/i);
-  });
-
   test('1995 Checkers: start → select piece → destinations marked', async ({ page }) => {
     const frame = await openGame(page, '1995', '?fast=1', 'itt95');
     await frame.locator('[data-game-start]').click();

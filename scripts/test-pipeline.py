@@ -304,7 +304,7 @@ def test_year_card() -> None:
     if years.get("2022", {}).get("kind") != "html" or years.get("2022", {}).get("star") != "itt22-chatgpt":
         fail("year-card", "2022 must be html with star itt22-chatgpt")
         return
-    for wiped in ("2016", "2017", "2018", "2019", "2023", "2024", "2025"):
+    for wiped in ("2017", "2018", "2019", "2023", "2024", "2025"):
         if years.get(wiped, {}).get("kind") != "absent":
             fail("year-card", f"{wiped} must stay absent")
             return

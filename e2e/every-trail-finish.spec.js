@@ -180,12 +180,6 @@ const CUSTOM = {
     await page.fill("[data-official-need]", "leftover residual");
     await page.locator("[data-wa14-install]").click();
   },
-  "itt16-ig-stories": async (page) => {
-    await page.fill("[data-ig-story-text]", "museum rooftop 24h");
-    await page.locator("[data-official-req]").nth(0).check();
-    await page.locator("[data-official-req]").nth(1).check();
-    await page.locator("[data-ig-story-add]").click();
-  },
   "itt20-zoom": async (page) => {
     const reqs = page.locator("[data-official-verb-host] [data-zoom-req]");
     const n = await reqs.count();

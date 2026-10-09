@@ -241,9 +241,6 @@ test.describe("leftover official · disk + trail", () => {
       "itt13-vine-posts",
       "itt14-wa-install",
       "itt15-periscope",
-      "itt16-ig-stories",
-      "itt17-faceid",
-      "itt18-gdpr",
       "itt20-zoom",
     ]);
     const wiped = new Set(["2025"]);

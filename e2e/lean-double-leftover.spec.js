@@ -19,7 +19,6 @@ const WANT_FOLDERS = {
   2010: 29,
   2012: 32,
   2014: 25,
-  2016: 67,
 };
 
 function destFolders(year) {

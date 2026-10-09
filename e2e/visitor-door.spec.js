@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Museum door — docs/FLOW-CHECK-DIAGRAM.md §4 + docs/DISK-TRUTH.md.
- * Hub 25 years (1994–2015 and 2020–2022). 2015 is the React door. 2016–2019 and 2023–2025 are absent.
+ * Hub 25 years (1994–2015 and 2020–2022). 2015 is the React door. 2017–2019 and 2023–2025 are absent.
  * Links first, then dest-true I/O. Dest-folder count is not a pass.
  */
 const fs = require("fs");
@@ -10,9 +10,11 @@ const { test, expect } = require("@playwright/test");
 const { destOnDisk, expectYearBoarded } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
+const CARD = JSON.parse(fs.readFileSync(path.join(ROOT, "js/year-card.json"), "utf8")).years;
 const SHIP = [];
 for (let y = 1994; y <= 2022; y++) {
- if (y === 2016 || y === 2017 || y === 2018 || y === 2019) continue;
+  const rec = CARD[String(y)];
+  if (!rec || rec.kind === "absent") continue;
   SHIP.push(String(y));
 }
 const BOARDED = ["2023", "2024", "2025"];

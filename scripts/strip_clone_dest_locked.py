@@ -25,15 +25,6 @@ def write(p: Path, t: str) -> None:
         print("wrote", p.relative_to(ROOT))
 
 
-def drop_details_also(html: str) -> str:
-    return re.sub(
-        r"\n?<details class=\"itt-also-year\">[\s\S]*?</details>\n?",
-        "\n",
-        html,
-        count=1,
-    )
-
-
 def drop_comment_block(html: str, start: str, end: str | None = None) -> str:
     end = end or start.replace(":start", ":end")
     return re.sub(
@@ -106,86 +97,6 @@ def drop_lo_panels_not_official(html: str) -> str:
     return html
 
 
-def pass_c_2007_yahoo() -> None:
-    p = ROOT / "years/2007/sites/yahoo/index.html"
-    t = read(p)
-    t = re.sub(
-        r'<div data-lo-panel="1"[^>]*id="itt-lo2-yahoo-d2"[\s\S]*?</div>',
-        "",
-        t,
-        count=1,
-    )
-    t = re.sub(
-        r'<p hidden data-next-flow data-next-when-key="itt07-yahoo-dp">[\s\S]*?</p>',
-        "",
-        t,
-        count=1,
-    )
-    write(p, t)
-
-
-def pass_c_2010_amazon() -> None:
-    p = ROOT / "years/2010/sites/amazon/index.html"
-    t = read(p)
-    t = re.sub(
-        r'\n<section data-lo-panel="1" data-itt-dest-true="1" data-itt-year="2010"[^>]*>\n<p><b>Prime leftover</b>[\s\S]*?</section>',
-        "",
-        t,
-        count=1,
-    )
-    write(p, t)
-
-
-def pass_c_2012_yahoo() -> None:
-    p = ROOT / "years/2012/sites/yahoo/index.html"
-    t = read(p)
-    t = drop_2x_links(t, "2012")
-    t = drop_lo_official(t)
-    t = drop_comment_block(t, "<!-- ITT-YES-LO2:yahoo:start -->", "<!-- ITT-YES-LO2:yahoo:end -->")
-    t = drop_comment_block(t, "<!-- ITT-YES-LO3:yahoo:start -->", "<!-- ITT-YES-LO3:yahoo:end -->")
-    write(p, t)
-
-
-def pass_c_2016_dyn() -> None:
-    p = ROOT / "years/2016/sites/dyn/index.html"
-    if not p.is_file():
-        return
-    t = read(p)
-    # keep dest-unique dyn-ack + leftover-3× cream
-    t = re.sub(
-        r'<div data-lo-panel="1" data-itt-year="2016" class="itt-2016-machine"[\s\S]*?</div>\n?',
-        "",
-        t,
-    )
-    t = drop_details_also(t)
-    t = drop_lo_official(t)
-    t = drop_2x_links(t, "2016")
-    t = drop_comment_block(t, "<!-- ITT-YES-LO:dyn:start -->", "<!-- ITT-YES-LO:dyn:end -->")
-    t = drop_comment_block(t, "<!-- ITT-YES-LO2:dyn:start -->", "<!-- ITT-YES-LO2:dyn:end -->")
-    t = drop_comment_block(t, "<!-- ITT-YES-LO3:dyn:start -->", "<!-- ITT-YES-LO3:dyn:end -->")
-    t = drop_comment_block(t, "<!-- ITT-POP3:dyn:start -->", "<!-- ITT-POP3:dyn:end -->")
-    write(p, t)
-
-
-def pass_c_2017_youtube() -> None:
-    p = ROOT / "years/2017/sites/youtube/index.html"
-    t = read(p)
-    t = drop_comment_block(t, "<!-- ITT-YT-LO-TRUE:start -->", "<!-- ITT-YT-LO-TRUE:end -->")
-    t = drop_details_also(t)
-    t = drop_2x_links(t, "2017")
-    t = drop_lo_official(t)
-    write(p, t)
-
-
-def pass_c_2017_instagram() -> None:
-    p = ROOT / "years/2017/sites/instagram/index.html"
-    t = read(p)
-    t = drop_details_also(t)
-    t = drop_2x_links(t, "2017")
-    t = drop_lo_official(t)
-    write(p, t)
-
-
 def pass_b_2012_official() -> None:
     for slug in ("medium", "path", "flipboard"):
         p = ROOT / "years" / "2012" / "sites" / slug / "index.html"
@@ -222,32 +133,13 @@ def prune_matrix() -> None:
     p = ROOT / "e2e" / "leftover-official.matrix.json"
     data = json.loads(p.read_text(encoding="utf-8"))
     dests = data["dests"]
-    drop_years_d2 = {"2007", "2010", "2012", "2016", "2017"}
     keep = []
     dropped = 0
     for row in dests:
         y = row["year"]
-        key = row.get("key") or ""
-        href = row.get("href") or ""
-        suffix = row.get("suffix") or ""
-        if y in drop_years_d2 and (
-            suffix.endswith("-d2")
-            or suffix.endswith("-lx-d2")
-            or key.endswith("-d2")
-            or "-d2" in suffix
-            or suffix.endswith("d2")
-        ):
-            dropped += 1
-            continue
-        if y == "2016" and href == "sites/dyn/index.html" and suffix != "pop3-dyn":
-            # leftover-3× dest: leftover-official leftover-2× rows go
-            if "pop3" not in suffix and "pop3" not in key:
-                dropped += 1
-                continue
-        if y == "2017" and href == "sites/youtube/index.html" and (
-            suffix in {"yt", "yt-2"} or key in {"itt17-yt", "itt17-yt-2"}
-        ):
-            # leftover-3× dest-true face stays; leftover-official leftover-2× rows go
+        href = (row.get("href") or "").lstrip("/")
+        dest = ROOT / "years" / y / href
+        if not dest.is_file():
             dropped += 1
             continue
         keep.append(row)
@@ -258,12 +150,6 @@ def prune_matrix() -> None:
 
 def main() -> None:
     pass_b_2012_official()
-    pass_c_2007_yahoo()
-    pass_c_2010_amazon()
-    pass_c_2012_yahoo()
-    pass_c_2016_dyn()
-    pass_c_2017_youtube()
-    pass_c_2017_instagram()
     prune_matrix()
 
 

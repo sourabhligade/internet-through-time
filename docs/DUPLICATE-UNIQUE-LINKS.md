@@ -25,14 +25,13 @@ Strip applied: drop the dest from leftover-2× unique dest **links** only (`scri
 | 2013 | 47 | 18 | 9 | **18** | 9 |
 | 2014 | 25 | 18 | 9 | **18** | 9 |
 | 2015 | 29 | 18 | 9 | **15** | 9 |
-| 2016 | 42 | 18 | 9 | **18** | 9 |
 | | 20 | 6 | 3 | **6** | 3 |
 | | 52 | 18 | 9 | **17** | 9 |
 | 2021 | 18 | 10 | 5 | **10** | 5 |
 | 2022 | 24 | 18 | 9 | **18** | 9 |
 | **sum** | | | **107** | **204** | **107 dest indexes · 162 HTML files** |
 
-After kill (leftover-2× unique dest **links** remaining): 2007=15 · 2010=11 · =22 · 2012=14 · 2013=29 · 2014=7 · 2015=14 · 2016=24 · =14 · =35 · =2 · 2021=8 · 2022=6. leftover-2× unique dest **links** ∩ leftover-3× unique dest **links** = **0**.
+After kill (leftover-2× unique dest **links** remaining): 2007=15 · 2010=11 · =22 · 2012=14 · 2013=29 · 2014=7 · 2015=14 · =14 · =35 · =2 · 2021=8 · 2022=6. leftover-2× unique dest **links** ∩ leftover-3× unique dest **links** = **0**.
 
  leftover-3× unique dest-true dests on leftover-3× unique dest links: all 9. leftover-2× unique dest links miss `pandora` (extra dest KEEP) from the leftover-3× unique dest **links** list, so 2×∩3× unique dest **links** = 16 not 18.
 2015 leftover-2× unique dest links miss 3 leftover-3× unique dest **link** dests (`pandora` not in 2015 3× links — see year table).
@@ -220,31 +219,6 @@ On leftover-3× unique dest **links** only (already dest-disjoint from leftover-
 - `marshmallow` — leftover-3× unique-link ADD
 - `win10get` — leftover-3× unique dest-true
 
-### 2016
-
-leftover-3× unique dest-true dests (9): `alphago` · `assistant` · `dyn` · `fblive` · `moments` · `netflix` · `reddit` · `slack` · `youtube`
-
-| Dest | Role | leftover-2× unique dest link | leftover-3× unique dest link | leftover-3× unique dest-true |
-|------|------|:---:|:---:|:---:|
-| `airpods` | leftover dest KEEP | yes | yes | — |
-| `allo` | leftover dest KEEP | yes | yes | — |
-| `alphago` | leftover-3× unique dest-true | yes | yes | yes |
-| `assistant` | leftover-3× unique dest-true | yes | yes | yes |
-| `daydream` | leftover dest KEEP | yes | yes | — |
-| `douyin` | leftover dest KEEP | yes | yes | — |
-| `dyn` | leftover-3× unique dest-true | yes | yes | yes |
-| `ethereum` | leftover dest KEEP | yes | yes | — |
-| `fblive` | leftover-3× unique dest-true | yes | yes | yes |
-| `figma` | leftover dest KEEP | yes | yes | — |
-| `googlehome` | leftover dest KEEP | yes | yes | — |
-| `ios10` | leftover dest KEEP | yes | yes | — |
-| `letsencrypt` | leftover dest KEEP | yes | yes | — |
-| `moments` | leftover-3× unique dest-true | yes | yes | yes |
-| `netflix` | leftover-3× unique dest-true | yes | yes | yes |
-| `reddit` | leftover-3× unique dest-true | yes | yes | yes |
-| `slack` | leftover-3× unique dest-true | yes | yes | yes |
-| `youtube` | leftover-3× unique dest-true | yes | yes | yes |
-
 ### 
 
 leftover-3× unique dest-true dests (3): `reddit` · `wikipedia` · `youtube`
@@ -395,26 +369,6 @@ Every leftover-3× unique dest-true dest `index.html` (and sibling HTML under th
 | `years/2010/sites/reddit/submit.html` | 17 |
 | `years/2010/sites/tumblr/index.html` | 17 |
 | `years/2010/sites/wave/index.html` | 17 |
-| `years//sites/dropbox/index.html` | 15 |
-| `years//sites/dropbox/more.html` | 15 |
-| `years//sites/hulu/index.html` | 16 |
-| `years//sites/icloud/c.html` | 15 |
-| `years//sites/icloud/index.html` | 15 |
-| `years//sites/icloud/more.html` | 15 |
-| `years//sites/kindlefire/index.html` | 15 |
-| `years//sites/kindlefire/more.html` | 15 |
-| `years//sites/linkedin/index.html` | 15 |
-| `years//sites/linkedin/more.html` | 15 |
-| `years//sites/minecraft/index.html` | 15 |
-| `years//sites/minecraft/more.html` | 15 |
-| `years//sites/pinterest/index.html` | 15 |
-| `years//sites/pinterest/more.html` | 15 |
-| `years//sites/twitch/c.html` | 15 |
-| `years//sites/twitch/index.html` | 15 |
-| `years//sites/twitch/more.html` | 15 |
-| `years//sites/youtube/c.html` | 15 |
-| `years//sites/youtube/index.html` | 15 |
-| `years//sites/youtube/more.html` | 15 |
 | `years/2012/sites/buzzfeed/index.html` | 17 |
 | `years/2012/sites/buzzfeed/more.html` | 17 |
 | `years/2012/sites/drawsomething/index.html` | 17 |
@@ -446,52 +400,6 @@ Every leftover-3× unique dest-true dest `index.html` (and sibling HTML under th
 | `years/2014/sites/uber/index.html` | 17 |
 | `years/2014/sites/wikipedia/index.html` | 17 |
 | `years/2014/sites/youtube/index.html` | 17 |
-| `years/2015/sites/applemusicsub/about.html` | 15 |
-| `years/2015/sites/applemusicsub/index.html` | 15 |
-| `years/2015/sites/echo/about.html` | 14 |
-| `years/2015/sites/echo/index.html` | 14 |
-| `years/2015/sites/instagram/about.html` | 14 |
-| `years/2015/sites/instagram/index.html` | 14 |
-| `years/2015/sites/meerkat/about.html` | 14 |
-| `years/2015/sites/meerkat/index.html` | 14 |
-| `years/2015/sites/netflix/about.html` | 14 |
-| `years/2015/sites/netflix/index.html` | 14 |
-| `years/2015/sites/spotify/about.html` | 14 |
-| `years/2015/sites/spotify/index.html` | 14 |
-| `years/2015/sites/vine/about.html` | 14 |
-| `years/2015/sites/vine/index.html` | 14 |
-| `years/2015/sites/win10get/about.html` | 15 |
-| `years/2015/sites/win10get/index.html` | 15 |
-| `years/2015/sites/youtube/about.html` | 14 |
-| `years/2015/sites/youtube/index.html` | 14 |
-| `years/2016/sites/alphago/about.html` | 17 |
-| `years/2016/sites/alphago/index.html` | 17 |
-| `years/2016/sites/assistant/about.html` | 17 |
-| `years/2016/sites/assistant/index.html` | 17 |
-| `years/2016/sites/dyn/about.html` | 17 |
-| `years/2016/sites/dyn/index.html` | 17 |
-| `years/2016/sites/fblive/about.html` | 17 |
-| `years/2016/sites/fblive/index.html` | 17 |
-| `years/2016/sites/moments/index.html` | 17 |
-| `years/2016/sites/netflix/about.html` | 17 |
-| `years/2016/sites/netflix/index.html` | 17 |
-| `years/2016/sites/reddit/about.html` | 17 |
-| `years/2016/sites/reddit/index.html` | 17 |
-| `years/2016/sites/slack/index.html` | 17 |
-| `years/2016/sites/youtube/about.html` | 17 |
-| `years/2016/sites/youtube/index.html` | 17 |
-| `years//sites/reddit/index.html` | 5 |
-| `years//sites/wikipedia/index.html` | 5 |
-| `years//sites/youtube/index.html` | 5 |
-| `years//sites/amazon/index.html` | 16 |
-| `years//sites/facebook/index.html` | 16 |
-| `years//sites/google/index.html` | 16 |
-| `years//sites/instagram/index.html` | 16 |
-| `years//sites/nyt/index.html` | 16 |
-| `years//sites/oculusquest/index.html` | 16 |
-| `years//sites/twitter/index.html` | 16 |
-| `years//sites/yahoo/index.html` | 16 |
-| `years//sites/youtube/index.html` | 16 |
 | `years/sites/amazon/index.html` | 13 |
 | `years/sites/facebook/index.html` | 13 |
 | `years/sites/google/index.html` | 13 |
@@ -567,7 +475,6 @@ Official dest leftover unique dest **link** first paint is **0**. These dests ar
 | 2013 | 4 | `snowden` · `telegram` · `tumblr` · `windows81` |
 | 2014 | 7 | `applepay` · `iphone` · `material` · `playable` · `slack` · `twitch` · `whatsapp` |
 | 2015 | 5 | `discord` · `googlephotos` · `periscope` · `snapchat` · `windows10` |
-| 2016 | 5 | `iphone` · `musically` · `pokemongo` · `snapchat` · `vine` |
 | 2017 | 6 | `equifax` · `fortnite` · `musically` · `switch` · `teams` · `wannacry` |
 | | 6 | `gdpr` · `github` · `homepod` · `spectre` · `tiktok` · `trust` |
 | | 9 | `airpodspro` · `appletv` · `arcade` · `chrome` · `disneyplus` · `playable` · `stadia` · `tiktok` · `windows10` |
@@ -624,7 +531,6 @@ Leftover dest KEEP leftover dest-true I/O stays. leftover-3× unique dest **link
 | 2013 | 9 | `bitcoin` · `bustle` · `chromecast` · `doordash` · `giphy` · `ios7` · `kahoot` · `kitkat` · `patreon` |
 | 2014 | 7 | `alibabaipo` · `echo` · `flappybird` · `game2048` · `inbox` · `ios8` · `oculusfb` |
 | 2015 | 9 | `androidpay` · `applenews` · `applewatch` · `beats1` · `ethereum` · `ios9` · `ipadpro` · `k8s` · `marshmallow` |
-| 2016 | 9 | `airpods` · `allo` · `daydream` · `douyin` · `ethereum` · `figma` · `googlehome` · `ios10` · `letsencrypt` |
 | | 3 | `epicstore` · `gplusgone` · `ios12` |
 | | 9 | `airpods2` · `android10` · `apex` · `applewatch5` · `catalina` · `galaxyfold` · `ios13` · `ipados` · `sekiro` |
 | 2021 | 3 | `coinbaseipo` · `epicapple` · `nft` |
@@ -656,7 +562,6 @@ Leftover dest leftover dest-true I/O dests (keep / trap / field) are also leftov
 | 2012 | 2 |
 | 2013 | 25 |
 | 2015 | 7 |
-| 2016 | 15 |
 | 2017 | 20 |
 | | 8 |
 | | 21 |

@@ -2,8 +2,8 @@
  * Shared year-extras kit — storage, feedback, literacy gates.
  * Year files own product boots only. Load before year-*-extras.js.
  *
- *   var YX = ITT.YearExtras.forYear("2017");
- *   YX.key("faceid") → itt17-faceid
+ *   var YX = ITT.YearExtras.forYear("2013");
+ *   YX.key("vine-posts") → itt13-vine-posts
  */
 (function (global) {
   "use strict";

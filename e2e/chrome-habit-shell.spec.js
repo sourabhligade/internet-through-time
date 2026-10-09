@@ -48,18 +48,12 @@ test.describe("Chrome habit shell labels", () => {
     await pathIs("pages/home.html");
     await go("https://www.google.com/");
     await pathIs("pages/home.html");
-    await go("https://www.google.com/web2016/sites/instagram/stories.html");
-    await pathIs("sites/instagram/stories.html");
-    await expect(box).toHaveValue("https://www.google.com/web2016/sites/instagram/stories.html");
-    await go("go");
-    await pathIs("sites/pokemongo/index.html");
-    await go("history");
-    await pathIs("pages/error/unreachable.html");
-    await go("story");
-    await pathIs("sites/instagram/stories.html");
-    await page.locator('.dir-btn[data-go="sites/facebook/reactions.html"]').click();
-    await pathIs("sites/facebook/reactions.html");
-    await expect(box).toHaveValue("https://www.google.com/web2016/sites/facebook/reactions.html");
+    await go("http://home.microsoft.com/intl/web2020/sites/zoom/meeting.html");
+    await pathIs("sites/zoom/meeting.html");
+    await expect(box).toHaveValue("http://home.microsoft.com/intl/web2020/sites/zoom/meeting.html");
+    await page.locator('.dir-btn[data-go="sites/houseparty/index.html"]').click();
+    await pathIs("sites/houseparty/index.html");
+    await expect(box).toHaveValue("http://home.microsoft.com/intl/web2020/sites/houseparty/index.html");
   });
 
   test("React hall does not list absent years", async ({ page }) => {
@@ -90,7 +84,6 @@ test.describe("Chrome habit shell labels", () => {
     const status = room.locator(".status");
     await expect(status).toHaveText("Saved.");
     await expect(status).not.toContainText("itt15-");
-    await expect(status).not.toContainText("itt17-");
     await expect(room).toHaveAttribute("id", "itt15-periscope");
   });
 });

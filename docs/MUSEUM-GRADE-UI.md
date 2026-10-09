@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-04
 **Status:** Map. Phases 1–7 are done. Phase 7 is the public URL, 2026-10-07.
-**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json`. Hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** **2009 is live** (Like `itt09-like`). Forests **1994–2006** stay frozen.
+**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json`. Hub is **25 doors** (1994–2015 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** **2009 is live** (Like `itt09-like`). Forests **1994–2006** stay frozen.
 The live door count is 26 in [`DISK-TRUTH.md`](DISK-TRUTH.md).
 **Looked at:** every year 1994–2022 on `http://127.0.0.1:8080`, desktop 1100px. HTML doors are `years/YYYY/pages/home.html`. 2015 is `/app/index.html#/year/2015`.
 
@@ -12,7 +12,7 @@ Phases 1–7 below stay shipped. Remaining visitor UI+UX on dests already on dis
 
 ## Done when
 
-1. Each of the 26 doors opens from the hub and the window matches that year's OS and browser.
+1. Each of the 25 doors opens from the hub and the window matches that year's OS and browser.
 2. Starting Point shows six guided steps and that year's flows. Each list is one card. The card belongs to that year.
 3. A flow row shows its stop number once.
 4. The period footer is one row. It does not cover the lists.
@@ -27,13 +27,13 @@ Phases 1–7 below stay shipped. Remaining visitor UI+UX on dests already on dis
 
 | Phase | What it finishes | State |
 | --- | --- | --- |
-| 1 | A card on both Starting Point lists, for every live year | Passed. `e2e/start-cards.spec.js`, 26 of 26. Every HTML home plus the 2015 guided six. 2026-10-04 |
+| 1 | A card on both Starting Point lists, for every live year | Passed. `e2e/start-cards.spec.js`, 25 of 25. Every HTML home plus the 2015 guided six. |
 | 2 | One footer, one stop number, an honest status clock | Passed. `e2e/phase2-footer-clock.spec.js`, 51 of 51. Every HTML year plus 2015. 2026-10-04 |
 | 3 | The window matches that year: toolbar, address, coach | Passed. `e2e/phase3-window.spec.js`, 88 of 88. Every HTML address and coach line. 2026-10-04 |
-| 4 | Phone, 390px, all 26 doors | Passed. `e2e/phase4-phone.spec.js`, 26 of 26. Lists match, guided is six, the menubar stays inside 390. 2026-10-04 |
+| 4 | Phone, 390px, all 25 doors | Passed. `e2e/phase4-phone.spec.js`. Lists match, guided is six, the menubar stays inside 390. |
 | 5 | Builder words off the glass | Passed. `e2e/phase5-glass.spec.js`, 27 of 27, 2026-10-04 |
 | 6 | The walk matches the checklist, then the boxes get ticked | Walked. 548 ticked, 44 left open. 2026-10-05 |
-| 7 | One public URL | Passed. https://sourabhligade.github.io/internet-through-time/ serves the 26 doors. 2017–2019 and 2023–2025 are 404. 2026-10-07 |
+| 7 | One public URL | Passed. https://sourabhligade.github.io/internet-through-time/ serves the 25 doors. 2017–2019 and 2023–2025 are 404. |
 
 ## Where the cards stand
 
@@ -63,16 +63,15 @@ Both lists measured at 1100px. A year holds when guided and flows share one card
 | 2013 | Vine green `#00bf8f` | same | Holds |
 | 2014 | Light `#f2f2f2` | same | Holds. Phase 1. The black bar is gone. |
 | 2015 | React door, Periscope | same door | Holds. `/app/index.html#/year/2015` opens the guided six. |
-| 2016 | White Chrome | same | Holds |
 | 2017 | no door | | Absent. `#/year/2017` says it is not a door. |
 | 2018 | no door | | Absent. Same page. |
 | 2019 | no door | | Absent. Same page. |
-| 2020 | White Chrome | same | Holds. The page is `#f8f9fa`, the same canvas as 2016, 2021, and 2022. |
+| 2020 | White Chrome | same | Holds. The page is `#f8f9fa`, the same canvas as 2021 and 2022. |
 | 2021 | White Chrome | same | Holds. Phase 1. Flows stay two columns. |
 | 2022 | White Chrome | same | Holds |
 | 2023–2025 | no door | | Absent. Leave them absent. |
 
-All 26 live doors hold on the Starting Point cards. Commit `04f48d26f` removed the fill that painted every Starting Point as a white Chrome card. That fill was hiding broken rules. It stays off.
+All 25 live doors hold on the Starting Point cards. Commit `04f48d26f` removed the fill that painted every Starting Point as a white Chrome card. That fill was hiding broken rules. It stays off.
 
 ## Phase 1 — Cards
 
@@ -128,7 +127,7 @@ Do this in groups. One year from the group is enough if the shell is shared. If 
 | Vine | 2013 | [2013](http://127.0.0.1:8080/years/2013/) |
 | Flat | 2014 | [2014](http://127.0.0.1:8080/years/2014/) |
 | React | 2015 | [2015](http://127.0.0.1:8080/app/index.html#/year/2015) |
-| Chrome habit | 2016, 2020, 2021, 2022 | [2016](http://127.0.0.1:8080/years/2016/) and [2022](http://127.0.0.1:8080/years/2022/) |
+| Chrome habit | 2020, 2021, 2022 | [2022](http://127.0.0.1:8080/years/2022/) |
 
 Files if a group fails:
 
@@ -139,7 +138,7 @@ Files if a group fails:
 
 ## Phase 3 — The window is that year
 
-**Done.** Toolbar GIFs already resolved. Every HTML address matches `js/year-card.json`. 2016, 2020, and 2021 are Win10 Chrome habit. 2020 and 2021 stay on `http://home.microsoft.com/intl/webYEAR/`. 2022 stays on `https://www.google.com/web2022/`. The coach line on every HTML year says the museum list and this year's Starting Point. `copy-bank.js` was left as it is. 2023, 2024, and 2025 use the same not-a-door page as 2017, 2018, and 2019.
+**Done.** Toolbar GIFs already resolved. Every HTML address matches `js/year-card.json`. 2020 and 2021 are Win10 Chrome habit on `http://home.microsoft.com/intl/webYEAR/`. 2022 stays on `https://www.google.com/web2022/`. The coach line on every HTML year says the museum list and this year's Starting Point. `copy-bank.js` was left as it is. 2023, 2024, and 2025 use the same not-a-door page as 2017, 2018, and 2019.
 
 | File | Change |
 | --- | --- |
@@ -157,14 +156,13 @@ Files if a group fails:
 | 2005, 2006 | that year | Own folder. Buttons resolve. |
 | 2007, 2008 | `2004` | XP buttons, not a missing 2007 or 2008 folder. |
 | 2009 | `2007` | Those GIFs return 200. The card stays Like blue. The page is `#e7ebf2`. |
-| 2010–2014, 2016, 2020–2022 | `null` | No GIF toolbar is expected. The lean shell is the window. A missing-image icon is a fail. |
+| 2010–2014, 2020–2022 | `null` | No GIF toolbar is expected. The lean shell is the window. A missing-image icon is a fail. |
 | 2015 | React | No GIF toolbar. The chrome is the React habit shell. |
 
 Then these four, which are not the GIF check:
 
 | Door | Look |
 | --- | --- |
-| [2016](http://127.0.0.1:8080/years/2016/) | Win10. The toolbar is not an IE bar left on a Chrome-habit door. |
 | [2022](http://127.0.0.1:8080/years/2022/) | Address is this year's location. It does not say `home.microsoft.com` under a Chrome-habit title. |
 | [2015](http://127.0.0.1:8080/app/index.html#/year/2015) | Header is the stop you are on. It is not the star name on every stop. |
 | `#/year/2017`, `#/year/2018`, `#/year/2019` | Must not open the 2015 door. An absent year shows the hub, or a plain "not a door" page. It does not show Periscope. |
@@ -184,7 +182,7 @@ Viewport **390×844**. One pass per door. Do not edit until that door has been o
 | 2002–2009 | Directory wraps. Start and the year's own toolbar Home stay reachable. 2004 must still show Start, Gmail, and Flickr. |
 | 2010–2014 | The light, red, green, or gray card is still one card. No sideways scroll. |
 | 2015 | The verb is in the first screen. The storage key is not. The rails do not take the whole screen before the verb. |
-| 2016, 2020, 2021, 2022 | Directory stays, as 2022 already did on a phone. Chips stay about 16px. 2021's two columns may stack. They may not overflow. |
+| 2020, 2021, 2022 | Directory stays, as 2022 already did on a phone. Chips stay about 16px. 2021's two columns may stack. They may not overflow. |
 
 Files, only after a door fails: the year shell CSS for that OS (`css/period-YYYY.css` or the shell sheet that door already loads). Do not add a shared phone skin that repaints 1994 and 2022 the same way.
 
@@ -219,7 +217,7 @@ Still open, on purpose:
 - 2011 and 2015 image lines. `assets/period/2011/` and `assets/period/2015/` are absent.
 - 2015 stops whose names are not on the live door: `itt15-googlephotos`, `itt15-applemusic`, `itt15-snap-discover`, `itt15-discord`, `itt15-le`, `itt15-game-blobrush`. The door, the guided six, Periscope, Windows 10, Edge, Watch, and the empty leftover list are ticked.
 
-Closed 2026-10-05 after a visit: Slashdot stores `{real, official, comments}` on `itt97-sd-comments-ie4`. 2007 MySpace, eBay, and Wikipedia write `*-lx` and show Next. 2010 Google and Android, 2012 YouTube, 2013 YouTube and Twitter, and 2016 Houseparty, Jio, LinkedIn, and Super Mario Run write the checklist leftover key. Empty and trap write nothing. The year star stays empty. 2013 Twitter still writes `itt13-tweets`. 2016 Houseparty still writes `itt16-hp-6x`. Play on 2012 YouTube still writes `itt12-yt`.
+Closed 2026-10-05 after a visit: Slashdot stores `{real, official, comments}` on `itt97-sd-comments-ie4`. 2007 MySpace, eBay, and Wikipedia write `*-lx` and show Next. 2010 Google and Android, 2012 YouTube, and 2013 YouTube and Twitter write the checklist leftover key. Empty and trap write nothing. The year star stays empty. 2013 Twitter still writes `itt13-tweets`. Play on 2012 YouTube still writes `itt12-yt`.
 
 Fix the breaks first. Then walk `docs/checklists/`. Tick a line only after that URL does what the line says. An unticked line is honest. A ticked line that was not opened is not.
 
@@ -256,7 +254,6 @@ Checklists. Open counts are the 2026-10-04 list, except 2020 and 2021, which are
 | 2013 | 39 | |
 | 2014 | 19 | |
 | 2015 | 14 | React URL is the right one |
-| 2016 | 33 | |
 | 2020 | 0 | 14 of 14 in `docs/checklists/2020.md` |
 | 2021 | 0 | 14 of 14 in `docs/checklists/2021.md` |
 | 2022 | 14 | |
@@ -266,13 +263,13 @@ Checklists. Open counts are the 2026-10-04 list, except 2020 and 2021, which are
 
 Done 2026-10-07. GitHub Pages, legacy build, branch `museum/1994-2020-lean`, root `/`. Public URL: https://sourabhligade.github.io/internet-through-time/
 
-The published tree is the tree already on that branch. It serves the same 26 doors. It does not serve 2017, 2018, 2019, or 2023–2025. The hub is still the year cards, not a marketing page.
+The published tree is the tree already on that branch. It serves the same 25 doors. It does not serve 2017–2019 or 2023–2025. The hub is still the year cards, not a marketing page.
 
 Actions billing is still locked, so the Pages workflow cannot run. The live site is the branch publish, not that workflow. Local checks stay at `http://127.0.0.1:8080`.
 
 ## Not these seven phases
 
-- Famous-double ceilings. Caps, not quotas: 2007 to 64, 2010 to 56, 2011 to 72, 2012 to 62, 2014 to 48, 2016 to 112, 2020 to 42, 2021 to 34, 2022 to 48. No new rooms until you name them.
+- Famous-double ceilings. Caps, not quotas: 2007 to 64, 2010 to 56, 2011 to 72, 2012 to 62, 2014 to 48, 2020 to 42, 2021 to 34, 2022 to 48. No new rooms until you name them.
 - 1999–2004 doubling. Still waits on the word `2x`. The 2004 map is `docs/2x-harvest-d-2004.md`.
 - New dest folders under 1994–2006.
 - Restoring 2017, 2018, 2019, or 2023–2025.
@@ -286,4 +283,4 @@ Actions billing is still locked, so the Pages workflow cannot run. The live site
 4. Phase 4 is done. Chrome-habit directory chips stay about 16px on a phone. Do not paint 1994 with that skin.
 5. Phase 5 is done. Leave `[failed-final]` in the HTML. The five generic buttons stay Open leftover.
 6. Phase 6 breaks, then tick.
-7. Phase 7 is done. The public URL stays the 26-door tree. Do not add 2017–2019 or 2023–2025 to it.
+7. Phase 7 is done. The public URL stays the 25-door tree. Do not add 2017–2019 or 2023–2025 to it.

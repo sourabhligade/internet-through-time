@@ -27,7 +27,6 @@ const CARDS = {
   2012: { body: "rgb(243, 243, 243)", card: "rgb(242, 242, 242)", link: "rgb(18, 86, 136)", flows: 10 },
   2013: { body: "rgb(243, 243, 243)", card: "rgb(0, 191, 143)", link: "rgb(232, 255, 248)", flows: 9 },
   2014: { body: "rgb(243, 243, 243)", card: "rgb(242, 242, 242)", link: "rgb(18, 86, 136)", flows: 9 },
-  2016: { body: "rgb(248, 249, 250)", card: "rgb(255, 255, 255)", link: "rgb(25, 103, 210)", flows: 10 },
   2020: { body: "rgb(248, 249, 250)", card: "rgb(255, 255, 255)", link: "rgb(25, 103, 210)", flows: 10 },
   2021: { body: "rgb(248, 249, 250)", card: "rgb(255, 255, 255)", link: "rgb(25, 103, 210)", flows: 10 },
   2022: { body: "rgb(248, 249, 250)", card: "rgb(255, 255, 255)", link: "rgb(25, 103, 210)", flows: 10 },

@@ -14,7 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "dev" / "museum-map"
-LOCK_4X = {"2012", "2013", "2016", "2017"}
+LOCK_4X = {"2012", "2013", "2017"}
 NO_SECOND = {"2013"}
 BOARDED = []
 WIPED = ["2018", "2019", "2023", "2024", "2025"]
@@ -174,7 +174,7 @@ def render(data: dict) -> str:
 
     open_labels = [rec["year"] for rec in years]
     n_open = len(open_labels)
-    expected = [str(y) for y in range(1994, 2016)] + ["2020", "2021", "2022"]
+    expected = [str(y) for y in range(1994, 2015 + 1)] + ["2020", "2021", "2022"]
     span = "1994–2015 and 2020–2022" if open_labels == expected else ", ".join(open_labels)
     lede = (
         f"{n_open} years open ({span}). "
@@ -243,7 +243,6 @@ def render(data: dict) -> str:
       <li>Gold-A · popular 3× · one-thing</li>
       <li>2005–2010 leftover-4× ·  CUT-DOUBLE + 5×</li>
       <li>2014 mvp/flows/4× ·  mvp/flows</li>
-      <li>2016– 3× + trail</li>
     </ul>
     <p class="path">Not this script: leftover-official dest-minutes (~12k) · full 317-spec tree</p>
   </div>

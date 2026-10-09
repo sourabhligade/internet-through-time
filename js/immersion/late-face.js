@@ -1,21 +1,10 @@
 /**
- * Product face on 2016 official rooms.
- * Does not write storage. The existing verb still does.
+ * Product face table. Empty while no late-year door needs period copy.
+ * Does not write storage.
  */
 (function (global) {
   "use strict";
-  var FACE = {
-    "itt16-ig-stories": ["Stories", "Tap the ring. An empty story writes nothing. Reels is the trap."],
-    "itt16-pogo": ["Pokémon GO", "Tap one nearby creature. Already-caught writes nothing."],
-    "itt16-fb-react": ["Reactions", "Love, haha, wow, sad, angry. Like-as-the-only-save is the trap."],
-    "itt16-wa-e2e": ["WhatsApp", "Turn the lock on. No lock writes nothing."],
-    "itt16-iphone7": ["iPhone 7", "The jack is gone. Face ID writes nothing."],
-    "itt16-vine-end": ["Vine", "A 6-second loop that is closing. A new loop writes nothing."],
-    "itt16-spectacles": ["Spectacles", "Pair the glasses. A plain Snap writes nothing."],
-    "itt16-musically": ["musical.ly", "Fifteen seconds. TikTok For You writes nothing."],
-    "itt16-win10-end": ["Windows 10", "The free upgrade is closing. Still-free writes nothing."],
-    "itt16-game-gymrush": ["Gym Rush", "The year toy. A score of 0 writes nothing."],
-  };
+  var FACE = {};
 
   function boot(doc) {
     var root = doc.documentElement;

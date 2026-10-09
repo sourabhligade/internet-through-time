@@ -554,105 +554,6 @@ KEEP 17 · DROP 11 · DO-NOT-APPLY 8 · MISS 0
 | `youtube` | leftover-3× unique | **DO-NOT-APPLY** |
 KEEP 11 · DROP 2 · DO-NOT-APPLY 6 · MISS 0
 
-## 2016 · star `instagram`
-
-| Slug | Class | Verdict |
-|------|-------|---------|
-| `instagram` | official 10 | **KEEP** |
-| `pokemongo` | official 10 | **KEEP** |
-| `facebook` | official 10 | **KEEP** |
-| `whatsapp` | official 10 | **KEEP** |
-| `iphone` | official 10 | **KEEP** |
-| `vine` | official 10 | **KEEP** |
-| `snapchat` | official 10 | **KEEP** |
-| `musically` | official 10 | **KEEP** |
-| `windows10` | official 10 | **KEEP** |
-| `playable` | official 10 | **DO-NOT-APPLY** |
-| `slack` | leftover-3× unique | **DO-NOT-APPLY** |
-| `reddit` | leftover-3× unique | **DO-NOT-APPLY** |
-| `netflix` | leftover-3× unique | **DO-NOT-APPLY** |
-| `youtube` | leftover-3× unique | **DO-NOT-APPLY** |
-| `alphago` | leftover-3× unique | **KEEP** |
-| `assistant` | leftover-3× unique | **KEEP** |
-| `dyn` | leftover-3× unique | **KEEP** |
-| `fblive` | leftover-3× unique | **KEEP** |
-| `moments` | leftover-3× unique | **DO-NOT-APPLY** |
-| `douyin` | leftover dest | **KEEP** |
-| `wikipedia` | leftover dest | **DROP** |
-| `twitter` | leftover dest | **DROP** |
-| `amazon` | leftover dest | **DROP** |
-| `google` | leftover dest | **DROP** |
-| `yahoo` | leftover dest | **DROP** |
-| `baidu` | leftover dest | **DROP** |
-| `yandex` | leftover dest | **DROP** |
-| `chrome` | leftover dest | **DROP** |
-| `github` | leftover dest | **DROP** |
-| `pinterest` | leftover dest | **DROP** |
-| `tumblr` | leftover dest | **DROP** |
-| `twitch` | leftover dest | **DROP** |
-| `discord` | leftover dest | **DROP** |
-| `airpods` | leftover dest | **KEEP** |
-| `pixel` | leftover dest | **KEEP** |
-| `nougat` | leftover dest | **KEEP** |
-| `allo` | leftover dest | **KEEP** |
-| `duo` | leftover dest | **KEEP** |
-| `googlehome` | leftover dest | **KEEP** |
-| `oculusrift` | leftover dest | **KEEP** |
-| `psvr` | leftover dest | **KEEP** |
-| `overwatch` | leftover dest | **KEEP** |
-| `doom2016` | leftover dest | **KEEP** |
-| `uncharted4` | leftover dest | **KEEP** |
-| `nomanssky` | leftover dest | **KEEP** |
-| `clashroyale` | leftover dest | **KEEP** |
-| `signal` | leftover dest | **DROP** |
-| `telegram` | leftover dest | **DROP** |
-| `paypal` | leftover dest | **DROP** |
-| `applepay` | leftover dest | **DROP** |
-| `panamapapers` | leftover dest | **KEEP** |
-| `figma` | leftover dest | **KEEP** |
-| `thedao` | leftover dest | **KEEP** |
-| `ethereum` | leftover dest | **KEEP** |
-| `ios10` | leftover dest | **KEEP** |
-| `sierra` | leftover dest | **KEEP** |
-| `daydream` | leftover dest | **KEEP** |
-| `battlefield1` | leftover dest | **KEEP** |
-| `letsencrypt` | leftover dest | **KEEP** |
-| `steam` | leftover dest | **DROP** |
-| `wechat` | leftover dest | **DROP** |
-| `tinder` | leftover dest | **DROP** |
-| `uber` | leftover dest | **DROP** |
-| `airbnb` | leftover dest | **DROP** |
-| `spotify` | leftover dest | **DROP** |
-| `hulu` | leftover dest | **DROP** |
-| `nyt` | leftover dest | **DROP** |
-| `bbc` | leftover dest | **DROP** |
-| `dropbox` | leftover dest | **DROP** |
-| `gitlab` | leftover dest | **DROP** |
-| `shopify` | leftover dest | **DROP** |
-| `stripe` | leftover dest | **DROP** |
-| `minecraft` | leftover dest | **DROP** |
-| `roblox` | leftover dest | **DROP** |
-| `messenger` | leftover dest | **DROP** |
-| `skype` | leftover dest | **DROP** |
-| `tesla` | leftover dest | **KEEP** |
-| `canva` | leftover dest | **DROP** |
-| `medium` | leftover dest | **DROP** |
-| `vk` | leftover dest | **DROP** |
-| `taobao` | leftover dest | **DROP** |
-| `ebay` | leftover dest | **DROP** |
-| `etsy` | leftover dest | **DROP** |
-| `mastodon` | leftover dest | **KEEP** |
-| `ringer` | leftover dest | **KEEP** |
-| `athletic` | leftover dest | **KEEP** |
-| `peach` | leftover dest | **KEEP** |
-| `tay` | leftover dest | **KEEP** |
-| `zcash` | leftover dest | **KEEP** |
-| `prisma` | leftover dest | **KEEP** |
-| `vive` | leftover dest | **KEEP** |
-| `miitomo` | leftover dest | **KEEP** |
-| `iana` | leftover dest | **KEEP** |
-KEEP 47 · DROP 40 · DO-NOT-APPLY 6 · MISS 0
-
 ## 2017 · star `iphone`
 
 | Slug | Class | Verdict |
@@ -882,7 +783,6 @@ KEEP 13 · DROP 15 · DO-NOT-APPLY 10 · MISS 0
 | 2013 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2014 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2015 | `playable` | year-game dest · official n=10 · not leftover dest |
-| 2016 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2017 | `playable` | year-game dest · official n=10 · not leftover dest |
 | | `playable` | year-game dest · official n=10 · not leftover dest |
 | | `reddit` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |

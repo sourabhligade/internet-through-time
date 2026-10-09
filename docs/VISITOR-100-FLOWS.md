@@ -1,12 +1,12 @@
 # Visitor 100% — dest-true flows, not dest-farm links
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **26 doors** (1994–2016 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **25 doors** (1994–2015 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 
 **Date:** 2026-09-27 
 **Status:** Implement map. Not dest-farm. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
-**I/O law:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).  
+**I/O law:** [`LEAN-IO-CRITERIA.md`](LEAN-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).  
 **Leftover-3× unique dest-true law:** [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).  
 **Leftover list:** [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md). The old `UNDONE.md` map was removed.
 **Scan:** door **100%** of **26** playable years · dest-true I/O **~87%** · look **~81%** · combined **~89%**. **2015 wiped.** Leftover-3× unique catalogs are **empty**.
@@ -66,7 +66,7 @@ Do not dest-farm dests. Do not dest-lock 2015 again. Do not dest-lock forests / 
 
 `assets/period/2010/` = **4** files. **–2022 = 0 files.** Failed-final on leftover dest leftover-3× unique dest-true dests is honest. Do not invent brand pixels.
 
-**Pass:** harvest a dated capture **or** keep `[failed-final]`. Look is L1–L5 in [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md). Do not dest-farm dests to “look full.”
+**Pass:** harvest a dated capture **or** keep `[failed-final]`. Look is L1–L5 in [`LEAN-IO-CRITERIA.md`](LEAN-IO-CRITERIA.md). Do not dest-farm dests to “look full.”
 
 ### 3.5 Unique leftover-**20** (not leftover-3× unique dest-true)
 
@@ -131,7 +131,7 @@ Do not dest-farm leftover dest leftover-3× unique dest-true dests past these st
 | Year | Leftover-3× unique dest-true dests | Stop |
 |------|-----------------------------------:|------|
 | Forests 1994–2006 | stacked leftover-3× workshop | Unique leftover-3×n **not the forest job** |
-| 2007 / 2010–2016 | **9** | Shipped |
+| 2007 / 2010–2015 | **9** | Shipped |
 | 2017 | **0 leftover-3× unique dest-true dests** | Unique leftover-20 already shipped |
 | | **3** (first only) | Cannot pass 9 without new dests |
 | 2021 | **5** (first 3 + second 2) | Cannot pass 9 without new dests |
@@ -154,7 +154,6 @@ Same dests. `data-official-need` so empty never writes.
 
 - [x]  official dests 0 → 10 (`data-official-need` on dests already on trail).
 - [x] **2010** official dests 1 → 10 (Instagram iOS star already dest-true).
-- [x] **2016** official dests 2 → 10 (IG Stories star already dest-true).
 - [x] **2017** official dests 3 → 10 (Face ID star already dest-true). Unique leftover-20 dest-true dests stay the leftover map.
 - [x] **2021 ATT** star dest `data-official-need` (9 → 10).
 - [x] **2012** official dests 3 → 10.

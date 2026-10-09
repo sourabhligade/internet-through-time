@@ -40,9 +40,7 @@ function starKey(year) {
     2012: "itt12-ig-android",
     2013: "itt13-vine-posts",
     2014: "itt14-wa-install",
-    2015: "itt15-periscope",
-    2016: "itt16-ig-stories",
-    2017: "itt17-faceid"};
+    2015: "itt15-periscope"};
   return map[year] || "";
 }
 

@@ -255,50 +255,6 @@ test.describe('REAL complete writes', () => {
     expect(blob.best).toBeGreaterThanOrEqual(150);
   });
 
-  test('2016 gymrush API real writes itt16-game-gymrush', async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    test.skip(!yearOnDisk('2016'), '2016 not on disk');
-    await enterYear(page, '2016');
-    await clearPrefixGames(page, 'itt16');
-    const frame = await openGame(page, '2016');
-    await frame.locator('[data-game-start]').click();
-    await expect(frame.locator('#game-canvas, canvas').first()).toBeVisible();
-    await waitYearGame(page);
-    await page.evaluate(() => {
-      const w = document.getElementById('content').contentWindow;
-      const host = w.document.querySelector('[data-year-game]');
-      if (host && typeof host.__ittGymRushEnd === 'function') host.__ittGymRushEnd(40);
-      else if (w.ITT && w.ITT.YearGame) w.ITT.YearGame.saveBest('gymrush', 40, { year: '2016' });
-    });
-    const blob = JSON.parse((await getKey(page, 'itt16-game-gymrush')) || '{}');
-    expect(blob.real).toBe(true);
-    expect(String(blob.year)).toBe('2016');
-    expect(blob.best).toBeGreaterThanOrEqual(40);
-    expect(await getKey(page, 'itt15-game-blobrush')).toBeFalsy();
-  });
-
-  test('2017 stormcircle API real writes itt17-game-stormcircle', async ({ page }) => {
-    test.skip(!yearOnDisk('2017'), '2017 not on disk');
-    await enterYear(page, '2017');
-    await clearPrefixGames(page, 'itt17');
-    const frame = await openGame(page, '2017');
-    await frame.locator('[data-game-start]').click();
-    await expect(frame.locator('#game-canvas, canvas').first()).toBeVisible();
-    await waitYearGame(page);
-    await page.evaluate(() => {
-      const w = document.getElementById('content').contentWindow;
-      const host = w.document.querySelector('[data-year-game]');
-      if (host && typeof host.__ittStormCircleEnd === 'function') host.__ittStormCircleEnd(40);
-      else if (w.ITT && w.ITT.YearGame) w.ITT.YearGame.saveBest('stormcircle', 40, { year: '2017' });
-    });
-    const blob = JSON.parse((await getKey(page, 'itt17-game-stormcircle')) || '{}');
-    expect(blob.real).toBe(true);
-    expect(String(blob.year)).toBe('2017');
-    expect(blob.best).toBeGreaterThanOrEqual(40);
-    expect(await getKey(page, 'itt16-game-gymrush')).toBeFalsy();
-  });
-
   test('1995 checkers resign writes losses', async ({ page }) => {
     await enterYear(page, '1995');
     await clearPrefixGames(page, 'itt95');

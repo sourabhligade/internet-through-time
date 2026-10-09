@@ -2,9 +2,9 @@
 
 **Date:** 2026-10-04
 **Status:** Criteria only. Not an implement pass. No new folders from this file.
-**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json`. Hub is **26 doors** (1994–2016 and 2020–2022). **2015 is React.** **2016, 2016, 2017, 2018, 2019, and 2023–2025 are absent.**
+**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json`. Hub is **25 doors** (1994–2015 and 2020–2022). **2015 is React.** **2017, 2018, 2019, and 2023–2025 are absent.**
 **Older map:** [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) (2026-09-20). Its counts and its “2009 boarded / 2020–2022 absent” lines are stale. This file is the live class map. Candidate rows in the older file stay research until a cite and a named implement.
-**I/O:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).
+**I/O:** [`LEAN-IO-CRITERIA.md`](LEAN-IO-CRITERIA.md) · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).
 **Bibliography:** [`SOURCES.md`](SOURCES.md). A 403 is not a cite. Web Design Museum galleries returned 403 on 2026-10-04.
 
 Deep research is the companion pass. Its shortlist is not a build list. A row is built only after you read it and name the implement.
@@ -33,9 +33,9 @@ A proposed dest **fails** if any row is N. One miss is a fail. Inherits the I/O 
 | **F1** | Unique dest | One new folder, one slug, one role | A slug already under `years/YYYY/sites/` · the same dest on the official trail and the leftover rail |
 | **F2** | Unique key | One key, `ittYY-slug` | `lx` and `d2` counted as two dests · a second writer on the official key |
 | **F3** | Unique verb | The period action for that dest | “Open leftover” copied onto the next folder |
-| **F4** | Year lock | A launch or a mass audience in that calendar year | Neighbor gold. App Store, Chrome, Android G1, or iPhone 3G as a 2007 dest. Instagram Android as a 2010 dest. Vine as a 2012 dest. Watch, Windows 10, or Periscope as a 2014 dest. TikTok’s brand, Face ID, or the Switch as a 2016 buy. ChatGPT as a 2021 dest. GPT-4, Threads, or the X wordmark as a 2022 dest |
+| **F4** | Year lock | A launch or a mass audience in that calendar year | Neighbor gold. App Store, Chrome, Android G1, or iPhone 3G as a 2007 dest. Instagram Android as a 2010 dest. Vine as a 2012 dest. Watch, Windows 10, or Periscope as a 2014 dest. TikTok’s brand, Face ID, or the Switch as a later buy. ChatGPT as a 2021 dest. GPT-4, Threads, or the X wordmark as a 2022 dest |
 | **F5** | Thin door only | The year is in the Double column of §4 | A new folder on 1994–2006, 2008, 2009, 2013, 2015, 2017, 2018, 2019, or 2023–2025 |
-| **F6** | Cap | The year’s site-folder count stays at or under the aim in §4 | A folder added to hit the aim with no cite · 2016 rebuilt toward the rejected 132-dest farm |
+| **F6** | Cap | The year’s site-folder count stays at or under the aim in §4 | A folder added to hit the aim with no cite · a wiped year rebuilt toward the rejected 132-dest farm |
 | **F7** | Official length | 2004 stays 8. 2013 and 2014 stay 9. Every other open door stays 10 | A new official stop · Facebook 1B removed from 2012 stop 10 |
 | **F8** | Star | Only the year chip writes the star key in §7 | A leftover writes a star key from §7 |
 | **F9** | Incomplete | Empty, 0 ticks, and no pick write nothing | Any click writes |
@@ -58,7 +58,7 @@ Counts are first-level folders under `years/YYYY/sites/`, with `playable` exclud
 | Class | Years | Sites now | Games | This pass |
 |-------|-------|----------:|------:|-----------|
 | Forest | 1994–2006 | 150–805 | about 20 | **Stop.** Do not add dests. |
-| Thin, double | 2007, 2010, 2011, 2012, 2014, 2016, 2020, 2021, 2022 | see §4 | see §4 | Leftover dests up to the aim. Cap, not a quota. |
+| Thin, double | 2007, 2010, 2011, 2012, 2014, 2020, 2021, 2022 | see §4 | see §4 | Leftover dests up to the aim. Cap, not a quota. |
 | Holes only | 2008 (112), 2009 (77), 2013 (51) | already past a thin door | 3 / 1 / 1 | A dest only when a cited famous room is missing. No doubling. |
 | React | 2015 | 0 folders. 10 official | Live Rush | **Stop.** No HTML tree. No 11th official. |
 | Absent | 2017, 2018, 2019, 2023, 2024, 2025 | 0 | 0 | **Stop.** No tree, no hub card, no React door. |
@@ -69,7 +69,7 @@ Counts are first-level folders under `years/YYYY/sites/`, with `playable` exclud
 
 Aim = twice the live site count. The aim is a ceiling. A year with no cited room stays at the live count. Every year below already has its official playable stop, so this pass adds no games.
 
-**2016 decision.** Live count was 56. Twice that is 112. The September aim was 64, from a disk of 32. The rejected farm was 132. The live ceiling is **112**. The hard fail is **132**. The September 64 is not the ceiling, because the disk was already 56. A proposal that passes 112, or that rebuilds the 132-dest farm, fails F6.
+The rejected farm was 132.
 
 On 2026-10-05 the named double added ten leftover rooms: `marketplace`, `note7`, `gboard`, `touchbar`, `bots`, `watchs2`, `nesclassic`, `hololens`, `yahoobreach`, `twilio`. Sites now **66**. Folders **67** with `playable`. Ceiling stays **112**. Hard fail stays **132**. These rooms are leftover dests. They are not official stops and not leftover-2× links.
 
@@ -82,7 +82,6 @@ On 2026-10-05 the named double added ten leftover rooms: `marketplace`, `note7`,
 | 2011 | `itt11-gplus` | 36 | 72 | 36 | `itt11-game-letterswap` |
 | 2012 | `itt12-ig-android` | 31 | 62 | 31 | `itt12-game-guessdoodle` |
 | 2014 | `itt14-wa-install` | 24 | 48 | 24 | `itt14-game-tilefold` |
-| 2016 | `itt16-ig-stories` | 66 | 112 | 46 | `itt16-game-gymrush` |
 | 2020 | `itt20-zoom` | 21 | 42 | 21 | `itt20-game-leave` |
 | 2021 | `itt21-att` | 17 | 34 | 17 | `itt21-game-five` |
 | 2022 | `itt22-chatgpt` | 24 | 48 | 24 | `itt22-game-prompt` |
@@ -114,10 +113,6 @@ A new dest fails F1 if its folder name is already here. `playable` is the cabine
 ### 2014 (25)
 
 `alibabaipo` · `applepay` · `echo` · `facebook` · `flappybird` · `game2048` · `heartbleed` · `icebucket` · `inbox` · `instagram` · `ios8` · `iphone` · `material` · `musically14` · `oculusfb` · `playable` · `slack` · `snapchat` · `truecrypt` · `twitch` · `twitter` · `uber` · `whatsapp` · `wikipedia` · `youtube`
-
-### 2016 (67)
-
-`airpods` · `allo` · `alphago` · `assistant` · `athletic` · `battlefield1` · `bots` · `clashroyale` · `daydream` · `doom2016` · `douyin` · `duo` · `dyn` · `ethereum` · `facebook` · `fblive` · `figma` · `gboard` · `googlehome` · `hololens` · `houseparty` · `iana` · `instagram` · `ios10` · `iphone` · `jio` · `letsencrypt` · `linkedinms` · `marketplace` · `mastodon` · `miitomo` · `moments` · `musically` · `nesclassic` · `netflix` · `nomanssky` · `note7` · `nougat` · `oculusrift` · `overwatch` · `panamapapers` · `peach` · `pixel` · `playable` · `pokemongo` · `prisma` · `psvr` · `reddit` · `ringer` · `sierra` · `slack` · `smario` · `snapchat` · `tay` · `tesla` · `thedao` · `touchbar` · `twilio` · `uncharted4` · `vine` · `vive` · `watchs2` · `whatsapp` · `windows10` · `yahoobreach` · `youtube` · `zcash`
 
 ### 2020 (22)
 
@@ -159,7 +154,6 @@ From `js/config/flow-trails.js` on 2026-10-04. A new leftover whose folder or `w
 | 2012 | `instagram` `itt12-ig-android` · `pinterest` `itt12-pin` · `facebook` `itt12-fb-ipo` · `iphone` `itt12-maps` · `wikipedia` `itt12-sopa` · `medium` `itt12-pop-medium` · `path` `itt12-pop-path` · `flipboard` `itt12-pop-flipboard` · `playable` `itt12-game-guessdoodle` · `facebook` `itt12-facebook` |
 | 2013 | `vine` `itt13-vine-posts` · `instagram` `itt13-ig-posts` · `snapchat` `itt13-snap-story` · `iphone` `itt13-ios7` · `snowden` `itt13-snowden-ack` · `telegram` `itt13-telegram-chat` · `tumblr` `itt13-tumblr-yahoo` · `windows81` `itt13-win81` · `playable` `itt13-game-loopsix` |
 | 2014 | `whatsapp` `itt14-wa-install` · `heartbleed` `itt14-heartbleed` · `icebucket` `itt14-icebucket` · `iphone` `itt14-iphone6` · `applepay` `itt14-applepay` · `material` `itt14-material` · `slack` `itt14-slack` · `twitch` `itt14-twitch` · `playable` `itt14-game-tilefold` |
-| 2016 | `instagram` `itt16-ig-stories` · `pokemongo` `itt16-pogo` · `facebook` `itt16-fb-react` · `whatsapp` `itt16-wa-e2e` · `iphone` `itt16-iphone7` · `vine` `itt16-vine-end` · `snapchat` `itt16-spectacles` · `musically` `itt16-musically` · `windows10` `itt16-win10-end` · `playable` `itt16-game-gymrush` |
 | 2020 | `zoom` `itt20-zoom` · `houseparty` `itt20-houseparty` · `discord` `itt20-discord` · `teams` `itt20-teams` · `classroom` `itt20-classroom` · `netflix` `itt20-netflix` · `tiktok` `itt20-tiktok` · `amongus` `itt20-amongus` · `animalcrossing` `itt20-acnh` · `playable` `itt20-game-leave` |
 | 2021 | `att` `itt21-att` · `signal` `itt21-signal` · `copilot` `itt21-copilot` · `meta` `itt21-meta` · `windows11` `itt21-win11` · `flash` `itt21-flash-brick` · `chrome` `itt21-chrome` · `windows10` `itt21-win10` · `facebook` `itt21-pop-facebook` · `playable` `itt21-game-five` |
 | 2022 | `chatgpt` `itt22-chatgpt` · `wordle` `itt22-wordle` · `twitter` `itt22-twitter` · `bereal` `itt22-bereal` · `iphone` `itt22-island` · `ftx` `itt22-ftx` · `mastodon` `itt22-mastodon` · `tiktok` `itt22-tiktok` · `windows11` `itt22-win11` · `playable` `itt22-game-prompt` |
@@ -182,7 +176,6 @@ Dropped clones, not new dests: Siri or iPhone 4S where official `iphone` is alre
 | 2012 | `itt12-ig-android` | Instagram Android |
 | 2013 | `itt13-vine-posts` | Vine 6s |
 | 2014 | `itt14-wa-install` | WhatsApp Install |
-| 2016 | `itt16-ig-stories` | Instagram Stories |
 | 2020 | `itt20-zoom` | Zoom Leave |
 | 2021 | `itt21-att` | ATT Ask |
 | 2022 | `itt22-chatgpt` | ChatGPT Send |
@@ -286,7 +279,7 @@ Step 1 returned four rows on 2026-10-04. Each slug is free on disk. Each cite op
 | 2013 | `houseofcards` | Watch episode 1 | The whole season as a guest | [Netflix release, 1 Feb 2013](https://www.prnewswire.com/news-releases/netflix-makes-first-episode-of-house-of-cards-available-to-non-members-for-one-month-beginning-february-1-2013-189359941.html) | Hole only |
 | 2021 | `dalle` | Describe | ChatGPT, or a blank prompt | [OpenAI, 5 Jan 2021](https://openai.com/index/dall-e/) | Double. Not the 2022 `dalle2` folder. 17 → 18, aim 34 |
 
-Left short, no cite that opened: 2010, 2011, 2012, 2014, 2016, 2020, 2022. Hulu’s 29 Oct 2007 private beta was not kept, because the company release did not open. Docker’s 15 Mar 2013 demo was not the 2013 hole. Siri was dropped: `itt11-siri` is already official stop 3. No new year toy. The Cybercultural essays for 2013, 2014, 2016, and 2020 did not return a page. Twelve candidate claims were excluded before they could be checked. The run did not write a prose synthesis.
+Left short, no cite that opened: 2010, 2011, 2012, 2014, 2020, 2022. Hulu’s 29 Oct 2007 private beta was not kept, because the company release did not open. Docker’s 15 Mar 2013 demo was not the 2013 hole. Siri was dropped: `itt11-siri` is already official stop 3. No new year toy. The Cybercultural essays for 2013, 2014, and 2020 did not return a page. Twelve candidate claims were excluded before they could be checked. The run did not write a prose synthesis.
 
 ---
 
@@ -301,7 +294,6 @@ Fill this when a cited list exists. Added starts at 0.
 | 2011 | 36 | 72 | 0 | 0 | yes |
 | 2012 | 31 | 62 | 0 | 0 | yes |
 | 2014 | 24 | 48 | 0 | 0 | yes |
-| 2016 | 56 | 112 | 0 | 0 | yes, fail at 132 |
 | 2020 | 21 | 42 | 0 | 0 | yes |
 | 2021 | 17 | 34 | 0 | 1 | yes |
 | 2022 | 24 | 48 | 0 | 0 | yes |
@@ -314,7 +306,7 @@ Fill this when a cited list exists. Added starts at 0.
 |-----|------|
 | [`DISK-TRUTH.md`](DISK-TRUTH.md) | Ship law |
 | [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) | September map. Counts there are stale |
-| [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) | I1–I14 |
+| [`LEAN-IO-CRITERIA.md`](LEAN-IO-CRITERIA.md) | I1–I14 |
 | [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) | 2013 I/O |
 | [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) | 100% is dest-true flows |
 | [`SOURCES.md`](SOURCES.md) | Bibliography |

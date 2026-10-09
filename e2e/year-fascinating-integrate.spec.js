@@ -150,7 +150,6 @@ test.describe("Fascinating integrate leftovers", () => {
     expect(await getKey(page, "itt09-like")).toBeFalsy();
   });
 
-
   test("1994 banner skip never writes · I clicked HERE writes itt94-banner", async ({ page }) => {
     await openClean(page, "/years/1994/sites/hotwired/ad-att.html", ["itt94-banner", "itt94-csotd"]);
     await page.locator("[data-banner-skip]").click();
@@ -251,25 +250,6 @@ test.describe("Fascinating integrate leftovers", () => {
     await go.click();
     await expect.poll(() => getKey(page, "itt10-pop-instant")).toBeTruthy();
     expect(await getKey(page, "itt10-ig")).toBeFalsy();
-  });
-
-  test("2016 PoGO Catch extras skip · dest-true team is official", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    await openClean(page, "/years/2016/sites/pokemongo/index.html", ["itt16-pogo", "itt16-ig-stories"]);
-    await verbReady(page);
-    await page.locator("[data-pogo-catch]").click();
-    expect(await getKey(page, "itt16-pogo")).toBeFalsy();
-    await page.locator('[data-pogo-team="valor"]').click();
-    await page.locator("[data-pogo-catch]").click();
-    expect(await getKey(page, "itt16-pogo")).toBeFalsy();
-    await page.locator("[data-pogo-gps]").check();
-    await page.locator("[data-pogo-catch]").click();
-    expect(await getKey(page, "itt16-pogo")).toBeFalsy();
-    await finishOfficial(page);
-    await expect.poll(() => getKey(page, "itt16-pogo"), { timeout: 8000 }).toBeTruthy();
-    expect((await blobOf(page, "itt16-pogo")).kind).toBe("official");
-    expect(await getKey(page, "itt16-ig-stories")).toBeFalsy();
   });
 
   test("guided stays 6 and star hrefs stay put", async ({ page }) => {

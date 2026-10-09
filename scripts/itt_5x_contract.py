@@ -68,6 +68,7 @@ FAMOUS_YEARS = [
     if y not in {2001, 2002, 2003, 2007, 2009, 2013, 2017}
     and y not in WIPED_YEARS
     and y not in BOARDED_YEARS
+    and str(y) in _YEARS
 ]
 
 

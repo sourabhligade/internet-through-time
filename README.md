@@ -1,6 +1,6 @@
 # The Internet Through Time
 
-Historical reconstruction of the World Wide Web — year by year. Hub **25 years open** (1994–2015 and 2020–2022). **2009 is live HTML** · Facebook Like `itt09-like`. **2011 is live HTML** · Google+ `itt11-gplus` · `years/2011/`. **2015 is the React door** (no HTML tree). **2020 is live HTML** · Zoom Leave `itt20-zoom`. **2021 is live HTML** · Ask App Not to Track `itt21-att`. **2022 is live HTML** · ChatGPT Send `itt22-chatgpt`. **2016, 2016, 2017, 2018, 2019, and 2023–2025 are absent.** 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2008 star = App Store. 2009 star = Facebook Like. 2011 star = Google+. 2013 star = Vine 6s. 2014 star = WhatsApp Install. 2015 star = Periscope Go LIVE.
+Historical reconstruction of the World Wide Web — year by year. Hub **25 years open** (1994–2015 and 2020–2022). **2009 is live HTML** · Facebook Like `itt09-like`. **2011 is live HTML** · Google+ `itt11-gplus` · `years/2011/`. **2015 is the React door** (no HTML tree). **2020 is live HTML** · Zoom Leave `itt20-zoom`. **2021 is live HTML** · Ask App Not to Track `itt21-att`. **2022 is live HTML** · ChatGPT Send `itt22-chatgpt`. **2017, 2018, 2019, and 2023–2025 are absent.** 2001 star = Wikipedia UseMod. 2002 star = StumbleUpon. 2003 star = Photobucket upload. 2005 star = YouTube upload. 2006 star = Twttr. 2008 star = App Store. 2009 star = Facebook Like. 2011 star = Google+. 2013 star = Vine 6s. 2014 star = WhatsApp Install. 2015 star = Periscope Go LIVE.
 
 **Not** a modern redesign. **Not** “retro inspired.” Each year aims for museum-grade accuracy based on archived screenshots, browser documentation, and period HTML capabilities.
 
@@ -83,7 +83,7 @@ The file `.github/workflows/ci.yml` is the static job plus a named ship Playwrig
 | `/app/index.html#/year/2015` | **Live lean door** — Periscope Go LIVE `itt15-periscope` · no HTML tree · React |
 | `/games/` | Period web games wing (portals · Club Penguin culture · museum JS arcade) |
 
-**Lean doors:** 2007 + 2008 + 2009 + 2010 + 2011 + 2012–2014 + 2020–2022. Hub is **25 years open** (1994–2015 and 2020–2022). **2008 is live HTML** · App Store FREE/BUY. **2009 is live lean** · Facebook Like two partner pages. **2011 is live HTML** · Google+ `itt11-gplus`. **2015 is a React door** · Periscope Go LIVE · no HTML tree. **2020–2022 are live HTML** · Zoom Leave, Ask App Not to Track, ChatGPT Send. **2016, 2016, 2017, 2018, 2019, and 2023–2025 are absent.** 2013 star = Vine 6s. 2015 star = Periscope Go LIVE.
+**Lean doors:** 2007 + 2008 + 2009 + 2010 + 2011 + 2012–2014 + 2020–2022. Hub is **25 years open** (1994–2015 and 2020–2022). **2008 is live HTML** · App Store FREE/BUY. **2009 is live lean** · Facebook Like two partner pages. **2011 is live HTML** · Google+ `itt11-gplus`. **2015 is a React door** · Periscope Go LIVE · no HTML tree. **2020–2022 are live HTML** · Zoom Leave, Ask App Not to Track, ChatGPT Send. **2017, 2018, 2019, and 2023–2025 are absent.** 2013 star = Vine 6s. 2015 star = Periscope Go LIVE.
 
 **Ship truth (what is playable):** [`docs/DISK-TRUTH.md`](docs/DISK-TRUTH.md).  
 **Architecture:** [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).  

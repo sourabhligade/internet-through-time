@@ -19,14 +19,14 @@ Year stub:
 
 ```html
 <script src="../../ui/year/ui.js"></script>
-<script>ITT.YearUI.paint("2016");</script>
+<script>ITT.YearUI.paint("2022");</script>
 ```
 
 Home stub:
 
 ```html
 <script src="../../../ui/year/ui.js"></script>
-<script>ITT.YearUI.paintStart("2016");</script>
+<script>ITT.YearUI.paintStart("2022");</script>
 ```
 
 Atlas and the year shell load these files directly. The `js/year-ui/` shims are gone.

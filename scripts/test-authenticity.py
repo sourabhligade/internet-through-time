@@ -1945,159 +1945,6 @@ def test_2014_urlmap_complete() -> None:
     ok("2014-urlmap-complete")
 
 
-def test_2015_signature() -> None:
-    if not (ROOT / "years/2015").exists():
-        ok("2015-signature-skip")
-        return
-    missing = []
-    for rel in (
-        "pages/home.html",
-        "pages/about.html",
-        "sites/apple/watch.html",
-        "sites/windows10/index.html",
-        "sites/periscope/index.html",
-        "sites/applemusic/index.html",
-        "sites/playable/game.html",
-    ):
-        if not (ROOT / "years/2015" / rel).is_file():
-            missing.append(rel)
-    if missing:
-        fail("2015-signature", "missing: " + ", ".join(missing))
-        return
-    shell = read(ROOT / "years/2015/index.html")
-    if 'data-itt-year="2015"' not in shell:
-        fail("2015-signature", "shell year")
-        return
-    if "itt15" not in read(ROOT / "js/config/2015.js"):
-        fail("2015-signature", "itt15")
-        return
-    about = read(ROOT / "years/2015/pages/about.html")
-    if "863,105,652" not in about:
-        fail("2015-signature", "scale")
-        return
-    if "Stories" not in about or "Watch" not in about:
-        fail("2015-signature", "bans")
-        return
-    watch = read(ROOT / "years/2015/sites/apple/watch.html")
-    if "data-watch15-save" not in watch or "data-watch-shipped" not in watch:
-        fail("2015-signature", "watch hooks")
-        return
-    ok("2015-signature")
-
-
-def test_2015_urlmap_complete() -> None:
-    if not (ROOT / "years/2015").exists():
-        ok("2015-urlmap-complete-skip")
-        return
-    root = ROOT / "years/2015"
-    cfg = read(ROOT / "js/config/2015.js")
-    missing = []
-    for pth in root.rglob("*.html"):
-        rel = str(pth.relative_to(root)).replace("\\", "/")
-        if f'"{rel}"' not in cfg:
-            missing.append(rel)
-    if missing:
-        fail("2015-urlmap-complete", "unmapped: " + ", ".join(missing[:8]))
-        return
-    ok("2015-urlmap-complete")
-
-
-def test_2016_signature() -> None:
-    if not (ROOT / "years/2016").exists():
-        ok("2016-signature-skip")
-        return
-    missing = []
-    for rel in (
-        "pages/home.html",
-        "pages/about.html",
-        "sites/instagram/stories.html",
-        "sites/pokemongo/index.html",
-        "sites/dyn/index.html",
-        "sites/facebook/reactions.html",
-        "sites/playable/game.html",
-    ):
-        if not (ROOT / "years/2016" / rel).is_file():
-            missing.append(rel)
-    if missing:
-        fail("2016-signature", "missing: " + ", ".join(missing))
-        return
-    shell = read(ROOT / "years/2016/index.html")
-    if 'data-itt-year="2016"' not in shell:
-        fail("2016-signature", "shell year")
-        return
-    if "itt16" not in read(ROOT / "js/config/2016.js"):
-        fail("2016-signature", "itt16")
-        return
-    about = read(ROOT / "years/2016/pages/about.html")
-    if "1,045,534,808" not in about:
-        fail("2016-signature", "scale")
-        return
-    if "Reels" not in about or "Stories" not in about:
-        fail("2016-signature", "bans")
-        return
-    stories = read(ROOT / "years/2016/sites/instagram/stories.html")
-    if "data-ig-story-add" not in stories or "data-ig-story-text" not in stories:
-        fail("2016-signature", "stories hooks")
-        return
-    ok("2016-signature")
-
-
-def test_2017_signature() -> None:
-    if not (ROOT / "years/2017").exists():
-        ok("2017-signature-skip")
-        return
-    missing = []
-    for rel in (
-        "pages/home.html",
-        "pages/about.html",
-        "sites/iphone/x.html",
-        "sites/fortnite/index.html",
-        "sites/twitter/280.html",
-        "sites/playable/game.html",
-    ):
-        if not (ROOT / "years/2017" / rel).is_file():
-            missing.append(rel)
-    if missing:
-        fail("2017-signature", "missing: " + ", ".join(missing))
-        return
-    shell = read(ROOT / "years/2017/index.html")
-    if 'data-itt-year="2017"' not in shell:
-        fail("2017-signature", "shell year")
-        return
-    if "itt17" not in read(ROOT / "js/config/2017.js"):
-        fail("2017-signature", "itt17")
-        return
-    about = read(ROOT / "years/2017/pages/about.html")
-    if "1,766,926,408" not in about:
-        fail("2017-signature", "scale")
-        return
-    if "Face ID" not in about or "TikTok" not in about:
-        fail("2017-signature", "bans")
-        return
-    face = read(ROOT / "years/2017/sites/iphone/x.html")
-    if "data-faceid-unlock" not in face or "data-faceid-req" not in face:
-        fail("2017-signature", "faceid hooks")
-        return
-    ok("2017-signature")
-
-
-def test_2016_urlmap_complete() -> None:
-    if not (ROOT / "years/2016").exists():
-        ok("2016-urlmap-complete-skip")
-        return
-    root = ROOT / "years/2016"
-    cfg = read(ROOT / "js/config/2016.js")
-    missing = []
-    for pth in root.rglob("*.html"):
-        rel = str(pth.relative_to(root)).replace("\\", "/")
-        if f'"{rel}"' not in cfg:
-            missing.append(rel)
-    if missing:
-        fail("2016-urlmap-complete", "unmapped: " + ", ".join(missing[:8]))
-        return
-    ok("2016-urlmap-complete")
-
-
 def test_2010_urlmap_complete() -> None:
     if not (ROOT / "years/2010").exists():
         ok("2010-urlmap-complete-skip")
@@ -2147,7 +1994,7 @@ def test_immersion_registry_complete() -> None:
     for year in (
         "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002",
         "2003", "2004", "2005", "2006", "2007","2009", "2010",
-        "2012", "2013", "2014", "2015", "2016", "2017",
+        "2012", "2013", "2014", "2015", "2017",
     ):
         # Only require registry entry when the year tree is on disk (wiped years skip)
         if not (ROOT / "years" / year).is_dir():
@@ -2368,11 +2215,6 @@ def main() -> int:
         test_2013_urlmap_complete,
         test_2014_signature,
         test_2014_urlmap_complete,
-        test_2015_signature,
-        test_2015_urlmap_complete,
-        test_2016_signature,
-        test_2016_urlmap_complete,
-        test_2017_signature,
         test_immersion_registry_complete,
         test_year_stubs_use_shared_boot,
         test_p1_immersion_hooks,

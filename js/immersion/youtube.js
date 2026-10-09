@@ -127,12 +127,6 @@
       bits.push('<a href="../windows10/index.html">Windows 10</a>');
       bits.push('<a href="../../pages/about.html">2015 about</a>');
     }
-    if (y === 2016) {
-      bits.push('<a href="../instagram/stories.html">IG Stories</a>');
-      bits.push('<a href="../pokemongo/index.html">Pokémon GO</a>');
-      bits.push('<a href="../dyn/index.html">Dyn</a>');
-      bits.push('<a href="../../pages/about.html">2016 about</a>');
-    }
     return bits;
   }
   function pointNextWatch(doc, title) {

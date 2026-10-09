@@ -82,20 +82,6 @@ for (const year of LEAN) {
   });
 }
 
-test("2016 window is Win10 Chrome habit, not an IE bar", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-  await openShell(page, "2016");
-  await expect(page.locator("body")).toHaveClass(/os-win10/);
-  await expect(page.locator("body")).toHaveClass(/browser-chrome-habit/);
-  await expect(page).toHaveTitle(/Chrome habit/);
-  await expect(page.locator("#menubar")).toHaveCount(0);
-  await expect(page.locator("#btn-mail")).toHaveCount(0);
-  await expect(page.locator("#btn-favorites")).toHaveCount(0);
-  await expect(page.locator("#toolbar")).toHaveText("←→↻⌂");
-  await expect(page.locator("#location")).toHaveValue("https://www.google.com/web2016/");
-});
-
 test("2022 address is this year's location", async ({ page }) => {
   await openShell(page, "2022");
   await expect(page).toHaveTitle(/Chrome habit/);
@@ -176,7 +162,7 @@ test("2015 header names the stop, and the star stays on the start", async ({ pag
   await expect(page.locator(".stop h1").first()).toHaveText("Apple Music");
 });
 
-for (const year of ["2016", "2017", "2018", "2019", "2023", "2024", "2025"]) {
+for (const year of ["2017", "2018", "2019", "2023", "2024", "2025"]) {
   test(year + " hash is not a door", async ({ page }) => {
     await page.setViewportSize({ width: 1100, height: 800 });
     const res = await page.goto("/app/index.html#/year/" + year);

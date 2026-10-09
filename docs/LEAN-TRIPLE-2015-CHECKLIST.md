@@ -3,22 +3,21 @@
 **STOP (2026-09-30 docs pass).** F1–F10 fail-look boxes stay `[ ]`. Do not dest-farm from this file. [`LEAN-TRIPLE-2015.md`](LEAN-TRIPLE-2015.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 **Date:** 2026-09-20  
-**Status:** Legal 3× leftover dests on disk 2026-09-20 (2016 **96** · **39**). Famous year-true leftover dests. Not dest-farm. Not leftover-3× unique growth.  
+**Status:** Legal 3× leftover dests on disk 2026-09-20. Famous year-true leftover dests. Not dest-farm. Not leftover-3× unique growth.  
 **Law:** [`LEAN-TRIPLE-2015.md`](LEAN-TRIPLE-2015.md) · [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) D1–D15.  
 **Ship:** [`DISK-TRUTH.md`](DISK-TRUTH.md).
 
-Constraint boxes (A · D) tick when already true on disk. 2016 / leftover dest boxes (B · C · E) stay empty until a cited dest list lands — then a named implement pass.
+Constraint boxes (A · D) tick when already true on disk. Leftover dest boxes (B · C · E) stay empty until a cited dest list lands — then a named implement pass.
 
 ---
 
 ## 0. What 3× is (so the look is readable)
 
-Legal 3× = leftover dests on **thin 2016 / only**. Cap is **3× origin lean dest count**, not 3× warehouse dest count.
+Legal 3× = leftover dests on **thin lean doors only**. Cap is **3× origin lean dest count**, not 3× warehouse dest count.
 
 | Year | Now | If legal 3× done | First paint |
 |------|----:|-----------------:|-------------|
 | 2015 | 213 dests · 19 flows | **213 · 19** (stop) | Periscope Go LIVE. Warehouse folded. |
-| 2016 | 64 dests · 19 flows | **96 dests · 51 flows** (+32 leftover dests) | IG Stories. Extra dests are leftover dest pages, not home dump. |
 | 2017 | 222 dests · 30 flows | **222 · 30** (stop · leftover-20 already) | Face ID. No leftover-20 dest-farm. |
 | | 26 dests · 13 flows | **39 dests · 26 flows** (+13 leftover dests, leftover-3× unique stays **3**) | GDPR Manage. Not 78 dests on home. |
 | | 170 dests · 19 flows | **170 · 19** (stop) | Disney+ Continue. Warehouse folded. |
@@ -31,7 +30,7 @@ Naive 3× dest folders (639 / 192 / 666 / 78 / 510 / 117) is **dest-farm**. That
 
 If 3× is done, a visitor still sees **lean I/O**, not 3× dests.
 
-- [x] A1 Guided Starting Point is still exactly **6** `<li>` on 2015, 2016, 2017, — `e2e/flow-check-pipeline.spec.js`
+- [x] A1 Guided Starting Point is still exactly **6** `<li>` on 2015, 2017, — `e2e/flow-check-pipeline.spec.js`
 - [x] A2 Star dest is still the chip (Periscope / Stories / Face ID / GDPR / Disney+ / Zoom)
 - [x] A3 Official 10 dest folders unchanged
 - [x] A4 Starting Point first paint has **no** leftover dest dump (no 32 / 13 extra dests listed as a wall)
@@ -43,7 +42,7 @@ If 3× is done, a visitor still sees **lean I/O**, not 3× dests.
 
 ---
 
-## B. 2016 look (only thin year that grows)
+## B. Thin lean leftover look (missing year stays empty)
 
 Origin lean was **32**. Now **64**. Legal 3× dests = **96** (+32 leftover dests). Flows **19 → 51**.
 
@@ -51,9 +50,9 @@ Origin lean was **32**. Now **64**. Legal 3× dests = **96** (+32 leftover dests
 - [x] B2 Official 10 still IG Stories / Pokémon GO / Facebook Live / WhatsApp / iPhone 7 / Vine / Snapchat / musical.ly / Windows 10 / playable
 - [x] B3 Leftover-3× unique still **9** (slack reddit netflix youtube alphago assistant dyn fblive moments) — not 27
 - [x] B4 +32 leftover dests dest-disjoint from official 10 ∪ leftover-3× unique ∪ lean-double leftover dests already on disk
-- [x] B5 Each new leftover dest: keep vs trap · field · 2 ticks · one leftover key `itt16-<slug>-lx`
-- [x] B6 Empty / trap never write leftover or `itt16-ig-stories`
-- [x] B7 Reels / TikTok brand / Face ID as 2016 dest = **fail** (neighbor gold) — not dests
+- [x] B5 Each new leftover dest: keep vs trap · field · 2 ticks · one leftover key
+- [x] B6 Empty / trap never write leftover or the year star
+- [x] B7 Reels / TikTok brand / Face ID as a neighbor dest = **fail** (neighbor gold) — not dests
 - [x] B8 Do not restore the 132-dest dest-farm forest
 
 **Visitor walk if done:** Starting Point → Stories (empty never writes) → official 10 → leftover dests one at a time (Douyin leftover already on disk; +32 more leftover dest pages). Home does not grow 32 extra links on first paint.
@@ -87,14 +86,14 @@ Origin lean was **13**. Now **26**. Legal 3× dests = **39** (+13 leftover dests
 
 ---
 
-## E. I/O on every new leftover dest (if 2016 / 3× is named)
+## E. I/O on every new leftover dest (if 3× is named)
 
 One dest / one verb / one leftover key. Incomplete never writes. Leftover never writes the star.
 
 - [x] E1 Unique dest folder (not a second Amazon on the same year)
-- [x] E2 Unique leftover key (`itt16-…-lx` / `itt18-…-lx`) — not `lx`+`d2`, not leftover-3× `pop`
+- [x] E2 Unique leftover key (`itt18-…-lx`) — not `lx`+`d2`, not leftover-3× `pop`
 - [x] E3 Unique period verb (not cloned “Go leftover”)
-- [x] E4 Year lock (2016 mass/launch · mass/launch)
+- [x] E4 Year lock (mass/launch · mass/launch)
 - [x] E5 Dest-disjoint from official 10 ∪ leftover-3× unique ∪ unique leftover-20
 - [x] E6 Empty / 0 ticks / no keep never writes
 - [x] E7 Named trap never writes leftover or star
@@ -110,7 +109,7 @@ One dest / one verb / one leftover key. Incomplete never writes. Leftover never 
 If someone triples dest **folders** instead of leftover dests on thin doors, the visitor sees this. Every box is a **fail**.
 
 - [ ] F1 2015 home / warehouse shows ~639 dests (now 213)
-- [ ] F2 2016 looks like a 192-dest forest (origin forest was 82)
+- [ ] F2 A missing year looks like a 192-dest forest (origin forest was 82)
 - [ ] F3 2017 leftover-20 dest-farmed toward 666 dests / 90 flows
 - [ ] F4 first paint looks like 2017 (78 dests, leftover-3× unique grown past 3)
 - [ ] F5 warehouse ~510 dests
@@ -129,7 +128,6 @@ If any F row is true, 3× **failed I/O**. Undo dest-farm. Do not call it 3× don
 | Year | Dest folders | Links (aim, not quota) | Dest-true flows | Leftover-3× unique | Official 10 | Guided |
 |------|-------------:|-----------------------:|----------------:|-------------------:|------------:|-------:|
 | 2015 | 213 | ~233 | 19 | 9 | 10 | 6 |
-| 2016 | **96** | grow with leftover dest crumbs only | **51** | 9 | 10 | 6 |
 | 2017 | 222 | ~265 | 30 | 0 + leftover-20 | 10 | 6 |
 | | **39** | grow with leftover dest crumbs only | **26** | **3** | 10 | 6 |
 | | 170 | ~181 | 19 | 9 | 10 | 6 |
@@ -141,7 +139,7 @@ Links do not 3× on first paint. They grow on leftover dest pages (crumb · next
 ## H. Sequence
 
 - [x] H0 This checklist + [`LEAN-TRIPLE-2015.md`](LEAN-TRIPLE-2015.md) is law
-- [x] H1 Cited leftover dest list for **2016 +32** and ** +13** dest-disjoint from taken slugs
+- [x] H1 Cited leftover dest list for **+32** and ** +13** dest-disjoint from taken slugs
 - [x] H2 Named implement pass — `scripts/impl_lean_triple_dests.py`
 - [x] H3 e2e empty never writes · leftover never writes star
 - [x] H4 Mock gate 0 on new dests

@@ -10,7 +10,7 @@
 **All-phase scan:** [`PHASE-SCAN.md`](PHASE-SCAN.md) — improvisation, shortfalls, inconsistencies, broken flows. Not ship law.  
 **Local:** http://127.0.0.1:8080 · **Public:** https://sourabhligade.github.io/internet-through-time/ (origin tree; local is ahead until **push**).
 
-Museum grade is a visitor who can enter any of the **26 live doors**, tell the year from the window, finish **one star verb**, and leave on a trail that stays that year. Empty, trap, and incomplete write nothing. Status is `Saved.` or `This browser blocked the save.` Leftover never stamps official n=1–10. It is **not** more dest folders, a shared Chrome skin, a modern lobby, leftover-3×, or restoring 2017–2019 / 2023–2025.
+Museum grade is a visitor who can enter any of the **25 live doors**, tell the year from the window, finish **one star verb**, and leave on a trail that stays that year. Empty, trap, and incomplete write nothing. Status is `Saved.` or `This browser blocked the save.` Leftover never stamps official n=1–10. It is **not** more dest folders, a shared Chrome skin, a modern lobby, leftover-3×, or restoring 2017–2019 / 2023–2025.
 
 Do not dest-farm. Do not unfreeze 1994–2006 dest HTML unless a dest-attribute fix is named. Do not invent period logos. Slice F starts only on the word **push**.
 
@@ -56,20 +56,15 @@ These stay wait-to-name. They are **not** museum-grade UI+UX.
 
 Slices A–E ran together as `all of it`. After this pass: related Playwright, `npm run check`, dest-true 12, `npm run build`. Push only when the user says **push**.
 
-### Slice A — Honesty writers (`honesty 2016 GO Reactions`) — done
+### Slice A — Honesty writers — done
 
-Close the last-commit review holes, then the same extras class on later years if still dual-writing.
+Slice A closed extras dual-write on dests that still exist: 2006 YouTube Watch / Twttr, 2009 Like, 2010 iPad order skip extras when the dest or button owns `[data-official-verb]`. Plot / Guess Doodle Start are year games (DO-NOT-APPLY), not dual-star extras.
 
 | # | Dest | Bug | Fix |
 |---|------|-----|-----|
-| A1 | `/years/2016/sites/pokemongo/index.html` | `bootPogo` reads `verbOwned` from `[data-pogo-catch]`. Official-verb is on Valor / Mystic / Instinct. Catch still `saveJSON`s `itt16-pogo` as a kit blob. | Skip extras save when the dest has `[data-official-verb]`. Complete = reqs + need + team verb. Align `e2e/2016-flows.spec.js` and `e2e/2016-trail-chain.spec.js`. |
-| A2 | `/years/2016/sites/facebook/reactions.html` | Like is `data-official-verb`. Extras still binds “Like-only never writes. Hold a reaction.” after dest-true `Saved.` | Do not bind that handler when `likeBtn` has `data-official-verb`. |
-| A3 | `e2e/2016-trail-chain.spec.js` | Complete still clicks Love, which now writes nothing. Trail Next never appears. | Same complete as `e2e/2016-flows.spec.js`: reqs + need + `[data-fb-like]`. |
 | A4 | `e2e/year-pack-io.js` | `trapThenOfficial` asserts `blob.real` only. Kit extras also set `real: true`. | Assert `blob.v === 1` and `blob.kind === "official"`. |
 
-Same extras class, scanned after A1–A3 (no dest-farm): 2006 YouTube Watch / Twttr, 2009 Like, 2010 iPad order already skip extras when the dest or button owns `[data-official-verb]`. Plot / Guess Doodle Start are year games (DO-NOT-APPLY), not dual-star extras.
-
-**Done when:** dest-true 436 still green. GO and Reactions warehouse complete paths write `{v:1, kind:official}`. Visitor sees one sentence: `Saved.`
+**Done when:** dest-true 12 still green. Visitor sees one sentence: `Saved.`
 
 ### Slice B — Dest in the year window (`dest in window`) — implemented; B1 first-boot abort closed
 
@@ -102,7 +97,7 @@ Visitor-facing copy. Keys stay in storage. They leave the glass.
 | Quota / private mode | `This browser blocked the save.` |
 | Empty / trap / incomplete | Hold sentence in red. Nothing stored. |
 
-2016 extras official dests (Stories, GO, Reactions, E2E, iPhone 7, Vine end, Spectacles, musical.ly, Win10 end) print `Saved.` Leftover extras writers in the same file (AirPods, Dyn) also print `Saved.` Keys stay in storage. Do not rewrite every leftover dest in other years in one pass. HTML official-verb hold is `#a00`; `Saved.` is `#060`. 2015 `OfficialStop` uses `.status.is-hold` / `.status.is-ok` the same way.
+Live official dests print `Saved.` Keys stay in storage. Do not rewrite every leftover dest in other years in one pass. HTML official-verb hold is `#a00`; `Saved.` is `#060`. 2015 `OfficialStop` uses `.status.is-hold` / `.status.is-ok` the same way.
 
 Clip stays: `.itt-pixel-failed`, `code[data-itt-clip]`. Leave `[failed-final]` in HTML. Wikipedia reconstruction line is exhibit copy; do not treat it as a JS exception.
 
@@ -124,7 +119,7 @@ Viewport **390×844**. One pass per chrome group, not 5,000 dests.
 | Vine | http://127.0.0.1:8080/years/2013/ |
 | Flat | http://127.0.0.1:8080/years/2014/ |
 | React | http://127.0.0.1:8080/app/index.html#/year/2015 |
-| Chrome habit | http://127.0.0.1:8080/years/2016/ and http://127.0.0.1:8080/years/2022/ |
+| Chrome habit | http://127.0.0.1:8080/years/2022/ |
 
 Pass: menubar inside 390, directory reachable, guided still six, cards still one card, no sideways scroll, Chrome-habit chips ~16px. Fail: a shared phone skin that repaints 1994 and 2022 the same way.
 
@@ -151,7 +146,7 @@ Museum-grade on the public URL is the **same tree** as local :8080.
 
 1. Slices A–C green on dest-true 12.  
 2. User says **push**.  
-3. `museum/1994-2020-lean` updates. GitHub Pages (legacy, root `/`) serves the 26 doors.  
+3. `museum/1994-2020-lean` updates. GitHub Pages (legacy, root `/`) serves the 25 doors.  
 4. Actions billing (#17) still will not run the workflow. Local `npm run ci` stays the gate.  
 5. Recheck https://sourabhligade.github.io/internet-through-time/ hub + one door per chrome group.
 
@@ -200,15 +195,9 @@ Stars to open (one per live year):
 | 2013 | Vine 6s | http://127.0.0.1:8080/years/2013/ · trail n=9 |
 | 2014 | WhatsApp Install | http://127.0.0.1:8080/years/2014/ · trail n=9 |
 | 2015 | Periscope Go LIVE | http://127.0.0.1:8080/app/index.html#/year/2015 |
-| 2016 | IG Stories | http://127.0.0.1:8080/years/2016/sites/instagram/stories.html |
 | 2020 | Zoom Leave | http://127.0.0.1:8080/years/2020/ |
 | 2021 | Ask App Not to Track | http://127.0.0.1:8080/years/2021/ |
 | 2022 | ChatGPT Send | http://127.0.0.1:8080/years/2022/ |
-
-2016 extras to recheck after slice A:
-
-- http://127.0.0.1:8080/years/2016/sites/pokemongo/index.html — empty Catch writes nothing; dest-true team complete writes official; Catch does not overwrite as kit blob.
-- http://127.0.0.1:8080/years/2016/sites/facebook/reactions.html — Like-only without reqs writes nothing; complete Like shows `Saved.` only.
 
 ---
 
@@ -222,7 +211,7 @@ Stars to open (one per live year):
 | `e2e/phase4-phone.spec.js` | after slice D |
 | `e2e/phase5-glass.spec.js` | after slice C |
 | Hub + one door per chrome group on :8080 | verb in the frame, year in the window |
-| Public URL | same 26 doors after **push** |
+| Public URL | same 25 doors after **push** |
 
 Full warehouse `npm test` is not the UX gate.
 

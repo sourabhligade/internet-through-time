@@ -224,20 +224,16 @@ html[data-itt-year="2014"]:not([data-official-key]) .itt-pop3x-flow[data-itt-des
 
 /* 2015–2017 Material */
 html[data-itt-year="2015"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
-html[data-itt-year="2016"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
 html[data-itt-year="2017"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has([data-lo-panel][data-itt-dest-true]),
 html[data-itt-year="2015"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]),
-html[data-itt-year="2016"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]),
 html[data-itt-year="2017"]:not([data-official-key]) body:not(.itt-start-page):not([data-itt-start]):has(.itt-pop3x-flow[data-itt-dest-true]) {
   background: #fafafa !important;
   color: #212121 !important;
   font-family: Roboto, Arial, sans-serif !important;
 }
 html[data-itt-year="2015"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true],
-html[data-itt-year="2016"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true],
 html[data-itt-year="2017"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true],
 html[data-itt-year="2015"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true],
-html[data-itt-year="2016"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true],
 html[data-itt-year="2017"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] {
   background: #fff !important;
   border: 0 !important;
@@ -247,10 +243,8 @@ html[data-itt-year="2017"]:not([data-official-key]) .itt-pop3x-flow[data-itt-des
   padding: 16px !important;
 }
 html[data-itt-year="2015"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true] button,
-html[data-itt-year="2016"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true] button,
 html[data-itt-year="2017"]:not([data-official-key]) [data-lo-panel][data-itt-dest-true] button,
 html[data-itt-year="2015"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] button,
-html[data-itt-year="2016"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] button,
 html[data-itt-year="2017"]:not([data-official-key]) .itt-pop3x-flow[data-itt-dest-true] button {
   background: #4285f4;
   border: 0;
@@ -338,5 +332,4 @@ body[bgcolor="#121211" i][text="#111111" i],
 body[bgcolor="#111" i][text="#111" i] {
   color: #f3f3f3;
 }
-
 

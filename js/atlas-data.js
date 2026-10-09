@@ -1,7 +1,7 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2007–2014 and 2020–2022 lean doors live. 2011 is live HTML. 2015 is the React door. 2016–2019 and 2023–2025 are absent. Do not invent rooms.
+ * 2007–2014 and 2020–2022 lean doors live. 2011 is live HTML. 2015 is the React door. 2017–2019 and 2023–2025 are absent. Do not invent rooms.
  */
 (function (global) {
   "use strict";

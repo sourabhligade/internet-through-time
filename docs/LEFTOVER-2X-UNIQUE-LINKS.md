@@ -70,7 +70,7 @@ Alphabetical dests-on-disk fill is **out**. ADD dests must be famous that year *
 | Board C leftover-2× harvest (implemented dests) | [`2x-harvest-c-1999.md`](2x-harvest-c-1999.md) … [`2x-harvest-c-2004.md`](2x-harvest-c-2004.md) | Cited dests **already on disk**. Use as leftover-2× unique dest **links**. |
 | ClickZ / Media Metrix | https://clickz.com/top-50-sites-of-december-2000/57100/ · Sep 1999 properties | 2000 Passport #5 · NBCi #12 · Blue Mountain #13 · Tripod #18 · iWon #20 |
 | Extra dest KEEP | [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md) | KEEP **166** dests with cites. Dest-disjoint leftover dest KEEP. |
-| Leftover dest KEEP lean-double | [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) | 2007/2010–2012/2014/2016//2021/2022 leftover dest KEEP dests on disk. |
+| Leftover dest KEEP lean-double | [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) | 2007/2010–2012/2014/2021/2022 leftover dest KEEP dests on disk. |
 | Cybercultural year essays | https://cybercultural.com/p/internet-2010/ · 2007 · 2012 | Year mass: iPhone 2007 · Instagram 2010 · Google+ · IG Android 2012 |
 | Web Design Museum year galleries | https://www.webdesignmuseum.org/gallery/year-1995 | Period exhibits. Failed-final stays honest. |
 | Wikipedia envelope (category sizes, not dest-farm quota) | https://en.wikipedia.org/wiki/Category:Internet_properties_by_year_of_establishment | 2007 **369** · 2010 **286** · **320** · **91** · 2021 **78** · 2022 **48** |
@@ -140,7 +140,6 @@ Leftover dest KEEP dests already have dest-true leftover I/O. This pass only **h
 | 2013 | extra dest KEEP 34 (first ADD) then leftover-3× unique dests as href targets | [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md) Bitcoin 2013 · Chromecast 24 Jul 2013 · DoorDash 2013 · Hosting.com Facebook #2 YouTube #3 Twitter #6 |
 | 2014 | leftover dest KEEP: `alibabaipo` `oculusfb` `inbox` `echo` `flappybird` `game2048` `ios8` · Hosting.com `facebook` `youtube` `wikipedia` `twitter` | Alibaba IPO 2014 · Flappy Bird 2014 · Echo Nov 2014 · Hosting.com June 2014 |
 | 2015 | extra dest KEEP 15 of 31: `androidpay` `applenews` `applepencil` `applewatch` `beats1` `dx12` `elcapitan` `ethereum` `fblive` `http2` `instantarticles` `ipadpro` + Hosting.com already in KEEP original | Apple Watch 24 Apr 2015 · AMP 7 Oct 2015 · Ethereum 2015 · [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md) |
-| 2016 | leftover dest KEEP 23 (douyin…letsencrypt) | IG Stories is star · Douyin 2016 · Houseparty Feb 2016 · Jio 5 Sep 2016 · Super Mario Run 15 Dec 2016 |
 | 2017 | leftover-20 unique dests not already in KEEP original leftover-2× unique dests: `botw` `cuphead` `gettingoverit` `hangoutschat` `hollowknight` `instagram17` `messengerday` + extra dest KEEP `cardano` `codww2` `destiny2` `galaxys8` … | 2017-UNIQUE-FLOWS.md (not on disk; 2017 is absent) · extra dest KEEP 39 |
 | | leftover dest KEEP 11 + leftover-3× unique dests as href targets (`reddit` `youtube` `wikipedia`) + Hosting.com `instagram` | GDPR is star · Google+ shutdown · leftover-3× unique dests stay **3** |
 | | extra dest KEEP 27 of 54: `apex` `airpods2` `android10` `applewatch5` … | Apex Legends 4 Feb · Android 10 3 Sep · extra dest KEEP 54 |
@@ -192,7 +191,6 @@ When leftover-2× unique dests now = 0, after = min(2 × unique dest hrefs in th
 | 2013 | 52 | 0 | 0 | **47** | 47 |
 | 2014 | 25 | 0 | 0 | **25** | 25 |
 | 2015 | 50 | 15 | 0 | **30** | 15 |
-| 2016 | 57 | 23 | 41 | **46** | 23 |
 | 2017 | 68 | 26 | 27 | **52** | 26 |
 | | 24 | 0 | 0 | **20** | 20 |
 | | 73 | 27 | 0 | **54** | 27 |
@@ -361,12 +359,6 @@ Then dests already on disk: `applepay` · `facebook` · `heartbleed` · `icebuck
 
 2015 is off hub. leftover dest leftover-2× unique dest catalog is empty. Do not restore `years/2015/`.
 
-### 2016 — after 46 · add 23 · star `itt16-ig-stories`
-
-KEEP original (23): `alphago` · `assistant` · `dyn` · `facebook` · `fblive` · `houseparty` · `instagram` · `iphone` · `jio` · `linkedinms` · `mastodon` · `moments` · `musically` · `netflix` · `pokemongo` · `reddit` · `slack` · `smario` · `snapchat` · `vine` · `whatsapp` · `windows10` · `youtube`
-
-ADD leftover dest KEEP: `douyin` · `airpods` · `pixel` · `nougat` · `allo` · `duo` · `googlehome` · `oculusrift` · `psvr` · `overwatch` · `doom2016` · `uncharted4` · `nomanssky` · `clashroyale` · `panamapapers` · `figma` · `thedao` · `ethereum` · `ios10` · `sierra` · `daydream` · `battlefield1` · `letsencrypt`
-
 ### 2017 — after 52 · add 26 · star `itt17-faceid`
 
 KEEP original (26): `bch` · `cloudbleed` · `coreml` · `creditfrz` · `echoshow` · `equifax` · `fortnite` · `homepodann` · `hqtrivia` · `ios11` · `iphone` · `iphone8` · `krack` · `musically` · `notpetya` · `pixel2` · `pixelbook` · `pubgnote` · `slack17` · `snapipo` · `switch` · `teams` · `twitter` · `vine` · `wannacry` · `watch3`
@@ -467,7 +459,7 @@ flowchart TD
  RAIL --> MISS["MISS remainder years unique dests less than 2x cap"]
 ```
 
-Live unique dests in leftover-2× rails (matrix): 1994 **88** · 1995 **98** · 1996 **94** · 1997 **62** · 1998 **46** · 1999 **86** · 2000 **92** · 2001 **51** · 2002 **38** · 2003 **36** · 2004 **160** · 2005 **105** · 2006 **116** · 2007 **33** · **124** · 2010 **29** · **38** · 2012 **32** · 2013 **47** · 2014 **25** · 2015 **29** · 2016 **42** · 2017 **49** · **20** · **5216** · 2021 **18** · 2022 **24**. Catalog dests require `index.html`.
+Live unique dests in leftover-2× rails (matrix): 1994 **88** · 1995 **98** · 1996 **94** · 1997 **62** · 1998 **46** · 1999 **86** · 2000 **92** · 2001 **51** · 2002 **38** · 2003 **36** · 2004 **160** · 2005 **105** · 2006 **116** · 2007 **33** · **124** · 2010 **29** · **38** · 2012 **32** · 2013 **47** · 2014 **25** · 2015 **29** · 2017 **49** · **20** · **5216** · 2021 **18** · 2022 **24**. Catalog dests require `index.html`.
 
 ### A. Leftover dest leftover-2× unique dest rail (hrefs)
 

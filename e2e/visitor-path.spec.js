@@ -55,16 +55,6 @@ test.describe("visitor path", () => {
     await expect(page.getByRole("link", { name: "Museum hub" })).toHaveAttribute("href", "../index.html");
   });
 
-  test("2016 starting point shows the guided six inside the year shell", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    await page.goto("/years/2016/");
-    await skipConnect(page);
-    const frame = page.frameLocator("#content");
-    await expect(frame.locator("#ott-guided-2016 ol > li")).toHaveCount(6);
-    await expect(frame.locator("[data-lo-panel]:visible")).toHaveCount(0);
-  });
-
   for (const year of Object.keys(REACT)) {
     test(`${year} react door keeps leftover off the default visit`, async ({ page }) => {
       await page.goto("/app/index.html#/year/" + year);

@@ -1,8 +1,8 @@
 # Year chrome — production plan
 
 **Date:** 2026-10-01
-**Status:** Implemented in the working tree on 2026-10-01. A recheck the same day closed three shortfalls: 2016 uses the dark Chrome-habit taskbar and tab (the blue taskbar rule is gone), 2006–2009 home addresses stay on `home.microsoft.com` after boot, and the React door shows that habit address. Shell choices below stay locked. Not ship law. Counts of 22 or 24 doors in this plan are that day's scope.
-**Law:** `js/year-card.json` · live hub · [`DISK-TRUTH.md`](DISK-TRUTH.md). Live hub is **25 doors** (1994–2015 and 2020–2022). **2015 is the React door.** **2016–2019 and 2023–2025 are absent.** This file does not add dest folders.
+**Status:** Implemented in the working tree on 2026-10-01. A recheck the same day closed three shortfalls: 2022 uses the dark Chrome-habit taskbar and tab (the blue taskbar rule is gone), 2006–2009 home addresses stay on `home.microsoft.com` after boot, and the React door shows that habit address. Shell choices below stay locked. Not ship law. Counts of 22 or 24 doors in this plan are that day's scope.
+**Law:** `js/year-card.json` · live hub · [`DISK-TRUTH.md`](DISK-TRUTH.md). Live hub is **25 doors** (1994–2015 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** This file does not add dest folders.
 
 The years and the save data are far enough along to grade. The shell that frames them is not. The HTML doors share one painter (`ui/year/shell.js`) and three toolbar builders, but the record in `ui/year/years.js` often names a browser the painter does not draw. The React door (2015) does not use that painter. Production grade is one chrome contract, two renderers, dest HTML left where it is.
 
@@ -35,11 +35,11 @@ HTML boot is classic scripts, not modules. React is a Vite bundle in `app/assets
 
 `chrome.js` `ieToolbar(spec)` always loads `assets/period/{spec.chrome}/chrome/btn-*.gif`. `chrome22Toolbar()` returns `""`. The Chrome habit bar is painted inline in `shell.js` when `toolbar === "chrome22"`: text arrows `← → ↻ ⌂`, no GIF, address from `spec.location`. Only 2022 sets that toolbar.
 
-`copy-bank.js` already uses one coach sentence on every era: Starting Point is the all-years list, Toolbar Home is this year's landing. That matches the legend in `chrome-ui.js` ("Lost? Starting Point = all years · toolbar Home = this year"). `css/chrome-habit.css` then sets `.os-win10 .shell-nav-legend` and `.browser-chrome-habit .shell-nav-legend` to `display: none !important`, so 2016 and 2022 never show it.
+`copy-bank.js` already uses one coach sentence on every era: Starting Point is the all-years list, Toolbar Home is this year's landing. That matches the legend in `chrome-ui.js` ("Lost? Starting Point = all years · toolbar Home = this year"). `css/chrome-habit.css` then sets `.os-win10 .shell-nav-legend` and `.browser-chrome-habit .shell-nav-legend` to `display: none !important`, so 2022 never shows it.
 
-Phone, as of this tree, is not the 2026-09-29 map. `docs/UI-FIX-MAP.md` is stale on this point. At `max-width: 640px`, both `css/win95-netscape.css` and `css/netscape-chrome.css` set `.dirbar { display: flex }`. 1994's desktop gutter stays `padding-left: 92px` above 640px (`netscape-chrome.css` line 208) and becomes `8px` under 640px. `.os-win10 .dirbar { display: flex }` in `chrome-habit.css` is unconditional, so 2016 and 2022 keep the directory at every width.
+Phone, as of this tree, is not the 2026-09-29 map. `docs/UI-FIX-MAP.md` is stale on this point. At `max-width: 640px`, both `css/win95-netscape.css` and `css/netscape-chrome.css` set `.dirbar { display: flex }`. 1994's desktop gutter stays `padding-left: 92px` above 640px (`netscape-chrome.css` line 208) and becomes `8px` under 640px. `.os-win10 .dirbar { display: flex }` in `chrome-habit.css` is unconditional, so 2022 keeps the directory at every width.
 
-Toolbar GIF folders that exist: 1994–2002, 2004, 2005, 2006, 2007 (10 buttons each). `btn-back.gif` is byte-identical from 2004 through 2007. There is no distinct IE7, IE8, IE9, or Chrome pixel pack. 2003, 2008, 2010, 2012, 2013, 2014, 2016, and 2022 have no `chrome/` button folder. 2009's `chrome/` folder is two logos, not a toolbar.
+Toolbar GIF folders that exist: 1994–2002, 2004, 2005, 2006, 2007 (10 buttons each). `btn-back.gif` is byte-identical from 2004 through 2007. There is no distinct IE7, IE8, IE9, or Chrome pixel pack. 2003, 2008, 2010, 2012, 2013, 2014, and 2022 have no `chrome/` button folder. 2009's `chrome/` folder is two logos, not a toolbar.
 
 CSS that actually changes the frame:
 
@@ -78,12 +78,11 @@ Mass desktop is the machine a typical person had at the start of that year. The 
 | 2012 | Win7, IE9. Chrome passes IE on some counters late in the year, not in January | `os-win7 browser-ie9`, `chrome: "2007"`, location `home.microsoft.com/.../web2012/` | Win7 frame, IE6 GIFs, no `browser-ie9` rules | Same as 2010, label says IE9 | Same text-button treatment scoped to `.browser-ie9`. Leave the January shell on IE |
 | 2013 | Win7 still the mass PC. Chrome is the habit browser on many global stats. Win8 is not the mass desktop | Label "IE9 desktop residual", class `browser-ie9`, `chrome: "2007"` | Same Win7 + IE6 GIFs | Label admits "residual". Painter does not show IE9 | Same `.browser-ie9` text buttons. Do not flip the shell to Chrome in this pass |
 | 2014 | Win7 and 8.1. IE11 is Microsoft's browser on 8.1. Chrome is the mass desktop browser by late year | Label "Win7 · IE9", location `home.microsoft.com/.../web2014/`, `chrome: "2007"`, `leanBoot` | Same | IE9 is an exhibit frame, not late-2014 mass | Locked: keep IE9 on Win7, apply the text-button skin, keep `home.microsoft.com` |
-| 2015 | Win10 from 29 July. Edge ships. Chrome is the habit browser | React door, star Periscope. No `years.js` row. No `years/2015/` tree | Live: `door os-win10 browser-chrome-habit`. Hall lists 2015 only. `OfficialStop` says `Saved.` Hold is red `#a00`. | Chrome-habit glass on disk | Locked: stay the 2016/2022 Chrome-habit contract inside React. Do not build `years/2015/` |
-| 2016 | Win10, Chrome habit. Edge exists | `bodyClass` `os-win10 browser-chrome-habit`, window title "Chrome habit", but `toolbar: "ie"`, `family: "ie"`, `chrome: "2007"`, location `home.microsoft.com/.../web2016/` | Win10 skin from `chrome-habit.css`, then an IE GIF toolbar from the 2007 folder, Microsoft address, legend hidden | Title and body say Chrome. Buttons and address say IE6-on-Microsoft | Set `toolbar: "chrome22"`, `family: "chrome"`, location `https://www.google.com/web2016/` on the same museum-host pattern as 2022. Stop loading IE GIFs. Show the legend |
+| 2015 | Win10 from 29 July. Edge ships. Chrome is the habit browser | React door, star Periscope. No `years.js` row. No `years/2015/` tree | Live: `door os-win10 browser-chrome-habit`. Hall lists 2015 only. `OfficialStop` says `Saved.` Hold is red `#a00`. | Chrome-habit glass on disk | Locked: stay the 2022 Chrome-habit contract inside React. Do not build `years/2015/` |
 | 2017 | Win10 + Chrome habit | React, star Face ID. No HTML tree | Same React flaws as 2015 | No period shell | Same Chrome-habit frame as 2015, one React component |
 | 2022 | Win10 still mass, Win11 exists, Chrome | `os-win10 browser-chrome-habit`, `toolbar: "chrome22"`, location `https://www.google.com/web2022/`. `chrome` field is still `"2007"` | `shell.js` ignores GIFs for `chrome22` and paints the text omnibox. Legend hidden. `chrome22Toolbar()` in `chrome.js` is an empty stub | Closest year. Asset field is a lie. Legend is gone. Painter is split across two files | Locked: stay Win10. Move the omnibox markup from `shell.js` into `chrome.js` `chrome22Toolbar`. Set `assetYear` to null. Un-hide the legend |
 
-2016–2019 and 2023–2025 are absent. They do not get a hub card or a sentence on the React hall. 2011, 2020, 2021, and 2022 are live HTML doors. 2011 is Win7 + IE 8. The 2017 row above is the 2026-10-01 plan, not a live door.
+2017–2019 and 2023–2025 are absent. They do not get a hub card or a sentence on the React hall. 2011, 2020, 2021, and 2022 are live HTML doors. 2011 is Win7 + IE 8. The 2017 row above is the 2026-10-01 plan, not a live door.
 
 ## One chrome record, two renderers
 
@@ -91,10 +90,10 @@ Recommended end state: the year card is the only list of open years, and each op
 
 ```js
 {
-  "year": "2016",
+  "year": "2022",
   "kind": "html",
-  "href": "years/2016/",
-  "star": "itt16-ig-stories",
+  "href": "years/2022/",
+  "star": "itt22-chatgpt",
   "leanBoot": true,
   "hashToHtml": true,
   "chrome": {
@@ -102,14 +101,14 @@ Recommended end state: the year card is the only list of open years, and each op
     "browser": "chrome-habit",
     "toolbar": "chrome22",
     "assetYear": null,
-    "location": "https://www.google.com/web2016/",
+    "location": "https://www.google.com/web2022/",
     "maximized": true,
     "hasTaskbar": true
   }
 }
 ```
 
-`bodyClass` becomes a function of that object: `year-YYYY os-{os} browser-{browser}`. `yearLabel` becomes a function of the same object plus a short room clause already in the label ("iPhone Safari is a room"). Do not keep a third hand-written class string that can drift, which is what happened to 2000, 2008, and 2016.
+`bodyClass` becomes a function of that object: `year-YYYY os-{os} browser-{browser}`. `yearLabel` becomes a function of the same object plus a short room clause already in the label ("iPhone Safari is a room"). Do not keep a third hand-written class string that can drift, which is what happened to 2000 and 2008.
 
 `ui/year/years.js` keeps the per-year directory, thesis, and about HTML. Those are content. Chrome fields are read from `js/year-card.json` (the browser copy `js/year-card.js` already loads on the hub and the atlas). `shell.js` paint signature stays `paint(year)`.
 
@@ -125,11 +124,11 @@ React does not import the classic `ITT` global. It already imports the year card
 
 `App.jsx` `Hall` lede becomes the two React years and a link back to `../index.html`. It does not interpolate `cardList("absent")` or `cardList("boarded")`.
 
-`hashToHtml` years (2014, 2016, 2022) keep bouncing `#/year/YYYY` to `/years/YYYY/`. They do not grow a second React paint path.
+`hashToHtml` years (2014, 2022) keep bouncing `#/year/YYYY` to `/years/YYYY/`. They do not grow a second React paint path.
 
 ### Why not the other two shapes
 
-Keeping two shells and only patching strings fixes 2016's address and the React key leak, then the next mismatch lands in `years.js` again. That can be PR 2 of this plan. It is not the end state.
+Keeping two shells and only patching strings fixes the React key leak, then the next mismatch lands in `years.js` again. That can be PR 2 of this plan. It is not the end state.
 
 Rewriting every year and every dest as React components fails the constraints that already hold: static hosting, frozen forests (`assert_mutable`), thousands of dest files, `document.write` boot, and no backend. Dest HTML stays under `years/YYYY/sites/`. A Vite conversion of the static shell is a later program, after this chrome contract is true. `docs/ARCHITECTURE.md` already says year differences live in config and content, shared behavior lives once.
 
@@ -169,15 +168,15 @@ Each PR is mergeable on its own. None of them wipe a year or add a dest.
 
 2. **Make the painter read the card.** `shell.js` overlays `chrome` from the card onto the year spec before building the toolbar. Output must match PR 1's parity check, so this PR is a no-visual-change refactor. Files: `ui/year/shell.js`, `ui/year/years.js`. Depends on PR 1.
 
-3. **Fix the data lies that do not need new art.** 2000 class alias `browser-ie55`. 2005 and 2006 `assetYear` to their own folders. 2016 `toolbar: "chrome22"`, `family: "chrome"`, location `https://www.google.com/web2016/`. 2022 `assetYear: null`. Move the omnibox markup into `chrome.js` `chrome22Toolbar`. Files: `js/year-card.json`, `ui/year/years.js`, `ui/year/chrome.js`, `ui/year/shell.js`. Depends on PR 2.
+3. **Fix the data lies that do not need new art.** 2000 class alias `browser-ie55`. 2005 and 2006 `assetYear` to their own folders. 2022 `assetYear: null`. Move the omnibox markup into `chrome.js` `chrome22Toolbar`. Files: `js/year-card.json`, `ui/year/years.js`, `ui/year/chrome.js`, `ui/year/shell.js`. Depends on PR 2.
 
-4. **Win7 and IE7 skins from CSS already in the tree.** Text labels on `.browser-ie8` and `.browser-ie9`. A title-bar delta for `.browser-ie7` that does not change `.browser-ie6`. Files: `css/ie5-overrides.css`. Depends on PR 3 so 2016 is no longer `toolbar: "ie"` under a Win10 body.
+4. **Win7 and IE7 skins from CSS already in the tree.** Text labels on `.browser-ie8` and `.browser-ie9`. A title-bar delta for `.browser-ie7` that does not change `.browser-ie6`. Files: `css/ie5-overrides.css`. Depends on PR 3.
 
 5. **Legend and phone contract.** Remove the legend `display: none` for Win10 and Chrome habit. Keep the 640px directory wrap. Files: `css/chrome-habit.css`, and the 640px blocks only if a year still hides `.dirbar`. Depends on PR 3.
 
 6. **React doors wear the same contract.** Hall copy, `YearRail` class, `OfficialStop` sentences, read `chrome` from the card. `cd react && npm run build`. Files: `react/src/App.jsx`, `react/src/YearRail.jsx`, `react/src/OfficialStop.jsx`, `react/src/styles.css`, `app/index.html`, `app/assets/*`. Depends on PR 1. Can land in parallel with PR 3–5.
 
-7. **Lock it.** Extend `e2e/shell-chrome.spec.js`, `e2e/chrome-habit-shell.spec.js`, and `e2e/hub-years.spec.js`: 24 hub cards, 2016 address is `google.com/web2016`, 2022 toolbar is not an IE GIF, React hall text has no "absent", a finished React stop's visible status does not contain `itt17-` or `itt15-`. Depends on PR 3 and PR 6.
+7. **Lock it.** Extend `e2e/shell-chrome.spec.js`, `e2e/chrome-habit-shell.spec.js`, and `e2e/hub-years.spec.js`: 25 hub cards, 2022 toolbar is not an IE GIF, React hall text has no "absent", a finished React stop's visible status does not contain `itt17-` or `itt15-`. Depends on PR 3 and PR 6.
 
 ## Key decisions
 
@@ -185,7 +184,7 @@ Each PR is mergeable on its own. None of them wipe a year or add a dest.
 2. **Two renderers stay.** HTML years keep `ui/year/shell.js`. React years keep their trail components and only borrow the chrome classes. Dest HTML is not ported.
 3. **No new brand pixels.** Distinct IE7/8/9/Chrome button art does not exist in `assets/period/`. Later Microsoft years use CSS on labels the toolbar already renders. Chrome habit uses the text omnibox 2022 already uses.
 4. **January shell, star in a room.** iPhone, Chrome-the-product, App Store, Like, Vine, WhatsApp, Periscope, Face ID, and ChatGPT do not replace the desktop of that year.
-5. **2016 joins 2022's toolbar.** The body class already says Chrome habit. The IE toolbar is the bug.
+5. **2022 is the Chrome-habit HTML door.** the wiped year is gone.
 6. **Hub visual law is unchanged.** Year number, one gray border.
 7. **Save contract is unchanged.** Two writers, same keys, visitor copy without the key.
 

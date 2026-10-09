@@ -1,12 +1,16 @@
 // @ts-check
-/** Famous arcade extras — two OSS-class games per year 1994–2009. */
+/** Famous arcade extras — two OSS-class games per live HTML year that still has famous.html. */
+const fs = require("fs");
+const path = require("path");
 const { test, expect } = require("@playwright/test");
 
-
+const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-for (let y = 1994; y <= 2017; y++) {
- if (y === 2007 || y === 2009 || y === 2013 || y === 2015 || y === 2017 || (y > 2010 && y < 2012)) continue;
-  YEARS.push(String(y));
+for (let y = 1994; y <= 2014; y++) {
+  const s = String(y);
+  if (fs.existsSync(path.join(ROOT, "years", s, "sites", "playable", "famous.html"))) {
+    YEARS.push(s);
+  }
 }
 
 const ENGINES = {
@@ -30,9 +34,6 @@ const ENGINES = {
   2012: ["tetris", "snake"],
   2013: ["snake", "breakout"],
   2014: ["mines", "snake"],
-  2015: ["pong", "snake"],
-  2016: ["memory", "breakout"],
-  2017: ["snake", "tetris"],
 };
 
 function prefix(year) {

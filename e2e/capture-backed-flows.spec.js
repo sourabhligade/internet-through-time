@@ -11,7 +11,6 @@ function skipIfWiped(year) {
   test.skip(!fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')), year + ' wiped');
 }
 
-
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
 }
@@ -225,25 +224,6 @@ test.describe("capture-backed dests — chips + REAL machines", () => {
     await finishOfficial(page);
     await page.locator("[data-ipad-order]").click();
     await expect.poll(() => getKey(page, "itt10-ipad")).toMatch(/16GB|Wi-Fi|real/i);
-  });
-
-  test("2016 Reactions Love never writes · dest-true Like is official · no Care", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    await page.goto("/years/2016/sites/facebook/reactions.html");
-    await chipOk(page, { allowHidden: true });
-    await expect(page.locator('[data-fb-react="care"]')).toHaveCount(0);
-    await clearKeys(page, ["itt16-fb-react"]);
-    await page.reload();
-    await verbReady(page);
-    expect(await getKey(page, "itt16-fb-react")).toBeFalsy();
-    await page.locator('[data-fb-react="love"]').click();
-    expect(await getKey(page, "itt16-fb-react")).toBeFalsy();
-    await finishOfficial(page);
-    await expect.poll(() => getKey(page, "itt16-fb-react"), { timeout: 8000 }).toBeTruthy();
-    const blob = JSON.parse((await getKey(page, "itt16-fb-react")) || "{}");
-    expect(blob.v).toBe(1);
-    expect(blob.kind).toBe("official");
   });
 
 });

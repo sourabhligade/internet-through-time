@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * All-years signature REAL gates (1994–2016).
+ * All-years signature REAL gates (live doors 1994–2015 and 2020–2022).
  * One thesis interaction per year that MUST mutate year-prefixed localStorage
  * (or multi-step DOM state). Page-load-only is a failure.
  *
@@ -308,21 +308,6 @@ test.describe('all-years signature REAL · late web', () => {
     await frame.locator('[data-ig-caption]').fill('museum 2010 square');
     await frame.locator('[data-ig-share]').click();
     await requireKey(page, 'itt10-ig-posts');
-  });
-
-  test('2017 Face ID real write', async ({ page }) => {
-    test.skip(!yearOnDisk('2017'), '2017 not on disk');
-    await enterYear(page, '2017');
-    await clearPrefix(page, 'itt17');
-    await goImmersion(page, '2017', 'sites/iphone/x.html');
-    const frame = contentFrame(page);
-    await expect(frame.locator('[data-faceid-unlock]')).toBeVisible({ timeout: 15000 });
-    await frame.locator('[data-faceid-unlock]').click();
-    await page.waitForTimeout(120);
-    expect(await page.evaluate(() => localStorage.getItem('itt17-faceid'))).toBeFalsy();
-    await frame.locator('[data-faceid-look]').click();
-    await frame.locator('[data-faceid-unlock]').click();
-    await requireKey(page, 'itt17-faceid', /multiStep|2017-11-03|noHomeButton/i);
   });
 
 });

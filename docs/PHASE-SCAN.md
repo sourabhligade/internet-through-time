@@ -23,7 +23,7 @@ Do not dest-farm from this file. Do not restore 2017–2019 / 2023–2025. Do no
 |--------|---------|
 | **Done** | Phase lock exists and the named dests / chrome groups pass. |
 | **Broken / visitor-visible** | A visitor can see it on :8080. Highest priority. |
-| **Shortfall** | The lock samples a slice. Museum grade on 26 doors is larger than the lock. |
+| **Shortfall** | The lock samples a slice. Museum grade on 25 doors is larger than the lock. |
 | **Inconsistency** | Two docs, or a doc and disk, disagree. |
 | **Improvisation** | Closable on dests already on disk. Starts when that bucket is named. |
 | **Named wait** | Pack B/C as new dests, `2x`, famous-double, restore, **commit**, **push**. |
@@ -54,7 +54,7 @@ flowchart TD
 | Item | Value |
 |------|--------|
 | Branch | `museum/1994-2020-lean` |
-| HEAD | `2b82043bd` Lock museum-grade UX phases 1–5 and align 2016 honesty warehouse |
+| HEAD | `2b82043bd` Lock museum-grade UX phases 1–5 |
 | Origin | `81c652c65` · local **6** ahead |
 | Dirty | B1 `js/browser/create.js`, UX phase 2–4 specs, OfficialStop hold colors, React rebuild `app/assets/index-DL5sRlvD.js` + `index-CjdwpCwF.css`, this scan’s docs |
 | dest-true 12 | **436** |
@@ -73,10 +73,10 @@ Locks: `e2e/ux-phase1-honesty.spec.js` … `e2e/ux-phase5-2015.spec.js`. Helper:
 
 | Phase | Claim | What the lock actually walks | Shortfall |
 |------:|-------|------------------------------|-----------|
-| 1 Honesty | Implemented | Direct dest: GO, Reactions, Stories, E2E. Trap / extras skip / dest-true official envelope | Other years and stars unproven here. Path is dest-as-tab |
-| 2 Dest in window | Implemented. B1 first-boot abort closed | Hub → 2016 / 1998 → Starting Point chip → dest in `#content`. Gold leftover in Lucky iframe writes leftover. Direct Lucky HTTP 200. First `pages/home.html` is not `ERR_ABORTED` | Other 24 doors untested here. Home/reload bounce documented, not asserted |
-| 3 Receipt | Implemented | Same four 2016 dests + Periscope `Saved.` Hold **color** `#a00` on Stories empty/trap and Periscope incomplete | GO / Reactions / E2E hold color unasserted. Receipt inside iframe unproven |
-| 4 Phone 390 | Implemented | Chrome **groups**: 1994, 1998, 2004, 2008, 2009, 2011, 2013, 2014, 2016, 2022 + 2015 React. HABIT years skip menubar | Full 26-door lock remains `e2e/phase4-phone.spec.js`. UX file omits 1995–97, 1999–2003, 2005–07, 2010, 2012, 2020, 2021 |
+| 1 Honesty | Implemented | Direct dest: 1998 Lucky and remaining live stars. Trap / extras skip / dest-true official envelope. | Other years and stars unproven here. Path is dest-as-tab |
+| 2 Dest in window | Implemented. B1 first-boot abort closed | Hub → 1998 / 2022 → Starting Point chip → dest in `#content`. Gold leftover in Lucky iframe writes leftover. Direct Lucky HTTP 200. First `pages/home.html` is not `ERR_ABORTED` | Other doors untested here. Home/reload bounce documented, not asserted |
+| 3 Receipt | Implemented | Lucky + Periscope `Saved.` Hold **color** `#a00` on empty/trap and Periscope incomplete | Receipt inside iframe unproven on other stars |
+| 4 Phone 390 | Implemented | Chrome **groups**: 1994, 1998, 2004, 2008, 2009, 2011, 2013, 2014, 2022 + 2015 React. HABIT years skip menubar | Full 25-door lock remains `e2e/phase4-phone.spec.js`. UX file omits 1995–97, 1999–2003, 2005–07, 2010, 2012, 2020, 2021 |
 | 5 2015 React | Implemented | Hub card, no `years/2015`, header is the stop, no visible `itt15-` leaf, Periscope envelope, `ALSO_2015=[]`, `#/year/2017` not a door | Uses `?stop=` so it never hits the dead `clickRailKey` helper |
 
 **B1 closed (uncommitted):** `seedHistory` leaves relative `pages/home.html` loading. `hideOverlay()` already seeds. First-boot does not seed twice. `setIframeSrc` bounce stays for same-path **absolute** Home/reload. Sandbox stays `allow-same-origin allow-scripts`.
@@ -122,9 +122,9 @@ Map: [`PROD-USER-DATA-SRP.md`](PROD-USER-DATA-SRP.md).
 | Phase | Claim | Disk |
 |------:|-------|------|
 | 1 Honest saves | Implemented 2026-10-07 | `ITT.User.{save,read,finished,store,take}` on `js/lib/util.js`. Envelope `{v:1, year, key, kind, real:true, ts}` |
-| 2 Lean loads lean | Implemented | leanBoot 2007–2014, 2016, 2020–2022. EXTRA leftover-official |
+| 2 Lean loads lean | Implemented | leanBoot 2007–2014 and 2020–2022. EXTRA leftover-official |
 | 3 Drop leftover-3× rails | Mostly | Unique catalogs empty (`e2e/leftover-3x-unique.matrix.json` is `[]`). `year-true-leftover.js` held for CORE 1994–2006 |
-| 4 Visitor CI / docs | Implemented | dest-true 12 · 436. Hub 26 doors. React 2015 only |
+| 4 Visitor CI / docs | Implemented | dest-true 12. Hub 25 doors. React 2015 only |
 | 5 Toys / games / React on User | Structurally done, kind honesty incomplete | Immersion `localStorage.setItem` is 0. Writers go through `User.store` / `User.save` |
 
 **Writer holes that remain:**
@@ -156,14 +156,14 @@ Map: [`WORKING-FLOW-PHASES.md`](WORKING-FLOW-PHASES.md). Registers: `e2e/registe
 | 2002–2005 | frozen four | 2,319 | Done. Stumble / Photobucket / thefacebook / YouTube upload. 2004 trail n=8 |
 | 2006–2009 | 2006 frozen, 2007–2009 lean | 794 | Done. Twttr / Like extras skip when verb owns. Plot Start writes nothing |
 | 2010–2013 | lean | 182 | Done. iPad extras skip. Guess Doodle Start writes nothing. 2013 trail n=9 |
-| 2014–2017 | 2014, 2015 React, 2016. 2017 absent | 115 HTML + 10 React | Done. 2017 stays 0 |
+| 2014–2017 | 2014, 2015 React. 2017 absent | 115 HTML + 10 React | Done. 2017 stays 0 |
 | 2018–2021 | 2020, 2021. 2018–2019 absent | 40 | Done. 2018–2019 stay 0 |
 | 2022–2025 | 2022. 2023–2025 absent | 29 | Done. 2023–2025 stay 0 |
 
 **Doc vs disk inside that file:**
 
 - Year table dest folders sum to **4,935**. Total row still prints **4,938**.
-- Intro “proved second stores” table still lists 2016 Stories / GO / Reactions as toy. Live `verbOwned` skips those extras (`js/immersion/year-2016-extras.js`).
+- Intro “proved second stores” table is stale. wiped-year extras are gone with the year tree.
 - Same table lists 2009 Like and 2006 Twttr as toy. Live buttons carry `data-official-verb` (`years/2009/sites/facebook/index.html`, `years/2006/sites/twitter/index.html`).
 - 2010–2013 **header** still says Facebook 1B is the missing checklist line. Same file’s phase 1 says `itt12-facebook` is ticked and heading is Official flows (10).
 - 2014–2017 phase 2 still says Stories / GO / Reactions “keep `official:true`” (extras). Live extras skip; official-verb is the writer.
@@ -218,7 +218,7 @@ http://127.0.0.1:8080/app/index.html#/year/2015
 
 First-boot relative `pages/home.html` is no longer aborted (B1, uncommitted). After dest nav the iframe src is absolute under `/years/…`. Home and Reload still halt → `about:blank` → absolute HOME. Looks like a broken year door.
 
-http://127.0.0.1:8080/years/2016/ → Stories chip → Home  
+http://127.0.0.1:8080/years/2022/ → ChatGPT chip → Home  
 http://127.0.0.1:8080/years/1998/ → Lucky chip → Home
 
 ### V3 — Gold leftover first paint on eight stars
@@ -238,7 +238,7 @@ http://127.0.0.1:8080/years/2001/sites/wikipedia/edit.html
 
 ### V5 — Receipt dialects print keys
 
-Off the named 2016 / 2015 set:
+Off the named 2015 / Lucky set:
 
 | Copy | Where |
 |------|--------|
@@ -248,19 +248,16 @@ Off the named 2016 / 2015 set:
 
 Named dests print `Saved.` OfficialStop hold is red `#a00`, ok is green `#060`.
 
-http://127.0.0.1:8080/years/2016/sites/instagram/stories.html  
+http://127.0.0.1:8080/years/1998/sites/google/lucky.html  
 http://127.0.0.1:8080/app/index.html#/year/2015?stop=itt15-periscope
 
 ### V6 — Catch / Love extras stay silent
 
-When `verbOwned`, extras **return** with no hold sentence. Phase 1 locks “writes nothing.” Phase 3 wants a red hold. Visitor sees no copy on Catch / Love.
+When `verbOwned`, extras **return** with no hold sentence. Phase 1 locks “writes nothing.” Phase 3 wants a red hold.
 
-http://127.0.0.1:8080/years/2016/sites/pokemongo/index.html  
-http://127.0.0.1:8080/years/2016/sites/facebook/reactions.html
+### V7 — Dual status nodes
 
-### V7 — Dual status nodes on 2016 named dests
-
-Dest HTML has extras hooks (`data-ig-story-status`, `data-pogo-status`, `data-fb-react-status`, `data-wa-e2e-status`). `official-verb.js` `say()` **creates** `[data-official-status]` on first refuse/save. `e2e/ux-phase-io.js` `statusText` unions them and prefers `Saved.` / blocked.
+`official-verb.js` `say()` **creates** `[data-official-status]` on first refuse/save. `e2e/ux-phase-io.js` `statusText` unions extras hooks and prefers `Saved.` / blocked.
 
 ### V8 — Public tree ≠ local
 
@@ -268,15 +265,15 @@ https://sourabhligade.github.io/internet-through-time/ is origin `81c652c65`. Sl
 
 ---
 
-## Shortfalls (locks vs 26-door grade)
+## Shortfalls (locks vs 25-door grade)
 
 | ID | Gap | Detail |
 |----|-----|--------|
-| S1 | Honesty / receipt sample | Four 2016 dests + Periscope. Other stars live on dest-true 12, not on UX 1 / 3 |
+| S1 | Honesty / receipt sample | Lucky + Periscope. Other stars live on dest-true 12, not on UX 1 / 3 |
 | S2 | Honesty / receipt path | Direct dest URLs (`itt-dest-top`). Envelope inside `#content` is unproven except phase 2 dest-open |
 | S3 | Hold color sample | Stories empty/trap + Periscope incomplete only |
-| S4 | Phone sample | UX 4 = chrome groups. UI 4 = 26 doors |
-| S5 | HABIT menubar | 2016 / 2022 skip `menusFit` on purpose. Full lock still covers 2020 / 2021 chips |
+| S4 | Phone sample | UX 4 = chrome groups. UI 4 = 25 doors |
+| S5 | HABIT menubar | 2022 skips `menusFit` on purpose. Full lock still covers 2020 / 2021 chips |
 | S6 | `store` vs `save` | React `OfficialStop` uses `store`. Envelope still `{kind:official}` via `official:true` |
 | S7 | UI-6 / UI-7 / UI-9 | Overclaim vs leftover extras, gold-lx, Wikipedia line, checklist opens |
 | S8 | WF census | 4,938 vs 4,935 dest folders |
@@ -301,7 +298,7 @@ Trail n **8 / 9 / 9** (2004 / 2013 / 2014) is disk law. leftover-3× unique cata
 | 2010 iPad | Extras skip when Place order is the verb | Dual keys `ipad` + `ipad-order` remain if extras run |
 | Facebook 1B | WF 2010–2013 header: missing checklist line | Same file phase 1: ticked, heading 10 |
 | YEAR-CHROME-PLAN | OfficialStop `Saved · key`, 22-door language | Live OfficialStop `Saved.`, hub 26 |
-| Phase 7 same tree | UI.md: public serves 26 doors | Public = origin; local 6 ahead + dirty |
+| Phase 7 same tree | UI.md: public serves 25 doors | Public = origin; local 6 ahead + dirty |
 
 ---
 
@@ -312,9 +309,9 @@ Closable on dests **already on disk**. Starts when that name is used. No new des
 | Name | Work | Files | State |
 |------|------|--------|-------|
 | **helper** | Retarget `clickRailKey` to `?stop=` / stop name. Chrome-habit uses the same path as UX 5 | `e2e/helpers.js`, `e2e/chrome-habit-shell.spec.js` | Implemented |
-| **iframe-receipt** | One honesty / receipt case inside `#content` after 2016 → Stories | `e2e/ux-phase3-receipt.spec.js` | Implemented |
-| **hold-color** | Assert `#a00` on GO / Reactions / E2E empty + trap | `e2e/ux-phase3-receipt.spec.js` | Implemented |
-| **status-node** | Bake one `[data-official-status]` on the four 2016 named dests (dest-attribute) | Stories / GO / Reactions / E2E HTML | Implemented |
+| **iframe-receipt** | One honesty / receipt case inside `#content` after 1998 → Lucky | `e2e/ux-phase3-receipt.spec.js` | Implemented |
+| **hold-color** | Assert `#a00` on empty + trap | `e2e/ux-phase3-receipt.spec.js` | Implemented |
+| **status-node** | Bake one `[data-official-status]` on named dests (dest-attribute) | Lucky / Periscope | Implemented |
 | **kit-receipt** | `bootChecks` prints `Saved.` and honors save failure | `js/immersion/year-extras-kit.js` | Implemented |
 | **kind-pass** | Pass `kind` through kit `bootChecks` / 5× leftover `store` | year-extras-kit + year-5x-pack | Implemented |
 | **gold-lx** | CSS-only 3em gap so the period verb stays the first action. Do not restyle frozen dest bodies | `css/itt-leftover-fold.css` | Implemented |
@@ -347,7 +344,7 @@ There is **no UX phase 6**. Museum-grade UX 1–5 are the set.
 |------|------|
 | Trail n | 2004 = **8**, 2013 = **9**, 2014 = **9**. Official length 256/256 under disk law |
 | leftover-3× unique | Catalog `[]`. Warehouse leftover-3× specs assert the config files are **absent** |
-| Absent years | 2017–2019, 2023–2025: no tree, no hub card, no React door |
+| Absent years | 2017–2019 and 2023–2025: no tree, no hub card, no React door |
 | Image-readme | 2011 and 2015 `assets/period/YYYY/` readme only. Do not draw logos |
 | 2000 n=11–40 | On trail, leftover, checklist open on purpose |
 | Frozen HTML | 1994–2006 dest HTML. Dest-attribute fixes only when named |
@@ -361,11 +358,11 @@ Visitor walk after any named bucket. Tick only after the URL does what the line 
 
 ```mermaid
 flowchart TD
-  hub["Hub /"] --> y16["2016 door"]
+  hub["Hub /"] --> y22["2022 door"]
   hub --> y98["1998 door"]
   hub --> y15["2015 React"]
-  y16 --> stories["Stories in iframe"]
-  stories --> home["Home bounce"]
+  y22 --> gpt["ChatGPT in iframe"]
+  gpt --> home["Home bounce"]
   y98 --> lucky["Lucky in iframe"]
   lucky --> gold["Gold leftover panel"]
   y15 --> peri["Periscope Saved."]
@@ -373,17 +370,14 @@ flowchart TD
 ```
 
 1. http://127.0.0.1:8080/
-2. http://127.0.0.1:8080/years/2016/ — Starting Point, then Stories chip, then Home
-3. http://127.0.0.1:8080/years/2016/sites/instagram/stories.html — empty Add red; real Add `Saved.`
-4. http://127.0.0.1:8080/years/2016/sites/pokemongo/index.html — Catch silent when verb owns; team + honesty `Saved.`
-5. http://127.0.0.1:8080/years/2016/sites/facebook/reactions.html — Love silent; Like after ticks `Saved.`
-6. http://127.0.0.1:8080/years/1998/ — Lucky chip in the window
-7. http://127.0.0.1:8080/years/1998/sites/google/lucky.html — gold leftover first paint, dest-as-tab
-8. http://127.0.0.1:8080/years/2001/sites/wikipedia/edit.html — UseMod reconstruction line
-9. http://127.0.0.1:8080/app/index.html#/year/2015 — header is the stop; empty Go LIVE red; ticks + title + Go LIVE `Saved.`
-10. http://127.0.0.1:8080/app/index.html#/year/2017 — “2017 is not a door”
-11. Phone 390: http://127.0.0.1:8080/years/1994/ · http://127.0.0.1:8080/years/2008/ · http://127.0.0.1:8080/years/2016/
-12. Public (origin): https://sourabhligade.github.io/internet-through-time/
+2. http://127.0.0.1:8080/years/2022/ — Starting Point, then ChatGPT chip, then Home
+3. http://127.0.0.1:8080/years/1998/ — Lucky chip in the window
+4. http://127.0.0.1:8080/years/1998/sites/google/lucky.html — gold leftover first paint, dest-as-tab
+5. http://127.0.0.1:8080/years/2001/sites/wikipedia/edit.html — UseMod reconstruction line
+6. http://127.0.0.1:8080/app/index.html#/year/2015 — header is the stop; empty Go LIVE red; ticks + title + Go LIVE `Saved.`
+7. http://127.0.0.1:8080/app/index.html#/year/2017 — “2017 is not a door”
+8. Phone 390: http://127.0.0.1:8080/years/1994/ · http://127.0.0.1:8080/years/2008/ · http://127.0.0.1:8080/years/2022/
+9. Public (origin): https://sourabhligade.github.io/internet-through-time/
 
 ---
 

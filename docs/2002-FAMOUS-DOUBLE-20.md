@@ -4,7 +4,7 @@
 **Status:** Implemented 2026-10-05. Twenty leftover folders are on disk. Official trail still 20. Star still `itt02-stumble`. Not leftover-2×. Spec: `e2e/2002-famous-double.spec.js`.
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json` (2002 stays frozen) · [`FAMOUS-DOUBLE-CRITERIA.md`](FAMOUS-DOUBLE-CRITERIA.md).
 
-The forest class says Stop for a new 1994–2006 folder. This pass is the named implement: the same double as 2016, asked for 2002 in the same breath as the build. Hand-written rooms. No generator that calls `assert_mutable`. The year card stays `frozen: true`.
+The forest class says Stop for a new 1994–2006 folder. This pass is the named implement: the same double as later lean years, asked for 2002 in the same breath as the build. Hand-written rooms. No generator that calls `assert_mutable`. The year card stays `frozen: true`.
 
 ## Goal
 

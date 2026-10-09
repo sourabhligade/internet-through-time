@@ -52,22 +52,7 @@ test.describe("2014-2017 phase 6 band check", () => {
     expect(doc.census.savePages).toBe(18);
     expect(doc.rows).toHaveLength(18);
     expect(fs.existsSync(path.join(ROOT, "years/2015"))).toBe(false);
-    expect(fs.existsSync(path.join(ROOT, "years/2016"))).toBe(false);
     expect(fs.existsSync(path.join(ROOT, "years/2017"))).toBe(false);
-  });
-
-  test("Stories empty then a real add is official with Next", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    await page.goto("/years/2016/sites/instagram/stories.html");
-    await verbReady(page);
-    await page.evaluate(() => localStorage.removeItem("itt16-ig-stories"));
-    await page.locator("[data-official-verb]").click();
-    expect(await raw(page, "itt16-ig-stories")).toBeNull();
-    await finishOfficial(page);
-    await expect.poll(() => raw(page, "itt16-ig-stories"), { timeout: 8000 }).toBeTruthy();
-    expect((await envelope(page, "itt16-ig-stories")).kind).toBe("official");
-    await expect(nextFor(page, "itt16-ig-stories")).toBeVisible();
   });
 
   test("React remaining 2015 stops write official", async ({ page }) => {

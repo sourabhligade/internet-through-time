@@ -11,9 +11,11 @@ const UNIQUE = require("./leftover-3x-unique.matrix.json");
 const LEAN = require("./lean-double-leftover.matrix.json");
 
 const ROOT = path.join(__dirname, "..");
+const CARD = JSON.parse(fs.readFileSync(path.join(ROOT, "js/year-card.json"), "utf8")).years;
 const SHIP = [];
 for (let y = 1994; y <= 2022; y++) {
- if (y === 2016 || y === 2017 || y === 2018 || y === 2019) continue;
+  const rec = CARD[String(y)];
+  if (!rec || rec.kind === "absent") continue;
   SHIP.push(String(y));
 }
 
@@ -24,7 +26,6 @@ const LO3X_STOP = {
   2013: 0,
   2014: 0,
   2015: 0,
-  2016: 0,
 };
 
 function officialTen(year) {

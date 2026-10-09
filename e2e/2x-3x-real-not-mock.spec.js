@@ -23,7 +23,6 @@ const STAR = {
   2007: "itt07-iphone",
   2009: "itt09-like",
   2010: "itt10-ig-posts",
-  2017: "itt17-faceid",
 };
 const MOCK_COPY =
   /I (saw|watched|visited|acknowledge|was there|read the blackout|see the 503|read the \d{4} period note)/i;

@@ -51,7 +51,6 @@ html[data-itt-year="2012"] body.itt-start-page,
 html[data-itt-year="2013"] body.itt-start-page,
 html[data-itt-year="2014"] body.itt-start-page,
 html[data-itt-year="2015"] body.itt-start-page,
-html[data-itt-year="2016"] body.itt-start-page,
 html[data-itt-year="2017"] body.itt-start-page,
 html[data-itt-year=""] body.itt-start-page,
 html[data-itt-year="2022"] body.itt-start-page {
@@ -358,7 +357,6 @@ html[data-itt-year="2013"] .ott-flows a {
 /* 2015–2021 · Chrome habit landing. Not GeoCities list. Not IE 5. No brand pixels. */
 html[data-itt-start-habit],
 html[data-itt-year="2015"],
-html[data-itt-year="2016"],
 html[data-itt-year="2017"],
 html[data-itt-year=""],
 html[data-itt-year="2022"] {
@@ -367,7 +365,6 @@ html[data-itt-year="2022"] {
 }
 html[data-itt-start-habit] body.itt-start-page,
 html[data-itt-year="2015"] body.itt-start-page,
-html[data-itt-year="2016"] body.itt-start-page,
 html[data-itt-year="2017"] body.itt-start-page,
 html[data-itt-year=""] body.itt-start-page,
 html[data-itt-year="2022"] body.itt-start-page {
@@ -380,14 +377,12 @@ html[data-itt-start-habit] #itt-exhibit-nav,
 html[data-itt-start-habit] #itt-wayfind,
 html[data-itt-start-habit] .itt-hub-exit,
 html[data-itt-year="2015"] body.itt-start-page #itt-exhibit-nav,
-html[data-itt-year="2016"] body.itt-start-page #itt-exhibit-nav,
 html[data-itt-year="2017"] body.itt-start-page #itt-exhibit-nav,
 html[data-itt-year=""] body.itt-start-page #itt-exhibit-nav {
   display: none !important;
 }
 html[data-itt-start-habit] #itt-year-start,
 html[data-itt-year="2015"] body.itt-start-page #itt-year-start,
-html[data-itt-year="2016"] body.itt-start-page #itt-year-start,
 html[data-itt-year="2017"] body.itt-start-page #itt-year-start,
 html[data-itt-year=""] body.itt-start-page #itt-year-start {
   max-width: 720px;
@@ -399,7 +394,6 @@ html[data-itt-year="2022"][data-itt-start-standalone] #itt-year-start {
 }
 html[data-itt-start-habit] .itt-year-star,
 html[data-itt-year="2015"] .itt-year-star,
-html[data-itt-year="2016"] .itt-year-star,
 html[data-itt-year="2017"] .itt-year-star,
 html[data-itt-year=""] .itt-year-star {
   margin: 0 0 20px;
@@ -407,7 +401,6 @@ html[data-itt-year=""] .itt-year-star {
 }
 html[data-itt-start-habit] .itt-year-star a,
 html[data-itt-year="2015"] .itt-year-star a,
-html[data-itt-year="2016"] .itt-year-star a,
 html[data-itt-year="2017"] .itt-year-star a,
 html[data-itt-year=""] .itt-year-star a {
   display: block;
@@ -422,7 +415,6 @@ html[data-itt-year=""] .itt-year-star a {
 }
 html[data-itt-start-habit] .itt-year-star a:hover,
 html[data-itt-year="2015"] .itt-year-star a:hover,
-html[data-itt-year="2016"] .itt-year-star a:hover,
 html[data-itt-year="2017"] .itt-year-star a:hover,
 html[data-itt-year=""] .itt-year-star a:hover {
   border-color: #1967d2 !important;
@@ -432,8 +424,6 @@ html[data-itt-year=""] .itt-year-star a:hover {
 /* 2015 and later · Chrome habit / Win10, not IE 5 black cards */
 html[data-itt-year="2015"] .ott-guided,
 html[data-itt-year="2015"] .ott-flows,
-html[data-itt-year="2016"] .ott-guided,
-html[data-itt-year="2016"] .ott-flows,
 html[data-itt-year="2017"] .ott-guided,
 html[data-itt-year="2017"] .ott-flows,
 html[data-itt-year=""] .ott-guided,
@@ -454,8 +444,6 @@ html[data-itt-year="2022"] .ott-flows {
 }
 html[data-itt-year="2015"] .ott-guided a,
 html[data-itt-year="2015"] .ott-flows a,
-html[data-itt-year="2016"] .ott-guided a,
-html[data-itt-year="2016"] .ott-flows a,
 html[data-itt-year="2017"] .ott-guided a,
 html[data-itt-year="2017"] .ott-flows a,
 html[data-itt-year=""] .ott-guided a,
@@ -469,8 +457,6 @@ html[data-itt-year="2021"] .ott-flows a {
 }
 html[data-itt-year="2015"] .ott-guided a:hover,
 html[data-itt-year="2015"] .ott-flows a:hover,
-html[data-itt-year="2016"] .ott-guided a:hover,
-html[data-itt-year="2016"] .ott-flows a:hover,
 html[data-itt-year="2017"] .ott-guided a:hover,
 html[data-itt-year="2017"] .ott-flows a:hover,
 html[data-itt-year=""] .ott-guided a:hover,
@@ -680,29 +666,24 @@ html[data-itt-year="1999"] .itt-felt-trail {
 
 /* 2015–2022 Starting Point must beat period-1995 * flatten / navy exhibit nav. */
 html[data-itt-year="2015"] #itt-exhibit-nav,
-html[data-itt-year="2016"] #itt-exhibit-nav,
 html[data-itt-year="2017"] #itt-exhibit-nav,
 html[data-itt-year=""] #itt-exhibit-nav,
 html[data-itt-year="2022"] #itt-exhibit-nav,
 html[data-itt-year="2015"] body.itt-start-page .itt-nav-slot,
-html[data-itt-year="2016"] body.itt-start-page .itt-nav-slot,
 html[data-itt-year="2017"] body.itt-start-page .itt-nav-slot,
 html[data-itt-year=""] body.itt-start-page .itt-nav-slot,
 html[data-itt-year="2022"] body.itt-start-page .itt-nav-slot {
   display: none !important;
 }
 html[data-itt-year="2015"] body.itt-start-page .itt-year-star a,
-html[data-itt-year="2016"] body.itt-start-page .itt-year-star a,
 html[data-itt-year="2017"] body.itt-start-page .itt-year-star a,
 html[data-itt-year=""] body.itt-start-page .itt-year-star a,
 html[data-itt-year="2022"] body.itt-start-page .itt-year-star a,
 html[data-itt-year="2015"] body.itt-start-page .ott-guided,
-html[data-itt-year="2016"] body.itt-start-page .ott-guided,
 html[data-itt-year="2017"] body.itt-start-page .ott-guided,
 html[data-itt-year=""] body.itt-start-page .ott-guided,
 html[data-itt-year="2022"] body.itt-start-page .ott-guided,
 html[data-itt-year="2015"] body.itt-start-page .ott-flows,
-html[data-itt-year="2016"] body.itt-start-page .ott-flows,
 html[data-itt-year="2017"] body.itt-start-page .ott-flows,
 html[data-itt-year=""] body.itt-start-page .ott-flows,
 html[data-itt-year="2022"] body.itt-start-page .ott-flows {
@@ -751,7 +732,7 @@ html[data-itt-year="2014"] .ott-flows a {
 /* ensureFill() paints every 2022 Starting Point anchor #1967d2 !important.
    That sheet is injected after this file, so the chip exception has to be
    more specific than html[data-itt-year] body.itt-start-page a. */
-html[data-itt-year="2016"] body.itt-start-page a.itt-layer-chip,
+,
 html[data-itt-year="2020"] body.itt-start-page a.itt-layer-chip,
 html[data-itt-year="2021"] body.itt-start-page a.itt-layer-chip,
 html[data-itt-year="2022"] body.itt-start-page a.itt-layer-chip {

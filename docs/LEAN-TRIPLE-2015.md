@@ -12,7 +12,7 @@
 
 ## 1. One-line
 
-**Triple dest folders on 2015 / 2017 / is dest-farm.** Those years are already dest-lock-reverted warehouses. Triple leftover dests only on thin 2016 / leftover dests, dest-disjoint from official 10 ∪ leftover-3× unique ∪ unique leftover-20. Leftover-3× unique stops stay. Unique leftover-20 stays 2017 only. Incomplete never writes. Leftover never writes the star.
+**Triple dest folders on 2015 / 2017 / is dest-farm.** Those years are already dest-lock-reverted warehouses. Leftover-3× unique stops stay. Unique leftover-20 stays 2017 only. Incomplete never writes. Leftover never writes the star.
 
 Starting Point still guided **6**. Extra dests live in folded leftover dests, not first-paint dump.
 
@@ -25,7 +25,6 @@ Disk now (2026-09-20). **This table is the look, not the implement map.**
 | Year | Dest folders now | 3× dests | Links now | 3× links | Dest-true flows now | 3× flows | Law |
 |------|-----------------:|---------:|----------:|---------:|--------------------:|---------:|-----|
 | **2015** | 213 | **639** | 233 | **699** | 19 | **57** | **Stop.** Warehouse. Dest-farm. |
-| **2016** | 64 | **192** | 101 | **303** | 19 | **57** | Thin leftover dests only. Do not restore 132-dest forest. 192 is denser than origin forest **82**. |
 | **2017** | 222 | **666** | 265 | **795** | 10 + leftover-20 = 30 | **90** | **Stop.** Unique leftover-20 already ships. Do not dest-farm leftover-20. |
 |  | 26 | **78** | 17 | **51** | 13 | **39** | Leftover dests, **not** leftover-3× unique (stop **3**). GDPR Manage stays the chip. |
 |  | 170 | **510** | 181 | **543** | 19 | **57** | **Stop.** Warehouse. Dest-farm. |
@@ -53,7 +52,7 @@ First paint does **not** triple. The extra dests are leftover dest pages you ope
 |---------|-------|-----------------|
 | Guided Starting Point | exactly 6 `<li>` | 18 items |
 | Official 10 | same dest folders · same whenKeys | official 30 |
-| Leftover-3× unique | 2015=9 · 2016=9 · 2017=0 · **=3** · =9 · =9 | 27 unique leftover-3× dests |
+| Leftover-3× unique | 2015=9 · 2017=0 · **=3** · =9 · =9 | unique leftover-3× dests |
 | Unique leftover-20 | **2017 only** | leftover-20 on 2015 / |
 | Star | one chip | leftover dest writes GDPR / Zoom / Stories / Face ID / Disney+ / Periscope |
 | first paint | GDPR Manage | 78 dest dump |
@@ -70,7 +69,6 @@ Triple is from **origin lean dest count**, not from warehouse dest count.
 | Year | Origin lean | Now | 3× origin (cap dests) | New leftover dests (cap) | Leftover-3× unique | This pass |
 |------|------------:|----:|----------------------:|-------------------------:|-------------------:|-----------|
 | 2015 | dest-farm 213 | 213 | — | **0** | 9 stop | **Stop.** |
-| 2016 | 32 | 64 | **96** | **+32** leftover dests | 9 stop | Thin leftover dests. Not a 192 forest. |
 | 2017 | dest-farm 222 | 222 | — | **0** | 0 · leftover-20 already | **Stop.** |
 | | 13 | 26 | **39** | **+13** leftover dests | **3 stop** | Leftover dests, not leftover-3× unique. |
 | | dest-farm 170 | 170 | — | **0** | 9 stop | **Stop.** |
@@ -80,7 +78,6 @@ If you instead triple **dest-true flows** without dest-farming leftover-3× uniq
 | Year | Flows now | Legal leftover dest add | Flows after (cap) |
 |------|----------:|------------------------:|------------------:|
 | 2015 | 19 | 0 | **19** |
-| 2016 | 19 | +32 leftover dests | **51** |
 | 2017 | 30 | 0 | **30** |
 | | 13 | +13 leftover dests | **26** |
 | | 19 | 0 | **19** |
@@ -91,13 +88,13 @@ Links grow with leftover dest crumbs (home · next leftover dest). They do **not
 
 ## 5. Taken (do not reuse inside the year)
 
-2016 leftover dests already on disk include the official 10, leftover-3× unique (slack reddit netflix youtube alphago assistant dyn fblive moments), and the lean-double leftover dests (douyin wikipedia twitter amazon google yahoo baidu yandex chrome github pinterest tumblr twitch discord airpods pixel nougat allo duo googlehome oculusrift psvr overwatch doom2016 uncharted4 nomanssky clashroyale signal telegram paypal applepay panamapapers).
+Do not dest-farm leftover dests onto a missing year.
 
  leftover dests already on disk: official 10 + leftover-3× unique reddit youtube wikipedia + lean-double leftover dests facebook twitter amazon google yahoo baidu yandex netflix snapchat discord gplusgone androidpie ios12.
 
  leftover dests already on disk include official 10 + leftover-3× unique 9 + Clubhouse hole.
 
-Star traps: 2016 Reels · Accept All · ChatGPT dest.
+Star traps for a missing year stay unused. Do not dest-farm.
 
 ---
 

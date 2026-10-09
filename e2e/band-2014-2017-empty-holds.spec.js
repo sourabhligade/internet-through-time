@@ -26,16 +26,6 @@ test.describe("2014-2017 phase 3 empty holds", () => {
     expect(await raw(page, "itt14-wa-install")).toBeNull();
   });
 
-  test("Stories empty Add writes nothing", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    await page.goto("/years/2016/sites/instagram/stories.html");
-    await verbReady(page);
-    await page.evaluate(() => localStorage.removeItem("itt16-ig-stories"));
-    await page.locator("[data-ig-story-add]").click();
-    expect(await raw(page, "itt16-ig-stories")).toBeNull();
-  });
-
   test("Periscope empty title writes nothing and ended broadcast writes nothing", async ({ page }) => {
     await page.goto("/app/index.html#/year/2015?stop=itt15-periscope");
     await page.locator("#root").waitFor({ state: "attached", timeout: 15000 });

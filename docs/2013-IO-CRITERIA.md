@@ -3,7 +3,7 @@
 **Date:** 2026-09-14  
 **Status:** Criteria + implemented star / official 10 fold. Not dest-farm.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md).  
-**Companion:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) — same bar, earlier lean door.  
+**Companion:** [`LEAN-IO-CRITERIA.md`](LEAN-IO-CRITERIA.md) — same bar, earlier lean door.  
 **Leftover-3× unique:** [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md) — 2013 first+third dests already unique vs official 10. Second strip not named. Unique leftover-20 still not written.
 
 I/O = first click, period chrome, the star verb, what writes. Not dest count.
@@ -18,7 +18,7 @@ I/O = first click, period chrome, the star verb, what writes. Not dest count.
 
 ## 2. Shared pass / fail
 
-Same I1–I14 as 2016–2021, with 2013 locks:
+Same I1–I14 as lean HTML I/O, with 2013 locks:
 
 | # | 2013 lock | Pass | Fail |
 |---|-----------|------|------|
@@ -31,9 +31,9 @@ Same I1–I14 as 2016–2021, with 2013 locks:
 | I7 | Workshop fold | Leftover-2× hidden unless `?deep=1` | dest-true yellow machines on first paint |
 | I8 | Capture | failed-final / capture-cite on star | Visitor sent to SOURCES |
 | I9 | No invented pixels | RECON / failed-final | AI Vine glyph |
-| I10 | Chrome | Win7 + IE 9 residual. Phone products are **rooms** | Win8.1 as January OS · Chrome habit 2016+ |
+| I10 | Chrome | Win7 + IE 9 residual. Phone products are **rooms** | Win8.1 as January OS · Chrome habit later |
 | I11 | About | June **672,985,183 (−3%)** · users **2,728,428,107** · Dec ~861M labeled | Blend hostnames into June |
-| I12 | Neighbor empty | No `itt16-ig-stories` · no WhatsApp-as-star · no iPhone 6 | Stories 2016 gold from this year |
+| I12 | Neighbor empty | No Instagram Stories star · no WhatsApp-as-star · no iPhone 6 | Stories later gold from this year |
 | I13 | Official 10 | `flow-trails.js` dests on disk | 404 or leftover plaque standing in |
 | I14 | e2e | mvp + 2013-flows star + one-thing | mvp copy-only |
 

@@ -54,12 +54,6 @@ test.describe("lean leftover dests", () => {
     await leftoverOfficialDest(page, "/years/2012/sites/flipboard/about.html", "pop7-flip12", "itt12-ig-android");
   });
 
-  test("2016 ytl-only pokemongo about folds onto leftover-official", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    await leftoverOfficialDest(page, "/years/2016/sites/pokemongo/about.html", "pop7-go16", "itt16-ig-stories");
-  });
-
   test("2009 5×-only farmville folds onto leftover-official", async ({ page }) => {
     await page.goto("/years/2009/sites/farmville/index.html");
     await page.evaluate(() => {

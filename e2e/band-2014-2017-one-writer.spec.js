@@ -1,8 +1,7 @@
 // @ts-check
 /**
- * Phase 2 lock for 2014–2017. WhatsApp Install, Stories, Pokémon GO, and
- * Reactions are kind official. 2015 React stops store official. 2017 stays
- * absent. The 115-page walk is phase 6.
+ * Phase 2 lock for 2014–2017. WhatsApp Install is official. 2015 React
+ * stops store official. 2017 stays absent. The 115-page walk is phase 6.
  */
 const { test, expect } = require("@playwright/test");
 const fs = require("fs");
@@ -36,9 +35,8 @@ async function finishOfficial(page) {
 }
 
 test.describe("2014-2017 phase 2 one writer", () => {
-  test("2015 tree, 2016, and 2017 stay absent", () => {
+  test("2015 tree and 2017 stay absent", () => {
     expect(fs.existsSync(path.join(__dirname, "../years/2015"))).toBe(false);
-    expect(fs.existsSync(path.join(__dirname, "../years/2016"))).toBe(false);
     expect(fs.existsSync(path.join(__dirname, "../years/2017"))).toBe(false);
   });
 
@@ -51,45 +49,6 @@ test.describe("2014-2017 phase 2 one writer", () => {
     await finishOfficial(page);
     await expect.poll(() => raw(page, "itt14-wa-install"), { timeout: 8000 }).toBeTruthy();
     expect((await envelope(page, "itt14-wa-install")).kind).toBe("official");
-  });
-
-  test("Stories empty write nothing then a real add is official", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    await page.goto("/years/2016/sites/instagram/stories.html");
-    await verbReady(page);
-    await page.evaluate(() => localStorage.removeItem("itt16-ig-stories"));
-    await page.locator("[data-official-verb]").click();
-    expect(await raw(page, "itt16-ig-stories")).toBeNull();
-    await finishOfficial(page);
-    await expect.poll(() => raw(page, "itt16-ig-stories"), { timeout: 8000 }).toBeTruthy();
-    expect((await envelope(page, "itt16-ig-stories")).kind).toBe("official");
-  });
-
-  test("Pokémon GO empty catch writes nothing then a real team is official", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    await page.goto("/years/2016/sites/pokemongo/index.html");
-    await verbReady(page);
-    await page.evaluate(() => localStorage.removeItem("itt16-pogo"));
-    await page.locator("[data-pogo-catch]").click();
-    expect(await raw(page, "itt16-pogo")).toBeNull();
-    await finishOfficial(page);
-    await expect.poll(() => raw(page, "itt16-pogo"), { timeout: 8000 }).toBeTruthy();
-    expect((await envelope(page, "itt16-pogo")).kind).toBe("official");
-  });
-
-  test("Reactions Like-only writes nothing then a real Like with reqs is official", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    await page.goto("/years/2016/sites/facebook/reactions.html");
-    await verbReady(page);
-    await page.evaluate(() => localStorage.removeItem("itt16-fb-react"));
-    await page.locator("[data-fb-like]").click();
-    expect(await raw(page, "itt16-fb-react")).toBeNull();
-    await finishOfficial(page);
-    await expect.poll(() => raw(page, "itt16-fb-react"), { timeout: 8000 }).toBeTruthy();
-    expect((await envelope(page, "itt16-fb-react")).kind).toBe("official");
   });
 
   test("Apple Music empty then a real Play is official", async ({ page }) => {

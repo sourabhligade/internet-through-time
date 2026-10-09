@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-08  
 **Status:** 1994–1997 through 2022–2025 phases 1–6 are done locally, including 2014–2017. Leftover-2× dests with no save hook stay on disk and are not dest-farmed. Standing gate lives in this file.  
-**Law:** `js/year-card.json` + `scripts/itt_gate.py` `SHIP_YEARS`. Hub is 25 doors. Frozen HTML is 1994–2006. leanBoot is 2007–2014 and 2020–2022. 2015 is the React door. Absent: 2016–2019 and 2023–2025.
+**Law:** `js/year-card.json` + `scripts/itt_gate.py` `SHIP_YEARS`. Hub is 25 doors. Frozen HTML is 1994–2006. leanBoot is 2007–2014 and 2020–2022. 2015 is the React door. Absent: 2017–2019 and 2023–2025.
 
 This plan does not reopen `docs/PROD-USER-DATA-SRP.md` or `docs/MUSEUM-GRADE-UI.md`. Those phases stay as shipped. This plan runs the six phases on every working flow already on disk in the band: trail stops, leftover-2× dests, and every other year-site page that already has a save control. Scan of remaining overclaim vs disk: [`PHASE-SCAN.md`](PHASE-SCAN.md).
 
@@ -14,7 +14,7 @@ Local check stays at http://127.0.0.1:8080. Run impact on a symbol before editin
 
 ## Why 107 is the wrong count
 
-107 is the old leftover-3× unique dest-true set. Those rails are gone and the catalog is empty. Phase 3 of the user-data work dropped them. 107 is also the HTML file count under `years/2016/sites/` alone (107 files, 97 of them with a save control). Neither number is the museum.
+107 is the old leftover-3× unique dest-true set. Those rails are gone and the catalog is empty. Phase 3 of the user-data work dropped them. That number is not the museum.
 
 Counted from disk on 2026-10-07, live years only:
 
@@ -54,7 +54,6 @@ The first draft of this plan only walked the official trail, about 256 stops. Th
 | 2013 | 53 | 47 | 52 | 9 | 27 |
 | 2014 | 36 | 18 | 25 | 9 | 16 |
 | 2015 | React door | 10 stops | — | 10 | 0 |
-| 2016 | 0 | 0 | 0 | 0 | 0 |
 | 2020 | 24 | 22 | 22 | 10 | 0 |
 | 2021 | 60 | 18 | 18 | 10 | 0 |
 | 2022 | 31 | 29 | 25 | 10 | 0 |
@@ -91,7 +90,6 @@ Historical second stores (closed on disk by verbOwned / official-verb / dest-tru
 | 2009 | Plot Start | Start writes nothing |
 | 2010 | iPad order `[data-ipad-order]` | extras skip when Place order is the verb |
 | 2012 | Guess Doodle Start | Start writes nothing |
-| 2016 | Story, Pokémon GO, Reactions | extras skip; dest-true is official `Saved.` |
 
 `year-2012-extras.js` `bootChecks` (Facebook 1B, IPO, Maps, SOPA) already prints `Saved.` and honors a blocked save. Kit `bootChecks` matches that receipt. Keys stay in storage.
 
@@ -112,12 +110,12 @@ Eight calendar bands. Two of them are short because the absent years stay absent
 | 2002–2005 | 2002, 2003, 2004, 2005 | frozen | 2,319 | 2,066 | 286 | 78 |
 | 2006–2009 | 2006 frozen. 2007–2009 lean | mixed | 794 | 595 | 198 | 50 |
 | 2010–2013 | 2010–2013 | lean | 182 | 150 | 51 | 39 |
-| 2014–2017 | 2014, 2015 React, 2016. 2017 absent | mixed | 115 + 10 React | 92 | 36 | 29 |
+| 2014–2017 | 2014, 2015 React. 2017 absent | mixed | 115 + 10 React | 92 | 36 | 29 |
 | 2018–2021 | 2020 and 2021. 2018 and 2019 absent | lean | 40 | 40 | 0 | 20 |
 | 2022–2025 | 2022. 2023–2025 absent | lean | 29 | 25 | 0 | 10 |
-| **All live** | 26 doors |  | **5,859** | **4,938** | **1,158** | **406** |
+| **All live** | 25 doors |  | **5,859** | **4,938** | **1,158** | **406** |
 
-2014–2017 is 18 save pages in 2014, 97 in 2016, and 10 React stops. 115 + 10 = 125 working flows in that band. The total row’s 5,859 is HTML save pages only. Add the 10 React stops and the working set is 5,869. 2017 adds nothing.
+2014–2017 is 18 save pages in 2014, 10 React stops. 115 + 10 = 125 working flows in that band. The total row’s 5,859 is HTML save pages only. Add the 10 React stops and the working set is 5,869. 2017 adds nothing.
 
 Inside a phase, the done-when is fixed. The sentence on the button and which listener folds into `official-verb` can change, as long as the envelope rule holds and no new stop appears.
 
@@ -240,15 +238,15 @@ leanBoot. Working set: 182 save pages, 150 dest folders, 51 leftover-2× dests, 
 
 ## 2014–2017
 
-2014 is leanBoot. 2015 is React. 2016 and 2017 stay absent. Working set: 18 HTML save pages plus 10 React stops. Do not create `years/2016` or `years/2017` until named.
+2014 is leanBoot. 2015 is React. 2017 stays absent. Working set: 18 HTML save pages plus 10 React stops. Do not create `years/2017` until named.
 
 | Phase | Work in this band |
 | --- | --- |
 | 1 | Done 2026-10-09. Register: `e2e/registers/band-2014-2017.json` (115 save pages, 19 official keys). Leftover-2× dests with no save hook stay on disk and are not dest-farmed. 2015 tree and 2017 stay absent. Lock: `e2e/band-2014-2017-register.spec.js`. |
-| 2 | Done 2026-10-09. Stories, Pokémon GO, and Reactions keep `official:true`. WhatsApp Install is official-verb. React Apple Music stores kind `official`. Lock: `e2e/band-2014-2017-one-writer.spec.js`. |
-| 3 | Done 2026-10-09. Empty WhatsApp, empty Story, empty Periscope title, ended broadcast, and Live Rush score 0 write nothing. Lock: `e2e/band-2014-2017-empty-holds.spec.js`. |
-| 4 | Done 2026-10-09. WhatsApp, Stories, and React Periscope say `Saved.` with no storage key. Next stays hidden on a toy Stories envelope. `OfficialStop.jsx` success copy is `Saved.` Rebuild `app/` from `react/` in this phase. Lock: `e2e/band-2014-2017-receipt.spec.js`. |
-| 5 | Done 2026-10-09. Stories leftover writes gold-lx leftover and refuses `itt16-ig-stories`. WhatsApp leftover leaves the star empty. 2015 leftover trail stays empty. Gold leftover sits after the exhibit. Lock: `e2e/band-2014-2017-leftover-off-star.spec.js`. |
+| 2 | Done 2026-10-09. WhatsApp Install is official-verb. React Apple Music stores kind `official`. Lock: `e2e/band-2014-2017-one-writer.spec.js`. |
+| 3 | Done 2026-10-09. Empty WhatsApp, empty Periscope title, ended broadcast, and Live Rush score 0 write nothing. Lock: `e2e/band-2014-2017-empty-holds.spec.js`. |
+| 4 | Done 2026-10-09. WhatsApp and React Periscope say `Saved.` with no storage key. `OfficialStop.jsx` success copy is `Saved.` Rebuild `app/` from `react/` in this phase. Lock: `e2e/band-2014-2017-receipt.spec.js`. |
+| 5 | Done 2026-10-09. WhatsApp leftover writes gold-lx leftover and leaves the star empty. 2015 leftover trail stays empty. Gold leftover sits after the exhibit. Lock: `e2e/band-2014-2017-leftover-off-star.spec.js`. |
 | 6 | Done 2026-10-09. Walks all 115 register rows split by year. 2015 remaining stops open the React URL. 2017 stays absent. Lock: `e2e/band-2014-2017.spec.js`. |
 
 ## 2018–2021
@@ -286,7 +284,7 @@ leanBoot. Working set: 182 save pages, 150 dest folders, 51 leftover-2× dests, 
 3. 2002–2005. Stumble and the YouTube upload.
 4. 2006–2009. Twttr, Like, and Plot.
 5. 2010–2013. iPad, Guess Doodle, and the Facebook 1B checklist line.
-6. 2014–2017. The six live 2015 names, and the three 2016 toy overwrites. 2017 stays absent.
+6. 2014–2017. The six live 2015 names, and 2017 stays absent.
 7. 2018–2021. A check, plus any Zoom writer the page actually runs. 2018 and 2019 stay absent.
 8. 2022–2025. A check. 2023–2025 stay absent.
 

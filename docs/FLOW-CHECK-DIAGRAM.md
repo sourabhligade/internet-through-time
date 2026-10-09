@@ -1,10 +1,10 @@
 # Flow-check diagram
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **25 doors** (1994–2015 and 2020–2022). **2011 is live HTML.** **2015 is the React door.** **2016–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **25 doors** (1994–2015 and 2020–2022). **2011 is live HTML.** **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 
 **Date:** 2026-09-20  
-**Live check updated:** 2026-10-02. Sections 1–4 are the old 27-door walk, not the live 26-door list. Sections 5–6 are the 2026-09-20 snapshot and still name years that are not doors.  
+**Live check updated:** 2026-10-09. Sections 1–4 are the old walk. The live hub is 25 doors. Sections 5–6 still name leftover-3× unique dests whose catalogs are empty.  
 **Status:** Check map. Not dest-farm.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md).  
 **Dest-true I/O:** [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md).  
@@ -14,13 +14,13 @@
 
 ---
 
-## 1. Museum door (24 open years)
+## 1. Museum door (25 open years)
 
-Old walk, not the live list. Open doors in this diagram: 1994–2017 and 2020–2022. 2015 and 2017 are React doors in that walk (`/app/index.html#/year/YYYY`). 2014 and 2020–2022 are HTML leanBoot doors in that walk. 2008, 2009, and 2011 are live HTML doors. 2018, 2019, and 2023–2025 are absent there. The live hub is 26 doors. 2015 is the only React door. 2017 is absent.
+Old walk, not the live list. Live hub is **25 doors**: HTML 1994–2014 and 2020–2022 plus the React 2015 door (`/app/index.html#/year/2015`). 2017–2019 and 2023–2025 are absent.
 
 ```mermaid
 flowchart TD
- HUB["Hub index.html<br/>24 year cards"] --> KIND{"Card kind"}
+ HUB["Hub index.html<br/>25 year cards"] --> KIND{"Card kind"}
  KIND -->|HTML| YEAR["/years/YYYY/"]
  KIND -->|React 2015 or 2017| REACT["/app/index.html#/year/YYYY"]
  YEAR --> ROOM["Room click"]
@@ -46,7 +46,7 @@ flowchart TD
 ```mermaid
 flowchart LR
  subgraph PLAY["24 open doors"]
- HTML["HTML doors<br/>1994–2014 · 2016"]
+ HTML["HTML doors<br/>1994–2014"]
  REACT["React doors<br/>2015 · 2017"]
  end
  ABSENT["2018–2025 absent"]
@@ -55,7 +55,7 @@ flowchart LR
 
 | Class | Years | Check |
 |-------|-------|-------|
-| HTML door | 1994–2014, 2016 | `/years/YYYY/` returns 200. Official list stops at the cap above. |
+| HTML door | 1994–2014 | `/years/YYYY/` returns 200. Official list stops at the cap above. |
 | React door | 2015, 2017 | Hub and atlas open `/app/index.html#/year/YYYY`. No HTML tree. |
 | Absent | 2018, 2019, 2020, 2021, 2022 | No card, no tree, no React door. |
 | Wiped | 2023–2025 | No tree. Do not restore. |
@@ -108,7 +108,7 @@ flowchart TD
 | Official dest empty/complete | `e2e/all-years-official-10-real.spec.js` |
 | Leftover-3× unique dest-true dests | `e2e/leftover-3x-unique.spec.js` |
 | Official dest leftover-2× gone | `e2e/official-leftover-2x.spec.js` |
-| Leftover dests 2016/ | `e2e/lean-triple-leftover.spec.js` |
+| Leftover dests lean-triple | `e2e/lean-triple-leftover.spec.js` |
 | Mock scan | `node scripts/audit-mock-flows.js` |
 
 CI does **not** run leftover-3× directory (`3x-links`), leftover-5× live, leftover-4×, or dest-farm theater packs.
@@ -137,7 +137,6 @@ flowchart LR
 | 2013 | 9 | Vine record |
 | 2014 | 9 | `itt14-wa-install` |
 | 2015 | 9 | `itt15-periscope` |
-| 2016 | 9 | `itt16-ig-stories` |
 | 2017 | **0 leftover-3× unique dest-true dests** (unique leftover-20) | `itt17-faceid` |
 | | **3 stop** | `itt18-gdpr` |
 | | 9 | `itt19-disneyplus` |
@@ -155,7 +154,6 @@ Do not dest-farm leftover dest leftover-3× unique dest-true dests past the stop
 |------|-----------|----------------|-------------------|
 | 2010 | Instagram | filter → caption → Share | Stories-as-gold |
 | 2012 | IG Android | filter → Share | — |
-| 2016 | Stories | Add to Story | Reels-as-gold |
 | 2017 | Face ID | Look / swipe | Home button |
 | | GDPR | **Manage** | **Accept All** |
 | | Disney+ | **Continue** | Trial |

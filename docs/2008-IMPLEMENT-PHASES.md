@@ -3,7 +3,7 @@
 **Date:** 2026-09-30  
 **Status:** Phases **0–3 on disk** (lean HTML door · App Store star · official 10 · Pack A 35). Pack B’s **35 rooms are already on disk** (verify HTTP 200, no new folders). Pack C wait. Dest-true e2e in Phase 7. Do not dest-farm. Do not `git checkout` the wiped forest. Flip `[x]` only when Pass is true **on disk** and the e2e in the row is green.  
 **Research:** [`2008-DENSITY-RESEARCH.md`](2008-DENSITY-RESEARCH.md) · deep-research **complete (Partial)**.  
-**Law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) **I1–I14** · [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) **D1–D15** · [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) · look **L1–L5**.  
+**Law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`LEAN-IO-CRITERIA.md`](LEAN-IO-CRITERIA.md) **I1–I14** · [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) **D1–D15** · [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) · look **L1–L5**.  
 **Clone shape:** live `years/2007/` (HTML lean · iPhone Safari). **2009 is live HTML** (Like).  
 **Parent corpus:** DOUBLE-5K C1–C20 · CUT-DOUBLE dest minutes (verb / trap / Next / cite). Those files still gold GitHub. **I1 wins** on this rebuild.
 
@@ -66,7 +66,7 @@ If you name GitHub as gold instead, stop and rewrite 0.1 / 0.6 / trail n=1 befor
 
 ## 1. Door (lean HTML)
 
-Clone `years/2007/` shell + `js/config/2007.js` + `css/period-2007.css` → 2008. Run `scripts/gen_year_shims.py` for `js/browser-2008.js`. Boot leftover-official on dests the same way 2014/2016/2022 load EXTRA.
+Clone `years/2007/` shell + `js/config/2007.js` + `css/period-2007.css` → 2008. Run `scripts/gen_year_shims.py` for `js/browser-2008.js`. Boot leftover-official on dests the same way 2014/2022 load EXTRA.
 
 | # | Step | Detail | e2e / check |
 |---|------|--------|-------------|

@@ -124,7 +124,6 @@ test.describe('hub + year shells', () => {
     await expect(page.locator('.y2014.available')).toBeVisible();
     await expect(page.locator('.y2014.locked')).toHaveCount(0);
     await expect(page.locator('.y2015.available')).toBeVisible();
-    await expect(page.locator('.y2016')).toHaveCount(0);
     await expect(page.locator('.y')).toHaveCount(0);
     await expect(page.locator('.y')).toHaveCount(0);
     await expect(page.locator('.y2020')).toHaveCount(1);

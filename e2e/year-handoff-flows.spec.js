@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Year → next-year handoff flows (1994→1995 … 2016→2017).
+ * Year → next-year handoff flows (1994→1995 … live consecutive doors).
  *
  * For each consecutive pair:
  *  1. Boot year N · signature product interaction · year-native storage key

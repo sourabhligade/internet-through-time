@@ -52,39 +52,6 @@ test.describe("2014-2017 phase 4 receipt", () => {
     await expect(nextFor(page, "itt14-wa-install")).toBeVisible();
   });
 
-  test("Stories official finish says Saved. and shows Next", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    await page.goto("/years/2016/sites/instagram/stories.html");
-    await verbReady(page);
-    await page.evaluate(() => localStorage.removeItem("itt16-ig-stories"));
-    await page.reload();
-    await verbReady(page);
-    await expect(nextFor(page, "itt16-ig-stories")).toBeHidden();
-    await finishOfficial(page);
-    await expect.poll(() => raw(page, "itt16-ig-stories"), { timeout: 8000 }).toBeTruthy();
-    expect((await envelope(page, "itt16-ig-stories")).kind).toBe("official");
-    await expect(page.locator("[data-official-status]")).toHaveText("Saved.");
-    await expect(page.locator("[data-official-status]")).not.toContainText(/itt16-/);
-    await expect(nextFor(page, "itt16-ig-stories")).toBeVisible();
-  });
-
-  test("Stories toy envelope keeps Next hidden", async ({ page }) => {
-    test.skip(!require("fs").existsSync(require("path").join(__dirname, "..", "years", "2016", "index.html")), "2016 wiped");
-
-    await page.goto("/years/2016/sites/instagram/stories.html");
-    await page.evaluate(() => {
-      localStorage.setItem(
-        "itt16-ig-stories",
-        JSON.stringify({ v: 1, year: "2016", key: "itt16-ig-stories", kind: "toy", real: true, ts: 1 })
-      );
-    });
-    await page.reload();
-    await verbReady(page);
-    await expect(nextFor(page, "itt16-ig-stories")).toBeHidden();
-    expect((await envelope(page, "itt16-ig-stories")).kind).toBe("toy");
-  });
-
   test("Periscope official finish says Saved. with no key", async ({ page }) => {
     await page.goto("/app/index.html#/year/2015?stop=itt15-periscope");
     await page.waitForFunction(() => !!(window.ITT && window.ITT.User && window.ITT.User.store), null, {

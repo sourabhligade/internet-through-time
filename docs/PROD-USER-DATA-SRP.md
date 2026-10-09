@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-06  
 **Status:** Phase 1 implemented 2026-10-07. Phase 2 implemented 2026-10-06. Phase 3 implemented 2026-10-07. Phase 4 implemented 2026-10-07. Phase 5 implemented 2026-10-07.  
-**Law:** `js/year-card.json` + `scripts/itt_gate.py` `SHIP_YEARS`. Hub **26 doors** (HTML 1994–2014 and 2020–2022 + React **2015 only**). Absent: 2016–2019, 2023–2025. Frozen: 1994–2006. Local: http://127.0.0.1:8080. Publish stays gated.
+**Law:** `js/year-card.json` + `scripts/itt_gate.py` `SHIP_YEARS`. Hub **25 doors** (HTML 1994–2014 and 2020–2022 + React **2015 only**). Absent: 2017–2019, 2023–2025. Frozen: 1994–2006. Local: http://127.0.0.1:8080. Publish stays gated.
 
 Do not dest-farm, restore 2017, unfreeze forests, or run 1999–2004 `2x` doubling.
 
@@ -25,7 +25,7 @@ Today: immersion `localStorage.setItem` is **0**. Writers go through `ITT.User.s
 
 ## 1 — Honest saves
 
-Visitor-facing. One write API. Key strings stay (`itt16-ig-stories`). Brand toys, games, React, leanBoot, and deletes wait for later phases.
+Visitor-facing. One write API. Key strings stay (`itt98-lucky`). Brand toys, games, React, leanBoot, and deletes wait for later phases.
 
 **Done when:** empty / trap / incomplete write nothing. A blocked quota tells the visitor the truth. Status is “Saved.” with no key name. Next unhides only when `ITT.User.finished(whenKey)` is true. Leftover never stamps official n=1–10.
 
@@ -59,8 +59,8 @@ Envelope (additive on today’s payloads so `.real` / `.official` / `.leftover` 
 ```js
 {
   v: 1,
-  year: "2016",
-  key: "itt16-ig-stories",
+  year: "1998",
+  key: "itt98-lucky",
   kind: "official",   // official | leftover | game | toy | shell
   real: true,
   ts: 0,
@@ -144,7 +144,7 @@ Extend `e2e/dest-true-io.js` (today only `getKey` + `clickOfficialVerb`):
 
 Specs to add or retarget (dest-true pack, not the warehouse):
 
-- Official empty / trap / blocked-save on one HTML star (1998 Google or 2016 IG Stories).
+- Official empty / trap / blocked-save on one HTML star (1998 Google Lucky).
 - Leftover refuse on an official n=1–10 `whenKey` (“Leftover never stamps the official key.”).
 - Leftover success on a leftover-trail / famous-double key writes `kind: "leftover"`.
 - Ytl: forced `setItem` throw → no success paint, Next hidden.
@@ -180,12 +180,12 @@ Card `leanBoot` is 2007–2014 and 2020–2022. Those years do not load the CORE
 - `leanBoot: true` is set on 2007–2014 and 2020–2022. 2015 is React and is not leanBoot.
 - EXTRA lists `leftover-official.js` on every lean year that still has leftover dests.
 - `boot.js` may defer modules already in the year list. `addEngine` refuses the CORE leftover packs. It still loads link walks, and on `/playable` the year cabinet, when GATE omits them.
-- GATE dest leftover-2× / `data-ytl` / pop: fold onto leftover-official hooks, or strip the dead hooks. 2016 EXTRA `year-4x-flows.js` stays listed, or alphago/figma/ethereum move to leftover-official.
+- GATE dest leftover-2× / `data-ytl` / pop: fold onto leftover-official hooks, or strip the dead hooks.
 - Drop 2017 from `ui/year/start.js` `ensureFill()`.
 - `registry.js` is the only GATE/CORE/EXTRA list.
 
 **Test:** lean year script list has no `year-popular-3x` / `year-5x-pack` / leftover-2× engine; leftover dests on 2007–2013 still save.  
-**Risk:** HIGH if EXTRA omits leftover-official on a lean year. Implemented: `leanBoot` 2007–2014 and 2020–2022; EXTRA leftover-official on every lean year; 2009/2016 keep `year-4x-flows.js`; leftover-official folds ytl / pop-go / 5× when those engines are off the year list; `addEngine` refuses CORE leftover packs and still loads link walks plus the `/playable` cabinet; `ensureFill` drops 2017.
+**Risk:** HIGH if EXTRA omits leftover-official on a lean year. Implemented: `leanBoot` 2007–2014 and 2020–2022; EXTRA leftover-official on every lean year; leftover-official folds ytl / pop-go / 5× when those engines are off the year list; `addEngine` refuses CORE leftover packs and still loads link walks plus the `/playable` cabinet; `ensureFill` drops 2017.
 
 ---
 
@@ -195,7 +195,7 @@ Empty catalogs and unused files. Same PR as dropping them from CI.
 
 **Delete:** leftover-3× unique engines + catalogs (`js/immersion/leftover-3x-unique.js`, `leftover-3x-unique-links.js`, `js/config/leftover-3x-unique.js`, `leftover-3x-unique-links.js`, `scripts/leftover-3x-unique.json`, `impl_leftover_3x_unique.py`, `impl_leftover_3x_unique_links.py`) and those two specs from `ci.sh` / `test:e2e:dest-true`; `year-true-leftover.js` once leftover-official owns those dests; farm `impl_lean_double_dests.py`, `impl_lean_triple_dests.py`, `impl_board_c_dests.py`; pin `scripts/gen_year_shims.py` to HTML `SHIP_YEARS`; point remaining 1994 dests off `js/immersion.js` then delete `js/immersion.js`, `js/browser.js`, `js/immersion-core.js`; unused CSS `period-late-tone-down.css`, `phone-frame.css`, `period-2009-lite.css`; banned games `year-2000-portaljudge.js`, `year-2004-cubewhack.js`, then the other unreferenced `year-YYYY-*.js` (39 total); `config/flow-trails-5x.js` stub; empty layer in `layers.js`.
 
-**Keep:** forest dest folders, 2002/2016 famous-double rooms, leftover-2× unique **link** catalog, `period-2015.css`, `leftover-dest-face.css`, `late-face.js`.
+**Keep:** forest dest folders, 2002 famous-double rooms, leftover-2× unique **link** catalog, `period-2015.css`, `leftover-dest-face.css`, `late-face.js`.
 
 **Implemented 2026-10-07:** empty 3× unique engines, catalogs, generators, and the three farm scripts are gone. The two unique specs are off `ci.sh`, `.github/workflows/ci.yml`, and `test:e2e:dest-true`. `gen_year_shims.py` writes `HTML_SHIP_YEARS` only, so a run cannot revive 2017. Sixteen 1994 dests load `js/immersion-1994.js`. Held: `year-true-leftover.js`, because CORE still loads it on 1994–2006. Held: `layers.js`. `legendHtml` is CRITICAL on the stale index, and the empty `game` strings on 2005–2006 still render.
 
@@ -209,17 +209,17 @@ Lock user-data. Quarantine 22/27-door maps.
 
 **CI keep:** `hub-years`, `visitor-door`, `one-thing-per-year`, `all-years-official-10-real`, `official-leftover-2x`, `dest-top`, `follow-site`, `2008-mvp`, `2009-mvp`, `flow-check-pipeline`. Extend `e2e/dest-true-io.js`: `assertNoWrite`, `assertEnvelope`, `assertNextHidden`.
 
-**CI drop:** leftover-3× unique specs, leftover-2× unique dest-folder walk (1,193), `lean-triple-leftover` `2016 === 67`, `year-true-packs`, `2016-3x-detail`, leftover-999, leftover-official.matrix (358 dests, 2017: 204, boards 2009), densify, 4×, 5×.
+**CI drop:** leftover-3× unique specs, leftover-2× unique dest-folder walk (1,193), `lean-triple-leftover`, `year-true-packs`, leftover-999, leftover-official.matrix (358 dests, 2017: 204, boards 2009), densify, 4×, 5×.
 
 **Fix:** `year-start-trails.spec.js` includes 2020–2022, length 26; `e2e/helpers.js` treats 2009 as live HTML; `e2e/README.md` dest-true list matches `ci.sh`; 2017 Face ID specs skip or delete; atlas → `ui/year/start-data.js`, then delete `js/year-ui/`; generate `js/year-card.js` from `js/year-card.json`.
 
-**Docs rewrite:** `ARCHITECTURE.md`, `CODE-STRUCTURE.md` (26 doors, React 2015 only, leanBoot list). `DISK-TRUTH.md` leftover-2× counts match the matrix. `docs/README.md` / `checklists/README.md` point at live law only.
+**Docs rewrite:** `ARCHITECTURE.md`, `CODE-STRUCTURE.md` (25 doors, React 2015 only, leanBoot list). `DISK-TRUTH.md` leftover-2× counts match the matrix. `docs/README.md` / `checklists/README.md` point at live law only.
 
 **Removed:** 27-door maps, leftover-3× unique year notes, closed implement checklists, and dated snapshots. Do not restore them.
 
 **Keep:** `MUSEUM-GRADE-UI.md`, `docs/checklists/1994.md`–`2022.md`, `FAMOUS-DOUBLE-CRITERIA.md`.
 
-**Implemented 2026-10-07:** Dest-true CI is 12 visitor specs. Dropped from `ci.sh`, `ci.yml`, and `test:e2e:dest-true`: leftover-2× unique link walk, `lean-triple-leftover`, `year-true-packs`, `2016-3x-detail`. `user-save-honest` stays. The allowlist must match those three lists exactly. `YEAR_STARTS` now includes 2011 and 2020–2022, so the hub registers 26 `YYYY-start` trails. `e2e/helpers.js` already treats 2009 as live HTML because the card says `kind: "html"`. 2017 Face ID specs already skip when the year tree is gone. Atlas loads `ui/year/start-data.js`. `js/year-ui/` is deleted. `scripts/gen_year_card.py` writes `js/year-card.js`. Law docs say 26 doors, React 2015 only, and the leanBoot list.
+**Implemented 2026-10-07:** Dest-true CI is 12 visitor specs. Dropped from `ci.sh`, `ci.yml`, and `test:e2e:dest-true`: leftover-2× unique link walk, `lean-triple-leftover`, `year-true-packs`. `user-save-honest` stays. The allowlist must match those three lists exactly. `YEAR_STARTS` now includes 2011 and 2020–2022. `e2e/helpers.js` already treats 2009 as live HTML because the card says `kind: "html"`. Atlas loads `ui/year/start-data.js`. `js/year-ui/` is deleted. `scripts/gen_year_card.py` writes `js/year-card.js`. Law docs say 25 doors, React 2015 only, and the leanBoot list.
 
 ---
 
@@ -246,7 +246,7 @@ Publish is outside these five. Say publish when you want a public URL.
 | 1 | Honest saves | Empty never writes. Blocked save tells the truth. Status has no key name. |
 | 2 | Lean loads lean | 2007–2013 skip CORE leftover packs. Leftover dests still save. |
 | 3 | Delete dead rails | Empty 3× unique gone from tree and CI. Shim generator cannot revive 2017. |
-| 4 | Visitor CI and docs | Dest-true pack is visitor I/O. Law docs say 26 doors / React 2015 only. |
+| 4 | Visitor CI and docs | Dest-true pack is visitor I/O. Law docs say 25 doors / React 2015 only. |
 | 5 | Toys on `ITT.User` | Brand/game/React finishes share the envelope. |
 
 Say `1` / `phase 1` to implement honest saves. Say `lgtm` if this five-phase cut is the one to follow.

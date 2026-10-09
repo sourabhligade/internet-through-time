@@ -348,9 +348,6 @@
         "hasTaskbar": true
       }
     },
-    "2016": {
-      "kind": "absent"
-    },
     "2017": {
       "kind": "absent"
     },

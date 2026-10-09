@@ -93,7 +93,6 @@ nav.itt-3x-also[data-itt-3x-also] a {
 
 html[data-itt-year="2013"] section.itt-4x-panel[data-4x-panel],
 html[data-itt-year="2015"] section.itt-4x-panel[data-4x-panel],
-html[data-itt-year="2016"] section.itt-4x-panel[data-4x-panel],
 html[data-itt-year="2017"] section.itt-4x-panel[data-4x-panel] {
   background: #161616 !important;
   color: #ddd !important;
@@ -101,7 +100,6 @@ html[data-itt-year="2017"] section.itt-4x-panel[data-4x-panel] {
 }
 html[data-itt-year="2013"] section.itt-4x-panel input[data-4x-field],
 html[data-itt-year="2015"] section.itt-4x-panel input[data-4x-field],
-html[data-itt-year="2016"] section.itt-4x-panel input[data-4x-field],
 html[data-itt-year="2017"] section.itt-4x-panel input[data-4x-field] {
   background: #222;
   color: #eee;

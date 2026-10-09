@@ -132,7 +132,7 @@
     }
     if (trap) {
       trap.addEventListener("click", function () {
-        feedback("Instagram Stories are 2016. That write never happens.", st, { error: true });
+        feedback("Instagram Stories launched later. That write never happens.", st, { error: true });
       });
     }
     btn.addEventListener("click", function () {
@@ -454,7 +454,7 @@
     bootFiveC(doc);
     bootVineFeed(doc);
     bootPop3Trap(doc, "[data-rd13-trap]", "15 seconds is the trap. Never writes.");
-    bootPop3Trap(doc, "[data-fb13-trap]", "Stories are 2016. Trap never writes.");
+    bootPop3Trap(doc, "[data-fb13-trap]", "Stories launched later. Trap never writes.");
     bootPop3Trap(doc, "[data-tw13-trap]", "280 is the trap. Never writes.");
     bootTwoTick(doc, "[data-ig13-req]", "[data-ig13-ack]", "ig-posts", { seconds: 15 }, "[data-ig13-status]");
     bootTwoTick(doc, "[data-io13-req]", "[data-io13-ack]", "ios7", { date: "2013-09-18" }, "[data-io13-status]");
@@ -526,7 +526,7 @@
       var root = doc.documentElement;
       if (!root || root.hasAttribute("data-official-key")) return;
       var year = root.getAttribute("data-itt-year") || "";
-      if (year !== "2010" && year !== "2011" && year !== "2012" && year !== "2013" && year !== "2014" && year !== "2016") return;
+      if (year !== "2010" && year !== "2011" && year !== "2012" && year !== "2013" && year !== "2014") return;
       var host = btn.closest("[data-lo-panel]");
       if (!host || host.hasAttribute("data-y22-kind") || host.hasAttribute("data-itt-gold-lx")) return;
       var out = host.querySelector("[data-era-result]");

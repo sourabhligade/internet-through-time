@@ -769,7 +769,7 @@
     html += "<b>" + (data.threads || []).length + "</b> follow-a-site threads · ";
     html += "<b>" + (data.trails || []).length + "</b> tours";
     html += "</p>";
-    html += "<p class='muted'>Open a layer. Every href is a room on disk. The hallway is the 26 open doors (1994–2016 and 2020–2022). Click a year. That year opens.</p>";
+    html += "<p class='muted'>Open a layer. Every href is a room on disk. The hallway is the 25 open doors (1994–2015 and 2020–2022). Click a year. That year opens.</p>";
 
     html += '<details class="atlas-layer" id="atlas-all-golds"><summary>One-thing golds <span class="n">' + golds.length + "</span></summary><ol>";
     golds.forEach(function (g) {

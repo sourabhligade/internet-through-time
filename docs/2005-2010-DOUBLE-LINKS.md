@@ -14,7 +14,6 @@ Cited adds to `js/config/leftover-2x-unique-links.js`. One dest once. Every adde
 | 2010 | 10 | 2 | 12 | 20 | Reachable was 19. Two of the nine unused folders are ranked. |
 | 2012 | 11 | 1 | 12 | — | YouTube. June 2012 rank 3. Facebook is official. |
 | 2013 | 25 | 2 | 27 | — | YouTube and Twitter. June 2013 ranks 3 and 6. Facebook is leftover-4×. |
-| 2016 | 19 | 1 | 20 | — | YouTube. June 2016 rank 3. Facebook and Instagram are official and have no `index.html`. |
 
 ## Added
 
@@ -26,7 +25,6 @@ Cited adds to `js/config/leftover-2x-unique-links.js`. One dest once. Every adde
 - **2010** Google (Hosting.com June 2010 rank 2) and Android / Nexus One (https://cybercultural.com/p/internet-2010/). Chrome, Formspring, Groupon, Netflix, Reddit, Tumblr, and Wave are on disk and were not shown as the popular match.
 - **2012** YouTube. Hosting.com June 2012 rank 3. The other top-10 names have no `years/2012/sites/<slug>/index.html`, except Facebook, which is official. https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/
 - **2013** YouTube and Twitter. Hosting.com June 2013 ranks 3 and 6. Facebook is rank 2 and already leftover-4× (`askfm` · `whisper` · `facebook`), so it is not linked again.
-- **2016** YouTube. Hosting.com June 2016 rank 3. Facebook and Instagram are official and their folders have no `index.html`.
 
 ## Left off on purpose
 

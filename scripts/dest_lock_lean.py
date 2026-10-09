@@ -41,40 +41,6 @@ EXTRA_KEEP = {
     },
 }
 
-UNIQUE_2017 = [
-    "sites/iphone/x.html",
-    "sites/fortnite/index.html",
-    "sites/twitter/280.html",
-    "sites/teams/index.html",
-    "sites/vine/gone.html",
-    "sites/switch/index.html",
-    "sites/wannacry/index.html",
-    "sites/musically/index.html",
-    "sites/equifax/index.html",
-    "sites/playable/game.html",
-    "sites/animoji/index.html",
-    "sites/ios11/index.html",
-    "sites/pubgnote/index.html",
-    "sites/cuphead/index.html",
-    "sites/twitterlite/index.html",
-    "sites/snapipo/index.html",
-    "sites/slack17/index.html",
-    "sites/hangoutschat/index.html",
-    "sites/snapmap/index.html",
-    "sites/instagram17/index.html",
-    "sites/botw/index.html",
-    "sites/splatoon2/index.html",
-    "sites/notpetya/index.html",
-    "sites/krack/index.html",
-    "sites/tbh/index.html",
-    "sites/messengerday/index.html",
-    "sites/creditfrz/index.html",
-    "sites/cloudbleed/index.html",
-    "sites/gettingoverit/index.html",
-    "sites/hollowknight/index.html",
-]
-
-
 def dest_folder(href: str) -> str | None:
     m = re.search(r"sites/([^/]+)", href or "")
     return m.group(1) if m else None
@@ -150,11 +116,6 @@ def keep_slugs(year: str, trails: dict, starts: dict, pop: dict, pop3: dict, fol
     for pid in pop3.get(year, []):
         slugs.add(pid)
     slugs |= follow.get(year, set())
-    if year == "2017":
-        for href in UNIQUE_2017:
-            s = dest_folder(href)
-            if s:
-                slugs.add(s)
     slugs |= EXTRA_KEEP.get(year, set())
     return slugs
 

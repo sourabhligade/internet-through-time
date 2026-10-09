@@ -110,7 +110,6 @@ EXPECTED = {
         "byYear": {
             "2014": {"html": 36, "savePages": 18, "destFolders": 25, "trailRows": 9, "leftover2x": 16},
             "2015": {"html": 0, "savePages": 0, "destFolders": 0, "trailRows": 0, "leftover2x": 0},
-            "2016": {"html": 0, "savePages": 0, "destFolders": 0, "trailRows": 0, "leftover2x": 0},
             "2017": {"html": 0, "savePages": 0, "destFolders": 0, "trailRows": 0, "leftover2x": 0},
         },
     },
@@ -185,6 +184,10 @@ def years_of(band: str) -> list[str]:
     return [str(y) for y in range(int(a), int(b) + 1)]
 
 
+def card_years() -> dict:
+    return json.loads((ROOT / "js" / "year-card.json").read_text(encoding="utf-8"))["years"]
+
+
 def page_hooks(text: str) -> list[str]:
     return [hook for hook in HOOKS if hook in text]
 
@@ -198,7 +201,8 @@ def official_cut(year: str) -> int:
 
 
 def build(band: str) -> dict:
-    years = years_of(band)
+    card = card_years()
+    years = [y for y in years_of(band) if y in card]
     trails = parse_trails()
     lx = matrix_dests()
     by_year: dict[str, dict] = {}

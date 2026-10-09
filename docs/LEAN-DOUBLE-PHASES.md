@@ -1,6 +1,6 @@
 # Lean double — phases, steps, goals
 
-**Not ship law.** Live hub is **25 doors** (1994–2015 and 2020–2022). **2015 is the React door.** **2016–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
+**Not ship law.** Live hub is **25 doors** (1994–2015 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 
 **Date:** 2026-09-24  
@@ -20,9 +20,9 @@ Fill thin lean doors up to the cap in the criteria, with leftover dests that wer
 
 | Class | Years | This pass |
 |---|---|---|
-| Double leftover dests | 2007, 2010, 2012, 2014, 2016, 2021, 2022 | New leftover dests, one writer each, dest-disjoint |
+| Double leftover dests | 2007, 2010, 2012, 2014, 2021, 2022 | New leftover dests, one writer each, dest-disjoint |
 | Holes only | 2013 | A row only when a cite names a real hole |
-| Stop | Forests 1994–2006, dense 2015 React / 2017–2019 absent, wiped 2023–2025 | No new dests. **2009 is live HTML** (Like), not boarded. Hub is **26 doors**. |
+| Stop | Forests 1994–2006, dense 2015 React / 2017–2019 absent, wiped 2023–2025 | No new dests. **2009 is live HTML** (Like), not boarded. Hub is **25 doors**. |
 
 ** conflict.** The criteria still lists as a thin door (GDPR Manage, aim 26). Live disk has no tree. Do not restore it in this pass unless a later note says the wipe was a mistake.
 
@@ -40,7 +40,6 @@ Recount before any HTML. Caps below are the criteria aims, not a quota. Counts a
 | 2012 | 32 | 48 | 16 | Double |
 | 2013 | 47 | 54 | 7 | Holes only |
 | 2014 | 25 | 36 | 11 | Double |
-| 2016 | 53 | 64 | 11 | Double |
 | | 0 (wiped) | 26 | — | Stop until the wipe is reopened on purpose |
 | 2021 | 18 | 30 | 12 | Double |
 | 2022 | 24 | 38 | 14 | Double |

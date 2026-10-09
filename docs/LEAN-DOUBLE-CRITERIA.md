@@ -1,11 +1,11 @@
 # Lean-door leftover double — criteria only
 
-**2017–2019 and 2023–2025 are absent.** Lists for absent years in this file are research. Do not restore `years/` for an absent year. Live doors are 1994–2016 and 2020–2022. **2015 is the React door.** 2020–2022 are live HTML. Ship law is [`DISK-TRUTH.md`](DISK-TRUTH.md).
+**2017–2019 and 2023–2025 are absent.** Lists for absent years in this file are research. Do not restore `years/` for an absent year. Live doors are 1994–2015 and 2020–2022. **2015 is the React door.** 2020–2022 are live HTML. Ship law is [`DISK-TRUTH.md`](DISK-TRUTH.md).
 
 **Date:** 2026-09-20  
 **Status:** Implemented 2026-09-20 (Step 2 named). Not dest-farm. Not leftover-3× unique growth. Leftover dests on thin lean doors only. Cap is not a quota.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
-**I/O:** [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).  
+**I/O:** [`LEAN-IO-CRITERIA.md`](LEAN-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).  
 **Leftover-3× unique dest-true:** catalogs empty. Do not grow them.  
 **Visitor 100%:** [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) — 100% is dest-true flows, not dest-folder count.  
 **Density sibling:** [`--DEST-DENSITY.md`](--DEST-DENSITY.md) — 2× unique leftover dests, not forests.  
@@ -67,7 +67,6 @@ Disk counts = first-level dirs under `years/YYYY/sites/` (2026-09-20).
 | Dest-lock lean (thin) | 2007 · 2010–2012 · 2014 · 2021 | 23 / 22 / 31 / 24 / 18 / **15** | **Double leftover dests** to the aim in §4. Do not dest-lock revert. |
 | Dest-true lean (thin) | · 2022 | 13 / 19 | **Double leftover dests** to the aim in §4. Leftover-3× unique stops stay. |
 | Dest-true lean (upper) | 2013 | 54 | **Holes only.** Do not grow to a forest. |
-| Dest-lock reverted (origin lean) | 2016 | 32 | **Double leftover dests** to the aim in §4. Do not restore the 132-dest dest-farm forest. |
 | Dest-lock reverted (already dense) | 2015 · 2017 · | 213 / 222 / 170 / 38 | **Stop** on 2015 / 2017 / . (already at the – density peer ~38). |
 | Boarded | 2009 | 78 | **Stop.** Plaque. Not a visitor door. |
 | Wiped | 2023–2025 | no tree | **Stop.** Do not restore. |
@@ -86,7 +85,6 @@ Official 10 stays 10. Leftover-3× unique dest-true dests stay at the stop alrea
 | **2012** | IG Android | `itt12-ig-android` | 24 | 9 + leftover-4× unique 3 | **48** | **24** | Double |
 | **2013** | Vine 6s | `itt13-vine-posts` | 54 | 9 | **54** | **0** unless a cited hole | Holes only |
 | **2014** | WhatsApp Install | `itt14-wa-install` | 18 | 9 | **36** | **18** | Double |
-| **2016** | IG Stories | `itt16-ig-stories` | 32 | 9 | **64** | **32** | Double |
 |  | GDPR Manage | `itt18-gdpr` | 13 | **3 stop** | **26** | **13** leftover dests, **not** leftover-3× unique | Double leftover dests |
 | **2021** | ATT Ask | `itt21-att` | 15 | **5 stop** | **30** | **15** leftover dests, **not** leftover-3× unique | Double leftover dests |
 | **2022** | ChatGPT Send | `itt22-chatgpt` | 19 | 9 | **38** | **19** | Double |
@@ -128,14 +126,6 @@ Star trap: Vine 6s · Snap Stories · IG Stories · iPhone 6 · Material · Slac
 `applepay` · `facebook` · `heartbleed` · `icebucket` · `instagram` · `iphone` · `material` · `musically14` · `playable` · `slack` · `snapchat` · `truecrypt` · `twitch` · `twitter` · `uber` · `whatsapp` · `wikipedia` · `youtube`
 
 Star trap: Watch · Win10 · IG Stories · Snap Discover · Periscope · Heartbleed exploit · Ice Bucket celebrity dump.
-
-### 2016 (23)
-
-`alphago` · `assistant` · `dyn` · `facebook` · `fblive` · `houseparty` · `instagram` · `iphone` · `jio` · `linkedinms` · `mastodon` · `moments` · `musically` · `netflix` · `pokemongo` · `reddit` · `slack` · `smario` · `snapchat` · `vine` · `whatsapp` · `windows10` · `youtube`
-
-No folder, and not a map row: `e2eabout` · `inbox` · `iphone7about` · `pogoabout` · `reactabout` · `spectabout` · `storyabout` · `superbowl` · `win10end`. Those labels used to open Mastodon. That wiring is gone. Do not put it back.
-
-Star trap: TikTok brand · Reels · Meta · Chromium Edge · Face ID / iPhone X · AirPods Pro · Switch as a 2016 buy.
 
 ### (13) — research record, tree wiped
 
@@ -238,7 +228,7 @@ Do not skip ahead to dest HTML.
 | [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) | 100% is dest-true flows |
 | [`FLOW-CHECK-DIAGRAM.md`](FLOW-CHECK-DIAGRAM.md) | Check links then dest-true I/O |
 | [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md) | Current year holes. Leftover-3× catalogs empty |
-| [`2016-2021-IO-CRITERIA.md`](2016-2021-IO-CRITERIA.md) | I1–I14 |
+| [`LEAN-IO-CRITERIA.md`](LEAN-IO-CRITERIA.md) | I1–I14 |
 | [`--DEST-DENSITY.md`](--DEST-DENSITY.md) | Earlier 2× leftover dest pass |
 | 2017-UNIQUE-FLOWS.md | Not on disk. 2017 is absent. Leftover-20 is not a live rail |
 | [`2x-harvest-c-1999-2004.md`](2x-harvest-c-1999-2004.md) | Forest Board C — already shipped · do not re-run |
@@ -442,45 +432,6 @@ WhatsApp Install stays the chip. Watch is a trap. Chrome / Google / Yahoo holes 
 | `androidl` | Material leftover | Watch | https://en.wikipedia.org/wiki/Android_Lollipop |
 | `ios8` | Update leftover | Watch | https://en.wikipedia.org/wiki/IOS_8 |
 
-### 2016
-
-IG Stories stays the chip. Douyin 2016 leftover dest, not a TikTok leftover-3× unique dest. Do not restore the 132-dest forest.
-
-| Slug | Verb | Trap | Cite |
-|------|------|------|------|
-| `douyin` | For You leftover | Reels | https://en.wikipedia.org/wiki/TikTok |
-| `wikipedia` | Edit leftover | Reels | https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/ |
-| `twitter` | Tweet leftover | Reels | https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/ |
-| `amazon` | Browse leftover | Reels | https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/ |
-| `google` | Search leftover | Reels | https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/ |
-| `yahoo` | Portal leftover | Reels | https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/ |
-| `baidu` | Search leftover | Reels | https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/ |
-| `yandex` | Search leftover | Reels | https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/ |
-| `chrome` | Tab leftover | Reels | https://gs.statcounter.com/press/chrome-overtakes-ie-globally-monthly |
-| `github` | Push leftover | Reels | https://en.wikipedia.org/wiki/GitHub |
-| `pinterest` | Pin leftover | Reels | https://en.wikipedia.org/wiki/Pinterest |
-| `tumblr` | Reblog leftover | Reels | https://en.wikipedia.org/wiki/Tumblr |
-| `twitch` | Watch leftover | Reels | https://en.wikipedia.org/wiki/Twitch_(service) |
-| `discord` | Join leftover | Reels | https://en.wikipedia.org/wiki/Discord |
-| `airpods` | Pair leftover | Reels | https://en.wikipedia.org/wiki/AirPods |
-| `pixel` | Assistant leftover | Reels | https://en.wikipedia.org/wiki/Pixel_(1st_generation) |
-| `nougat` | Update leftover | Reels | https://en.wikipedia.org/wiki/Android_Nougat |
-| `allo` | Chat leftover | Reels | https://en.wikipedia.org/wiki/Google_Allo |
-| `duo` | Call leftover | Reels | https://en.wikipedia.org/wiki/Google_Duo |
-| `googlehome` | Hey leftover | Reels | https://en.wikipedia.org/wiki/Google_Home |
-| `oculusrift` | Strap leftover | Reels | https://en.wikipedia.org/wiki/Oculus_Rift_CV1 |
-| `psvr` | Strap leftover | Reels | https://en.wikipedia.org/wiki/PlayStation_VR |
-| `overwatch` | Queue leftover | Reels | https://en.wikipedia.org/wiki/Overwatch_(video_game) |
-| `doom2016` | Rip leftover | Reels | https://en.wikipedia.org/wiki/Doom_(2016_video_game) |
-| `uncharted4` | Climb leftover | Reels | https://en.wikipedia.org/wiki/Uncharted_4:_A_Thief%27s_End |
-| `nomanssky` | Warp leftover | Reels | https://en.wikipedia.org/wiki/No_Man%27s_Sky |
-| `clashroyale` | Battle leftover | Reels | https://en.wikipedia.org/wiki/Clash_Royale |
-| `signal` | Chat leftover | Reels | https://en.wikipedia.org/wiki/Signal_(software) |
-| `telegram` | Chat leftover | Reels | https://en.wikipedia.org/wiki/Telegram_(software) |
-| `paypal` | Send leftover | Reels | https://en.wikipedia.org/wiki/PayPal |
-| `applepay` | Tap leftover | Reels | https://en.wikipedia.org/wiki/Apple_Pay |
-| `panamapapers` | Leak leftover | Reels | https://en.wikipedia.org/wiki/Panama_Papers |
-
 ### — research record, tree wiped
 
 GDPR Manage (`itt18-gdpr`) was the chip. Extra dests below are the research list, not folders to build. Leftover-3× unique stays stopped at 3. Do not restore `years/`.
@@ -572,7 +523,6 @@ Holes only. Dest folders stay **54**. No dest this pass.
 | 2013 | Any dest | Holes only · no cited hole this pass |
 | 2014 | Watch as dest · Heartbleed exploit | Trap |
 | 2015 / 2017 / | Double | Already dense warehouses |
-| 2016 | TikTok brand dest · Switch as a 2016 buy · Face ID | Neighbor gold |
 | | leftover-3× unique past 3 · Accept All dest · Reels | D14 · trap |
 | 2021 | leftover-3× unique past 5 · ChatGPT dest · Wordle-as-2021-mass · dest-lock revert to 294 | D14 · trap |
 | 2022 | GPT-4 · X wordmark · Threads · leftover-2× dest-farm to 85 | Trap · dest-farm |
@@ -588,7 +538,6 @@ Holes only. Dest folders stay **54**. No dest this pass.
 | 2012 | 24 | **48** | 48 | 24 | 9 stop | 10 |
 | 2013 | 54 | **54** | 54 | 0 | 9 stop | 10 |
 | 2014 | 18 | **36** | 36 | 18 | 9 stop | 10 |
-| 2016 | 32 | **64** | 64 | 32 | 9 stop | 10 |
 | | 13 | **0 wiped** | 26 research aim | 0 | 3 stop, not on disk | 10 research |
 | 2021 | 15 | **30** | 30 | 15 | 5 stop | 10 |
 | 2022 | 19 | **38** | 38 | 19 | 9 stop | 10 |

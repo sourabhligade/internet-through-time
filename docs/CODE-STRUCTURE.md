@@ -1,7 +1,7 @@
 # Code structure — SRP map
 
 **Date:** 2026-10-07  
-**Law:** 25 doors. HTML 1994–2014 and 2020–2022. React **2015 only**. Absent: 2016–2019 and 2023–2025. **leanBoot:** 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2020, 2021, 2022. Year differences live in **config + dest HTML**. Shared behavior lives **once**. See [`ARCHITECTURE.md`](ARCHITECTURE.md) and [`DISK-TRUTH.md`](DISK-TRUTH.md).  
+**Law:** 25 doors. HTML 1994–2014 and 2020–2022. React **2015 only**. Absent: 2017–2019 and 2023–2025. **leanBoot:** 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2020, 2021, 2022. Year differences live in **config + dest HTML**. Shared behavior lives **once**. See [`ARCHITECTURE.md`](ARCHITECTURE.md) and [`DISK-TRUTH.md`](DISK-TRUTH.md).  
 **Do not** dest-farm leftover-20, unfreeze 1994–2006, or grow leftover-3× unique catalogs (they are **empty** and off CI).
 
 ## Target layout
@@ -18,7 +18,7 @@ js/immersion/boot.js year-agnostic loader (reads data-itt-year or /years/YYYY/)
 ui/year/ Starting Point / shell (canonical). Atlas loads ui/year/start-data.js
 e2e/ Playwright
  dest-true CI pack 12 specs in package.json test:e2e:dest-true / scripts/ci.sh / .github/workflows/ci.yml
- warehouse specs (leftover-2× link walk, lean-triple, year-true-packs, 2016-3x-detail, densify, leftover-999, 4×, 5×) stay off that pack
+ warehouse specs (leftover-2× link walk, lean-triple, year-true-packs, densify, leftover-999, 4×, 5×) stay off that pack
 docs/DISK-TRUTH.md live dest-folder counts
 ```
 

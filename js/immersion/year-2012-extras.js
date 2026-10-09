@@ -518,7 +518,7 @@
       var root = doc.documentElement;
       if (!root || root.hasAttribute("data-official-key")) return;
       var year = root.getAttribute("data-itt-year") || "";
-      if (year !== "2010" && year !== "2011" && year !== "2012" && year !== "2013" && year !== "2014" && year !== "2016") return;
+      if (year !== "2010" && year !== "2011" && year !== "2012" && year !== "2013" && year !== "2014") return;
       var host = btn.closest("[data-lo-panel]");
       if (!host || host.hasAttribute("data-y22-kind") || host.hasAttribute("data-itt-gold-lx")) return;
       var out = host.querySelector("[data-era-result]");

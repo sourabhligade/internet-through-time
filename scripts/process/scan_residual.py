@@ -70,7 +70,7 @@ KNOWN = {
 }
 
 # drop invalid
-KNOWN = {k: v for k, v in KNOWN.items() if isinstance(v, int) and 1991 <= v <= 2016}
+KNOWN = {k: v for k, v in KNOWN.items() if isinstance(v, int) and 1991 <= v <= 2025}
 
 
 def shell_years():

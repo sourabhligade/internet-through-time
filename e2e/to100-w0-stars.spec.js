@@ -1,5 +1,5 @@
 // @ts-check
-/** W0 — 2015/2016 one-thing chips on Starting Point */
+/** W0 — 2015 one-thing chips on Starting Point. */
 const { test, expect } = require("@playwright/test");
 
 const fs = require("fs");

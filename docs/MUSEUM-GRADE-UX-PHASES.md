@@ -22,8 +22,8 @@ flowchart TD
 |-------|------------------|------|-------|
 | 1 | One official envelope. Extras skip when the dest owns `[data-official-verb]`. Empty / trap / incomplete write nothing. | `e2e/ux-phase1-honesty.spec.js` | Implemented |
 | 2 | Hub → year door → star dest sits in that year’s iframe. Gold leftover stays leftover. First-boot `pages/home.html` is not `ERR_ABORTED`. Home from a dest still lands Starting Point. | `e2e/ux-phase2-window.spec.js` | Implemented. B1 first-boot abort closed. Gold leftover 3em gap. |
-| 3 | Accepted write prints `Saved.` Keys stay in storage. They leave the glass. Empty / trap / incomplete hold in red. Honesty also inside the 2016 iframe. | `e2e/ux-phase3-receipt.spec.js` | Implemented |
-| 4 | Chrome groups still fit 390×844. Guided stays six. No shared phone skin. | `e2e/ux-phase4-phone.spec.js` | Implemented. Full 26-door lock remains `e2e/phase4-phone.spec.js`. |
+| 3 | Accepted write prints `Saved.` Keys stay in storage. They leave the glass. Empty / trap / incomplete hold in red. Honesty also inside the year iframe. | `e2e/ux-phase3-receipt.spec.js` | Implemented |
+| 4 | Chrome groups still fit 390×844. Guided stays six. No shared phone skin. | `e2e/ux-phase4-phone.spec.js` | Implemented. Full 25-door lock remains `e2e/phase4-phone.spec.js`. |
 | 5 | 2015 React door: header is the stop, no `itt15-` on the glass, `#/year/2017` is not a door. | `e2e/ux-phase5-2015.spec.js` | Implemented |
 
 Gate after a change in these files: the matching `ux-phaseN-*.spec.js` with `--workers=1`, then `npm run check`. Scan improvisation: `e2e/ux-phase-scan.spec.js` and `e2e/chrome-habit-shell.spec.js`. Dest-true 12 stays the visitor push pack. Full `npm test` is not this gate.
@@ -32,20 +32,13 @@ Gate after a change in these files: the matching `ux-phaseN-*.spec.js` with `--w
 
 ## Phase 1 — Honesty writers
 
-One trail key. One envelope `{v:1, kind:official, real:true}`. Catch / Love / Like-only / empty never write the star when official-verb owns the dest.
-
-| Dest | Empty / trap | Complete | Envelope |
-|------|----------------|----------|----------|
-| Pokémon GO `/years/2016/sites/pokemongo/index.html` | Catch alone. Team + GPS + Catch (extras skip). | Tick `[data-official-req]` + `[data-req]`, fill need, click first `[data-official-verb]` (Valor / Mystic / Instinct). | `itt16-pogo` official |
-| Reactions `/years/2016/sites/facebook/reactions.html` | Love. Like without reqs. | Four official-req + need + Like (`data-fb-like` is the verb). | `itt16-fb-react` official |
-| Stories `/years/2016/sites/instagram/stories.html` | Empty Add. | Title + two official-req + Add. | `itt16-ig-stories` official |
-| E2E `/years/2016/sites/whatsapp/e2e.html` | Open with no ticks. | Official-req + data-req + need + Open. | `itt16-wa-e2e` official |
+One trail key. One envelope `{v:1, kind:official, real:true}`. Empty / trap / incomplete never write the star when official-verb owns the dest.
 
 Same extras class already folded (scan, no dest-farm): 2006 Watch / Twttr, 2009 Like, 2010 iPad order. Plot / Guess Doodle are year games.
 
-**Done when:** dest-true 12 still green. Phase 1 spec green. Visitor sees one writer. Warehouse Love / Catch extras no longer write the star.
+**Done when:** dest-true 12 still green. Phase 1 spec green. Visitor sees one writer.
 
-**Local:** http://127.0.0.1:8080/years/2016/sites/pokemongo/index.html · http://127.0.0.1:8080/years/2016/sites/facebook/reactions.html
+**Local:** http://127.0.0.1:8080/years/1998/sites/google/lucky.html · http://127.0.0.1:8080/app/index.html#/year/2015
 
 ---
 
@@ -64,8 +57,8 @@ Direct dest URLs stay HTTP 200. They are dest-as-tab, not the grade path.
 | Check | Pass |
 |-------|------|
 | Year door iframe | Starting Point `.ott-guided` loads. First `pages/home.html` is not `ERR_ABORTED`. iframe `src` stays relative `pages/home.html` until dest nav. |
-| Dest in frame | 2016 Stories in the iframe. Parent still says 2016. |
-| 1998 Lucky in frame | Dest HTML, year chrome stays 1998. |
+| Dest in frame | 1998 Lucky in the iframe. Parent still says 1998. |
+| 2022 ChatGPT in frame | Dest HTML, year chrome stays 2022. |
 | Gold leftover | `html[data-official-key] [data-lo-panel][data-itt-gold-lx]` is `display:block` with a top gap. Fold CSS keeps `margin-top: 1.5em`. Writes leftover keys, not the star. |
 | Direct dest | `/years/1998/sites/google/lucky.html` HTTP 200. |
 | Home / reload | Same-path absolute reload still bounces through `about:blank` (`setIframeSrc`). |
@@ -84,7 +77,7 @@ Direct dest URLs stay HTTP 200. They are dest-as-tab, not the grade path.
 | Quota / private mode | `This browser blocked the save.` |
 | Empty / trap / incomplete | Hold sentence in red. Nothing stored. |
 
-Named dests in this lock: Stories, GO, Reactions, E2E, 2015 Periscope. Status node is `[data-official-status]`, the extras status hook, or React `.status`. It must not print `itt16-` / `itt15-`.
+Named dests in this lock: 1998 Lucky, 2015 Periscope. Status node is `[data-official-status]`, the extras status hook, or React `.status`. It must not print `itt15-`.
 
 Clip stays: `.itt-pixel-failed`, `code[data-itt-clip]`. Leave `[failed-final]` in HTML. Wikipedia reconstruction line is exhibit copy.
 
@@ -92,7 +85,7 @@ Hold / blocked copy is `#a00`. `Saved.` is `#060`. React `OfficialStop` uses `.s
 
 **Done when:** those dests print `Saved.` or blocked after a legal save. No storage key on the glass. Empty / trap / incomplete hold in red. No second extras error after dest-true.
 
-**Local:** http://127.0.0.1:8080/years/2016/sites/instagram/stories.html · http://127.0.0.1:8080/app/index.html#/year/2015
+**Local:** http://127.0.0.1:8080/years/1998/sites/google/lucky.html · http://127.0.0.1:8080/app/index.html#/year/2015
 
 ---
 
@@ -110,11 +103,11 @@ Viewport **390×844**. One pass per chrome group. Fail: a shared phone skin that
 | Vine | http://127.0.0.1:8080/years/2013/ |
 | Flat | http://127.0.0.1:8080/years/2014/ |
 | React | http://127.0.0.1:8080/app/index.html#/year/2015 |
-| Chrome habit | http://127.0.0.1:8080/years/2016/ and http://127.0.0.1:8080/years/2022/ |
+| Chrome habit | http://127.0.0.1:8080/years/2022/ |
 
 Pass: menubar inside 390 when that year has a menubar, directory reachable, guided still six, cards still one card, no sideways scroll, Chrome-habit chips ~16px.
 
-Full 26-door lock: `e2e/phase4-phone.spec.js`. This phase rewalks the groups above.
+Full 25-door lock: `e2e/phase4-phone.spec.js`. This phase rewalks the groups above.
 
 ---
 
