@@ -2,8 +2,6 @@
 const { test, expect } = require("@playwright/test");
 
 
-const { openReactStop, completeReactStop } = require("./helpers");
-
 test.describe("Chrome habit shell labels", () => {
   for (const year of ["2020", "2021", "2022"]) {
     test(`${year} shell names Chrome habit, not Internet Explorer`, async ({ page }) => {
@@ -61,34 +59,19 @@ test.describe("Chrome habit shell labels", () => {
     await expect(box).toHaveValue(/houseparty\/index\.html/);
   });
 
-  test("React hall does not list absent years", async ({ page }) => {
+  test("React hall has no door", async ({ page }) => {
     await page.goto("/app/index.html");
-    await expect(page.locator(".lede")).toContainText("2015 is the React door.");
-    await expect(page.locator(".cards .year")).toHaveText(["2015"]);
-    await expect(page.locator(".cards .star")).toHaveText(["Periscope Go LIVE"]);
-    await expect(page.locator(".hall")).not.toContainText("2017");
-    await expect(page.locator(".hall")).not.toContainText(/absent/i);
-    await expect(page.locator(".hall")).not.toContainText(/boarded/i);
+    await expect(page.getByRole("heading", { name: "No React door" })).toBeVisible();
+    await expect(page.locator("body")).toContainText("2015 is omitted pending rework.");
+    await expect(page.locator(".cards .year")).toHaveCount(0);
+    await expect(page.locator("body")).not.toContainText("Periscope");
     await expect(page.locator('a[href="../index.html"]')).toBeVisible();
   });
 
-  test("the React door wears Win10 Chrome habit", async ({ page }) => {
+  test("2015 omitted hash is not a door", async ({ page }) => {
     await page.goto("/app/index.html#/year/2015");
-    await expect(page.locator(".door")).toHaveClass(/os-win10/);
-    await expect(page.locator(".door")).toHaveClass(/browser-chrome-habit/);
-    await expect(page.locator(".door-2014")).toHaveCount(0);
-    await expect(page.locator(".habit-tab")).toHaveText("Chrome habit");
-    await expect(page.locator(".habit-location")).toHaveValue(/google\.com\/web2015\//);
-    await expect(page.locator(".year-star")).toHaveText("Periscope");
-    await expect(page.getByRole("button", { name: "Lock", exact: true })).toHaveCount(0);
-  });
-
-  test("a finished React stop does not show the storage key", async ({ page }) => {
-    const room = await openReactStop(page, "2015", "itt15-periscope");
-    await completeReactStop(page, room);
-    const status = room.locator(".status");
-    await expect(status).toHaveText("Saved.");
-    await expect(status).not.toContainText("itt15-");
-    await expect(room).toHaveAttribute("id", "itt15-periscope");
+    await expect(page.getByRole("heading", { name: "2015 is not a door" })).toBeVisible();
+    await expect(page.locator(".door")).toHaveCount(0);
+    await expect(page.locator("body")).not.toContainText("Periscope");
   });
 });

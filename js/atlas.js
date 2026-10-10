@@ -9,7 +9,7 @@
   var data = (window.ITT && ITT.AtlasData) || {};
   var YEARS_ALL = [];
   var y;
-  var SKIP = { "2016": 1, "2017": 1, "2018": 1, "2019": 1, "2023": 1, "2024": 1, "2025": 1 };
+  var SKIP = { "2015": 1, "2016": 1, "2017": 1, "2018": 1, "2019": 1, "2023": 1, "2024": 1, "2025": 1 };
   for (y = 1994; y <= 2022; y++) {
     if (!SKIP[String(y)]) YEARS_ALL.push(String(y));
   }
@@ -56,26 +56,13 @@
     return years ? years[String(year)] || null : null;
   }
 
-  function isReactDoor(year) {
-    var rec = cardRec(year);
-    if (rec) return rec.kind === "react";
-    return !!{ "2015": 1 }[String(year)];
-  }
-
   function yearHome(year) {
     var rec = cardRec(year);
     if (rec && rec.href) return "/" + String(rec.href).replace(/^\//, "");
-    if (isReactDoor(year)) return "/app/index.html#/year/" + year;
     return "/years/" + year + "/";
   }
 
   function yearRoom(year, rel) {
-    if (isReactDoor(year)) {
-      var room = String(rel || "");
-      if (room.indexOf("pages/about") === 0) return yearHome(year) + "?stop=about";
-      if (room.indexOf("pages/map") === 0) return yearHome(year) + "?stop=map";
-      return yearHome(year);
-    }
     return "years/" + year + "/" + String(rel || "").replace(/^\//, "");
   }
 
@@ -179,13 +166,11 @@
  }
 
  function mapBranches(year) {
- if (isReactDoor(year)) return [];
  var maps = window.ITT && ITT.flowMaps && ITT.flowMaps[year];
  return (maps && maps.branches) || [];
  }
 
  function popularOf(year) {
- if (isReactDoor(year)) return [];
  var maps = window.ITT && ITT.flowMaps && ITT.flowMaps[year];
  var branches = (maps && maps.branches) || [];
  var i, b;
@@ -199,7 +184,6 @@
   function gamesOf(year) {
     var out = [];
     var rec = (data.years && data.years[year]) || {};
-    if (isReactDoor(year)) return rec.game ? [rec.game] : [];
     var play = window.ITT && ITT.yearPlayableGames && ITT.yearPlayableGames[year];
     var extras = window.ITT && ITT.yearExtraGames && ITT.yearExtraGames[year];
     var i;
@@ -227,12 +211,10 @@
   }
 
   function twoXOf(year) {
-    if (isReactDoor(year)) return [];
     return extra2x[year] || [];
   }
 
   function trio3Of(year) {
-    if (isReactDoor(year)) return [];
     return pop3x3[year] || [];
   }
 
@@ -473,17 +455,6 @@
         html += "<li>" + a(path, s.name || "stop");
         if (s.nextLabel) html += " <span class='muted'>" + esc(s.nextLabel) + "</span>";
         html += "</li>";
-      });
-      html += "</ol></details>";
-    } else if (rec.reactStops && rec.reactStops.length) {
-      html +=
-        '<details class="atlas-layer" open><summary>Official in-year trail (React door) <span class="n">' +
-        rec.reactStops.length +
-        "</span></summary><ol class='ten'>";
-      rec.reactStops.forEach(function (s) {
-        var label = (s && (s.name || s.label)) || "stop";
-        var stopHref = (s && s.href) || (s && s.key ? yearHome(year) + "?stop=" + s.key : yearHome(year));
-        html += "<li>" + a(stopHref, label) + "</li>";
       });
       html += "</ol></details>";
     }
@@ -769,7 +740,7 @@
     html += "<b>" + (data.threads || []).length + "</b> follow-a-site threads · ";
     html += "<b>" + (data.trails || []).length + "</b> tours";
     html += "</p>";
-    html += "<p class='muted'>Open a layer. Every href is a room on disk. The hallway is the 25 open doors (1994–2015 and 2020–2022). Click a year. That year opens.</p>";
+    html += "<p class='muted'>Open a layer. Every href is a room on disk. The hallway is the 24 open doors (1994–2014 and 2020–2022). Click a year. That year opens.</p>";
 
     html += '<details class="atlas-layer" id="atlas-all-golds"><summary>One-thing golds <span class="n">' + golds.length + "</span></summary><ol>";
     golds.forEach(function (g) {

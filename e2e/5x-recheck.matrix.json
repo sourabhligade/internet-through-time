@@ -8,7 +8,7 @@
       "flows": [
         {
           "suffix": "iuma",
-          "room": "sites/iuma/index.html",
+          "room": "sites/iuma/listen.html",
           "next": "sites/fishcam/index.html",
           "key": "itt94-iuma",
           "ok": true,

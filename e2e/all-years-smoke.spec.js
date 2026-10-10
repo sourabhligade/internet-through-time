@@ -20,7 +20,7 @@ const path = require('path');
 /** Boarded plaque years: no visitor door. 2023–2025 have no tree. */
 const BOARDED = new Set(['2023', '2024', '2025']);
 /** Calendar 2016 is omitted from year-card (no tree, no hub card). Restoring years/2016/index.html must not promote a smoke door. */
-const OMITTED = new Set(['2016']);
+const OMITTED = new Set(['2015', '2016']);
 
 /** Discover years/YYYY with index.html (skip research-only, boarded, and omitted). */
 function shippedYears() {
@@ -78,13 +78,23 @@ test.describe('all years smoke — home page direct', () => {
   }
 });
 
-test.describe('omitted 2016 is not a door', () => {
+test.describe('omitted 2015 and 2016 are not doors', () => {
   test('/years/2016/ 404s and hub has no y2016 card', async ({ page }) => {
     await page.goto('/');
     await expect(page.locator('a.year-card[href*="years/2016"]')).toHaveCount(0);
     await expect(page.locator('.year-card.y2016')).toHaveCount(0);
     const res = await page.goto('/years/2016/');
     expect(res && res.status()).toBe(404);
+  });
+
+  test('2015 has no hub card and hash is not a door', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.locator('a.year-card.available[data-year="2015"]')).toHaveCount(0);
+    await expect(page.locator('.year-card.y2015')).toHaveCount(0);
+    const res = await page.goto('/app/index.html#/year/2015');
+    expect(res && res.ok()).toBeTruthy();
+    await expect(page.getByRole("heading", { name: "2015 is not a door" })).toBeVisible();
+    await expect(page.locator("body")).not.toContainText("Periscope");
   });
 });
 
@@ -95,9 +105,7 @@ test.describe('hub unlock consistency', () => {
       els.map((e) => e.getAttribute('data-year')).filter(Boolean)
     );
     expect(years.length).toBeGreaterThanOrEqual(10);
-    const reactDoor = new Set(["2015"]);
     for (const y of years) {
-      if (reactDoor.has(y)) continue;
       const res = await page.goto(`/years/${y}/`);
       expect(res && res.status(), `year ${y}`).toBeLessThan(400);
       await expect(page.locator('body')).toBeVisible();

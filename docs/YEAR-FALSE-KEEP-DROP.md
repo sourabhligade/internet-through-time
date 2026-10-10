@@ -359,7 +359,7 @@ KEEP 21 · DROP 14 · DO-NOT-APPLY 7 · MISS 0
 | `paypal` | leftover dest | **DROP** |
 KEEP 19 · DROP 16 · DO-NOT-APPLY 6 · MISS 0
 
-## · star `googleplus`
+## 2011 · star `googleplus`
 
 | Slug | Class | Verdict |
 |------|-------|---------|
@@ -529,7 +529,7 @@ KEEP 10 · DROP 0 · DO-NOT-APPLY 8 · MISS 0
 | `ios8` | leftover dest | **KEEP** |
 KEEP 17 · DROP 11 · DO-NOT-APPLY 8 · MISS 0
 
-## 2015 · star `periscope`
+## 2015 · **omitted** · KEEP/DROP sheet only · not a door · do not dest-farm
 
 | Slug | Class | Verdict |
 |------|-------|---------|
@@ -554,7 +554,7 @@ KEEP 17 · DROP 11 · DO-NOT-APPLY 8 · MISS 0
 | `youtube` | leftover-3× unique | **DO-NOT-APPLY** |
 KEEP 11 · DROP 2 · DO-NOT-APPLY 6 · MISS 0
 
-## 2017 · star `iphone`
+## 2017 · **absent** · KEEP/DROP sheet only · not a door · do not dest-farm
 
 | Slug | Class | Verdict |
 |------|-------|---------|
@@ -590,7 +590,7 @@ KEEP 11 · DROP 2 · DO-NOT-APPLY 6 · MISS 0
 | `hollowknight` | leftover-20 extra | **KEEP** |
 KEEP 26 · DROP 3 · DO-NOT-APPLY 1 · MISS 0
 
-## · star `gdpr`
+## 2018 · **absent** · KEEP/DROP sheet only · not a door · do not dest-farm
 
 | Slug | Class | Verdict |
 |------|-------|---------|
@@ -640,7 +640,7 @@ KEEP 26 · DROP 3 · DO-NOT-APPLY 1 · MISS 0
 | `caffeine` | leftover dest | **KEEP** |
 KEEP 20 · DROP 20 · DO-NOT-APPLY 4 · MISS 0
 
-## · star `disneyplus`
+## 2019 · **absent** · KEEP/DROP sheet only · not a door · do not dest-farm
 
 | Slug | Class | Verdict |
 |------|-------|---------|
@@ -666,7 +666,7 @@ KEEP 20 · DROP 20 · DO-NOT-APPLY 4 · MISS 0
 
 KEEP 8 · DROP 0 · DO-NOT-APPLY 11 · MISS 0
 
-## · star `zoom`
+## 2020 · star `zoom`
 
 | Slug | Class | Verdict |
 |------|-------|---------|
@@ -778,25 +778,25 @@ KEEP 13 · DROP 15 · DO-NOT-APPLY 10 · MISS 0
 | 1994 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2007 | `ie6` | XP/IE6 residual official dest · not leftover dest |
 | 2010 | `playable` | year-game dest · official n=10 · not leftover dest |
-| | `playable` | year-game dest · official n=10 · not leftover dest |
+| 2011 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2012 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2013 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2014 | `playable` | year-game dest · official n=10 · not leftover dest |
-| 2015 | `playable` | year-game dest · official n=10 · not leftover dest |
-| 2017 | `playable` | year-game dest · official n=10 · not leftover dest |
-| | `playable` | year-game dest · official n=10 · not leftover dest |
-| | `reddit` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-| | `wikipedia` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-| | `youtube` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-| | `amazon` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-| | `chrome` | Chrome/Win10 habit residual · not leftover dest to delete without named pass |
-| | `facebook` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-| | `google` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-| | `instagram` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-| | `playable` | year-game dest · official n=10 · not leftover dest |
-| | `twitter` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
-| | `windows10` | Chrome/Win10 habit residual · not leftover dest to delete without named pass |
-| | `youtube` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
+| 2015 | `playable` | omitted · not a door · do not dest-farm |
+| 2017 | `playable` | absent · not a door · do not dest-farm |
+| 2018 | `playable` | absent · not a door · do not dest-farm |
+| 2018 | `reddit` | absent · not a door · leftover-3× unique catalog empty · do not dest-farm |
+| 2018 | `wikipedia` | absent · not a door · leftover-3× unique catalog empty · do not dest-farm |
+| 2018 | `youtube` | absent · not a door · leftover-3× unique catalog empty · do not dest-farm |
+| 2018 | `amazon` | absent · not a door · leftover-3× unique catalog empty · do not dest-farm |
+| 2018 | `chrome` | absent · not a door · do not dest-farm |
+| 2018 | `facebook` | absent · not a door · leftover-3× unique catalog empty · do not dest-farm |
+| 2018 | `google` | absent · not a door · leftover-3× unique catalog empty · do not dest-farm |
+| 2018 | `instagram` | absent · not a door · leftover-3× unique catalog empty · do not dest-farm |
+| 2018 | `playable` | absent · not a door · do not dest-farm |
+| 2018 | `twitter` | absent · not a door · leftover-3× unique catalog empty · do not dest-farm |
+| 2018 | `windows10` | absent · not a door · do not dest-farm |
+| 2018 | `youtube` | absent · not a door · leftover-3× unique catalog empty · do not dest-farm |
 | 2021 | `amazon` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
 | 2021 | `chrome` | Chrome/Win10 habit residual · not leftover dest to delete without named pass |
 | 2021 | `google` | leftover-3× unique dest-disjoint leftover dest · not “launch that year” · do not dest-farm leftover-3× unique stop |
@@ -818,5 +818,5 @@ KEEP 13 · DROP 15 · DO-NOT-APPLY 10 · MISS 0
 
 Named dest-true flows: KEEP 405 · DROP 191 · DO-NOT-APPLY 103 · MISS **0**. Research continue `year-false-keep-drop` scored every remaining MISS row. Cites live in the workflow scratch report.
 
-Leftover dest DROPs still on disk were deleted 2026-09-20 (13 dest folders: 2007 feedburner/lastfm/clubpenguin · 2010 ios4/nexusone/froyo · duolingo/path · 2012 applemaps · 2014 androidl · 2021 m1/clubhouse21 · 2022 musk). Earlier leftover dest DROPs were already gone. Official 10, leftover-3× unique dests, playable year-games, leftover-4× unique chrome/twitter/soundcloud, and 2017 leftover-20 extras stay. Do not dest-farm 2015/2017/ dest folders. Do not invent official 11th dests. Do not strip leftover-3× unique dests from the =3 / 2021=5 stops because they launched earlier.
+Leftover dest DROPs still on disk were deleted 2026-09-20 (13 dest folders: 2007 feedburner/lastfm/clubpenguin · 2010 ios4/nexusone/froyo · duolingo/path · 2012 applemaps · 2014 androidl · 2021 m1/clubhouse21 · 2022 musk). Earlier leftover dest DROPs were already gone. Official 10, leftover-3× unique dests (catalogs empty), playable year-games, leftover-4× unique chrome/twitter/soundcloud stay. leftover-20 is unshipped (2017 absent). Do not dest-farm 2015/2017 dest folders. Do not dest-farm leftover-20. Do not invent official 11th dests. Do not strip leftover-3× unique dests from the =3 / 2021=5 stops because they launched earlier.
 

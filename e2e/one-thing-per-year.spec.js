@@ -6,11 +6,11 @@
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
-const { completeReactStop, revealLeftoverRails } = require("./helpers");
+const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 
-/** @type {{ year: string, path: string, key: string, react?: boolean, incomplete?: (p: import('@playwright/test').Page) => Promise<void>, complete?: (p: import('@playwright/test').Page) => Promise<void>, steps?: (p: import('@playwright/test').Page) => Promise<void> }[]} */
+/** @type {{ year: string, path: string, key: string, incomplete?: (p: import('@playwright/test').Page) => Promise<void>, complete?: (p: import('@playwright/test').Page) => Promise<void>, steps?: (p: import('@playwright/test').Page) => Promise<void> }[]} */
 const THINGS = [
   {
     year: "1994",
@@ -315,28 +315,7 @@ const THINGS = [
       await page.locator("[data-official-verb]").click();
     },
   },
-  {
-    year: "2015",
-    path: "/app/index.html#/year/2015?stop=itt15-periscope",
-    key: "itt15-periscope",
-    react: true,
-    incomplete: async (page) => {
-      await page.waitForFunction(() => !!(window.ITT && window.ITT.User && window.ITT.User.store), null, {
-        timeout: 15000,
-      });
-      const room = page.locator("article.stop#itt15-periscope");
-      await room.waitFor({ timeout: 15000 });
-      await room.locator(".actions button").last().click();
-    },
-    complete: async (page) => {
-      await page.waitForFunction(() => !!(window.ITT && window.ITT.User && window.ITT.User.store), null, {
-        timeout: 15000,
-      });
-      const room = page.locator("article.stop#itt15-periscope");
-      await room.waitFor({ timeout: 15000 });
-      await completeReactStop(page, room);
-    },
-  },
+
   {
     year: "2020",
     path: "/years/2020/sites/zoom/meeting.html",
@@ -384,7 +363,7 @@ const THINGS = [
 test.describe("One-thing per year — load + REAL gate", () => {
   for (const t of THINGS) {
     test(`${t.year} loads and incomplete does not write ${t.key}`, async ({ page }) => {
-      test.skip(!t.react && !fs.existsSync(path.join(ROOT, "years", t.year, "index.html")), t.year + " wiped");
+      test.skip(!fs.existsSync(path.join(ROOT, "years", t.year, "index.html")), t.year + " wiped");
       await page.goto(t.path);
       await revealLeftoverRails(page);
       await page.evaluate((k) => localStorage.removeItem(k), t.key);
@@ -403,7 +382,7 @@ test.describe("One-thing per year — load + REAL gate", () => {
     });
 
     test(`${t.year} complete writes ${t.key}`, async ({ page }) => {
-      test.skip(!t.react && !fs.existsSync(path.join(ROOT, "years", t.year, "index.html")), t.year + " wiped");
+      test.skip(!fs.existsSync(path.join(ROOT, "years", t.year, "index.html")), t.year + " wiped");
       await page.goto(t.path);
       await revealLeftoverRails(page);
       await page.evaluate((k) => localStorage.removeItem(k), t.key);

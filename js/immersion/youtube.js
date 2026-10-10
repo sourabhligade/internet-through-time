@@ -121,12 +121,6 @@
       bits.push('<a href="../facebook/index.html">Facebook leftover</a>');
       bits.push('<a href="../../pages/about.html">2014 about</a>');
     }
-    if (y === 2015) {
-      bits.push('<a href="../apple/watch.html">Apple Watch</a>');
-      bits.push('<a href="../periscope/index.html">Periscope</a>');
-      bits.push('<a href="../windows10/index.html">Windows 10</a>');
-      bits.push('<a href="../../pages/about.html">2015 about</a>');
-    }
     return bits;
   }
   function pointNextWatch(doc, title) {

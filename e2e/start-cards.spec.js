@@ -70,16 +70,9 @@ for (const [year, want] of Object.entries(CARDS)) {
   });
 }
 
-test("2015 React door shows six guided steps and ten flows", async ({ page }) => {
+test("2015 omitted hash is not a door", async ({ page }) => {
   const res = await page.goto("/app/index.html#/year/2015");
   expect(res && res.ok()).toBeTruthy();
-  await expect(page.locator("article.stop ol button")).toHaveText([
-    "About 2015",
-    "Periscope Go LIVE",
-    "Apple Music",
-    "Windows 10",
-    "Reddit redesign",
-    "Year flow map",
-  ]);
-  await expect(page.locator(".rails section").nth(1).locator("ol button")).toHaveCount(10);
+  await expect(page.getByRole("heading", { name: "2015 is not a door" })).toBeVisible();
+  await expect(page.locator("body")).not.toContainText("Periscope");
 });

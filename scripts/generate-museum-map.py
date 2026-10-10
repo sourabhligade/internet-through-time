@@ -174,10 +174,11 @@ def render(data: dict) -> str:
 
     open_labels = [rec["year"] for rec in years]
     n_open = len(open_labels)
-    expected = [str(y) for y in range(1994, 2015 + 1)] + ["2020", "2021", "2022"]
-    span = "1994–2015 and 2020–2022" if open_labels == expected else ", ".join(open_labels)
+    expected = [str(y) for y in range(1994, 2014 + 1)] + ["2020", "2021", "2022"]
+    span = "1994–2014 and 2020–2022" if open_labels == expected else ", ".join(open_labels)
     lede = (
         f"{n_open} years open ({span}). "
+        "2015 and 2016 are omitted. "
         "2017, 2018, 2019, and 2023–2025 are absent. "
         "Leftover-2× hrefs. Incomplete never writes."
     )
@@ -228,17 +229,17 @@ def render(data: dict) -> str:
       <li>smoke-production.py</li>
       <li>audit-internal-links.py — 440,253 / 0 broken</li>
       <li>test-authenticity.py — 84/84</li>
-      <li>test-pipeline.py — sitemap lists ship years only (2023–2025 absent)</li>
+      <li>test-pipeline.py — sitemap lists ship years only (2015/2016 omitted · 2017–2019 and 2023–2025 absent)</li>
       <li>check-5x-contract.py</li>
       <li>audit-mock-flows.js</li>
-      <li>check-all-years.py — 29/29</li>
+      <li>check-all-years.py — 24/24</li>
       <li>HTTP smoke on :8080</li>
     </ul>
   </div>
   <div class="card">
     <h3>E2E ship pack</h3>
     <ul class="plain">
-      <li>oss-visitor-gate — enter all 25</li>
+      <li>oss-visitor-gate — enter all 24</li>
       <li>hub · atlas · 3× links · all-years smoke</li>
       <li>Gold-A · popular 3× · one-thing</li>
       <li>2005–2010 leftover-4× ·  CUT-DOUBLE + 5×</li>
@@ -254,7 +255,8 @@ def render(data: dict) -> str:
   <span class="pill lock">leftover-3× second — official 10 + first 3 = 13 dests</span>
   <span class="pill lock">leftover-4× on lock years</span>
   <span class="pill lock">2022 is an open HTML door</span>
-  <span class="pill lock">2018, 2019, and 2023–2025 stay absent</span>
+  <span class="pill lock">2015 and 2016 stay omitted</span>
+  <span class="pill lock">2017, 2018, 2019, and 2023–2025 stay absent</span>
   <span class="pill lock">do not restore 2013 or the forests</span>
 </div>
 

@@ -75,24 +75,12 @@ for (const [year, url] of PAGES) {
   });
 }
 
-test("2015 stop hides the key and the builder line, and the header is the stop", async ({ page }) => {
+test("2015 omitted hash is not a door", async ({ page }) => {
   const res = await page.goto("/app/index.html#/year/2015");
   expect(res && res.ok()).toBeTruthy();
-  await page.locator("article").getByRole("button", { name: "Apple Music", exact: true }).click();
-  await expect(page.locator("header em")).toContainText("Apple Music");
-  await expect(page.locator("header")).not.toContainText("Periscope");
+  await expect(page.getByRole("heading", { name: "2015 is not a door" })).toBeVisible();
+  await expect(page.locator("body")).not.toContainText("Periscope");
   await expect(page.locator("body")).not.toContainText("[failed-final]");
-  const keys = await page.evaluate(() => {
-    return Array.from(document.querySelectorAll("body *")).filter((el) => {
-      if (el.children.length) return false;
-      if (!/itt15-/.test(el.textContent || "")) return false;
-      const cs = getComputedStyle(el);
-      if (cs.display === "none" || cs.visibility === "hidden") return false;
-      const r = el.getBoundingClientRect();
-      return r.width > 8 && r.height > 8;
-    }).map((el) => (el.textContent || "").trim());
-  });
-  expect(keys).toEqual([]);
 });
 
 async function visibleText(page) {

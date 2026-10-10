@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-04
 **Status:** Criteria only. Not an implement pass. No new folders from this file.
-**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json`. Hub is **25 doors** (1994–2015 and 2020–2022). **2015 is React.** **2017, 2018, 2019, and 2023–2025 are absent.**
+**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json`. Hub is **24 doors** (1994–2014 and 2020–2022). **2015 is omitted.** **2017, 2018, 2019, and 2023–2025 are absent.**
 **Older map:** [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) (2026-09-20). Its counts and its “2009 boarded / 2020–2022 absent” lines are stale. This file is the live class map. Candidate rows in the older file stay research until a cite and a named implement.
 **I/O:** [`LEAN-IO-CRITERIA.md`](LEAN-IO-CRITERIA.md) · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).
 **Bibliography:** [`SOURCES.md`](SOURCES.md). A 403 is not a cite. Web Design Museum galleries returned 403 on 2026-10-04.
@@ -19,7 +19,7 @@ Deep research is the companion pass. Its shortlist is not a build list. A row is
 |--|-----------|---------------|
 | Envelope | Read period sites, year essays, company blogs, ranks | 5,000 new dest folders |
 | New dests | Leftover dests on thin doors, one slug, one verb, one key | An 11th official stop · a second star · `lx` plus `d2` counted as two dests |
-| Years | §4 thin doors | Forests 1994–2006 · React 2015 · absent 2017, 2018, 2019, 2023–2025 |
+| Years | §4 thin doors | Forests 1994–2006 · omitted 2015 · absent 2017, 2018, 2019, 2023–2025 |
 | When HTML | After a named implement and a cite that opened | A silent dest-farm from this file or from a research shortlist |
 
 ---
@@ -53,14 +53,14 @@ The slice files for the 5k workflow are not on disk. A pass that says it read al
 
 ## 3. Year classes
 
-Counts are first-level folders under `years/YYYY/sites/`, with `playable` excluded, on 2026-10-04. Games are distinct `data-game-id` values. React doors have no site folders.
+Counts are first-level folders under `years/YYYY/sites/`, with `playable` excluded, on 2026-10-04. Games are distinct `data-game-id` values. Omitted 2015 has no site folders.
 
 | Class | Years | Sites now | Games | This pass |
 |-------|-------|----------:|------:|-----------|
 | Forest | 1994–2006 | 150–805 | about 20 | **Stop.** Do not add dests. |
 | Thin, double | 2007, 2010, 2011, 2012, 2014, 2020, 2021, 2022 | see §4 | see §4 | Leftover dests up to the aim. Cap, not a quota. |
 | Holes only | 2008 (112), 2009 (77), 2013 (51) | already past a thin door | 3 / 1 / 1 | A dest only when a cited famous room is missing. No doubling. |
-| React | 2015 | 0 folders. 10 official | Live Rush | **Stop.** No HTML tree. No 11th official. |
+| Omitted | 2015 | 0 | 0 | **Stop.** No tree, no hub card. Do not dest-farm. |
 | Absent | 2017, 2018, 2019, 2023, 2024, 2025 | 0 | 0 | **Stop.** No tree, no hub card, no React door. |
 
 ---

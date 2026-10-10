@@ -147,7 +147,7 @@ async function walkDoor(page, door, gold) {
   await page.waitForFunction(
     (sel) => {
       const b = document.querySelector(sel);
-      return !!(b && b.getAttribute("data-pop-bound") === "1");
+      return !!(b && (b.getAttribute("data-pop-bound") === "1" || b.getAttribute("data-lo-bound") === "1"));
     },
     door.go,
     { timeout: 15000 }

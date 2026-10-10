@@ -1,6 +1,6 @@
 # 2015 3× — look checklist
 
-**STOP (2026-09-30 docs pass).** F1–F10 fail-look boxes stay `[ ]`. Do not dest-farm from this file. [`LEAN-TRIPLE-2015.md`](LEAN-TRIPLE-2015.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
+**STOP.** **2015 is omitted pending rework.** F1–F10 fail-look boxes stay `[ ]`. Do not dest-farm from this file. [`LEAN-TRIPLE-2015.md`](LEAN-TRIPLE-2015.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 **Date:** 2026-09-20  
 **Status:** Legal 3× leftover dests on disk 2026-09-20. Famous year-true leftover dests. Not dest-farm. Not leftover-3× unique growth.  
@@ -38,7 +38,7 @@ If 3× is done, a visitor still sees **lean I/O**, not 3× dests.
 - [x] A6 Also this year warehouse stays folded (`?deep=1` / details)
 - [x] A7 Official dest leftover-2× first paint still **0** (2015 live recount)
 - [x] A8 No invented brand pixels · `[failed-final]` on leftover dests (law; new dests must keep it)
-- [x] A9 ILS June table still **ends ** on About
+- [x] A9 ILS June table still **ends 2018** on About
 
 ---
 

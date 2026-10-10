@@ -276,18 +276,12 @@
       }
       link.hidden = false;
       var door = ITT.YEAR_CARD && ITT.YEAR_CARD.years && ITT.YEAR_CARD.years[rec.year];
-      if (door && door.kind === "react") {
-        var hash = "#/year/" + rec.year;
-        var stopM = String(rec.path || "").match(/[?#&]stop=([^&#]+)/);
-        if (stopM) hash += "?stop=" + stopM[1];
-        link.href = "../../app/index.html" + hash;
-      } else if (door && door.kind !== "html") {
+      if (door && door.kind !== "html") {
         link.hidden = true;
         link.removeAttribute("href");
         return;
-      } else {
-        link.href = "../../years/" + rec.year + "/?room=" + encodeURIComponent(rec.path);
       }
+      link.href = "../../years/" + rec.year + "/?room=" + encodeURIComponent(rec.path);
       link.textContent = rec.label + " · " + rec.year;
       link.title = "Same brand, next year" + (rec.note ? " · " + rec.note : "");
     }

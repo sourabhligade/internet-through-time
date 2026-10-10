@@ -60,9 +60,10 @@
       title: "Skip-Intro Runner",
       href: "game.html",
       key: "itt98-game-skipintro",
+      extra: true,
       inspire: "Agency Flash skip-intro culture",
-      blurb: "Jump splash walls. Grab green SKIP pads. Don’t wait for 100%.",
-      why: "1998 agency sites were 40-second logo intros. Skipping them was the shared sport of the web.",
+      blurb: "Jump splash walls. Grab green SKIP pads. Don’t wait for 100%. Extra · Snap is official n=10.",
+      why: "1998 agency sites were 40-second logo intros. Skipping them was the shared sport of the web. This cabinet is extra; official n=10 is Snap.",
       era: "StarCraft and Half-Life owned the PC. The browser’s hit was the Skip Intro button.",
       famous: "Brick Bat + Concentration",
       accent: "#336699"

@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-08  
 **Status:** 1994–1997 through 2022–2025 phases 1–6 are done locally, including 2014–2017. Leftover-2× dests with no save hook stay on disk and are not dest-farmed. Standing gate lives in this file.  
-**Law:** `js/year-card.json` + `scripts/itt_gate.py` `SHIP_YEARS`. Hub is 25 doors. Frozen HTML is 1994–2006. leanBoot is 2007–2014 and 2020–2022. 2015 is the React door. Absent: 2017–2019 and 2023–2025.
+**Law:** `js/year-card.json` + `scripts/itt_gate.py` `SHIP_YEARS`. Hub is 24 doors. Frozen HTML is 1994–2006. leanBoot is 2007–2014 and 2020–2022. 2015 is omitted. Absent: 2017–2019 and 2023–2025.
 
 This plan does not reopen `docs/PROD-USER-DATA-SRP.md` or `docs/MUSEUM-GRADE-UI.md`. Those phases stay as shipped. This plan runs the six phases on every working flow already on disk in the band: trail stops, leftover-2× dests, and every other year-site page that already has a save control. Scan of remaining overclaim vs disk: [`PHASE-SCAN.md`](PHASE-SCAN.md).
 
@@ -23,12 +23,12 @@ Counted from disk on 2026-10-07, live years only:
 | Year-site HTML pages | 6,869 |
 | Pages that already have a save control (`data-lo-save`, `data-official-verb`, `data-ytl-go`, `data-yt-upload`, `data-game-start`, `data-wiki-save`, or `data-su-stumble`) | 5,859 |
 | Dest folders under `years/*/sites/` | 4,938 |
-| Leftover-2× unique dests in `e2e/leftover-2x-unique-links.matrix.json` | 1,158, and all 1,158 folders are on disk |
-| Trail rows in `js/config/flow-trails.js` | 396 |
-| React 2015 stops | 10 |
+| Leftover-2× unique dests in `e2e/leftover-2x-unique-links.matrix.json` | 1,138, and all 1,138 folders are on disk |
+| Trail rows in `js/config/flow-trails.js` | 386 |
+| React doors | 0. 2015 is omitted |
 | Checklist lines that name an `itt` key | 508, of which 480 are ticked |
 
-The first draft of this plan only walked the official trail, about 256 stops. That is the star path. The working set is the 5,859 save pages. The six phases below run on that set, one band at a time. The register for a band is generated from the folders and the matrix. It is not a hand-written checklist of 5,859 lines.
+The first draft of this plan only walked the official trail, about 256 stops (that count included omitted 2015 and 2016). Live official HTML stops are 236. That is the star path. The working set is the 5,859 save pages. The six phases below run on that set, one band at a time. The register for a band is generated from the folders and the matrix. It is not a hand-written checklist of 5,859 lines.
 
 | Year | HTML | Save pages | Dest folders | Trail rows | Leftover-2× |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -53,25 +53,23 @@ The first draft of this plan only walked the official trail, about 256 stops. Th
 | 2012 | 70 | 49 | 32 | 10 | 12 |
 | 2013 | 53 | 47 | 52 | 9 | 27 |
 | 2014 | 36 | 18 | 25 | 9 | 16 |
-| 2015 | React door | 10 stops | — | 10 | 0 |
+| 2015 | omitted | 0 | — | 0 | 0 |
 | 2020 | 24 | 22 | 22 | 10 | 0 |
 | 2021 | 60 | 18 | 18 | 10 | 0 |
 | 2022 | 31 | 29 | 25 | 10 | 0 |
-| **Live total** | **6,869** | **5,859** | **4,935** | **406** | **1,158** |
+| **Live total** | **6,869** | **5,859** | **4,935** | **386** | **1,138** |
 
 2017, 2018, 2019, 2023, 2024, and 2025 are 0. They stay 0.
 
 ## What the official trail still has wrong
 
-`ITT.flowTrails` is 396 rows. The React door adds 10. Official length is 10, except 2004 (8) and 2013 and 2014 (9). That is 256 official stops.
+`ITT.flowTrails` is 386 rows. Official length is 10, except 2004 (8) and 2013 and 2014 (9). That is 236 official HTML stops.
 
-256 of those 256 have a ticked line in `docs/checklists/` after the 2014–2017 React door visit. The page `data-official-key` matches the trail key on every HTML official stop that was opened. Facebook 1B `itt12-facebook` is a ticked 2012 line. The six live 2015 names are ticked after the React door visit.
-
-The 2015 checklist still has six open lines for keys the built door does not contain: `itt15-googlephotos`, `itt15-applemusic`, `itt15-snap-discover`, `itt15-discord`, `itt15-le`, `itt15-game-blobrush`.
+236 of those 236 have a ticked line in `docs/checklists/` for the live HTML official stops. The page `data-official-key` matches the trail key on every HTML official stop that was opened. Facebook 1B `itt12-facebook` is a ticked 2012 line. **2015 is omitted.** The 2015 checklist is deleted with the door.
 
 2000 stops 21–40 are on the trail and on disk, and their checklist lines are open. Each page says it is a leftover and not an official 2000 stop. They stay leftover. They are part of the 557 save pages in 2000, so the 1998–2001 band runs phases 2–6 on them. They are not promoted to official stops.
 
-`flow-index/index.html` lists flows by number, name, link, and next. It has no complete column. Its 2015 table already uses the live names. Its 2012 table lists Facebook 1B as stop 10. Its 2000 table lists all 40.
+`flow-index/index.html` lists flows by number, name, link, and next. It has no complete column. 2015 is omitted from that index. Its 2012 table lists Facebook 1B as stop 10. Its 2000 table lists all 40.
 
 A finish is one envelope from `ITT.User.save` / `ITT.User.store`: `{ v:1, year, key, kind, real:true, ts }`. `finished(whenKey)` is true for any `real:true`, including kind `toy`. `year-extras-kit.js` `bootChecks` now passes `opts.kind` from `extra.official` / leftover / pack / pop / gameId. A payload with `official:true` still infers official even without opts.
 
@@ -95,7 +93,7 @@ Historical second stores (closed on disk by verbOwned / official-verb / dest-tru
 
 IUMA `[data-player-play]` is the 1994 audio player in `media-1994.js`. It does not store the trail key. Leave the player.
 
-2000 stops 21–40, the 2008 leftover-pack rules (three open checklist lines), the 2011 image line, and the 2015 image line stay open. This plan does not tick them.
+2000 stops 21–40, the 2008 leftover-pack rules (three open checklist lines), and the 2011 image line stay open. This plan does not tick them. 2015 is omitted; there is no 2015 checklist line.
 
 ---
 
@@ -110,12 +108,12 @@ Eight calendar bands. Two of them are short because the absent years stay absent
 | 2002–2005 | 2002, 2003, 2004, 2005 | frozen | 2,319 | 2,066 | 286 | 78 |
 | 2006–2009 | 2006 frozen. 2007–2009 lean | mixed | 794 | 595 | 198 | 50 |
 | 2010–2013 | 2010–2013 | lean | 182 | 150 | 51 | 39 |
-| 2014–2017 | 2014, 2015 React. 2017 absent | mixed | 115 + 20 React | 92 | 36 | 29 |
+| 2014–2017 | 2014 live. 2015 omitted. 2017 absent | lean | 18 | 25 | 16 | 9 |
 | 2018–2021 | 2020 and 2021. 2018 and 2019 absent | lean | 40 | 40 | 0 | 20 |
 | 2022–2025 | 2022. 2023–2025 absent | lean | 29 | 25 | 0 | 10 |
-| **All live** | 25 doors |  | **5,859** | **4,938** | **1,158** | **406** |
+| **All live** | 24 doors |  | **5,859** | **4,935** | **1,138** | **386** |
 
-2014–2017 is 18 save pages in 2014, 20 React stops (10 official + 10 leftover). 115 + 20 = 135 working flows in that band. The total row’s 5,859 is HTML save pages only. Add the 20 React stops and the working set is 5,879. 2017 adds nothing.
+2014–2017 is 18 save pages in 2014. 2015 is omitted. 2017 adds nothing. The total row’s 5,859 is HTML save pages only.
 
 Inside a phase, the done-when is fixed. The sentence on the button and which listener folds into `official-verb` can change, as long as the envelope rule holds and no new stop appears.
 
@@ -238,16 +236,16 @@ leanBoot. Working set: 182 save pages, 150 dest folders, 51 leftover-2× dests, 
 
 ## 2014–2017
 
-2014 is leanBoot. 2015 is React. 2017 stays absent. Working set: 18 HTML save pages plus 20 React stops (10 official + 10 leftover). Do not create `years/2017` until named.
+2014 is leanBoot. **2015 is omitted.** 2017 stays absent. Working set: 18 HTML save pages. Do not dest-farm `years/2015`. Do not create `years/2017` until named.
 
 | Phase | Work in this band |
 | --- | --- |
-| 1 | Done 2026-10-09. Register: `e2e/registers/band-2014-2017.json` (115 save pages, 19 official keys). Leftover-2× dests with no save hook stay on disk and are not dest-farmed. 2015 tree and 2017 stay absent. Lock: `e2e/band-2014-2017-register.spec.js`. |
-| 2 | Done 2026-10-09. WhatsApp Install is official-verb. React Apple Music stores kind `official`. Lock: `e2e/band-2014-2017-one-writer.spec.js`. |
-| 3 | Done 2026-10-09. Empty WhatsApp, empty Periscope title, ended broadcast, and Live Rush score 0 write nothing. Lock: `e2e/band-2014-2017-empty-holds.spec.js`. |
-| 4 | Done 2026-10-09. WhatsApp and React Periscope say `Saved.` with no storage key. `OfficialStop.jsx` success copy is `Saved.` Rebuild `app/` from `react/` in this phase. Lock: `e2e/band-2014-2017-receipt.spec.js`. |
-| 5 | Done 2026-10-09. WhatsApp leftover writes gold-lx leftover and leaves the star empty. 2015 leftover never stamps Periscope. Gold leftover sits after the exhibit. Lock: `e2e/band-2014-2017-leftover-off-star.spec.js`. |
-| 6 | Done 2026-10-09. Walks all 115 register rows split by year. 2015 remaining stops open the React URL. 2017 stays absent. Lock: `e2e/band-2014-2017.spec.js`. |
+| 1 | Done 2026-10-09. Register: `e2e/registers/band-2014-2017.json` (18 HTML save pages, 9 official keys, 2015 census 0). Leftover-2× dests with no save hook stay on disk and are not dest-farmed. 2015 omitted. 2017 stays absent. Lock: `e2e/band-2014-2017-register.spec.js`. |
+| 2 | Done 2026-10-09. WhatsApp Install is official-verb. 2015 omitted hash is not a door. Lock: `e2e/band-2014-2017-one-writer.spec.js`. |
+| 3 | Done 2026-10-09. Empty WhatsApp writes nothing. 2015 omitted hash is not a door. Never Periscope. Lock: `e2e/band-2014-2017-empty-holds.spec.js`. |
+| 4 | Done 2026-10-09. WhatsApp says `Saved.` with no storage key. 2015 omitted hash is not a door. Lock: `e2e/band-2014-2017-receipt.spec.js`. |
+| 5 | Done 2026-10-09. WhatsApp leftover writes gold-lx leftover and leaves the star empty. 2015 omitted hash is not a door. Lock: `e2e/band-2014-2017-leftover-off-star.spec.js`. |
+| 6 | Done 2026-10-09. Walks all 18 2014 register rows. 2015 omitted hash is not a door. 2017 stays absent. Lock: `e2e/band-2014-2017.spec.js`. |
 
 ## 2018–2021
 
@@ -284,7 +282,7 @@ leanBoot. Working set: 182 save pages, 150 dest folders, 51 leftover-2× dests, 
 3. 2002–2005. Stumble and the YouTube upload.
 4. 2006–2009. Twttr, Like, and Plot.
 5. 2010–2013. iPad, Guess Doodle, and the Facebook 1B checklist line.
-6. 2014–2017. The six live 2015 names, and 2017 stays absent.
+6. 2014–2017. 2015 is omitted. 2017 stays absent. Do not dest-farm.
 7. 2018–2021. A check, plus any Zoom writer the page actually runs. 2018 and 2019 stay absent.
 8. 2022–2025. A check. 2023–2025 stay absent.
 

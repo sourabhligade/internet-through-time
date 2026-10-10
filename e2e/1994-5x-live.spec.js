@@ -7,13 +7,19 @@ const { revealLeftoverRails } = require('./helpers');
 async function getKey(page, key) { return page.evaluate((k) => localStorage.getItem(k), key); }
 
 test.describe('1994 5× live F1–F5', () => {
-  test('F1 IUMA listen empty never writes', async ({ page }) => {
-    await page.goto('/years/1994/sites/iuma/index.html');
+  test('F1 IUMA listen empty never writes then complete', async ({ page }) => {
+    await page.goto('/years/1994/sites/iuma/listen.html');
     await page.evaluate((k) => { try { localStorage.removeItem(k); } catch (e) {} }, 'itt94-iuma');
     await page.reload();
-    await revealLeftoverRails(page);
     await expect(page.locator('[data-5x-save], [data-5x-loop]')).toHaveCount(0);
-    return;
+    await page.locator('[data-official-verb]').click();
+    expect(await getKey(page, 'itt94-iuma')).toBeFalsy();
+    await page.locator('[data-official-need]').fill('IU');
+    const reqs = page.locator('[data-official-req]');
+    const nReq = await reqs.count();
+    for (let i = 0; i < nReq; i++) await reqs.nth(i).check({ force: true });
+    await page.locator('[data-official-verb]').click();
+    await expect.poll(async () => getKey(page, 'itt94-iuma'), { timeout: 8000 }).toBeTruthy();
   });
 
   test('F2 FishCam gold writes after live stills', async ({ page }) => {

@@ -93,17 +93,24 @@
   function renderCabinet(host, y, spec) {
     var best = loadBest(spec.key);
     var accent = spec.accent || "#333";
+    var extra = !!spec.extra;
+    var kicker = extra
+      ? "Year game extra · " + esc(y) + " · Snap is official n=10"
+      : "Year game cabinet · " + esc(y) + " · period-inspired · no toys";
+    var goalLead = extra ? "Year game extra · not official n=10" : "This year’s game";
     host.innerHTML =
       '<div class="yp-shell yp-cabinet" data-yp-cabinet style="--yp-accent:' +
       esc(accent) +
       '">' +
-      '<p class="yp-kicker">Year game cabinet · ' +
-      esc(y) +
-      " · period-inspired · no toys</p>" +
+      '<p class="yp-kicker">' +
+      kicker +
+      "</p>" +
       '<h1 class="yp-title">' +
       esc(spec.title) +
       "</h1>" +
-      '<p class="yp-goal"><b>This year’s game</b> ' +
+      '<p class="yp-goal"><b>' +
+      goalLead +
+      "</b> " +
       esc(spec.inspire) +
       "</p>" +
       '<p class="yp-blurb">' +
@@ -133,7 +140,11 @@
         : "") +
       extraLinks(y) +
       "</p>" +
-      '<p class="yp-honesty yp-best">Museum original · labeled inspiration · no ripped SWF · incomplete runs never write. Start from the game page.</p>' +
+      '<p class="yp-honesty yp-best">' +
+      (extra
+        ? "Museum original · extra · Snap is official n=10 · labeled inspiration · no ripped SWF · incomplete runs never write. Start from the game page."
+        : "Museum original · labeled inspiration · no ripped SWF · incomplete runs never write. Start from the game page.") +
+      "</p>" +
       '<p class="yp-foot">Educational reconstruction · scores stay in this browser only.</p>' +
       "</div>";
   }

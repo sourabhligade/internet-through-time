@@ -1,13 +1,12 @@
 // @ts-check
 /**
- * Phase 6 band check for 2014–2017. Walks every register row. 2015 cases
- * open the React URL. 2017 stays absent. Off dest-true.
+ * Phase 6 band check for 2014–2017. Walks every register row. 2015 is omitted.
+ * 2017 stays absent. Off dest-true.
  */
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
 const { walkOne } = require("../scripts/build_passes.js");
-const { completeReactStop } = require("./helpers.js");
 
 const ROOT = path.join(__dirname, "..");
 const REGISTER = path.join(ROOT, "e2e/registers/band-2014-2017.json");
@@ -55,28 +54,10 @@ test.describe("2014-2017 phase 6 band check", () => {
     expect(fs.existsSync(path.join(ROOT, "years/2017"))).toBe(false);
   });
 
-  test("React remaining 2015 stops write official", async ({ page }) => {
-    const keys = [
-      "itt15-music",
-      "itt15-reddit",
-      "itt15-meerkat",
-      "itt15-slack",
-      "itt15-youtube",
-      "itt15-game-liverush",
-    ];
-    for (const key of keys) {
-      await page.goto("/app/index.html#/year/2015?stop=" + key);
-      await page.waitForFunction(() => !!(window.ITT && window.ITT.User && window.ITT.User.store), null, {
-        timeout: 15000,
-      });
-      const room = page.locator("article.stop#" + key);
-      await room.waitFor({ timeout: 15000 });
-      await page.evaluate((k) => localStorage.removeItem(k), key);
-      await completeReactStop(page, room);
-      await expect.poll(() => raw(page, key), { timeout: 8000 }).toBeTruthy();
-      expect((await envelope(page, key)).kind).toBe("official");
-      await expect(room.locator(".status")).toHaveText("Saved.");
-    }
+  test("2015 omitted hash is not a door", async ({ page }) => {
+    await page.goto("/app/index.html#/year/2015");
+    await expect(page.getByRole("heading", { name: "2015 is not a door" })).toBeVisible();
+    await expect(page.locator("body")).not.toContainText("Periscope");
   });
 
   for (const year of ["2014"]) {

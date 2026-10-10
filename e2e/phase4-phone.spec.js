@@ -200,29 +200,13 @@ for (const year of HABIT) {
   });
 }
 
-test("2015 phone shows the verb, hides the storage key, and leaves room under the rails", async ({ page }) => {
+test("2015 omitted hash is not a door on phone 390", async ({ page }) => {
   await page.setViewportSize(VIEW);
   const res = await page.goto("/app/index.html#/year/2015");
   expect(res && res.ok()).toBeTruthy();
-  await page.waitForSelector(".rails");
-  const verb = page.getByRole("button", { name: "Periscope Go LIVE" }).first();
-  await expect(verb).toBeVisible();
-  await expect(page.locator("article.stop ol button")).toHaveCount(6);
-  const verbBox = await verb.boundingBox();
-  const railsBox = await page.locator(".rails").boundingBox();
-  expect(verbBox.y + verbBox.height).toBeLessThanOrEqual(844);
-  expect(railsBox.height).toBeLessThan(500);
-  const visibleKeys = await page.evaluate(() => {
-    return Array.from(document.querySelectorAll("body *")).filter((el) => {
-      if (el.children.length) return false;
-      if (!/itt15-/.test(el.textContent || "")) return false;
-      const cs = getComputedStyle(el);
-      if (cs.display === "none" || cs.visibility === "hidden") return false;
-      const r = el.getBoundingClientRect();
-      return r.width > 8 && r.height > 8;
-    }).map((el) => (el.textContent || "").trim());
-  });
-  expect(visibleKeys).toEqual([]);
+  await expect(page.getByRole("heading", { name: "2015 is not a door" })).toBeVisible();
+  await expect(page.locator(".rails")).toHaveCount(0);
+  await expect(page.locator("body")).not.toContainText("Periscope");
   const scroll = await page.evaluate(() => document.documentElement.scrollWidth);
   expect(scroll).toBeLessThanOrEqual(391);
 });

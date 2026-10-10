@@ -187,9 +187,6 @@
       { path: "sites/whatsapp/index.html", label: "WhatsApp Install", blurb: "$19B. Install is the save. Messenger is the trap.", match: "/whatsapp/" },
       { path: "sites/heartbleed/index.html", label: "Heartbleed", blurb: "Rotate the leftover. CVE-2014-0160.", match: "/heartbleed/" }),
 
-    "2015": yearVisitTour("2015",
-      { path: "app/index.html#/year/2015?stop=itt15-periscope", label: "Periscope Go LIVE", blurb: "Type a title, then Go LIVE.", match: "stop=itt15-periscope" },
-      { path: "app/index.html#/year/2015?stop=itt15-music", label: "Apple Music", blurb: "June 2015. Play is the save.", match: "stop=itt15-music" }),
     "2007": yearVisitTour("2007",
       { path: "sites/iphone/index.html", label: "iPhone Safari", blurb: "Empty / App Store / Chrome never write. Go does.", match: "/iphone/" },
       { path: "sites/streetview/index.html", label: "Street View leftover", blurb: "29 May leftover. Not the chip.", match: "/streetview/" }),
@@ -419,17 +416,6 @@
 
   function stepHref(step, trailId) {
     if (!step) return "/index.html#passport";
-    var rec = yearRec(step.year);
-    if (rec && rec.kind === "react") {
-      if (step.path && step.path.indexOf("#/year/") !== -1) {
-        return "/" + String(step.path).replace(/^\//, "");
-      }
-      var base = String(rec.href || ("app/index.html#/year/" + step.year)).replace(/^\//, "");
-      if (step.path === "pages/about.html") {
-        return "/" + base + (base.indexOf("?") < 0 ? "?stop=about" : "");
-      }
-      return "/" + base;
-    }
     if (step.path && step.path.indexOf("#/year/") !== -1) {
       return "/" + String(step.path).replace(/^\//, "");
     }
@@ -682,16 +668,10 @@
 
   function isLiveYear(year) {
     var rec = yearRec(year);
-    return !!(rec && (rec.kind === "html" || rec.kind === "react"));
+    return !!(rec && rec.kind === "html");
   }
 
   function tourHref(year) {
-    var rec = yearRec(year);
-    if (rec && rec.kind === "react" && rec.href) {
-      var href = String(rec.href).replace(/^\//, "");
-      if (href.indexOf("?") < 0) href += "?stop=about";
-      return "/" + href;
-    }
     return (
       "/years/" +
       year +

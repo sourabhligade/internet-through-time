@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Every official-10 dest 1994–2024 is a REAL writer.
+ * Every official-10 dest on the 24 HTML doors is a REAL writer.
  * Incomplete / trap / empty never writes whenKey.
  * Complete writes year-prefixed JSON { real, year } (games write { real, gameId }).
  */
@@ -269,15 +269,6 @@ const STAR = {
       await page.locator("[data-official-req]").nth(1).check();
       await page.locator("[data-official-need]").fill("leftover residual");
       await page.locator("[data-wa14-install]").click();
-    },
-  },
-  "itt15-periscope": {
-    incomplete: async (page) => {
-      await page.locator("[data-peri-live]").click();
-    },
-    complete: async (page) => {
-      await page.fill("[data-peri-title]", "museum rooftop");
-      await page.locator("[data-peri-live]").click();
     },
   },
   "itt20-zoom": {
@@ -671,8 +662,8 @@ async function runDest(page, d) {
 
 test.describe("official 10 · every dest REAL", () => {
   test("every live official dest has a named whenKey and a file", () => {
-    // The React door is 2015. Its official saves are in the year mvp specs.
-    expect(DESTS.length, "official dests").toBeGreaterThanOrEqual(19 * 10);
+    // 2015 is omitted. HTML official saves stay in this spec.
+    expect(DESTS.length, "official dests").toBeGreaterThanOrEqual(236);
     const empty = DESTS.filter((d) => !d.whenKey);
     expect(empty, "empty whenKeys").toEqual([]);
   });

@@ -20,9 +20,15 @@ const LIVE_LO = [
   "sites/flappybird/index.html flappybird-lx",
   "sites/game2048/index.html game2048-lx",
   "sites/inbox/index.html inbox-lx",
+  "sites/instagram/index.html ig-lx",
   "sites/ios8/index.html ios8-lx",
+  "sites/musically14/index.html ml-6x",
   "sites/oculusfb/index.html oculusfb-lx",
+  "sites/snapchat/index.html snap-lx",
+  "sites/truecrypt/index.html tc-6x",
+  "sites/uber/index.html uber-lx",
   "sites/whatsapp/index.html gold-lx",
+  "sites/wikipedia/index.html wk-lx",
 ];
 
 function liveLo() {
@@ -254,7 +260,7 @@ test.describe("2014 official 10 end-to-end REAL", () => {
 });
 
 test.describe("2014 leftover 2× every dest end-to-end REAL", () => {
-  test("live leftover keys are the nine 2014 rooms", () => {
+  test("live leftover keys are the 2014 rooms", () => {
     const got = LO.map((d) => d.href + " " + d.suffix).sort();
     expect(got).toEqual(LIVE_LO.slice().sort());
   });

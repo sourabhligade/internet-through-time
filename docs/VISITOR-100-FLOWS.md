@@ -1,6 +1,6 @@
 # Visitor 100% — dest-true flows, not dest-farm links
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **25 doors** (1994–2015 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **24 doors** (1994–2014 and 2020–2022). **2015 is omitted.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 
 **Date:** 2026-09-27 
@@ -9,7 +9,7 @@
 **I/O law:** [`LEAN-IO-CRITERIA.md`](LEAN-IO-CRITERIA.md) I1–I14 · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).  
 **Leftover-3× unique dest-true law:** [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).  
 **Leftover list:** [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md). The old `UNDONE.md` map was removed.
-**Scan (historical body below this banner):** door **100%** of **25** live doors · dest-true I/O **~87%** · look **~81%** · combined **~89%**. **2015 is the React door.** Leftover-3× unique catalogs are **empty**.
+**Scan (historical body below this banner):** door **100%** of **24** live doors · dest-true I/O **~87%** · look **~81%** · combined **~89%**. **2015 is omitted.** Leftover-3× unique catalogs are **empty**.
 
 **One-line law:** 100% is dest-true **flows** on dests already on disk. Dest-farm **links** (new dest folders, dest-lock revert of dest-lock years, leftover dest leftover-3× dest-farm extra dests as leftover-3× unique dest-true dests) fail I/O.
 
@@ -22,9 +22,9 @@ Do not dest-farm dests. Do not dest-lock 2015 again. Do not dest-lock forests / 
 | Path | What | Verdict |
 |------|------|---------|
 | **Flows** | Official dest `data-official-need` · leftover-3× unique dest-true dests (one dest / one verb / one key) · star empty/trap never writes · cream leftover-3× unique dest-true leftover go 1 · period look / failed-final | **This is 100%.** |
-| **Links** | More dest folders · dest-farm leftover dest leftover-3× dest-farm extra dests · dest-lock revert of 2007 / 2010–2012 / 2014 / 2021 · leftover dest leftover-20 dest-farm on years that are not 2017 | **Fails I/O.** A year that looks full because it has 200 leftover dests has failed I/O. |
+| **Links** | More dest folders · dest-farm leftover dest leftover-3× dest-farm extra dests · dest-lock revert of 2007 / 2010–2012 / 2014 / 2021 · leftover-20 dest-farm (2017 absent; leftover-20 unshipped) | **Fails I/O.** A year that looks full because it has 200 leftover dests has failed I/O. |
 
-2015 is the live React door (0 HTML dest folders). 2017–2019 are absent. 2021 is live HTML. Warehouse dest-folder counts from dest-lock-reverted years do not raise visitor 100%. Leftover-3× unique catalogs are empty.
+2015 is omitted (0 HTML dest folders). 2017–2019 are absent. 2021 is live HTML. Warehouse dest-folder counts from dest-lock-reverted years do not raise visitor 100%. Leftover-3× unique catalogs are empty.
 
 ---
 
@@ -32,27 +32,27 @@ Do not dest-farm dests. Do not dest-lock 2015 again. Do not dest-lock forests / 
 
 | Bar | Disk |
 |------|------|
-| Door | **25/25** live doors: hub card · year-shell or React door · Starting Point · About · Map · star file · guided **6** · official 10 files |
+| Door | **24/24** live doors: hub card · HTML year-shell · Starting Point · About · Map · star file · guided **6** · official files (2004=8, 2013=9, 2014=9, others 10) |
 | Official 10 hrefs | **0 missing** including 2012 / 2013 / 2014 / 2022 |
 | Official dest leftover-2× | **0** on playable years (1998 / 2006 / 2013 leftover-2× first paint is warehouse, not visitor first paint) |
 | Leftover-3× unique dest-true dests | **0** · catalogs empty · leftover go **1** · empty never writes · leftover never writes the star |
 | Dest-farm leftover-3× CUT specs | Dest-true pack asserts the catalogs stay empty |
 | Mock-flow DEST_FIELD / WEAK_REAL / HASH_CTA | **0** |
 | Absent | **2017–2019 · 2023–2025** no tree · no hub card |
-| Omitted | **2016** no year-card key · `/years/2016/` 404 |
+| Omitted | **2015** no year-card key · hash is not a door · **2016** no year-card key · `/years/2016/` 404 |
 | 2009 | live HTML · Facebook Like `itt09-like` |
 
 ---
 
 ## 3. Remaining ~11% (flows only)
 
-### 3.1 Official dest `data-official-need` — **280 / 280 dests = 100%**
+### 3.1 Official dest `data-official-need` — **236 / 236 dests = 100%**
 
-**Done 2026-09-20.** Same dests. Dest-true gold I/O. No new dests. Every playable-year official 10 dest has `data-official-need`. Empty / trap never writes. e2e: `all-years-official-10-real.spec.js` + year mvp.
+**Done 2026-09-20.** Same dests. Dest-true gold I/O. No new dests. Every playable-year official dest through the cap (2004=8, 2013=9, 2014=9, others 10) has `data-official-need`. Empty / trap never writes. e2e: `all-years-official-10-real.spec.js` + year mvp.
 
 ### 3.2 2022 leftover-3× unique dest-true dests
 
-**Done.** Matrix **9** 2022 rows. Cream leftover-3× unique dest-true · leftover go **1**. Do not dest-farm leftover-20.
+**Done.** leftover-3× unique catalogs are empty. leftover-3× engines stay removed. Do not dest-farm leftover-20.
 
 ### 3.3 Official dest leftover-2× leftover
 
@@ -61,7 +61,7 @@ Do not dest-farm dests. Do not dest-lock 2015 again. Do not dest-lock forests / 
 | 1998 | 1 | Strip or dest-true leftover dest leftover-2× warehouse fold |
 | 2006 | 3 | Same |
 | 2013 | 1 | Same |
-| 2009 | 30 | Boarded · not a visitor door |
+| 2009 | 30 | live HTML leftover warehouse (Like `itt09-like`) |
 
 ### 3.4 Period look 2022
 
@@ -71,7 +71,7 @@ Do not dest-farm dests. Do not dest-lock 2015 again. Do not dest-lock forests / 
 
 ### 3.5 Unique leftover-**20** (not leftover-3× unique dest-true)
 
-Only **2017** has unique leftover-20. leftover-3× unique dest-true dests (9 / 3 / 5) are a **different** map. Do not dest-farm leftover dest leftover-20 dests.
+**2017 is absent · not a door.** Unique leftover-20 is unshipped. leftover-3× unique dest-true dests (9 / 3 / 5) are a **different** map. Do not dest-farm leftover dest leftover-20 dests.
 
 ---
 
@@ -119,7 +119,7 @@ Verified. Do not invent dests. Failed-final stays honest until a dated capture e
 | Meta leftover | Facebook, Inc. corporate rename to Meta Platforms, Inc. **28 Oct 2021**. Family of Apps still Facebook / Instagram / Messenger / WhatsApp. Not Meta-as-gold. | [SEC 8-K](https://www.sec.gov/Archives/edgar/data/1326801/000132680121000071/fb-20211028.htm) | — |
 | Windows 11 leftover | Measured rollout **4 Oct 2021**. Eligible Win10 PCs offered upgrade by mid-2022. Not January 2021 OS. Desktop stays Win10 + Chrome habit. | [Windows Experience Blog](https://blogs.windows.com/windowsexperience/2021/10/04/how-to-get-windows-11/) | — |
 | Flash leftover | Adobe support ended Flash content blocked beginning **12 Jan 2021**. Not a 2021 launch. | Adobe EOL (inspected in research) | Dest copy “End of Flash” is leftover, not gold |
-| About honesty | ILS June websites table **ends ** at **1,630,322,579**. No 2021 websites cell. Invented June 2021 websites = I11 fail. | [Internet Live Stats](https://www.internetlivestats.com/total-number-of-websites/) | ITU 4.9B / 63% not independently fetched this pass |
+| About honesty | ILS June websites table **ends 2018** at **1,630,322,579**. No 2019–2021 websites cell. Invented June 2021 websites = I11 fail. | [Internet Live Stats](https://www.internetlivestats.com/total-number-of-websites/) | ITU 4.9B / 63% not independently fetched this pass |
 
  feels complete because GDPR Manage is sticky banner I/O (`Accept All` never writes · Manage writes). 2021 official dests 2–10 are max-width literacy plaques; dest-true look is ATT phone frame + leftover dest leftover-3× unique dest-true dests stay 5.
 
@@ -132,9 +132,9 @@ Do not dest-farm leftover dest leftover-3× unique dest-true dests past these st
 | Year | Leftover-3× unique dest-true dests | Stop |
 |------|-----------------------------------:|------|
 | Forests 1994–2006 | stacked leftover-3× workshop | Unique leftover-3×n **not the forest job** |
-| 2007 / 2010–2015 | **9** | Shipped |
-| 2017 | **0 leftover-3× unique dest-true dests** | Unique leftover-20 already shipped |
-| | **3** (first only) | Cannot pass 9 without new dests |
+| 2007 / 2010–2014 | **9** | Shipped. 2015 is omitted · leftover-3× n=0 |
+| 2017 | **0 leftover-3× unique dest-true dests** | Absent · not a door · leftover-20 not shipped |
+| 2018 | **0** | Absent · not a door |
 | 2021 | **5** (first 3 + second 2) | Cannot pass 9 without new dests |
 | 2022 | **9 dests on disk** | e2e matrix **0 rows** — dest-true dests, not dest-farm dests |
 | 2009 | catalog leftover-3× | live HTML · Like `itt09-like` |
@@ -145,7 +145,7 @@ Do not dest-farm leftover dest leftover-3× unique dest-true dests past these st
 
 ### Phase 0 — law / docs (no dest HTML)
 
-- [x] Strike stale 27 / 28 years. Hub **25 doors**. **2015 is the React door.** **2022 live**. **2023–2025 absent**.
+- [x] Strike stale 27 / 28 years. Hub **24 doors**. **2015 is omitted.** **2022 live**. **2023–2025 absent**.
 - [x] Close GitHub **#11–#14** (A clutter-clear already on tree · dest-lock 2015 reverted · not dest-lock tickets).
 - [x] Link this file from [`docs/README.md`](README.md) + [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
@@ -155,11 +155,11 @@ Same dests. `data-official-need` so empty never writes.
 
 - [x]  official dests 0 → 10 (`data-official-need` on dests already on trail).
 - [x] **2010** official dests 1 → 10 (Instagram iOS star already dest-true).
-- [x] **2017** official dests 3 → 10 (Face ID star already dest-true). Unique leftover-20 dest-true dests stay the leftover map.
+- [x] **2017** omitted from dest-true. Hash is not a door. Unique leftover-20 dests stay unshipped. Do not dest-farm.
 - [x] **2021 ATT** star dest `data-official-need` (9 → 10).
 - [x] **2012** official dests 3 → 10.
 - [x] Forest official dest gold I/O after lean doors (2000 0/10 · 1994 1/10 · 1999 1/10).
-- [x] ** GDPR** star dest `data-official-need` (9 → 10). Manage is dest-true; Accept All never writes.
+- [x] **2018 GDPR** is absent. Hash is not a door. Do not dest-farm.
 
 **e2e:** year mvp empty never writes · complete writes official · leftover never writes star.
 
@@ -192,8 +192,7 @@ Fold or dest-true leftover dest leftover-2× warehouse. Do not dest-farm leftove
 
 ### Phase 6 — unique leftover-20 (only if named)
 
-- [ ] **Do not dest-farm leftover dest leftover-20 dests** on 2013 / 2014 / 2015 / 2022.
-- [x] 2017 leftover dest leftover-20 dests already dest-true (shared `bootUniqueFlow` · 18 failed-final on purpose · Storm Circle gym complete e2e).
+- [x] leftover-20 is unshipped. 2017 is absent. 2015 is omitted. Do not dest-farm leftover-20 dests on any year.
 
 ---
 
@@ -205,7 +204,7 @@ Fold or dest-true leftover dest leftover-2× warehouse. Do not dest-farm leftove
 - Dest-farm leftover dest leftover-3× unique dest-true dests on past 3 or 2021 past 5.
 - Dest-farm leftover dest leftover-3× dest-farm extra dests (facebook / hbonow / hqtrivia) as leftover-3× unique dest-true dests.
 - Unique leftover-3×n on forests 1994–2006.
-- Restore 2009 as a playable door.
+- Board 2009. 2009 is already a live HTML door.
 - Restore 2023–2025.
 - Invent brand pixels.
 - Count dest folders as visitor 100%.
@@ -216,7 +215,7 @@ Fold or dest-true leftover dest leftover-2× warehouse. Do not dest-farm leftove
 
 | Bar | Now | 100% |
 |-----|-----|------|
-| Door A | **100%** 25/25 | Stay |
+| Door A | **100%** 24/24 | Stay |
 | Dest-true I/O B | **~87%** | Official dest `data-official-need` on playable years · leftover-3× unique catalogs **empty** · official dest leftover-2× first paint **0** |
 | Look C | **~81%** | Star cite on playable years · period files **or** failed-final honest · 2021 ATT chrome dest-true |
 | Combined | **~89%** | **~100% visitor product without dest-farm dests** |

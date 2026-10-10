@@ -90,6 +90,23 @@ test.describe('1995 SSL checkout ritual', () => {
     expect(await page.evaluate(() => localStorage.getItem('itt95-ssl-checkout'))).toBeFalsy();
   });
 
+  test('bookstore Search writes nothing; hop is SSL checkout', async ({ page }) => {
+    await page.goto('/years/1995/sites/amazon/index.html');
+    await page.evaluate(() => {
+      try { localStorage.removeItem('itt95-amazon'); } catch (e) {}
+      try { localStorage.removeItem('itt95-ssl-checkout'); } catch (e2) {}
+    });
+    await expect(page.locator('[data-official-verb]')).toHaveCount(0);
+    await expect(page.locator('[data-official-key]')).toHaveCount(0);
+    await expect(page.locator('a[href="ssl-checkout.html"]').first()).toBeVisible();
+    await expect(page.locator('[data-next-flow]')).toHaveAttribute('data-next-when-key', 'itt95-ssl-checkout');
+    await page.locator('form[action="search.html"] input[name="q"]').fill('Neuromancer');
+    await page.locator('form[action="search.html"] input[type="submit"]').click();
+    await page.waitForURL(/amazon\/search\.html/);
+    expect(await page.evaluate(() => localStorage.getItem('itt95-amazon'))).toBeFalsy();
+    expect(await page.evaluate(() => localStorage.getItem('itt95-ssl-checkout'))).toBeFalsy();
+  });
+
   test('add-to-cart uses period input control', async ({ page }) => {
     await enterYear(page, '1995');
     await goInFrame(page, 'sites/amazon/book-neuromancer.html');

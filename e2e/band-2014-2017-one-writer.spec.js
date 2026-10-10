@@ -1,12 +1,11 @@
 // @ts-check
 /**
- * Phase 2 lock for 2014–2017. WhatsApp Install is official. 2015 React
- * stops store official. 2017 stays absent. The 115-page walk is phase 6.
+ * Phase 2 lock for 2014–2017. WhatsApp Install is official.
+ * 2015 is omitted. 2017 stays absent. The 115-page walk is phase 6.
  */
 const { test, expect } = require("@playwright/test");
 const fs = require("fs");
 const path = require("path");
-const { completeReactStop } = require("./helpers.js");
 
 async function raw(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
@@ -51,18 +50,11 @@ test.describe("2014-2017 phase 2 one writer", () => {
     expect((await envelope(page, "itt14-wa-install")).kind).toBe("official");
   });
 
-  test("Apple Music empty then a real Play is official", async ({ page }) => {
-    await page.goto("/app/index.html#/year/2015?stop=itt15-music");
-    await page.waitForFunction(() => !!(window.ITT && window.ITT.User && window.ITT.User.store), null, {
-      timeout: 15000,
-    });
-    const room = page.locator("article.stop#itt15-music");
-    await room.waitFor({ timeout: 15000 });
-    await page.evaluate(() => localStorage.removeItem("itt15-music"));
-    await room.locator(".actions button").last().click();
-    expect(await raw(page, "itt15-music")).toBeNull();
-    await completeReactStop(page, room);
-    await expect.poll(() => raw(page, "itt15-music"), { timeout: 8000 }).toBeTruthy();
-    expect((await envelope(page, "itt15-music")).kind).toBe("official");
+  test("2015 omitted hash is not a door", async ({ page }) => {
+    const res = await page.goto("/app/index.html#/year/2015");
+    expect(res && res.ok()).toBeTruthy();
+    await expect(page.getByRole("heading", { name: "2015 is not a door" })).toBeVisible();
+    await expect(page.locator(".door")).toHaveCount(0);
+    await expect(page.locator("body")).not.toContainText("Periscope");
   });
 });

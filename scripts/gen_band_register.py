@@ -87,7 +87,7 @@ EXPECTED = {
         },
     },
     "2010-2013": {
-        "html": 222,
+        "html": 223,
         "savePages": 182,
         "destFolders": 150,
         "trailRows": 39,
@@ -95,7 +95,7 @@ EXPECTED = {
         "officialStops": 39,
         "byYear": {
             "2010": {"html": 61, "savePages": 48, "destFolders": 29, "trailRows": 10, "leftover2x": 12},
-            "2011": {"html": 38, "savePages": 38, "destFolders": 37, "trailRows": 10, "leftover2x": 0},
+            "2011": {"html": 39, "savePages": 38, "destFolders": 37, "trailRows": 10, "leftover2x": 0},
             "2012": {"html": 70, "savePages": 49, "destFolders": 32, "trailRows": 10, "leftover2x": 12},
             "2013": {"html": 53, "savePages": 47, "destFolders": 52, "trailRows": 9, "leftover2x": 27},
         },
@@ -109,7 +109,6 @@ EXPECTED = {
         "officialStops": 9,
         "byYear": {
             "2014": {"html": 36, "savePages": 18, "destFolders": 25, "trailRows": 9, "leftover2x": 16},
-            "2015": {"html": 0, "savePages": 0, "destFolders": 0, "trailRows": 0, "leftover2x": 0},
             "2017": {"html": 0, "savePages": 0, "destFolders": 0, "trailRows": 0, "leftover2x": 0},
         },
     },

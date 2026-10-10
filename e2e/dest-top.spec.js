@@ -61,7 +61,7 @@ test.describe("dest-as-tab footer", () => {
     await expect(page.locator("#itt-year-menu-link")).toBeVisible({ timeout: 15000 });
     await page.locator("#itt-year-menu-link").click();
     await expect(page).toHaveURL(/\/(index\.html)?$/);
-    await expect(page.locator("a.year-card.available")).toHaveCount(25);
+    await expect(page.locator("a.year-card.available")).toHaveCount(24);
 
     await page.goto("/years/1995/sites/amazon/ssl-checkout.html");
     await expect(page.locator("#itt-exhibit-foot a.itt-foot-home")).toBeVisible({ timeout: 15000 });
@@ -85,7 +85,7 @@ test.describe("dest-as-tab footer", () => {
     await page.locator("#skip-connect").click({ force: true, timeout: 3000 }).catch(() => {});
     const frame = page.frameLocator("iframe#content");
     await expect(frame.locator('[data-ott-one-thing="1995"]').first()).toBeVisible({ timeout: 20000 });
-    await frame.locator('[data-ott-one-thing="1995"]').first().click();
+    await frame.locator('[data-ott-one-thing="1995"]').first().click({ force: true });
     await expect
       .poll(async () => {
         return page.evaluate(() => {

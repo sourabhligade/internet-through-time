@@ -8,7 +8,7 @@ There are **62 files in `css/`**, plus injected styles in `js/immersion/boot.js`
 | Year shell | `css/year-shell.css` | `html, body { height: 100% }` **shell only** |
 | Dest rooms | `css/itt-dest-page.css` | `html, body { min-height: 0 }` — no cavern |
 | Period look | `css/period-YYYY.css` | fonts, colors, widgets |
-| React door | `react/src/styles.css` `.door` | `100dvh` shell analog |
+| React shell | `react/src/styles.css` `.door` | `100dvh` shell analog. Zero-door hall while 2015 is omitted |
 | Museum fill | `css/museum-fill.css` | hub / atlas / games only |
 
 ## Period import chain (the leak)

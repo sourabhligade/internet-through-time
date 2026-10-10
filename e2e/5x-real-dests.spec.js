@@ -9,3 +9,8 @@ test('1994 densify page exists and star next works', async ({ page }) => {
   await expect(page.locator('a[href*="csotd"]').first()).toBeVisible();
 });
 
+test('1994 IUMA lobby links listen', async ({ page }) => {
+  await page.goto('/years/1994/sites/iuma/index.html');
+  await expect(page.locator('a[href="listen.html"]').first()).toBeVisible();
+});
+

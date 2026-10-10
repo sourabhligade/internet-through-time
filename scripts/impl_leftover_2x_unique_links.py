@@ -4,7 +4,7 @@
 2× unique dest slugs in leftover-2× rails. One dest once. Dests already on disk.
 2000–2006 KEEP original unique dests. Strip duplicate hrefs. Official dest leftover-2×
 first paint = 0. Do not dest-farm dest folders. Do not grow leftover-3× unique.
-Do not write dest-true leftover dest I/O. 2009 is live HTML. 2023–2025 wiped.
+Do not write dest-true leftover dest I/O. 2009 is live HTML. 2015 and 2016 are omitted. 2017–2019 and 2023–2025 are absent.
 Leftover-2× unique dest links stay dest-disjoint from leftover-3× unique dest links
 (one dest once as a link). Cite: docs/LEFTOVER-2X-UNIQUE-LINKS.md
 docs/DUPLICATE-UNIQUE-LINKS.md
@@ -528,6 +528,8 @@ def build_catalog() -> dict[str, list[dict]]:
             name = dest_label(dest) if dest.is_file() else s
             rows.append({"id": s, "name": name})
         catalog[year] = rows
+    # 2015 is omitted (not in SHIP_YEARS). leftover-2× spec requires catalog["2015"] === [].
+    catalog["2015"] = catalog.get("2015") or []
     dest_disjoint_owned_dests(catalog)
     return catalog
 

@@ -11,19 +11,19 @@ const trio = require("../scripts/popular-3x3-sites.json");
 const OPEN = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003",
   "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012",
-  "2013", "2014", "2015", "2020", "2021", "2022"
+  "2013", "2014", "2020", "2021", "2022"
 ];
 const WIPED = ["2023", "2024", "2025"];
 const LEAN = [
   "2007", "2008", "2009", "2010", "2011", "2012",
-  "2013", "2014", "2015", "2020", "2021", "2022"
+  "2013", "2014", "2020", "2021", "2022"
 ];
 const WINGS = {
   gray: ["1994", "1995", "1996"],
   bubble: ["1997", "1998", "1999", "2000"],
   rebuild: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"],
   phone: ["2008", "2009", "2010", "2011", "2012", "2013"],
-  stream: ["2014", "2015"]
+  stream: ["2014"]
 };
 /** @type {Record<string, RegExp>} */
 const GOLD = {
@@ -48,7 +48,6 @@ const GOLD = {
   "2012": /Instagram Android/i,
   "2013": /Vine/i,
   "2014": /WhatsApp Install/i,
-  "2015": /Periscope/i,
   "2020": /Zoom Leave/i,
   "2021": /Ask App Not to Track/i,
   "2022": /ChatGPT/i,
@@ -90,7 +89,7 @@ test.describe("atlas hallway — all flows", () => {
     await page.goto("/");
     await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
     await expect(page.locator(".start-hint")).toHaveCount(0);
-    await expect(page.locator("a.year-card.available")).toHaveCount(25);
+    await expect(page.locator("a.year-card.available")).toHaveCount(24);
   });
 
   test("remember lines are year-true and wiped years stay off the spine", async ({ page }) => {
@@ -129,7 +128,7 @@ test.describe("atlas hallway — all flows", () => {
     await expect(page.locator('#atlas-spine [data-atlas-year="2017"]')).toHaveCount(0);
     await expect(page.locator('#atlas-spine [data-atlas-year="2018"]')).toHaveCount(0);
     await expect(page.locator('#atlas-spine [data-atlas-year="2019"]')).toHaveCount(0);
-    for (const y of ["2023", "2024", "2025"]) {
+    for (const y of ["2015", "2016", "2017", "2023", "2024", "2025"]) {
       await expect(page.locator(`#atlas-spine [data-atlas-year="${y}"]`)).toHaveCount(0);
     }
     await expect(page.locator('#atlas-spine [data-atlas-year="2009"]')).toBeVisible();
@@ -151,11 +150,8 @@ test.describe("atlas hallway — all flows", () => {
       const guidedN = await panel.locator(`#atlas-guided-${y} ol li`).count();
       expect(guidedN, y + " guided").toBeGreaterThanOrEqual(4);
       const officialN = await panel.locator("ol.ten li").count();
-      const reactDoor = y === "2015";
-      if (!reactDoor) {
       expect(officialN, y + " official").toBeGreaterThanOrEqual(7);
       expect(officialN, y + " official").toBeLessThanOrEqual(10);
-      }
 
       const goldHref = await panel.locator("li.gold a").first().getAttribute("href");
       await expectLive(page, goldHref, y + " gold");
@@ -169,20 +165,18 @@ test.describe("atlas hallway — all flows", () => {
       for (const h of guided) await expectLive(page, h, y + " guided");
 
       const ten = await panel.locator("ol.ten a").evaluateAll((els) => els.map((a) => a.getAttribute("href") || ""));
-      if (!reactDoor) {
       expect(ten.length, y + " official").toBeGreaterThanOrEqual(7);
       expect(ten.length, y + " official").toBeLessThanOrEqual(10);
       const pages = ten.map((h) => String(h).replace(/\\/g, "/").split("?")[0].toLowerCase());
       expect(new Set(pages).size, y + " official dests must be unique hrefs").toBe(pages.length);
       for (const h of ten) await expectLive(page, h, y + " official");
-      }
 
       const gameLinks = panel.locator(".atlas-layer", { hasText: /Year games/ }).locator("a");
       const gn = await gameLinks.count();
       expect(gn, y + " games").toBeGreaterThanOrEqual(1);
       const gHrefs = await gameLinks.evaluateAll((els) => els.map((a) => a.getAttribute("href") || ""));
       for (const h of gHrefs) {
-        if (String(h).indexOf("/years/2017/") !== -1 || String(h).indexOf("/app/") !== -1) continue;
+        if (/\/years\/(2015|2016|2017|2018|2019|2023|2024|2025)\//.test(String(h)) || String(h).indexOf("/app/") !== -1) continue;
         await expectLive(page, h, y + " game");
       }
     }
@@ -229,20 +223,20 @@ test.describe("atlas hallway — all flows", () => {
     }
   });
 
-  test("museum-wide Every flow lists 25 golds and live official trails", async ({ page }) => {
+  test("museum-wide Every flow lists 24 golds and live official trails", async ({ page }) => {
     await page.goto("/atlas/");
     await waitCatalog(page);
     const golds = page.locator("#atlas-all-golds ol li");
-    await expect(golds).toHaveCount(25);
+    await expect(golds).toHaveCount(24);
     const goldHrefs = await page.locator("#atlas-all-golds a").evaluateAll((els) => els.map((a) => a.getAttribute("href") || ""));
-    expect(goldHrefs.length).toBe(25);
+    expect(goldHrefs.length).toBe(24);
     for (const h of goldHrefs) await expectLive(page, h, "all-golds");
 
     await expect(page.locator("#atlas-all-guided")).toBeVisible();
     await expect(page.locator("#atlas-all-official")).toBeVisible();
     await expect(page.locator("#atlas-all-games")).toBeVisible();
     const officialYears = page.locator("#atlas-all-official h4");
-    await expect(officialYears).toHaveCount(25);
+    await expect(officialYears).toHaveCount(24);
   });
 
   test("first night is the real 5-stop walk; spine keeps 2021 and 2022", async ({ page }) => {
@@ -263,7 +257,7 @@ test.describe("atlas hallway — all flows", () => {
 
     await expect(page.locator('#atlas-spine [data-atlas-year="2021"]')).toHaveCount(1);
     await expect(page.locator('#atlas-spine [data-atlas-year="2022"]')).toHaveCount(1);
-    for (const y of ["2023", "2024", "2025"]) {
+    for (const y of ["2015", "2016", "2017", "2023", "2024", "2025"]) {
       await expect(page.locator(`#atlas-spine [data-atlas-year="${y}"]`)).toHaveCount(0);
     }
     await expect(page.locator('#atlas-spine [data-atlas-year="2009"]')).toBeVisible();
@@ -274,7 +268,7 @@ test.describe("atlas hallway — all flows", () => {
     await waitCatalog(page);
     await expect(page.locator("#atlas-find-results")).toContainText(/Type a name/i);
 
-    await page.fill("#atlas-find", "periscope");
+    await page.fill("#atlas-find", "snap");
     await expect(page.locator("#atlas-find-results a").first()).toBeVisible();
 
     await page.fill("#atlas-find", "lucky");

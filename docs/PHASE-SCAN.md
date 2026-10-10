@@ -11,7 +11,7 @@
 **GitNexus:** repo `internet-through-time` · path `/Users/sourabhligade/internet-through-time` · worktree same · index origin `81c652c65` · **6 behind** HEAD `2b82043bd`.  
 **Local:** http://127.0.0.1:8080 · **Public:** https://sourabhligade.github.io/internet-through-time/ (origin tree).
 
-This file is the 2026-10-09 scan of **all phase programs**. Every program is marked done. Improvisation buckets below are now on disk with `e2e/ux-phase-scan.spec.js` plus UX phase 2 / 3 locks. Dest-true **436** holds. Slice F public tree waits on **push**. Public Pages is origin.
+This file is the 2026-10-09 scan of **all phase programs**. Every program is marked done. Improvisation buckets below are now on disk with `e2e/ux-phase-scan.spec.js` plus UX phase 2 / 3 locks. Dest-true **415** holds. Slice F public tree waits on **push**. Public Pages is origin.
 
 Do not dest-farm from this file. Do not restore 2017–2019 / 2023–2025. Do not unfreeze 1994–2006 dest HTML unless a dest-attribute fix is named. Do not grow leftover-3× catalogs. Do not grow trail n. Do not invent 2011 / 2015 logos. Say the bucket name to start: **helper**, **receipt**, **gold-lx**, **docs-scrub**, **commit**, **push**, **Pack B/C**, **`2x`**, **famous-double**, **restore**.
 
@@ -23,7 +23,7 @@ Do not dest-farm from this file. Do not restore 2017–2019 / 2023–2025. Do no
 |--------|---------|
 | **Done** | Phase lock exists and the named dests / chrome groups pass. |
 | **Broken / visitor-visible** | A visitor can see it on :8080. Highest priority. |
-| **Shortfall** | The lock samples a slice. Museum grade on 25 doors is larger than the lock. |
+| **Shortfall** | The lock samples a slice. Museum grade on 24 doors is larger than the lock. |
 | **Inconsistency** | Two docs, or a doc and disk, disagree. |
 | **Improvisation** | Closable on dests already on disk. Starts when that bucket is named. |
 | **Named wait** | Pack B/C as new dests, `2x`, famous-double, restore, **commit**, **push**. |
@@ -56,8 +56,8 @@ flowchart TD
 | Branch | `museum/1994-2020-lean` |
 | HEAD | `2b82043bd` Lock museum-grade UX phases 1–5 |
 | Origin | `81c652c65` · local **6** ahead |
-| Dirty | B1 `js/browser/create.js`, UX phase 2–4 specs, OfficialStop hold colors, React rebuild `app/assets/index-DL5sRlvD.js` + `index-CjdwpCwF.css`, this scan’s docs |
-| dest-true 12 | **436** |
+| Dirty | 2015 wipe + leftover-claim settlement. Live bundle `app/assets/index-DDHTdpBk.js`. OfficialStop gone |
+| dest-true 12 | **415** |
 | `npm run check` | **0** (at last UX 3–5 gate) |
 | UX phase 1 | 4/4 |
 | UX phase 2 | 10/10 (includes first-boot abort) |
@@ -75,9 +75,9 @@ Locks: `e2e/ux-phase1-honesty.spec.js` … `e2e/ux-phase5-2015.spec.js`. Helper:
 |------:|-------|------------------------------|-----------|
 | 1 Honesty | Implemented | Direct dest: 1998 Lucky and remaining live stars. Trap / extras skip / dest-true official envelope. | Other years and stars unproven here. Path is dest-as-tab |
 | 2 Dest in window | Implemented. B1 first-boot abort closed | Hub → 1998 / 2022 → Starting Point chip → dest in `#content`. Gold leftover in Lucky iframe writes leftover. Direct Lucky HTTP 200. First `pages/home.html` is not `ERR_ABORTED` | Other doors untested here. Home/reload bounce documented, not asserted |
-| 3 Receipt | Implemented | Lucky + Periscope `Saved.` Hold **color** `#a00` on empty/trap and Periscope incomplete | Receipt inside iframe unproven on other stars |
-| 4 Phone 390 | Implemented | Chrome **groups**: 1994, 1998, 2004, 2008, 2009, 2011, 2013, 2014, 2022 + 2015 React. HABIT years skip menubar | Full 25-door lock remains `e2e/phase4-phone.spec.js`. UX file omits 1995–97, 1999–2003, 2005–07, 2010, 2012, 2020, 2021 |
-| 5 2015 React | Implemented | Hub card, no `years/2015`, header is the stop, no visible `itt15-` leaf, Periscope envelope, `ALSO_2015` 20 leftover rooms folded unless `?deep=1`, `#/year/2017` not a door | Uses `?stop=` so it never hits the dead `clickRailKey` helper |
+| 3 Receipt | Implemented | Lucky `Saved.` Hold **color** `#a00` on empty/trap. 2015 omitted; never Periscope | Receipt inside iframe unproven on other stars |
+| 4 Phone 390 | Implemented | Chrome **groups**: 1994, 1998, 2004, 2008, 2009, 2011, 2013, 2014, 2022. 2015 omitted. HABIT years skip menubar | Full 24-door lock remains `e2e/phase4-phone.spec.js`. UX file omits 1995–97, 1999–2003, 2005–07, 2010, 2012, 2020, 2021 |
+| 5 2015 omitted | Implemented | No hub card, no `years/2015`, hash is not a door, never Periscope, `#/year/2017` not a door | `e2e/ux-phase5-2015.spec.js` |
 
 **B1 closed (uncommitted):** `seedHistory` leaves relative `pages/home.html` loading. `hideOverlay()` already seeds. First-boot does not seed twice. `setIframeSrc` bounce stays for same-path **absolute** Home/reload. Sandbox stays `allow-same-origin allow-scripts`.
 
@@ -97,10 +97,10 @@ Map: [`MUSEUM-GRADE-UI.md`](MUSEUM-GRADE-UI.md). Do not reopen as a new program.
 
 | Phase | Claim | Lock | Live note |
 |------:|-------|------|-----------|
-| 1 Cards | Passed | `e2e/start-cards.spec.js` 26/26 | Starting Point guided + flows share one card per year |
+| 1 Cards | Passed | `e2e/start-cards.spec.js` 24 HTML homes + omitted 2015 hash | Starting Point guided + flows share one card per year |
 | 2 Footer / clock | Passed | `e2e/phase2-footer-clock.spec.js` | One footer. Status `Document: Done` |
 | 3 Year window | Passed | `e2e/phase3-window.spec.js` | Toolbar / address / coach match the year |
-| 4 Phone 390 | Passed | `e2e/phase4-phone.spec.js` 26/26 | Full door lock. UX phase 4 is the group rewalk |
+| 4 Phone 390 | Passed | `e2e/phase4-phone.spec.js` live HTML doors + omitted 2015 hash | Full door lock. UX phase 4 is the group rewalk |
 | 5 Glass | Passed | `e2e/phase5-glass.spec.js` | Clip CSS. Five dests keep **Open leftover** on purpose |
 | 6 Checklist walk | Walked | Checklists | File said 548 ticked / 44 open, then 561/31. Live ~**571 ticked / 22 open** |
 | 7 Public URL | Passed 2026-10-07 | GitHub Pages | Serves origin. Local is 6 ahead + dirty. Slice F is **push** |
@@ -111,7 +111,7 @@ Map: [`MUSEUM-GRADE-UI.md`](MUSEUM-GRADE-UI.md). Do not reopen as a new program.
 |---|----------------|------|
 | 6 | Trap / empty / missing pick write nothing. Star key is the only official save | True on folded named dests. Extras `store` without `official:true` can still be kind `toy` |
 | 7 | Visitor never sees `[failed-final]`, a storage key, or “Open leftover” as the thing to do | Wikipedia UseMod line is on the glass. Gold leftover first paint on eight stars. Five dests keep Open leftover |
-| 9 | `docs/checklists/` ticked for every live door | Open: 2000 leftover n=11–40, 2011 image-readme, 2015 image-readme. Image lines stay `[ ]` |
+| 9 | `docs/checklists/` ticked for every live door | Open: 2000 leftover n=11–40, 2011 image-readme. 2015 is omitted. Image lines stay `[ ]` |
 
 ---
 
@@ -124,7 +124,7 @@ Map: [`PROD-USER-DATA-SRP.md`](PROD-USER-DATA-SRP.md).
 | 1 Honest saves | Implemented 2026-10-07 | `ITT.User.{save,read,finished,store,take}` on `js/lib/util.js`. Envelope `{v:1, year, key, kind, real:true, ts}` |
 | 2 Lean loads lean | Implemented | leanBoot 2007–2014 and 2020–2022. EXTRA leftover-official |
 | 3 Drop leftover-3× rails | Mostly | Unique catalogs empty (`e2e/leftover-3x-unique.matrix.json` is `[]`). `year-true-leftover.js` held for CORE 1994–2006 |
-| 4 Visitor CI / docs | Implemented | dest-true 12. Hub 25 doors. React 2015 only |
+| 4 Visitor CI / docs | Implemented | dest-true 12. Hub 24 doors. 2015 omitted |
 | 5 Toys / games / React on User | Structurally done, kind honesty incomplete | Immersion `localStorage.setItem` is 0. Writers go through `User.store` / `User.save` |
 
 **Writer holes that remain:**
@@ -156,7 +156,7 @@ Map: [`WORKING-FLOW-PHASES.md`](WORKING-FLOW-PHASES.md). Registers: `e2e/registe
 | 2002–2005 | frozen four | 2,319 | Done. Stumble / Photobucket / thefacebook / YouTube upload. 2004 trail n=8 |
 | 2006–2009 | 2006 frozen, 2007–2009 lean | 794 | Done. Twttr / Like extras skip when verb owns. Plot Start writes nothing |
 | 2010–2013 | lean | 182 | Done. iPad extras skip. Guess Doodle Start writes nothing. 2013 trail n=9 |
-| 2014–2017 | 2014, 2015 React. 2017 absent | 115 HTML + 20 React | Done. 2017 stays 0 |
+| 2014–2017 | 2014 live. 2015 omitted. 2017 absent | 18 HTML | Done. 2015 omitted. 2017 stays 0 |
 | 2018–2021 | 2020, 2021. 2018–2019 absent | 40 | Done. 2018–2019 stay 0 |
 | 2022–2025 | 2022. 2023–2025 absent | 29 | Done. 2023–2025 stay 0 |
 
@@ -194,7 +194,7 @@ Map: [`LEAN-DOUBLE-PHASES.md`](LEAN-DOUBLE-PHASES.md). Header: **Historical**. N
 | Doc | Disk |
 |-----|------|
 | 2009 boarded | 2009 is live HTML (Like `itt09-like`) |
-| Hub 25 | Hub **26** |
+| Hub 25 | Hub **24** |
 | Phase 4 named implement waits on a word | leftover-2× unique catalog **1,138** already on disk |
 | Caps as aims | Live dest counts still under those caps. Further dest growth waits on **`2x`** |
 
@@ -204,13 +204,11 @@ Map: [`LEAN-DOUBLE-PHASES.md`](LEAN-DOUBLE-PHASES.md). Header: **Historical**. N
 
 These are the flows a visitor can hit on :8080.
 
-### V1 — React rail helper dead
+### V1 — 2015 omitted hash
 
-`e2e/helpers.js` `clickRailKey` locates `.rails li` that contains `<code>` with the storage key. `react/src/YearRail.jsx` prints `{row.n} {row.name}` only. No `<code>`.
+React `YearRail.jsx` / `clickRailKey` are gone with omitted 2015. `e2e/chrome-habit-shell.spec.js` locks the omitted hash. `#/year/2015` is not a door. Never Periscope.
 
-`e2e/chrome-habit-shell.spec.js` still calls `openReactStop(page, "2015", "itt15-periscope")`. UX phases 3 and 5 use `#/year/2015?stop=itt15-periscope` and pass.
-
-**Visitor:** the door works. **Warehouse chrome-habit** can hang looking for a code node.
+**Visitor:** heading “2015 is not a door.”
 
 http://127.0.0.1:8080/app/index.html#/year/2015
 
@@ -246,10 +244,10 @@ Off the named 2015 / Lucky set:
 | `Saved in this browser` | `real-flow.js`, `docs.js`, `no-mock-culture-ack.js`, `iphone.js` |
 | `okMsg · key` | Closed on kit `bootChecks`. Remaining dialects: 2006 / 2009 / 2013 extras, popular-3×, SourceForge |
 
-Named dests print `Saved.` OfficialStop hold is red `#a00`, ok is green `#060`.
+Named dests print `Saved.` HTML official-verb hold is red `#a00`, ok is green `#060`. 2015 is omitted; there is no OfficialStop.
 
 http://127.0.0.1:8080/years/1998/sites/google/lucky.html  
-http://127.0.0.1:8080/app/index.html#/year/2015?stop=itt15-periscope
+http://127.0.0.1:8080/app/index.html#/year/2015 — not a door. Never Periscope.
 
 ### V6 — Catch / Love extras stay silent
 
@@ -265,22 +263,22 @@ https://sourabhligade.github.io/internet-through-time/ is origin `81c652c65`. Sl
 
 ---
 
-## Shortfalls (locks vs 25-door grade)
+## Shortfalls (locks vs 24-door grade)
 
 | ID | Gap | Detail |
 |----|-----|--------|
-| S1 | Honesty / receipt sample | Lucky + Periscope. Other stars live on dest-true 12, not on UX 1 / 3 |
+| S1 | Honesty / receipt sample | Lucky. 2015 omitted. Other stars live on dest-true 12, not on UX 1 / 3 |
 | S2 | Honesty / receipt path | Direct dest URLs (`itt-dest-top`). Envelope inside `#content` is unproven except phase 2 dest-open |
-| S3 | Hold color sample | Stories empty/trap + Periscope incomplete only |
-| S4 | Phone sample | UX 4 = chrome groups. UI 4 = 25 doors |
+| S3 | Hold color sample | Stories empty/trap. 2015 omitted |
+| S4 | Phone sample | UX 4 = chrome groups. UI 4 = 24 doors |
 | S5 | HABIT menubar | 2022 skips `menusFit` on purpose. Full lock still covers 2020 / 2021 chips |
-| S6 | `store` vs `save` | React `OfficialStop` uses `store`. Envelope still `{kind:official}` via `official:true` |
+| S6 | `store` vs `save` | 2015 omitted. React `OfficialStop` is gone. HTML dests use official-verb / leftover-official. |
 | S7 | UI-6 / UI-7 / UI-9 | Overclaim vs leftover extras, gold-lx, Wikipedia line, checklist opens |
 | S8 | WF census | 4,938 vs 4,935 dest folders |
 | S9 | WF dual-writer intro | Stale vs `verbOwned` |
 | S10 | PROD inventory | “155 setItem” vs zero immersion setItem |
 | S11 | 2008 Pack B | Doc wait vs folders on disk |
-| S12 | Lean-double | Closed: 2009 live HTML · hub 25 doors |
+| S12 | Lean-double | Closed: 2009 live HTML · hub 24 doors |
 
 Trail n **8 / 9 / 9** (2004 / 2013 / 2014) is disk law. leftover-3× unique catalog is empty. 2017–2019 and 2023–2025 stay 0. Those are standing rules.
 
@@ -297,8 +295,8 @@ Trail n **8 / 9 / 9** (2004 / 2013 / 2014) is disk law. leftover-3× unique cata
 | 2006 Twttr extras | Would `saveJSON` `itt06-tweets` | Button is `data-official-verb`, extras return |
 | 2010 iPad | Extras skip when Place order is the verb | Dual keys `ipad` + `ipad-order` remain if extras run |
 | Facebook 1B | WF 2010–2013 header: missing checklist line | Same file phase 1: ticked, heading 10 |
-| YEAR-CHROME-PLAN | OfficialStop `Saved · key`, 22-door language | Live OfficialStop `Saved.`, hub 25 |
-| Phase 7 same tree | UI.md: public serves 25 doors | Public = origin; local 6 ahead + dirty |
+| YEAR-CHROME-PLAN | OfficialStop `Saved · key`, 22-door language | 2015 omitted. Hub 24. Hash is not a door. |
+| Phase 7 same tree | UI.md: public serves 24 doors | Public = origin; local 6 ahead + dirty |
 
 ---
 
@@ -308,10 +306,10 @@ Closable on dests **already on disk**. Starts when that name is used. No new des
 
 | Name | Work | Files | State |
 |------|------|--------|-------|
-| **helper** | Retarget `clickRailKey` to `?stop=` / stop name. Chrome-habit uses the same path as UX 5 | `e2e/helpers.js`, `e2e/chrome-habit-shell.spec.js` | Implemented |
+| **helper** | React `clickRailKey` is gone with omitted 2015. Chrome-habit uses HTML dest paths | `e2e/helpers.js`, `e2e/chrome-habit-shell.spec.js` | Implemented |
 | **iframe-receipt** | One honesty / receipt case inside `#content` after 1998 → Lucky | `e2e/ux-phase3-receipt.spec.js` | Implemented |
 | **hold-color** | Assert `#a00` on empty + trap | `e2e/ux-phase3-receipt.spec.js` | Implemented |
-| **status-node** | Bake one `[data-official-status]` on named dests (dest-attribute) | Lucky / Periscope | Implemented |
+| **status-node** | Bake one `[data-official-status]` on named dests (dest-attribute) | Lucky. 2015 omitted | Implemented |
 | **kit-receipt** | `bootChecks` prints `Saved.` and honors save failure | `js/immersion/year-extras-kit.js` | Implemented |
 | **kind-pass** | Pass `kind` through kit `bootChecks` / 5× leftover `store` | year-extras-kit + year-5x-pack | Implemented |
 | **gold-lx** | CSS-only 3em gap so the period verb stays the first action. Do not restyle frozen dest bodies | `css/itt-leftover-fold.css` | Implemented |
@@ -329,7 +327,7 @@ Leave Wikipedia reconstruction copy. Leave image-readme `[ ]`. Leave 2000 n=11�
 |------|----------------|
 | **commit** | Land B1 + UX 3–5 + React rebuild + this scan locally. HEAD is still `2b82043bd` |
 | **push** | Slice F. Public tree matches local. Actions still will not run (#17) |
-| **`2x`** | Dest doubling. leftover-2× **links** are already 1,158 |
+| **`2x`** | Dest doubling. leftover-2× **links** are already 1,138 |
 | **famous-double** | Step 2 cited-not-built (opensocial is already on 2008 disk; houseofcards / dalle still absent) |
 | **Pack B/C** | As **new** dests. Pack B folders are largely present; adding more is dest-farm |
 | **restore** | 2017–2019 / 2023–2025 stay 0 until this word |
@@ -342,10 +340,10 @@ There is **no UX phase 6**. Museum-grade UX 1–5 are the set.
 
 | Rule | Live |
 |------|------|
-| Trail n | 2004 = **8**, 2013 = **9**, 2014 = **9**. Official length 256/256 under disk law |
+| Trail n | 2004 = **8**, 2013 = **9**, 2014 = **9**. Official length 236/236 under disk law |
 | leftover-3× unique | Catalog `[]`. Warehouse leftover-3× specs assert the config files are **absent** |
 | Absent years | 2017–2019 and 2023–2025: no tree, no hub card, no React door |
-| Image-readme | 2011 and 2015 `assets/period/YYYY/` readme only. Do not draw logos |
+| Image-readme | 2011 `assets/period/2011/` readme only. 2015 is omitted (no period tree). Do not draw logos |
 | 2000 n=11–40 | On trail, leftover, checklist open on purpose |
 | Frozen HTML | 1994–2006 dest HTML. Dest-attribute fixes only when named |
 | Sandbox | `allow-same-origin allow-scripts` on `#content`. Needed so dest JS and localStorage share origin |
@@ -360,12 +358,12 @@ Visitor walk after any named bucket. Tick only after the URL does what the line 
 flowchart TD
   hub["Hub /"] --> y22["2022 door"]
   hub --> y98["1998 door"]
-  hub --> y15["2015 React"]
+  hub --> y15["2015 omitted"]
   y22 --> gpt["ChatGPT in iframe"]
   gpt --> home["Home bounce"]
   y98 --> lucky["Lucky in iframe"]
   lucky --> gold["Gold leftover panel"]
-  y15 --> peri["Periscope Saved."]
+  y15 --> peri["2015 is not a door"]
   y15 --> y17["#/year/2017 not a door"]
 ```
 
@@ -374,7 +372,7 @@ flowchart TD
 3. http://127.0.0.1:8080/years/1998/ — Lucky chip in the window
 4. http://127.0.0.1:8080/years/1998/sites/google/lucky.html — gold leftover first paint, dest-as-tab
 5. http://127.0.0.1:8080/years/2001/sites/wikipedia/edit.html — UseMod reconstruction line
-6. http://127.0.0.1:8080/app/index.html#/year/2015 — header is the stop; empty Go LIVE red; ticks + title + Go LIVE `Saved.`
+6. http://127.0.0.1:8080/app/index.html#/year/2015 — “2015 is not a door”. Never Periscope.
 7. http://127.0.0.1:8080/app/index.html#/year/2017 — “2017 is not a door”
 8. Phone 390: http://127.0.0.1:8080/years/1994/ · http://127.0.0.1:8080/years/2008/ · http://127.0.0.1:8080/years/2022/
 9. Public (origin): https://sourabhligade.github.io/internet-through-time/

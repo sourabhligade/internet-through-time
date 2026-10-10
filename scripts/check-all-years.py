@@ -108,7 +108,6 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/iphone/maps.html",
         "sites/playable/game.html"
     ],
-    "2015": [],  # React door. No years/2015 tree. check_year returns early on kind react.
 }
 
 # Optional research markers (year can be "research-only" without tree)

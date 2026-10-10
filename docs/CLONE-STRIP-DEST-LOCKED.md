@@ -24,8 +24,8 @@ A clone is two leftover writers on the same dest (`lx` + `d2`, leftover-3× + le
 |-----------|---------------|
 | Strip leftover clone machines on dest-locked lean dests | Dest-lock forests 1994–2006 |
 | Replace leftover dest leftover-2× **pairs** with one dest-true leftover writer | Dest-lock 2013 leftover 2× ×2 (year law) |
-| Delete leftover warehouse on official dest HTML | Open 2009 as a live door |
-| Keep leftover-3× unique dest-true cream face | Add dests · unique leftover-20 maps |
+| Delete leftover warehouse on official dest HTML | Board 2009. 2009 is already a live HTML door |
+| Keep leftover-3× unique dest-true cream face | Add dests · dest-farm leftover-20 (unshipped; 2017 absent) |
 | Update leftover-official matrix + e2e | Invent + brand pixels · 2022+ |
 
 **Out of scope (do not touch):**
@@ -36,7 +36,7 @@ A clone is two leftover writers on the same dest (`lx` + `d2`, leftover-3× + le
 | 2013 | READ-FIRST: leftover 2× ×2 on every dest. Never dest-locked. |
 | 2009 | Boarded plaque. |
 | , 2014, 2021 | Already **0** clone dests. |
-| 2015 | Dest-lock **reverted**. Leftover dest leftover-2× is dest-farm leftover-2× (not this strip). |
+| 2015 | omitted · not a door. leftover-2× unique catalog n=0. Do not dest-farm. |
 | leftover dests (19) | Already one leftover writer each. Model, not target. |
 
 ---
@@ -50,7 +50,7 @@ A clone is two leftover writers on the same dest (`lx` + `d2`, leftover-3× + le
 | 2007 | 1 | Yahoo leftover dest `yahoo-dp` + `yahoo-d2` |
 | 2010 | 1 | Amazon leftover dest `amazon-lx` + `amazon-d2` |
 | 2012 | 4 | Official Medium / Path / Flipboard leftover warehouse + Yahoo leftover dest `yeslo` ×3 |
-| 2017 | 2 | YouTube + Instagram leftover dest leftover-2× pairs |
+| 2017 | 0 | absent · not a door. leftover-2× n=0. Do not dest-farm. |
 | **Dest-locked total** | **38** | |
 | Without | 9 | |
 
@@ -232,15 +232,15 @@ one-thing 2012 IG Android still pass
 | 2007 | `sites/yahoo/index.html` | extra leftover dest | `itt07-yahoo-dp` dest-true panel | `yahoo-d2` panel + Next to d2 | R1 |
 | 2010 | `sites/amazon/index.html` | extra leftover dest | `itt10-amazon-lx` dest-true panel | `amazon-d2` panel | R1 |
 | 2012 | `sites/yahoo/index.html` | extra leftover dest | one leftover dest-true face (`yeslo-yahoo` **or** convert to leftover-2× `yahoo-lx` shape) | `yeslo2-yahoo` · `yeslo3-yahoo` | R1 preferred |
-| 2017 | `sites/youtube/index.html` | extra leftover dest (not unique-20) | leftover-3× dest-true `data-pop-go` if dest-true, else one leftover-2× `yt` | leftover-2× `yt-2` + details warehouse | R2 if leftover-3× face exists, else R1 |
-| 2017 | `sites/instagram/index.html` | extra leftover dest | one leftover-2× `instagram-lx` | `instagram-d2` + details | R1 |
+| 2017 | — | absent · not a door | — | — | Do not dest-farm |
 
-2017 unique leftover dests (Animoji, Cuphead, …) already have **0** leftover-2×. Do not touch them.
+2017 is absent. leftover-20 is unshipped. Do not dest-farm leftover-20 dests.
 
 ### Pass C done when
 
 ```
-2007 / 2010 / 2012 / 2017 dests with 2+ leftover persist keys = 0
+2007 / 2010 / 2012 dests with 2+ leftover persist keys = 0
+2017 is absent (leftover-20 unshipped)
 one-thing stars still write/no-write
 ```
 
@@ -252,12 +252,12 @@ one-thing stars still write/no-write
 
 | File | Edit |
 |------|------|
-| `e2e/leftover-official.matrix.json` | Drop every dest-locked `*-d2` / second leftover-2× row for 2007, 2010, 2012. Keep `*-lx` rows on leftover dests that still have leftover-2× (R1 dests). Drop leftover-2× rows on leftover-3× unique dests (those dests are leftover-3× e2e, not leftover-official). **2015 dest-lock reverted** — leftover-official dest-farm leftover-2× rows stay. |
+| `e2e/leftover-official.matrix.json` | Drop every dest-locked `*-d2` / second leftover-2× row for 2007, 2010, 2012. Keep `*-lx` rows on leftover dests that still have leftover-2× (R1 dests). Drop leftover-2× rows on leftover-3× unique dests (those dests are leftover-3× e2e, not leftover-official). **2015 is omitted** — leftover-2× unique catalog n=0. Do not dest-farm leftover-official rows. |
 | `e2e/leftover-official.spec.js` | No logic change if matrix is dest-true. Forests still filtered. |
 | `e2e/leftover-3x-unique.spec.js` | No dest list change. Recheck leftover-3× unique dests still dest-true leftover-3× first paint. |
 | `e2e/leftover-4x-unique.spec.js` | 2012 chrome / twitter / soundcloud untouched. Recheck. |
 | `e2e/leftover-dest-3x-face.spec.js` | Recheck amazon leftover-3× dest face (not this strip). |
-| `e2e/one-thing-per-year.spec.js` | Stars untouched. Recheck 2007 / 2010 / 2012 / 2017. |
+| `e2e/one-thing-per-year.spec.js` | Stars untouched. Recheck 2007 / 2010 / 2012. 2017 is absent. |
 | `scripts/audit-mock-flows.js` | Must not class remaining leftover dest faces as `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA`. |
 | `docs/DISK-TRUTH.md` | Dest-locked leftover dest leftover-2× = **one writer**. Forests + 2013 stay two. Official dest leftover-2× = 0 including 2012 Medium / Path / Flipboard. 2014 dest folders **18**. |
 
@@ -278,7 +278,7 @@ Run in this order:
 # dest-true clone count must print 0 for dest-locked years
 python3 - <<'PY'
 # same clone counter as the 2026-09-16 recount
-# dest-locked years: 2007, 2010-2012, 2014, 2021 (2015 dest-lock reverted)
+# dest-locked years: 2007, 2010-2012, 2014, 2021 (2015 omitted · not a door)
 # expected clone dests = 0
 PY
 
@@ -306,7 +306,7 @@ npx playwright test \
 3. Apply R1 / R2 / R3 / R4. **Do not mix.**
 4. Incomplete (empty field, 0 ticks, trap pick) never writes the kept key.
 5. Complete writes **only** the kept key. Star key stays empty.
-6. Leftover never writes `itt07-iphone` / `itt10-ig-posts` / `itt12-ig-android` / `itt17-faceid` / `itt20-zoom`.
+6. Leftover never writes `itt07-iphone` / `itt10-ig-posts` / `itt12-ig-android` / `itt20-zoom`. **2017 is absent · not a door.**
 7. No new dest folder. No new brand pixels. failed-final cite stays.
 8. Do not leave a second leftover persist key in a comment or `hidden` panel.
 
@@ -319,7 +319,7 @@ A mechanical pass is allowed: delete `details.itt-also-year` leftover-2× blocks
 - Dest-lock 2013 leftover 2× ×2.
 - Dest-lock forests 1994–2006.
 - Strip leftover-3× unique dest-true cream faces.
-- Strip 2017 unique leftover dest dest-true verbs (`data-uf17-*`).
+- Dest-farm leftover-20 dests. 2017 is absent. leftover-20 is unshipped.
 - Add dests to / 2021 “to make leftover-3× 9.”
 - Keep `*-d2` as a second unique leftover dest.
 - Fold leftover warehouse on official dests (`details` is still leftover warehouse).

@@ -4,7 +4,7 @@ const { test, expect } = require("@playwright/test");
 /**
  * Phase 3. The window matches the year.
  * GIF folders come from year-card assetYear. Lean years have no GIF toolbar.
- * 2015's header names the stop you are on. Absent hashes do not open that door.
+ * 2015 omitted hash is not a door. Absent hashes do not open a live door.
  */
 
 const OWN = ["1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2004", "2005", "2006"];
@@ -150,19 +150,7 @@ for (const year of COACH) {
   });
 }
 
-test("2015 header names the stop, and the star stays on the start", async ({ page }) => {
-  await page.setViewportSize({ width: 1100, height: 800 });
-  const res = await page.goto("/app/index.html#/year/2015");
-  expect(res && res.ok()).toBeTruthy();
-  await expect(page.locator(".year-star")).toHaveText("Periscope");
-  await expect(page.locator("header em")).toHaveText("Starting Point");
-  await page.locator("article").getByRole("button", { name: "Apple Music", exact: true }).click();
-  await expect(page.locator("header")).not.toContainText("Periscope");
-  await expect(page.locator("header em")).toContainText("Apple Music");
-  await expect(page.locator(".stop h1").first()).toHaveText("Apple Music");
-});
-
-for (const year of ["2017", "2018", "2019", "2023", "2024", "2025"]) {
+for (const year of ["2015", "2017", "2018", "2019", "2023", "2024", "2025"]) {
   test(year + " hash is not a door", async ({ page }) => {
     await page.setViewportSize({ width: 1100, height: 800 });
     const res = await page.goto("/app/index.html#/year/" + year);

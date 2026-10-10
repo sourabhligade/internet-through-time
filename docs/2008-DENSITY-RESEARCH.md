@@ -3,7 +3,7 @@
 **Date:** 2026-09-30  
 **Status:** Deep research **complete (Partial).** **Not ship law.** Do not dest-farm. Do not `git checkout` the wiped forest. Implement dest HTML only after this note is read and a pack is named.  
 **Workflow:** `/workflows` · `deep-research` (cited cross-check landed).  
-**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json` · `scripts/itt_gate.py` `SHIP_YEARS`. Live hub is **25 doors** (1994–2015 and 2020–2022). **2015 is the React door.** 2008 is a **live HTML lean door** (`kind: html`, star `itt08-apps`).  
+**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json` · `scripts/itt_gate.py` `SHIP_YEARS`. Live hub is **24 doors** (1994–2014 and 2020–2022). **2015 is omitted.** 2008 is a **live HTML lean door** (`kind: html`, star `itt08-apps`).  
 **Parent corpus (wiped from this branch, still in git / worktree `hi`):** `docs/2008-RESEARCH.md` · `docs/2008-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md` · `docs/2008-DOUBLE-5K-RESEARCH-FAMOUS-AMBITIOUS-2026-09-06.md` at `3498b60b1^`. Worktree copies: `/Users/sourabhligade/.grok/worktrees/sourabhligade-internet-through-time/hi/docs/`.
 
 Wipe: `3498b60b1` removed `years/2008/` (**591** dest folders · **857** HTML). That forest is dest-farm. It is the anti-model.

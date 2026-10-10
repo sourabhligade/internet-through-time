@@ -1,13 +1,13 @@
 // @ts-check
 /**
  * Every live trail room writes one ITT.User envelope.
- * Flow trail rows come from js/config/flow-trails.js (396).
- * 2015 is the React door and is not in that file (10 stops).
+ * Flow trail rows come from js/config/flow-trails.js (386).
+ * 2015 is omitted and is not in that file.
  */
 const fs = require("fs");
 const path = require("path");
 const { test, expect } = require("@playwright/test");
-const { revealLeftoverRails, completeReactStop } = require("./helpers");
+const { revealLeftoverRails } = require("./helpers");
 const { getKey, clickOfficialVerb } = require("./dest-true-io");
 
 const ROOT = path.join(__dirname, "..");
@@ -44,19 +44,6 @@ function loadTrails() {
 }
 
 const DESTS = loadTrails();
-
-const REACT_2015 = [
-  { n: 1, whenKey: "itt15-periscope", name: "Periscope Go LIVE" },
-  { n: 2, whenKey: "itt15-music", name: "Apple Music" },
-  { n: 3, whenKey: "itt15-win10", name: "Windows 10" },
-  { n: 4, whenKey: "itt15-reddit", name: "Reddit redesign" },
-  { n: 5, whenKey: "itt15-watch", name: "Apple Watch" },
-  { n: 6, whenKey: "itt15-edge", name: "Edge" },
-  { n: 7, whenKey: "itt15-meerkat", name: "Meerkat" },
-  { n: 8, whenKey: "itt15-slack", name: "Slack" },
-  { n: 9, whenKey: "itt15-youtube", name: "YouTube Red" },
-  { n: 10, whenKey: "itt15-game-liverush", name: "Live Rush" },
-];
 
 /**
  * Product machines whose finish is not the generic official-verb form.
@@ -434,8 +421,8 @@ async function finish(page, d) {
 }
 
 test.describe("every trail room writes an envelope", () => {
-  test("the live trail is 396 finish rooms", () => {
-    expect(DESTS.length).toBe(396);
+  test("the live trail is 386 finish rooms", () => {
+    expect(DESTS.length).toBe(386);
     const routes = {};
     for (const d of DESTS) {
       const route = routeOf(d);
@@ -455,18 +442,21 @@ test.describe("every trail room writes an envelope", () => {
   }
 });
 
-test.describe("2015 React stops write an envelope", () => {
-  for (const stop of REACT_2015) {
-    test(`2015 n=${stop.n} ${stop.whenKey}`, async ({ page }) => {
-      await page.goto("/app/index.html#/year/2015?stop=" + stop.whenKey);
-      await page.waitForFunction(() => !!(window.ITT && window.ITT.User && window.ITT.User.store), null, {
-        timeout: 15000,
-      });
-      const room = page.locator("article.stop#" + stop.whenKey);
-      await room.waitFor({ timeout: 15000 });
-      await completeReactStop(page, room);
-      await expect(room.locator(".status")).toHaveText("Saved.");
-      await assertEnvelope(page, { year: "2015", whenKey: stop.whenKey, href: "", n: stop.n }, "official");
-    });
-  }
+test.describe("2015 omitted is not a trail door", () => {
+  test("2015 is not in flow-trails · React 2015 leftover pack is gone", () => {
+    expect(DESTS.filter((d) => d.year === "2015")).toEqual([]);
+    expect(fs.existsSync(path.join(ROOT, "react", "src", "year2015.js"))).toBe(false);
+    expect(fs.existsSync(path.join(ROOT, "react", "src", "YearRail.jsx"))).toBe(false);
+    const trails = fs.readFileSync(path.join(ROOT, "js/config/flow-trails.js"), "utf8");
+    expect(trails.includes('"2015"')).toBe(false);
+    expect(trails.includes("itt15-")).toBe(false);
+  });
+
+  test("2015 hash is not a door and never shows Periscope or Live Rush", async ({ page }) => {
+    await page.goto("/app/index.html#/year/2015");
+    await expect(page.getByRole("heading", { name: "2015 is not a door" })).toBeVisible();
+    await expect(page.locator("body")).not.toContainText("Periscope");
+    await expect(page.locator("body")).not.toContainText("Live Rush");
+    await expect(page.locator(".door")).toHaveCount(0);
+  });
 });

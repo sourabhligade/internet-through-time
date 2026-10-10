@@ -334,20 +334,6 @@
         "roomClause": "the year lives in WhatsApp / Heartbleed rooms"
       }
     },
-    "2015": {
-      "kind": "react",
-      "href": "app/index.html#/year/2015",
-      "star": "itt15-periscope",
-      "chrome": {
-        "os": "win10",
-        "browser": "chrome-habit",
-        "toolbar": "chrome22",
-        "assetYear": null,
-        "location": "https://www.google.com/web2015/",
-        "maximized": true,
-        "hasTaskbar": true
-      }
-    },
     "2017": {
       "kind": "absent"
     },

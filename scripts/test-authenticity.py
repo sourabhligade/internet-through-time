@@ -1993,8 +1993,8 @@ def test_immersion_registry_complete() -> None:
     reg = read(ROOT / "js/immersion/registry.js")
     for year in (
         "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002",
-        "2003", "2004", "2005", "2006", "2007","2009", "2010",
-        "2012", "2013", "2014", "2015", "2017",
+        "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011",
+        "2012", "2013", "2014", "2020", "2021", "2022",
     ):
         # Only require registry entry when the year tree is on disk (wiped years skip)
         if not (ROOT / "years" / year).is_dir():

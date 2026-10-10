@@ -678,7 +678,7 @@
       {"go": "sites/yahoo/index.html", "label": "Yahoo!"},
       {"go": "pages/about.html", "label": "About"}
     ],
-    "chrome": "2004",
+    "chrome": "2004", /* 2003 has dest pixels, no chrome folder — borrow 2004 XP chrome */
     "toolbar": "ie",
     "family": "ie",
     "location": "http://home.microsoft.com/intl/web2003/",

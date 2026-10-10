@@ -226,9 +226,9 @@
           fl.join(" · ") +
           "</font></p>";
         document.body.appendChild(foot);
-        /* 2015–2022 start: footer sits under content. Do not stretch to the window. */
+        /* 2020–2022 start: footer sits under content. Do not stretch to the window. */
         var yNum = parseInt(String(YEAR), 10);
-        if (onHome && yNum >= 2015 && yNum <= 2022) {
+        if (onHome && yNum >= 2020 && yNum <= 2022) {
           var root = document.documentElement;
           root.style.setProperty("height", "auto");
           root.style.setProperty("min-height", "0");

@@ -353,7 +353,7 @@ html[data-itt-year="2013"] .ott-flows a {
   color: #e8fff8;
 }
 
-/* Chrome habit landing for live HTML habit years 2020–2022. 2015 is React (no HTML start). */
+/* Chrome habit landing for live HTML habit years 2020–2022. 2015 is omitted. */
 html[data-itt-start-habit],
 html[data-itt-year="2020"],
 html[data-itt-year="2021"],

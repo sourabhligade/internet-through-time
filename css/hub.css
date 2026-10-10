@@ -675,7 +675,7 @@ body {
   content: "";
 }
 
-/* Legacy boarded-strip (unused on the 25-door hub). 2001–2003 are live HTML. */
+/* Legacy boarded-strip (unused on the 24-door hub). 2001–2003 are live HTML. */
 .closed-rooms {
   grid-column: 1 / -1;
   margin: 2px 0;
@@ -1341,11 +1341,6 @@ body {
 .year-card.y2014 .year { color: #075e54; }
 .year-card.y2014 .era-chip { background: #25d366; color: #073; }
 .year-card.y2014 .motif { background: linear-gradient(135deg, #25d366, #c62828); }
-.year-card.y2015 { border-color: #0078d7 #404040 #404040 #111; }
-.year-card.y2015 .year-card-inner { background: linear-gradient(180deg, #e3f2fd 0%, #fce4ec 55%); }
-.year-card.y2015 .year { color: #0d47a1; }
-.year-card.y2015 .era-chip { background: #0078d7; color: #fff; }
-.year-card.y2015 .motif { background: linear-gradient(135deg, #111, #0078d7); }
 .year-card.y2008 { border-color: #1d6adb #404040 #404040 #111; }
 .year-card.y2008 .year-card-inner { background: linear-gradient(180deg, #e3f2fd 0%, #eceff1 55%); }
 .year-card.y2008 .year { color: #0d47a1; }

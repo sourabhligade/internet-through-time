@@ -36,7 +36,7 @@ NO_PLAQUE: frozenset[tuple[int, str]] = frozenset(
 )
 
 # Years restored to committed dests (no leftover 5× plaques) except ALLOW_PLAQUE.
-NO_PLAQUE_YEARS: frozenset[int] = frozenset({2006, 2009, 2010, 2012, 2013, 2023})
+NO_PLAQUE_YEARS: frozenset[int] = frozenset({2006, 2009, 2010, 2012, 2013})
 
 # 5×-live F1–F5 leftover plaques (keys are not official gold, except Hulu/Chrome
 # share a dest with gold). -5x-live / 2012-5x-live require data-5x-save here.
@@ -54,7 +54,7 @@ ALLOW_PLAQUE: frozenset[tuple[int, str]] = frozenset(
         (2012, "sites/wikipedia/sopa.html"),
     }
 )
-# No HTML tree: absent years and React doors. 2009 is live HTML.
+# No HTML tree: absent years. 2015 and 2016 are omitted (no year-card key). 2009 is live HTML.
 WIPED_YEARS: frozenset[int] = frozenset(
     int(y) for y, r in _YEARS.items() if r.get("kind") in ("absent", "react")
 )
@@ -63,12 +63,11 @@ BOARDED_YEARS: frozenset[int] = frozenset(
 )
 
 FAMOUS_YEARS = [
-    y
-    for y in list(range(1994, 2018))
-    if y not in {2001, 2002, 2003, 2007, 2009, 2013, 2017}
-    and y not in WIPED_YEARS
-    and y not in BOARDED_YEARS
-    and str(y) in _YEARS
+    int(y)
+    for y, r in _YEARS.items()
+    if r.get("kind") == "html"
+    and int(y) <= 2014
+    and int(y) not in {2001, 2002, 2003, 2007, 2009, 2013}
 ]
 
 

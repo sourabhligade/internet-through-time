@@ -289,8 +289,11 @@ def test_year_card() -> None:
     if open_years != list(SHIP_YEARS):
         fail("year-card", "SHIP_YEARS drifted from the card")
         return
-    if len(open_years) != 25:
-        fail("year-card", f"expected 25 open doors, got {len(open_years)}")
+    if len(open_years) != 24:
+        fail("year-card", f"expected 24 open doors, got {len(open_years)}")
+        return
+    if "2015" in years or "2016" in years:
+        fail("year-card", "2015 and 2016 must stay omitted (no year-card key)")
         return
     if years.get("2011", {}).get("kind") != "html" or years.get("2011", {}).get("star") != "itt11-gplus":
         fail("year-card", "2011 must be html with star itt11-gplus")

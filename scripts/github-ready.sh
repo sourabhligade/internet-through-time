@@ -78,7 +78,8 @@ done
 eval "$(python3 -c 'import sys; sys.path.insert(0,"scripts"); from itt_gate import _BOARDED, _WIPED, _YEARS
 print("BOARDED=\"" + " ".join(sorted(_BOARDED)) + "\"")
 print("WIPED=\"" + " ".join(sorted(_WIPED)) + "\"")
-print("REACT=\"" + " ".join(sorted(y for y, r in _YEARS.items() if r.get("kind") == "react")) + "\"")')"
+print("REACT=\"" + " ".join(sorted(y for y, r in _YEARS.items() if r.get("kind") == "react")) + "\"")
+print("CARD=\"" + " ".join(sorted(_YEARS)) + "\"")')"
 for y in $(seq 1994 2025); do
   if [[ " $WIPED " == *" $y "* ]]; then
     if [[ -f "years/$y/index.html" ]]; then bad "wiped years/$y still on disk"; else ok "years/$y wiped"; fi
@@ -96,6 +97,10 @@ for y in $(seq 1994 2025); do
   if [[ " $REACT " == *" $y "* ]]; then
     if [[ -f "years/$y/index.html" ]]; then bad "react years/$y must have no HTML tree"; else ok "years/$y react door (no HTML tree)"; fi
     if [[ -f "app/index.html" ]]; then ok "app/index.html react hall"; else bad "missing app/index.html"; fi
+    continue
+  fi
+  if [[ " $CARD " != *" $y "* ]]; then
+    if [[ -f "years/$y/index.html" ]]; then bad "omitted years/$y still on disk"; else ok "years/$y omitted"; fi
     continue
   fi
   if [[ -f "years/$y/index.html" ]]; then ok "years/$y/index.html"; else bad "missing years/$y"; fi

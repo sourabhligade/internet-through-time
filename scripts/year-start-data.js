@@ -11,7 +11,7 @@ const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..");
 const SRC = path.join(ROOT, "ui", "year", "start-data.js");
-const WIPED = new Set(["2023", "2024", "2025"]);
+const WIPED = new Set(["2015", "2016", "2017", "2018", "2019", "2023", "2024", "2025"]);
 
 function loadYearStart() {
   const sandbox = { window: {}, ITT: {} };

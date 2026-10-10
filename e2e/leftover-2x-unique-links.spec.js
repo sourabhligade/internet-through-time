@@ -5,6 +5,7 @@
  */
 const fs = require("fs");
 const path = require("path");
+const vm = require("vm");
 const { test, expect } = require("@playwright/test");
 const { revealLeftoverRails } = require("./helpers");
 const matrix = require("./leftover-2x-unique-links.matrix.json");
@@ -18,6 +19,13 @@ const HREF = /href="([^"]+)"/g;
 function destSlug(href) {
   const m = String(href || "").match(/(?:sites\/|\.\.\/)([^/.]+)(?:\/|\.html|$)/);
   return m ? m[1] : "";
+}
+
+function loadRuntimeCatalog() {
+  const src = fs.readFileSync(path.join(ROOT, "js/config/leftover-2x-unique-links.js"), "utf8");
+  const sandbox = {};
+  vm.runInNewContext(src, sandbox);
+  return sandbox.ITT.leftover2xUniqueLinks;
 }
 
 function trailMaps() {
@@ -115,9 +123,14 @@ async function completeLeftoverDest(page, href, suffix, star, year) {
 test.describe("leftover-2× unique dest links", () => {
   test("catalog: one dest slug once · dests have index.html · no 123-reg", () => {
     for (const row of matrix) {
-      if (!fs.existsSync(path.join(ROOT, "years", String(row.year), "index.html"))) continue;
+      expect(row.n, row.year + " n").toBe(row.dests.length);
       expect(new Set(row.dests).size, row.year + " unique dests").toBe(row.dests.length);
-      expect(row.n).toBe(row.dests.length);
+      const door = path.join(ROOT, "years", String(row.year), "index.html");
+      if (row.dests.length > 0) {
+        expect(fs.existsSync(door), row.year + " missing years/" + row.year + "/index.html with dests").toBe(
+          true
+        );
+      }
       for (const slug of row.dests) {
         expect(WAREHOUSE.has(slug), row.year + " " + slug + " warehouse").toBe(false);
         const idx = path.join(ROOT, "years", row.year, "sites", slug, "index.html");
@@ -165,12 +178,44 @@ test.describe("leftover-2× unique dest links", () => {
   });
 
   test("catalog unique dest counts match matrix", () => {
+    const catalog = loadRuntimeCatalog();
     const byYear = Object.fromEntries(matrix.map((r) => [r.year, r.n]));
+    expect(Object.keys(catalog).sort()).toEqual(matrix.map((r) => r.year).sort());
     expect(byYear["1995"]).toBe(117);
     expect(byYear["1999"]).toBe(138);
-    expect(byYear["2000"]).toBeGreaterThanOrEqual(70);
+    expect(byYear["2000"]).toBe(76);
     expect(byYear["2007"]).toBe(17);
     expect(byYear["2013"]).toBe(27);
+    expect(byYear["2014"]).toBe(16);
+    expect(byYear["2015"]).toBe(0);
+    expect(matrix.find((r) => r.year === "2015").dests).toEqual([]);
+    expect(catalog["2015"]).toEqual([]);
+    let sum = 0;
+    for (const row of matrix) {
+      const ids = (catalog[row.year] || []).map((d) => d.id);
+      expect(ids, row.year + " catalog ids").toEqual(row.dests);
+      sum += row.n;
+    }
+    expect(sum, "leftover-2× unique dests").toBe(1138);
+  });
+
+  test("impl leftover-2× keeps omitted 2015 empty catalog after SHIP_YEARS", () => {
+    const src = fs.readFileSync(path.join(ROOT, "scripts", "impl_leftover_2x_unique_links.py"), "utf8");
+    expect(src).toMatch(/catalog\["2015"\]\s*=\s*catalog\.get\("2015"\)\s*or\s*\[\]/);
+  });
+
+  test("2015 leftover-2× unique freeze is omitted · React 2015 files gone", () => {
+    expect(fs.existsSync(path.join(ROOT, "years", "2015"))).toBe(false);
+    expect(fs.existsSync(path.join(ROOT, "react", "src", "year2015.js"))).toBe(false);
+    expect(fs.existsSync(path.join(ROOT, "react", "src", "Year2015.jsx"))).toBe(false);
+    expect(fs.existsSync(path.join(ROOT, "react", "src", "YearRail.jsx"))).toBe(false);
+    expect(fs.existsSync(path.join(ROOT, "react", "src", "OfficialStop.jsx"))).toBe(false);
+    expect(fs.existsSync(path.join(ROOT, "react", "src", "ProductFace.jsx"))).toBe(false);
+    const helpers = fs.readFileSync(path.join(ROOT, "e2e", "helpers.js"), "utf8");
+    expect(helpers.includes("clickRailKey")).toBe(false);
+    expect(helpers.includes("completeReactStop")).toBe(false);
+    expect(helpers.includes("openReactStop")).toBe(false);
+    expect(helpers.includes("itt15-game-liverush")).toBe(false);
   });
 
   test("leftover-2× unique dest links dest-disjoint leftover-3× unique dest links", () => {

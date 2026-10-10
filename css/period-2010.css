@@ -1,3 +1,5 @@
+/* 2010 document styles — Win7 first full year · IE 8 · iPad · iPhone 4 · Instagram · Open Graph
+   Do NOT @import period-2009.css (that daisy-chains 2006→2005→1999→1995 and lags every 2010–2014 dest). */
 @import url("leftover-dest-face.css");
 @import url("period-2010s-face.css");
 
@@ -10,9 +12,6 @@
   font-size: 11px;
   line-height: 1.5;
 }
-
-/* 2010 document styles — Win7 first full year · IE 8 · iPad · iPhone 4 · Instagram · Open Graph */
-@import url("period-2009.css");
 
 body.year-2010 .itt-year-chip {
   color: #1b5e90;

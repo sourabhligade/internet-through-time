@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Leftover-3× unique dest-true doors from leftover-3x-unique.matrix.json.
- * Dest-farm leftover-3× CUT specs walk these dests (one dest / one key).
+ * Catalog is empty. CUT specs assert leftover-3× engines stay removed.
  */
 const ROWS = require("./leftover-3x-unique.matrix.json");
 
@@ -38,18 +38,9 @@ function doorsFor(year) {
  * @param {string[]} years
  */
 function liveYears(years) {
-  /** @type {Record<string, { star: string, gold: string[], doors: ReturnType<typeof doorsFor> }>} */
-  const live = {};
-  for (const year of years) {
-    const rows = ROWS.filter((r) => r.year === year);
-    if (!rows.length) continue;
-    live[year] = {
-      star: rows[0].star,
-      gold: [rows[0].star],
-      doors: doorsFor(year),
-    };
-  }
-  return live;
+  /** Catalog is empty. No leftover-3× live door map. */
+  void years;
+  return {};
 }
 
 module.exports = { goSel, doorsFor, liveYears, ROWS };

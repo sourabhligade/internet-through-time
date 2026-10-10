@@ -14,7 +14,7 @@ async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
 }
 
-test.describe('2010 leftover trail', () => {
+test.describe('2010 official trail', () => {
   test('Instagram share reveals next iPhone 4', async ({ page }) => {
     await page.goto('/years/2010/sites/instagram/index.html');
     await clearKeys(page, ['itt10-ig', 'itt10-ig-posts']);

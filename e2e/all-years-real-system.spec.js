@@ -8,6 +8,8 @@
  *
  * Product-specific REAL flows remain in year packs; this file enforces the shared system.
  */
+const fs = require('fs');
+const path = require('path');
 const { test, expect } = require('@playwright/test');
 
 
@@ -19,7 +21,7 @@ async function twoStepClick(page, selector) {
 }
 
 
-const YEARS = [
+const ALL_YEARS = [
   '1994',
   '1995',
   '1996',
@@ -45,6 +47,12 @@ const YEARS = [
   '2021',
   '2022',
 ];
+
+/** Live doors whose about pages have no thesis REAL panel on purpose. Do not dest-farm the panel. */
+const NO_THESIS_YEARS = ['2011', '2020', '2021'];
+
+/** About pages that already bake a thesis REAL save. Skip only the named no-thesis years. */
+const YEARS = ALL_YEARS.filter((year) => !NO_THESIS_YEARS.includes(year));
 
 /** @param {string} year */
 function thesisKey(year) {
@@ -104,6 +112,28 @@ async function clearKey(page, key) {
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
 }
+
+test.describe('REAL system live-year list', () => {
+  test('24 live doors · about pages exist · no-thesis years named', () => {
+    expect(ALL_YEARS).toHaveLength(24);
+    expect(NO_THESIS_YEARS).toEqual(['2011', '2020', '2021']);
+    expect(YEARS).toHaveLength(21);
+    for (const year of ALL_YEARS) {
+      const about = path.join(__dirname, '..', 'years', year, 'pages', 'about.html');
+      expect(fs.existsSync(about), `${year}: about.html`).toBe(true);
+    }
+  });
+
+  for (const year of NO_THESIS_YEARS) {
+    test(`${year} about has no thesis panel on purpose`, async ({ page }) => {
+      const about = path.join(__dirname, '..', 'years', year, 'pages', 'about.html');
+      const html = fs.readFileSync(about, 'utf8');
+      expect(html, `${year}: no thesis panel on purpose`).not.toMatch(/data-itt-real-save/);
+      await page.goto(`/years/${year}/pages/about.html`);
+      await expect(page.locator('[data-itt-real-save]')).toHaveCount(0);
+    });
+  }
+});
 
 for (const year of YEARS) {
   test.describe(`REAL system ${year}`, () => {

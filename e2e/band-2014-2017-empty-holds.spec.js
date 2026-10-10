@@ -1,7 +1,7 @@
 // @ts-check
 /**
- * Phase 3 lock for 2014–2017. Empty WhatsApp, empty Story, empty Periscope
- * title, and Live Rush score 0 write nothing.
+ * Phase 3 lock for 2014–2017. Empty WhatsApp writes nothing.
+ * 2015 is omitted. 2017 stays absent.
  */
 const { test, expect } = require("@playwright/test");
 
@@ -26,31 +26,11 @@ test.describe("2014-2017 phase 3 empty holds", () => {
     expect(await raw(page, "itt14-wa-install")).toBeNull();
   });
 
-  test("Periscope empty title writes nothing and ended broadcast writes nothing", async ({ page }) => {
-    await page.goto("/app/index.html#/year/2015?stop=itt15-periscope");
-    await page.locator("#root").waitFor({ state: "attached", timeout: 15000 });
-    await page.waitForFunction(() => !!(window.ITT && window.ITT.User && window.ITT.User.store), null, {
-      timeout: 15000,
-    });
-    const room = page.locator("article.stop#itt15-periscope");
-    await room.waitFor({ timeout: 15000 });
-    await page.evaluate(() => localStorage.removeItem("itt15-periscope"));
-    await room.locator(".actions button").last().click();
-    expect(await raw(page, "itt15-periscope")).toBeNull();
-    await room.locator(".actions button").first().click();
-    expect(await raw(page, "itt15-periscope")).toBeNull();
-  });
-
-  test("Live Rush score 0 trap writes nothing", async ({ page }) => {
-    await page.goto("/app/index.html#/year/2015?stop=itt15-game-liverush");
-    await page.locator("#root").waitFor({ state: "attached", timeout: 15000 });
-    await page.waitForFunction(() => !!(window.ITT && window.ITT.User && window.ITT.User.store), null, {
-      timeout: 15000,
-    });
-    const room = page.locator("article.stop#itt15-game-liverush");
-    await room.waitFor({ timeout: 15000 });
-    await page.evaluate(() => localStorage.removeItem("itt15-game-liverush"));
-    await room.locator(".actions button").first().click();
-    expect(await raw(page, "itt15-game-liverush")).toBeNull();
+  test("2015 omitted hash is not a door", async ({ page }) => {
+    const res = await page.goto("/app/index.html#/year/2015");
+    expect(res && res.ok()).toBeTruthy();
+    await expect(page.getByRole("heading", { name: "2015 is not a door" })).toBeVisible();
+    await expect(page.locator(".door")).toHaveCount(0);
+    await expect(page.locator("body")).not.toContainText("Periscope");
   });
 });

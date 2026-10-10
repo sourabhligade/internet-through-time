@@ -1,6 +1,6 @@
 # Lean-door leftover double — criteria only
 
-**2017–2019 and 2023–2025 are absent.** Lists for absent years in this file are research. Do not restore `years/` for an absent year. Live doors are 1994–2015 and 2020–2022. **2015 is the React door.** 2020–2022 are live HTML. Ship law is [`DISK-TRUTH.md`](DISK-TRUTH.md).
+**2017–2019 and 2023–2025 are absent.** Lists for absent years in this file are research. Do not restore `years/` for an absent year. Live doors are 1994–2014 and 2020–2022. **2015 is omitted.** 2020–2022 are live HTML. Ship law is [`DISK-TRUTH.md`](DISK-TRUTH.md).
 
 **Date:** 2026-09-20  
 **Status:** Implemented 2026-09-20 (Step 2 named). Not dest-farm. Not leftover-3× unique growth. Leftover dests on thin lean doors only. Cap is not a quota.  
@@ -19,7 +19,7 @@ Deep-research is a companion pass (`/workflows` · `deep-research`). This file i
 
 **5,000 websites is the walk. It is not 5,000 dest folders. Double leftover dests only on thin lean doors, dest-disjoint from official 10 and leftover-3× unique dest-true dests already on disk. Famous / ambitious / year-true only. Incomplete never writes. Leftover never writes the star. No invented brand pixels.**
 
-A year that looks full because it has 200 leftover dests has **failed I/O**. ** (13 rooms · GDPR Manage) is the I/O model.** Forests and dest-lock-reverted warehouses are the anti-model.
+A year that looks full because it has 200 leftover dests has **failed I/O**. **2017** (13 rooms · GDPR Manage) was the I/O model and is now **absent**. Forests and dest-lock-reverted warehouses are the anti-model.
 
 | | This pass | Not this pass |
 |--|-----------|---------------|
@@ -39,17 +39,17 @@ A dest **fails** if any row is N. One miss is a fail. Inherits leftover-3× **U1
 | **D1** | Unique dest | One folder / one slug / one named role | Same dest on official 10 and leftover-3× · Amazon twice |
 | **D2** | Unique key | One persist key per dest | `lx` + `d2` counted as two dests · `pop`+`pop2`+`pop3` on one dest |
 | **D3** | Unique verb | Period action for **that** dest | “Open leftover” cloned · “Go Safari” |
-| **D4** | Year lock | That year’s mass or launch | Neighbor gold as dest (ChatGPT in 2021 · Reels in · App Store in 2007 · X / Threads / GPT-4 in 2022) |
-| **D5** | Dest-disjoint leftover | New leftover dest ∉ official 10 ∪ leftover-3× unique ∪ unique leftover-20 (2017) | Adding `tiktok` again · adding `wiki` again on 2007 |
+| **D4** | Year lock | That year’s mass or launch | Neighbor gold as dest (ChatGPT in 2021 · Reels in 2018 · App Store in 2007 · X / Threads / GPT-4 in 2022) |
+| **D5** | Dest-disjoint leftover | New leftover dest ∉ official 10 ∪ leftover-3× unique. leftover-20 unshipped (2017 absent) | Adding `tiktok` again · adding `wiki` again on 2007 · dest-farm leftover-20 |
 | **D6** | Star | Only the year chip writes gold | Leftover writes `itt07-iphone` / `itt10-ig-posts` / `itt18-gdpr` / `itt21-att` / `itt22-chatgpt` |
 | **D7** | Incomplete | Empty / 0 ticks / no pick never writes | Any click writes |
 | **D8** | Trap | Named trap never writes leftover or star | Trap = save |
 | **D9** | No invented pixels | `[failed-final]` / capture-cite | AI brand mark |
-| **D10** | No invented ILS | About dual-cite. ILS June table **ends ** | Invented June 2025 websites cell |
+| **D10** | No invented ILS | About dual-cite. ILS June table **ends 2018** | Invented June 2019–2025 websites cell |
 | **D11** | I/O lean | Starting Point = guided **6** + star + official 10. Warehouse folded | First paint dest dump · 7th guided `<li>` |
 | **D12** | Cite or drop | Primary or labeled secondary cite, or drop the row | Invent a dest to hit the double |
 | **D13** | Not a forest | Target is lean-door 2×, not 2004 **810** / **597** | Board C again · dest-lock revert of dest-lock years |
-| **D14** | Leftover-3× stop | leftover-3× unique stays **3**. 2021 stays **5**. Extra dests are leftover dests, not leftover-3× unique dest-true dests | Growing leftover-3× unique to 9 on / 2021 |
+| **D14** | Leftover-3× stop | 2018 leftover-3× unique stays **3**. 2021 stays **5**. Extra dests are leftover dests, not leftover-3× unique dest-true dests | Growing leftover-3× unique to 9 on 2018 / 2021 |
 | **D15** | Unique leftover-20 | **2017 is absent.** Do not dest-farm leftover-20 maps on any year | 20 unique leftover dests on 2022 to “look like 2017” |
 | **M1–M4** | Dest-true leftover | keep vs trap · field · 2 ticks · Go | `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` |
 
@@ -67,7 +67,7 @@ Disk counts = first-level dirs under `years/YYYY/sites/` (2026-09-20).
 | Dest-lock lean (thin) | 2007 · 2010–2012 · 2014 · 2021 | 23 / 22 / 31 / 24 / 18 / **15** | **Double leftover dests** to the aim in §4. Do not dest-lock revert. |
 | Dest-true lean (thin) | · 2022 | 13 / 19 | **Double leftover dests** to the aim in §4. Leftover-3× unique stops stay. |
 | Dest-true lean (upper) | 2013 | 54 | **Holes only.** Do not grow to a forest. |
-| Dest-lock reverted (already dense) | 2015 · 2017 · | 213 / 222 / 170 / 38 | **Stop** on 2015 / 2017 / . (already at the – density peer ~38). |
+| Dest-lock reverted (already dense) | 2015 omitted · 2017 absent | **0** / **0** | **Stop.** Do not dest-farm. |
 | Boarded | 2009 | 78 | **Stop.** Plaque. Not a visitor door. |
 | Wiped | 2023–2025 | no tree | **Stop.** Do not restore. |
 
@@ -85,7 +85,7 @@ Official 10 stays 10. Leftover-3× unique dest-true dests stay at the stop alrea
 | **2012** | IG Android | `itt12-ig-android` | 24 | 9 + leftover-4× unique 3 | **48** | **24** | Double |
 | **2013** | Vine 6s | `itt13-vine-posts` | 54 | 9 | **54** | **0** unless a cited hole | Holes only |
 | **2014** | WhatsApp Install | `itt14-wa-install` | 18 | 9 | **36** | **18** | Double |
-|  | GDPR Manage | `itt18-gdpr` | 13 | **3 stop** | **26** | **13** leftover dests, **not** leftover-3× unique | Double leftover dests |
+| **2018** | absent · not a door | — | 0 | 0 | 0 | 0 | Do not dest-farm |
 | **2021** | ATT Ask | `itt21-att` | 15 | **5 stop** | **30** | **15** leftover dests, **not** leftover-3× unique | Double leftover dests |
 | **2022** | ChatGPT Send | `itt22-chatgpt` | 19 | 9 | **38** | **19** | Double |
 
@@ -95,7 +95,7 @@ Official 10 stays 10. Leftover-3× unique dest-true dests stay at the stop alrea
 
 ## 5. Disk now — taken sets (do not reuse)
 
-New leftover dests must **not** reuse these slugs. Dest-disjoint from official 10, leftover-3× unique dest-true dests, leftover-4× unique (2012), and unique leftover-20 (2017).
+New leftover dests must **not** reuse these slugs. Dest-disjoint from official 10, leftover-3× unique dest-true dests, leftover-4× unique (2012). leftover-20 is unshipped (2017 absent). Do not dest-farm leftover-20.
 
 ### 2007 (23)
 
@@ -109,7 +109,7 @@ Star trap: App Store · Chrome · Android G1 · iPhone 3G · Street View as the 
 
 Star trap: Instagram Android · Stories · Reels · iPad 2 · Siri · Timeline · Google+ · Snapchat · Spotify US · UberX mass. Do not restore dest-lock dests (`groupondeal` · `quorawait` · `instant` · `pinterest` · `uber` · `quora` · `digg` · `wikileaks` · `browserchoice` · `ask` · `facetime` · `windowsphone` · `dropbox`).
 
-### (31)
+### 2011 (31)
 
 `airbnb` · `chrome` · `dropbox` · `evernote` · `facebook` · `foursquare` · `gmusic` · `google` · `googleplus` · `huffpost` · `hulu` · `icloud` · `imgur` · `instagram` · `ipad` · `iphone` · `kickstarter` · `kindlefire` · `linkedin` · `minecraft` · `pandora` · `pinterest` · `playable` · `quora` · `qwikster` · `spotify` · `twitch` · `twitter` · `vimeo` · `yahoo` · `youtube`
 
@@ -127,7 +127,7 @@ Star trap: Vine 6s · Snap Stories · IG Stories · iPhone 6 · Material · Slac
 
 Star trap: Watch · Win10 · IG Stories · Snap Discover · Periscope · Heartbleed exploit · Ice Bucket celebrity dump.
 
-### (13) — research record, tree wiped
+### 2018 (13) — research record, tree wiped
 
 Live disk has no `years/`. Do not restore this list.
 
@@ -153,7 +153,7 @@ Leftover-3× unique dest-true dests (9): amazon · google · instagram · facebo
 
 Star trap: Vine as leftover. No dest this pass.
 
-### (39) — holes only + Clubhouse
+### 2020 (39) — holes only + Clubhouse
 
 `airbnb` · `amazon` · `amongus` · `animalcrossing` · `chrome` · `classroom` · `clubhouse` · `coinbase` · `discord` · `edge` · `facebook` · `figma` · `github` · `google` · `hbomax` · `houseparty` · `hulu` · `instagram` · `iphone` · `linkedin` · `netflix` · `notion` · `nyt` · `peacock` · `playable` · `reddit` · `robinhood` · `slack` · `spotify` · `teams` · `tiktok` · `twitch` · `twitter` · `uber` · `whatsapp` · `wikipedia` · `windows10` · `youtube` · `zoom`
 
@@ -172,7 +172,7 @@ Walk / read / cite. Do not harvest dest HTML from this section.
 | Cybercultural year essays | `https://cybercultural.com/p/internet-YYYY/` |
 | Web Design Museum year galleries | `https://www.webdesignmuseum.org/gallery/year-YYYY` |
 | Hosting.com most-visited since 1995 | Mass rank. No `google.com` dest just because it ranks. |
-| Internet Live Stats June websites | Table **ends **. Later years: no invented June cell. |
+| Internet Live Stats June websites | Table **ends 2018**. Later years: no invented June cell. |
 | ITU Facts and Figures | Users / % · labeled · not websites |
 | StatCounter OS / browser | Shell honesty (Win10 mass · Chrome habit) |
 | Period company blogs / newsrooms / SEC 8-K | Primary cite |
@@ -195,7 +195,7 @@ Do not skip ahead to dest HTML.
 | **2** | Named implement pass | Dest HTML + one leftover writer + empty never writes + leftover never writes star · **disk 2026-09-20** |
 | **3** | e2e: leftover dest empty never writes · complete writes leftover key · never star · dest-disjoint | `e2e/lean-double-leftover.spec.js` |
 | **4** | Mock gate | `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` = 0 on new dests |
-| **H** | Optional dest-farm **lock** of dest-lock-reverted warehouses (2015 / 2017 / ) | **Not this pass** |
+| **H** | Optional dest-farm **lock** of dest-lock-reverted warehouses (2015 / 2017 / 2019) | **Not this pass** |
 
 ---
 
@@ -204,14 +204,14 @@ Do not skip ahead to dest HTML.
 - Dest-farm dests to raise a percentage.
 - Treat 5,000 websites as 5,000 dest folders.
 - Double forests 1994–2006.
-- Double dest-lock-reverted warehouses 2015 **213** · 2017 **222** · **170**.
+- Double dest-lock-reverted warehouses. **2015 is omitted. 2017 is absent.** Do not dest-farm.
 - Dest-lock revert 2007 / 2010–2012 / 2014 / 2021.
-- Dest-lock 2015 again.
+- Dest-lock 2015 again. 2015 is omitted.
 - Dest-farm leftover-3× unique dest-true dests on past 3 or 2021 past 5.
-- Dest-farm leftover dest leftover-20 dests on years that are not 2017.
+- Dest-farm leftover-20 dests. leftover-20 is unshipped. 2017 is absent.
 - Unique leftover-3×n on forests.
 - Grow official 10. Grow guided past 6.
-- Restore 2009 as a playable door.
+- Board 2009. 2009 is already a live HTML door.
 - Restore 2023–2025.
 - Invent brand pixels.
 - Invent a June ILS websites digit after .
@@ -266,12 +266,12 @@ CNIL-shaped leftover dest. One writer. Cream panel. Not leftover-3× unique.
 | leftover-4× unique | 2012 chrome / twitter / soundcloud only |
 | Empty / trap | never write leftover or star |
 | Mock | `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` = 0 on new dests |
-| Forests / 2015 / 2017 / | not doubled |
+| Forests / 2015 / 2017 / 2019 | not doubled |
 | 2013 | 54 dests · holes only |
 
 ## 12. Unique-within-year intersection
 
-New leftover dest slug ∩ (official 10 ∪ leftover-3× unique ∪ leftover-4× unique ∪ unique leftover-20) = **∅** inside that year.
+New leftover dest slug ∩ (official 10 ∪ leftover-3× unique ∪ leftover-4× unique) = **∅** inside that year. leftover-20 is unshipped (2017 absent).
 
 Dropped clones (not dests): Siri / iPhone 4S (official `iphone` is already Siri) · Timeline (official `facebook` is Timeline) · LinkedIn IPO (leftover-3× unique `linkedin`) · 2012 Facebook IPO (official `facebook` is 1bn MAU) · Cambridge (official `trust` is the 10 Apr hearing).
 
@@ -338,7 +338,7 @@ Instagram iOS stays the chip. Do not restore dest-lock dests. Flipboard / Minecr
 | `ebay` | Bid leftover | Instagram Android | https://en.wikipedia.org/wiki/EBay |
 | `paypal` | Send leftover | Instagram Android | https://en.wikipedia.org/wiki/PayPal |
 
-### 
+### 2011
 
 Google+ stays the chip. Snapchat is year-true here (2012 dest is a different year). No Siri clone.
 
@@ -432,7 +432,7 @@ WhatsApp Install stays the chip. Watch is a trap. Chrome / Google / Yahoo holes 
 | `androidl` | Material leftover | Watch | https://en.wikipedia.org/wiki/Android_Lollipop |
 | `ios8` | Update leftover | Watch | https://en.wikipedia.org/wiki/IOS_8 |
 
-### — research record, tree wiped
+### 2018 — research record, tree wiped
 
 GDPR Manage (`itt18-gdpr`) was the chip. Extra dests below are the research list, not folders to build. Leftover-3× unique stays stopped at 3. Do not restore `years/`.
 
@@ -452,9 +452,9 @@ GDPR Manage (`itt18-gdpr`) was the chip. Extra dests below are the research list
 | `androidpie` | Gesture leftover | Accept All | https://en.wikipedia.org/wiki/Android_Pie |
 | `ios12` | Screen Time leftover | Accept All | https://en.wikipedia.org/wiki/IOS_12 |
 
-### 
+### 2020
 
-Zoom Leave stays the chip. One cited hole: Clubhouse March . Not a dest-farm of leftover-20.
+Zoom Leave stays the chip. One cited hole: Clubhouse March 2020. Not a dest-farm of leftover-20.
 
 | Slug | Verb | Trap | Cite |
 |------|------|------|------|
@@ -518,12 +518,13 @@ Holes only. Dest folders stay **54**. No dest this pass.
 |------|--------|-----|
 | 2007 | App Store · Chrome · Android G1 · iPhone 3G · Hulu public | Neighbor gold |
 | 2010 | `pinterest` · `uber` · `quora` · `digg` · `dropbox` · `facetime` · `windowsphone` · `wikileaks` · `instant` | Dest-lock skip restore |
-| | `siri` · `iphone4s` · `facebooktimeline` · `linkedinipo` | Clone of official / leftover-3× unique dests already on disk |
+| 2011 | `siri` · `iphone4s` · `facebooktimeline` · `linkedinipo` | Clone of official / leftover-3× unique dests already on disk |
 | 2012 | Vine · Snap Stories · `facebookipo` | Vine is 2013 star · facebook dest is already 1bn |
 | 2013 | Any dest | Holes only · no cited hole this pass |
 | 2014 | Watch as dest · Heartbleed exploit | Trap |
-| 2015 / 2017 / | Double | Already dense warehouses |
-| | leftover-3× unique past 3 · Accept All dest · Reels | D14 · trap |
+| 2015 | Double | Omitted. Do not dest-farm |
+| 2017 | Double | Absent. Do not dest-farm |
+| 2018 | leftover-3× unique past 3 · Accept All dest · Reels | Absent. D14 · trap · do not dest-farm |
 | 2021 | leftover-3× unique past 5 · ChatGPT dest · Wordle-as-2021-mass · dest-lock revert to 294 | D14 · trap |
 | 2022 | GPT-4 · X wordmark · Threads · leftover-2× dest-farm to 85 | Trap · dest-farm |
 | Forests | Double | D13 |
@@ -534,13 +535,13 @@ Holes only. Dest folders stay **54**. No dest this pass.
 |------|----:|----:|----:|-------------------:|-------------------:|------------:|
 | 2007 | 23 | **46** | 46 | 23 | 9 stop | 10 |
 | 2010 | 22 | **44** | 44 | 22 | 9 stop | 10 |
-| | 31 | **62** | 62 | 31 | 9 stop | 10 |
+| 2011 | 31 | **62** | 62 | 31 | 9 stop | 10 |
 | 2012 | 24 | **48** | 48 | 24 | 9 stop | 10 |
 | 2013 | 54 | **54** | 54 | 0 | 9 stop | 10 |
 | 2014 | 18 | **36** | 36 | 18 | 9 stop | 10 |
-| | 13 | **0 wiped** | 26 research aim | 0 | 3 stop, not on disk | 10 research |
+| 2017 | 13 | **0 absent** | 26 research aim | 0 | 3 stop, not on disk | 10 research |
 | 2021 | 15 | **30** | 30 | 15 | 5 stop | 10 |
 | 2022 | 19 | **38** | 38 | 19 | 9 stop | 10 |
 
- is **39** because Clubhouse is a cited hole (cap was 38). 2013 stays 54. Official 10 and leftover-3× unique stops did not grow.
+2020 is **39** because Clubhouse is a cited hole (cap was 38). leftover-2× unique catalog for 2020 stays **n = 0**. Do not dest-farm. 2013 stays 54. Official 10 and leftover-3× unique stops did not grow.
 

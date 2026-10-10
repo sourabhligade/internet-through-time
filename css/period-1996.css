@@ -1,5 +1,8 @@
-/* 1996 document defaults — extend 1995 commercial web */
-@import url("period-1995.css");
+/* 1996 document defaults.
+   Do NOT @import period-1995.css (that daisy-chains leftover-fold + 1995 body rules
+   into every 1996–2009 dest via 1997→…→2004 and 2005→1999). */
+@import url("itt-leftover-fold.css");
+@import url("leftover-dest-face.css");
 
 /* Nested tables + denser portals still Times/Arial period mix */
 .sj-wrap {

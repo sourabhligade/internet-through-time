@@ -35,7 +35,7 @@ How to use: phases **0 → 7 in order**. Do not skip a dest. Do not start Phase 
 | D6 | Leftover never writes the star key | leftover writes `itt08-apps` (or named gold) |
 | D13 | Not a forest. Cap **~210**. Do not restore **591** | `git checkout` wipe parent · match 2004/2005 |
 | D14 | Leftover-3× unique catalogs stay **empty** | grow unique-3× |
-| D15 | Unique leftover-20 is **2017 only** | leftover-20 map on 2008 |
+| D15 | leftover-20 unshipped (2017 absent) | dest-farm leftover-20 on 2008 |
 | C5–C8 | Complete leftover writes `{real, leftover:true, year:"2008"}` under `itt08-<suffix>`. Next is a **2008** dest, HTTP 200, hidden until this dest’s key exists | Next to 2007/2009 · 404 |
 | Official leftover-2× | **0** on official dest first paint | leftover-2× panel on App Store / Chrome / G1 first paint |
 | One leftover writer | `leftover-official.js` only | stacked `*-d2` / leftover-4× on every dest (CUT-DOUBLE anti-model) |

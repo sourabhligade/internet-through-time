@@ -39,8 +39,7 @@ function starKey(year) {
     2010: "itt10-ig",
     2012: "itt12-ig-android",
     2013: "itt13-vine-posts",
-    2014: "itt14-wa-install",
-    2015: "itt15-periscope"};
+    2014: "itt14-wa-install"};
   return map[year] || "";
 }
 

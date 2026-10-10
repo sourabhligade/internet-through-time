@@ -1,10 +1,9 @@
 // @ts-check
 /**
- * Phase 4 lock for 2014–2017. WhatsApp, Stories, and React receipts are
- * Saved. with no storage key. Next stays hidden on a toy envelope.
+ * Phase 4 lock for 2014–2017. WhatsApp receipts are Saved. with no storage
+ * key. Next stays hidden on a toy envelope. 2015 is omitted.
  */
 const { test, expect } = require("@playwright/test");
-const { completeReactStop } = require("./helpers.js");
 
 async function raw(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);
@@ -52,18 +51,11 @@ test.describe("2014-2017 phase 4 receipt", () => {
     await expect(nextFor(page, "itt14-wa-install")).toBeVisible();
   });
 
-  test("Periscope official finish says Saved. with no key", async ({ page }) => {
-    await page.goto("/app/index.html#/year/2015?stop=itt15-periscope");
-    await page.waitForFunction(() => !!(window.ITT && window.ITT.User && window.ITT.User.store), null, {
-      timeout: 15000,
-    });
-    const room = page.locator("article.stop#itt15-periscope");
-    await room.waitFor({ timeout: 15000 });
-    await page.evaluate(() => localStorage.removeItem("itt15-periscope"));
-    await completeReactStop(page, room);
-    await expect.poll(() => raw(page, "itt15-periscope"), { timeout: 8000 }).toBeTruthy();
-    expect((await envelope(page, "itt15-periscope")).kind).toBe("official");
-    await expect(room.locator(".status")).toHaveText("Saved.");
-    await expect(room.locator(".status")).not.toContainText(/itt15-/);
+  test("2015 omitted hash is not a door", async ({ page }) => {
+    const res = await page.goto("/app/index.html#/year/2015");
+    expect(res && res.ok()).toBeTruthy();
+    await expect(page.getByRole("heading", { name: "2015 is not a door" })).toBeVisible();
+    await expect(page.locator(".door")).toHaveCount(0);
+    await expect(page.locator("body")).not.toContainText("Periscope");
   });
 });

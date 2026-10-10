@@ -30,11 +30,11 @@
 
       {
           "label": "5\u00d7 F1\u2013F5 \u00b7 1994",
-          "do": "REAL loops \u00b7 incomplete never writes",
+          "do": "F1 official listen \u00b7 F5 leftover trail-q \u00b7 empty never writes",
           "sites": [
                     {
                               "name": "F1 IUMA listen",
-                              "href": "sites/iuma/index.html",
+                              "href": "sites/iuma/listen.html",
                               "do": "Helper-app era \u2014 no CD / MP3 store · itt94-iuma"
                     },
                     {
@@ -55,7 +55,7 @@
                     {
                               "name": "F5 What’s New / NCSA",
                               "href": "sites/ncsa/index.html",
-                              "do": "Opened a dated What’s New item · itt94-whatsnew"
+                              "do": "leftover trail-q \u00b7 5\u00d7 panel removed \u00b7 empty never writes"
                     },
                     {
                               "name": "Star CSotD guestbook",
@@ -108,7 +108,7 @@
                     {
                               "name": "N8 IUMA download",
                               "href": "sites/iuma/index.html",
-                              "do": "4\u00d7 · itt94-iuma-dl"
+                              "do": "4\u00d7 extra \u00b7 lobby hops to listen \u00b7 itt94-iuma-dl empty"
                     },
 
                     {
@@ -238,8 +238,8 @@
           },
           {
             "name": "IUMA",
-            "href": "sites/iuma/index.html",
-            "do": "Underground music · helper-app download theater"
+            "href": "sites/iuma/listen.html",
+            "do": "Underground music · helper-app download theater · itt94-iuma"
           },
           {
             "name": "HotWired",
@@ -579,17 +579,17 @@
 
       {
           "label": "5\u00d7 F1\u2013F5 \u00b7 1996",
-          "do": "REAL loops \u00b7 incomplete never writes",
+          "do": "5\u00d7 extras stay extras \u00b7 empty never writes",
           "sites": [
                     {
                               "name": "F1 My portal",
                               "href": "sites/yahoo/my.html",
-                              "do": "Moved 2 widgets on My Yahoo or My Excite · itt96-myportal"
+                              "do": "official myyahoo on this dest \u00b7 5\u00d7 extra itt96-myportal empty"
                     },
                     {
                               "name": "F2 HoTMaiL compose",
                               "href": "sites/hotmail/index.html",
-                              "do": "To + body filled · itt96-hotmail"
+                              "do": "official hotmail-user \u00b7 5\u00d7 extra itt96-hotmail empty"
                     },
                     {
                               "name": "F3 Space Jam 3 planets",
@@ -599,12 +599,12 @@
                     {
                               "name": "F4 RealPlayer buffer",
                               "href": "sites/realplayer/index.html",
-                              "do": "Buffer theater finished · itt96-real"
+                              "do": "leftover realplayer \u00b7 5\u00d7 panel removed \u00b7 empty never writes"
                     },
                     {
                               "name": "F5 Guestbook",
                               "href": "sites/angelfire/index.html",
-                              "do": "Name at least 2 characters · itt96-gb"
+                              "do": "leftover angelfire \u00b7 5\u00d7 panel removed \u00b7 empty never writes"
                     },
                     {
                               "name": "Star Portal wars",
@@ -836,17 +836,17 @@
 
       {
           "label": "5\u00d7 F1\u2013F5 \u00b7 1997",
-          "do": "REAL loops \u00b7 incomplete never writes",
+          "do": "5\u00d7 extras stay extras \u00b7 F3/F5 official dests \u00b7 empty never writes",
           "sites": [
                     {
                               "name": "F1 Slashdot moderate",
                               "href": "sites/slashdot/index.html",
-                              "do": "Comment was not empty · itt97-slashdot"
+                              "do": "5\u00d7 extra \u00b7 lobby hops to story \u00b7 itt97-slashdot empty"
                     },
                     {
                               "name": "F2 eBay bid",
                               "href": "sites/ebay/index.html",
-                              "do": "Bid confirmed · itt97-ebay-bid"
+                              "do": "5\u00d7 extra \u00b7 lobby vs item-laptop \u00b7 itt97-ebay-bid empty"
                     },
                     {
                               "name": "F3 ICQ buddy",
@@ -856,7 +856,7 @@
                     {
                               "name": "F4 Think Different",
                               "href": "sites/apple/index.html",
-                              "do": "Hopped 2 product pages · itt97-td"
+                              "do": "lobby hops to think-different \u00b7 5\u00d7 panel removed \u00b7 empty never writes"
                     },
                     {
                               "name": "F5 Drudge story",
@@ -1113,22 +1113,22 @@
 
       {
           "label": "5\u00d7 F1\u2013F5 \u00b7 1998",
-          "do": "REAL loops \u00b7 incomplete never writes",
+          "do": "5\u00d7 extras stay extras \u00b7 F4\u2013F5 official dests \u00b7 empty never writes",
           "sites": [
                     {
                               "name": "F1 Babel Fish",
-                              "href": "sites/altavista/babelfish.html",
-                              "do": "Typed text + language pair · itt98-babelfish"
+                              "href": "sites/altavista/index.html",
+                              "do": "leftover av-lx \u00b7 5\u00d7 panel removed \u00b7 empty never writes"
                     },
                     {
                               "name": "F2 Google catalog",
                               "href": "sites/google/index.html",
-                              "do": "Query ran catalog results (not Lucky) · itt98-google-q"
+                              "do": "empty search hop \u00b7 5\u00d7 extra itt98-google-q empty"
                     },
                     {
                               "name": "F3 Amazon Music CD",
                               "href": "sites/amazon/music.html",
-                              "do": "Added a CD to the residual cart · itt98-amzn-cd"
+                              "do": "official amazon-music on this dest \u00b7 5\u00d7 extra itt98-amzn-cd empty"
                     },
                     {
                               "name": "F4 DMOZ 2-level",
@@ -1195,7 +1195,7 @@
           {
             "name": "Skip-Intro Runner",
             "href": "sites/playable/game.html",
-            "do": "Year game leftover · Snap is official n=10"
+            "do": "extra · itt98-game-skipintro · Snap is official n=10 · empty never writes"
           }
         ]
       },
@@ -2373,6 +2373,47 @@ ITT.flowMaps["2005"] = {
       }
 ],
   "year": "2012"
+};
+
+    ITT.flowMaps["2014"] = {
+  "thesis": "Messaging becomes the mass internet.",
+  "shell": "Windows 7 · IE 9",
+  "how": [
+    "★ WhatsApp Install · itt14-wa-install",
+    "Heartbleed · Ice Bucket · iPhone 6 · Material · Slack · Twitch · Tile Fold",
+    "chat.html is a second official-verb dest (itt14-wa-chat), not n=10"
+  ],
+  "branches": [
+    {
+      "label": "★ Star",
+      "do": "WhatsApp Install. Empty never writes.",
+      "sites": [
+        { "name": "WhatsApp Install", "href": "sites/whatsapp/index.html", "do": "install · itt14-wa-install" }
+      ]
+    },
+    {
+      "label": "Official n=2–9",
+      "do": "Official 9. Do not fill n=10.",
+      "sites": [
+        { "name": "Heartbleed", "href": "sites/heartbleed/index.html", "do": "itt14-heartbleed" },
+        { "name": "Ice Bucket", "href": "sites/icebucket/index.html", "do": "itt14-icebucket" },
+        { "name": "iPhone 6", "href": "sites/iphone/index.html", "do": "itt14-iphone6" },
+        { "name": "Apple Pay", "href": "sites/applepay/index.html", "do": "itt14-applepay" },
+        { "name": "Material", "href": "sites/material/index.html", "do": "itt14-material" },
+        { "name": "Slack", "href": "sites/slack/index.html", "do": "itt14-slack" },
+        { "name": "Twitch", "href": "sites/twitch/index.html", "do": "itt14-twitch" },
+        { "name": "Tile Fold", "href": "sites/playable/game.html", "do": "itt14-game-tilefold" }
+      ]
+    },
+    {
+      "label": "Famous games",
+      "do": "Two era-famous cabinets · incomplete never writes",
+      "sites": [
+        { "name": "Famous games", "href": "sites/playable/famous.html", "do": "Play two era-famous cabinets" }
+      ]
+    }
+  ],
+  "year": "2014"
 };
 
   

@@ -5,7 +5,7 @@ const { enterYear } = require("./helpers");
 /**
  * Phase 2. One footer under the lists, the stop number only inside the link,
  * and a status line that is Document: Done plus a small second count.
- * Every HTML year, plus the 2015 React door.
+ * Every HTML year. 2015 is omitted.
  */
 const HOMES = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001",
@@ -78,16 +78,11 @@ for (const year of SHELLS) {
   });
 }
 
-test("2015 React door status clock is a small second count", async ({ page }) => {
+test("2015 omitted hash is not a door", async ({ page }) => {
   await page.setViewportSize({ width: 1100, height: 800 });
   const res = await page.goto("/app/index.html#/year/2015");
   expect(res && res.ok()).toBeTruthy();
-  const status = page.locator("#status");
-  await expect(status).toBeVisible();
-  await expect(status).toHaveText(/Document: Done \(\d+ sec/);
-  const text = await status.innerText();
-  const n = Number((text.match(/\((\d+) sec/) || [])[1]);
-  expect(n).toBeGreaterThan(0);
-  expect(n).toBeLessThan(600);
-  await expect(page.locator("#itt-exhibit-foot")).toHaveCount(0);
+  await expect(page.getByRole("heading", { name: "2015 is not a door" })).toBeVisible();
+  await expect(page.locator("#status")).toHaveCount(0);
+  await expect(page.locator("body")).not.toContainText("Periscope");
 });

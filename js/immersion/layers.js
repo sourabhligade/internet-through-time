@@ -12,7 +12,7 @@
     "1995": { machine: "Windows 95 · Netscape 2", star: "SSL checkout", starHref: "sites/amazon/ssl-checkout.html", game: "Checkers" },
     "1996": { machine: "Windows 95 · Netscape", star: "Portal wars", starHref: "sites/portals/wars.html", game: "Planet Hop" },
     "1997": { machine: "Windows 95 · Netscape / IE", star: "PointCast", starHref: "sites/pointcast/index.html", game: "Connect 4" },
-    "1998": { machine: "Windows 98 · Internet Explorer 4", star: "Google 1998", starHref: "sites/google/index.html", game: "Skip Intro" },
+    "1998": { machine: "Windows 98 · Internet Explorer 4", star: "I'm Feeling Lucky", starHref: "sites/google/lucky.html", game: "Skip-Intro extra" },
     "1999": { machine: "Windows 98 · Internet Explorer 5", star: "AIM", starHref: "sites/aim/index.html", game: "Pet Dash" },
     "2000": { machine: "Windows 98 · Internet Explorer 5", star: "MapQuest", starHref: "sites/mapquest/index.html", game: "Portal Judge" },
     "2001": { machine: "Windows XP · Internet Explorer 6", star: "Wikipedia", starHref: "sites/wikipedia/edit.html", game: "Clickscape" },
@@ -230,7 +230,7 @@
       path = "";
     }
     if (!/\/pages\/home\.html$/.test(path)) return;
-    if (["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2020", "2021", "2022"].indexOf(String(y)) !== -1) return;
+    if (["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2020", "2021", "2022"].indexOf(String(y)) !== -1) return;
     if (doc.getElementById("itt-layer-assess")) return;
     var meta = META[y] || {};
     var links = webLinks(y);

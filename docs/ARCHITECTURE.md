@@ -1,7 +1,7 @@
 # Architecture — Internet Through Time
 
 **Purpose:** Keep the repo aligned as years grow.  
-**Law:** 25 doors. HTML years 1994–2014 and 2020–2022. React **2015 only** (`/app/index.html#/year/2015`, no `years/2015` tree). Absent: 2017–2019 and 2023–2025. **leanBoot** is 2007–2014 and 2020–2022. The door list is `js/year-card.json`. `js/year-card.js` is generated from it by `scripts/gen_year_card.py`.  
+**Law:** 24 doors. HTML years 1994–2014 and 2020–2022. **2015 is omitted** (no React door). Absent: 2017–2019 and 2023–2025. **leanBoot** is 2007–2014 and 2020–2022. The door list is `js/year-card.json`. `js/year-card.js` is generated from it by `scripts/gen_year_card.py`.  
 **Rule of thumb:** *Year differences live in config + content. Shared behavior lives once in `js/`.*  
 **SRP map:** [`CODE-STRUCTURE.md`](CODE-STRUCTURE.md).
 

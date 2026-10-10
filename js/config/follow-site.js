@@ -87,7 +87,6 @@
         stop("2012", "sites/youtube/index.html", "IPO year"),
         stop("2013", "sites/youtube/index.html", "Vine year"),
         stop("2014", "sites/youtube/index.html", "Install year"),
-        stop("2015", "app/index.html#/year/2015?stop=itt15-youtube", "YouTube Red"),
       ]
     },
     twitter: {
@@ -143,6 +142,8 @@
   }
 
   var SKIP_YEARS = {
+    "2015": 1,
+    "2016": 1,
     "2017": 1,
     "2018": 1,
     "2019": 1,

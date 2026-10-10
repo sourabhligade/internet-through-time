@@ -11,7 +11,7 @@
     "data-su-stumble"
   ],
   "census": {
-    "html": 222,
+    "html": 223,
     "savePages": 182,
     "destFolders": 150,
     "trailRows": 39,
@@ -26,7 +26,7 @@
         "leftover2x": 12
       },
       "2011": {
-        "html": 38,
+        "html": 39,
         "savePages": 38,
         "destFolders": 37,
         "trailRows": 10,

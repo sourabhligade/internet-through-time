@@ -1,6 +1,6 @@
 # Lean double — phases, steps, goals
 
-**Not ship law.** Live hub is **25 doors** (1994–2015 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
+**Not ship law.** Live hub is **24 doors** (1994–2014 and 2020–2022). **2015 is omitted.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 
 **Date:** 2026-09-24  
@@ -22,9 +22,9 @@ Fill thin lean doors up to the cap in the criteria, with leftover dests that wer
 |---|---|---|
 | Double leftover dests | 2007, 2010, 2012, 2014, 2021, 2022 | New leftover dests, one writer each, dest-disjoint |
 | Holes only | 2013 | A row only when a cite names a real hole |
-| Stop | Forests 1994–2006, dense 2015 React / 2017–2019 absent, wiped 2023–2025 | No new dests. **2009 is live HTML** (Like), not boarded. Hub is **25 doors**. |
+| Stop | Forests 1994–2006, 2015 omitted / 2017–2019 absent, wiped 2023–2025 | No new dests. **2009 is live HTML** (Like), not boarded. Hub is **24 doors**. |
 
-** conflict.** The criteria still lists as a thin door (GDPR Manage, aim 26). Live disk has no tree. Do not restore it in this pass unless a later note says the wipe was a mistake.
+**2017 conflict.** The criteria still lists 2017 as a thin door (GDPR Manage, aim 26). Live disk has no tree. 2017 is absent. Do not restore it in this pass unless a later note says the wipe was a mistake.
 
 ---
 
@@ -36,11 +36,11 @@ Recount before any HTML. Caps below are the criteria aims, not a quota. Counts a
 |---:|---:|---:|---:|---|
 | 2007 | 33 | 46 | 13 | Double |
 | 2010 | 29 | 44 | 15 | Double |
-| | 41 | 62 | 21 | Double |
+| 2011 | 41 | 62 | 21 | Double · leftover-2× unique n = 0 · do not dest-farm |
 | 2012 | 32 | 48 | 16 | Double |
 | 2013 | 47 | 54 | 7 | Holes only |
 | 2014 | 25 | 36 | 11 | Double |
-| | 0 (wiped) | 26 | — | Stop until the wipe is reopened on purpose |
+| 2017 | 0 (absent) | 26 | — | Stop. Absent year. Do not dest-farm |
 | 2021 | 18 | 30 | 12 | Double |
 | 2022 | 24 | 38 | 14 | Double |
 
@@ -162,7 +162,7 @@ For each KEEP dest, in order:
 2. Mock gate: `DEST_FIELD`, `WEAK_REAL`, and `HASH_CTA` stay 0 on the new dests.
 3. Recount official stops. They are still 10 (2012, 2013, and 2014 stay at their current shorter trails until a separate pass says otherwise).
 4. Leftover-3× catalogs stay empty. 2012 leftover-4× stays the three named dests.
-5. Hub is 25 doors. 2009 is live HTML (Like). 2015 is the React door. 2017–2019 and 2023–2025 stay 0.
+5. Hub is 24 doors. 2009 is live HTML (Like). 2015 is omitted. 2017–2019 and 2023–2025 stay 0.
 
 **Done when:** Those checks pass on every year that received a new dest, and Stop years are unchanged.
 

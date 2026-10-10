@@ -22,7 +22,7 @@
 
   /** Star dests only — dated capture, not SOURCES.md. */
   var STAR_CITE = {
-    "/years/1994/sites/yahoo/": { href: "https://www.webdesignmuseum.org/gallery/yahoo-1994", note: "Yahoo 1994 · WDM · no 1994 Wayback HTML" },
+    "/years/1994/sites/csotd/": { href: "", note: "[failed-final] CSotD guestbook · no named WDM exhibit" },
     "/years/1995/sites/amazon/": { href: "https://www.webdesignmuseum.org/gallery/amazon-1995", note: "Amazon 1995 · WDM" },
     "/years/1998/sites/google/": { href: "https://web.archive.org/web/19981202230410/http://google.com/", note: "Google! · Wayback 1998-12-02" },
     "/years/2001/sites/wikipedia/": { href: "", note: "[failed-final] Wikipedia UseMod · no named WDM exhibit" },
@@ -37,7 +37,7 @@
     "/years/2010/sites/instagram/": { href: "", note: "[failed-final] Instagram iOS · WDM year-index is not a named exhibit" },
     "/years/2013/sites/vine/": { href: "", note: "[failed-final] Vine 6s · WDM year-index is not a named exhibit" },
     "/years/2014/sites/whatsapp/": { href: "", note: "[failed-final] WhatsApp Install · WDM year-index is not a named exhibit" },
-    "/app/index.html#/year/2015": { href: "", note: "[failed-final] Periscope · WDM year-index is not a named exhibit" },
+
   };
 
   function paintStarCite(doc) {

@@ -85,7 +85,7 @@ async function walkPopOnPage(page, year) {
   await page.waitForFunction(
     () => {
       const b = document.querySelector("[data-pop-go]");
-      return !!(b && b.getAttribute("data-pop-bound") === "1");
+      return !!(b && (b.getAttribute("data-pop-bound") === "1" || b.getAttribute("data-lo-bound") === "1"));
     },
     null,
     { timeout: 15000 }

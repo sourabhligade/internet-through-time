@@ -7,12 +7,10 @@ const { test, expect } = require("@playwright/test");
 
 const OPEN = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003",
-  "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015",
+  "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014",
   "2020", "2021", "2022",
 ];
-const REACT_DOORS = new Set(["2015"]);
 function doorHrefRe(year) {
-  if (REACT_DOORS.has(year)) return new RegExp("app/index\\.html#/year/" + year);
   return new RegExp("years/" + year + "/?$");
 }
 const WIPED = [];
@@ -42,15 +40,15 @@ test.describe("museum atlas", () => {
     await expect(page.locator("a[href='../index.html']").first()).toBeVisible();
   });
 
-  test("hallway has five wings and 25 open years · no boarded ticks", async ({ page }) => {
+  test("hallway has five wings and 24 open years · no boarded ticks", async ({ page }) => {
     await page.goto("/atlas/");
     await expect(page.locator("h1")).toContainText(/whole museum/i);
     await expect(page.locator(".lede")).toBeVisible();
     await expect(page.locator("#atlas-spine .atlas-wing")).toHaveCount(5);
     await expect(page.locator('#atlas-spine .atlas-wing[data-wing="wiped-late"]')).toHaveCount(0);
     await expect(page.locator('#atlas-spine .atlas-wing[data-wing="late-lean"]')).toHaveCount(0);
-    await expect(page.locator("#atlas-spine .spine-year")).toHaveCount(25);
-    await expect(page.locator("#atlas-spine .spine-year.open")).toHaveCount(25);
+    await expect(page.locator("#atlas-spine .spine-year")).toHaveCount(24);
+    await expect(page.locator("#atlas-spine .spine-year.open")).toHaveCount(24);
     await expect(page.locator("#atlas-spine .spine-year.wiped")).toHaveCount(0);
     for (const y of OPEN) {
       await expect(page.locator(`#atlas-spine .spine-year.open[data-atlas-year="${y}"]`)).toBeVisible();
@@ -119,13 +117,6 @@ test.describe("museum atlas", () => {
       );
       expect(trailHrefs.length, y + " trail").toBeGreaterThanOrEqual(7);
       expect(trailHrefs.length, y + " trail").toBeLessThanOrEqual(10);
-      if (REACT_DOORS.has(y)) {
-        for (const h of trailHrefs) {
-          expect(h, y + " trail").toMatch(doorHrefRe(y));
-          await expectLive(page, h, y + " trail");
-        }
-        continue;
-      }
       const pages = trailHrefs.map((h) => String(h).replace(/\\/g, "/").split("?")[0].toLowerCase());
       expect(new Set(pages).size, y + " official dests must be unique hrefs").toBe(pages.length);
       for (const h of trailHrefs) await expectLive(page, h, y + " trail");

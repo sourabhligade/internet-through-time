@@ -113,7 +113,7 @@ test.describe("wiped years stay boarded", () => {
 for (const y of YEARS) {
   test.describe(`${y.year} leftover unique`, () => {
     test("home has no duplicate pop3x rails", async ({ page }) => {
-      test.skip(!fs.existsSync(yearHomePath(y.year)), `${y.year} HTML home is gone (React / wiped door)`);
+      test.skip(!fs.existsSync(yearHomePath(y.year)), `${y.year} HTML home is gone (omitted or absent door)`);
       await page.goto(`/years/${y.year}/pages/home.html`);
       expect(await page.locator(`[data-itt-pop3x="${y.year}"] a`).count()).toBe(0);
       expect(await page.locator(`[data-itt-pop-more="${y.year}"] a`).count()).toBe(0);

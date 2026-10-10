@@ -1,7 +1,7 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2007–2014 and 2020–2022 lean doors live. 2011 is live HTML. 2015 is the React door. 2017–2019 and 2023–2025 are absent. Do not invent rooms.
+ * 2007–2014 and 2020–2022 lean doors live. 2011 is live HTML. 2015 is omitted. 2017–2019 and 2023–2025 are absent. Do not invent rooms.
  */
 (function (global) {
   "use strict";
@@ -10,14 +10,14 @@
   var OPEN = (function openFromCard() {
     var years = ITT.YEAR_CARD && ITT.YEAR_CARD.years;
     var fallback = [
-      "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2020", "2021", "2022"
+      "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2020", "2021", "2022"
     ];
     if (!years) return fallback;
     var out = [];
     var y;
     for (y in years) {
       if (!Object.prototype.hasOwnProperty.call(years, y)) continue;
-      if (years[y].kind === "html" || years[y].kind === "react") out.push(y);
+      if (years[y].kind === "html") out.push(y);
     }
     out.sort();
     return out;
@@ -32,12 +32,12 @@
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
       { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
  { id: "phone", label: "Phone eats the web", blurb: "App Store · Like · Chrome · G1 · Instagram iOS · Google+. Vine 6s is the 2013 door.", years: ["2008", "2009", "2010", "2011", "2012", "2013"] },
-      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install, Periscope Go LIVE.", years: ["2014", "2015"] }
+      { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install.", years: ["2014"] }
     ],
 
     leanYears: [
  "2007", "2008", "2009", "2010", "2011", "2012",
-      "2013", "2014", "2015", "2020", "2021", "2022"
+      "2013", "2014", "2020", "2021", "2022"
     ],
 
     notThisYear: {
@@ -62,7 +62,6 @@
       "2012": "The square photo leaves the iPhone.",
       "2013": "Stories here are Snapchat, not Instagram.",
       "2014": "Messenger is the trap. Install is the save.",
-      "2015": "Meerkat was earlier. Periscope is the star.",
       "2020": "Disney+ Continue is last year. Empty never writes.",
       "2021": "Allow never writes. ChatGPT is next year.",
       "2022": "Empty and GPT-4 never write. X and Threads are next years.",
@@ -91,7 +90,6 @@
       "2012": "The square left the iPhone. Wikipedia went dark for a day.",
       "2013": "The loop was six seconds. Stories here are Snapchat, not Instagram.",
       "2014": "Nineteen billion dollars. Install is the save. Messenger is the trap.",
-      "2015": "You typed a title and went live. Apple Music played. The Windows 10 upgrade was free.",
     },
 
     /* Guided 6 for years whose Starting Point is inline. 2011 is in start-data.js. */
@@ -127,14 +125,6 @@
         { label: "Ice Bucket — nominate", href: "years/2014/sites/icebucket/index.html" },
         { label: "iPhone 6", href: "years/2014/sites/iphone/index.html" },
         { label: "Year flow map", href: "years/2014/pages/map.html" }
-      ],
-      "2015": [
-        { label: "About 2015", href: "/app/index.html#/year/2015?stop=about" },
-        { label: "Periscope Go LIVE", href: "/app/index.html#/year/2015?stop=itt15-periscope" },
-        { label: "Apple Music", href: "/app/index.html#/year/2015?stop=itt15-music" },
-        { label: "Windows 10", href: "/app/index.html#/year/2015?stop=itt15-win10" },
-        { label: "Reddit redesign", href: "/app/index.html#/year/2015?stop=itt15-reddit" },
-        { label: "Year flow map", href: "/app/index.html#/year/2015?stop=map" }
       ],
       },
 
@@ -187,7 +177,7 @@
           { label: "Yahoo packed", href: "years/1998/sites/yahoo/index.html" },
           { label: "Amazon Music", href: "years/1998/sites/amazon/music.html" }
         ],
-        game: { label: "Skip-Intro Runner", href: "years/1998/sites/playable/game.html" }
+        game: { label: "Skip-Intro Runner extra · Snap n=10", href: "years/1998/sites/playable/game.html" }
       },
       "1999": {
         era: "Bubble peak · Napster · Y2K",
@@ -351,29 +341,6 @@
         ],
         game: { label: "Tile Fold", href: "years/2014/sites/playable/game.html" }
       },
-      "2015": {
-        era: "Periscope · Apple Music · Windows 10",
-        thesis: "React door. Type a title, then Go LIVE. No HTML tree.",
-        gold: { label: "Periscope Go LIVE", href: "/app/index.html#/year/2015?stop=itt15-periscope", key: "itt15-periscope" },
-        guided: [
-          { label: "Apple Music", href: "/app/index.html#/year/2015?stop=itt15-music" },
-          { label: "Windows 10", href: "/app/index.html#/year/2015?stop=itt15-win10" }
-        ],
-        game: { label: "Live Rush", href: "/app/index.html#/year/2015?stop=itt15-game-liverush" },
-        reactStops: [
-          { name: "Periscope Go LIVE", key: "itt15-periscope", href: "/app/index.html#/year/2015?stop=itt15-periscope" },
-          { name: "Apple Music", key: "itt15-music", href: "/app/index.html#/year/2015?stop=itt15-music" },
-          { name: "Windows 10", key: "itt15-win10", href: "/app/index.html#/year/2015?stop=itt15-win10" },
-          { name: "Reddit redesign", key: "itt15-reddit", href: "/app/index.html#/year/2015?stop=itt15-reddit" },
-          { name: "Apple Watch", key: "itt15-watch", href: "/app/index.html#/year/2015?stop=itt15-watch" },
-          { name: "Edge", key: "itt15-edge", href: "/app/index.html#/year/2015?stop=itt15-edge" },
-          { name: "Meerkat", key: "itt15-meerkat", href: "/app/index.html#/year/2015?stop=itt15-meerkat" },
-          { name: "Slack", key: "itt15-slack", href: "/app/index.html#/year/2015?stop=itt15-slack" },
-          { name: "YouTube Red", key: "itt15-youtube", href: "/app/index.html#/year/2015?stop=itt15-youtube" },
-          { name: "Live Rush", key: "itt15-game-liverush", href: "/app/index.html#/year/2015?stop=itt15-game-liverush" }
-        ]
-      },
-
       "2020": {
         era: "Zoom Leave · the meeting is the room",
         thesis: "Lean door. Mute, then chat, then Leave. Empty never writes.",
@@ -577,8 +544,7 @@
         label: "Broadcast yourself",
         blurb: "Upload · live · 24-hour slide. Vine is the 2013 gold.",
         steps: [
-          { year: "2013", label: "Vine 6s", href: "years/2013/sites/vine/record.html" },
-          { year: "2015", label: "Periscope Go LIVE", href: "/app/index.html#/year/2015?stop=itt15-periscope" }
+          { year: "2013", label: "Vine 6s", href: "years/2013/sites/vine/record.html" }
         ]
       },
       {

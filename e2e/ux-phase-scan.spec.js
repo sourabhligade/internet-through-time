@@ -7,7 +7,6 @@
 const { test, expect } = require("@playwright/test");
 const fs = require("fs");
 const path = require("path");
-const { openReactStop, completeReactStop } = require("./helpers.js");
 const { getKey } = require("./ux-phase-io.js");
 
 const PACK_B_2008 = [
@@ -49,17 +48,15 @@ const PACK_B_2008 = [
 ];
 
 const STATUS_DESTS = [
-  { path: "/years/2014/sites/whatsapp/index.html", key: "itt14-wa-install" },
+  { path: "/years/1998/sites/dmoz/index.html", key: "itt98-dmoz" },
 ];
 
 test.describe("PHASE-SCAN improvisation", () => {
-  test("openReactStop uses ?stop= and Saved. has no key on the glass", async ({ page }) => {
-    const room = await openReactStop(page, "2015", "itt15-periscope");
-    expect(page.url()).toMatch(/stop=itt15-periscope/);
-    await completeReactStop(page, room);
-    await expect(room.locator(".status")).toHaveText("Saved.");
-    await expect(room.locator(".status")).not.toContainText("itt15-");
-    await expect(room).toHaveAttribute("id", "itt15-periscope");
+  test("2015 omitted hash is not a door", async ({ page }) => {
+    const res = await page.goto("/app/index.html#/year/2015");
+    expect(res && res.ok()).toBeTruthy();
+    await expect(page.getByRole("heading", { name: "2015 is not a door" })).toBeVisible();
+    await expect(page.locator("body")).not.toContainText("Periscope");
   });
 
   for (const row of STATUS_DESTS) {

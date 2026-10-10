@@ -240,7 +240,6 @@ test.describe("leftover official · disk + trail", () => {
       "itt12-ig-android",
       "itt13-vine-posts",
       "itt14-wa-install",
-      "itt15-periscope",
       "itt20-zoom",
     ]);
     const wiped = new Set(["2025"]);

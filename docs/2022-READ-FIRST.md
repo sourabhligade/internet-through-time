@@ -1,7 +1,7 @@
 # 2022 — READ FIRST (CUT-OPEN)
 
 **Date:** 2026-09-15  
-**Status:** **LIVE lean door.** Dest-true official 10 · dest folders **25**. Leftover-3× unique catalogs empty. Leftover-2× dest-farm dests not restored. Star `itt22-chatgpt`. Do not dest-farm. Hub **25 doors** (1994–2015 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.**  
+**Status:** **LIVE lean door.** Dest-true official 10 · dest folders **25**. Leftover-3× unique catalogs empty. Leftover-2× dest-farm dests not restored. Star `itt22-chatgpt`. Do not dest-farm. Hub **24 doors** (1994–2014 and 2020–2022). **2015 is omitted.** **2017–2019 and 2023–2025 are absent.**  
 **Parent (live):** 2021 ATT Ask `itt21-att`. **Child:** 2023 wiped. · Zoom Leave.  
 **Clone chrome:** 2021 Win10 + Chrome habit.
 
@@ -26,7 +26,7 @@
 | Leftover-3× | first 3 (Reddit · YouTube · Wikipedia) + third 3 (Instagram · Google · Facebook) · gold dest never leftover-3× |
 | Leftover-4× | **0** |
 | HTML cap | **≤90** |
-| Scale | ILS June table **ends ** · ITU **5.3B / 66%** on About |
+| Scale | ILS June table **ends 2018** · ITU **5.3B / 66%** on About |
 | Pixels | never invent brand art · `[failed-final]` |
 | Neighbors | `itt21-att` / `itt23-*` stay empty |
 

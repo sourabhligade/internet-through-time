@@ -1,6 +1,6 @@
 # Lean HTML visitor I/O criteria
 
-**Historical research.** Not ship law. Live hub is **25 doors** (1994–2015 and 2020–2022). **2015 is the React door.** **2017–2019 and 2023–2025 are absent.** **2020–2022 are live HTML.** The year lists below are research, not a second door list. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
+**Historical research.** Not ship law. Live hub is **24 doors** (1994–2014 and 2020–2022). **2015 is omitted.** **2017–2019 and 2023–2025 are absent.** **2020–2022 are live HTML.** The year lists below are research, not a second door list. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 
 **Date:** 2026-09-14  
@@ -18,7 +18,7 @@ Deep-research on look / heritage peers is a companion pass. This file is the pas
 
 Each year is **one verb in that year’s chrome**. Incomplete never writes. Leftover machines stay in the workshop (`?deep=1`). A year that looks “full” because it has 200 leftover folders has **failed I/O**.
 
-** (13 rooms · GDPR Manage) is the I/O model.** 2017 / 2021 dest-farm is the anti-model.
+**2021 ATT (Ask App Not to Track) is the I/O model among live lean doors.** **2017 is absent · not a door.** 2021 dest-farm is the anti-model.
 
 ---
 
@@ -38,7 +38,7 @@ A year **passes I/O** only if **all** of these are true. One miss is a fail.
 | I8 | **Capture, not SOURCES** | Star dest has `data-itt-capture-cite` or honest `[failed-final]` | Visitor sent to `SOURCES.md` |
 | I9 | **No invented brand pixels** | Period capture, RECON mark, or failed-final | AI logo / wordmark / screenshot mash |
 | I10 | **Year-locked chrome** | Win10 mass · Chrome habit · Edge residual. Phone products are **rooms**, not January OS | 2022+ chrome, Chromium Edge as default before iPhone as desktop |
-| I11 | **About honesty** | Dual-cite scale + hard bans on `pages/about.html` | Invented ILS June cell (table **ends **) |
+| I11 | **About honesty** | Dual-cite scale + hard bans on `pages/about.html` | Invented ILS June cell (table **ends 2018**) |
 | I12 | **Neighbor years stay empty** | `itt15` / `itt22` (and ±1) never written from this year | Face ID writes from a neighbor year, ChatGPT dest in 2021, Reels as gold |
 | I13 | **Official 10 exist** | `flow-trails.js` dest paths are on disk and match | Trail href 404 or leftover plaque standing in |
 | I14 | **e2e covers the verb** | mvp + one real write/no-write spec for the star | mvp copy-only |
@@ -51,9 +51,9 @@ Disk counts are **today’s tree**, not targets. Do not grow dests to “catch u
 
 | Year | Star dest | Key | Save (writes) | Trap / incomplete (never) | Shell | Hard bans | Disk now |
 |------|-----------|-----|---------------|---------------------------|-------|-----------|----------|
-| **2017** | `sites/iphone/x.html` | `itt17-faceid` | Look / no Home / swipe up | Home button as 2017 default · Fortnite as gold | Win10 mass · Chrome habit | GDPR 25 May · TikTok US mass · Reels | **40 dests** · **0 assets** |
-|  | `sites/gdpr/index.html` | `itt18-gdpr` | **Manage** | **Accept All** · IGTV as gold · Reels | Win10 mass · Chrome habit · EdgeHTML residual | Zoom · Reels · Meta · Disney+ · Chromium Edge as default | **13 dests · 22 HTML** · 0 assets |
-|  | `sites/disneyplus/home.html` | `itt19-disneyplus` | Continue watching | Trial / join (`index.html`) · “Who’s watching” as Disney press quote | Win10 mass · Chrome habit | Reels · Zoom-as-mass · Meta · Travis Scott | **38 dests** · 0 assets |
+| **2017** | absent · not a door | — | — | — | — | — | **0 dests** · do not dest-farm |
+| **2018** | absent · not a door | — | — | — | — | — | **0 dests** · do not dest-farm |
+| **2019** | absent · not a door | — | — | — | — | — | **0 dests** · do not dest-farm |
 | **2021** | `sites/att/index.html` | `itt21-att` | **Ask App Not to Track** | **Allow** · ChatGPT dest · Wordle-as-2021-mass | Win10 mass · Chrome habit | ChatGPT · Zoom Leave as this dest | **15 dests** · 0 assets |
 
 **Star path rule:** several of these are **not** `index.html`. Year-start / first-night / atlas must use the path in this table. A trail that 404s is an I/O fail (see 2013 Vine `record.html` as the same class of bug).
@@ -70,7 +70,7 @@ Period files under `assets/period/YYYY/` for **2017–2021 = 0**. WDM / oldweb.t
 | L2 | Phone-year star uses a **phone frame** (Stories, Face ID, ATT, Zoom-on-laptop is the exception) | Frame matches the verb | Desktop form that says “swipe” |
 | L3 | Chrome habit is **Chrome-shaped**, not IE6 leftover with a URL | `chrome-habit` / period-YYYY | XP gray on GDPR |
 | L4 | Starting Point above the fold is **thesis + 6 steps + star** | Clean | Unique A/B/C leftover boards in the first screen |
-| L5 | Lean years **read lean** | -sized door | 2017/2021 warehouse pretending to be a thin lean door |
+| L5 | Lean years **read lean** | -sized door | 2021 warehouse pretending to be a thin lean door. 2017 is absent. |
 
 **Do not** dest-farm to fix look. **Do** one capture-backed star, then official 10, then stop.
 
@@ -82,9 +82,9 @@ Locked guided shape (already in `ui/year/start-data.js`):
 
 | Year | 1 | 2 ★ | 3 | 4 | 5 | 6 |
 |------|---|-----|---|---|---|---|
-| 2017 | About | Face ID | Fortnite BR | Twitter 280 | Teams GA | Map |
-| | About | GDPR Manage | TikTok FYP | Hearing | IGTV | Map |
-| | About | Disney+ Continue | TikTok FYP | Arcade | Stadia | Map |
+| 2017 | absent · not a door | — | — | — | — | — |
+| 2018 | absent · not a door | — | — | — | — | — |
+| 2019 | absent · not a door | — | — | — | — | — |
 | 2021 | About | ATT Ask | Signal leftover | Copilot waitlist | Meta rename leftover | Map |
 
 | # | Criterion | Pass | Fail |
@@ -121,7 +121,7 @@ Do not skip ahead to dest-farm.
 | **E** | Phone frame + Chrome habit on Stories / Face ID / ATT / Zoom | L2 / L3 |
 | **F** | Official 10 dests match `flow-trails.js` and have dest-true verbs | I13 |
 | **G** | e2e: mvp + write/no-write for each star | I14 |
-| **H** | Optional dest-farm **lock** (, 2021, 2017): dests = `urlMap` ∩ disk, delete the rest **in the same pass** as matrices / READ-FIRST | Door reads lean |
+| **H** | Optional dest-farm **lock** (2021): dests = `urlMap` ∩ disk, delete the rest **in the same pass** as matrices / READ-FIRST. **2017 is absent.** | Door reads lean |
 
 ---
 
@@ -130,7 +130,7 @@ Do not skip ahead to dest-farm.
 - Grow dests so a missing year “matches” 2017.
 - Ship 2022+ because the calendar moved.
 - Move the chip (Stories → GO, Face ID → Fortnite, GDPR → TikTok, Continue → trial, Leave → Join, Ask → Allow).
-- Invent a June Live Stats websites digit after .
+- Invent a June Live Stats websites digit after 2018.
 - Print “300 million Zoom **users**” (participants).
 - Quote Disney press as “Who’s watching.”
 - Restore a git forest to fix I/O.
@@ -142,9 +142,9 @@ Do not skip ahead to dest-farm.
 
 | Year | I1 star | I3 verb | I4 empty | I5 trap | I7 fold | L2 frame | I13 o10 | I14 e2e | Notes |
 |------|:-------:|:-------:|:--------:|:-------:|:-------:|:--------:|:-------:|:-------:|-------|
-| 2017 | Y | Y | Y | Y | Y* | Y | Y | Y | dest-farm still on disk; *Vine gone dest-true stripped |
-| | Y | Y | Y | Y | Y | — | Y | Y | official 10 framed; GDPR now has official-key |
-| | Y | Y | Y | Y | Y | — | Y | Y | Continue on chip / trail / start-extra |
+| 2017 | — | — | — | — | — | — | — | — | absent · not a door |
+| 2018 | — | — | — | — | — | — | — | — | absent · not a door |
+| 2019 | — | — | — | — | — | — | — | — | absent · not a door |
 | 2021 | Y | Y | Y | Y | Y | Y | Y | Y | one-thing + mvp |
 
 Recheck 2026-09-14: 38 e2e passed (mvp + -flows + one-thing lean HTML 2020–2021). Stars walked empty/trap/write. Guided 6. Unique A/B/C hidden. About bans hold. **Not Y:** L5 (2021 dest-farm still on disk, folded). 2013 year-start is `vine/record.html`.

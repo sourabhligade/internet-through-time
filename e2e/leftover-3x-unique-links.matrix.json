@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "year": "2010",
+    "dests": ["formspring", "groupon", "reddit"],
+    "n": 3,
+    "keep": ["formspring", "groupon", "reddit"]
+  },
+  {
+    "year": "2011",
+    "dests": ["icloud", "pinterest", "linkedin"],
+    "n": 3,
+    "keep": ["icloud", "pinterest", "linkedin"]
+  }
+]

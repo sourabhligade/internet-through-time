@@ -2,7 +2,7 @@
 """Generate js/browser-YYYY.js and js/immersion-YYYY.js for HTML ship years. Do not hand-fork.
 
 Years come from js/year-card.json via HTML_SHIP_YEARS in scripts/itt_gate.py.
-React 2015 and absent years (2017–2019, 2023–2025) are not written.
+Omitted 2015/2016 and absent years (2017–2019, 2023–2025) are not written.
 """
 import sys
 from pathlib import Path

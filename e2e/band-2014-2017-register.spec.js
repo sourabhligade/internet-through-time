@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Phase 1 lock for 2014–2017. 2015 is the React door (no years/2015 tree).
+ * Phase 1 lock for 2014–2017. 2015 is omitted (no years/2015 tree).
  * 2017 stays absent. Leftover-2× dests with no save hook stay on disk;
  * this register does not dest-farm them. Does not click.
  */
@@ -23,7 +23,7 @@ test("2014-2017 phase 1 register matches disk and keeps 2015/2017 trees absent",
   expect(doc.rows).toHaveLength(18);
   expect(doc.census.officialStops).toBe(9);
   expect(doc.census.leftover2x).toBe(16);
-  expect(doc.census.byYear["2015"].html).toBe(0);
+  expect(doc.census.byYear["2015"]).toBeUndefined();
   expect(doc.census.byYear["2017"].html).toBe(0);
   expect(fs.existsSync(path.join(ROOT, "years/2015"))).toBe(false);
   expect(fs.existsSync(path.join(ROOT, "years/2017"))).toBe(false);

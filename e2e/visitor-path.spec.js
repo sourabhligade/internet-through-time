@@ -6,12 +6,8 @@ const { test, expect } = require("@playwright/test");
 
 const OPEN = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008",
-  "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2020", "2021", "2022",
+  "2009", "2010", "2011", "2012", "2013", "2014", "2020", "2021", "2022",
 ];
-const REACT = {
-  2015: "Periscope Go LIVE",
-};
-
 function officialCount(year) {
   const src = fs.readFileSync(path.join(__dirname, "..", "js", "config", "flow-trails.js"), "utf8");
   const yearRe = /"(\d{4})":\s*\[/g;
@@ -33,16 +29,11 @@ async function skipConnect(page) {
 }
 
 test.describe("visitor path", () => {
-  test("2015 door is the star, six, and ten — no leftover rail", async ({ page }) => {
+  test("2015 omitted hash is not a door", async ({ page }) => {
     await page.goto("/app/index.html#/year/2015");
-    await expect(page.getByRole("heading", { name: "Periscope Go LIVE" })).toBeVisible();
-    await expect(page.locator("article.stop ol > li")).toHaveCount(6);
-    await page.locator(".rails").getByRole("button", { name: "1 Periscope Go LIVE" }).click();
-    await expect(page.locator("[data-product-face='live']")).toBeVisible();
-    await expect(page.locator(".rails").getByRole("heading", { name: "Official ten" })).toBeVisible();
-    await expect(page.locator(".rails").getByRole("button", { name: /^10 / })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "Also this year" })).toHaveCount(0);
-    await expect(page.getByRole("link", { name: "Museum" })).toHaveAttribute("href", "../index.html");
+    await expect(page.getByRole("heading", { name: "2015 is not a door" })).toBeVisible();
+    await expect(page.locator("body")).not.toContainText("Periscope");
+    await expect(page.getByRole("link", { name: "Museum hub" })).toHaveAttribute("href", "../index.html");
   });
 
   test("2017 hash is not a door and does not show the 2015 star", async ({ page }) => {
@@ -55,20 +46,7 @@ test.describe("visitor path", () => {
     await expect(page.getByRole("link", { name: "Museum hub" })).toHaveAttribute("href", "../index.html");
   });
 
-  for (const year of Object.keys(REACT)) {
-    test(`${year} react door keeps leftover off the default visit`, async ({ page }) => {
-      await page.goto("/app/index.html#/year/" + year);
-      await expect(page.getByRole("heading", { name: REACT[year] })).toBeVisible();
-      await expect(page.locator("article.stop ol > li")).toHaveCount(6);
-      await expect(page.locator(".rails").getByRole("heading", { name: "Official ten" })).toBeVisible();
-      await expect(page.locator(".rails").getByRole("button", { name: /^10 / })).toBeVisible();
-      await expect(page.getByRole("heading", { name: "Also this year" })).toHaveCount(0);
-      await expect(page.getByRole("link", { name: "Museum" })).toHaveAttribute("href", "../index.html");
-    });
-  }
-
   for (const year of OPEN) {
-    if (REACT[year]) continue;
     test(`${year} html door shows guided six and its official list`, async ({ page }) => {
       await page.goto("/years/" + year + "/");
       await skipConnect(page);

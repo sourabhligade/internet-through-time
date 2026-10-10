@@ -3,11 +3,11 @@
 **Date:** 2026-09-20  
 **Status:** **LIVE dest-lock lean door.** Dest folders **18**. Star `itt21-att`. Do not dest-farm. Do not dest-lock revert to 294 dests.  
 **Parent:** 2020 Zoom Leave `itt20-zoom`. **2022 is live lean** (ChatGPT Send).  
-**Look:** [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) Phase 4. Leftover-3× unique dest-true dests **5**. Map stop.
+**Look:** [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) Phase 4. Leftover-3× unique dest-true catalogs **empty**. Leftover-3× dest-links live n=**0** (cap memory 2021=5). Map stop.
 
 ## One line
 
-**2021 is when the phone asks not to track — ATT Ask is the save, Allow never writes, leftover-3× unique dest-true dests stop at 5, the mass shell is still Win10 + Chrome habit, ILS June 2021 websites does not exist, and ChatGPT / Wordle mass are 2022.**
+**2021 is when the phone asks not to track — ATT Ask is the save, Allow never writes, leftover-3× unique dest-true catalogs stay empty, leftover-3× dest-links live n=0, the mass shell is still Win10 + Chrome habit, ILS June 2021 websites does not exist, and ChatGPT / Wordle mass are 2022.**
 
 ## Lock before you type HTML
 

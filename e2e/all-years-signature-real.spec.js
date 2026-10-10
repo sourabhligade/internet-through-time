@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * All-years signature REAL gates (live doors 1994–2015 and 2020–2022).
+ * All-years signature REAL gates (live doors 1994–2014 and 2020–2022).
  * One thesis interaction per year that MUST mutate year-prefixed localStorage
  * (or multi-step DOM state). Page-load-only is a failure.
  *

@@ -8,7 +8,7 @@
 **Law:** one dest once as a **link** per year ([`LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md) L1 · [`LEFTOVER-3X-UNIQUE-LINKS.md`](YEAR-INCOMPLETE-NOW.md) T1 / T14).
 **Sibling:** [`DUPLICATE-FLOWS.md`](DUPLICATE-FLOWS.md).
 
-Leftover-3× unique dest-true dests stay **107**. Official dest leftover unique-link first paint **0**. Forests 1994–2006 have leftover-2× unique dest links only (no leftover-3× unique dest-true dests). 2017 leftover-20 has leftover-2× unique dest links only.
+Leftover-3× unique dest-true dests stay **107**. Official dest leftover unique-link first paint **0**. Forests 1994–2006 have leftover-2× unique dest links only (no leftover-3× unique dest-true dests). **2017 is absent · not a door.** leftover-20 is unshipped. Do not dest-farm.
 
 This file maps every dest that sits on **both** leftover-2× unique dest **links** (`js/config/leftover-2x-unique-links.js` · `ITT-2X-LINKS`) and leftover-3× unique dest **links** (`js/config/leftover-3x-unique-links.js` · `ITT-3X-UNIQUE-LINKS`). Those dests appear twice as hrefs on leftover-3× unique dest-true dest pages (162 pages).
 
@@ -24,17 +24,17 @@ Strip applied: drop the dest from leftover-2× unique dest **links** only (`scri
 | 2012 | 32 | 18 | 9 | **18** | 9 |
 | 2013 | 47 | 18 | 9 | **18** | 9 |
 | 2014 | 25 | 18 | 9 | **18** | 9 |
-| 2015 | 29 | 18 | 9 | **15** | 9 |
+| 2015 | 0 | 0 | 0 | **0** | 0 | omitted · not a door |
 | | 20 | 6 | 3 | **6** | 3 |
 | | 52 | 18 | 9 | **17** | 9 |
 | 2021 | 18 | 10 | 5 | **10** | 5 |
 | 2022 | 24 | 18 | 9 | **18** | 9 |
 | **sum** | | | **107** | **204** | **107 dest indexes · 162 HTML files** |
 
-After kill (leftover-2× unique dest **links** remaining): 2007=15 · 2010=11 · =22 · 2012=14 · 2013=29 · 2014=7 · 2015=14 · =14 · =35 · =2 · 2021=8 · 2022=6. leftover-2× unique dest **links** ∩ leftover-3× unique dest **links** = **0**.
+After kill (leftover-2× unique dest **links** remaining): 2007=15 · 2010=11 · 2012=14 · 2013=29 · 2014=7 · 2015 omitted n=0 · 2021=8 · 2022=6. leftover-2× unique dest **links** ∩ leftover-3× unique dest **links** = **0**.
 
  leftover-3× unique dest-true dests on leftover-3× unique dest links: all 9. leftover-2× unique dest links miss `pandora` (extra dest KEEP) from the leftover-3× unique dest **links** list, so 2×∩3× unique dest **links** = 16 not 18.
-2015 leftover-2× unique dest links miss 3 leftover-3× unique dest **link** dests (`pandora` not in 2015 3× links — see year table).
+2015 is omitted · not a door. leftover-2× unique dest catalog n=0. Do not dest-farm.
  leftover-2× unique dest links miss 1 leftover-3× unique dest **link** dest.
  leftover-2× unique dest links miss 4 leftover-3× unique dest **link** dests (tiktok is official dest leftover-3× unique dest **link** ADD).
 
@@ -90,7 +90,7 @@ leftover-3× unique dest-true dests (9): `android` · `chrome` · `formspring` �
 | `tumblr` | leftover-3× unique dest-true | yes | yes | yes |
 | `wave` | leftover-3× unique dest-true | yes | yes | yes |
 
-### 
+### 2011
 
 leftover-3× unique dest-true dests (9): `dropbox` · `hulu` · `icloud` · `kindlefire` · `linkedin` · `minecraft` · `pinterest` · `twitch` · `youtube`
 
@@ -194,32 +194,13 @@ leftover-3× unique dest-true dests (9): `facebook` · `instagram` · `musically
 
 ### 2015
 
-leftover-3× unique dest-true dests (9): `applemusicsub` · `echo` · `instagram` · `meerkat` · `netflix` · `spotify` · `vine` · `win10get` · `youtube`
+**Omitted · not a door.** leftover-2× unique dest catalog n=0. Do not dest-farm. The dest names below are a killed research sheet, not a live door.
 
-| Dest | Role | leftover-2× unique dest link | leftover-3× unique dest link | leftover-3× unique dest-true |
-|------|------|:---:|:---:|:---:|
-| `androidpay` | leftover-3× unique-link ADD | yes | yes | — |
-| `applenews` | leftover-3× unique-link ADD | yes | yes | — |
-| `applewatch` | leftover-3× unique-link ADD | yes | yes | — |
-| `beats1` | leftover-3× unique-link ADD | yes | yes | — |
-| `echo` | leftover-3× unique dest-true | yes | yes | yes |
-| `ethereum` | leftover-3× unique-link ADD | yes | yes | — |
-| `instagram` | leftover-3× unique dest-true | yes | yes | yes |
-| `ios9` | extra dest KEEP | yes | yes | — |
-| `ipadpro` | leftover-3× unique-link ADD | yes | yes | — |
-| `k8s` | leftover-3× unique-link ADD | yes | yes | — |
-| `meerkat` | leftover-3× unique dest-true | yes | yes | yes |
-| `netflix` | leftover-3× unique dest-true | yes | yes | yes |
-| `spotify` | leftover-3× unique dest-true | yes | yes | yes |
-| `vine` | leftover-3× unique dest-true | yes | yes | yes |
-| `youtube` | leftover-3× unique dest-true | yes | yes | yes |
+leftover-2× unique dest catalog n=0. leftover-3× catalogs empty. leftover-3× engines stay removed. The dest names below are a killed research sheet, not a live door. Do not dest-farm.
 
-On leftover-3× unique dest **links** only (already dest-disjoint from leftover-2× unique dest **links**): `applemusicsub` · `marshmallow` · `win10get`
-- `applemusicsub` — leftover-3× unique dest-true
-- `marshmallow` — leftover-3× unique-link ADD
-- `win10get` — leftover-3× unique dest-true
+Killed research dest names (not on disk): `androidpay` · `applenews` · `applewatch` · `beats1` · `echo` · `ethereum` · `instagram` · `ios9` · `ipadpro` · `k8s` · `meerkat` · `netflix` · `spotify` · `vine` · `youtube` · `applemusicsub` · `marshmallow` · `win10get`
 
-### 
+### 2018
 
 leftover-3× unique dest-true dests (3): `reddit` · `wikipedia` · `youtube`
 
@@ -232,7 +213,7 @@ leftover-3× unique dest-true dests (3): `reddit` · `wikipedia` · `youtube`
 | `wikipedia` | leftover-3× unique dest-true | yes | yes | yes |
 | `youtube` | leftover-3× unique dest-true | yes | yes | yes |
 
-### 
+### 2019
 
 leftover-3× unique dest-true dests (9): `amazon` · `facebook` · `google` · `instagram` · `nyt` · `oculusquest` · `twitter` · `yahoo` · `youtube`
 
@@ -259,7 +240,7 @@ leftover-3× unique dest-true dests (9): `amazon` · `facebook` · `google` · `
 On leftover-3× unique dest **links** only (already dest-disjoint from leftover-2× unique dest **links**): `sekiro`
 - `sekiro` — leftover-3× unique-link ADD
 
-### 
+### 2020
 
 leftover-3× unique dest-true dests (9): `amazon` · `facebook` · `google` · `instagram` · `nyt` · `reddit` · `slack` · `wikipedia` · `youtube`
 
@@ -470,17 +451,17 @@ Official dest leftover unique dest **link** first paint is **0**. These dests ar
 | 2006 | 9 | `aws` · `facebook` · `gmail` · `googledocs` · `ie7` · `roblox` · `twitter` · `wikipedia` · `youtube` |
 | 2007 | 10 | `fbplat` · `gmail` · `ie6` · `iphone` · `kindle` · `playable` · `streetview` · `tumblr` · `twitter` · `youtube` |
 | 2010 | 10 | `facebook` · `farmville` · `foursquare` · `imgur` · `instagram` · `ipad` · `iphone` · `playable` · `twitter` · `youtube` |
-| | 9 | `airbnb` · `facebook` · `googleplus` · `instagram` · `ipad` · `iphone` · `qwikster` · `spotify` · `twitter` |
+| 2011 | 9 | `airbnb` · `facebook` · `googleplus` · `instagram` · `ipad` · `iphone` · `qwikster` · `spotify` · `twitter` |
 | 2012 | 9 | `facebook` · `flipboard` · `instagram` · `iphone` · `medium` · `path` · `pinterest` · `playable` · `wikipedia` |
 | 2013 | 4 | `snowden` · `telegram` · `tumblr` · `windows81` |
 | 2014 | 7 | `applepay` · `iphone` · `material` · `playable` · `slack` · `twitch` · `whatsapp` |
-| 2015 | 5 | `discord` · `googlephotos` · `periscope` · `snapchat` · `windows10` |
-| 2017 | 6 | `equifax` · `fortnite` · `musically` · `switch` · `teams` · `wannacry` |
-| | 6 | `gdpr` · `github` · `homepod` · `spectre` · `tiktok` · `trust` |
-| | 9 | `airpodspro` · `appletv` · `arcade` · `chrome` · `disneyplus` · `playable` · `stadia` · `tiktok` · `windows10` |
+| 2015 | 0 | omitted · not a door · leftover-2× n=0 |
+| 2017 | 0 | absent · not a door · leftover-2× n=0 |
+| 2018 | 0 | absent · not a door · leftover-2× n=0 |
+| 2019 | 0 | absent · not a door · leftover-2× n=0 |
 | 2021 | 8 | `att` · `chrome` · `copilot` · `facebook` · `flash` · `playable` · `signal` · `windows10` |
 | 2022 | 6 | `chatgpt` · `mastodon` · `playable` · `tiktok` · `twitter` · `windows11` |
-| **sum** | **223** | |
+| **sum** | **202** | live-year official dests still leftover-2× unique dest **link** dests. Absent/omitted years are 0. |
 
 ### R2. Leftover trail n=11–20 dests still leftover-2× unique dest **link** dests (**93**)
 
@@ -530,7 +511,7 @@ Leftover dest KEEP leftover dest-true I/O stays. leftover-3× unique dest **link
 | 2012 | 9 | `coursera` · `duolingo` · `edx` · `googleplay` · `ios6` · `jellybean` · `nexus7` · `tinder` · `udacity` |
 | 2013 | 9 | `bitcoin` · `bustle` · `chromecast` · `doordash` · `giphy` · `ios7` · `kahoot` · `kitkat` · `patreon` |
 | 2014 | 7 | `alibabaipo` · `echo` · `flappybird` · `game2048` · `inbox` · `ios8` · `oculusfb` |
-| 2015 | 9 | `androidpay` · `applenews` · `applewatch` · `beats1` · `ethereum` · `ios9` · `ipadpro` · `k8s` · `marshmallow` |
+| 2015 | 0 | omitted · not a door · leftover-2× n=0 |
 | | 3 | `epicstore` · `gplusgone` · `ios12` |
 | | 9 | `airpods2` · `android10` · `apex` · `applewatch5` · `catalina` · `galaxyfold` · `ios13` · `ipados` · `sekiro` |
 | 2021 | 3 | `coinbaseipo` · `epicapple` · `nft` |
@@ -558,13 +539,13 @@ Leftover dest leftover dest-true I/O dests (keep / trap / field) are also leftov
 | 2006 | 35 |
 | 2007 | 5 |
 | 2010 | 1 |
-| | 20 |
+| 2011 | 0 |
 | 2012 | 2 |
 | 2013 | 25 |
-| 2015 | 7 |
-| 2017 | 20 |
-| | 8 |
-| | 21 |
+| 2015 | 0 |
+| 2017 | 0 |
+| 2018 | 0 |
+| 2019 | 0 |
 | **sum** | **713** |
 
 ### R8. Forest leftover dest leftover-3× dests also leftover-2× unique dest **links** (**189** dest indexes)
@@ -573,7 +554,7 @@ Named stacked leftover-3× workshop on forests. Unique leftover-3×n is not the 
 
 ### R9. leftover-20 dests also leftover-2× unique dest **links** (2017)
 
-2017 leftover-20 dests that are also leftover-2× unique dest **link** dests. leftover-20 stays 2017-only. Official dest leftover-20 hosts (iphone / twitter / playable / vine) are leftover dest leftover-20 scan false-friends on official dest HTML.
+**2017 is absent · not a door.** leftover-20 is unshipped. leftover-2× unique dest catalog n=0. Do not dest-farm.
 
 ### Not leftover dest leftover dest-true cream on leftover-3× unique dest-true dests
 

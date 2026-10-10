@@ -267,7 +267,7 @@ blink { animation: blink 1s step-end infinite; }
 }
 
 /* Dest chrome (wayfind, exhibit-foot clearance) lives in css/itt-dest-page.css.
- * This file is @imported by 1996–2022. Do not put html/body height or
+ * This file is @imported by 1996–2014. Do not put html/body height or
  * sticky-footer chrome here. */
 
 /* Museum UX helpers (shell content pages) */

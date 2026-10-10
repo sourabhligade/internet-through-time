@@ -11,7 +11,7 @@
  " <a href=\"about.html\">About 1994</a> — thesis · 14.4 modem",
  " <a href=\"../sites/csotd/index.html\">Cool Site of the Day</a> — visit + guestbook REAL",
  " <a href=\"../sites/yahoo/index.html\">Yahoo! @ Stanford</a> — browse, don't search",
- " <a href=\"../sites/cern/index.html\">CERN / WWW</a> · <a href=\"../sites/ncsa/index.html\">NCSA Mosaic</a> ",
+ " <a href=\"../sites/cern/index.html\">CERN / WWW</a> — WWW project",
  " <a href=\"../sites/fishcam/index.html\">Fish Cam</a> · <a href=\"../sites/whitehouse/index.html\">White House</a> ",
  " <a href=\"map.html\">Year flow map</a> — full trail tree"
  
@@ -51,7 +51,7 @@
  " <a href=\"../sites/pointcast/index.html\">PointCast</a> — subscribe News + Weather REAL",
  " <a href=\"../sites/icq/index.html\">ICQ</a> — sign on (UIN theater)",
  " <a href=\"../sites/ebay/item-laptop.html\">eBay laptop</a> — bid higher",
- " <a href=\"../sites/hotmail/index.html\">HoTMaiL</a> · <a href=\"../sites/slashdot/index.html\">Slashdot</a> ",
+ " <a href=\"../sites/hotmail/index.html\">HoTMaiL</a> · <a href=\"../sites/slashdot/story.html\">Slashdot</a> ",
  " <a href=\"map.html\">Year flow map</a> "
  
  ]
@@ -65,7 +65,7 @@
  " <a href=\"../sites/google/index.html\">Google!</a> — empty &amp; new",
  " <a href=\"../sites/yahoo/index.html\">Yahoo!</a> — packed portal TV ads",
  " <a href=\"../sites/amazon/music.html\">Buy a CD</a> · <a href=\"../sites/ebay/index.html\">eBay</a> ",
- " <a href=\"map.html\">Year flow map</a> "
+ " <a href=\"map.html\">Year flow map</a> — Snap n=10 · Skip-Intro extra"
  
  ]
  },
@@ -75,7 +75,7 @@
  "items": [
  " <a href=\"about.html\">About 1999</a> — peak bubble · Y2K",
  " <a href=\"../sites/aim/index.html\">AIM sign-on</a> — screen name REAL",
- " <a href=\"../sites/napster/index.html\">Napster</a> — search a track",
+ " <a href=\"../sites/napster/search.html\">Napster</a> — search a track",
  " <a href=\"../sites/google/index.html\">Google</a> — funded, still empty",
  " <a href=\"../sites/blogger/edit.html\">Blogger</a> · <a href=\"../sites/y2k/index.html\">Y2K clock</a> · <a href=\"../sites/sourceforge/index.html\">SourceForge</a> ",
  " <a href=\"map.html\">Year flow map</a> "
@@ -89,8 +89,8 @@
  " <a href=\"about.html\">About 2000</a> — peak · crash",
  " <a href=\"../sites/mapquest/index.html\">MapQuest</a> — from + to · print REAL",
  " <a href=\"../sites/amazon/index.html\">Amazon smile</a> — tabs · cart",
- " <a href=\"../sites/napster/index.html\">Napster war</a> — search / download theater",
- " <a href=\"../sites/pets/index.html\">Pets.com</a> · <a href=\"../sites/google/index.html\">Google</a> ",
+ " <a href=\"../sites/napster/search.html\">Napster war</a> — search / download theater",
+ " <a href=\"../sites/pets/shop.html\">Pets.com</a> · <a href=\"../sites/google/index.html\">Google</a> ",
  " <a href=\"map.html\">Year flow map</a> "
  
  ]
@@ -142,7 +142,7 @@
  " <a href=\"../sites/facebook/networks.html\">thefacebook networks</a> — college graph REAL",
  " <a href=\"../sites/firefox/index.html\">Firefox 1.0</a> — tabs · popups",
  " <a href=\"../sites/gmail/index.html\">Gmail</a> — 1GB invite lore",
- " <a href=\"../sites/flickr/index.html\">Flickr</a> · <a href=\"../sites/facebook/index.html\">Thefacebook</a> ",
+ " <a href=\"../sites/flickr/upload.html\">Flickr</a> · <a href=\"../sites/facebook/index.html\">Thefacebook</a> ",
  " <a href=\"map.html\">Year flow map</a> "
  
  ]
@@ -192,7 +192,7 @@
  " <a href=\"about.html\" style=\"color:#9fd4f0\">About 2010</a> — dual scale · bans",
  " <a href=\"../sites/instagram/index.html\" style=\"color:#9fd4f0\">Instagram</a> — filter then share",
  " <a href=\"../sites/iphone/index.html\" style=\"color:#9fd4f0\">iPhone 4</a> — FaceTime Wi-Fi · Antenna",
- " <a href=\"../sites/ipad/index.html\" style=\"color:#9fd4f0\">iPad</a> — $499 · 300k day one",
+ " <a href=\"../sites/ipad/order.html\" style=\"color:#9fd4f0\">iPad</a> — $499 · 300k day one",
  " <a href=\"../sites/facebook/index.html\" style=\"color:#9fd4f0\">Open Graph</a> — Like ×2",
  " <a href=\"map.html\" style=\"color:#9fd4f0\">Year flow map</a> "
  ]

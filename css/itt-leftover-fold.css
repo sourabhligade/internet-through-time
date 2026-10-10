@@ -53,7 +53,7 @@ html:not([data-official-key]):not([data-itt-start]) [data-itt-lo3x][data-pop-pan
   display: block;
 }
 
-/* Leftover dest warehouse clones still fold. Leftover-3× dest face stays (rule above). */
+/* Leftover dest warehouse clones still fold. leftover-3× engines stay removed; leftover-4× unique dest faces that reuse [data-itt-lo3x] stay first paint on live years. */
 html:not([data-official-key]):not([data-itt-start]) [data-lo-panel][data-itt-trail-stop] {
   display: block;
 }
@@ -80,7 +80,7 @@ details.itt-also-year {
 html[data-itt-deep] details.itt-also-year {
   display: block;
 }
-/* Leftover dest leftover-3× dest face is first paint (U9). */
+/* leftover-3× engines stay removed. leftover-4× unique dest faces that reuse [data-itt-lo3x] stay first paint (U9). */
 html:not([data-official-key]):not([data-itt-start]) [data-itt-lo3x],
 html:not([data-official-key]):not([data-itt-start]) [data-itt-dest-true][data-pop-panel] {
   display: block;

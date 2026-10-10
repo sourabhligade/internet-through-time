@@ -1,5 +1,5 @@
 /**
- * Dest-unique official trail per year. HTML 1994–2014 and 2020–2022 are live. 2015 is React (TRAIL_2015). 2016 omitted. 2017–2019 and 2023–2025 are absent.
+ * Dest-unique official trail per year. HTML 1994–2014 and 2020–2022 are live. 2015 and 2016 omitted. 2017–2019 and 2023–2025 are absent.
  * One dest slug once. Pack dests and leftover-3× unique dests stay off this trail.
  * Consumed by js/immersion/flow-trails.js.
  */
@@ -407,16 +407,16 @@
     ],
 
       "2020": [
-      {"n": 1, "name": "Zoom Leave", "href": "sites/zoom/meeting.html", "match": "/zoom/", "whenKey": "itt20-zoom", "nextHref": "sites/houseparty/index.html", "nextLabel": "Houseparty leftover"},
-      {"n": 2, "name": "Houseparty leftover", "href": "sites/houseparty/index.html", "match": "/houseparty/", "whenKey": "itt20-houseparty", "nextHref": "sites/discord/index.html", "nextLabel": "Discord leftover"},
-      {"n": 3, "name": "Discord leftover", "href": "sites/discord/index.html", "match": "/discord/", "whenKey": "itt20-discord", "nextHref": "sites/teams/index.html", "nextLabel": "Teams leftover"},
-      {"n": 4, "name": "Teams leftover", "href": "sites/teams/index.html", "match": "/teams/", "whenKey": "itt20-teams", "nextHref": "sites/classroom/index.html", "nextLabel": "Classroom leftover"},
-      {"n": 5, "name": "Classroom leftover", "href": "sites/classroom/index.html", "match": "/classroom/", "whenKey": "itt20-classroom", "nextHref": "sites/netflix/index.html", "nextLabel": "Netflix leftover"},
-      {"n": 6, "name": "Netflix leftover", "href": "sites/netflix/index.html", "match": "/netflix/", "whenKey": "itt20-netflix", "nextHref": "sites/tiktok/index.html", "nextLabel": "TikTok leftover"},
-      {"n": 7, "name": "TikTok leftover", "href": "sites/tiktok/index.html", "match": "/tiktok/", "whenKey": "itt20-tiktok", "nextHref": "sites/amongus/index.html", "nextLabel": "Among Us leftover"},
-      {"n": 8, "name": "Among Us leftover", "href": "sites/amongus/index.html", "match": "/amongus/", "whenKey": "itt20-amongus", "nextHref": "sites/animalcrossing/index.html", "nextLabel": "Animal Crossing leftover"},
-      {"n": 9, "name": "Animal Crossing leftover", "href": "sites/animalcrossing/index.html", "match": "/animalcrossing/", "whenKey": "itt20-acnh", "nextHref": "sites/playable/game.html", "nextLabel": "Year game leftover"},
-      {"n": 10, "name": "Year game leftover", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt20-game-leave", "nextHref": "sites/zoom/meeting.html", "nextLabel": "Zoom Leave"}
+      {"n": 1, "name": "Zoom Leave", "href": "sites/zoom/meeting.html", "match": "/zoom/", "whenKey": "itt20-zoom", "nextHref": "sites/houseparty/index.html", "nextLabel": "Houseparty"},
+      {"n": 2, "name": "Houseparty", "href": "sites/houseparty/index.html", "match": "/houseparty/", "whenKey": "itt20-houseparty", "nextHref": "sites/discord/index.html", "nextLabel": "Discord"},
+      {"n": 3, "name": "Discord", "href": "sites/discord/index.html", "match": "/discord/", "whenKey": "itt20-discord", "nextHref": "sites/teams/index.html", "nextLabel": "Teams"},
+      {"n": 4, "name": "Teams", "href": "sites/teams/index.html", "match": "/teams/", "whenKey": "itt20-teams", "nextHref": "sites/classroom/index.html", "nextLabel": "Classroom"},
+      {"n": 5, "name": "Classroom", "href": "sites/classroom/index.html", "match": "/classroom/", "whenKey": "itt20-classroom", "nextHref": "sites/netflix/index.html", "nextLabel": "Netflix"},
+      {"n": 6, "name": "Netflix", "href": "sites/netflix/index.html", "match": "/netflix/", "whenKey": "itt20-netflix", "nextHref": "sites/tiktok/index.html", "nextLabel": "TikTok"},
+      {"n": 7, "name": "TikTok", "href": "sites/tiktok/index.html", "match": "/tiktok/", "whenKey": "itt20-tiktok", "nextHref": "sites/amongus/index.html", "nextLabel": "Among Us"},
+      {"n": 8, "name": "Among Us", "href": "sites/amongus/index.html", "match": "/amongus/", "whenKey": "itt20-amongus", "nextHref": "sites/animalcrossing/index.html", "nextLabel": "Animal Crossing"},
+      {"n": 9, "name": "Animal Crossing", "href": "sites/animalcrossing/index.html", "match": "/animalcrossing/", "whenKey": "itt20-acnh", "nextHref": "sites/playable/game.html", "nextLabel": "Year game"},
+      {"n": 10, "name": "Year game", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt20-game-leave", "nextHref": "sites/zoom/meeting.html", "nextLabel": "Zoom Leave"}
     ],
   "2021": [
       {"n": 1, "name": "ATT Ask", "href": "sites/att/index.html", "match": "/att/", "whenKey": "itt21-att", "nextHref": "sites/signal/index.html", "nextLabel": "Signal"},

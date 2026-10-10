@@ -422,7 +422,7 @@
 
   function isHabitYear(year) {
     var y = parseInt(year, 10);
-    return y === 2015 || (y >= 2020 && y <= 2022);
+    return y >= 2020 && y <= 2022;
   }
 
   /** 14.4k hang is 1994–1999. Not 2000–2022. */

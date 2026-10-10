@@ -28,7 +28,7 @@ FOUR_X_REQUIRED = {
     "2005", "2006", "2007","2009", "2010",
     "2014",
 }
-FOUR_X_BANNED = {"2012", "2017"}
+FOUR_X_BANNED = {"2012", "2015", "2016", "2017"}
 LEFTOVER_18 = {"2001", "2002", "2003"}
 PACK_FAMILIES = ("mvp", "flows", "densify", "trail-real-flows")
 

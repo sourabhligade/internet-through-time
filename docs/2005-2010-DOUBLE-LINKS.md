@@ -33,4 +33,4 @@ Cited adds to `js/config/leftover-2x-unique-links.js`. One dest once. Every adde
 - Porn ranks.
 - 2011. June 2011 ranks are Google, Yahoo, YouTube, Facebook, Amazon, Yandex, Wikipedia, Baidu, Ask, and MSN. Facebook is official. The other nine have no 2011 dest folder.
 - 2014. Facebook, YouTube, Wikipedia, and Twitter are already on the 16-id rail.
-- 2015 and 2017. React doors. No new dest folder.
+- 2015 omitted and 2017 absent. No new dest folder.

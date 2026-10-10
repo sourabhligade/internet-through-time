@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Museum door — docs/FLOW-CHECK-DIAGRAM.md §4 + docs/DISK-TRUTH.md.
- * Hub 25 years (1994–2015 and 2020–2022). 2015 is the React door. 2017–2019 and 2023–2025 are absent.
+ * Hub 24 years (1994–2014 and 2020–2022). 2015 is omitted. 2017–2019 and 2023–2025 are absent.
  * Links first, then dest-true I/O. Dest-folder count is not a pass.
  */
 const fs = require("fs");
@@ -47,23 +47,15 @@ async function getKey(page, key) {
 }
 
 test.describe("visitor door", () => {
- test("hub lists 25 years including 2015, 2011, 2009, 2008, 2005, and 2020–2022", async ({ page }) => {
- expect(SHIP).toHaveLength(25);
+ test("hub lists 24 years including 2011, 2009, 2008, 2005, and 2020–2022", async ({ page }) => {
+ expect(SHIP).toHaveLength(24);
     await page.goto("/");
  await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
     await expect(page.locator("body")).not.toContainText(/27 years open/i);
     await expect(page.locator("a.year-card[href*='years/2005']")).toBeVisible();
     await expect(page.locator("a.year-card.available[href*='years/2015']")).toHaveCount(0);
-    await expect(page.locator('a.year-card.available[data-year="2015"]')).toBeVisible();
-    const reactDoor = new Set(["2015"]);
+    await expect(page.locator('a.year-card.available[data-year="2015"]')).toHaveCount(0);
     for (const y of SHIP) {
-      if (reactDoor.has(y)) {
-        await expect(page.locator(`a.year-card.available[data-year="${y}"]`)).toHaveAttribute(
-          "href",
-          new RegExp("app/index\\.html#/year/" + y)
-        );
-        continue;
-      }
       await expect(page.locator(`a.year-card.available[href*="years/${y}"]`).first()).toBeVisible();
     }
     await expect(page.locator("a.year-card.available[data-year='2022']")).toHaveCount(1);
@@ -80,12 +72,15 @@ test.describe("visitor door", () => {
     await expectYearBoarded(page, "2025");
   });
 
-  test("2015 React door · no HTML tree · hub card", async ({ page }) => {
+  test("2015 omitted · no HTML tree · no hub card · hash is not a door", async ({ page }) => {
     expect(fs.existsSync(path.join(ROOT, "years", "2015"))).toBe(false);
-    expect(fs.existsSync(path.join(ROOT, "react", "src", "year2015.js"))).toBe(true);
+    expect(fs.existsSync(path.join(ROOT, "react", "src", "year2015.js"))).toBe(false);
     await page.goto("/");
     await expect(page.locator("a.year-card.available[href*='years/2015']")).toHaveCount(0);
-    await expect(page.locator('a.year-card.available[data-year="2015"]')).toBeVisible();
+    await expect(page.locator('a.year-card.available[data-year="2015"]')).toHaveCount(0);
+    await page.goto("/app/index.html#/year/2015");
+    await expect(page.getByRole("heading", { name: "2015 is not a door" })).toBeVisible();
+    await expect(page.locator("body")).not.toContainText("Periscope");
   });
 
   test("every ship year has shell, Starting Point, About, Map, dest-unique official n files", () => {
@@ -93,16 +88,7 @@ test.describe("visitor door", () => {
     const missing = [];
     /** @type {Record<string, number>} */
     const officialCap = { "2004": 8, "2012": 10, "2013": 9, "2014": 9 };
-    const reactDoor = new Set(["2015"]);
     for (const y of SHIP) {
-      if (reactDoor.has(y)) {
-        if (!fs.existsSync(path.join(ROOT, "react", "src", "year" + y + ".js"))) {
-          missing.push(y + " react module");
-        }
-        const hub = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
-        if (hub.indexOf("app/index.html#/year/" + y) === -1) missing.push(y + " hub react href");
-        continue;
-      }
       const rooms = ["index.html", "pages/home.html", "pages/about.html", "pages/map.html"];
       for (const room of rooms) {
         if (!fs.existsSync(path.join(ROOT, "years", y, room))) missing.push(y + "/" + room);

@@ -67,11 +67,12 @@ test.describe("follow-a-site", () => {
     await expect(page).toHaveURL(/years\/2009\/\?room=sites%2Ffacebook%2Findex\.html/);
   });
 
-  test("2014 YouTube follow next opens 2015 YouTube Red", async ({ page }) => {
+  test("2014 YouTube is the last YouTube room", async ({ page }) => {
     await page.goto("/years/2014/?room=sites/youtube/index.html");
     const next = page.locator("#itt-follow-next");
-    await expect(next).toBeVisible({ timeout: 15000 });
-    await expect(next).toHaveAttribute("href", /app\/index\.html#\/year\/2015\?stop=itt15-youtube/);
+    await expect(next).toBeAttached({ timeout: 15000 });
+    await expect(next).toBeHidden();
+    await expect(next).not.toHaveAttribute("href", /year\/2015/);
   });
 
   test("2014 Twitter is the last Twitter room", async ({ page }) => {

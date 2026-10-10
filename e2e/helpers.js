@@ -3,7 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 
-/** Same record as js/year-card.json. Open doors are kind html or react. */
+/** Same record as js/year-card.json. Open doors are kind html. */
 const YEAR_CARD = JSON.parse(
   fs.readFileSync(path.join(__dirname, "..", "js", "year-card.json"), "utf8")
 ).years;
@@ -24,60 +24,14 @@ function destOnDisk(href) {
   return fs.existsSync(path.join(__dirname, "..", clean));
 }
 
-/** True when the static year HTML shell exists. React-only years are false. */
+/** True when the static year HTML shell exists. Omitted and absent years are false. */
 function yearHtmlOnDisk(year) {
   return fs.existsSync(path.join(__dirname, "..", "years", String(year), "index.html"));
 }
 
-/**
- * Open a React stop via `?stop=` (YearRail prints names, not storage keys).
- * @param {import('@playwright/test').Page} page
- * @param {string} key
- */
-async function clickRailKey(page, key) {
-  const yearMatch = String(page.url() || "").match(/#\/year\/(\d{4})/);
-  const year = yearMatch ? yearMatch[1] : "2015";
-  await openReactStop(page, year, key);
-}
-
-/**
- * Open a React year door on one stop. Same path as UX phase 5.
- * @param {import('@playwright/test').Page} page
- * @param {string} year
- * @param {string} key
- */
-async function openReactStop(page, year, key) {
-  await page.goto("/app/index.html#/year/" + year + "?stop=" + encodeURIComponent(key));
-  await page.waitForFunction(() => !!(window.ITT && window.ITT.User && window.ITT.User.store), null, {
-    timeout: 15000,
-  });
-  const room = page.locator("article.stop#" + key);
-  await room.waitFor({ timeout: 15000 });
-  return room;
-}
-
-/**
- * Finish a React OfficialStop: ticks + field + last action button.
- * @param {import('@playwright/test').Page} page
- * @param {import('@playwright/test').Locator} room
- */
-async function completeReactStop(page, room) {
-  const boxes = room.locator("input[type='checkbox']");
-  const n = await boxes.count();
-  for (let i = 0; i < n; i++) await boxes.nth(i).check();
-  const tweet = room.locator("[data-tweet-field]");
-  if ((await tweet.count()) > 0) {
-    await tweet.fill("a".repeat(141));
-  } else {
-    const field = room.locator("input:not([type='checkbox']):not([data-face-only])");
-    if ((await field.count()) > 0) await field.fill("done leftover");
-  }
-  await room.locator(".actions button").last().click();
-}
-
 function isLiveYear(year) {
   const rec = YEAR_CARD[String(year)];
-  return !!(rec && (rec.kind === "html" || rec.kind === "react"));
+  return !!(rec && rec.kind === "html");
 }
 
 function skipIfWiped(year) {
@@ -882,9 +836,6 @@ module.exports = {
   WIPED_YEARS,
   destOnDisk,
   yearHtmlOnDisk,
-  clickRailKey,
-  openReactStop,
-  completeReactStop,
   isLiveYear,
   skipIfWiped,
   expectYearBoarded,

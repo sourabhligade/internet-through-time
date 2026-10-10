@@ -363,7 +363,9 @@
       "immersion/year-popular-3x.js": 1,
       "immersion/year-true-leftover.js": 1,
       "immersion/leftover-2x-unique-links.js": 1,
-      "config/leftover-2x-unique-links.js": 1
+      "config/leftover-2x-unique-links.js": 1,
+      "immersion/leftover-3x-unique-links.js": 1,
+      "config/leftover-3x-unique-links.js": 1
     };
     function addEngine(rel) {
       if (!rel || seen[rel]) return;
