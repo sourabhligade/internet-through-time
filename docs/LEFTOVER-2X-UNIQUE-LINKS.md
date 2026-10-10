@@ -49,7 +49,7 @@ A year **fails** if any row is N.
 | **L8** | Leftover-20 | unshipped · 2017 absent | dest-farm leftover-20 |
 | **L9** | Star | Leftover never writes the year star | Leftover-2× save writes gold |
 | **L10** | Dest-true leftover dests | Dest-true leftover dest counts stay | New leftover dest-true machines from this file |
-| **L11** | Boarded / wiped | 2009 is live HTML · 2016 omitted · 2017–2019 and 2023–2025 skip | Restore absent years · dest-farm omitted 2016 |
+| **L11** | Boarded / wiped | 2009 is live HTML · 2017–2019 and 2023–2025 skip | Restore absent years |
 | **L12** | Cite | ADD dest has a year-true cite (Hosting.com / Wikipedia / ClickZ / harvest / extra dest KEEP) **and** dest on disk | Alphabetical dests-on-disk (`123-reg`) · invent dests |
 | **L13** | Not leftover-3× clone | Leftover-2× rail must not carry `data-itt-pop-more` | leftover-2× rail pasted as leftover-3× pop-more |
 
@@ -191,7 +191,6 @@ Live leftover-2× unique dests = matrix n (`e2e/leftover-2x-unique-links.matrix.
 | 2013 | 52 | 0 | 0 | **27** | 0 |
 | 2014 | 25 | 0 | 0 | **16** | 0 |
 | 2015 | omitted · leftover-2× **n = 0** | 0 | — | **0** | 0 |
-| 2016 | omitted | — | — | **omitted** | 0 |
 | 2017 | absent | — | — | **0** | 0 |
 | 2018 | absent | 0 | 0 | **0** | 0 |
 | 2019 | absent | 0 | 0 | **0** | 0 |
@@ -394,7 +393,6 @@ Live HTML door. leftover-2× unique dest catalog **n = 0**. Do not dest-farm 202
 - [ ] Do not dest-farm leftover-20. 2017 is absent.
 - [ ] Do not dest-lock 2015 / forests / 2013 / 2022 again.
 - [ ] 2009 is live HTML. Do not restore **2017–2019** or **2023–2025**.
-- [ ] Do not dest-farm omitted **2016**.
 - [ ] Do not restore DROP dests.
 - [ ] Do not stamp leftover-2× rails on official dest HTML.
 - [ ] Do not 2× dest-true leftover dest I/O from this file.

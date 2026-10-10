@@ -54,7 +54,7 @@ flowchart LR
 | Class | Years | Check |
 |-------|-------|-------|
 | HTML door | 1994–2014 and 2020–2022 | `/years/YYYY/` returns 200. Official list stops at the cap above. |
-| Omitted | 2015, 2016 | No year-card key, no hub card. Hash is not a door. |
+| Omitted | 2015 | No year-card key, no hub card. Hash is not a door. |
 | Absent | 2017, 2018, 2019 | No card, no tree, no React door. |
 | Wiped | 2023–2025 | No tree. Do not restore. |
 

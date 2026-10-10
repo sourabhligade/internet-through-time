@@ -157,12 +157,6 @@ test.describe("museum atlas", () => {
     await expect(page).toHaveURL(/\/years\/1994\//);
   });
 
-  test("2016 is not an open spine door", async ({ page }) => {
-    await page.goto("/atlas/");
-    await expect(page.locator('#atlas-spine a[data-atlas-year="2016"]')).toHaveCount(0);
-    await expect(page.locator('#atlas-spine a[data-atlas-year=""]')).toHaveCount(0);
-  });
-
   test("2020–2022 are open spine doors · 2009 is open · no 2023–2025 ticks", async ({ page }) => {
     await page.goto("/atlas/");
     await expect(page.locator('#atlas-spine [data-atlas-year="2020"]')).toHaveCount(1);
@@ -171,6 +165,7 @@ test.describe("museum atlas", () => {
     await expect(page.locator('#atlas-spine [data-atlas-year="2018"]')).toHaveCount(0);
     await expect(page.locator('#atlas-spine [data-atlas-year="2019"]')).toHaveCount(0);
     await expect(page.locator('#atlas-spine [data-atlas-year="2009"]')).toHaveClass(/open/);
+    await expect(page.locator('#atlas-spine a[data-atlas-year=""]')).toHaveCount(0);
     for (const y of ["2023", "2024", "2025"]) {
       await expect(page.locator(`#atlas-spine [data-atlas-year="${y}"]`)).toHaveCount(0);
     }

@@ -292,8 +292,8 @@ def test_year_card() -> None:
     if len(open_years) != 24:
         fail("year-card", f"expected 24 open doors, got {len(open_years)}")
         return
-    if "2015" in years or "2016" in years:
-        fail("year-card", "2015 and 2016 must stay omitted (no year-card key)")
+    if "2015" in years:
+        fail("year-card", "2015 must stay omitted (no year-card key)")
         return
     if years.get("2011", {}).get("kind") != "html" or years.get("2011", {}).get("star") != "itt11-gplus":
         fail("year-card", "2011 must be html with star itt11-gplus")

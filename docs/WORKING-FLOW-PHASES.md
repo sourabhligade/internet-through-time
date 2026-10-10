@@ -28,7 +28,7 @@ Counted from disk on 2026-10-07, live years only:
 | React doors | 0. 2015 is omitted |
 | Checklist lines that name an `itt` key | 508, of which 480 are ticked |
 
-The first draft of this plan only walked the official trail, about 256 stops (that count included omitted 2015 and 2016). Live official HTML stops are 236. That is the star path. The working set is the 5,859 save pages. The six phases below run on that set, one band at a time. The register for a band is generated from the folders and the matrix. It is not a hand-written checklist of 5,859 lines.
+The first draft of this plan only walked the official trail, about 256 stops (that count included omitted 2015). Live official HTML stops are 236. That is the star path. The working set is the 5,859 save pages. The six phases below run on that set, one band at a time. The register for a band is generated from the folders and the matrix. It is not a hand-written checklist of 5,859 lines.
 
 | Year | HTML | Save pages | Dest folders | Trail rows | Leftover-2× |
 | --- | ---: | ---: | ---: | ---: | ---: |

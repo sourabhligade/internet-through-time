@@ -2,7 +2,7 @@
 /**
  * Phase 5 lock for band 2014–2017. Filename stays with the band family.
  * Body locks 2014 WhatsApp gold-lx leftover off the star, and 2015 omitted
- * hash. 2016 is omitted. 2017 is absent.
+ * hash. 2017 is absent.
  */
 const { test, expect } = require("@playwright/test");
 

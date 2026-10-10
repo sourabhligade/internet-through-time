@@ -23,7 +23,7 @@ _NOT_SHIP = _BOARDED | _WIPED
 SHIP_YEARS: list[str] = [
     y for y, r in sorted(_YEARS.items()) if r.get("kind") in ("html", "react")
 ]
-# HTML doors only. Excludes omitted 2015/2016 and absent years, so shim generation cannot revive 2017.
+# HTML doors only. Excludes omitted 2015 and absent years, so shim generation cannot revive 2017.
 HTML_SHIP_YEARS: list[str] = [
     y for y in SHIP_YEARS if _YEARS.get(y, {}).get("kind") == "html"
 ]

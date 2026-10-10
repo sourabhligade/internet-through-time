@@ -9,7 +9,7 @@
 
 First five live years: **1994, 1995, 1996, 1997, 1998**. Frozen HTML. Official trail n=10 each. Starting Point is `years/YYYY/pages/home.html` painted by `ui/year/start.js` from `ui/year/start-data.js`.
 
-Do not dest-farm. Do not unfreeze 1994–2006. Do not restore leftover-3× unique. Do not restore 2015/2016. Do not start a phase until the user names **start**.
+Do not dest-farm. Do not unfreeze 1994–2006. Do not restore leftover-3× unique. Do not restore 2015. Do not start a phase until the user names **start**.
 
 ```mermaid
 flowchart TD

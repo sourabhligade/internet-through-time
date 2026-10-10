@@ -68,7 +68,6 @@ Named packs added (off dest-true 12): 2005 mvp+flows+densify+trail; 2008 / 2009 
 | Year | Disk |
 |------|------|
 | 2015 | no year-card key · no hub card · no React door · hash is not a door |
-| 2016 | no year-card key · no hub card · `/years/2016/` 404 |
 
 ## Absent (stay 0)
 

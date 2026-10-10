@@ -11,7 +11,7 @@ const vm = require("vm");
 
 const ROOT = path.join(__dirname, "..");
 const SRC = path.join(ROOT, "ui", "year", "start-data.js");
-const WIPED = new Set(["2015", "2016", "2017", "2018", "2019", "2023", "2024", "2025"]);
+const WIPED = new Set(["2015", "2017", "2018", "2019", "2023", "2024", "2025"]);
 
 function loadYearStart() {
   const sandbox = { window: {}, ITT: {} };
@@ -38,7 +38,12 @@ function assertStartCatalog(start) {
   const years = Object.keys(start).sort();
   const live = years.filter((y) => !WIPED.has(y) && fs.existsSync(path.join(ROOT, "years", y, "index.html")));
   const ship = [];
-  for (let y = 1994; y <= 2022; y++) {
+  for (let y = 1994; y <= 2015; y++) {
+    const s = String(y);
+    if (WIPED.has(s)) continue;
+    if (fs.existsSync(path.join(ROOT, "years", s, "index.html"))) ship.push(s);
+  }
+  for (let y = 2017; y <= 2022; y++) {
     const s = String(y);
     if (WIPED.has(s)) continue;
     if (fs.existsSync(path.join(ROOT, "years", s, "index.html"))) ship.push(s);

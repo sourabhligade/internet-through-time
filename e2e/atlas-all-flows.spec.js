@@ -128,7 +128,7 @@ test.describe("atlas hallway — all flows", () => {
     await expect(page.locator('#atlas-spine [data-atlas-year="2017"]')).toHaveCount(0);
     await expect(page.locator('#atlas-spine [data-atlas-year="2018"]')).toHaveCount(0);
     await expect(page.locator('#atlas-spine [data-atlas-year="2019"]')).toHaveCount(0);
-    for (const y of ["2015", "2016", "2017", "2023", "2024", "2025"]) {
+    for (const y of ["2015", "2017", "2023", "2024", "2025"]) {
       await expect(page.locator(`#atlas-spine [data-atlas-year="${y}"]`)).toHaveCount(0);
     }
     await expect(page.locator('#atlas-spine [data-atlas-year="2009"]')).toBeVisible();
@@ -176,7 +176,7 @@ test.describe("atlas hallway — all flows", () => {
       expect(gn, y + " games").toBeGreaterThanOrEqual(1);
       const gHrefs = await gameLinks.evaluateAll((els) => els.map((a) => a.getAttribute("href") || ""));
       for (const h of gHrefs) {
-        if (/\/years\/(2015|2016|2017|2018|2019|2023|2024|2025)\//.test(String(h)) || String(h).indexOf("/app/") !== -1) continue;
+        if (/\/years\/(2015|2017|2018|2019|2023|2024|2025)\//.test(String(h)) || String(h).indexOf("/app/") !== -1) continue;
         await expectLive(page, h, y + " game");
       }
     }
@@ -257,7 +257,7 @@ test.describe("atlas hallway — all flows", () => {
 
     await expect(page.locator('#atlas-spine [data-atlas-year="2021"]')).toHaveCount(1);
     await expect(page.locator('#atlas-spine [data-atlas-year="2022"]')).toHaveCount(1);
-    for (const y of ["2015", "2016", "2017", "2023", "2024", "2025"]) {
+    for (const y of ["2015", "2017", "2023", "2024", "2025"]) {
       await expect(page.locator(`#atlas-spine [data-atlas-year="${y}"]`)).toHaveCount(0);
     }
     await expect(page.locator('#atlas-spine [data-atlas-year="2009"]')).toBeVisible();

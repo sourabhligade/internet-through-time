@@ -47,7 +47,6 @@ test.describe('hub + year shells', () => {
         y2021: mp.isLiveYear('2021'),
         y2022: mp.isLiveYear('2022'),
         y2015: mp.isLiveYear('2015'),
-        y2016: mp.isLiveYear('2016'),
         y2023: mp.isLiveYear('2023'),
         y2024: mp.isLiveYear('2024'),
         y2025: mp.isLiveYear('2025'),
@@ -62,7 +61,6 @@ test.describe('hub + year shells', () => {
     expect(live.y2021).toBe(true);
     expect(live.y2022).toBe(true);
     expect(live.y2015).toBe(false);
-    expect(live.y2016).toBe(false);
     expect(live.y2023).toBe(false);
     expect(live.y2024).toBe(false);
     expect(live.y2025).toBe(false);

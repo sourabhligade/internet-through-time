@@ -178,7 +178,7 @@ def render(data: dict) -> str:
     span = "1994–2014 and 2020–2022" if open_labels == expected else ", ".join(open_labels)
     lede = (
         f"{n_open} years open ({span}). "
-        "2015 and 2016 are omitted. "
+        "2015 is omitted. "
         "2017, 2018, 2019, and 2023–2025 are absent. "
         "Leftover-2× hrefs. Incomplete never writes."
     )
@@ -229,7 +229,7 @@ def render(data: dict) -> str:
       <li>smoke-production.py</li>
       <li>audit-internal-links.py — 440,253 / 0 broken</li>
       <li>test-authenticity.py — 84/84</li>
-      <li>test-pipeline.py — sitemap lists ship years only (2015/2016 omitted · 2017–2019 and 2023–2025 absent)</li>
+      <li>test-pipeline.py — sitemap lists ship years only (2015 omitted · 2017–2019 and 2023–2025 absent)</li>
       <li>check-5x-contract.py</li>
       <li>audit-mock-flows.js</li>
       <li>check-all-years.py — 24/24</li>
@@ -255,7 +255,7 @@ def render(data: dict) -> str:
   <span class="pill lock">leftover-3× second — official 10 + first 3 = 13 dests</span>
   <span class="pill lock">leftover-4× on lock years</span>
   <span class="pill lock">2022 is an open HTML door</span>
-  <span class="pill lock">2015 and 2016 stay omitted</span>
+  <span class="pill lock">2015 stays omitted</span>
   <span class="pill lock">2017, 2018, 2019, and 2023–2025 stay absent</span>
   <span class="pill lock">do not restore 2013 or the forests</span>
 </div>

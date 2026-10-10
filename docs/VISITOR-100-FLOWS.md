@@ -39,7 +39,7 @@ Do not dest-farm dests. Do not dest-lock 2015 again. Do not dest-lock forests / 
 | Dest-farm leftover-3× CUT specs | Dest-true pack asserts the catalogs stay empty |
 | Mock-flow DEST_FIELD / WEAK_REAL / HASH_CTA | **0** |
 | Absent | **2017–2019 · 2023–2025** no tree · no hub card |
-| Omitted | **2015** no year-card key · hash is not a door · **2016** no year-card key · `/years/2016/` 404 |
+| Omitted | **2015** no year-card key · hash is not a door |
 | 2009 | live HTML · Facebook Like `itt09-like` |
 
 ---

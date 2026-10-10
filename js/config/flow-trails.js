@@ -1,5 +1,5 @@
 /**
- * Dest-unique official trail per year. HTML 1994–2014 and 2020–2022 are live. 2015 and 2016 omitted. 2017–2019 and 2023–2025 are absent.
+ * Dest-unique official trail per year. HTML 1994–2014 and 2020–2022 are live. 2015 omitted. 2017–2019 and 2023–2025 are absent.
  * One dest slug once. Pack dests and leftover-3× unique dests stay off this trail.
  * Consumed by js/immersion/flow-trails.js.
  */

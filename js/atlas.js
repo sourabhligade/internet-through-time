@@ -9,8 +9,11 @@
   var data = (window.ITT && ITT.AtlasData) || {};
   var YEARS_ALL = [];
   var y;
-  var SKIP = { "2015": 1, "2016": 1, "2017": 1, "2018": 1, "2019": 1, "2023": 1, "2024": 1, "2025": 1 };
-  for (y = 1994; y <= 2022; y++) {
+  var SKIP = { "2015": 1, "2017": 1, "2018": 1, "2019": 1, "2023": 1, "2024": 1, "2025": 1 };
+  for (y = 1994; y <= 2015; y++) {
+    if (!SKIP[String(y)]) YEARS_ALL.push(String(y));
+  }
+  for (y = 2017; y <= 2022; y++) {
     if (!SKIP[String(y)]) YEARS_ALL.push(String(y));
   }
 
