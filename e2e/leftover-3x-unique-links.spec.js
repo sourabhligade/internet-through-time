@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Leftover-3× unique dest links. 2010 n=3 · 2011 n=3 dests already on disk.
+ * Leftover-3× unique dest links. 2010 n=3 dests already on disk.
  * leftover-3× unique dest-true catalogs stay empty.
  */
 const fs = require("fs");
@@ -14,8 +14,6 @@ const ROOT = path.join(__dirname, "..");
 const WAREHOUSE = new Set(["123-reg", "a21-inc", "123reg"]);
 const LO4X_2012 = new Set(["chrome", "twitter", "soundcloud"]);
 const LO4X_2010 = new Set(["netflix", "tumblr", "wave"]);
-const LO4X_2011 = new Set([]);
-const LO2X_2011 = new Set([]);
 const LO2X_2010 = new Set([
   "angry",
   "flipboard",
@@ -30,7 +28,7 @@ const LO2X_2010 = new Set([
   "google",
   "android",
 ]);
-const WANT = { "2010": 3, "2011": 3 };
+const WANT = { "2010": 3 };
 const BLOCK = /<!-- ITT-3X-UNIQUE-LINKS:(\d{4}):start -->([\s\S]*?)<!-- ITT-3X-UNIQUE-LINKS:\d{4}:end -->/;
 const HREF = /href="([^"]+)"/g;
 
@@ -127,10 +125,6 @@ test.describe("leftover-3× unique dest links", () => {
           expect(LO4X_2010.has(slug), "2010 leftover-4× unique dest " + slug).toBe(false);
           expect(LO2X_2010.has(slug), "2010 leftover-2× unique dest " + slug).toBe(false);
         }
-        if (row.year === "2011") {
-          expect(LO4X_2011.has(slug), "2011 leftover-4× unique dest " + slug).toBe(false);
-          expect(LO2X_2011.has(slug), "2011 leftover-2× unique dest " + slug).toBe(false);
-        }
         const idx = path.join(ROOT, "years", row.year, "sites", slug, "index.html");
         expect(fs.existsSync(idx), idx).toBe(true);
       }
@@ -180,7 +174,7 @@ test.describe("leftover-3× unique dest links", () => {
     expect(startWith3x, "Starting Point leftover-3× unique dest links first paint").toBe(0);
     expect(warehouseHref, "123-reg in leftover-3× unique dest hrefs").toBe(0);
     expect(popMore, "leftover-3× unique dest links tagged itt-pop-more").toBe(0);
-    expect(railPages, "leftover dest leftover-3× unique dest-link host pages").toBe(43);
+    expect(railPages, "leftover dest leftover-3× unique dest-link host pages").toBe(16);
   });
 
   test("2007 leftover dest leftover-3× unique dest wiki · official dest leftover-3× unique dest links 0", async ({
@@ -224,25 +218,6 @@ test.describe("leftover-3× unique dest links", () => {
     await page.goto("/years/2010/sites/tumblr/index.html");
     await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
     await page.goto("/years/2010/sites/wave/index.html");
-    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
-  });
-
-  test("2011 leftover dest leftover-3× unique dest links icloud · snapchat hosts 3 · official dest 0", async ({
-    page,
-  }) => {
-    await page.goto("/years/2011/sites/icloud/index.html");
-    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(1);
-    await expect(page.locator("[data-itt-3x-unique-links] a")).toHaveCount(2);
-    await expect(page.locator('[data-itt-3x-unique-links] a[href="../pinterest/index.html"]')).toHaveCount(1);
-    await expect(page.locator('[data-itt-3x-unique-links] a[href="../linkedin/index.html"]')).toHaveCount(1);
-    await expect(page.locator('[data-itt-3x-unique-links] a[href="../icloud/index.html"]')).toHaveCount(0);
-    await page.goto("/years/2011/sites/snapchat/index.html");
-    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(1);
-    await expect(page.locator("[data-itt-3x-unique-links] a")).toHaveCount(3);
-    await expect(page.locator('[data-itt-3x-unique-links] a[href="../icloud/index.html"]')).toHaveCount(1);
-    await expect(page.locator('[data-itt-3x-unique-links] a[href="../pinterest/index.html"]')).toHaveCount(1);
-    await expect(page.locator('[data-itt-3x-unique-links] a[href="../linkedin/index.html"]')).toHaveCount(1);
-    await page.goto("/years/2011/sites/googleplus/index.html");
     await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
   });
 

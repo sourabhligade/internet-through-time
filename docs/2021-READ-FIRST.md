@@ -21,9 +21,9 @@
 | Trap | Allow · ChatGPT dest · Wordle-as-2021-mass · Zoom Leave as this dest |
 | Guided `<ol>` | **exactly 6** |
 | Official 10 | ★ ATT · Signal leftover · Copilot waitlist · Meta rename leftover · Win11 leftover · Flash brick · Chrome habit · Win10 residual · Facebook leftover · Five Letter |
-| Dest folders | **15** dest-lock lean (official 10 + leftover-3× unique dest-true dests 5) |
+| Dest folders | **18** (official 10 + 8 leftover dests) |
 | Official dest leftover-2× | **0** first paint |
-| Leftover-3× unique dest-true dests | **5** · amazon / google / instagram · twitter / youtube · **third strip 0** · **stop** |
+| Leftover-3× unique dest-true dests | **0** · catalogs empty · dest-links **0** · cap memory 5 is unused · do not dest-farm |
 | Leftover-4× | **0** |
 | 5k | walk envelope · ILS June table **ends 2018** · do not invent June 2021 websites |
 | Scale | ITU **4.9B / 63%** on About · [failed-final] ITU Facts and Figures 2021 not independently fetched · not websites |

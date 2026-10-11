@@ -40,7 +40,6 @@ const STARS = {
   "2008": "itt08-apps",
   "2009": "itt09-like",
   "2010": "itt10-ig-posts",
-  "2011": "itt11-gplus",
   "2012": "itt12-ig-android",
   "2013": "itt13-vine-posts",
   "2014": "itt14-wa-install",

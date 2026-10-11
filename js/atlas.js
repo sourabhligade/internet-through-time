@@ -10,7 +10,10 @@
   var YEARS_ALL = [];
   var y;
   var SKIP = { "2015": 1, "2017": 1, "2018": 1, "2019": 1, "2023": 1, "2024": 1, "2025": 1 };
-  for (y = 1994; y <= 2015; y++) {
+  for (y = 1994; y <= 2010; y++) {
+    if (!SKIP[String(y)]) YEARS_ALL.push(String(y));
+  }
+  for (y = 2012; y <= 2015; y++) {
     if (!SKIP[String(y)]) YEARS_ALL.push(String(y));
   }
   for (y = 2017; y <= 2022; y++) {
@@ -743,7 +746,7 @@
     html += "<b>" + (data.threads || []).length + "</b> follow-a-site threads · ";
     html += "<b>" + (data.trails || []).length + "</b> tours";
     html += "</p>";
-    html += "<p class='muted'>Open a layer. Every href is a room on disk. The hallway is the 24 open doors (1994–2014 and 2020–2022). Click a year. That year opens.</p>";
+    html += "<p class='muted'>Open a layer. Every href is a room on disk. The hallway is the 23 open doors (1994–2010, 2012–2014, and 2020–2022). Click a year. That year opens.</p>";
 
     html += '<details class="atlas-layer" id="atlas-all-golds"><summary>One-thing golds <span class="n">' + golds.length + "</span></summary><ol>";
     golds.forEach(function (g) {

@@ -345,12 +345,7 @@
       "immersion/year-2010-extras.js",
       "immersion/one-thing-machines.js"
     ],
-    "2011": [
-      "immersion/leftover-official.js",
-      "immersion/one-thing-machines.js",
-      "immersion/year-2011-extras.js"
-    ],
-    "2012": [
+        "2012": [
       "immersion/leftover-official.js",
       "immersion/youtube.js",
       "immersion/twitter.js",
@@ -402,6 +397,7 @@
       "immersion/one-thing-machines.js",
       "immersion/year-2020-extras.js"
     ],
+    /* 2021 reuses year-2020-extras.js. That file branches on data-itt-year. */
     "2021": [
       "immersion/leftover-official.js",
       "immersion/no-mock-gfc.js",

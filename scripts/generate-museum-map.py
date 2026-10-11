@@ -174,8 +174,8 @@ def render(data: dict) -> str:
 
     open_labels = [rec["year"] for rec in years]
     n_open = len(open_labels)
-    expected = [str(y) for y in range(1994, 2014 + 1)] + ["2020", "2021", "2022"]
-    span = "1994–2014 and 2020–2022" if open_labels == expected else ", ".join(open_labels)
+    expected = [str(y) for y in range(1994, 2010 + 1)] + [str(y) for y in range(2012, 2015)] + ["2020", "2021", "2022"]
+    span = "1994–2010, 2012–2014, and 2020–2022" if open_labels == expected else ", ".join(open_labels)
     lede = (
         f"{n_open} years open ({span}). "
         "2015 is omitted. "
@@ -232,14 +232,14 @@ def render(data: dict) -> str:
       <li>test-pipeline.py — sitemap lists ship years only (2015 omitted · 2017–2019 and 2023–2025 absent)</li>
       <li>check-5x-contract.py</li>
       <li>audit-mock-flows.js</li>
-      <li>check-all-years.py — 24/24</li>
+      <li>check-all-years.py — 23/23</li>
       <li>HTTP smoke on :8080</li>
     </ul>
   </div>
   <div class="card">
     <h3>E2E ship pack</h3>
     <ul class="plain">
-      <li>oss-visitor-gate — enter all 24</li>
+      <li>oss-visitor-gate — enter all 23</li>
       <li>hub · atlas · 3× links · all-years smoke</li>
       <li>Gold-A · popular 3× · one-thing</li>
       <li>2005–2010 leftover-4× ·  CUT-DOUBLE + 5×</li>

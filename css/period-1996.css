@@ -117,3 +117,47 @@
   --itt96-portal: #003399;
 }
 
+/* Shell helpers for 1996–2009. Same block as period-1995.css.
+   Later years reach this file. They do not @import period-1995.css. */
+.itt-nav-slot {
+  min-height: 28px;
+  margin: 0 0 8px 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body > .itt-nav-slot:empty {
+  background: #000080;
+  min-height: 28px;
+}
+#itt-exhibit-nav {
+  margin: 0;
+}
+#itt-exhibit-nav table {
+  margin: 0;
+}
+.itt-flash {
+  margin: 0 0 8px 0;
+}
+.itt-flash a { color: #0000ee; }
+.itt-status-pulse,
+[data-itt-feedback="1"] {
+  outline: 1px solid #006600;
+  background: #eeffee;
+  padding: 2px 4px;
+}
+@keyframes itt-status-flash {
+  0% { background: #ffff99; }
+  100% { background: #eeffee; }
+}
+.itt-status-pulse {
+  animation: itt-status-flash 0.8s ease-out 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .itt-status-pulse { animation: none; }
+}
+.itt-tour-table {
+  margin: 0.5em 0 1em;
+}
+

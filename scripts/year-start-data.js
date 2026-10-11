@@ -38,7 +38,12 @@ function assertStartCatalog(start) {
   const years = Object.keys(start).sort();
   const live = years.filter((y) => !WIPED.has(y) && fs.existsSync(path.join(ROOT, "years", y, "index.html")));
   const ship = [];
-  for (let y = 1994; y <= 2015; y++) {
+  for (let y = 1994; y <= 2010; y++) {
+    const s = String(y);
+    if (WIPED.has(s)) continue;
+    if (fs.existsSync(path.join(ROOT, "years", s, "index.html"))) ship.push(s);
+  }
+  for (let y = 2012; y <= 2015; y++) {
     const s = String(y);
     if (WIPED.has(s)) continue;
     if (fs.existsSync(path.join(ROOT, "years", s, "index.html"))) ship.push(s);

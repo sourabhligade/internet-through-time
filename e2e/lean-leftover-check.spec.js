@@ -14,7 +14,6 @@ const LEAN_DESTS = [
   { year: "2008", href: "/years/2008/sites/addicting/index.html", suffix: "ag-dp", star: "itt08-apps" },
   { year: "2009", href: "/years/2009/sites/amz/index.html", suffix: "c3", star: "itt09-like" },
   { year: "2010", href: "/years/2010/sites/angry/index.html", suffix: "angry-lx", star: "itt10-ig-posts" },
-  { year: "2011", href: "/years/2011/sites/chromebook/index.html", suffix: "chromebook-lx", star: "itt11-gplus" },
   { year: "2012", href: "/years/2012/sites/coinbase/index.html", suffix: "coinbase-lx", star: "itt12-ig-android" },
   { year: "2013", href: "/years/2013/sites/bitcoin/index.html", suffix: "bitcoin-lx", star: "itt13-vine-posts" },
   { year: "2014", href: "/years/2014/sites/alibabaipo/index.html", suffix: "alibabaipo-lx", star: "itt14-wa-install" },

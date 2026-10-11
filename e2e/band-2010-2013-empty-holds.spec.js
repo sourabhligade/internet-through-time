@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Phase 3 lock for 2010–2013. Empty clicks on the four stars and Guess Doodle
- * Start write nothing. The 182-page walk is phase 6.
+ * Start write nothing. The 148-page walk is phase 6.
  */
 const { test, expect } = require("@playwright/test");
 
@@ -24,14 +24,6 @@ test.describe("2010-2013 phase 3 empty holds", () => {
     await page.evaluate(() => localStorage.removeItem("itt10-ig-posts"));
     await page.locator("[data-official-verb]").click();
     expect(await raw(page, "itt10-ig-posts")).toBeNull();
-  });
-
-  test("Google+ empty click leaves the star empty", async ({ page }) => {
-    await page.goto("/years/2011/sites/googleplus/index.html");
-    await verbReady(page);
-    await page.evaluate(() => localStorage.removeItem("itt11-gplus"));
-    await page.locator("[data-official-verb]").click();
-    expect(await raw(page, "itt11-gplus")).toBeNull();
   });
 
   test("Instagram Android empty click leaves the star empty", async ({ page }) => {

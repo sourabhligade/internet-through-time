@@ -9,7 +9,6 @@ const { enterYear, goInFrame, contentFrame } = require("./helpers");
 const TABS = [
   { year: "1995", path: "/years/1995/sites/amazon/ssl-checkout.html" },
   { year: "1997", path: "/years/1997/sites/amazonipo/index.html" },
-  { year: "2011", path: "/years/2011/sites/googleplus/index.html" },
 ];
 
 test.describe("dest-as-tab footer", () => {
@@ -61,7 +60,7 @@ test.describe("dest-as-tab footer", () => {
     await expect(page.locator("#itt-year-menu-link")).toBeVisible({ timeout: 15000 });
     await page.locator("#itt-year-menu-link").click();
     await expect(page).toHaveURL(/\/(index\.html)?$/);
-    await expect(page.locator("a.year-card.available")).toHaveCount(24);
+    await expect(page.locator("a.year-card.available")).toHaveCount(23);
 
     await page.goto("/years/1995/sites/amazon/ssl-checkout.html");
     await expect(page.locator("#itt-exhibit-foot a.itt-foot-home")).toBeVisible({ timeout: 15000 });

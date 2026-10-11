@@ -1,6 +1,6 @@
 # Lean HTML visitor I/O criteria
 
-**Historical research.** Not ship law. Live hub is **24 doors** (1994–2014 and 2020–2022). **2015 is omitted.** **2017–2019 and 2023–2025 are absent.** **2020–2022 are live HTML.** The year lists below are research, not a second door list. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
+**Historical research.** Not ship law. Live hub is **23 doors** (1994–2010, 2012–2014, and 2020–2022). **2015 is omitted.** **2017–2019 and 2023–2025 are absent.** **2020–2022 are live HTML.** The year lists below are research, not a second door list. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 
 **Date:** 2026-09-14  
@@ -54,7 +54,7 @@ Disk counts are **today’s tree**, not targets. Do not grow dests to “catch u
 | **2017** | absent · not a door | — | — | — | — | — | **0 dests** · do not dest-farm |
 | **2018** | absent · not a door | — | — | — | — | — | **0 dests** · do not dest-farm |
 | **2019** | absent · not a door | — | — | — | — | — | **0 dests** · do not dest-farm |
-| **2021** | `sites/att/index.html` | `itt21-att` | **Ask App Not to Track** | **Allow** · ChatGPT dest · Wordle-as-2021-mass | Win10 mass · Chrome habit | ChatGPT · Zoom Leave as this dest | **15 dests** · 0 assets |
+| **2021** | `sites/att/index.html` | `itt21-att` | **Ask App Not to Track** | **Allow** · ChatGPT dest · Wordle-as-2021-mass | Win10 mass · Chrome habit | ChatGPT · Zoom Leave as this dest | **18 dests** · 0 assets |
 
 **Star path rule:** several of these are **not** `index.html`. Year-start / first-night / atlas must use the path in this table. A trail that 404s is an I/O fail (see 2013 Vine `record.html` as the same class of bug).
 

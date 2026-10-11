@@ -11,11 +11,11 @@ There are **62 files in `css/`**, plus injected styles in `js/immersion/boot.js`
 | React shell | `react/src/styles.css` `.door` | `100dvh` shell analog. Zero-door hall while 2015 is omitted |
 | Museum fill | `css/museum-fill.css` | hub / atlas / games only |
 
-## Period import chain (the leak)
+## Period import chain
 
-`period-1996.css` `@import`s `period-1995.css`. That chain runs through 1997→1999, then `period-2005.css` imports 1999. Dest chrome that lived in **1995** (sticky `#itt-wayfind`, `#itt-exhibit-foot { padding-bottom: 3em }`) applied to later years.
+`period-1996.css` does not `@import` `period-1995.css`. It imports `itt-leftover-fold.css` and `leftover-dest-face.css`. 1997→1999 import forward to 1996, and `period-2005.css` imports 1999, so 1996–2009 never fetch the 1995 sheet. 1995 body, link, and table rules stay on 1995. Shell helpers (nav slot, status pulse, tour table) are copied in `period-1996.css`.
 
-That dest chrome is **removed from `period-1995.css`**. Wayfind + footer clearance live only in `itt-dest-page.css`, loaded by `boot.js` on `/years/YYYY/sites/`.
+Wayfind and footer clearance live only in `itt-dest-page.css`, loaded by `boot.js` on `/years/YYYY/sites/`.
 
 ## Injected JS (keep small)
 

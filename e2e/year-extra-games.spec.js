@@ -14,7 +14,12 @@ const { killOverlays } = require("./helpers");
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
 const SKIP_HTML_EXTRAS = new Set(["2015", "2017", "2018", "2019", "2023", "2024", "2025"]);
-for (let y = 1994; y <= 2015; y++) {
+for (let y = 1994; y <= 2010; y++) {
+  const s = String(y);
+  if (SKIP_HTML_EXTRAS.has(s)) continue;
+  YEARS.push(s);
+}
+for (let y = 2012; y <= 2015; y++) {
   const s = String(y);
   if (SKIP_HTML_EXTRAS.has(s)) continue;
   YEARS.push(s);

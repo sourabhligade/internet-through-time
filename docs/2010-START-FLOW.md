@@ -6,7 +6,7 @@
 **Tick list:** [`checklists/2010.md`](checklists/2010.md).  
 **Local:** http://127.0.0.1:8080
 
-Lean HTML door. Official trail **10**. leftover trail **0**. leftover-2× unique **12**. leftover-3× unique **0**. leftover-4× unique **3**. dest folders **29**. Chrome: Windows 7 · IE 8.
+Lean HTML door. Official trail **10**. leftover trail **0**. leftover-2× unique **12**. leftover-3× unique dest-true **0** · dest-links **3** (formspring · groupon · reddit). leftover-4× unique **3**. dest folders **29**. Chrome: Windows 7 · IE 8.
 
 ```mermaid
 flowchart TD
@@ -33,7 +33,8 @@ flowchart TD
 | Official trail | **10** | `js/config/flow-trails.js` `"2010"` |
 | leftover trail n=11+ | **0** | lean 10+0 · no leftover rows in `flow-trails.js` |
 | leftover-2× unique dests | **12** | `e2e/leftover-2x-unique-links.matrix.json` |
-| leftover-3× unique dests | **0** | catalogs empty |
+| leftover-3× unique dest-true | **0** | catalogs empty |
+| leftover-3× unique dest-links | **3** | formspring · groupon · reddit · 16 host pages |
 | leftover-4× unique dests | **3** | netflix · tumblr · wave |
 | dest folders with `index.html` | **29** | `years/2010/sites/` · `e2e/lean-double-leftover.spec.js` WANT 29 |
 | Starting Point guided | **6** | `ui/year/start-data.js` · `#ott-guided-2010` |
@@ -131,7 +132,7 @@ Catalog dests already on disk. Rails fold unless `?deep=1`. Official dest leftov
 | 11 | google | `itt10-google-lx` | http://127.0.0.1:8080/years/2010/sites/google/index.html |
 | 12 | android | `itt10-android-lx` | http://127.0.0.1:8080/years/2010/sites/android/index.html |
 
-lean-double leftover KEEP matrix is **10** (angry through ibooks, no `path` / `google` / `android`). leftover-2× unique 12 is the live unique-link catalog. Do not dest-farm to 24 until named `2x`.
+lean-double leftover KEEP matrix is **10** (angry, flipboard, cityville, kinect, minecraft, hulu, googlebuzz, path, ibooks, chromewebstore). `google` and `android` are in the unique-link catalog of 12 and are not in that KEEP 10. Do not dest-farm to 24 until named `2x`.
 
 ---
 

@@ -2,7 +2,7 @@
 /**
  * Phase 2 lock for 2010–2013. Instagram, Google+, Instagram Android, Vine,
  * and Facebook 1B are kind official. Guess Doodle Start writes nothing.
- * iPad order stays official. The 182-page walk is phase 6.
+ * iPad order stays official. The 148-page walk is phase 6.
  */
 const { test, expect } = require("@playwright/test");
 
@@ -42,17 +42,6 @@ test.describe("2010-2013 phase 2 one writer", () => {
     await finishOfficial(page);
     await expect.poll(() => raw(page, "itt10-ig-posts"), { timeout: 8000 }).toBeTruthy();
     expect((await envelope(page, "itt10-ig-posts")).kind).toBe("official");
-  });
-
-  test("Google+ empty write nothing then a real ack is official", async ({ page }) => {
-    await page.goto("/years/2011/sites/googleplus/index.html");
-    await verbReady(page);
-    await page.evaluate(() => localStorage.removeItem("itt11-gplus"));
-    await page.locator("[data-official-verb]").click();
-    expect(await raw(page, "itt11-gplus")).toBeNull();
-    await finishOfficial(page);
-    await expect.poll(() => raw(page, "itt11-gplus"), { timeout: 8000 }).toBeTruthy();
-    expect((await envelope(page, "itt11-gplus")).kind).toBe("official");
   });
 
   test("Instagram Android empty write nothing then a real share is official", async ({ page }) => {

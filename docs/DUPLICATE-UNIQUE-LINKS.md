@@ -90,33 +90,6 @@ leftover-3× unique dest-true dests (9): `android` · `chrome` · `formspring` �
 | `tumblr` | leftover-3× unique dest-true | yes | yes | yes |
 | `wave` | leftover-3× unique dest-true | yes | yes | yes |
 
-### 2011
-
-leftover-3× unique dest-true dests (9): `dropbox` · `hulu` · `icloud` · `kindlefire` · `linkedin` · `minecraft` · `pinterest` · `twitch` · `youtube`
-
-| Dest | Role | leftover-2× unique dest link | leftover-3× unique dest link | leftover-3× unique dest-true |
-|------|------|:---:|:---:|:---:|
-| `codecademy` | leftover dest KEEP | yes | yes | — |
-| `dropbox` | leftover-3× unique dest-true | yes | yes | yes |
-| `gmusic` | extra dest KEEP | yes | yes | — |
-| `icloud` | leftover-3× unique dest-true | yes | yes | yes |
-| `imessage` | leftover dest KEEP | yes | yes | — |
-| `ios5` | leftover dest KEEP | yes | yes | — |
-| `kindlefire` | leftover-3× unique dest-true | yes | yes | yes |
-| `line` | leftover dest KEEP | yes | yes | — |
-| `linkedin` | leftover-3× unique dest-true | yes | yes | yes |
-| `minecraft` | leftover-3× unique dest-true | yes | yes | yes |
-| `pinterest` | leftover-3× unique dest-true | yes | yes | yes |
-| `snapchat` | leftover dest KEEP | yes | yes | — |
-| `stripe` | leftover dest KEEP | yes | yes | — |
-| `twitch` | leftover-3× unique dest-true | yes | yes | yes |
-| `wechat` | leftover dest KEEP | yes | yes | — |
-| `youtube` | leftover-3× unique dest-true | yes | yes | yes |
-
-On leftover-3× unique dest **links** only (already dest-disjoint from leftover-2× unique dest **links**): `hulu` · `pandora`
-- `hulu` — leftover-3× unique dest-true
-- `pandora` — extra dest KEEP
-
 ### 2012
 
 leftover-3× unique dest-true dests (9): `buzzfeed` · `drawsomething` · `googledrive` · `reddit` · `snapchat` · `surface` · `uber` · `windows8` · `youtube`
@@ -451,7 +424,6 @@ Official dest leftover unique dest **link** first paint is **0**. These dests ar
 | 2006 | 9 | `aws` · `facebook` · `gmail` · `googledocs` · `ie7` · `roblox` · `twitter` · `wikipedia` · `youtube` |
 | 2007 | 10 | `fbplat` · `gmail` · `ie6` · `iphone` · `kindle` · `playable` · `streetview` · `tumblr` · `twitter` · `youtube` |
 | 2010 | 10 | `facebook` · `farmville` · `foursquare` · `imgur` · `instagram` · `ipad` · `iphone` · `playable` · `twitter` · `youtube` |
-| 2011 | 9 | `airbnb` · `facebook` · `googleplus` · `instagram` · `ipad` · `iphone` · `qwikster` · `spotify` · `twitter` |
 | 2012 | 9 | `facebook` · `flipboard` · `instagram` · `iphone` · `medium` · `path` · `pinterest` · `playable` · `wikipedia` |
 | 2013 | 4 | `snowden` · `telegram` · `tumblr` · `windows81` |
 | 2014 | 7 | `applepay` · `iphone` · `material` · `playable` · `slack` · `twitch` · `whatsapp` |
@@ -539,7 +511,6 @@ Leftover dest leftover dest-true I/O dests (keep / trap / field) are also leftov
 | 2006 | 35 |
 | 2007 | 5 |
 | 2010 | 1 |
-| 2011 | 0 |
 | 2012 | 2 |
 | 2013 | 25 |
 | 2015 | 0 |
@@ -569,4 +540,5 @@ npx playwright test e2e/leftover-2x-unique-links.spec.js e2e/leftover-3x-unique-
 ```
 
 **161 passed · 0 failed** after the kill (37.9s). leftover-2× unique dest **links** spec now locks dest-disjoint leftover-3× unique dest **links**. Leftover-3× unique dest-true dests stay 107.
+
 

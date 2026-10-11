@@ -5,7 +5,7 @@
 **Wait-2x (2026-09-30 docs pass).** Leftover-2× unique dest **links** already live. Dest **doubling** waits on the word `2x`. Do not dest-farm from this note. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 **Date:** 2026-09-21  
-**Status:** Implemented 2026-09-21. Leftover-2× unique dest **links** on leftover dest HTML. Official dest leftover-2× first paint **0**. Dest-true leftover dest I/O unchanged. Not dest-farm. leftover-3× unique dest-true catalogs stay empty. leftover-3× unique dest-links 2010 n=3 · 2011 n=3. Dest **doubling** waits on the word `2x`. leftover-2× unique 2011 catalog freeze stays n=0.  
+**Status:** Implemented 2026-09-21. Leftover-2× unique dest **links** on leftover dest HTML. Official dest leftover-2× first paint **0**. Dest-true leftover dest I/O unchanged. Not dest-farm. leftover-3× unique dest-true catalogs stay empty. Dest **doubling** waits on the word `2x`.
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · live `years/` · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **I/O:** leftover never writes the star · empty / trap never write.  
 **Census:** live `years/` leftover-2× rails (`data-itt-2x-links` / `data-itt-2x-unique` / `ITT-2X-LINKS`).  
@@ -45,7 +45,6 @@ A year **fails** if any row is N.
 | **L4** | Dest on disk | Every add href is `years/YYYY/sites/<slug>/` already | Invent dest · restore DROP dests |
 | **L5** | Official dest leftover-2× | Official dest HTML leftover-2× first paint **0** | Stamp leftover-2× rails on gold dests |
 | **L6** | Official dest as href | Official dest may be a **target** from leftover dest rails | Official dest listed twice as leftover dest |
-| **L7** | Leftover-3× unique stop | leftover-3× unique dest-true catalogs empty · dest-true engines stay removed · leftover-3× unique dest-links 2010 n=3 · 2011 n=3 | Grow leftover-3× unique dest-true catalogs · dest-farm leftover-3× unique dest-links past =3 / 2021=5 |
 | **L8** | Leftover-20 | unshipped · 2017 absent | dest-farm leftover-20 |
 | **L9** | Star | Leftover never writes the year star | Leftover-2× save writes gold |
 | **L10** | Dest-true leftover dests | Dest-true leftover dest counts stay | New leftover dest-true machines from this file |
@@ -135,7 +134,6 @@ Leftover dest KEEP dests already have dest-true leftover I/O. This pass only **h
 |------|-------------|------|
 | 2007 | leftover dest KEEP 14: `hackernews` `friendfeed` `netflix` `appletv` `ipodtouch` `justintv` `icanhas` `funnyordie` `pownce` `androidann` `gears` `iplayer` `amazonmp3` `safari3` · then Hosting.com `myspace` `ebay` | HN Oct 2007 · FriendFeed 2007 · Netflix Watch Instantly 2007 · Justin.tv 2007 · iPhone Safari is the star not leftover · Hosting.com June 2007 MySpace #4 eBay #5 |
 | 2010 | leftover dest KEEP: `flipboard` `minecraft` `hulu` `angry` `googlebuzz` `chromewebstore` `kinect` `cityville` `ibooks` | Cybercultural 2010 Instagram/iPad/Foursquare · Angry Birds Dec 2009 / 2010 mass · Minecraft 2010 · Hulu leftover |
-| 2011 | leftover-2× **n = 0** · do not dest-farm | Live HTML door. No leftover-2× matrix row |
 | 2012 | leftover dest KEEP: `tinder` `duolingo` `coursera` `udacity` `edx` `nexus7` `jellybean` `ios6` `googleplay` `kindlefirehd` `coinbase` | Cybercultural 2012 IG Android / Pinterest / Facebook IPO · Tinder 2012 · Coursera 2012 |
 | 2013 | extra dest KEEP 34 (first ADD) then leftover-3× unique dests as href targets | [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md) Bitcoin 2013 · Chromecast 24 Jul 2013 · DoorDash 2013 · Hosting.com Facebook #2 YouTube #3 Twitter #6 |
 | 2014 | leftover dest KEEP: `alibabaipo` `oculusfb` `inbox` `echo` `flappybird` `game2048` `ios8` · Hosting.com `facebook` `youtube` `wikipedia` `twitter` | Alibaba IPO 2014 · Flappy Bird 2014 · Echo Nov 2014 · Hosting.com June 2014 |
@@ -170,23 +168,23 @@ Live leftover-2× unique dests = matrix n (`e2e/leftover-2x-unique-links.matrix.
 
 | Year | Dests on disk | Unique dests in leftover-2× rails now (historical) | Dup-href rail pages (historical) | Live unique dests | Add unique dests |
 |------|--------------:|--------------------------------------:|--------------------:|-------------------:|-----------------:|
-| 1994 | 156 | 49 | 92 | **71** | 0 |
-| 1995 | 152 | 49 | 86 | **117** | 0 |
-| 1996 | 152 | 47 | 78 | **76** | 0 |
-| 1997 | 163 | 50 | 80 | **46** | 0 |
-| 1998 | 149 | 45 | 85 | **28** | 0 |
-| 1999 | 426 | 43 | 91 | **138** | 0 |
-| **2000** | 477 | 46 | 86 | **76** | 0 |
-| **2001** | 257 | 26 | 33 | **35** | 0 |
-| **2002** | 224 | 19 | 29 | **25** | 0 |
-| **2003** | 199 | 18 | 23 | **21** | 0 |
-| **2004** | 800 | 80 | 162 | **148** | 0 |
-| **2005** | 339 | 105 | 206 | **92** | 0 |
-| **2006** | 366 | 116 | 236 | **101** | 0 |
+| 1994 | 158 | 49 | 92 | **71** | 0 |
+| 1995 | 153 | 49 | 86 | **117** | 0 |
+| 1996 | 153 | 47 | 78 | **76** | 0 |
+| 1997 | 166 | 50 | 80 | **46** | 0 |
+| 1998 | 151 | 45 | 85 | **28** | 0 |
+| 1999 | 429 | 43 | 91 | **138** | 0 |
+| **2000** | 501 | 46 | 86 | **76** | 0 |
+| **2001** | 259 | 26 | 33 | **35** | 0 |
+| **2002** | 250 | 19 | 29 | **25** | 0 |
+| **2003** | 203 | 18 | 23 | **21** | 0 |
+| **2004** | 805 | 80 | 162 | **148** | 0 |
+| **2005** | 806 | 105 | 206 | **92** | 0 |
+| **2006** | 370 | 116 | 236 | **101** | 0 |
 | 2007 | 33 | 0 | 0 | **17** | 0 |
+| 2008 | 113 | — | — | **47** | 0 |
 | 2009 | 78 | 62 | 132 | **33** | 0 |
 | 2010 | 29 | 19 | 29 | **12** | 0 |
-| 2011 | 37 | 0 | 0 | **0** | 0 |
 | 2012 | 32 | 20 | 35 | **12** | 0 |
 | 2013 | 52 | 0 | 0 | **27** | 0 |
 | 2014 | 25 | 0 | 0 | **16** | 0 |
@@ -199,7 +197,7 @@ Live leftover-2× unique dests = matrix n (`e2e/leftover-2x-unique-links.matrix.
 | 2022 | 25 | 0 | 0 | **0** | 0 |
 | 2023–2025 | 0 | — | — | **stop wiped** | 0 |
 
-**Live unique dests:** **1,138**. Do not dest-farm. Strip duplicate hrefs on leftover-2× rail pages stays a forest honesty check, not a quota.
+**Live unique dests:** **1,138**. Dests on disk are site directories on 2026-10-11 (2005 is **806**, not 339). Index pages are fewer where a directory has no `index.html`: 2001 **258** (`apple`), 2008 **104**, 2009 **76**, 2013 **47**, 2022 **24**. Do not dest-farm. Strip duplicate hrefs on leftover-2× rail pages stays a forest honesty check, not a quota.
 
 ---
 
@@ -327,14 +325,6 @@ KEEP original (19): `android` · `chrome` · `facebook` · `farmville` · `forms
 
 ADD leftover dest KEEP: `flipboard` · `minecraft` · `hulu` · `angry` · `googlebuzz` · `chromewebstore` · `kinect` · `cityville` · `ibooks` · then `playable`
 
-### 2011 — after 38 · add 19 · star `itt11-gplus`
-
-KEEP original (19): `airbnb` · `chromebook` · `dropbox` · `facebook` · `gmusic` · `googleplus` · `icloud` · `instagram` · `ipad` · `iphone` · `kindlefire` · `linkedin` · `minecraft` · `pinterest` · `qwikster` · `spotify` · `twitch` · `twitter` · `youtube`
-
-ADD leftover dest KEEP: `snapchat` · `ios5` · `imessage` · `honeycomb` · `ics` · `wechat` · `line` · `temple` · `skyrim` · `nytpaywall` · `skypebuy` · `grouponipo` · `zyngaipo` · `googlewallet` · `stripe` · `codecademy` · `nintendo3ds` · `psnhack` · `gowalla`
-
-`pandora` leftover dest KEEP leftover dest-true stays dest-true leftover dest; leftover-2× unique dest list caps at 38.
-
 ### 2012 — after 32 · add 12 · star `itt12-ig-android`
 
 KEEP original (20): `buzzfeed` · `chrome` · `drawsomething` · `facebook` · `flipboard` · `googledrive` · `instagram` · `iphone` · `medium` · `path` · `pinterest` · `reddit` · `snapchat` · `soundcloud` · `surface` · `twitter` · `uber` · `wikipedia` · `windows8` · `youtube`
@@ -434,7 +424,7 @@ flowchart TD
  RAIL --> MISS["MISS remainder years unique dests less than 2x cap"]
 ```
 
-Live unique dests in leftover-2× rails (`e2e/leftover-2x-unique-links.matrix.json`, same ids as `js/config/leftover-2x-unique-links.js`, sum **1,138**): 1994 **71** · 1995 **117** · 1996 **76** · 1997 **46** · 1998 **28** · 1999 **138** · 2000 **76** · 2001 **35** · 2002 **25** · 2003 **21** · 2004 **148** · 2005 **92** · 2006 **101** · 2007 **17** · 2008 **47** · 2009 **33** · 2010 **12** · 2012 **12** · 2013 **27** · 2014 **16** · 2015 **0** (dests **[]**). No matrix row for 2011 or 2020–2022 (catalog **0**). Absent 2017–2019 and 2023–2025 stay **0**. Do not dest-farm `years/2015/`. Catalog dests require `index.html`. Empty 2015 paints no rail. Dests-on-disk (all leftover forest folders with `index.html`) is a larger count than unique n — live 2005 dests with index **806**, 2000 **501**. Do not treat dests-on-disk as a dest-farm quota.
+Live unique dests in leftover-2× rails (`e2e/leftover-2x-unique-links.matrix.json`, same ids as `js/config/leftover-2x-unique-links.js`, sum **1,138**): 1994 **71** · 1995 **117** · 1996 **76** · 1997 **46** · 1998 **28** · 1999 **138** · 2000 **76** · 2001 **35** · 2002 **25** · 2003 **21** · 2004 **148** · 2005 **92** · 2006 **101** · 2007 **17** · 2008 **47** · 2009 **33** · 2010 **12** · 2012 **12** · 2013 **27** · 2014 **16** · 2015 **0** (dests **[]**). Absent 2017–2019 and 2023–2025 stay **0**. Do not dest-farm `years/2015/`. Catalog dests require `index.html`. Empty 2015 paints no rail. Dests-on-disk (all leftover forest folders with `index.html`) is a larger count than unique n — live 2005 dests with index **806**, 2000 **501**. Do not treat dests-on-disk as a dest-farm quota.
 
 ### A. Leftover dest leftover-2× unique dest rail (hrefs)
 
@@ -504,3 +494,4 @@ npx playwright test e2e/leftover-2x-unique-links.spec.js
 Covers steps 1, 3, 11, 13, 14 (2000 zombo unique dests · 2007 leftover dest KEEP + iPhone leftover-2× 0 · leftover dest KEEP + GDPR leftover-2× 0 · 2022 leftover dest KEEP + ChatGPT leftover-2× 0 · catalog n).
 
 Fail any step if leftover-2× unique dest rail appears on official dest HTML, leftover dest leftover-2× unique dest list has duplicate dest slugs, leftover dest leftover-2× unique dest list has `123-reg`, leftover dest leftover-2× unique dest rail carries `itt-pop-more`, leftover dest leftover-2× save writes the star, or dest folders were dest-farmed.
+

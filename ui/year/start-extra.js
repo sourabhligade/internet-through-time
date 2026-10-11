@@ -32,7 +32,6 @@
 
  "2009": "<p class=\"itt-felt-trail\">After the star: <a href=\"../sites/farmville/index.html\">FarmVille</a> · <a href=\"../sites/bing/index.html\">Bing</a> · <a href=\"../sites/iphone/index.html\">iPhone 3GS</a>. These rooms never write <code>itt09-like</code>.</p>",
  "2010": "<p class=\"itt-felt-trail\">Filter then share: <a href=\"../sites/instagram/index.html\">Instagram iOS</a>\u2014 empty caption never writes.</p>",
- "2011": "<p class=\"itt-felt-trail\">After the star: <a href=\"../sites/spotify/index.html\">Spotify US</a> · <a href=\"../sites/iphone/index.html\">Siri</a> · <a href=\"../pages/map.html\">the map</a>. Leftover rooms never write <code>itt11-gplus</code>.</p>",
 
 
  "2012": "<p class=\"itt-felt-trail\">After the star: <a href=\"../sites/instagram/android.html\">keep going</a>.</p>",

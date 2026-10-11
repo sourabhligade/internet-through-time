@@ -16,8 +16,10 @@
     );
   }
   function key(kind) {
-    if (U().immersionStorageKey) return U().immersionStorageKey(kind, "itt11");
-    return "itt" + year().slice(2) + "-" + kind;
+    var y = year();
+    var pfx = /^\d{4}$/.test(y) ? "itt" + y.slice(2) : "itt";
+    if (U().immersionStorageKey) return U().immersionStorageKey(kind, pfx);
+    return pfx + "-" + kind;
   }
   function esc(s) {
     if (U().escapeHtml) return U().escapeHtml(s);

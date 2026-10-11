@@ -131,7 +131,6 @@ Kind: wait / query / hops / checks as in CUT-DOUBLE minutes. **Do not** ship `*-
 | [x] | N-A10 | myBO | `sites/mybo/index.html` | `mybo-dp` | hops · RSVP leftover | donate live | changegov | campaign leftover |
 | [x] | N-A11 | change.gov | `sites/changegov/index.html` | `change-dp` | checks · Dec transition | 2009.gov as gold | lehman | Dec 2008 leftover |
 | [x] | N-A12 | Lehman | `sites/lehman/index.html` | `lehman-dp` | checks · 15 Sep literacy | trade / exploit | justin | literacy only |
-| [x] | N-A13 | Justin.tv | `sites/justin/index.html` | `jtv-dp` | hops · watch leftover | Twitch 2011 | ustream | 2008 live leftover |
 | [x] | N-A14 | Ustream | `sites/ustream/index.html` | `ustream-dp` | hops · go leftover | Zoom-as-2008 | vimeo | no live stream |
 | [x] | N-A15 | Vimeo | `sites/vimeo/index.html` | `vimeo-dp` | query · upload leftover title | live CDN | kongregate | HD culture 2008 |
 | [x] | N-A16 | Kongregate | `sites/kongregate/index.html` | `kong-dp` | hops · play leftover | official brand rip | newgrounds | Flash portal |
@@ -151,7 +150,6 @@ Kind: wait / query / hops / checks as in CUT-DOUBLE minutes. **Do not** ship `*-
 | [x] | N-A30 | Etsy | `sites/etsy/index.html` | `etsy-dp` | hops · shop leftover | live checkout | limewire | no checkout |
 | [x] | N-A31 | LimeWire | `sites/limewire/index.html` | `lime-dp` | query · search leftover | **real download** | piratebay | P2P leftover |
 | [x] | N-A32 | Pirate Bay literacy | `sites/piratebay/index.html` | `tpb-dp` | checks · trial weather | **torrent payload** | mobileme | literacy only |
-| [x] | N-A33 | MobileMe | `sites/mobileme/index.html` | `mme-dp` | hops · sync leftover | iCloud 2011 | lively | Apple cloud 2008 |
 | [x] | N-A34 | Google Lively | `sites/lively/index.html` | `lively-dp` | hops · walk leftover · closed Dec | 2021 metaverse | knol | closed Dec 2008 |
 | [x] | N-A35 | Google Knol | `sites/knol/index.html` | `knol-dp` | query · write leftover | Wikipedia-as-this | ★ App Store (Pack B hi5 not on disk) | not Wikipedia gold |
 
@@ -159,7 +157,7 @@ Kind: wait / query / hops / checks as in CUT-DOUBLE minutes. **Do not** ship `*-
 
 N-A36 App Engine only if named later. Groupon is **out** (2010 leftover).
 
-Spine already year-true after official 10 (use as leftover dests **only if dest-disjoint** and cited): `spotify` (Europe invite 7 Oct · **not US**) · `stackoverflow` (15 Sep Joel) · `airbnb` (SXSW / DNC 2008, not 2011 gold) · `tumblr` · `friendconnect` · `evernote` · `posterous` · `steam` · `grooveshark` · `lastfm` · `mashable` · `techcrunch`. Tick a row in a later named hole pass. Do not fork a second `firefox/` for Download Day (N-A01 uses `downloadday.html`).
+Tick a row in a later named hole pass. Do not fork a second `firefox/` for Download Day (N-A01 uses `downloadday.html`).
 
 **Pass Pack A:** each dest HTTP 200 · empty/trap never write · complete writes `itt08-<suffix>` leftover · Next 2008 · star key unchanged · Starting Point lists them **below** guided (`#ott-2x-2008` or Also · I7).
 
@@ -250,3 +248,4 @@ Visitor 100% on 2008 is dest-true I/O on dests **this pass put on disk**, not ma
 - Grow leftover-3× unique or leftover-20.
 
 **Name next:** `implement 2008` (Phase 0.1 App Store star is the default). Or name Pack A row ids only.
+

@@ -1,7 +1,7 @@
 # 2022 — READ FIRST (CUT-OPEN)
 
 **Date:** 2026-09-15  
-**Status:** **LIVE lean door.** Dest-true official 10 · dest folders **25**. Leftover-3× unique catalogs empty. Leftover-2× dest-farm dests not restored. Star `itt22-chatgpt`. Do not dest-farm. Hub **24 doors** (1994–2014 and 2020–2022). **2015 is omitted.** **2017–2019 and 2023–2025 are absent.**  
+**Status:** **LIVE lean door.** Dest-true official 10 · dest folders **25**. Leftover-3× unique catalogs empty. Leftover-2× dest-farm dests not restored. Star `itt22-chatgpt`. Do not dest-farm. Hub **23 doors** (1994–2010, 2012–2014, and 2020–2022). **2015 is omitted.** **2017–2019 and 2023–2025 are absent.**  
 **Parent (live):** 2021 ATT Ask `itt21-att`. **Child:** 2023 wiped. · Zoom Leave.  
 **Clone chrome:** 2021 Win10 + Chrome habit.
 
@@ -21,9 +21,9 @@
 | Trap | GPT-4 · X wordmark · Threads · ATT Ask · Zoom Leave as this dest |
 | Guided `<ol>` | **exactly 6** |
 | Official 10 | ★ ChatGPT · Wordle leftover · Twitter bird leftover · BeReal leftover · Island leftover · FTX leftover · Mastodon leftover · TikTok leftover · Win11 leftover · Prompt Queue |
-| Dest freeze | **85** · leftover-4× **0** · research cut (no Yahoo/Bing/DDG/Skype) |
-| Leftover 2× | two leftover writers on **every leftover dest** · **0** panels on official dest HTML |
-| Leftover-3× | first 3 (Reddit · YouTube · Wikipedia) + third 3 (Instagram · Google · Facebook) · gold dest never leftover-3× |
+| Dest folders | **25** on disk · **24** with `index.html` (`iphone` has no index) · old research cut **85** is not live · do not dest-farm back to 85 |
+| Leftover 2× | leftover-flow rails on leftover dests · **0** panels on official dest HTML · unique catalog **0** |
+| Leftover-3× | unique dest-true catalogs **empty** · dest-links **0** · do not restore a first-3 + third-3 face |
 | Leftover-4× | **0** |
 | HTML cap | **≤90** |
 | Scale | ILS June table **ends 2018** · ITU **5.3B / 66%** on About |

@@ -1,8 +1,8 @@
 # Year chrome — production plan
 
 **Date:** 2026-10-01
-**Status:** Implemented in the working tree on 2026-10-01. A recheck the same day closed three shortfalls: 2022 uses the dark Chrome-habit taskbar and tab (the blue taskbar rule is gone), 2006–2009 home addresses stay on `home.microsoft.com` after boot. 2015 is omitted. Shell choices below stay locked. Not ship law. Counts of 22 or 24 doors in this plan are that day's scope.
-**Law:** `js/year-card.json` · live hub · [`DISK-TRUTH.md`](DISK-TRUTH.md). Live hub is **24 doors** (1994–2014 and 2020–2022). **2015 is omitted.** **2017–2019 and 2023–2025 are absent.** This file does not add dest folders.
+**Status:** Implemented in the working tree on 2026-10-01. A recheck the same day closed three shortfalls: 2022 uses the dark Chrome-habit taskbar and tab (the blue taskbar rule is gone), 2006–2009 home addresses stay on `home.microsoft.com` after boot. 2015 is omitted. Shell choices below stay locked. Not ship law. Counts of 22 or 23 doors in this plan are that day's scope.
+**Law:** `js/year-card.json` · live hub · [`DISK-TRUTH.md`](DISK-TRUTH.md). Live hub is **23 doors** (1994–2010, 2012–2014, and 2020–2022). **2015 is omitted.** **2017–2019 and 2023–2025 are absent.** This file does not add dest folders.
 
 The years and the save data are far enough along to grade. The shell that frames them is not. The HTML doors share one painter (`ui/year/shell.js`) and three toolbar builders, but the record in `ui/year/years.js` often names a browser the painter does not draw. 2015 is omitted. Production grade is one chrome contract on the HTML doors, dest HTML left where it is.
 
@@ -80,7 +80,7 @@ Mass desktop is the machine a typical person had at the start of that year. The 
 | 2017 | Win10 + Chrome habit | **Absent.** No year-card tree. No hub card. Hash is not a door | Heading “2017 is not a door”. Never Periscope. | absent | Locked: stay 0. Do not dest-farm. |
 | 2022 | Win10 still mass, Win11 exists, Chrome | `os-win10 browser-chrome-habit`, `toolbar: "chrome22"`, location `https://www.google.com/web2022/`. `chrome` field is still `"2007"` | `shell.js` ignores GIFs for `chrome22` and paints the text omnibox. Legend hidden. `chrome22Toolbar()` in `chrome.js` is an empty stub | Closest year. Asset field is a lie. Legend is gone. Painter is split across two files | Locked: stay Win10. Move the omnibox markup from `shell.js` into `chrome.js` `chrome22Toolbar`. Set `assetYear` to null. Un-hide the legend |
 
-2017–2019 and 2023–2025 are absent. They do not get a hub card or a sentence on the React hall. 2011, 2020, 2021, and 2022 are live HTML doors. 2011 is Win7 + IE 8. The 2017 row above is the 2026-10-01 plan, not a live door.
+2017–2019 and 2023–2025 are absent. They do not get a hub card or a sentence on the React hall. The 2017 row above is the 2026-10-01 plan, not a live door.
 
 ## One chrome record, HTML painter
 
@@ -146,7 +146,7 @@ The coach sentence is already right. No copy-bank rewrite is required unless a y
 | Save keys change while chrome is edited | High | `whenKey` strings and `official-verb.js` / `leftover-official.js` are out of scope. Tests assert the same keys |
 | Period CSS `@import` chain leaks dest chrome | Medium | Dest wayfind and footer stay in `css/itt-dest-page.css` only, per `docs/ITT-CSS-LAYERS.md`. This plan does not put shell rules back into `period-YYYY.css` |
 | Frozen years gain dest folders | High | No PR in this plan creates a folder under `years/1994`–`years/2006` |
-| Hub card design regresses | Medium | Do not edit `css/hub-lean.css` except to keep the year-number treatment. `e2e/hub-years.spec.js` must expect 24 cards |
+| Hub card design regresses | Medium | Do not edit `css/hub-lean.css` except to keep the year-number treatment. `e2e/hub-years.spec.js` must expect 23 cards |
 
 ## Security and privacy
 
@@ -160,7 +160,7 @@ Shell paint already runs in the page. A failed GIF is a 404 in the network panel
 
 Each PR is mergeable on its own. None of them wipe a year or add a dest.
 
-1. **Record the chrome contract on the year card.** Add the `chrome` object for all 24 open years, copied from the table above, including the borrows (`2003.assetYear = "2004"`, `2008.assetYear = "2004"`). Absent years get no chrome object. `ui/year/years.js` still paints from its own fields. A node or Python check fails if card chrome and `years.js` disagree. Files: `js/year-card.json`, `js/year-card.js`, a small check in `scripts/`. Depends on nothing.
+1. **Record the chrome contract on the year card.** Add the `chrome` object for all 23 open years, copied from the table above, including the borrows (`2003.assetYear = "2004"`, `2008.assetYear = "2004"`). Absent years get no chrome object. `ui/year/years.js` still paints from its own fields. A node or Python check fails if card chrome and `years.js` disagree. Files: `js/year-card.json`, `js/year-card.js`, a small check in `scripts/`. Depends on nothing.
 
 2. **Make the painter read the card.** `shell.js` overlays `chrome` from the card onto the year spec before building the toolbar. Output must match PR 1's parity check, so this PR is a no-visual-change refactor. Files: `ui/year/shell.js`, `ui/year/years.js`. Depends on PR 1.
 
@@ -211,3 +211,4 @@ Decided 2026-10-01. The PRs above use these. Do not reopen them in an implement 
 - `react/src/App.jsx`, `react/src/years.js` (React shell for omitted hashes)
 - `docs/ARCHITECTURE.md`, `docs/ITT-CSS-LAYERS.md`, `docs/DISK-TRUTH.md`
 - `docs/UI-FIX-MAP.md` is a 2026-09-29 finding list. Phone directory and coach sentences in that file do not match this tree.
+

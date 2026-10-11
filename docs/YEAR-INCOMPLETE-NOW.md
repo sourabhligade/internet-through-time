@@ -26,7 +26,7 @@ Do not dest-farm. Do not restore 2017–2019 or 2023–2025 until named. Do not 
 
 Warehouse complete paths now match dest-true (reqs + need, `Saved.`, envelope) for 2005 YouTube, 2012 IG Android / IPO / SOPA / Facebook 1B, 2014 WhatsApp, plus related gold / trail / signature specs.
 
-Named packs added (off dest-true 12): 2005 mvp+flows+densify+trail; 2008 / 2009 / 2011 / 2020 / 2021 flows+densify+trail; 2022 densify+trail. 2015 packs were deleted with the door. Helper `e2e/year-pack-io.js`.
+2015 packs were deleted with the door. Helper `e2e/year-pack-io.js`.
 
 2006 YouTube Watch extras skip `saveJSON` when the dest already has matching `data-official-key` + `[data-official-verb]`.
 
@@ -53,7 +53,6 @@ Named packs added (off dest-true 12): 2005 mvp+flows+densify+trail; 2008 / 2009 
 | 2008 | HTML lean | 10 | one-thing + 2008-mvp | mvp flows densify trail | Pack B rooms on disk (verify only) · Pack C wait |
 | 2009 | HTML lean | 10 | one-thing + 2009-mvp | mvp flows densify trail + 5x-live | — |
 | 2010 | HTML lean | 10 | one-thing + official-10 | mvp flows densify trail | start/map census [`2010-START-FLOW.md`](2010-START-FLOW.md) · leftover trail 0 · leftover-2× 12 · leftover-3× unique dest-links 3 (formspring · groupon · reddit) · leftover-3× unique dest-true 0 · leftover-4× 3 · dest folders 29 · start iPad is lobby · map 5× keys vs dest `itt10-fb-og` / `itt10-yt` |
-| 2011 | HTML lean | 10 | one-thing + 2011-mvp | mvp flows densify trail | leftover-2× catalog 0 · leftover-3× unique dest-links 3 (icloud · pinterest · linkedin) · leftover-3× unique dest-true 0 · leftover-4× unique 0 · dest folders 37 · image-readme line |
 | 2012 | HTML lean | 10 | one-thing + official-10 | mvp flows densify trail | — |
 | 2013 | HTML lean | **9** | one-thing + official-10 | mvp flows densify trail | trail n=9 |
 | 2014 | HTML lean | **9** | one-thing + official-10 | mvp flows densify trail | trail n=9 |
@@ -93,6 +92,6 @@ Working-flow phases 1–6 are marked done through 2022–2025, including the 201
 | Dest doubling | Waits on the word `2x`. |
 | Famous-double step 2 | Wait until named. |
 | 2001 no 5x-live | Thin extra, not a missing door. |
-| 2011 image-readme | Do not invent period logos. |
 
 Push waits on the word **push**.
+

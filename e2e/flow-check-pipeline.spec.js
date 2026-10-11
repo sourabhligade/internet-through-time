@@ -56,8 +56,8 @@ async function getKey(page, key) {
 }
 
 test.describe("FLOW-CHECK pipeline · every playable year", () => {
- test("1 hub 24 cards · 2009 live · 2011 live · 2015 omitted · 2020–2022 live", async ({ page }) => {
- expect(SHIP).toHaveLength(24);
+ test("1 hub 23 cards · 2009 live · 2015 omitted · 2020–2022 live", async ({ page }) => {
+ expect(SHIP).toHaveLength(23);
     await page.goto("/");
  await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
     for (const y of SHIP) {
@@ -69,7 +69,7 @@ test.describe("FLOW-CHECK pipeline · every playable year", () => {
     await expect(page.locator("a.year-card.available[href*='years/2023']")).toHaveCount(0);
   });
 
-  test("5 leftover-3× unique dest-true dests dest-disjoint official 10 · stops", () => {
+  test("leftover-3× unique dest-true stops are 0 and dest-disjoint official 10", () => {
     const byYear = {};
     for (const row of UNIQUE) {
       byYear[row.year] = byYear[row.year] || [];

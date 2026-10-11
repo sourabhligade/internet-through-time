@@ -99,7 +99,6 @@ Viewport **390×844**. One pass per chrome group. Fail: a shared phone skin that
 | Win98 / IE | http://127.0.0.1:8080/years/1998/ |
 | XP | http://127.0.0.1:8080/years/2004/ and http://127.0.0.1:8080/years/2008/ |
 | Like | http://127.0.0.1:8080/years/2009/ |
-| Light / G+ | http://127.0.0.1:8080/years/2011/ |
 | Vine | http://127.0.0.1:8080/years/2013/ |
 | Flat | http://127.0.0.1:8080/years/2014/ |
 | Omitted 2015 | http://127.0.0.1:8080/app/index.html#/year/2015 — not a door |
@@ -138,3 +137,4 @@ Then `npm run check`. Do not add these files to the dest-true 12.
 ## Wait-to-name (not these phases)
 
 Pack B/C, `2x`, famous-double step 2, trail n under 10, restore absent years, leftover-3×, invent logos, unfreeze 1994–2006, **push**.
+

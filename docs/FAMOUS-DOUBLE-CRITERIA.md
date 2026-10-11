@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-04
 **Status:** Criteria only. Not an implement pass. No new folders from this file.
-**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json`. Hub is **24 doors** (1994–2014 and 2020–2022). **2015 is omitted.** **2017, 2018, 2019, and 2023–2025 are absent.**
+**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json`. Hub is **23 doors** (1994–2010, 2012–2014, and 2020–2022). **2015 is omitted.** **2017, 2018, 2019, and 2023–2025 are absent.**
 **Older map:** [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) (2026-09-20). Its counts and its “2009 boarded / 2020–2022 absent” lines are stale. This file is the live class map. Candidate rows in the older file stay research until a cite and a named implement.
 **I/O:** [`LEAN-IO-CRITERIA.md`](LEAN-IO-CRITERIA.md) · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).
 **Bibliography:** [`SOURCES.md`](SOURCES.md). A 403 is not a cite. Web Design Museum galleries returned 403 on 2026-10-04.
@@ -58,7 +58,6 @@ Counts are first-level folders under `years/YYYY/sites/`, with `playable` exclud
 | Class | Years | Sites now | Games | This pass |
 |-------|-------|----------:|------:|-----------|
 | Forest | 1994–2006 | 150–805 | about 20 | **Stop.** Do not add dests. |
-| Thin, double | 2007, 2010, 2011, 2012, 2014, 2020, 2021, 2022 | see §4 | see §4 | Leftover dests up to the aim. Cap, not a quota. |
 | Holes only | 2008 (112), 2009 (77), 2013 (51) | already past a thin door | 3 / 1 / 1 | A dest only when a cited famous room is missing. No doubling. |
 | Omitted | 2015 | 0 | 0 | **Stop.** No tree, no hub card. Do not dest-farm. |
 | Absent | 2017, 2018, 2019, 2023, 2024, 2025 | 0 | 0 | **Stop.** No tree, no hub card, no React door. |
@@ -79,7 +78,6 @@ On 2026-10-05 the named double added ten leftover rooms: `marketplace`, `note7`,
 |------|----------|----------:|-----:|-----------------:|--------------|
 | 2007 | `itt07-iphone` | 32 | 64 | 32 | `itt07-game-safariq` |
 | 2010 | `itt10-ig-posts` | 28 | 56 | 28 | `itt10-game-slingnest` |
-| 2011 | `itt11-gplus` | 36 | 72 | 36 | `itt11-game-letterswap` |
 | 2012 | `itt12-ig-android` | 31 | 62 | 31 | `itt12-game-guessdoodle` |
 | 2014 | `itt14-wa-install` | 24 | 48 | 24 | `itt14-game-tilefold` |
 | 2020 | `itt20-zoom` | 21 | 42 | 21 | `itt20-game-leave` |
@@ -101,10 +99,6 @@ A new dest fails F1 if its folder name is already here. `playable` is the cabine
 ### 2010 (29)
 
 `android` · `angry` · `chrome` · `chromewebstore` · `cityville` · `facebook` · `farmville` · `flipboard` · `formspring` · `foursquare` · `google` · `googlebuzz` · `groupon` · `hulu` · `ibooks` · `imgur` · `instagram` · `ipad` · `iphone` · `kinect` · `minecraft` · `netflix` · `path` · `playable` · `reddit` · `tumblr` · `twitter` · `wave` · `youtube`
-
-### 2011 (37)
-
-`airbnb` · `chromebook` · `codecademy` · `facebook` · `gmusic` · `googleplus` · `googlewallet` · `grouponipo` · `honeycomb` · `icloud` · `ics` · `imessage` · `instagram` · `ios5` · `ipad` · `iphone` · `kindlefire` · `line` · `linkedin` · `minecraft` · `nintendo3ds` · `nytpaywall` · `pandora` · `pinterest` · `playable` · `psnhack` · `qwikster` · `skypebuy` · `skyrim` · `snapchat` · `spotify` · `stripe` · `temple` · `twitch` · `twitter` · `wechat` · `zyngaipo`
 
 ### 2012 (32)
 
@@ -150,7 +144,6 @@ From `js/config/flow-trails.js` on 2026-10-04. A new leftover whose folder or `w
 | 2008 | `appstore` `itt08-apps` App Store · `chrome` `itt08-chrome` · `android` `itt08-android` · `hulu` `itt08-hulu` · `github` `itt08-github` · `facebook` `itt08-facebook` · `twitter` `itt08-tweets` · `youtube` `itt08-yt` · `dropbox` `itt08-dropbox` · `iphone` `itt08-iphone3g` |
 | 2009 | `facebook` `itt09-like` Like · `farmville` `itt09-farm` · `bing` `itt09-bing` · `iphone` `itt09-iphone` · `appstore` `itt09-apps` · `twitter` `itt09-tweets` · `foursquare` `itt09-4sq` · `kickstarter` `itt09-kickstarter` · `windows7` `itt09-win7` · `playable` `itt09-game-plot` |
 | 2010 | `instagram` `itt10-ig-posts` · `iphone` `itt10-iphone4` · `ipad` `itt10-ipad` · `facebook` `itt10-fb-og` · `farmville` `itt10-farm` · `imgur` `itt10-imgur` · `foursquare` `itt10-4sq` · `twitter` `itt10-tweets` · `youtube` `itt10-yt` · `playable` `itt10-game-slingnest` |
-| 2011 | `googleplus` `itt11-gplus` · `spotify` `itt11-spotify` · `iphone` `itt11-siri` · `facebook` `itt11-timeline` · `ipad` `itt11-ipad2` · `airbnb` `itt11-airbnb` · `instagram` `itt11-ig` · `twitter` `itt11-tweets` · `qwikster` `itt11-qwikster` · `playable` `itt11-game-letterswap` |
 | 2012 | `instagram` `itt12-ig-android` · `pinterest` `itt12-pin` · `facebook` `itt12-fb-ipo` · `iphone` `itt12-maps` · `wikipedia` `itt12-sopa` · `medium` `itt12-pop-medium` · `path` `itt12-pop-path` · `flipboard` `itt12-pop-flipboard` · `playable` `itt12-game-guessdoodle` · `facebook` `itt12-facebook` |
 | 2013 | `vine` `itt13-vine-posts` · `instagram` `itt13-ig-posts` · `snapchat` `itt13-snap-story` · `iphone` `itt13-ios7` · `snowden` `itt13-snowden-ack` · `telegram` `itt13-telegram-chat` · `tumblr` `itt13-tumblr-yahoo` · `windows81` `itt13-win81` · `playable` `itt13-game-loopsix` |
 | 2014 | `whatsapp` `itt14-wa-install` · `heartbleed` `itt14-heartbleed` · `icebucket` `itt14-icebucket` · `iphone` `itt14-iphone6` · `applepay` `itt14-applepay` · `material` `itt14-material` · `slack` `itt14-slack` · `twitch` `itt14-twitch` · `playable` `itt14-game-tilefold` |
@@ -160,7 +153,7 @@ From `js/config/flow-trails.js` on 2026-10-04. A new leftover whose folder or `w
 
 New leftover slug ∩ (this table ∪ §5) = empty, inside that year.
 
-Dropped clones, not new dests: Siri or iPhone 4S where official `iphone` is already Siri (2011). Timeline where official `facebook` is Timeline (2011). A second Facebook folder where `facebook` is already IPO and 1B (2012). App Store, Chrome, Android G1, or iPhone 3G as a 2007 dest. Vine as a 2012 dest. Watch, Windows 10, or Periscope as a 2014 dest. ChatGPT as a 2021 dest. GPT-4, Threads, or the X wordmark as a 2022 dest.
+A second Facebook folder where `facebook` is already IPO and 1B (2012). App Store, Chrome, Android G1, or iPhone 3G as a 2007 dest. Vine as a 2012 dest. Watch, Windows 10, or Periscope as a 2014 dest. ChatGPT as a 2021 dest. GPT-4, Threads, or the X wordmark as a 2022 dest.
 
 ---
 
@@ -172,7 +165,6 @@ Dropped clones, not new dests: Siri or iPhone 4S where official `iphone` is alre
 | 2008 | `itt08-apps` | App Store |
 | 2009 | `itt09-like` | Facebook Like |
 | 2010 | `itt10-ig-posts` | Instagram iOS |
-| 2011 | `itt11-gplus` | Google+ |
 | 2012 | `itt12-ig-android` | Instagram Android |
 | 2013 | `itt13-vine-posts` | Vine 6s |
 | 2014 | `itt14-wa-install` | WhatsApp Install |
@@ -275,11 +267,10 @@ Step 1 returned four rows on 2026-10-04. Each slug is free on disk. Each cite op
 | Year | Slug | Verb | Trap | Cite | Class |
 |------|------|------|------|------|-------|
 | 2007 | `opensocial` | Add the app | One site only | [Google press, 1 Nov 2007](http://googlepress.blogspot.com/2007/11/google-launches-opensocial-to-spread_01.html) | Double. 32 → 33, aim 64 |
-| 2008 | `spotify` | Play | US launch (that is 2011) | [Spotify News, 7 Oct 2008](https://web.archive.org/web/20171211213512/https://news.spotify.com/us/2008/10/07/weve-only-just-begun/) | Hole only |
 | 2013 | `houseofcards` | Watch episode 1 | The whole season as a guest | [Netflix release, 1 Feb 2013](https://www.prnewswire.com/news-releases/netflix-makes-first-episode-of-house-of-cards-available-to-non-members-for-one-month-beginning-february-1-2013-189359941.html) | Hole only |
 | 2021 | `dalle` | Describe | ChatGPT, or a blank prompt | [OpenAI, 5 Jan 2021](https://openai.com/index/dall-e/) | Double. Not the 2022 `dalle2` folder. 17 → 18, aim 34 |
 
-Left short, no cite that opened: 2010, 2011, 2012, 2014, 2020, 2022. Hulu’s 29 Oct 2007 private beta was not kept, because the company release did not open. Docker’s 15 Mar 2013 demo was not the 2013 hole. Siri was dropped: `itt11-siri` is already official stop 3. No new year toy. The Cybercultural essays for 2013, 2014, and 2020 did not return a page. Twelve candidate claims were excluded before they could be checked. The run did not write a prose synthesis.
+Hulu’s 29 Oct 2007 private beta was not kept, because the company release did not open. Docker’s 15 Mar 2013 demo was not the 2013 hole. No new year toy. The Cybercultural essays for 2013, 2014, and 2020 did not return a page. Twelve candidate claims were excluded before they could be checked. The run did not write a prose synthesis.
 
 ---
 
@@ -291,7 +282,6 @@ Fill this when a cited list exists. Added starts at 0.
 |------|----------:|----:|------:|-----------:|:--------------|
 | 2007 | 32 | 64 | 0 | 1 | yes |
 | 2010 | 28 | 56 | 0 | 0 | yes |
-| 2011 | 36 | 72 | 0 | 0 | yes |
 | 2012 | 31 | 62 | 0 | 0 | yes |
 | 2014 | 24 | 48 | 0 | 0 | yes |
 | 2020 | 21 | 42 | 0 | 0 | yes |
@@ -312,3 +302,4 @@ Fill this when a cited list exists. Added starts at 0.
 | [`SOURCES.md`](SOURCES.md) | Bibliography |
 | `js/config/flow-trails.js` | Official stops |
 | `js/year-card.json` | Kind and star |
+

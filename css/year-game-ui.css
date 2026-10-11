@@ -252,19 +252,6 @@ html[data-itt-year="2010"] [data-year-game] {
   --yg-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-body.yg-year-2011,
-html[data-itt-year="2011"] body {
-  background: #f0f0f5 !important;
-}
-body.yg-year-2011 .yg-shell,
-html[data-itt-year="2011"] [data-year-game] {
-  --yg-accent: #5856d6;
-  --yg-panel: #fff;
-  --yg-btn: #5856d6;
-  --yg-radius: 8px;
-  --yg-font: "Segoe UI", Arial, sans-serif;
-  --yg-shadow: 0 2px 10px rgba(88, 86, 214, 0.15);
-}
 
 body.yg-year-2012,
 html[data-itt-year="2012"] body {

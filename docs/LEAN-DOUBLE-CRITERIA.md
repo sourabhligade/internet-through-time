@@ -1,6 +1,6 @@
 # Lean-door leftover double — criteria only
 
-**2017–2019 and 2023–2025 are absent.** Lists for absent years in this file are research. Do not restore `years/` for an absent year. Live doors are 1994–2014 and 2020–2022. **2015 is omitted.** 2020–2022 are live HTML. Ship law is [`DISK-TRUTH.md`](DISK-TRUTH.md).
+**2017–2019 and 2023–2025 are absent.** Lists for absent years in this file are research. Do not restore `years/` for an absent year. Live doors are 1994–2010, 2012–2014, and 2020–2022. **2015 is omitted.** 2020–2022 are live HTML. Ship law is [`DISK-TRUTH.md`](DISK-TRUTH.md).
 
 **Date:** 2026-09-20  
 **Status:** Implemented 2026-09-20 (Step 2 named). Not dest-farm. Not leftover-3× unique growth. Leftover dests on thin lean doors only. Cap is not a quota.  
@@ -81,7 +81,6 @@ Official 10 stays 10. Leftover-3× unique dest-true dests stay at the stop alrea
 |------|------|-----|----------:|-------------------:|----------:|-------------------------:|-----------|
 | **2007** | iPhone Safari | `itt07-iphone` | 23 | 9 | **46** | **23** | Double |
 | **2010** | Instagram iOS | `itt10-ig-posts` | 22 | 9 | **44** | **22** | Double |
-|  | Google+ | `itt11-gplus` | 31 | 9 | **62** | **31** | Double |
 | **2012** | IG Android | `itt12-ig-android` | 24 | 9 + leftover-4× unique 3 | **48** | **24** | Double |
 | **2013** | Vine 6s | `itt13-vine-posts` | 54 | 9 | **54** | **0** unless a cited hole | Holes only |
 | **2014** | WhatsApp Install | `itt14-wa-install` | 18 | 9 | **36** | **18** | Double |
@@ -108,12 +107,6 @@ Star trap: App Store · Chrome · Android G1 · iPhone 3G · Street View as the 
 `amazon` · `android` · `chrome` · `facebook` · `farmville` · `formspring` · `foursquare` · `google` · `groupon` · `imgur` · `instagram` · `ipad` · `iphone` · `kickstarter` · `netflix` · `playable` · `reddit` · `tumblr` · `twitter` · `wave` · `yahoo` · `youtube`
 
 Star trap: Instagram Android · Stories · Reels · iPad 2 · Siri · Timeline · Google+ · Snapchat · Spotify US · UberX mass. Do not restore dest-lock dests (`groupondeal` · `quorawait` · `instant` · `pinterest` · `uber` · `quora` · `digg` · `wikileaks` · `browserchoice` · `ask` · `facetime` · `windowsphone` · `dropbox`).
-
-### 2011 (31)
-
-`airbnb` · `chrome` · `dropbox` · `evernote` · `facebook` · `foursquare` · `gmusic` · `google` · `googleplus` · `huffpost` · `hulu` · `icloud` · `imgur` · `instagram` · `ipad` · `iphone` · `kickstarter` · `kindlefire` · `linkedin` · `minecraft` · `pandora` · `pinterest` · `playable` · `quora` · `qwikster` · `spotify` · `twitch` · `twitter` · `vimeo` · `yahoo` · `youtube`
-
-Star trap: Instagram Android · Stories · Reels · Vine · iPhone 5 · Windows 8 · Snapchat Stories.
 
 ### 2012 (24)
 
@@ -261,9 +254,9 @@ CNIL-shaped leftover dest. One writer. Cream panel. Not leftover-3× unique.
 | Official 10 | Same dest folders · same whenKeys |
 | Guided Starting Point | exactly 6 `<li>` |
 | Star | Only the year chip writes gold |
-| Leftover-3× unique | =3 · 2021=5 · other double years stay at shipped stop |
+| Leftover-3× unique dest-true | catalogs **empty** · dest-links live **2010 n=3** only · 2021 cap memory 5 is unused |
 | Unique leftover-20 | not a live rail · 2017 is absent |
-| leftover-4× unique | 2012 chrome / twitter / soundcloud only |
+| leftover-4× unique | 2007 digg/flickr/reddit · 2010 netflix/tumblr/wave · 2012 chrome/twitter/soundcloud · 2013 askfm/whisper/facebook |
 | Empty / trap | never write leftover or star |
 | Mock | `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` = 0 on new dests |
 | Forests / 2015 / 2017 / 2019 | not doubled |
@@ -337,44 +330,6 @@ Instagram iOS stays the chip. Do not restore dest-lock dests. Flipboard / Minecr
 | `wikipedia` | Edit leftover | Instagram Android | https://en.wikipedia.org/wiki/Wikipedia |
 | `ebay` | Bid leftover | Instagram Android | https://en.wikipedia.org/wiki/EBay |
 | `paypal` | Send leftover | Instagram Android | https://en.wikipedia.org/wiki/PayPal |
-
-### 2011
-
-Google+ stays the chip. Snapchat is year-true here (2012 dest is a different year). No Siri clone.
-
-| Slug | Verb | Trap | Cite |
-|------|------|------|------|
-| `snapchat` | Snap leftover | Instagram Android | https://en.wikipedia.org/wiki/Snapchat |
-| `ios5` | Notify leftover | Instagram Android | https://en.wikipedia.org/wiki/IOS_5 |
-| `imessage` | Blue leftover | Instagram Android | https://en.wikipedia.org/wiki/IMessage |
-| `chromebook` | Sign in leftover | Instagram Android | https://en.wikipedia.org/wiki/Chromebook |
-| `honeycomb` | Tablet leftover | Instagram Android | https://en.wikipedia.org/wiki/Android_Honeycomb |
-| `ics` | Beam leftover | Instagram Android | https://en.wikipedia.org/wiki/Android_Ice_Cream_Sandwich |
-| `wechat` | Chat leftover | Instagram Android | https://en.wikipedia.org/wiki/WeChat |
-| `line` | Sticker leftover | Instagram Android | https://en.wikipedia.org/wiki/Line_(software) |
-| `temple` | Run leftover | Instagram Android | https://en.wikipedia.org/wiki/Temple_Run |
-| `skyrim` | Adventure leftover | Instagram Android | https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim |
-| `nytpaywall` | Subscribe leftover | Instagram Android | https://en.wikipedia.org/wiki/The_New_York_Times |
-| `skypebuy` | Acquire leftover | Instagram Android | https://en.wikipedia.org/wiki/Skype |
-| `grouponipo` | File leftover | Instagram Android | https://en.wikipedia.org/wiki/Groupon |
-| `zyngaipo` | File leftover | Instagram Android | https://en.wikipedia.org/wiki/Zynga |
-| `googlewallet` | Tap leftover | Instagram Android | https://en.wikipedia.org/wiki/Google_Wallet |
-| `stripe` | Charge leftover | Instagram Android | https://en.wikipedia.org/wiki/Stripe,_Inc. |
-| `duolingo` | Lesson leftover | Instagram Android | https://en.wikipedia.org/wiki/Duolingo |
-| `codecademy` | Lesson leftover | Instagram Android | https://en.wikipedia.org/wiki/Codecademy |
-| `baidu` | Search leftover | Instagram Android | https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/ |
-| `yandex` | Search leftover | Instagram Android | https://hosting.com/blog/the-most-visited-websites-every-year-since-1995/ |
-| `wikipedia` | Edit leftover | Instagram Android | https://en.wikipedia.org/wiki/Wikipedia |
-| `amazon` | Browse leftover | Instagram Android | https://en.wikipedia.org/wiki/Amazon_(company) |
-| `reddit` | Upvote leftover | Instagram Android | https://en.wikipedia.org/wiki/Reddit |
-| `tumblr` | Reblog leftover | Instagram Android | https://en.wikipedia.org/wiki/Tumblr |
-| `netflix` | Play leftover | Instagram Android | https://en.wikipedia.org/wiki/Netflix |
-| `github` | Push leftover | Instagram Android | https://en.wikipedia.org/wiki/GitHub |
-| `whatsapp` | Chat leftover | Instagram Android | https://en.wikipedia.org/wiki/WhatsApp |
-| `path` | Moment leftover | Instagram Android | https://en.wikipedia.org/wiki/Path_(social_network) |
-| `nintendo3ds` | StreetPass leftover | Instagram Android | https://en.wikipedia.org/wiki/Nintendo_3DS |
-| `psnhack` | Reset leftover | Instagram Android | https://en.wikipedia.org/wiki/_PlayStation_Network_outage |
-| `gowalla` | Check in leftover | Instagram Android | https://en.wikipedia.org/wiki/Gowalla |
 
 ### 2012
 
@@ -518,7 +473,6 @@ Holes only. Dest folders stay **54**. No dest this pass.
 |------|--------|-----|
 | 2007 | App Store · Chrome · Android G1 · iPhone 3G · Hulu public | Neighbor gold |
 | 2010 | `pinterest` · `uber` · `quora` · `digg` · `dropbox` · `facetime` · `windowsphone` · `wikileaks` · `instant` | Dest-lock skip restore |
-| 2011 | `siri` · `iphone4s` · `facebooktimeline` · `linkedinipo` | Clone of official / leftover-3× unique dests already on disk |
 | 2012 | Vine · Snap Stories · `facebookipo` | Vine is 2013 star · facebook dest is already 1bn |
 | 2013 | Any dest | Holes only · no cited hole this pass |
 | 2014 | Watch as dest · Heartbleed exploit | Trap |
@@ -535,7 +489,6 @@ Holes only. Dest folders stay **54**. No dest this pass.
 |------|----:|----:|----:|-------------------:|-------------------:|------------:|
 | 2007 | 23 | **46** | 46 | 23 | 9 stop | 10 |
 | 2010 | 22 | **44** | 44 | 22 | 9 stop | 10 |
-| 2011 | 31 | **62** | 62 | 31 | 9 stop | 10 |
 | 2012 | 24 | **48** | 48 | 24 | 9 stop | 10 |
 | 2013 | 54 | **54** | 54 | 0 | 9 stop | 10 |
 | 2014 | 18 | **36** | 36 | 18 | 9 stop | 10 |
@@ -544,4 +497,5 @@ Holes only. Dest folders stay **54**. No dest this pass.
 | 2022 | 19 | **38** | 38 | 19 | 9 stop | 10 |
 
 2020 is **39** because Clubhouse is a cited hole (cap was 38). leftover-2× unique catalog for 2020 stays **n = 0**. Do not dest-farm. 2013 stays 54. Official 10 and leftover-3× unique stops did not grow.
+
 

@@ -359,62 +359,6 @@ KEEP 21 · DROP 14 · DO-NOT-APPLY 7 · MISS 0
 | `paypal` | leftover dest | **DROP** |
 KEEP 19 · DROP 16 · DO-NOT-APPLY 6 · MISS 0
 
-## 2011 · star `googleplus`
-
-| Slug | Class | Verdict |
-|------|-------|---------|
-| `googleplus` | official 10 | **KEEP** |
-| `spotify` | official 10 | **KEEP** |
-| `iphone` | official 10 | **KEEP** |
-| `facebook` | official 10 | **KEEP** |
-| `ipad` | official 10 | **KEEP** |
-| `airbnb` | official 10 | **DROP** |
-| `instagram` | official 10 | **DROP** |
-| `twitter` | official 10 | **DROP** |
-| `qwikster` | official 10 | **KEEP** |
-| `playable` | official 10 | **DO-NOT-APPLY** |
-| `icloud` | leftover-3× unique | **KEEP** |
-| `pinterest` | leftover-3× unique | **KEEP** |
-| `linkedin` | leftover-3× unique | **KEEP** |
-| `kindlefire` | leftover-3× unique | **KEEP** |
-| `minecraft` | leftover-3× unique | **KEEP** |
-| `twitch` | leftover-3× unique | **KEEP** |
-| `youtube` | leftover-3× unique | **DO-NOT-APPLY** |
-| `dropbox` | leftover-3× unique | **DO-NOT-APPLY** |
-| `hulu` | leftover-3× unique | **DO-NOT-APPLY** |
-| `snapchat` | leftover dest | **KEEP** |
-| `ios5` | leftover dest | **KEEP** |
-| `imessage` | leftover dest | **KEEP** |
-| `chromebook` | leftover dest | **KEEP** |
-| `honeycomb` | leftover dest | **KEEP** |
-| `ics` | leftover dest | **KEEP** |
-| `wechat` | leftover dest | **KEEP** |
-| `line` | leftover dest | **KEEP** |
-| `temple` | leftover dest | **KEEP** |
-| `skyrim` | leftover dest | **KEEP** |
-| `nytpaywall` | leftover dest | **KEEP** |
-| `skypebuy` | leftover dest | **KEEP** |
-| `grouponipo` | leftover dest | **KEEP** |
-| `zyngaipo` | leftover dest | **KEEP** |
-| `googlewallet` | leftover dest | **KEEP** |
-| `stripe` | leftover dest | **KEEP** |
-| `duolingo` | leftover dest | **DROP** |
-| `codecademy` | leftover dest | **KEEP** |
-| `baidu` | leftover dest | **DROP** |
-| `yandex` | leftover dest | **DROP** |
-| `wikipedia` | leftover dest | **DROP** |
-| `amazon` | leftover dest | **DROP** |
-| `reddit` | leftover dest | **DROP** |
-| `tumblr` | leftover dest | **DROP** |
-| `netflix` | leftover dest | **DROP** |
-| `github` | leftover dest | **DROP** |
-| `whatsapp` | leftover dest | **DROP** |
-| `path` | leftover dest | **DROP** |
-| `nintendo3ds` | leftover dest | **KEEP** |
-| `psnhack` | leftover dest | **KEEP** |
-| `gowalla` | leftover dest | **KEEP** |
-KEEP 32 · DROP 14 · DO-NOT-APPLY 4 · MISS 0
-
 ## 2012 · star `instagram`
 
 | Slug | Class | Verdict |
@@ -778,7 +722,6 @@ KEEP 13 · DROP 15 · DO-NOT-APPLY 10 · MISS 0
 | 1994 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2007 | `ie6` | XP/IE6 residual official dest · not leftover dest |
 | 2010 | `playable` | year-game dest · official n=10 · not leftover dest |
-| 2011 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2012 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2013 | `playable` | year-game dest · official n=10 · not leftover dest |
 | 2014 | `playable` | year-game dest · official n=10 · not leftover dest |
@@ -819,4 +762,5 @@ KEEP 13 · DROP 15 · DO-NOT-APPLY 10 · MISS 0
 Named dest-true flows: KEEP 405 · DROP 191 · DO-NOT-APPLY 103 · MISS **0**. Research continue `year-false-keep-drop` scored every remaining MISS row. Cites live in the workflow scratch report.
 
 Leftover dest DROPs still on disk were deleted 2026-09-20 (13 dest folders: 2007 feedburner/lastfm/clubpenguin · 2010 ios4/nexusone/froyo · duolingo/path · 2012 applemaps · 2014 androidl · 2021 m1/clubhouse21 · 2022 musk). Earlier leftover dest DROPs were already gone. Official 10, leftover-3× unique dests (catalogs empty), playable year-games, leftover-4× unique chrome/twitter/soundcloud stay. leftover-20 is unshipped (2017 absent). Do not dest-farm 2015/2017 dest folders. Do not dest-farm leftover-20. Do not invent official 11th dests. Do not strip leftover-3× unique dests from the =3 / 2021=5 stops because they launched earlier.
+
 

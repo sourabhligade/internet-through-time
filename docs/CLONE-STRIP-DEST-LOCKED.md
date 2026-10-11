@@ -195,6 +195,7 @@ After A2 the leftover-3× dest first paint is the cream leftover-3× face only. 
 official 10 trail href leftover-2× panels = 0
 leftover-3× unique 9 dests still have data-itt-lo3x dest-true
 e2e leftover-3x-unique 9 rows still pass
+Live law after this pass: leftover-3× unique dest-true catalogs are empty. Those 9 rows are not the live catalog. Dest-links are 2010 n=3.
 one-thing Zoom empty/complete still pass
 ```
 

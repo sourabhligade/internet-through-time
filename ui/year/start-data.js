@@ -197,19 +197,7 @@
  " <a href=\"map.html\" style=\"color:#9fd4f0\">Year flow map</a> "
  ]
 },
- "2011": {
- "href": "../sites/googleplus/index.html",
- "label": "★ One-thing · Google+ Circle",
- "items": [
- " <a href=\"about.html\" style=\"color:#9fd4f0\">About 2011</a> — Win7 · IE 8",
- " <a href=\"../sites/googleplus/index.html\" style=\"color:#9fd4f0\">Google+</a> — Circle",
- " <a href=\"../sites/spotify/index.html\" style=\"color:#9fd4f0\">Spotify US</a> — listen",
- " <a href=\"../sites/iphone/index.html\" style=\"color:#9fd4f0\">Siri</a> — ask",
- " <a href=\"../sites/facebook/index.html\" style=\"color:#9fd4f0\">Timeline</a> — cover",
- " <a href=\"map.html\" style=\"color:#9fd4f0\">Year flow map</a> "
- ]
-},
- "2012": {
+  "2012": {
  "href": "../sites/instagram/android.html",
  "label": "★ One-thing · Instagram Android REAL",
  "items": [

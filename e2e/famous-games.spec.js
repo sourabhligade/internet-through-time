@@ -22,8 +22,7 @@ const ENGINES = {
   2006: ["tetris", "snake"],
   2008: ["snake", "breakout"],
   2010: ["snake", "breakout"],
-  2011: ["snake", "breakout"],
-  2012: ["tetris", "snake"],
+    2012: ["tetris", "snake"],
   2014: ["mines", "snake"],
 };
 

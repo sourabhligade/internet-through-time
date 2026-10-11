@@ -1,5 +1,5 @@
 @import url("itt-leftover-fold.css");
-/* H3 capture cite (also inherited by later period sheets that import this via 1996+) */
+/* H3 capture cite. 1996 copies this rule. Later years do not @import this file. */
 .archive-residual[data-itt-capture-cite] {
   margin: 14px auto;
   max-width: 36em;
@@ -11,7 +11,7 @@
 }
 
 /* 1995 document defaults — tables for layout, commercial web.
-   Scoped: later years @import this file for leftover-fold / nav helpers. */
+   1996–2009 do not @import this file. Their shell helpers live in period-1996.css. */
 html[data-itt-year="1995"] { background: #ffffff; min-height: 0; height: auto; color-scheme: only light; }
 html[data-itt-year="1995"] body {
   font-family: "Times New Roman", Times, serif;
@@ -267,7 +267,8 @@ blink { animation: blink 1s step-end infinite; }
 }
 
 /* Dest chrome (wayfind, exhibit-foot clearance) lives in css/itt-dest-page.css.
- * This file is @imported by 1996–2014. Do not put html/body height or
+ * This file is the 1995 sheet only. The shell helpers below are copied in
+ * period-1996.css for 1996–2009. Do not put html/body height or
  * sticky-footer chrome here. */
 
 /* Museum UX helpers (shell content pages) */

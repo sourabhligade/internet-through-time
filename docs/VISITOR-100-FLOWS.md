@@ -1,6 +1,6 @@
 # Visitor 100% — dest-true flows, not dest-farm links
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **24 doors** (1994–2014 and 2020–2022). **2015 is omitted.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **23 doors** (1994–2010, 2012–2014, and 2020–2022). **2015 is omitted.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 
 **Date:** 2026-09-27 
@@ -77,34 +77,34 @@ Do not dest-farm dests. Do not dest-lock 2015 again. Do not dest-lock forests / 
 
 ## 4. Why 2021 looks kaggy
 
-2021 is a dest-lock **lean door** (18 dests), same class as GDPR (24 dests). It is **not** dest-lock-reverted (170 dests). Kaggy is **look + leftover-3× unique dest-true dests stop at 5**, not a missing year tree.
+2021 is a dest-lock **lean door** (18 dests), same class as GDPR (24 dests). It is **not** dest-lock-reverted (170 dests). Kaggy is **look**. Leftover-3× unique dest-true catalogs are **empty**. It is not a missing year tree.
 
 | Fact | Disk | Stale copy |
 |------|------|------------|
 | Dest folders | **18** dest-lock lean | older READ-FIRST **294** is dest-farm — do not restore |
 | Leftover dest leftover-2× warehouse | dest-lock **stripped** official dest leftover-2× **0** | READ-FIRST still says leftover-2× on every dest |
-| Leftover-3× unique dest-true dests | **5 leftover dests** · amazon / google / instagram · twitter / youtube · **third strip 0** | READ-FIRST still says first 3 + third 3 |
+| Leftover-3× unique dest-true dests | **0** · catalogs empty · dest-links **0** · amazon / google / instagram / twitter / youtube are leftover dests, not a unique-3× catalog | older copy said **5** dest-true faces |
 | Period files | `assets/period/2021/README-PIXELS.txt` failed-final · 0 capture files | — |
 | `css/period-2021.css` | **3.2 KB** (imports + ATT phone chrome) | `period-.css` **14.7 KB** |
 | ATT star dest | dest-true I/O · phone frame · failed-final · `data-official-need` | — |
 | 2022 | live lean **25** dests | **2022 live** |
 
- feels complete because GDPR **Manage** is the year in the chrome. 2021 ATT **Ask** is dest-true in a phone frame, but dest-lock stripped leftover dest leftover-2× warehouse, leftover-3× unique dest-true dests stop at 5, and there is no period harvest.
+ feels complete because GDPR **Manage** is the year in the chrome. 2021 ATT **Ask** is dest-true in a phone frame, but dest-lock stripped leftover dest leftover-2× warehouse, leftover-3× unique dest-true catalogs stay empty, and there is no period harvest.
 
-**Do not dest-lock revert 2021 to 294 dests.** That is dest-farm. **Do not dest-farm leftover dest leftover-3× unique dest-true dests to 9.** Criteria: **stop at 5**.
+**Do not dest-lock revert 2021 to 294 dests.** That is dest-farm. **Do not dest-farm a leftover-3× unique dest-true catalog.** Live n is **0**. Cap memory 5 is unused.
 
 ### 2021 dests on disk (18 — do not dest-farm)
 
 Official 10: att · signal · copilot · meta · windows11 · flash · chrome · windows10 · facebook · playable.
 
-Leftover-3× unique dest-true dests: amazon · google · instagram · twitter · youtube.
+Leftover dests (not a unique-3× catalog): amazon · coinbaseipo · epicapple · google · instagram · nft · twitter · youtube.
 
 ### 2021 dest-true look without dest-farm
 
 1. ATT star dest `data-official-need` (Ask + honesty ticks). Empty / Allow never writes `itt21-att`.
 2. Thicken `period-2021.css` from dest-true ATT chrome already on disk (phone frame). Do not invent brand pixels.
 3. Failed-final stays honest until a dated capture exists.
-4. Leftover-3× unique dest-true dests stay **5**. Cream leftover-3× unique dest-true dest face already dest-true.
+4. Leftover-3× unique dest-true catalogs stay **empty**. Do not paint a 5-face dest-true catalog.
 5. Strike stale 294 / leftover-2× on every dest / 2022 wiped in [`2021-READ-FIRST.md`](2021-READ-FIRST.md).
 
 ### 2021 period cites (deep-research 2026-09-20 · Partial)
@@ -121,7 +121,7 @@ Verified. Do not invent dests. Failed-final stays honest until a dated capture e
 | Flash leftover | Adobe support ended Flash content blocked beginning **12 Jan 2021**. Not a 2021 launch. | Adobe EOL (inspected in research) | Dest copy “End of Flash” is leftover, not gold |
 | About honesty | ILS June websites table **ends 2018** at **1,630,322,579**. No 2019–2021 websites cell. Invented June 2021 websites = I11 fail. | [Internet Live Stats](https://www.internetlivestats.com/total-number-of-websites/) | ITU 4.9B / 63% not independently fetched this pass |
 
- feels complete because GDPR Manage is sticky banner I/O (`Accept All` never writes · Manage writes). 2021 official dests 2–10 are max-width literacy plaques; dest-true look is ATT phone frame + leftover dest leftover-3× unique dest-true dests stay 5.
+ feels complete because GDPR Manage is sticky banner I/O (`Accept All` never writes · Manage writes). 2021 official dests 2–10 are max-width literacy plaques; dest-true look is the ATT phone frame. Leftover-3× unique dest-true catalogs stay empty.
 
 ---
 
@@ -132,11 +132,11 @@ Do not dest-farm leftover dest leftover-3× unique dest-true dests past these st
 | Year | Leftover-3× unique dest-true dests | Stop |
 |------|-----------------------------------:|------|
 | Forests 1994–2006 | stacked leftover-3× workshop | Unique leftover-3×n **not the forest job** |
-| 2007 / 2010–2014 | **9** | Shipped. 2015 is omitted · leftover-3× n=0 |
+| 2007 / 2010–2014 | dest-true catalogs **empty** · dest-links **2010 n=3** only | Do not restore a 9-face catalog |
 | 2017 | **0 leftover-3× unique dest-true dests** | Absent · not a door · leftover-20 not shipped |
 | 2018 | **0** | Absent · not a door |
-| 2021 | **5** (first 3 + second 2) | Cannot pass 9 without new dests |
-| 2022 | **9 dests on disk** | e2e matrix **0 rows** — dest-true dests, not dest-farm dests |
+| 2021 | **0** · cap memory 5 is unused | Do not dest-farm a 5-face catalog |
+| 2022 | dest-true catalogs **empty** · dest-links **0** | Temu `ITT-2X-LINKS` is a leftover flow, not unique-catalog n |
 | 2009 | catalog leftover-3× | live HTML · Like `itt09-like` |
 
 ---
@@ -145,7 +145,7 @@ Do not dest-farm leftover dest leftover-3× unique dest-true dests past these st
 
 ### Phase 0 — law / docs (no dest HTML)
 
-- [x] Strike stale 27 / 28 years. Hub **24 doors**. **2015 is omitted.** **2022 live**. **2023–2025 absent**.
+- [x] Strike stale 27 / 28 years. Hub **23 doors**. **2015 is omitted.** **2022 live**. **2023–2025 absent**.
 - [x] Close GitHub **#11–#14** (A clutter-clear already on tree · dest-lock 2015 reverted · not dest-lock tickets).
 - [x] Link this file from [`docs/README.md`](README.md) + [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
@@ -182,7 +182,7 @@ Fold or dest-true leftover dest leftover-2× warehouse. Do not dest-farm leftove
 
 - [x] ATT `data-official-need` (Phase 1). Ask + 2 ticks + Museum App field. Allow never writes.
 - [x] `period-2021.css` dest-true ATT chrome (phone · status 9:41 · home indicator · iOS alert · Fluent white card does not paint the alert).
-- [x] [`2021-READ-FIRST.md`](2021-READ-FIRST.md) dest folders **18** · leftover-3× unique dest-true dests **5** · 2022 live.
+- [x] [`2021-READ-FIRST.md`](2021-READ-FIRST.md) dest folders **18** · leftover-3× unique dest-true catalogs **empty** · dest-links **0** · 2022 live.
 - [x] Failed-final + dest-true cites (ATT Apple Support · Signal is WhatsApp’s 15 May deadline · Copilot 29 Jun 2021 · Meta 28 Oct 2021 · Win11 4 Oct 2021 · Flash EOL 31 Dec blocked 12 Jan 2021). No invented brand pixels.
 
 ### Phase 5 — period harvest 2022 (optional, honest)

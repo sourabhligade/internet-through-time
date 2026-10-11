@@ -3,7 +3,7 @@
 **Date:** 2026-09-30  
 **Status:** Deep research **complete (Partial).** **Not ship law.** Do not dest-farm. Do not `git checkout` the wiped forest. Implement dest HTML only after this note is read and a pack is named.  
 **Workflow:** `/workflows` · `deep-research` (cited cross-check landed).  
-**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json` · `scripts/itt_gate.py` `SHIP_YEARS`. Live hub is **24 doors** (1994–2014 and 2020–2022). **2015 is omitted.** 2008 is a **live HTML lean door** (`kind: html`, star `itt08-apps`).  
+**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json` · `scripts/itt_gate.py` `SHIP_YEARS`. Live hub is **23 doors** (1994–2010, 2012–2014, and 2020–2022). **2015 is omitted.** 2008 is a **live HTML lean door** (`kind: html`, star `itt08-apps`).  
 **Parent corpus (wiped from this branch, still in git / worktree `hi`):** `docs/2008-RESEARCH.md` · `docs/2008-MASTER-BIBLE-GOALS-PHASES-FLOWS-SOURCES.md` · `docs/2008-DOUBLE-5K-RESEARCH-FAMOUS-AMBITIOUS-2026-09-06.md` at `3498b60b1^`. Worktree copies: `/Users/sourabhligade/.grok/worktrees/sourabhligade-internet-through-time/hi/docs/`.
 
 Wipe: `3498b60b1` removed `years/2008/` (**591** dest folders · **857** HTML). That forest is dest-farm. It is the anti-model.
@@ -85,7 +85,6 @@ Cited leftover KEEP this pass:
 | friendfeed | public 25 Feb 2008 (2007 beta is neighbor, not gold) | Follow leftover / `ffeed-dp` | [TechCrunch](https://techcrunch.com/2008/03/14/friendfeed-is-this-years-twitter-but-why/) |
 | bitcoin | 31 Oct 2008 paper | Read leftover / `btc-paper` | [Satoshi](https://satoshi.nakamotoinstitute.org/emails/cryptography/1/) · genesis 3 Jan 2009 is trap |
 | stackoverflow | 15 Sep 2008 public | leftover dest | [Joel](https://www.joelonsoftware.com/2008/09/15/stack-overflow-launches/) |
-| airbnb | Mar 2008 SXSW · Aug 2008 DNC | leftover, not 2011 gold | Airbnb Newsroom |
 | spotify | Europe invite 7 Oct 2008 · UK/DE/FR/IT/ES/FI/NO/SE | leftover KEEP · **not US** | Campaign UK 7 Oct 2008 |
 
 Spine already year-true after official 10 (do not rebuild as clones):  
@@ -115,7 +114,6 @@ Also drop: Amazon SKU farm · Hamster Dance rooms · 5,000 dest folders · lefto
 | iPhone **3GS** as the 2008 phone | 2009 |
 | Chrome as January mass shell | Windows beta 2 Sep |
 | App Store **millions** of apps day one | Launch **~500** |
-| Spotify **US** | 2011 |
 | FarmVille · Bing · Win7-as-January | 2009 |
 | Bitcoin wallet / mine / price / genesis | paper 31 Oct 2008 · chain 2009 |
 | Instagram / Snapchat / TikTok / Reels | later |
@@ -144,4 +142,5 @@ Empty / trap / 0 ticks / IPA / torrent / wallet **never write**. Leftover **neve
 - `docs/2008-DEST-TRUE-UNIQUE-RESEARCH` and `docs/2008-NEW-UNIQUE-WEBSITES` are gone from live tree and `hi`.
 - FIVE-K classifies 2008 as Other years / Stop — no live KEEP build rows.
 - No inspected source counts how many of the 591 folders fall in each DROP class (that would restore the forest).
+
 

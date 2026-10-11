@@ -262,23 +262,6 @@
         "roomClause": "the year lives in iPad / Instagram rooms"
       }
     },
-    "2011": {
-      "kind": "html",
-      "href": "years/2011/",
-      "star": "itt11-gplus",
-      "leanBoot": true,
-      "chrome": {
-        "os": "win7",
-        "browser": "ie8",
-        "toolbar": "ie",
-        "assetYear": null,
-        "location": "http://home.microsoft.com/intl/web2011/",
-        "maximized": true,
-        "hasTaskbar": true,
-        "browserPhrase": "IE 8 desktop residual",
-        "roomClause": "the year lives in Google+ rooms"
-      }
-    },
     "2012": {
       "kind": "html",
       "href": "years/2012/",

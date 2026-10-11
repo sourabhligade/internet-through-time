@@ -91,11 +91,6 @@
 /years/2009/pages/about.html
 /years/2009/pages/map.html
 /years/2009/sites/facebook/index.html
-/years/2011/
-/years/2011/pages/home.html
-/years/2011/pages/about.html
-/years/2011/pages/map.html
-/years/2011/sites/googleplus/index.html
 /years/2014/
 /years/2014/pages/home.html
 /years/2014/pages/about.html

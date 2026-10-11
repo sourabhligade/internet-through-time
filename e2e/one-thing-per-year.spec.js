@@ -301,20 +301,6 @@ const THINGS = [
       await page.locator("[data-official-verb]").click();
     },
   },
-  {
-    year: "2011",
-    path: "/years/2011/sites/googleplus/index.html",
-    key: "itt11-gplus",
-    incomplete: async (page) => {
-      await page.locator("[data-official-trap]").first().click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-official-need]").fill("Friends");
-      await page.locator("[data-official-req]").nth(0).check();
-      await page.locator("[data-official-req]").nth(1).check();
-      await page.locator("[data-official-verb]").click();
-    },
-  },
 
   {
     year: "2020",

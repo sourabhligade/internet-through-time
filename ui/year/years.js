@@ -1078,48 +1078,7 @@
   "hasTaskbar": true,
   "maximized": true
 },
-  "2011": {
-  "title": "Win7 · IE 8 residual — 2011",
-  "css": [
-    "win95-netscape.css",
-    "ie5-overrides.css",
-    "period-2011.css"],
-  "bodyClass": "year-2011 os-win7 browser-ie8",
-  "boot": "browser-2011.js",
-  "dir": [
-    {"go": "pages/home.html", "label": "Start"},
-    {"go": "sites/googleplus/index.html", "label": "Google+"},
-    {"go": "sites/spotify/index.html", "label": "Spotify"},
-    {"go": "sites/iphone/index.html", "label": "Siri"},
-    {"go": "sites/facebook/index.html", "label": "Timeline"},
-    {"go": "sites/ipad/index.html", "label": "iPad 2"},
-    {"go": "sites/airbnb/index.html", "label": "Airbnb"},
-    {"go": "pages/map.html", "label": "Map"}
-  ],
-  "chrome": null,
-  "toolbar": "ie",
-  "family": "ie",
-  "location": "http://home.microsoft.com/intl/web2011/",
-  "prefHome": "http://home.microsoft.com/intl/web2011/",
-  "yearLabel": "2011 · Windows 7 · IE 8 desktop residual · the year lives in Google+ rooms",
-  "windowTitle": "Welcome to the World Wide Web — Microsoft Internet Explorer",
-  "connectH2": "Network Connections",
-  "connectBtn": "Connect (always-on broadband)",
-  "skipBtn": "Skip connect",
-  "thesis": "Initializing network adapter... Connect (always-on broadband) Skip connect 2011 thesis: circles, a US listen, and a voice on the 4S. Google+ · Spotify US · Siri · Timeline. Still a Win7 / IE 8 laptop. IE 9 is March.",
-  "openLoc": "Open Location:",
-  "aboutHtml": "<p><b>Microsoft Internet Explorer</b></p><p>Educational historical Web exhibit.</p>",
-  "startBanner": "Windows<b>7</b>",
-  "taskBtn": "Internet Explorer",
-  "icon": "e",
-  "aria": "Internet Explorer",
-  "locLabel": "Address",
-  "bookmarksTitle": "Favorites",
-  "mailPh": "you@example.com",
-  "hasTaskbar": true,
-  "maximized": true
-},
-  "2012": {
+    "2012": {
   "title": "Internet Explorer 9.0 — 2012",
   "css": [
     "win95-netscape.css",

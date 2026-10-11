@@ -66,6 +66,30 @@ const CHAINS = [
     ],
   },
   {
+    year: "2007",
+    hops: [
+      { path: "/years/2007/sites/maps/index.html", suffix: "maps-dp", next: "../wow/index.html" },
+      { path: "/years/2007/sites/wow/index.html", suffix: "wow-dp", next: "../stumble/index.html" },
+      { path: "/years/2007/sites/stumble/index.html", suffix: "pop-stumble" },
+    ],
+  },
+  {
+    year: "2009",
+    hops: [
+      { path: "/years/2009/sites/friendfeed/index.html", suffix: "pop-friendfeed", next: "../minecraft/index.html" },
+      { path: "/years/2009/sites/minecraft/index.html", suffix: "pop-minecraft", next: "../kindle/index.html" },
+      { path: "/years/2009/sites/kindle/index.html", suffix: "pop3-kindle" },
+    ],
+  },
+  {
+    year: "2010",
+    hops: [
+      { path: "/years/2010/sites/chrome/index.html", suffix: "chrome-lx", next: "../formspring/index.html" },
+      { path: "/years/2010/sites/formspring/index.html", suffix: "formspring-lx", next: "../reddit/index.html" },
+      { path: "/years/2010/sites/reddit/index.html", suffix: "pop3-reddit" },
+    ],
+  },
+  {
     year: "2012",
     hops: [
       { path: "/years/2012/sites/drawsomething/index.html", suffix: "draw-lx", next: "../googledrive/index.html" },

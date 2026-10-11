@@ -336,61 +336,6 @@
 | 40 | Bid leftover | `ebay` | leftover dest | **DROP** |
 | 41 | Send leftover | `paypal` | leftover dest | **DROP** |
 
-## 2011 · star Google+ Hangout · 50 dest-true flows
-
-| # | Flow name | Slug | Class | Verdict |
-|---|-----------|------|-------|---------|
-| 1 | Google+ | `googleplus` | official 10 | **KEEP** |
-| 2 | Spotify US | `spotify` | official 10 | **KEEP** |
-| 3 | Siri | `iphone` | official 10 | **KEEP** |
-| 4 | Timeline | `facebook` | official 10 | **KEEP** |
-| 5 | iPad 2 | `ipad` | official 10 | **KEEP** |
-| 6 | Airbnb | `airbnb` | official 10 | **DROP** |
-| 7 | IG iOS | `instagram` | official 10 | **DROP** |
-| 8 | Twitter | `twitter` | official 10 | **DROP** |
-| 9 | Qwikster | `qwikster` | official 10 | **KEEP** |
-| 10 | Letter Swap | `playable` | official 10 | **DO-NOT-APPLY** |
-| 11 | Photo Stream leftover | `icloud` | leftover-3× unique | **KEEP** |
-| 12 | Pin leftover | `pinterest` | leftover-3× unique | **KEEP** |
-| 13 | Invite leftover | `linkedin` | leftover-3× unique | **KEEP** |
-| 14 | Silk leftover | `kindlefire` | leftover-3× unique | **KEEP** |
-| 15 | World leftover | `minecraft` | leftover-3× unique | **KEEP** |
-| 16 | Watch leftover | `twitch` | leftover-3× unique | **KEEP** |
-| 17 | Watch leftover | `youtube` | leftover-3× unique | **DO-NOT-APPLY** |
-| 18 | Sync leftover | `dropbox` | leftover-3× unique | **DO-NOT-APPLY** |
-| 19 | Watch leftover | `hulu` | leftover-3× unique | **DO-NOT-APPLY** |
-| 20 | Snap leftover | `snapchat` | leftover dest | **KEEP** |
-| 21 | Notify leftover | `ios5` | leftover dest | **KEEP** |
-| 22 | Blue leftover | `imessage` | leftover dest | **KEEP** |
-| 23 | Sign in leftover | `chromebook` | leftover dest | **KEEP** |
-| 24 | Tablet leftover | `honeycomb` | leftover dest | **KEEP** |
-| 25 | Beam leftover | `ics` | leftover dest | **KEEP** |
-| 26 | Chat leftover | `wechat` | leftover dest | **KEEP** |
-| 27 | Sticker leftover | `line` | leftover dest | **KEEP** |
-| 28 | Run leftover | `temple` | leftover dest | **KEEP** |
-| 29 | Adventure leftover | `skyrim` | leftover dest | **KEEP** |
-| 30 | Subscribe leftover | `nytpaywall` | leftover dest | **KEEP** |
-| 31 | Acquire leftover | `skypebuy` | leftover dest | **KEEP** |
-| 32 | File leftover | `grouponipo` | leftover dest | **KEEP** |
-| 33 | File leftover | `zyngaipo` | leftover dest | **KEEP** |
-| 34 | Tap leftover | `googlewallet` | leftover dest | **KEEP** |
-| 35 | Charge leftover | `stripe` | leftover dest | **KEEP** |
-| 36 | Lesson leftover | `duolingo` | leftover dest | **DROP** |
-| 37 | Lesson leftover | `codecademy` | leftover dest | **KEEP** |
-| 38 | Search leftover | `baidu` | leftover dest | **DROP** |
-| 39 | Search leftover | `yandex` | leftover dest | **DROP** |
-| 40 | Edit leftover | `wikipedia` | leftover dest | **DROP** |
-| 41 | Browse leftover | `amazon` | leftover dest | **DROP** |
-| 42 | Upvote leftover | `reddit` | leftover dest | **DROP** |
-| 43 | Reblog leftover | `tumblr` | leftover dest | **DROP** |
-| 44 | Play leftover | `netflix` | leftover dest | **DROP** |
-| 45 | Push leftover | `github` | leftover dest | **DROP** |
-| 46 | Chat leftover | `whatsapp` | leftover dest | **DROP** |
-| 47 | Moment leftover | `path` | leftover dest | **DROP** |
-| 48 | StreetPass leftover | `nintendo3ds` | leftover dest | **KEEP** |
-| 49 | Reset leftover | `psnhack` | leftover dest | **KEEP** |
-| 50 | Check in leftover | `gowalla` | leftover dest | **KEEP** |
-
 ## 2012 · star IG Android · 42 dest-true flows
 
 | # | Flow name | Slug | Class | Verdict |
@@ -949,51 +894,6 @@
 | 2010 | `wikipedia` | leftover dest | Edit leftover |
 | 2010 | `ebay` | leftover dest | Bid leftover |
 | 2010 | `paypal` | leftover dest | Send leftover |
-| 2011 | `spotify` | official 10 | Spotify US |
-| 2011 | `iphone` | official 10 | Siri |
-| 2011 | `facebook` | official 10 | Timeline |
-| 2011 | `ipad` | official 10 | iPad 2 |
-| 2011 | `airbnb` | official 10 | Airbnb |
-| 2011 | `instagram` | official 10 | IG iOS |
-| 2011 | `twitter` | official 10 | Twitter |
-| 2011 | `qwikster` | official 10 | Qwikster |
-| 2011 | `pinterest` | leftover-3× unique | Pin leftover |
-| 2011 | `linkedin` | leftover-3× unique | Invite leftover |
-| 2011 | `kindlefire` | leftover-3× unique | Silk leftover |
-| 2011 | `minecraft` | leftover-3× unique | World leftover |
-| 2011 | `youtube` | leftover-3× unique | Watch leftover |
-| 2011 | `dropbox` | leftover-3× unique | Sync leftover |
-| 2011 | `hulu` | leftover-3× unique | Watch leftover |
-| 2011 | `ios5` | leftover dest | Notify leftover |
-| 2011 | `imessage` | leftover dest | Blue leftover |
-| 2011 | `chromebook` | leftover dest | Sign in leftover |
-| 2011 | `honeycomb` | leftover dest | Tablet leftover |
-| 2011 | `ics` | leftover dest | Beam leftover |
-| 2011 | `wechat` | leftover dest | Chat leftover |
-| 2011 | `line` | leftover dest | Sticker leftover |
-| 2011 | `temple` | leftover dest | Run leftover |
-| 2011 | `skyrim` | leftover dest | Adventure leftover |
-| 2011 | `nytpaywall` | leftover dest | Subscribe leftover |
-| 2011 | `skypebuy` | leftover dest | Acquire leftover |
-| 2011 | `grouponipo` | leftover dest | File leftover |
-| 2011 | `zyngaipo` | leftover dest | File leftover |
-| 2011 | `googlewallet` | leftover dest | Tap leftover |
-| 2011 | `stripe` | leftover dest | Charge leftover |
-| 2011 | `duolingo` | leftover dest | Lesson leftover |
-| 2011 | `codecademy` | leftover dest | Lesson leftover |
-| 2011 | `baidu` | leftover dest | Search leftover |
-| 2011 | `yandex` | leftover dest | Search leftover |
-| 2011 | `wikipedia` | leftover dest | Edit leftover |
-| 2011 | `amazon` | leftover dest | Browse leftover |
-| 2011 | `reddit` | leftover dest | Upvote leftover |
-| 2011 | `tumblr` | leftover dest | Reblog leftover |
-| 2011 | `netflix` | leftover dest | Play leftover |
-| 2011 | `github` | leftover dest | Push leftover |
-| 2011 | `whatsapp` | leftover dest | Chat leftover |
-| 2011 | `path` | leftover dest | Moment leftover |
-| 2011 | `nintendo3ds` | leftover dest | StreetPass leftover |
-| 2011 | `psnhack` | leftover dest | Reset leftover |
-| 2011 | `gowalla` | leftover dest | Check in leftover |
 | 2012 | `instagram` | official 10 | Instagram Android |
 | 2012 | `pinterest` | official 10 | Pinterest |
 | 2012 | `facebook` | official 10 | Facebook IPO |
@@ -1229,4 +1129,5 @@
 | 2022 | `dalle2` | leftover dest | Prompt leftover |
 | 2022 | `ios16` | leftover dest | Lock leftover |
 | 2022 | `m2` | leftover dest | Chip leftover |
+
 

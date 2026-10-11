@@ -9,7 +9,7 @@ const { test, expect } = require("@playwright/test");
 
 const OWN = ["1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2004", "2005", "2006"];
 const BORROWED = { 2003: "2004", 2007: "2004", 2008: "2004", 2009: "2007" };
-const LEAN = ["2010", "2011", "2012", "2013", "2014", "2020", "2021", "2022"];
+const LEAN = ["2010", "2012", "2013", "2014", "2020", "2021", "2022"];
 
 async function openShell(page, year) {
   await page.setViewportSize({ width: 1100, height: 800 });
@@ -107,7 +107,6 @@ const ADDR = {
   2008: "http://home.microsoft.com/intl/web2008/",
   2009: "http://home.microsoft.com/intl/web2009/",
   2010: "http://home.microsoft.com/intl/web2010/",
-  2011: "http://home.microsoft.com/intl/web2011/",
   2012: "http://home.microsoft.com/intl/web2012/",
   2013: "http://home.microsoft.com/intl/web2013/",
   2014: "http://home.microsoft.com/intl/web2014/",

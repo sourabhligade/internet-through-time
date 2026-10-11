@@ -303,7 +303,6 @@
         k === "itt08-apps" ||
         k === "itt09-like" ||
         k === "itt10-ig-posts" ||
-        k === "itt11-gplus" ||
         k === "itt12-ig-android" ||
         k === "itt12-facebook" ||
         k === "itt13-vine-posts" ||

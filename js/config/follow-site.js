@@ -71,7 +71,6 @@
         stop("2007", "sites/fbplat/index.html", "Platform"),
         stop("2009", "sites/facebook/index.html", "Like"),
         stop("2010", "sites/facebook/index.html", "Open Graph"),
-        stop("2011", "sites/facebook/index.html", "Timeline"),
         stop("2012", "sites/facebook/index.html", "IPO"),
         stop("2013", "sites/facebook/index.html", "Vine year"),
         stop("2014", "sites/facebook/index.html", "Install year"),
@@ -96,7 +95,6 @@
         stop("2006", "sites/twitter/index.html", "Twttr"),
         stop("2007", "sites/twitter/index.html", "iPhone year"),
         stop("2010", "sites/twitter/index.html", "lean"),
-        stop("2011", "sites/twitter/index.html", "140"),
         stop("2012", "sites/twitter/index.html", "IPO year"),
         stop("2013", "sites/twitter/index.html", "Vine year"),
         stop("2014", "sites/twitter/index.html", "Install year"),
@@ -107,7 +105,6 @@
       match: /\/sites\/instagram\//,
       stops: [
         stop("2010", "sites/instagram/index.html", "iOS"),
-        stop("2011", "sites/instagram/index.html", "iPhone app"),
         stop("2012", "sites/instagram/android.html", "Android"),
         stop("2014", "sites/instagram/index.html", "Install year"),
       ]
@@ -118,7 +115,6 @@
       stops: [
         stop("2007", "sites/iphone/index.html", "Safari"),
         stop("2010", "sites/iphone/index.html", "iPhone 4"),
-        stop("2011", "sites/iphone/index.html", "Siri"),
         stop("2012", "sites/iphone/index.html", "Maps flop leftover"),
         stop("2013", "sites/iphone/ios7.html", "iOS 7"),
         stop("2014", "sites/iphone/index.html", "Install year"),

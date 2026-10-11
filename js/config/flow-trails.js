@@ -1,5 +1,5 @@
 /**
- * Dest-unique official trail per year. HTML 1994–2014 and 2020–2022 are live. 2015 omitted. 2017–2019 and 2023–2025 are absent.
+ * Dest-unique official trail per year. HTML 1994–2010, 2012–2014, and 2020–2022 are live. 2015 omitted. 2017–2019 and 2023–2025 are absent.
  * One dest slug once. Pack dests and leftover-3× unique dests stay off this trail.
  * Consumed by js/immersion/flow-trails.js.
  */
@@ -359,19 +359,7 @@
       {"n": 9, "name": "YouTube", "href": "sites/youtube/index.html", "match": "/youtube/", "whenKey": "itt10-yt", "nextHref": "sites/playable/game.html", "nextLabel": "Sling Nest"},
       {"n": 10, "name": "Sling Nest", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt10-game-slingnest", "nextHref": "sites/instagram/index.html", "nextLabel": "Instagram"}
     ],
-    "2011": [
-      {"n": 1, "name": "Google+", "href": "sites/googleplus/index.html", "match": "/googleplus/", "whenKey": "itt11-gplus", "nextHref": "sites/spotify/index.html", "nextLabel": "Spotify US"},
-      {"n": 2, "name": "Spotify US", "href": "sites/spotify/index.html", "match": "/spotify/", "whenKey": "itt11-spotify", "nextHref": "sites/iphone/index.html", "nextLabel": "Siri"},
-      {"n": 3, "name": "Siri", "href": "sites/iphone/index.html", "match": "/iphone/", "whenKey": "itt11-siri", "nextHref": "sites/facebook/index.html", "nextLabel": "Timeline"},
-      {"n": 4, "name": "Timeline", "href": "sites/facebook/index.html", "match": "/facebook/", "whenKey": "itt11-timeline", "nextHref": "sites/ipad/index.html", "nextLabel": "iPad 2"},
-      {"n": 5, "name": "iPad 2", "href": "sites/ipad/index.html", "match": "/ipad/", "whenKey": "itt11-ipad2", "nextHref": "sites/airbnb/index.html", "nextLabel": "Airbnb"},
-      {"n": 6, "name": "Airbnb", "href": "sites/airbnb/index.html", "match": "/airbnb/", "whenKey": "itt11-airbnb", "nextHref": "sites/instagram/index.html", "nextLabel": "Instagram iOS"},
-      {"n": 7, "name": "Instagram iOS", "href": "sites/instagram/index.html", "match": "/instagram/", "whenKey": "itt11-ig", "nextHref": "sites/twitter/index.html", "nextLabel": "Twitter"},
-      {"n": 8, "name": "Twitter", "href": "sites/twitter/index.html", "match": "/twitter/", "whenKey": "itt11-tweets", "nextHref": "sites/qwikster/index.html", "nextLabel": "Qwikster"},
-      {"n": 9, "name": "Qwikster", "href": "sites/qwikster/index.html", "match": "/qwikster/", "whenKey": "itt11-qwikster", "nextHref": "sites/playable/game.html", "nextLabel": "Letter Swap"},
-      {"n": 10, "name": "Letter Swap", "href": "sites/playable/game.html", "match": "/playable/", "whenKey": "itt11-game-letterswap", "nextHref": "sites/googleplus/index.html", "nextLabel": "Google+"}
-    ],
-    "2012": [
+        "2012": [
       {"n": 1, "name": "Instagram Android", "href": "sites/instagram/android.html", "match": "/instagram/android", "whenKey": "itt12-ig-android", "nextHref": "sites/pinterest/index.html", "nextLabel": "Pinterest"},
       {"n": 2, "name": "Pinterest", "href": "sites/pinterest/index.html", "match": "/pinterest/", "whenKey": "itt12-pin", "nextHref": "sites/facebook/ipo.html", "nextLabel": "Facebook IPO"},
       {"n": 3, "name": "Facebook IPO", "href": "sites/facebook/ipo.html", "match": "/facebook/ipo", "whenKey": "itt12-fb-ipo", "nextHref": "sites/iphone/maps.html", "nextLabel": "Maps flop"},

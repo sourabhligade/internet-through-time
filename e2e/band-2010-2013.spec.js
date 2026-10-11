@@ -11,7 +11,6 @@ const ROOT = path.join(__dirname, "..");
 const REGISTER = path.join(ROOT, "e2e/registers/band-2010-2013.json");
 const YEAR_TIMEOUT = {
   "2010": 10 * 60 * 1000,
-  "2011": 10 * 60 * 1000,
   "2012": 10 * 60 * 1000,
   "2013": 10 * 60 * 1000,
 };
@@ -50,8 +49,8 @@ async function finishOfficial(page) {
 
 test.describe("2010-2013 phase 6 band check", () => {
   test("register still matches the census", () => {
-    expect(doc.census.savePages).toBe(182);
-    expect(doc.rows).toHaveLength(182);
+    expect(doc.census.savePages).toBe(148);
+    expect(doc.rows).toHaveLength(148);
   });
 
   test("Facebook 1B empty then a real ack is official with Next", async ({ page }) => {
@@ -66,7 +65,7 @@ test.describe("2010-2013 phase 6 band check", () => {
     await expect(nextFor(page, "itt12-facebook")).toBeVisible();
   });
 
-  for (const year of ["2010", "2011", "2012", "2013"]) {
+  for (const year of ["2010", "2012", "2013"]) {
     const rows = doc.rows.filter((row) => row.year === year);
     test("walk " + year + " (" + rows.length + " save pages)", async ({ browser }) => {
       test.setTimeout(YEAR_TIMEOUT[year]);

@@ -31,15 +31,19 @@ function starKey(year) {
     1998: "itt98-lucky",
     1999: "itt99-aim",
     2000: "itt00-mapquest",
-    2001: "itt01-wiki-pages",
+    2001: "itt01-wiki",
     2002: "itt02-stumble",
     2003: "itt03-photobucket",
     2004: "itt04-thefacebook-networks",
+    2005: "itt05-yt-uploads",
+    2006: "itt06-tweets",
     2009: "itt09-like",
-    2010: "itt10-ig",
+    2010: "itt10-ig-posts",
     2012: "itt12-ig-android",
     2013: "itt13-vine-posts",
-    2014: "itt14-wa-install"};
+    2014: "itt14-wa-install",
+    2021: "itt21-att",
+    2022: "itt22-chatgpt"};
   return map[year] || "";
 }
 

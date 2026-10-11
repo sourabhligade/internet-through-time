@@ -15,7 +15,6 @@ html {
   color-scheme: only light;
 }
 
-/* Every dest year, including 2011. The root background paints the
    canvas, so a content-tall body does not leave a black band. A
    min-height of 100vh parks an empty band under the footer. */
 html {
@@ -89,47 +88,6 @@ html body.has-itt-wayfind {
   scroll-padding-bottom: 64px;
 }
 
-html[data-itt-year="2011"],
-html[data-itt-year="2011"] body {
-  color-scheme: only light !important;
-  forced-color-adjust: none !important;
-  background: #ece9d8 !important;
-}
-html[data-itt-year="2011"] body {
-  margin: 0 !important;
-  color: #000 !important;
-  -webkit-text-fill-color: #000 !important;
-}
-html[data-itt-year="2011"] body * {
-  color: #000 !important;
-  -webkit-text-fill-color: #000 !important;
-}
-html[data-itt-year="2011"] body a:link,
-html[data-itt-year="2011"] body a:link * {
-  color: #0000ee !important;
-  -webkit-text-fill-color: #0000ee !important;
-}
-html[data-itt-year="2011"] body a:visited,
-html[data-itt-year="2011"] body a:visited * {
-  color: #551a8b !important;
-  -webkit-text-fill-color: #551a8b !important;
-}
-html[data-itt-year="2011"] body input,
-html[data-itt-year="2011"] body textarea,
-html[data-itt-year="2011"] body select,
-html[data-itt-year="2011"] body button {
-  color-scheme: only light !important;
-  color: #000 !important;
-  -webkit-text-fill-color: #000 !important;
-}
-html[data-itt-year="2011"] body input[type="text"],
-html[data-itt-year="2011"] body input:not([type]),
-html[data-itt-year="2011"] body textarea {
-  background: #fff !important;
-}
-html[data-itt-year="2011"] body button {
-  background: #c0c0c0 !important;
-}
 
 body.has-itt-wayfind {
   padding-bottom: 56px !important;

@@ -1,7 +1,7 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2007–2014 and 2020–2022 lean doors live. 2011 is live HTML. 2015 is omitted. 2017–2019 and 2023–2025 are absent. Do not invent rooms.
+ * 2007–2010, 2012–2014, and 2020–2022 lean doors live. 2015 is omitted. 2017–2019 and 2023–2025 are absent. Do not invent rooms.
  */
 (function (global) {
   "use strict";
@@ -10,7 +10,7 @@
   var OPEN = (function openFromCard() {
     var years = ITT.YEAR_CARD && ITT.YEAR_CARD.years;
     var fallback = [
-      "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2020", "2021", "2022"
+      "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2012", "2013", "2014", "2020", "2021", "2022"
     ];
     if (!years) return fallback;
     var out = [];
@@ -31,12 +31,12 @@
       { id: "gray", label: "Gray / directories", blurb: "Directories, SSL cart, portal hop.", years: ["1994", "1995", "1996"] },
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
       { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
- { id: "phone", label: "Phone eats the web", blurb: "App Store · Like · Chrome · G1 · Instagram iOS · Google+. Vine 6s is the 2013 door.", years: ["2008", "2009", "2010", "2011", "2012", "2013"] },
+ { id: "phone", label: "Phone eats the web", blurb: "App Store · Like · Chrome · G1 · Instagram iOS. Vine 6s is the 2013 door.", years: ["2008", "2009", "2010", "2012", "2013"] },
       { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install.", years: ["2014"] }
     ],
 
     leanYears: [
- "2007", "2008", "2009", "2010", "2011", "2012",
+ "2007", "2008", "2009", "2010", "2012",
       "2013", "2014", "2020", "2021", "2022"
     ],
 
@@ -58,7 +58,6 @@
       "2008": "App Store is the save. Chrome is a room. Desktop stays XP + IE 7.",
       "2009": "Like, not Reactions. No iPad.",
       "2010": "iPhone only. Android Instagram is next year.",
-      "2011": "Circles are the save. Timeline is a room. IE 9 is March, not the January chrome.",
       "2012": "The square photo leaves the iPhone.",
       "2013": "Stories here are Snapchat, not Instagram.",
       "2014": "Messenger is the trap. Install is the save.",
@@ -86,13 +85,12 @@
       "2008": "You tapped FREE. Hundreds of apps, not millions day one. Chrome was a late download.",
       "2009": "You Liked a partner page. Beacon never wrote. Reactions were not here yet.",
       "2010": "The photo was square. The filter had a name. Android is next year.",
-      "2011": "You drew a circle. Spotify played in the US. You asked the phone. IE 9 was not the January window.",
       "2012": "The square left the iPhone. Wikipedia went dark for a day.",
       "2013": "The loop was six seconds. Stories here are Snapchat, not Instagram.",
       "2014": "Nineteen billion dollars. Install is the save. Messenger is the trap.",
     },
 
-    /* Guided 6 for years whose Starting Point is inline. 2011 is in start-data.js. */
+    /* Guided 6 for years whose Starting Point is inline. */
     guidedFull: {
       "2010": [
         { label: "About 2010", href: "years/2010/pages/about.html" },
@@ -271,17 +269,7 @@
         ],
         game: { label: "Sling Nest", href: "years/2010/sites/playable/game.html" }
       },
-      "2011": {
-        era: "Google+ · Spotify US · Siri",
-        thesis: "Circles, a US listen, and a voice on the 4S. IE 9 is March. Desktop stays Win7 + IE 8.",
-        gold: { label: "Google+", href: "years/2011/sites/googleplus/index.html", key: "itt11-gplus" },
-        guided: [
-          { label: "Spotify US", href: "years/2011/sites/spotify/index.html" },
-          { label: "Siri", href: "years/2011/sites/iphone/index.html" }
-        ],
-        game: { label: "Letter Swap", href: "years/2011/sites/playable/game.html" }
-      },
-            "2012": {
+                  "2012": {
         era: "Square photo · IPO · blackout",
         thesis: "Instagram leaves the iPhone. Facebook goes public. Wikipedia goes dark.",
         gold: { label: "Instagram Android", href: "years/2012/sites/instagram/android.html", key: "itt12-ig-android" },

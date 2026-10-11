@@ -10,7 +10,7 @@
 **All-phase scan:** [`PHASE-SCAN.md`](PHASE-SCAN.md) — improvisation, shortfalls, inconsistencies, broken flows. Not ship law.  
 **Local:** http://127.0.0.1:8080 · **Public:** https://sourabhligade.github.io/internet-through-time/ (origin tree; local is ahead until **push**).
 
-Museum grade is a visitor who can enter any of the **24 live doors**, tell the year from the window, finish **one star verb**, and leave on a trail that stays that year. Empty, trap, and incomplete write nothing. Status is `Saved.` or `This browser blocked the save.` Leftover never stamps official n=1–10. It is **not** more dest folders, a shared Chrome skin, a modern lobby, leftover-3×, or restoring 2015 / 2017–2019 / 2023–2025.
+Museum grade is a visitor who can enter any of the **23 live doors**, tell the year from the window, finish **one star verb**, and leave on a trail that stays that year. Empty, trap, and incomplete write nothing. Status is `Saved.` or `This browser blocked the save.` Leftover never stamps official n=1–10. It is **not** more dest folders, a shared Chrome skin, a modern lobby, leftover-3×, or restoring 2015 / 2017–2019 / 2023–2025.
 
 Do not dest-farm. Do not unfreeze 1994–2006 dest HTML unless a dest-attribute fix is named. Do not invent period logos. Slice F starts only on the word **push**.
 
@@ -28,7 +28,6 @@ Three **done-when** lines in that file still overclaim against live dests. This 
 |-----------------------------|----------|------------------------|
 | 6. Trap / empty / missing pick write nothing. The star key is the only official save. | Slice A: GO Catch extras skip when the dest has `[data-official-verb]`. Reactions extras do not bind Like-only after dest-true. Trail complete is reqs + need + verb. Gold leftover on 1994–2001 stars still writes leftover keys, not the star. | One official envelope `{v:1, kind:official, real:true}` on the trail key. Extras skip when any `[data-official-verb]` exists on that dest. Warehouse complete paths fill reqs + need then click the verb. |
 | 7. Visitor never sees `[failed-final]`, a storage key, or “Open leftover” as the thing to do. | Clip CSS hides most `.itt-pixel-failed` and `code` keys. 2015 is omitted; React YearRail is gone. Wikipedia UseMod still paints a visible reconstruction line. Five leftover dests keep **Open leftover**. Gold leftover packing is first paint on eight 1994–2001 stars. | Clip stays. Do not delete `[failed-final]` from HTML. Gold leftover on official dests stays a leftover key. Visitor action on a star is the period verb. |
-| 9. `docs/checklists/` ticked for every live door. | Official 10 walked. Open boxes are 2000 leftover n=11–40, 2011 image-readme. 2015 is omitted. | Tick only after a visit. Image-readme stays `[ ]`. Do not invent logos. Do not dest-farm `years/2015/`. |
 
 Local HEAD `1f418c9c9` is **4 commits ahead** of origin `81c652c65`. GitHub Pages serves origin. Museum-grade on the public URL waits on the word **push**.
 
@@ -46,7 +45,6 @@ These stay wait-to-name. They are **not** museum-grade UI+UX.
 | Grow trail n to 10 (2004=8, 2013=9, 2014=9) | [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md) | named dest-farm (do not) |
 | Restore 2017–2019 / 2023–2025 | DISK-TRUTH | stay 0 |
 | leftover-3× unique catalogs | empty | stay empty |
-| Invent 2011 period logos | `assets/period/2011/` | a real capture, never a draw. 2015 is omitted (no period tree) |
 | Unfreeze 1994–2006 dest HTML | forests | a named dest-attribute only |
 | Full warehouse `npm test` as the UX gate | dest-true 12 | do not |
 
@@ -115,7 +113,6 @@ Viewport **390×844**. One pass per chrome group, not 5,000 dests.
 | Win98 / IE | http://127.0.0.1:8080/years/1998/ |
 | XP | http://127.0.0.1:8080/years/2004/ and http://127.0.0.1:8080/years/2008/ |
 | Like | http://127.0.0.1:8080/years/2009/ |
-| Light / G+ | http://127.0.0.1:8080/years/2011/ |
 | Vine | http://127.0.0.1:8080/years/2013/ |
 | Flat | http://127.0.0.1:8080/years/2014/ |
 | Omitted 2015 | http://127.0.0.1:8080/app/index.html#/year/2015 — not a door |
@@ -144,7 +141,7 @@ Museum-grade on the public URL is the **same tree** as local :8080.
 
 1. Slices A–C green on dest-true 12.  
 2. User says **push**.  
-3. `museum/1994-2020-lean` updates. GitHub Pages (legacy, root `/`) serves the 24 doors.  
+3. `museum/1994-2020-lean` updates. GitHub Pages (legacy, root `/`) serves the 23 doors.  
 4. Actions billing (#17) still will not run the workflow. Local `npm run ci` stays the gate.  
 5. Recheck https://sourabhligade.github.io/internet-through-time/ hub + one door per chrome group.
 
@@ -188,7 +185,6 @@ Stars to open (one per live year):
 | 2008 | App Store | http://127.0.0.1:8080/years/2008/ |
 | 2009 | Like | http://127.0.0.1:8080/years/2009/ |
 | 2010 | Instagram iOS | http://127.0.0.1:8080/years/2010/ |
-| 2011 | Google+ | http://127.0.0.1:8080/years/2011/ |
 | 2012 | IG Android | http://127.0.0.1:8080/years/2012/ |
 | 2013 | Vine 6s | http://127.0.0.1:8080/years/2013/ · trail n=9 |
 | 2014 | WhatsApp Install | http://127.0.0.1:8080/years/2014/ · trail n=9 |
@@ -209,7 +205,7 @@ Stars to open (one per live year):
 | `e2e/phase4-phone.spec.js` | after slice D |
 | `e2e/phase5-glass.spec.js` | after slice C |
 | Hub + one door per chrome group on :8080 | verb in the frame, year in the window |
-| Public URL | same 24 doors after **push** |
+| Public URL | same 23 doors after **push** |
 
 Full warehouse `npm test` is not the UX gate.
 
@@ -225,3 +221,4 @@ Slices A–E are in. B1 first-boot abort is closed. Remaining museum-grade close
 Pack B/C, `2x`, famous-double step 2, and restore bands are other files. They do not make the window a museum.
 
 All-phase scan (every program vs disk): [`PHASE-SCAN.md`](PHASE-SCAN.md).
+

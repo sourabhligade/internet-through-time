@@ -66,21 +66,7 @@ SIGNATURE: dict[str, list[str]] = {
         "sites/facebook/index.html",
         "sites/farmville/index.html"
     ],
-    "2011": [
-        "pages/home.html",
-        "pages/about.html",
-        "sites/googleplus/index.html",
-        "sites/spotify/index.html",
-        "sites/iphone/index.html",
-        "sites/facebook/index.html",
-        "sites/ipad/index.html",
-        "sites/airbnb/index.html",
-        "sites/instagram/index.html",
-        "sites/twitter/index.html",
-        "sites/qwikster/index.html",
-        "sites/playable/game.html"
-    ],
-    "2013": [
+        "2013": [
         "pages/home.html",
         "pages/about.html",
         "sites/vine/record.html",

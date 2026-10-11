@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Every official-10 dest on the 24 HTML doors is a REAL writer.
+ * Every official-10 dest on the 23 HTML doors is a REAL writer.
  * Incomplete / trap / empty never writes whenKey.
  * Complete writes year-prefixed JSON { real, year } (games write { real, gameId }).
  */
@@ -206,17 +206,6 @@ const STAR = {
       await page.locator('[data-ig-filter="X-Pro II"]').click();
       await page.fill("[data-ig-caption]", "museum square");
       await page.locator("[data-ig-share]").click();
-    },
-  },
-  "itt11-gplus": {
-    incomplete: async (page) => {
-      await page.locator("[data-official-trap]").first().click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-official-need]").fill("Friends");
-      await page.locator("[data-official-req]").nth(0).check();
-      await page.locator("[data-official-req]").nth(1).check();
-      await page.locator("[data-official-verb]").click();
     },
   },
   "itt12-ig-android": {
@@ -663,7 +652,7 @@ async function runDest(page, d) {
 test.describe("official 10 · every dest REAL", () => {
   test("every live official dest has a named whenKey and a file", () => {
     // 2015 is omitted. HTML official saves stay in this spec.
-    expect(DESTS.length, "official dests").toBeGreaterThanOrEqual(236);
+    expect(DESTS.length, "official dests").toBeGreaterThanOrEqual(226);
     const empty = DESTS.filter((d) => !d.whenKey);
     expect(empty, "empty whenKeys").toEqual([]);
   });

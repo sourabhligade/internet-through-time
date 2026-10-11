@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * Every live trail room writes one ITT.User envelope.
- * Flow trail rows come from js/config/flow-trails.js (386).
+ * Flow trail rows come from js/config/flow-trails.js (376).
  * 2015 is omitted and is not in that file.
  */
 const fs = require("fs");
@@ -128,12 +128,6 @@ const CUSTOM = {
     await page.locator('[data-ig-filter="X-Pro II"]').click();
     await page.fill("[data-ig-caption]", "museum square");
     await page.locator("[data-ig-share]").click();
-  },
-  "itt11-gplus": async (page) => {
-    await page.locator("[data-official-need]").fill("Friends");
-    await page.locator("[data-official-req]").nth(0).check();
-    await page.locator("[data-official-req]").nth(1).check();
-    await page.locator("[data-official-verb]").click();
   },
   "itt12-ig-android": async (page) => {
     await page.locator('[data-ig12-filter="X-Pro II"]').click();
@@ -421,8 +415,8 @@ async function finish(page, d) {
 }
 
 test.describe("every trail room writes an envelope", () => {
-  test("the live trail is 386 finish rooms", () => {
-    expect(DESTS.length).toBe(386);
+  test("the live trail is 376 finish rooms", () => {
+    expect(DESTS.length).toBe(376);
     const routes = {};
     for (const d of DESTS) {
       const route = routeOf(d);

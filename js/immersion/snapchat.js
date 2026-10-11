@@ -18,7 +18,7 @@
     } catch (eY) {
       y = "";
     }
-    var pfx = /^\d{4}$/.test(y) ? "itt" + y.slice(2) : "itt11";
+    var pfx = /^\d{4}$/.test(y) ? "itt" + y.slice(2) : "itt";
     if (U().immersionStorageKey) return U().immersionStorageKey(kind, pfx);
     return pfx + "-" + kind;
   }

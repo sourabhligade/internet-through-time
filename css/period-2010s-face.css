@@ -4,7 +4,6 @@
    A finished save paints [data-era-result]. Empty and trap never do. */
 
 html[data-itt-year="2010"]:not([data-official-key]) [data-lo-panel]:not([data-itt-gold-lx]):has([data-era-result]),
-html[data-itt-year="2011"]:not([data-official-key]) [data-lo-panel]:not([data-itt-gold-lx]):has([data-era-result]),
 html[data-itt-year="2012"]:not([data-official-key]) [data-lo-panel]:not([data-itt-gold-lx]):has([data-era-result]),
 html[data-itt-year="2013"]:not([data-official-key]) [data-lo-panel]:not([data-itt-gold-lx]):has([data-era-result]),
 html[data-itt-year="2014"]:not([data-official-key]) [data-lo-panel]:not([data-itt-gold-lx]):has([data-era-result]) {
@@ -16,7 +15,6 @@ html[data-itt-year="2014"]:not([data-official-key]) [data-lo-panel]:not([data-it
 }
 
 html[data-itt-year="2010"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-field],
-html[data-itt-year="2011"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-field],
 html[data-itt-year="2012"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-field],
 html[data-itt-year="2013"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-field],
 html[data-itt-year="2014"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-field]{
@@ -33,7 +31,6 @@ html[data-itt-year="2014"]:not([data-official-key]) [data-lo-panel]:has([data-er
 }
 
 html[data-itt-year="2010"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-save],
-html[data-itt-year="2011"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-save],
 html[data-itt-year="2012"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-save],
 html[data-itt-year="2013"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-save],
 html[data-itt-year="2014"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-save] {
@@ -56,8 +53,6 @@ html[data-itt-year="2014"]:not([data-official-key]) [data-lo-panel]:has([data-er
 
 html[data-itt-year="2010"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-pick],
 html[data-itt-year="2010"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-trap],
-html[data-itt-year="2011"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-pick],
-html[data-itt-year="2011"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-trap],
 html[data-itt-year="2012"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-pick],
 html[data-itt-year="2012"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-trap],
 html[data-itt-year="2013"]:not([data-official-key]) [data-lo-panel]:has([data-era-result]) [data-lo-pick],
@@ -81,7 +76,6 @@ html[data-itt-year="2014"]:not([data-official-key]) [data-lo-panel]:has([data-er
 }
 
 html[data-itt-year="2010"] [data-era-result]:not(:empty),
-html[data-itt-year="2011"] [data-era-result]:not(:empty),
 html[data-itt-year="2012"] [data-era-result]:not(:empty),
 html[data-itt-year="2013"] [data-era-result]:not(:empty),
 html[data-itt-year="2014"] [data-era-result]:not(:empty) {
@@ -93,7 +87,6 @@ html[data-itt-year="2014"] [data-era-result]:not(:empty) {
 }
 
 html[data-itt-year="2010"] .era-stage,
-html[data-itt-year="2011"] .era-stage,
 html[data-itt-year="2012"] .era-stage,
 html[data-itt-year="2013"] .era-stage,
 html[data-itt-year="2014"] .era-stage{
@@ -108,36 +101,7 @@ html[data-itt-year="2014"] .era-stage{
   border-radius: 4px;
 }
 
-/* 2011 paints every button gray and every glyph black unless a later rule wins. */
-html[data-itt-year="2011"]:not([data-official-key]):not(:has(#itt-year-ui)) [data-lo-panel]:has([data-era-result]) [data-lo-save] {
-  background: #007aff !important;
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
-  border: 0 !important;
-}
 
-html[data-itt-year="2011"]:not([data-official-key]):not(:has(#itt-year-ui)) [data-lo-panel]:has([data-era-result]) [data-lo-pick],
-html[data-itt-year="2011"]:not([data-official-key]):not(:has(#itt-year-ui)) [data-lo-panel]:has([data-era-result]) [data-lo-trap],
-html[data-itt-year="2011"]:not([data-official-key]):not(:has(#itt-year-ui)) [data-lo-panel]:has([data-era-result]) [data-lo-field] {
-  background: #f2f2f2 !important;
-  color: #111 !important;
-  -webkit-text-fill-color: #111 !important;
-  border: 1px solid #ccc !important;
-}
 
-html[data-itt-year="2011"]:not([data-official-key]):not(:has(#itt-year-ui)) [data-lo-panel]:has([data-era-result]) [data-lo-field] {
-  background: #fff !important;
-}
 
-html[data-itt-year="2011"]:not([data-official-key]):not(:has(#itt-year-ui)) [data-lo-panel]:has([data-era-result]) [data-era-result],
-html[data-itt-year="2011"]:not([data-official-key]):not(:has(#itt-year-ui)) [data-lo-panel]:has([data-era-result]) [data-era-result] * {
-  color: #111 !important;
-  -webkit-text-fill-color: #111 !important;
-}
 
-html[data-itt-year="2011"]:not([data-official-key]):not(:has(#itt-year-ui)) [data-lo-panel]:has([data-era-result]) .era-stage,
-html[data-itt-year="2011"]:not([data-official-key]):not(:has(#itt-year-ui)) [data-lo-panel]:has([data-era-result]) .era-stage * {
-  background: #141414 !important;
-  color: #f5f5f5 !important;
-  -webkit-text-fill-color: #f5f5f5 !important;
-}

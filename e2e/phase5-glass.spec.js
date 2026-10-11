@@ -25,7 +25,6 @@ const PAGES = [
   ["2008", "/years/2008/sites/webkinz/index.html"],
   ["2009", "/years/2009/sites/maps/index.html"],
   ["2010", "/years/2010/sites/ibooks/index.html"],
-  ["2011", "/years/2011/sites/twitter/index.html"],
   ["2012", "/years/2012/sites/flipboard/index.html"],
   ["2013", "/years/2013/sites/ios7/index.html"],
   ["2014", "/years/2014/sites/oculusfb/index.html"],

@@ -236,7 +236,6 @@ test.describe("leftover official · disk + trail", () => {
       "itt09-like",
       "itt10-ig-posts",
       "itt10-ig",
-      "itt11-gplus",
       "itt12-ig-android",
       "itt13-vine-posts",
       "itt14-wa-install",

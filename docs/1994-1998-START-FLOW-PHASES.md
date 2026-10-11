@@ -1,7 +1,7 @@
 # 1994–1998 start + flow hops — goals, phases, steps
 
 **Date:** 2026-10-10  
-**Status:** Phases 1–5 implemented 2026-10-10. Phase 6 not started. Not ship law.  
+**Status:** Phases 1–6 closed 2026-10-11. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json` · `scripts/itt_gate.py` `SHIP_YEARS`.  
 **Band already done:** working-flow phases 1–6 on 1994–1997 and 1998–2001 ([`WORKING-FLOW-PHASES.md`](WORKING-FLOW-PHASES.md)). This program does not reopen those six.  
 **Per-year steps:** [`1994-1998-start-flow/`](1994-1998-start-flow/).  
@@ -48,7 +48,7 @@ flowchart TD
 | 3 | 5× + flow-map honesty. Matrix `room` and map href match live dest, or copy says tombstone. | `js/config/flow-maps.js` · `e2e/5x-recheck.matrix.json` · `e2e/1994-5x-live.spec.js` | **Implemented 2026-10-10** · IUMA F1 → `listen.html` · F5 NCSA tombstone · 1995–1998 extras stay extras |
 | 4 | Ghost official keys. 1995 Amazon bookstore Search verb / `itt95-amazon` next-flow. | `years/1995/sites/amazon/index.html` | **Implemented 2026-10-10** · Search is not official-verb · next is `itt95-ssl-checkout` |
 | 5 | 1998 trail shape honesty. Snap n=10. Skip-Intro stays extra. | `js/config/flow-trails.js` (read) · start-data / map / playable copy | **Implemented 2026-10-10** · Skip-Intro extra · Snap stays n=10 |
-| 6 | Verify. Named year packs + start trails. Dest-true 12. No dest-farm. | Playwright `--workers=1` · `npm run check` | Not started |
+| 6 | Verify. Named year packs + start trails. Dest-true 12. No dest-farm. | Playwright `--workers=1` · `npm run check` | **Closed 2026-10-11** |
 
 **After every phase (mandatory loop).** Do not open the next phase while this loop is red.
 
@@ -221,7 +221,7 @@ Keep remaining holes here until the phase that owns them is green. Do not skip.
 | 3 | IUMA lobby links `listen.html`. F1 matrix/map/live agree. F5 NCSA tombstone. 1995–1998 map hrefs exist; extras stay extras. | 3.1–3.4 | **yes** |
 | 4 | 1995 Amazon Search `data-official-verb` · `itt95-amazon` next-flow | 4.1–4.3 | **yes** |
 | 5 | 1998 Skip-Intro off trail (honesty copy) | 5.1–5.3 | **yes** |
-| 6 | Wait until 2–5 close | 6 | no |
+| 6 | Playwright 38 passed / 54 skipped. `npm run check` CHECK_EXIT:0. dest-true 12: 399 passed. Starting Point → star covered by the mvp and official-10 specs. | 6 | **yes** |
 
 ## Phase 6 — Verify
 

@@ -11,30 +11,23 @@
     "data-su-stumble"
   ],
   "census": {
-    "html": 223,
-    "savePages": 182,
-    "destFolders": 150,
-    "trailRows": 39,
+    "html": 184,
+    "savePages": 148,
+    "destFolders": 113,
+    "trailRows": 29,
     "leftover2x": 51,
-    "officialStops": 39,
+    "officialStops": 29,
     "byYear": {
       "2010": {
         "html": 61,
-        "savePages": 48,
+        "savePages": 49,
         "destFolders": 29,
         "trailRows": 10,
         "leftover2x": 12
       },
-      "2011": {
-        "html": 39,
-        "savePages": 38,
-        "destFolders": 37,
-        "trailRows": 10,
-        "leftover2x": 0
-      },
       "2012": {
         "html": 70,
-        "savePages": 49,
+        "savePages": 52,
         "destFolders": 32,
         "trailRows": 10,
         "leftover2x": 12
@@ -174,6 +167,19 @@
         "data-lo-save"
       ],
       "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2010",
+      "dest": "formspring",
+      "path": "years/2010/sites/formspring/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
       "role": "save",
       "n": null,
       "whenKey": null,
@@ -676,500 +682,6 @@
       "name": "YouTube"
     },
     {
-      "year": "2011",
-      "dest": "airbnb",
-      "path": "years/2011/sites/airbnb/index.html",
-      "hooks": [
-        "data-official-verb"
-      ],
-      "leftover2x": false,
-      "role": "official",
-      "n": 6,
-      "whenKey": "itt11-airbnb",
-      "name": "Airbnb"
-    },
-    {
-      "year": "2011",
-      "dest": "chromebook",
-      "path": "years/2011/sites/chromebook/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "codecademy",
-      "path": "years/2011/sites/codecademy/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "facebook",
-      "path": "years/2011/sites/facebook/index.html",
-      "hooks": [
-        "data-official-verb"
-      ],
-      "leftover2x": false,
-      "role": "official",
-      "n": 4,
-      "whenKey": "itt11-timeline",
-      "name": "Timeline"
-    },
-    {
-      "year": "2011",
-      "dest": "gmusic",
-      "path": "years/2011/sites/gmusic/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "googleplus",
-      "path": "years/2011/sites/googleplus/index.html",
-      "hooks": [
-        "data-official-verb"
-      ],
-      "leftover2x": false,
-      "role": "official",
-      "n": 1,
-      "whenKey": "itt11-gplus",
-      "name": "Google+"
-    },
-    {
-      "year": "2011",
-      "dest": "googlewallet",
-      "path": "years/2011/sites/googlewallet/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "grouponipo",
-      "path": "years/2011/sites/grouponipo/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "honeycomb",
-      "path": "years/2011/sites/honeycomb/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "icloud",
-      "path": "years/2011/sites/icloud/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "ics",
-      "path": "years/2011/sites/ics/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "imessage",
-      "path": "years/2011/sites/imessage/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "instagram",
-      "path": "years/2011/sites/instagram/index.html",
-      "hooks": [
-        "data-official-verb"
-      ],
-      "leftover2x": false,
-      "role": "official",
-      "n": 7,
-      "whenKey": "itt11-ig",
-      "name": "Instagram iOS"
-    },
-    {
-      "year": "2011",
-      "dest": "ios5",
-      "path": "years/2011/sites/ios5/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "ipad",
-      "path": "years/2011/sites/ipad/index.html",
-      "hooks": [
-        "data-official-verb"
-      ],
-      "leftover2x": false,
-      "role": "official",
-      "n": 5,
-      "whenKey": "itt11-ipad2",
-      "name": "iPad 2"
-    },
-    {
-      "year": "2011",
-      "dest": "iphone",
-      "path": "years/2011/sites/iphone/index.html",
-      "hooks": [
-        "data-official-verb"
-      ],
-      "leftover2x": false,
-      "role": "official",
-      "n": 3,
-      "whenKey": "itt11-siri",
-      "name": "Siri"
-    },
-    {
-      "year": "2011",
-      "dest": "kindlefire",
-      "path": "years/2011/sites/kindlefire/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "line",
-      "path": "years/2011/sites/line/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "linkedin",
-      "path": "years/2011/sites/linkedin/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "minecraft",
-      "path": "years/2011/sites/minecraft/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "nintendo3ds",
-      "path": "years/2011/sites/nintendo3ds/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "nytpaywall",
-      "path": "years/2011/sites/nytpaywall/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "pandora",
-      "path": "years/2011/sites/pandora/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "pinterest",
-      "path": "years/2011/sites/pinterest/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "playable",
-      "path": "years/2011/sites/playable/famous.html",
-      "hooks": [
-        "data-game-start"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "playable",
-      "path": "years/2011/sites/playable/game.html",
-      "hooks": [
-        "data-official-verb"
-      ],
-      "leftover2x": false,
-      "role": "official",
-      "n": 10,
-      "whenKey": "itt11-game-letterswap",
-      "name": "Letter Swap"
-    },
-    {
-      "year": "2011",
-      "dest": "psnhack",
-      "path": "years/2011/sites/psnhack/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "qwikster",
-      "path": "years/2011/sites/qwikster/index.html",
-      "hooks": [
-        "data-official-verb"
-      ],
-      "leftover2x": false,
-      "role": "official",
-      "n": 9,
-      "whenKey": "itt11-qwikster",
-      "name": "Qwikster"
-    },
-    {
-      "year": "2011",
-      "dest": "skypebuy",
-      "path": "years/2011/sites/skypebuy/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "skyrim",
-      "path": "years/2011/sites/skyrim/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "snapchat",
-      "path": "years/2011/sites/snapchat/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "spotify",
-      "path": "years/2011/sites/spotify/index.html",
-      "hooks": [
-        "data-official-verb"
-      ],
-      "leftover2x": false,
-      "role": "official",
-      "n": 2,
-      "whenKey": "itt11-spotify",
-      "name": "Spotify US"
-    },
-    {
-      "year": "2011",
-      "dest": "stripe",
-      "path": "years/2011/sites/stripe/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "temple",
-      "path": "years/2011/sites/temple/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "twitch",
-      "path": "years/2011/sites/twitch/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "twitter",
-      "path": "years/2011/sites/twitter/index.html",
-      "hooks": [
-        "data-official-verb"
-      ],
-      "leftover2x": false,
-      "role": "official",
-      "n": 8,
-      "whenKey": "itt11-tweets",
-      "name": "Twitter"
-    },
-    {
-      "year": "2011",
-      "dest": "wechat",
-      "path": "years/2011/sites/wechat/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
-      "year": "2011",
-      "dest": "zyngaipo",
-      "path": "years/2011/sites/zyngaipo/index.html",
-      "hooks": [
-        "data-lo-save"
-      ],
-      "leftover2x": false,
-      "role": "save",
-      "n": null,
-      "whenKey": null,
-      "name": null
-    },
-    {
       "year": "2012",
       "dest": "coinbase",
       "path": "years/2012/sites/coinbase/index.html",
@@ -1190,6 +702,19 @@
         "data-lo-save"
       ],
       "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "drawsomething",
+      "path": "years/2012/sites/drawsomething/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
       "role": "save",
       "n": null,
       "whenKey": null,
@@ -1285,6 +810,19 @@
       "n": 8,
       "whenKey": "itt12-pop-flipboard",
       "name": "Flipboard"
+    },
+    {
+      "year": "2012",
+      "dest": "googledrive",
+      "path": "years/2012/sites/googledrive/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
     },
     {
       "year": "2012",
@@ -1723,6 +1261,19 @@
       "path": "years/2012/sites/reddit/about.html",
       "hooks": [
         "data-ytl-go"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2012",
+      "dest": "snapchat",
+      "path": "years/2012/sites/snapchat/index.html",
+      "hooks": [
+        "data-lo-save"
       ],
       "leftover2x": false,
       "role": "save",

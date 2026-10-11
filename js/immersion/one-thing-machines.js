@@ -1022,7 +1022,7 @@
     var st = doc.querySelector("[data-abnb-status], [data-itt-action-status]");
     var results = doc.querySelector("[data-abnb-results]");
     var key = sk("airbnb");
-    var pickKey = "itt11-airbnb-pick";
+    var pickKey = yearPfx() + "-airbnb-pick";
     var city = "";
     var listing = "";
     var saved = loadJSON(key, null);
