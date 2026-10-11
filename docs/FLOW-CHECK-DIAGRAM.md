@@ -45,7 +45,7 @@ flowchart TD
 ```mermaid
 flowchart LR
  subgraph PLAY["23 open doors"]
- HTML["HTML doors<br/>1994–2014 + 2020–2022"]
+ HTML["HTML doors<br/>1994–2010, 2012–2014, and 2020–2022"]
  end
  ABSENT["2017–2019 absent"]
  WIPE["2023–2025 wiped"]

@@ -75,20 +75,20 @@ Disk counts = first-level dirs under `years/YYYY/sites/` (2026-09-20).
 
 ## 4. Double map (leftover dests only)
 
-Official 10 stays 10. Leftover-3× unique dest-true dests stay at the stop already shipped. **Aim = roughly 2× dest folders on thin lean doors.** Aim is a **cap**, not a quota. Miss the cap rather than invent dests.
+Official 10 stays 10. Leftover-3× unique dest-true catalogs stay empty. Dest-links stay n=3 on 2008, 2009, 2010, 2012, 2013, 2020, 2021, and 2022. 2007 and 2014 stay 0. **Aim = roughly 2× dest folders on thin lean doors.** Aim is a **cap**, not a quota. Miss the cap rather than invent dests.
 
 | Year | Star | Key | Disk dests | Leftover-3× unique | Aim dests | New leftover dests (cap) | This pass |
 |------|------|-----|----------:|-------------------:|----------:|-------------------------:|-----------|
-| **2007** | iPhone Safari | `itt07-iphone` | 23 | 9 | **46** | **23** | Double |
-| **2010** | Instagram iOS | `itt10-ig-posts` | 22 | 9 | **44** | **22** | Double |
-| **2012** | IG Android | `itt12-ig-android` | 24 | 9 + leftover-4× unique 3 | **48** | **24** | Double |
-| **2013** | Vine 6s | `itt13-vine-posts` | 54 | 9 | **54** | **0** unless a cited hole | Holes only |
-| **2014** | WhatsApp Install | `itt14-wa-install` | 18 | 9 | **36** | **18** | Double |
+| **2007** | iPhone Safari | `itt07-iphone` | 23 | dest-true 0 · links 0 | **46** | **23** | Double |
+| **2010** | Instagram iOS | `itt10-ig-posts` | 22 | dest-true 0 · links 3 | **44** | **22** | Double |
+| **2012** | IG Android | `itt12-ig-android` | 24 | dest-true 0 · links 3 · leftover-4× 3 | **48** | **24** | Double |
+| **2013** | Vine 6s | `itt13-vine-posts` | 54 | dest-true 0 · links 3 | **54** | **0** unless a cited hole | Holes only |
+| **2014** | WhatsApp Install | `itt14-wa-install` | 18 | dest-true 0 · links 0 | **36** | **18** | Double |
 | **2018** | absent · not a door | — | 0 | 0 | 0 | 0 | Do not dest-farm |
-| **2021** | ATT Ask | `itt21-att` | 15 | **5 stop** | **30** | **15** leftover dests, **not** leftover-3× unique | Double leftover dests |
-| **2022** | ChatGPT Send | `itt22-chatgpt` | 19 | 9 | **38** | **19** | Double |
+| **2021** | ATT Ask | `itt21-att` | 15 | dest-true 0 · links 3 · cap 5 unused | **30** | **15** leftover dests, **not** leftover-3× unique | Double leftover dests |
+| **2022** | ChatGPT Send | `itt22-chatgpt` | 19 | dest-true 0 · links 3 | **38** | **19** | Double |
 
-**Do not grow official 10.** **Do not grow leftover-3× unique past the stop.** New dests are leftover dests (`ittYY-<slug>-lx` shape, one writer). First paint stays gold + guided 6. Leftover warehouse folded (`?deep=1` / Also this year).
+**Do not grow official 10.** **Do not grow leftover-3× unique dest-true past empty.** **Do not grow dest-links past n=3** (2021 cap memory 5 is unused). New dests are leftover dests (`ittYY-<slug>-lx` shape, one writer). First paint stays gold + guided 6. Leftover warehouse folded (`?deep=1` / Also this year).
 
 ---
 
@@ -132,13 +132,13 @@ Leftover-3× unique dest-true dests (stop 3): reddit · youtube · wikipedia. Ex
 
 `amazon` · `att` · `chrome` · `copilot` · `facebook` · `flash` · `google` · `instagram` · `meta` · `playable` · `signal` · `twitter` · `windows10` · `windows11` · `youtube`
 
-Leftover-3× unique dest-true dests (stop 5): amazon · google · instagram · twitter · youtube. Extra dests in this pass are **leftover dests**, not leftover-3× unique dest-true dests. Star trap: Allow · ChatGPT dest · Wordle-as-2021-mass · Zoom Leave as this dest. Do not dest-lock revert to 294 dests.
+Live leftover-3× unique dest-true catalog is empty. Dest-links n=3 are amazon · coinbaseipo · epicapple. google · instagram · twitter · youtube are hosts, not link dests. Do not dest-farm a 5-face dest-true catalog. Star trap: Allow · ChatGPT dest · Wordle-as-2021-mass · Zoom Leave as this dest. Do not dest-lock revert to 294 dests.
 
 ### 2022 (19)
 
 `amazon` · `bereal` · `chatgpt` · `facebook` · `ftx` · `google` · `instagram` · `iphone` · `mastodon` · `netflix` · `nyt` · `playable` · `reddit` · `tiktok` · `twitter` · `wikipedia` · `windows11` · `wordle` · `youtube`
 
-Leftover-3× unique dest-true dests (9): amazon · google · instagram · facebook · youtube · reddit · wikipedia · netflix · nyt. Star trap: empty · GPT-4 · X wordmark · Threads · ATT Ask · Zoom Leave as this dest. Do not restore leftover-2× dest-farm dests to 85.
+Live leftover-3× unique dest-true catalog is empty. Dest-links n=3 are amazon · dalle2 · facebook. The old 9-face list is not the live catalog. Star trap: empty · GPT-4 · X wordmark · Threads · ATT Ask · Zoom Leave as this dest. Do not restore leftover-2× dest-farm dests to 85.
 
 ### 2013 (54) — holes only
 
@@ -150,7 +150,7 @@ Star trap: Vine as leftover. No dest this pass.
 
 `airbnb` · `amazon` · `amongus` · `animalcrossing` · `chrome` · `classroom` · `clubhouse` · `coinbase` · `discord` · `edge` · `facebook` · `figma` · `github` · `google` · `hbomax` · `houseparty` · `hulu` · `instagram` · `iphone` · `linkedin` · `netflix` · `notion` · `nyt` · `peacock` · `playable` · `reddit` · `robinhood` · `slack` · `spotify` · `teams` · `tiktok` · `twitch` · `twitter` · `uber` · `whatsapp` · `wikipedia` · `windows10` · `youtube` · `zoom`
 
-Leftover-3× unique dest-true dests (9) stay. Cited hole this pass: `clubhouse`. Star trap: ChatGPT dest.
+Live leftover-3× unique dest-true catalog is empty. Dest-links n=3 are amazon · clubhouse · facebook. Star trap: ChatGPT dest.
 
 ---
 
@@ -254,7 +254,7 @@ CNIL-shaped leftover dest. One writer. Cream panel. Not leftover-3× unique.
 | Official 10 | Same dest folders · same whenKeys |
 | Guided Starting Point | exactly 6 `<li>` |
 | Star | Only the year chip writes gold |
-| Leftover-3× unique dest-true | catalogs **empty** · dest-links live **2010 n=3** only · 2021 cap memory 5 is unused |
+| Leftover-3× unique dest-true | catalogs **empty** · dest-links live n=3 on 2008, 2009, 2010, 2012, 2013, 2020, 2021, and 2022 · 2021 cap memory 5 is unused (live n=3) |
 | Unique leftover-20 | not a live rail · 2017 is absent |
 | leftover-4× unique | 2007 digg/flickr/reddit · 2010 netflix/tumblr/wave · 2012 chrome/twitter/soundcloud · 2013 askfm/whisper/facebook |
 | Empty / trap | never write leftover or star |

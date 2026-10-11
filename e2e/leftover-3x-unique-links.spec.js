@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Leftover-3× unique dest links. 2010 n=3 dests already on disk.
+ * Leftover-3× unique dest links. n=3 on years that already have a legal three.
  * leftover-3× unique dest-true catalogs stay empty.
  */
 const fs = require("fs");
@@ -28,7 +28,16 @@ const LO2X_2010 = new Set([
   "google",
   "android",
 ]);
-const WANT = { "2010": 3 };
+const WANT = {
+  "2008": 3,
+  "2009": 3,
+  "2010": 3,
+  "2012": 3,
+  "2013": 3,
+  "2020": 3,
+  "2021": 3,
+  "2022": 3,
+};
 const BLOCK = /<!-- ITT-3X-UNIQUE-LINKS:(\d{4}):start -->([\s\S]*?)<!-- ITT-3X-UNIQUE-LINKS:\d{4}:end -->/;
 const HREF = /href="([^"]+)"/g;
 
@@ -108,7 +117,6 @@ test.describe("leftover-3× unique dest links", () => {
   test("catalog: one dest slug once · dests have index.html · no 123-reg · 2017 absent", () => {
     const years = matrix.map((r) => r.year);
     expect(years).not.toContain("2017");
-    expect(years).not.toContain("2009");
     expect(years).not.toContain("1994");
     for (const row of matrix) {
       expect(new Set(row.dests).size, row.year + " unique dests").toBe(row.dests.length);
@@ -174,7 +182,7 @@ test.describe("leftover-3× unique dest links", () => {
     expect(startWith3x, "Starting Point leftover-3× unique dest links first paint").toBe(0);
     expect(warehouseHref, "123-reg in leftover-3× unique dest hrefs").toBe(0);
     expect(popMore, "leftover-3× unique dest links tagged itt-pop-more").toBe(0);
-    expect(railPages, "leftover dest leftover-3× unique dest-link host pages").toBe(16);
+    expect(railPages, "leftover dest leftover-3× unique dest-link host pages").toBe(183);
   });
 
   test("2007 leftover dest leftover-3× unique dest wiki · official dest leftover-3× unique dest links 0", async ({
@@ -196,6 +204,81 @@ test.describe("leftover-3× unique dest links", () => {
     await expect(page.locator('[data-itt-lo3x] [data-pop-go][data-pop-key="pop4-netflix"]')).toHaveCount(1);
     await page.goto("/years/2010/sites/instagram/index.html");
     await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
+  });
+
+  test("leftover-3× unique dest links on the other live years", async ({ page }) => {
+    const rows = [
+      { year: "2008", self: "addicting", other: "armorgames", host: "cuil", official: "facebook", suffix: "ag-dp", star: "itt08-apps" },
+      { year: "2012", self: "drawsomething", other: "googledrive", host: "tinder", official: "pinterest", suffix: "draw-lx", star: "itt12-ig-android" },
+      { year: "2013", self: "kahoot", other: "giphy", host: "canva13", official: "tumblr", suffix: "kahoot-lx", star: "itt13-vine-posts" },
+      { year: "2020", self: "amazon", other: "clubhouse", host: "google", official: "zoom", suffix: "amazon-lx", star: "itt20-zoom" },
+      { year: "2021", self: "amazon", other: "coinbaseipo", host: "nft", official: "signal", suffix: "amazon-lx", star: "itt21-att" },
+      { year: "2022", self: "amazon", other: "dalle2", host: "temu", official: "wordle", suffix: "amazon-lx", star: "itt22-chatgpt" },
+    ];
+    for (const row of rows) {
+      await page.goto("/years/" + row.year + "/sites/" + row.self + "/index.html");
+      await expect(page.locator("[data-itt-3x-unique-links] a")).toHaveCount(2);
+      await expect(page.locator('[data-itt-3x-unique-links] a[href="../' + row.self + '/index.html"]')).toHaveCount(0);
+      await expect(page.locator('[data-itt-3x-unique-links] a[href="../' + row.other + '/index.html"]')).toHaveCount(1);
+      await page.goto("/years/" + row.year + "/sites/" + row.host + "/index.html");
+      await expect(page.locator("[data-itt-3x-unique-links] a")).toHaveCount(3);
+      await page.goto("/years/" + row.year + "/sites/" + row.official + "/index.html");
+      await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
+      await page.goto("/years/" + row.year + "/pages/home.html");
+      await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
+      await completeLeftoverDest(
+        page,
+        "/years/" + row.year + "/sites/" + row.self + "/index.html",
+        row.suffix,
+        row.star,
+        row.year
+      );
+    }
+    await page.goto("/years/2007/sites/maps/index.html");
+    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
+    await page.goto("/years/2014/sites/whatsapp/index.html");
+    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
+  });
+
+  test("2009 leftover dest leftover-3× unique dest links gowalla · wolfram hosts 3 · official dest 0", async ({
+    page,
+  }) => {
+    await page.goto("/years/2009/sites/gowalla/index.html");
+    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(1);
+    await expect(page.locator("[data-itt-3x-unique-links] a")).toHaveCount(2);
+    await expect(page.locator('[data-itt-3x-unique-links] a[href="../stumbleupon/index.html"]')).toHaveCount(1);
+    await expect(page.locator('[data-itt-3x-unique-links] a[href="../wordpress/index.html"]')).toHaveCount(1);
+    await expect(page.locator('[data-itt-3x-unique-links] a[href="../gowalla/index.html"]')).toHaveCount(0);
+    await page.locator('[data-itt-3x-unique-links] a[href="../stumbleupon/index.html"]').click();
+    await expect(page).toHaveURL(/\/years\/2009\/sites\/stumbleupon\/index\.html$/);
+    await expect(page.locator("[data-itt-3x-unique-links] a")).toHaveCount(2);
+    await expect(page.locator('[data-itt-3x-unique-links] a[href="../gowalla/index.html"]')).toHaveCount(1);
+    await expect(page.locator('[data-itt-3x-unique-links] a[href="../stumbleupon/index.html"]')).toHaveCount(0);
+    await page.goto("/years/2009/sites/wolfram/index.html");
+    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(1);
+    await expect(page.locator("[data-itt-3x-unique-links] a")).toHaveCount(3);
+    await expect(page.locator('[data-itt-3x-unique-links] a[href="../gowalla/index.html"]')).toHaveCount(1);
+    await expect(page.locator('[data-itt-3x-unique-links] a[href="../stumbleupon/index.html"]')).toHaveCount(1);
+    await expect(page.locator('[data-itt-3x-unique-links] a[href="../wordpress/index.html"]')).toHaveCount(1);
+    await page.goto("/years/2009/sites/chrome/index.html");
+    await expect(page.locator("[data-itt-3x-unique-links] a")).toHaveCount(3);
+    await page.goto("/years/2009/sites/facebook/index.html");
+    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
+    await page.goto("/years/2009/pages/home.html");
+    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
+    await page.goto("/years/2009/sites/friendfeed/index.html");
+    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
+    await page.goto("/years/2009/sites/minecraft/index.html");
+    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
+    await page.goto("/years/2009/sites/kindle/index.html");
+    await expect(page.locator("[data-itt-3x-unique-links]")).toHaveCount(0);
+    await completeLeftoverDest(
+      page,
+      "/years/2009/sites/gowalla/index.html",
+      "gowalla-lx",
+      "itt09-like",
+      "2009"
+    );
   });
 
   test("2010 leftover dest leftover-3× unique dest links formspring · flipboard hosts 3 · official dest 0", async ({

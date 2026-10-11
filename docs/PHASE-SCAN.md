@@ -338,7 +338,7 @@ There is **no UX phase 6**. Museum-grade UX 1–5 are the set.
 
 | Rule | Live |
 |------|------|
-| Trail n | 2004 = **8**, 2013 = **9**, 2014 = **9**. Official length 236/236 under disk law |
+| Trail n | 2004 = **8**, 2013 = **9**, 2014 = **9**. Official length 226/226 under disk law |
 | leftover-3× unique | Catalog `[]`. Warehouse leftover-3× specs assert the config files are **absent** |
 | Absent years | 2017–2019 and 2023–2025: no tree, no hub card, no React door |
 | 2000 n=11–40 | On trail, leftover, checklist open on purpose |

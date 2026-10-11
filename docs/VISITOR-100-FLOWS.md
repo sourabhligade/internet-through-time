@@ -46,7 +46,7 @@ Do not dest-farm dests. Do not dest-lock 2015 again. Do not dest-lock forests / 
 
 ## 3. Remaining ~11% (flows only)
 
-### 3.1 Official dest `data-official-need` — **236 / 236 dests = 100%**
+### 3.1 Official dest `data-official-need` — **226 / 226 dests = 100%**
 
 **Done 2026-09-20.** Same dests. Dest-true gold I/O. No new dests. Every playable-year official dest through the cap (2004=8, 2013=9, 2014=9, others 10) has `data-official-need`. Empty / trap never writes. e2e: `all-years-official-10-real.spec.js` + year mvp.
 
@@ -83,7 +83,7 @@ Do not dest-farm dests. Do not dest-lock 2015 again. Do not dest-lock forests / 
 |------|------|------------|
 | Dest folders | **18** dest-lock lean | older READ-FIRST **294** is dest-farm — do not restore |
 | Leftover dest leftover-2× warehouse | dest-lock **stripped** official dest leftover-2× **0** | READ-FIRST still says leftover-2× on every dest |
-| Leftover-3× unique dest-true dests | **0** · catalogs empty · dest-links **0** · amazon / google / instagram / twitter / youtube are leftover dests, not a unique-3× catalog | older copy said **5** dest-true faces |
+| Leftover-3× unique dest-true dests | **0** · catalogs empty · dest-links **n=3** (amazon · coinbaseipo · epicapple) · google / instagram / nft / twitter / youtube are hosts, not link dests | older copy said **5** dest-true faces |
 | Period files | `assets/period/2021/README-PIXELS.txt` failed-final · 0 capture files | — |
 | `css/period-2021.css` | **3.2 KB** (imports + ATT phone chrome) | `period-.css` **14.7 KB** |
 | ATT star dest | dest-true I/O · phone frame · failed-final · `data-official-need` | — |
@@ -91,13 +91,13 @@ Do not dest-farm dests. Do not dest-lock 2015 again. Do not dest-lock forests / 
 
  feels complete because GDPR **Manage** is the year in the chrome. 2021 ATT **Ask** is dest-true in a phone frame, but dest-lock stripped leftover dest leftover-2× warehouse, leftover-3× unique dest-true catalogs stay empty, and there is no period harvest.
 
-**Do not dest-lock revert 2021 to 294 dests.** That is dest-farm. **Do not dest-farm a leftover-3× unique dest-true catalog.** Live n is **0**. Cap memory 5 is unused.
+**Do not dest-lock revert 2021 to 294 dests.** That is dest-farm. **Do not dest-farm a leftover-3× unique dest-true catalog.** Dest-true live n is **0**. Dest-links live n is **3** (amazon · coinbaseipo · epicapple). Cap memory 5 is unused.
 
 ### 2021 dests on disk (18 — do not dest-farm)
 
 Official 10: att · signal · copilot · meta · windows11 · flash · chrome · windows10 · facebook · playable.
 
-Leftover dests (not a unique-3× catalog): amazon · coinbaseipo · epicapple · google · instagram · nft · twitter · youtube.
+Link dests: amazon · coinbaseipo · epicapple. Hosts, not link dests: google · instagram · nft · twitter · youtube.
 
 ### 2021 dest-true look without dest-farm
 
@@ -132,12 +132,12 @@ Do not dest-farm leftover dest leftover-3× unique dest-true dests past these st
 | Year | Leftover-3× unique dest-true dests | Stop |
 |------|-----------------------------------:|------|
 | Forests 1994–2006 | stacked leftover-3× workshop | Unique leftover-3×n **not the forest job** |
-| 2007 / 2010–2014 | dest-true catalogs **empty** · dest-links **2010 n=3** only | Do not restore a 9-face catalog |
+| 2007 / 2010–2014 | dest-true catalogs **empty** · dest-links n=3 on 2008, 2009, 2010, 2012, 2013, 2020, 2021, 2022 · 2007 and 2014 stay 0 | Do not restore a 9-face catalog |
 | 2017 | **0 leftover-3× unique dest-true dests** | Absent · not a door · leftover-20 not shipped |
 | 2018 | **0** | Absent · not a door |
-| 2021 | **0** · cap memory 5 is unused | Do not dest-farm a 5-face catalog |
-| 2022 | dest-true catalogs **empty** · dest-links **0** | Temu `ITT-2X-LINKS` is a leftover flow, not unique-catalog n |
-| 2009 | catalog leftover-3× | live HTML · Like `itt09-like` |
+| 2021 | dest-true **0** · dest-links n=3 (amazon · coinbaseipo · epicapple) · cap memory 5 unused | Do not dest-farm a 5-face catalog |
+| 2022 | dest-true **0** · dest-links n=3 (amazon · dalle2 · facebook) | Temu `ITT-2X-LINKS` is a leftover flow, not a unique-catalog row |
+| 2009 | dest-true **0** · dest-links n=3 (gowalla · stumbleupon · wordpress) | live HTML · Like `itt09-like` |
 
 ---
 
@@ -182,7 +182,7 @@ Fold or dest-true leftover dest leftover-2× warehouse. Do not dest-farm leftove
 
 - [x] ATT `data-official-need` (Phase 1). Ask + 2 ticks + Museum App field. Allow never writes.
 - [x] `period-2021.css` dest-true ATT chrome (phone · status 9:41 · home indicator · iOS alert · Fluent white card does not paint the alert).
-- [x] [`2021-READ-FIRST.md`](2021-READ-FIRST.md) dest folders **18** · leftover-3× unique dest-true catalogs **empty** · dest-links **0** · 2022 live.
+- [x] [`2021-READ-FIRST.md`](2021-READ-FIRST.md) dest folders **18** · leftover-3× unique dest-true catalogs **empty** · dest-links n=3 (amazon · coinbaseipo · epicapple) · 2022 live.
 - [x] Failed-final + dest-true cites (ATT Apple Support · Signal is WhatsApp’s 15 May deadline · Copilot 29 Jun 2021 · Meta 28 Oct 2021 · Win11 4 Oct 2021 · Flash EOL 31 Dec blocked 12 Jan 2021). No invented brand pixels.
 
 ### Phase 5 — period harvest 2022 (optional, honest)

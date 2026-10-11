@@ -1,7 +1,8 @@
 // @ts-check
 /**
  * Leftover-3× for 2022 — dest-true · not mock. leftover-3× unique is leftover-3x-unique.spec.js.
- * WANT stays empty. 2020–2022 HTML has no leftover-3× unique rail.
+ * WANT stays empty. 2020–2022 dest-true pop rails stay off.
+ * Unique dest-link rails are leftover-3x-unique-links.spec.js.
  */
 const fs = require("fs");
 const path = require("path");
@@ -17,7 +18,7 @@ const WANT = {};
 
 const YEARS = Object.keys(WANT);
 
-test("2020–2022 HTML has no leftover-3× unique rail", () => {
+test("2020–2022 HTML has no leftover-3× pop rail", () => {
   for (const year of ["2020", "2021", "2022"]) {
     const dir = path.join(ROOT, "years", year);
     const stack = [dir];
@@ -29,10 +30,6 @@ test("2020–2022 HTML has no leftover-3× unique rail", () => {
         if (ent.isDirectory()) stack.push(full);
         else if (ent.name.endsWith(".html")) {
           const html = fs.readFileSync(full, "utf8");
-          expect(
-            html.includes("ITT-3X-UNIQUE-LINKS") || html.includes("data-itt-3x-unique-links"),
-            full
-          ).toBe(false);
           expect(html.includes("data-itt-lo3x") || html.includes("data-pop-go"), full).toBe(false);
         }
       }

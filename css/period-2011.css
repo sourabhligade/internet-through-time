@@ -1,0 +1,6 @@
+/* Leftover rooms under years/2011/sites. No year door, no hub card. */
+html[data-itt-year="2011"] body {
+  margin: 0;
+  background: #ece9d8;
+  color: #000;
+}

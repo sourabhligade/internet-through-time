@@ -1,16 +1,50 @@
 [
   {
-    "year": "2010",
-    "dests": [
-      "formspring",
-      "groupon",
-      "reddit"
-    ],
+    "year": "2008",
+    "dests": ["addicting", "armorgames", "pogo"],
     "n": 3,
-    "keep": [
-      "formspring",
-      "groupon",
-      "reddit"
-    ]
+    "keep": ["addicting", "armorgames", "pogo"]
+  },
+  {
+    "year": "2009",
+    "dests": ["gowalla", "stumbleupon", "wordpress"],
+    "n": 3,
+    "keep": ["gowalla", "stumbleupon", "wordpress"]
+  },
+  {
+    "year": "2010",
+    "dests": ["formspring", "groupon", "reddit"],
+    "n": 3,
+    "keep": ["formspring", "groupon", "reddit"]
+  },
+  {
+    "year": "2012",
+    "dests": ["drawsomething", "googledrive", "snapchat"],
+    "n": 3,
+    "keep": ["drawsomething", "googledrive", "snapchat"]
+  },
+  {
+    "year": "2013",
+    "dests": ["kahoot", "giphy", "doordash"],
+    "n": 3,
+    "keep": ["kahoot", "giphy", "doordash"]
+  },
+  {
+    "year": "2020",
+    "dests": ["amazon", "clubhouse", "facebook"],
+    "n": 3,
+    "keep": ["amazon", "clubhouse", "facebook"]
+  },
+  {
+    "year": "2021",
+    "dests": ["amazon", "coinbaseipo", "epicapple"],
+    "n": 3,
+    "keep": ["amazon", "coinbaseipo", "epicapple"]
+  },
+  {
+    "year": "2022",
+    "dests": ["amazon", "dalle2", "facebook"],
+    "n": 3,
+    "keep": ["amazon", "dalle2", "facebook"]
   }
 ]

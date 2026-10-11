@@ -165,8 +165,9 @@
   }
 
   function foldDestAlso(doc) {
+    /* Unique dest-link rails stay in the body. This drawer is the older also-strip. */
     var nodes = doc.querySelectorAll(
-      "[data-itt-3x-also], [data-itt-3x-links], [data-itt-3x-unique-links], [data-itt-2x-links], [data-itt-pop-more]"
+      "[data-itt-3x-also], [data-itt-3x-links], [data-itt-2x-links], [data-itt-pop-more]"
     );
     if (!nodes.length) return;
     if (doc.querySelector("details.itt-also-year[data-itt-3x-also]")) return;
