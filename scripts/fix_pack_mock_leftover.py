@@ -25,7 +25,6 @@ STAR_TRAP = {
     "2000": "MapQuest",
     "2004": "thefacebook networks",
     "2005": "YouTube upload",
-    "2006": "Twttr",
 }
 
 PACK_TABLE = re.compile(

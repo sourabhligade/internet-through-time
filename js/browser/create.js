@@ -145,7 +145,6 @@
       "2003": "#3a6ea5",
       "2004": "#3a6ea5",
       "2005": "#3a6ea5",
-      "2006": "#3a6ea5",
       "2007": "#3a6ea5",
     };
     var wantDesk = (config.defaultPrefs && config.defaultPrefs.desktopBg) || PERIOD_DESK[YEAR] || "#008080";
@@ -533,23 +532,30 @@
       var prevAbs = iframe.getAttribute("src") || "";
       var prevNorm = normalizePath(prevAbs).split("?")[0];
       var nextNorm = normalizePath(path).split("?")[0];
-      var gen = loadGen;
-      /* Drop the previous document's subresources before the next request. */
-      haltIframeNetwork();
-      if (prevNorm === nextNorm && prevAbs.indexOf("about:") !== 0) {
-        ignoreIframeLoad = true;
-        iframe.src = "about:blank";
-        // rAF: faster than fixed 20ms timeout for same-document reload.
-        // A newer navigate bumps loadGen; this frame must not restore the old room.
-        requestAnimationFrame(function () {
-          if (gen !== loadGen) return;
-          ignoreIframeLoad = false;
-          iframe.src = abs;
-        });
-      } else {
-        ignoreIframeLoad = false;
-        iframe.src = abs;
+      /* Same-path Home/Reload used to swap about:blank then restore src.
+         That flashed the year window. location.reload keeps origin and
+         still gives a fresh document. Stop stays haltIframeNetwork. */
+      ignoreIframeLoad = false;
+      if (prevNorm === nextNorm && prevAbs && prevAbs.indexOf("about:") !== 0) {
+        try {
+          var win = iframe.contentWindow;
+          if (win && win.location && typeof win.location.reload === "function") {
+            var href = "";
+            try {
+              href = String(win.location.href || "");
+            } catch (eHref) {
+              href = "";
+            }
+            if (href && href.indexOf("about:") !== 0) {
+              haltIframeNetwork();
+              win.location.reload();
+              return;
+            }
+          }
+        } catch (eReload) { /* fall through to src assign */ }
       }
+      haltIframeNetwork();
+      iframe.src = abs;
     }
 
     function goBack() {
@@ -972,9 +978,9 @@
       imageRevealTimers.push(window.setTimeout(revealNext, PERF.imageStartMs));
     }
 
-    /* Same-path reload still swaps about:blank so the room is fresh.
-       boot.js can finish after the button is already on screen. A click in
-       that gap is held and replayed once the save handler is bound. */
+    /* Same-path reload uses location.reload so the room is fresh without
+       about:blank. boot.js can finish after the button is already on screen.
+       A click in that gap is held and replayed once the save handler is bound. */
     function armFreshSave(doc) {
       if (!doc || doc.__ittFreshSave) return;
       doc.__ittFreshSave = true;
@@ -1304,7 +1310,6 @@
         "2003": "MySpace · iTunes · WordPress",
         "2004": "Gmail · Flickr · Firefox",
         "2005": "YouTube · Maps · Reddit",
-        "2006": "Twitter · YouTube · Facebook",
         "2007": "iPhone · Gmail · Street View",
         "2009": "Like · FarmVille · Bing"
         
@@ -1332,7 +1337,6 @@
         "2003": "myspace or itunes",
         "2004": "gmail or flickr",
         "2005": "youtube or reddit",
-        "2006": "twitter or youtube",
         "2007": "iphone or gmail",
         "2009": "facebook or farmville"
         

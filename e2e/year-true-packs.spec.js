@@ -20,7 +20,6 @@ const STAR = {
   2000: "itt00-mapquest",
   2004: "itt04-thefacebook-networks",
   2005: "itt05-yt-uploads",
-  2006: "itt06-tweets",
 };
 
 async function clearKeys(page, keys) {

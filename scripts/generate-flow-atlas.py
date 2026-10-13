@@ -19,8 +19,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "dev" / "flow-atlas"
-# HTML doors only. 2015 omitted. 2017–2019 and 2023–2025 are absent.
-_HTML_YEARS = [str(y) for y in range(1994, 2010 + 1)] + [str(y) for y in range(2012, 2015)] + ["2020", "2021", "2022"]
+# HTML doors only. 2015 omitted. 2017 has no year-card key. 2018–2019 and 2023–2025 are absent.
+_HTML_YEARS = (
+    [str(y) for y in range(1994, 2006)]
+    + [str(y) for y in range(2007, 2011)]
+    + [str(y) for y in range(2012, 2015)]
+    + ["2020", "2021", "2022"]
+)
 YEARS = [y for y in _HTML_YEARS if (ROOT / "years" / y).is_dir()]
 
 
@@ -563,7 +568,7 @@ def render_index(years_data: list[dict]) -> str:
   <h2>HTML doors on disk · {len(years_data)}</h2>
   <p class="muted">
     {", ".join(yd["year"] for yd in years_data)} · {total_branches} trails · {total_sites} flow-map rooms (sites listed in trees).
-    2015 is omitted and 2017 is absent; they are not in this atlas. 2018, 2019, and 2023–2025 are absent.
+    2015 is omitted and 2017 has no year-card key; they are not in this atlas. 2018, 2019, and 2023–2025 are absent.
     This index is <b>not</b> part of the public museum — use it to plan trails and see what each year contains.
   </p>
   <p>

@@ -79,3 +79,18 @@
   min-height: 1.2em;
   font-size: 12px;
 }
+.mx-shell [data-itt-action-status][data-yg-receipt="ok"] {
+  color: #060 !important;
+  background: #e8f5e8 !important;
+  border-left: 4px solid #060 !important;
+}
+.mx-shell [data-itt-action-status][data-yg-receipt="hold"] {
+  color: #a00 !important;
+  background: #fde8e8 !important;
+  border-left: 4px solid #a00 !important;
+}
+.mx-shell [data-itt-action-status][data-yg-receipt="play"] {
+  color: inherit !important;
+  background: transparent !important;
+  border-left: 0 !important;
+}

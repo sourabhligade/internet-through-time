@@ -2,7 +2,7 @@
 /**
  * Official dest leftover-2× = 0. Gold I/O stays dest-true.
  * Empty / trap never write. Complete writes official. Leftover keys never write.
- * Dests: 1998 Snap · 2006 Line Rider · 2013 Loop Six.
+ * Dests: 1998 Snap · 2013 Loop Six.
  */
 const { test, expect } = require("@playwright/test");
 
@@ -14,18 +14,6 @@ const ROWS = [
     star: "itt98-lucky",
     leftover: ["itt98-snap-lx"],
     fill: "Snap leftover",
-  },
-  {
-    year: "2006",
-    href: "/years/2006/sites/playable/linerider.html",
-    official: "itt06-game-linerider",
-    star: "itt06-tweets",
-    leftover: [
-      "itt06-game-linerider-lx",
-      "itt06-game-linerider-d2",
-      "itt06-game-linerider-d4-lx-d4",
-    ],
-    fill: "Line Rider",
   },
   {
     year: "2013",

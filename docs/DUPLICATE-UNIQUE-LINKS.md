@@ -8,7 +8,7 @@
 **Law:** one dest once as a **link** per year ([`LEFTOVER-2X-UNIQUE-LINKS.md`](LEFTOVER-2X-UNIQUE-LINKS.md) L1 · [`LEFTOVER-3X-UNIQUE-LINKS.md`](YEAR-INCOMPLETE-NOW.md) T1 / T14).
 **Sibling:** [`DUPLICATE-FLOWS.md`](DUPLICATE-FLOWS.md).
 
-Leftover-3× unique dest-true dests stay **107**. Official dest leftover unique-link first paint **0**. Forests 1994–2006 have leftover-2× unique dest links only (no leftover-3× unique dest-true dests). **2017 is absent · not a door.** leftover-20 is unshipped. Do not dest-farm.
+Leftover-3× unique dest-true dests stay **107**. Official dest leftover unique-link first paint **0**. Forests 1994–2005 have leftover-2× unique dest links only (no leftover-3× unique dest-true dests). **2017 has no year-card key · not a door.** leftover-20 is unshipped. Do not dest-farm.
 
 This file maps every dest that sits on **both** leftover-2× unique dest **links** (`js/config/leftover-2x-unique-links.js` · `ITT-2X-LINKS`) and leftover-3× unique dest **links** (`js/config/leftover-3x-unique-links.js` · `ITT-3X-UNIQUE-LINKS`). Those dests appear twice as hrefs on leftover-3× unique dest-true dest pages (162 pages).
 
@@ -392,7 +392,7 @@ Host pages: **162**.
 - Forest leftover dests with stacked leftover-3× workshop (`data-itt-lo3x` count ≥ 2). Named stacked workshop. Unique leftover-3×n is not the forest job.
 - Official dests as leftover unique dest **link targets** on leftover dest pages. Allowed (L6 / T6). Official dest HTML leftover unique-link first paint stays 0.
 - leftover dest KEEP leftover dest-true I/O (`data-lo-panel`). Not a unique dest **link**.
-- leftover-2× harvest MISS forests 1994–1998 / 2005 / 2006 / .
+- leftover-2× harvest MISS forests 1994–1998 / 2005.
 - 2009 is live HTML. 2023–2025 wiped.
 
 ## Remaining after leftover-2× ∩ leftover-3× unique dest link kill
@@ -421,7 +421,6 @@ Official dest leftover unique dest **link** first paint is **0**. These dests ar
 | 2003 | 9 | `adsense` · `blogger` · `bloglines` · `friendster` · `itunes` · `linkedin` · `myspace` · `photobucket` · `wordpress` |
 | 2004 | 7 | `delicious` · `digg` · `facebook` · `firefox` · `flickr` · `gmail` · `web20conference` |
 | 2005 | 9 | `digg` · `flickr` · `housingmaps` · `itunes` · `maps` · `pandora` · `reddit` · `techcrunch` · `youtube` |
-| 2006 | 9 | `aws` · `facebook` · `gmail` · `googledocs` · `ie7` · `roblox` · `twitter` · `wikipedia` · `youtube` |
 | 2007 | 10 | `fbplat` · `gmail` · `ie6` · `iphone` · `kindle` · `playable` · `streetview` · `tumblr` · `twitter` · `youtube` |
 | 2010 | 10 | `facebook` · `farmville` · `foursquare` · `imgur` · `instagram` · `ipad` · `iphone` · `playable` · `twitter` · `youtube` |
 | 2012 | 9 | `facebook` · `flipboard` · `instagram` · `iphone` · `medium` · `path` · `pinterest` · `playable` · `wikipedia` |
@@ -451,7 +450,6 @@ Official dest leftover unique dest **link** first paint is **0**. These dests ar
 | 2003 | 6 | `cnn` · `delicious` · `flash` · `hi5` · `kazaa` · `skype` |
 | 2004 | 5 | `cnn` · `livejournal` · `myspace` · `orkut` · `skype` |
 | 2005 | 5 | `delicious` · `firefox` · `gmail` · `myspace` · `vimeo` |
-| 2006 | 6 | `delicious` · `digg` · `docs` · `flickr` · `maps` · `myspace` |
 | **sum** | **93** | |
 
 ### R3. Official dests still leftover-3× unique dest **link** dests (**13**) · T6 href-target
@@ -508,7 +506,6 @@ Leftover dest leftover dest-true I/O dests (keep / trap / field) are also leftov
 | 2003 | 24 |
 | 2004 | 96 |
 | 2005 | 35 |
-| 2006 | 35 |
 | 2007 | 5 |
 | 2010 | 1 |
 | 2012 | 2 |
@@ -525,7 +522,7 @@ Named stacked leftover-3× workshop on forests. Unique leftover-3×n is not the 
 
 ### R9. leftover-20 dests also leftover-2× unique dest **links** (2017)
 
-**2017 is absent · not a door.** leftover-20 is unshipped. leftover-2× unique dest catalog n=0. Do not dest-farm.
+**2017 has no year-card key · not a door.** leftover-20 is unshipped. leftover-2× unique dest catalog n=0. Do not dest-farm.
 
 ### Not leftover dest leftover dest-true cream on leftover-3× unique dest-true dests
 

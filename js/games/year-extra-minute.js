@@ -139,6 +139,10 @@
     }
 
     function trap(why) {
+      if (saved) {
+        setStatus("Already saved.");
+        return;
+      }
       traps += 1;
       setStatus((why || "Trap") + " · incomplete never writes.");
       paintHud();
@@ -210,7 +214,7 @@
         return;
       }
       if (saved) {
-        setStatus("Already saved · " + prefixYear(year) + "-game-" + gid + ".");
+        setStatus("Already saved.");
         return;
       }
       checkConfirm();
@@ -242,7 +246,7 @@
       step("save");
       paintBest();
       paintHud();
-      setStatus("Saved · " + prefixYear(year) + "-game-" + gid + ".");
+      setStatus("Saved.");
     }
 
     function bindStaticPick() {
@@ -658,7 +662,7 @@
       render();
       paintHud();
       paintBest();
-      setStatus(spec.startStatus || "Do the year-true steps. Incomplete never writes.");
+      setStatus(spec.startStatus || "Do the year-true steps.");
     }
 
     if (startBtn && startBtn.getAttribute("data-mx-bound") !== "1") {

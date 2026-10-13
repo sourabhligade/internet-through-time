@@ -16,11 +16,17 @@
   var statusEl = document.getElementById("play-status");
   var boardEl = document.getElementById("score-board");
 
+  function setPlayStatus(m) {
+    var YG = window.ITT && ITT.YearGame;
+    if (YG && YG.setStatus) YG.setStatus(statusEl, m);
+    else if (statusEl) statusEl.textContent = m;
+  }
+
   function clearTrack() {
     points = [];
     sled = null;
     riding = false;
-    if (statusEl) statusEl.textContent = "Click the canvas to place track points · then Ride";
+    setPlayStatus("Click the canvas to place track points · then Ride");
     if (scoreEl) scoreEl.textContent = "0";
     draw();
   }
@@ -44,10 +50,9 @@
     if (e && e.preventDefault) e.preventDefault();
     var p = canvasPos(e);
     points.push(p);
-    if (statusEl) {
-      statusEl.textContent =
-        points.length + " point(s) · " + (points.length < 2 ? "add more" : "press Ride");
-    }
+    setPlayStatus(
+      points.length + " point(s) · " + (points.length < 2 ? "add more" : "press Ride")
+    );
     draw();
   }
 
@@ -72,7 +77,7 @@
           { x: 500, y: 180 }
         ];
       } else {
-        if (statusEl) statusEl.textContent = "Need at least 2 points — click canvas first";
+        setPlayStatus("Need at least 2 points — click canvas first");
         return;
       }
     }
@@ -85,7 +90,7 @@
       seg: 0
     };
     riding = true;
-    if (statusEl) statusEl.textContent = "Riding…";
+    setPlayStatus("Riding…");
   }
 
   function tick() {
@@ -123,7 +128,7 @@
     if (!riding) return;
     riding = false;
     var sc = sled ? Math.floor(sled.dist) : 0;
-    if (statusEl) statusEl.textContent = "Run finished · distance " + sc + " · Ride / R to retry";
+    setPlayStatus("Run finished · distance " + sc + " · Ride / R to retry");
     try {
       if (window.ITT && ITT.YearGame) {
         if (ITT.YearGame.flash) ITT.YearGame.flash();
@@ -194,7 +199,7 @@
   if (clearBtn) clearBtn.addEventListener("click", clearTrack);
 
   if (window.ITTGames) window.ITTGames.renderBoard(boardEl, "sled");
-  if (statusEl) statusEl.textContent = "Click canvas to place track points · then Ride";
+  setPlayStatus("Click canvas to place track points · then Ride");
   draw();
   requestAnimationFrame(tick);
 })();

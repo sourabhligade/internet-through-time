@@ -9,10 +9,9 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
-const YEARS = ["2006", "2007","2009", "2010"];
+const YEARS = ["2007","2009", "2010"];
 
 const GOLD = {
-  2006: ["itt06-tweets", "itt06-feed", "itt06-fb-open", "itt06-yt", "itt06-gdocs", "itt06-ie7"],
   2007: ["itt07-iphone", "itt07-streetview", "itt07-gmail", "itt07-tumblr", "itt07-ie6"],
   2009: ["itt09-like", "itt09-farm", "itt09-bing", "itt09-iphone", "itt09-kickstarter", "itt09-win7"],
   2010: ["itt10-ig-posts", "itt10-ig", "itt10-iphone4", "itt10-ipad", "itt10-fb-og", "itt10-imgur"],
@@ -279,8 +278,8 @@ async function walkLeftover4x(page, year) {
 }
 
 test.describe("dest folders stay frozen", () => {
-  test("370 / 33 / 78 / 29", () => {
-    const want = { 2006: 370, 2007: 33, 2009: 78, 2010: 29 };
+  test("33 / 78 / 29", () => {
+    const want = { 2007: 33, 2009: 78, 2010: 29 };
     for (const [y, n] of Object.entries(want)) {
       const dir = path.join(ROOT, "years", y, "sites");
       const got = fs.readdirSync(dir).filter((name) => fs.statSync(path.join(dir, name)).isDirectory()).length;

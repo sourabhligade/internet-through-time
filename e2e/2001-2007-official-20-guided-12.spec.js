@@ -19,14 +19,13 @@ function hasLeftoverMark(html, suf) {
   if (suf === "delicious" && html.includes("data-delicious-post")) return true;
   return false;
 }
-const YEARS = ["2001", "2002", "2003", "2004", "2005", "2006", "2007"];
+const YEARS = ["2001", "2002", "2003", "2004", "2005", "2007"];
 const STAR = {
   2001: "itt01-wiki",
   2002: "itt02-stumble",
   2003: "itt03-photobucket",
   2004: "itt04-thefacebook-networks",
   2005: "itt05-yt-uploads",
-  2006: "itt06-tweets",
   2007: "itt07-iphone",
 };
 const DEST_HTML = {
@@ -35,7 +34,6 @@ const DEST_HTML = {
   2003: { dests: 203, html: 268 },
   2004: { dests: 805, html: 955 },
   2005: { dests: 806, html: 966 },
-  2006: { dests: 370, html: 562 },
   2007: { dests: 33, html: 92 },
 };
 

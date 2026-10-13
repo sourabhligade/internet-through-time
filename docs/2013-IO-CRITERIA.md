@@ -88,7 +88,7 @@ Same I1–I14 as lean HTML I/O, with 2013 locks:
 |:--:|:--:|:--:|:--:|:--:|:--:|:---:|:---:|
 | Y* | Y | Y | Y | Y | Y | Y | Y |
 
-\* Year-start tour path fixed to `record.html`. Guided / start-data already pointed at record.
+* Year-start tour path fixed to `record.html`. Guided / start-data already pointed at record.
 
 ---
 

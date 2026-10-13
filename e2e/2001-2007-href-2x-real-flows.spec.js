@@ -67,16 +67,6 @@ const YEARS = [
     ]),
   },
   {
-    year: "2006",
-    star: "itt06-tweets",
-    gold: "/years/2006/sites/twitter/index.html",
-    leftover: /** @type {LoDest[]} */ ([
-      { href: "/years/2006/sites/twitter/index.html", suffix: "t140", needPick: "go", minPick: 0, field: true, placeholder: "leftover" },
-      { href: "/years/2006/sites/youtube/index.html", suffix: "yt", needPick: "watch", minPick: 0, field: true, placeholder: "leftover yt" },
-      { href: "/years/2006/sites/facebook/feed.html", suffix: "facebook-feed", needPick: "go", minPick: 0, field: true, placeholder: "leftover" },
-    ]),
-  },
-  {
     year: "2007",
     star: "itt07-iphone",
     gold: "/years/2007/sites/iphone/index.html",
@@ -94,7 +84,6 @@ const DEST_HTML_FREEZE = {
   2003: { dests: 203, html: 268 },
   2004: { dests: 805, html: 955 },
   2005: { dests: 806, html: 966 },
-  2006: { dests: 370, html: 562 },
   2007: { dests: 33, html: 92 },
 };
 

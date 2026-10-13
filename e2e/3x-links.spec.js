@@ -11,7 +11,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-const SKIP_YEARS = new Set(["2015", "2017", "2018", "2019"]);
+const SKIP_YEARS = new Set(["2015", "2018", "2019"]);
 for (let y = 1994; y <= 2010; y++) {
   const s = String(y);
   if (!SKIP_YEARS.has(s)) YEARS.push(s);
@@ -20,7 +20,7 @@ for (let y = 2012; y <= 2015; y++) {
   const s = String(y);
   if (!SKIP_YEARS.has(s)) YEARS.push(s);
 }
-for (let y = 2017; y <= 2022; y++) {
+for (let y = 2018; y <= 2022; y++) {
   const s = String(y);
   if (!SKIP_YEARS.has(s)) YEARS.push(s);
 }

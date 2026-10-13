@@ -1,6 +1,6 @@
 /* 2007 document styles — XP · IE6 · iPhone is a room
-   Year delta: @import period-2006 then 2007-specific rules. */
-@import url("period-2006.css");
+   Year delta: @import period-2005 then 2007-specific rules. */
+@import url("period-2005.css");
 
 body.year-2007 .itt-year-chip {
   color: #0a246a;

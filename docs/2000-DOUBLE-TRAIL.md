@@ -1,6 +1,6 @@
 # 2000 double trail — implement checklist
 
-**STOP (2026-09-30 docs pass).** 2017 is absent, so leftover-20 is not a live rail. Do not dest-farm a second leftover-20 onto 2000 from the unchecked Phase 0 reserve rows. Stops 21–40 already on disk stay. Not ship law. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
+**STOP (2026-09-30 docs pass).** 2017 has no year-card key, so leftover-20 is not a live rail. Do not dest-farm a second leftover-20 onto 2000 from the unchecked Phase 0 reserve rows. Stops 21–40 already on disk stay. Not ship law. [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 Stops 21–40 are on disk. The live 2000 trail is 40 stops in `js/config/flow-trails.js` (501 site folders). Do not add a second copy of these rows.
 
@@ -66,7 +66,7 @@ In the `"2000"` array of `js/config/flow-trails.js`, after `n` 20 (`itt00-netsca
 
 ### Phase 4 — test
 
-Add one test to `e2e/2000-double-trail.spec.js` (new file, same shape as `e2e/leftover-2005-2006-copies.spec.js`).
+Add one test to `e2e/2000-double-trail.spec.js` (new file, same shape as `e2e/leftover-2005-copies.spec.js`).
 
 - [ ] `openFresh` clears `itt00-<slug>`.
 - [ ] First click or empty field expects the key falsy.

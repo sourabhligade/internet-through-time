@@ -14,8 +14,8 @@
   }
 
   function key(k) {
-    /* 2004 Orkut engine. Current-year prefix would stamp itt06-orkut-friends
-       as toy on 2006 leftover dests. */
+    /* 2004 Orkut engine. Current-year prefix would stamp a later-year orkut-friends key
+       as toy on leftover dests. */
     return "itt04-orkut-" + k;
   }
   function loadFriends() {

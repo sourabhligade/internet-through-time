@@ -152,18 +152,6 @@
       famous: "HoverChop + leftover cabinets",
       accent: "#c00"
     },
-    "2006": {
-      id: "sled",
-      title: "TrailSled",
-      href: "game.html",
-      key: "itt06-game-sled",
-      inspire: "Line Rider–class draw-track leftover on the Twttr year",
-      blurb: "Draw a trail. Ride it. Incomplete never writes.",
-      why: "2006 leftover cabinet. Star stays Twttr update.",
-      era: "XP + IE6. News Feed. Google owns YouTube.",
-      famous: "TrailSled",
-      accent: "#00aced"
-    },
     "2008": {
       id: "goospan",
       title: "Goo Span",

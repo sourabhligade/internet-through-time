@@ -25,7 +25,6 @@ const GOLD = [
   { year: "2003", dest: "sites/photobucket/index.html", star: "itt03-photobucket" },
   { year: "2004", dest: "sites/facebook/networks.html", star: "itt04-thefacebook-networks" },
   { year: "2005", dest: "sites/youtube/upload.html", star: "itt05-yt-uploads" },
-  { year: "2006", dest: "sites/twitter/index.html", star: "itt06-tweets" },
   { year: "2007", dest: "sites/iphone/index.html", star: "itt07-iphone" },
     { year: "2010", dest: "sites/instagram/index.html", star: "itt10-ig-posts" },
   { year: "2012", dest: "sites/instagram/android.html", star: "itt12-ig-android" },

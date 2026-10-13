@@ -1,8 +1,8 @@
 # Code structure — SRP map
 
 **Date:** 2026-10-07  
-**Law:** 23 doors. HTML 1994–2010, 2012–2014, and 2020–2022. **2015 omitted** (no React door). Absent: 2017–2019 and 2023–2025. **leanBoot:** 2007, 2008, 2009, 2010, 2012, 2013, 2014, 2020, 2021, 2022. Year differences live in **config + dest HTML**. Shared behavior lives **once**. See [`ARCHITECTURE.md`](ARCHITECTURE.md) and [`DISK-TRUTH.md`](DISK-TRUTH.md).
-**Do not** dest-farm leftover-20, unfreeze 1994–2006, or grow leftover-3× unique dest-true catalogs (they stay **empty**). leftover-3× unique dest-links are n=3 on 2008, 2009, 2010, 2012, 2013, 2020, 2021, and 2022. 2007 and 2014 stay 0.
+**Law:** 22 doors. HTML 1994–2005, 2007–2010, 2012–2014, and 2020–2022. **2015 omitted** (no React door). **2017 has no year-card key.** Absent: 2018–2019 and 2023–2025. **leanBoot:** 2007, 2008, 2009, 2010, 2012, 2013, 2014, 2020, 2021, 2022. Year differences live in **config + dest HTML**. Shared behavior lives **once**. See [`ARCHITECTURE.md`](ARCHITECTURE.md) and [`DISK-TRUTH.md`](DISK-TRUTH.md).
+**Do not** dest-farm leftover-20, unfreeze 1994–2005, or grow leftover-3× unique dest-true catalogs (they stay **empty**). leftover-3× unique dest-links are n=3 on 2008, 2009, 2010, 2012, 2013, 2020, 2021, and 2022. 2007 and 2014 stay 0.
 
 ## Target layout
 

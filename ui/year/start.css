@@ -36,7 +36,6 @@ html[data-itt-year="2001"] body.itt-start-page {
 html[data-itt-year="2002"] body.itt-start-page,
 html[data-itt-year="2003"] body.itt-start-page,
 html[data-itt-year="2004"] body.itt-start-page,
-html[data-itt-year="2006"] body.itt-start-page,
 html[data-itt-year="2007"] body.itt-start-page,
 html[data-itt-year="2005"] body.itt-start-page,
 html[data-itt-year="2005"] body[data-itt-start] {
@@ -220,8 +219,6 @@ html[data-itt-year="2004"] .ott-guided,
 html[data-itt-year="2004"] .ott-flows,
 html[data-itt-year="2005"] .ott-guided,
 html[data-itt-year="2005"] .ott-flows,
-html[data-itt-year="2006"] .ott-guided,
-html[data-itt-year="2006"] .ott-flows,
 html[data-itt-year="2007"] .ott-guided,
 html[data-itt-year="2007"] .ott-flows,
 html[data-itt-year="2008"] .ott-guided,
@@ -240,8 +237,6 @@ html[data-itt-year="2004"] .ott-guided a,
 html[data-itt-year="2004"] .ott-flows a,
 html[data-itt-year="2005"] .ott-guided a,
 html[data-itt-year="2005"] .ott-flows a,
-html[data-itt-year="2006"] .ott-guided a,
-html[data-itt-year="2006"] .ott-flows a,
 html[data-itt-year="2007"] .ott-guided a,
 html[data-itt-year="2007"] .ott-flows a,
 html[data-itt-year="2008"] .ott-guided a,
@@ -254,7 +249,6 @@ html[data-itt-year="2002"] body.itt-start-page a,
 html[data-itt-year="2003"] body.itt-start-page a,
 html[data-itt-year="2004"] body.itt-start-page a,
 html[data-itt-year="2005"] body.itt-start-page a,
-html[data-itt-year="2006"] body.itt-start-page a,
 html[data-itt-year="2007"] body.itt-start-page a {
   color: #cfe4ff;
 }
@@ -262,13 +256,11 @@ html[data-itt-year="2002"] body.itt-start-page .itt-year-honesty a,
 html[data-itt-year="2003"] body.itt-start-page .itt-year-honesty a,
 html[data-itt-year="2004"] body.itt-start-page .itt-year-honesty a,
 html[data-itt-year="2005"] body.itt-start-page .itt-year-honesty a,
-html[data-itt-year="2006"] body.itt-start-page .itt-year-honesty a,
 html[data-itt-year="2007"] body.itt-start-page .itt-year-honesty a,
 html[data-itt-year="2002"] body.itt-start-page .itt-la-col a,
 html[data-itt-year="2003"] body.itt-start-page .itt-la-col a,
 html[data-itt-year="2004"] body.itt-start-page .itt-la-col a,
 html[data-itt-year="2005"] body.itt-start-page .itt-la-col a,
-html[data-itt-year="2006"] body.itt-start-page .itt-la-col a,
 html[data-itt-year="2007"] body.itt-start-page .itt-la-col a {
   color: #0000ee;
 }
@@ -276,7 +268,6 @@ html[data-itt-year="2002"] body.itt-start-page .itt-year-star a,
 html[data-itt-year="2003"] body.itt-start-page .itt-year-star a,
 html[data-itt-year="2004"] body.itt-start-page .itt-year-star a,
 html[data-itt-year="2005"] body.itt-start-page .itt-year-star a,
-html[data-itt-year="2006"] body.itt-start-page .itt-year-star a,
 html[data-itt-year="2007"] body.itt-start-page .itt-year-star a {
   color: #1b5e20;
   background: #e8f5e9;

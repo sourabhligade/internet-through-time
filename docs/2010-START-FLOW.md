@@ -98,7 +98,7 @@ Next hops in `flow-trails.js` walk 1→10 then loop to Instagram.
 | ★ Star | `sites/instagram/index.html` | `itt10-ig-posts` |
 | P0 machines | iPad `order.html` · iPhone 4 · Open Graph | `itt10-ipad` · `itt10-iphone4` · `itt10-fb-og` |
 | New · 2010 extras | IG second share · iPad radios | extra `itt10-ig-2` · extra `itt10-ipad-order` on the official dests |
-| 5× F1–F5 · 2010 | **F2** Instagram · **F3** Imgur · **F4** Facebook OG · **F5** YouTube | map `do` names `itt10-facebook` and `itt10-youtube`. Dest HTML owns `itt10-fb-og` and `itt10-yt`. **No F1 row.** |
+| 5× F1–F5 · 2010 | **F2** Instagram · **F3** Imgur · **F4** Facebook OG · **F5** YouTube | map `do` names dest keys `itt10-fb-og` and `itt10-yt`. **No F1 row.** |
 
 `e2e/5x-recheck.matrix.json` 2010 is `mode: panel`, star Instagram, four flows:
 
@@ -214,7 +214,7 @@ Year game: Sling Nest `itt10-game-slingnest` · official n=10. Famous cabinets: 
 | Id | What | Live |
 |----|------|------|
 | H1 | Start iPad is lobby `index.html` | Lobby links `order.html`. Official write is `itt10-ipad` on order. Same pattern as 1994 IUMA lobby → listen. |
-| H2 | Map 5× F1 missing · F4/F5 keys | Map `do` `itt10-facebook` / `itt10-youtube` vs dest `itt10-fb-og` / `itt10-yt`. Matrix same mismatch. Dest HTML 5× count 0. |
+| H2 | Map 5× F1 missing · leftover 5× matrix keys | Map F4/F5 `do` matches dest `itt10-fb-og` / `itt10-yt`. `e2e/5x-recheck.matrix.json` 2010 panel still uses leftover suffixes `itt10-facebook` / `itt10-youtube`. Dest HTML 5× count 0. |
 | H3 | leftover trail 0 | Lean 10+0. leftover-2× unique 12 are dest hrefs, not leftover-trail n=11+. |
 | H4 | Four dest folders off unique catalogs | `chrome` `formspring` `groupon` `reddit` exist. groupon/reddit have pop leftover faces. |
 | H5 | Warehouse dest-lock tests | Pinterest / UberCab / Ask / Instant dest folders stay skipped. |

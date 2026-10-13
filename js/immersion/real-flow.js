@@ -229,7 +229,7 @@
             btn.getAttribute("data-ok-msg") ||
             (ITT.UX && ITT.UX.isOn && ITT.UX.isOn("realCoach") && ITT.UX.RealCoach
               ? ITT.UX.RealCoach.messageSuccess(yOk, full)
-              : "Saved in this browser.");
+              : "Saved.");
           feedback(msgOk, st);
           markUsed(btn.getAttribute("data-tour-id") || undefined);
           try {
@@ -339,7 +339,7 @@
             feedback("This browser blocked the save.", st, { error: true });
             return;
           }
-          feedback("Saved in this browser.", st);
+          feedback("Saved.", st);
           markUsed(form.getAttribute("data-tour-id") || undefined);
           try {
             var nexts = doc.querySelectorAll("[data-next-flow]");

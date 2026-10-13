@@ -39,10 +39,6 @@
 /years/2005/pages/home.html
 /years/2005/pages/about.html
 /years/2005/sites/youtube/upload.html
-/years/2006/
-/years/2006/pages/home.html
-/years/2006/pages/about.html
-/years/2006/sites/twitter/index.html
 /years/2010/
 /years/2010/pages/home.html
 /years/2010/pages/about.html

@@ -254,22 +254,6 @@
       "immersion/one-thing-machines.js",
       "immersion/source-flows.js"
     ],
-    "2006": [
-      "immersion/year-2006-extras.js",
-      "immersion/twitter.js",
-      "immersion/docs.js",
-      "immersion/aws.js",
-      "immersion/youtube.js",
-      "immersion/maps.js",
-      "immersion/facebook.js",
-      "immersion/digg.js",
-      "immersion/gmail.js",
-      "immersion/flickr.js",
-      "immersion/delicious.js",
-      "immersion/amazon.js",
-      "immersion/one-thing-machines.js",
-      "immersion/source-flows.js"
-    ],
     "2005": [
       "immersion/amazon.js",
       "immersion/auction.js",

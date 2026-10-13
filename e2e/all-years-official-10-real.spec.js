@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * Every official-10 dest on the 23 HTML doors is a REAL writer.
+ * Every official-10 dest on the 22 HTML doors is a REAL writer.
  * Incomplete / trap / empty never writes whenKey.
  * Complete writes year-prefixed JSON { real, year } (games write { real, gameId }).
  */
@@ -163,17 +163,6 @@ const STAR = {
       const n = await reqs.count();
       for (let i = 0; i < n; i++) await reqs.nth(i).check();
       await page.locator("form[data-yt-upload] button[type='submit']").click();
-    },
-  },
-  "itt06-tweets": {
-    incomplete: async (page) => {
-      await page.locator("[data-tw06-post]").click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-tw06-req]").nth(0).check();
-      await page.locator("[data-tw06-req]").nth(1).check();
-      await page.fill("[data-tw06-body]", "just setting up my twttr");
-      await page.locator("[data-tw06-post]").click();
     },
   },
   "itt07-iphone": {

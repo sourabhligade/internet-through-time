@@ -31,7 +31,7 @@
       },
       incompleteField: "Fill the required field, then try again.",
       success: function () {
-        return "Saved in this browser.";
+        return "Saved.";
       },
       shellCoach:
         "This is a museum desktop. The big window is the period web. All years is the museum list. Toolbar Home opens this year’s Starting Point.",
@@ -49,7 +49,7 @@
       },
       incompleteField: "Type the required field first (not a soft mock).",
       success: function () {
-        return "Saved in this browser.";
+        return "Saved.";
       },
       shellCoach:
         "This is a museum desktop. The big window is the period web. All years is the museum list. Toolbar Home opens this year’s Starting Point.",
@@ -69,7 +69,7 @@
       },
       incompleteField: "A required field is empty.",
       success: function () {
-        return "Saved in this browser.";
+        return "Saved.";
       },
       shellCoach:
         "This is a museum desktop. The big window is the period web. All years is the museum list. Toolbar Home opens this year’s Starting Point.",
@@ -89,7 +89,7 @@
       },
       incompleteField: "Fill the required field to continue.",
       success: function () {
-        return "Saved in this browser.";
+        return "Saved.";
       },
       shellCoach:
         "This is a museum desktop. The big window is the period web. All years is the museum list. Toolbar Home opens this year’s Starting Point.",
@@ -109,7 +109,7 @@
       },
       incompleteField: "Required text is empty.",
       success: function () {
-        return "Saved in this browser.";
+        return "Saved.";
       },
       shellCoach:
         "This is a museum desktop. The big window is the period web. All years is the museum list. Toolbar Home opens this year’s Starting Point.",
@@ -129,7 +129,7 @@
       },
       incompleteField: "Required field missing — not saved.",
       success: function () {
-        return "Saved in this browser.";
+        return "Saved.";
       },
       shellCoach:
         "This is a museum desktop. The big window is the period web. All years is the museum list. Toolbar Home opens this year’s Starting Point.",

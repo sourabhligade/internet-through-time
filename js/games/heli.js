@@ -21,6 +21,12 @@
   var statusEl = document.getElementById("play-status");
   var boardEl = document.getElementById("score-board");
 
+  function setPlayStatus(m) {
+    var YG = window.ITT && ITT.YearGame;
+    if (YG && YG.setStatus) YG.setStatus(statusEl, m);
+    else if (statusEl) statusEl.textContent = m;
+  }
+
   function reset() {
     y = H / 2;
     vy = 0;
@@ -30,9 +36,7 @@
     // Wide gaps so the game is actually playable
     for (var i = 0; i < 5; i++) spawnGap(W + 80 + i * 200);
     running = true;
-    if (statusEl) {
-      statusEl.textContent = "Hold mouse button (or Space) on the game to climb · release to fall";
-    }
+    setPlayStatus("Hold mouse button (or Space) on the game to climb · release to fall");
   }
 
   function spawnGap(x) {
@@ -46,7 +50,7 @@
     running = false;
     dead = true;
     var sc = Math.floor(dist);
-    if (statusEl) statusEl.textContent = "Crashed! Score " + sc + " — tap / Start / R to retry";
+    setPlayStatus("Crashed! Score " + sc + " — tap / Start / R to retry");
     try {
       if (window.ITT && ITT.YearGame) {
         if (ITT.YearGame.flash) ITT.YearGame.flash();
@@ -191,7 +195,7 @@
   }
 
   if (window.ITTGames) window.ITTGames.renderBoard(boardEl, "heli");
-  if (statusEl) statusEl.textContent = "Click the game (or Start), then hold to climb";
+  setPlayStatus("Click the game (or Start), then hold to climb");
   draw();
   requestAnimationFrame(tick);
 })();

@@ -443,6 +443,7 @@
           "room": "sites/facebook/index.html",
           "next": "sites/youtube/index.html",
           "key": "itt10-facebook",
+          "pack": "leftover",
           "ok": true,
           "checks": 2
         },
@@ -451,6 +452,7 @@
           "room": "sites/youtube/index.html",
           "next": "sites/twitter/index.html",
           "key": "itt10-youtube",
+          "pack": "leftover",
           "ok": true,
           "checks": 2
         },
@@ -579,7 +581,6 @@
     "2000": "sites/mapquest/index.html",
     "2004": "sites/facebook/networks.html",
     "2005": "sites/pandora/index.html",
-    "2006": "sites/twitter/index.html",
     "2007": "sites/iphone/index.html",
     "2009": "sites/facebook/index.html",
     "2010": "sites/instagram/index.html",

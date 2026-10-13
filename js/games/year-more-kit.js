@@ -263,7 +263,7 @@
         step("acts");
         if (kind === "hold") step("hold");
       } else {
-        status("Running · " + kind + " · need " + need + ". Incomplete never writes.");
+        status("Running · " + kind + " · need " + need + ".");
       }
       paint();
     }
@@ -378,7 +378,7 @@
           return;
         }
         if (!Y.saveBest) {
-          status("YearGame missing.");
+          status("This browser blocked the save.");
           return;
         }
         var blob = Y.saveBest(gid, Math.max(score, 8), {
@@ -393,7 +393,7 @@
         step("save");
         paint();
         revealOwn(host);
-        status("Saved leftover game · " + (Y.storageKey ? Y.storageKey(gid, year) : "itt-game-" + gid));
+        status("Saved.");
         return blob;
       });
     }

@@ -2,11 +2,11 @@
 
 **Date:** 2026-10-08  
 **Status:** 1994–1997 through 2022–2025 phases 1–6 are done locally, including 2014–2017. Leftover-2× dests with no save hook stay on disk and are not dest-farmed. Standing gate lives in this file.  
-**Law:** `js/year-card.json` + `scripts/itt_gate.py` `SHIP_YEARS`. Hub is 23 doors. Frozen HTML is 1994–2006. leanBoot is 2007–2010, 2012–2014, and 2020–2022. 2015 is omitted. Absent: 2017–2019 and 2023–2025.
+**Law:** `js/year-card.json` + `scripts/itt_gate.py` `SHIP_YEARS`. Hub is 22 doors. Frozen HTML is 1994–2005. leanBoot is 2007–2010, 2012–2014, and 2020–2022. 2015 is omitted. 2017 has no year-card key. Absent: 2018–2019 and 2023–2025.
 
 This plan does not reopen `docs/PROD-USER-DATA-SRP.md` or `docs/MUSEUM-GRADE-UI.md`. Those phases stay as shipped. This plan runs the six phases on every working flow already on disk in the band: trail stops, leftover-2× dests, and every other year-site page that already has a save control. Scan of remaining overclaim vs disk: [`PHASE-SCAN.md`](PHASE-SCAN.md).
 
-Do not dest-farm. Do not add a room or a year. Do not restore the old leftover-3× set. Do not restore 2017–2019 or 2023–2025. Do not unfreeze 1994–2006. Do not run 1999–2004 `2x`. A frozen band is edited in `js/` and in the band register. One existing button may lose a second save hook. The year forest stays.
+Do not dest-farm. Do not add a room or a year. Do not restore the old leftover-3× set. Do not restore 2017–2019 or 2023–2025. Do not unfreeze 1994–2005. Do not run 1999–2004 `2x`. A frozen band is edited in `js/` and in the band register. One existing button may lose a second save hook. The year forest stays.
 
 Local check stays at http://127.0.0.1:8080. Run impact on a symbol before editing it.
 
@@ -20,15 +20,15 @@ Counted from disk on 2026-10-07, live years only:
 
 | What | Count |
 | --- | --- |
-| Year-site HTML pages | 6,831 |
-| Pages that already have a save control (`data-lo-save`, `data-official-verb`, `data-ytl-go`, `data-yt-upload`, `data-game-start`, `data-wiki-save`, or `data-su-stumble`) | 5,821 |
-| Dest folders under `years/*/sites/` | 4,901 |
-| Leftover-2× unique dests in `e2e/leftover-2x-unique-links.matrix.json` | 1,138, and all 1,138 folders are on disk |
-| Trail rows in `js/config/flow-trails.js` | 376 |
+| Year-site HTML pages | 6,171 |
+| Pages that already have a save control (`data-lo-save`, `data-official-verb`, `data-ytl-go`, `data-yt-upload`, `data-game-start`, `data-wiki-save`, or `data-su-stumble`) | 5,214 |
+| Dest folders under `years/*/sites/` | 4,461 |
+| Leftover-2× unique dests in `e2e/leftover-2x-unique-links.matrix.json` | 1,037, and all 1,037 folders are on disk |
+| Trail rows in `js/config/flow-trails.js` | 356 |
 | React doors | 0. 2015 is omitted |
 | Checklist lines that name an `itt` key | 508, of which 480 are ticked |
 
-The first draft of this plan only walked the official trail, about 256 stops (that count included omitted 2015). Live official HTML stops are 226. That is the star path. The working set is the 5,821 save pages. The six phases below run on that set, one band at a time. The register for a band is generated from the folders and the matrix. It is not a hand-written checklist of 5,821 lines.
+The first draft of this plan only walked the official trail, about 256 stops (that count included omitted 2015). Live official HTML stops are 216. That is the star path. The working set is the 5,214 save pages. The six phases below run on that set, one band at a time. The register for a band is generated from the folders and the matrix. It is not a hand-written checklist of 5,214 lines.
 
 | Year | HTML | Save pages | Dest folders | Trail rows | Leftover-2× |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -44,7 +44,6 @@ The first draft of this plan only walked the official trail, about 256 stops (th
 | 2003 | 259 | 223 | 203 | 20 | 21 |
 | 2004 | 946 | 902 | 805 | 18 | 148 |
 | 2005 | 957 | 921 | 806 | 20 | 92 |
-| 2006 | 553 | 510 | 370 | 20 | 101 |
 | 2007 | 83 | 27 | 33 | 10 | 17 |
 | 2008 | 116 | 115 | 113 | 10 | 47 |
 | 2009 | 142 | 142 | 78 | 10 | 33 |
@@ -56,15 +55,15 @@ The first draft of this plan only walked the official trail, about 256 stops (th
 | 2020 | 24 | 22 | 22 | 10 | 0 |
 | 2021 | 60 | 18 | 18 | 10 | 0 |
 | 2022 | 31 | 29 | 25 | 10 | 0 |
-| **Live total** | **6,831** | **5,821** | **4,898** | **376** | **1,138** |
+| **Live total** | **6,171** | **5,214** | **4,461** | **356** | **1,037** |
 
 2017, 2018, 2019, 2023, 2024, and 2025 are 0. They stay 0.
 
 ## What the official trail still has wrong
 
-`ITT.flowTrails` is 376 rows. Official length is 10, except 2004 (8) and 2013 and 2014 (9). That is 226 official HTML stops.
+`ITT.flowTrails` is 356 rows. Official length is 10, except 2004 (8) and 2013 and 2014 (9). That is 216 official HTML stops.
 
-226 of those 226 have a ticked line in `docs/checklists/` for the live HTML official stops. The page `data-official-key` matches the trail key on every HTML official stop that was opened. Facebook 1B `itt12-facebook` is a ticked 2012 line. **2015 is omitted.** The 2015 checklist is deleted with the door.
+216 of those 216 have a ticked line in `docs/checklists/` for the live HTML official stops. The page `data-official-key` matches the trail key on every HTML official stop that was opened. Facebook 1B `itt12-facebook` is a ticked 2012 line. **2015 is omitted.** The 2015 checklist is deleted with the door.
 
 2000 stops 21–40 are on the trail and on disk, and their checklist lines are open. Each page says it is a leftover and not an official 2000 stop. They stay leftover. They are part of the 557 save pages in 2000, so the 1998–2001 band runs phases 2–6 on them. They are not promoted to official stops.
 
@@ -82,7 +81,6 @@ Historical second stores (closed on disk by verbOwned / official-verb / dest-tru
 | 1998 | I’m Feeling Lucky `[data-google-lucky]` | official-verb, stay-after-write |
 | 2001 | Wikipedia Save `[data-wiki-save]` | extras return when the verb is present |
 | 2005 | YouTube upload | official-verb |
-| 2006 | Twttr `[data-tw06-post]` | extras skip when the verb owns Update |
 | 2009 | Like `[data-lk09-like]` | extras skip when Like is the verb |
 | 2009 | Plot Start | Start writes nothing |
 | 2010 | iPad order `[data-ipad-order]` | extras skip when Place order is the verb |
@@ -105,14 +103,14 @@ Eight calendar bands. Two of them are short because the absent years stay absent
 | 1994–1997 | 1994, 1995, 1996, 1997 | frozen | 841 | 630 | 310 | 80 |
 | 1998–2001 | 1998, 1999, 2000, 2001 | frozen | 1,539 | 1,340 | 277 | 100 |
 | 2002–2005 | 2002, 2003, 2004, 2005 | frozen | 2,319 | 2,066 | 286 | 78 |
-| 2006–2009 | 2006 frozen. 2007–2009 lean | mixed | 794 | 595 | 198 | 50 |
+| 2007–2009 | 2007, 2008, 2009 | lean | 288 | 224 | 97 | 30 |
 | 2010–2013 | 2010, 2012, 2013 | lean | 148 | 113 | 51 | 29 |
 | 2014–2017 | 2014 live. 2015 omitted. 2017 absent | lean | 18 | 25 | 16 | 9 |
 | 2018–2021 | 2020 and 2021. 2018 and 2019 absent | lean | 40 | 40 | 0 | 20 |
 | 2022–2025 | 2022. 2023–2025 absent | lean | 29 | 25 | 0 | 10 |
-| **All live** | 23 doors |  | **5,821** | **4,898** | **1,138** | **376** |
+| **All live** | 22 doors |  | **5,214** | **4,461** | **1,037** | **356** |
 
-2014–2017 is 18 save pages in 2014. 2015 is omitted. 2017 adds nothing. The total row’s 5,821 is HTML save pages only.
+2014–2017 is 18 save pages in 2014. 2015 is omitted. 2017 adds nothing. The total row’s 5,214 is HTML save pages only.
 
 Inside a phase, the done-when is fixed. The sentence on the button and which listener folds into `official-verb` can change, as long as the envelope rule holds and no new stop appears.
 
@@ -207,18 +205,20 @@ Frozen. Working set: 2,319 save pages, 2,066 dest folders, 286 leftover-2× dest
 | 5 | Done 2026-10-08. The Stumble, Photobucket, and YouTube leftover panels write `itt02-gold-lx`, `itt03-gold-lx`, and `itt05-gold-lx` as kind `leftover` and leave the star empty. A save whose key is the star says `Leftover never stamps the official key.` and does not replace an official envelope. Gold leftover sits after the exhibit. `bootOne` already had that n=1–10 refusal. Lock: `e2e/band-2002-2005-leftover-off-star.spec.js`. |
 | 6 | Done 2026-10-08. Walks all 2,319 register rows split by year. Empty/trap leave the row key and the year star empty. Official finish is kind `official`. Leftover-2× finish is kind `leftover` and leaves the star empty. Stumble includes a one-character click then leftover residual. YouTube includes empty description then a real upload. `walkOne` `STARS` / `routeOf` / `completeCustom` cover those four stars. Lock: `e2e/band-2002-2005.spec.js`. |
 
-## 2006–2009
 
-2006 is frozen. 2007–2009 are leanBoot. Working set: 794 save pages, 595 dest folders, 198 leftover-2× dests, 50 trail rows. 2006 is 510 of those save pages. The lean years are smaller because CORE leftover packs do not boot. The 40 official stops are ticked. Stars: `itt06-tweets`, `itt07-iphone`, `itt08-apps`, `itt09-like`.
+## 2007–2009
+
+leanBoot. Working set: 288 save pages, 224 dest folders, 97 leftover-2× dests, 30 trail rows. Stars: `itt07-iphone`, `itt08-apps`, `itt09-like`.
 
 | Phase | Work in this band |
 | --- | --- |
-| 1 | Done 2026-10-08. Official lines already match. The three 2008 leftover-pack lines stay open. They are rules, not missing official stops. Register: `e2e/registers/band-2006-2009.json` (794 save pages). `python3 scripts/gen_band_register.py 2006-2009 --check`. Lock: `e2e/band-2006-2009-register.spec.js`. |
-| 2 | Done 2026-10-08. Twttr extras skip storage when `data-official-verb` owns the update. Like extras skip when the Like button is the verb. Plot Start writes nothing. iPhone Safari and App Store stay on official-verb. Lock: `e2e/band-2006-2009-one-writer.spec.js`. |
-| 3 | Done 2026-10-08. Empty Twttr, empty iPhone URL, empty App Store field, empty Like, and Plot Start write nothing. The old `[data-iphone-ott]` path stays off the star dest. Lock: `e2e/band-2006-2009-empty-holds.spec.js`. |
-| 4 | Done 2026-10-08. Twttr and Like status is `Saved.` after an official finish and `This browser blocked the save.` when storage refuses. The status names no storage key. Next stays hidden on a toy envelope. `storageFinished` waits on `itt06-tweets`, `itt07-iphone`, `itt08-apps`, and `itt09-like`. Lock: `e2e/band-2006-2009-receipt.spec.js`. |
-| 5 | Done 2026-10-08. Twttr and iPhone leftover panels write `itt06-gold-lx` and `itt07-gold-lx` as kind leftover and leave the star empty. A save whose key is the star says `Leftover never stamps the official key.` Gold leftover sits after the exhibit. Lock: `e2e/band-2006-2009-leftover-off-star.spec.js`. |
-| 6 | Done 2026-10-08. Walks all 794 register rows split by year. Empty/trap leave the row key and the year star empty. Official finish is kind `official`. Leftover-2× finish is kind leftover and leaves the star empty. Lock: `e2e/band-2006-2009.spec.js`. |
+| 1 | Done 2026-10-08. Register: `e2e/registers/band-2007-2009.json` (288 save pages, 224 dest folders, 97 leftover-2× dests, 30 official keys). `python3 scripts/gen_band_register.py 2007-2009 --check`. Lock: `e2e/band-2007-2009-register.spec.js`. |
+| 2 | Done 2026-10-08. iPhone Safari and Like extras skip when the dest owns `[data-official-verb]`. Plot Start writes nothing. Lock: `e2e/band-2007-2009-one-writer.spec.js`. |
+| 3 | Done 2026-10-08. Empty iPhone URL and empty Like write nothing. Lock: `e2e/band-2007-2009-empty-holds.spec.js`. |
+| 4 | Done 2026-10-08. iPhone and Like status is `Saved.` after an official finish and `This browser blocked the save.` when storage refuses. The status names no storage key. `storageFinished` waits on `itt07-iphone`, `itt08-apps`, and `itt09-like`. Lock: `e2e/band-2007-2009-receipt.spec.js`. |
+| 5 | Done 2026-10-08. Leftover panels write gold-lx leftover and leave the star empty. A save whose key is the star says `Leftover never stamps the official key.` Lock: `e2e/band-2007-2009-leftover-off-star.spec.js`. |
+| 6 | Done 2026-10-08. Walks all 288 register rows split by year. Lock: `e2e/band-2007-2009.spec.js`. |
+
 
 ## 2010–2013
 
@@ -279,7 +279,7 @@ leanBoot. Working set: 148 save pages, 113 dest folders, 51 leftover-2× dests, 
 1. 1994–1997, phases 1 through 6. `saveBest` is fixed here.
 2. 1998–2001. Lucky and Wikipedia.
 3. 2002–2005. Stumble and the YouTube upload.
-4. 2006–2009. Twttr, Like, and Plot.
+4. 2007–2009. Like, and Plot.
 5. 2010–2013. iPad, Guess Doodle, and the Facebook 1B checklist line.
 6. 2014–2017. 2015 is omitted. 2017 stays absent. Do not dest-farm.
 7. 2018–2021. A check, plus any Zoom writer the page actually runs. 2018 and 2019 stay absent.

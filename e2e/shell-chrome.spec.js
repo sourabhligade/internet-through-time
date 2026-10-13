@@ -132,7 +132,7 @@ test.describe('shell chrome (cross-year)', () => {
   });
 
   test('home address stays on the period host after boot', async ({ page }) => {
-    for (const year of ['2006', '2007', '2008', '2009']) {
+    for (const year of ['2007', '2008', '2009']) {
       await page.goto('/years/' + year + '/');
       const loc = page.locator('#location');
       await expect(loc).toHaveValue(new RegExp('home\\.microsoft\\.com/intl/web' + year + '/?$'));
@@ -205,10 +205,9 @@ test.describe('shell chrome (cross-year)', () => {
     expect(phoneBorder).toBe('rgb(26, 94, 192)');
   });
 
-  test('2006–2009 room addresses use home.microsoft.com', async ({ page }) => {
+  test('2007–2009 room addresses use home.microsoft.com', async ({ page }) => {
     test.setTimeout(90000);
     const rooms = {
-      '2006': 'sites/twitter/index.html',
       '2007': 'sites/iphone/index.html',
       '2008': 'sites/appstore/index.html',
       '2009': 'sites/facebook/index.html',

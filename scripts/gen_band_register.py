@@ -2,7 +2,7 @@
 """Write e2e/registers/band-YYYY-YYYY.json from pages already on disk.
 
 Phase 1 of docs/WORKING-FLOW-PHASES.md. One row per save page. Does not
-add dest folders. The 1994–1997, 1998–2001, 2002–2005, 2006–2009,
+add dest folders. The 1994–1997, 1998–2001, 2002–2005, 2007–2009,
 2010–2013, 2014–2017, 2018–2021, and 2022–2025 censuses are fixed so a later edit
 cannot shrink those registers without failing --check.
 """
@@ -72,16 +72,15 @@ EXPECTED = {
             "2005": {"html": 957, "savePages": 921, "destFolders": 807, "trailRows": 20, "leftover2x": 92},
         },
     },
-    "2006-2009": {
-        "html": 894,
-        "savePages": 794,
-        "destFolders": 595,
-        "trailRows": 50,
-        "leftover2x": 198,
-        "officialStops": 40,
+    "2007-2009": {
+        "html": 341,
+        "savePages": 288,
+        "destFolders": 224,
+        "trailRows": 30,
+        "leftover2x": 97,
+        "officialStops": 30,
         "byYear": {
-            "2006": {"html": 553, "savePages": 510, "destFolders": 371, "trailRows": 20, "leftover2x": 101},
-            "2007": {"html": 83, "savePages": 27, "destFolders": 33, "trailRows": 10, "leftover2x": 17},
+            "2007": {"html": 83, "savePages": 31, "destFolders": 33, "trailRows": 10, "leftover2x": 17},
             "2008": {"html": 116, "savePages": 115, "destFolders": 113, "trailRows": 10, "leftover2x": 47},
             "2009": {"html": 142, "savePages": 142, "destFolders": 78, "trailRows": 10, "leftover2x": 33},
         },

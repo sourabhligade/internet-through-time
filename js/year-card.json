@@ -182,21 +182,6 @@
         "hasTaskbar": true
       }
     },
-    "2006": {
-      "kind": "html",
-      "href": "years/2006/",
-      "star": "itt06-tweets",
-      "frozen": true,
-      "chrome": {
-        "os": "winxp",
-        "browser": "ie6",
-        "toolbar": "ie",
-        "assetYear": "2006",
-        "location": "http://home.microsoft.com/intl/web2006/",
-        "maximized": true,
-        "hasTaskbar": true
-      }
-    },
     "2007": {
       "kind": "html",
       "href": "years/2007/",
@@ -312,9 +297,6 @@
         "browserPhrase": "Internet Explorer 9 desktop residual",
         "roomClause": "the year lives in WhatsApp / Heartbleed rooms"
       }
-    },
-    "2017": {
-      "kind": "absent"
     },
     "2018": {
       "kind": "absent"

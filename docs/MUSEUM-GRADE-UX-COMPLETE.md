@@ -10,15 +10,15 @@
 **All-phase scan:** [`PHASE-SCAN.md`](PHASE-SCAN.md) — improvisation, shortfalls, inconsistencies, broken flows. Not ship law.  
 **Local:** http://127.0.0.1:8080 · **Public:** https://sourabhligade.github.io/internet-through-time/ (origin tree; local is ahead until **push**).
 
-Museum grade is a visitor who can enter any of the **23 live doors**, tell the year from the window, finish **one star verb**, and leave on a trail that stays that year. Empty, trap, and incomplete write nothing. Status is `Saved.` or `This browser blocked the save.` Leftover never stamps official n=1–10. It is **not** more dest folders, a shared Chrome skin, a modern lobby, leftover-3×, or restoring 2015 / 2017–2019 / 2023–2025.
+Museum grade is a visitor who can enter any of the **22 live doors**, tell the year from the window, finish **one star verb**, and leave on a trail that stays that year. Empty, trap, and incomplete write nothing. Status is `Saved.` or `This browser blocked the save.` Leftover never stamps official n=1–10. It is **not** more dest folders, a shared Chrome skin, a modern lobby, leftover-3×, or restoring 2015 / 2017–2019 / 2023–2025.
 
-Do not dest-farm. Do not unfreeze 1994–2006 dest HTML unless a dest-attribute fix is named. Do not invent period logos. Slice F starts only on the word **push**.
+Do not dest-farm. Do not unfreeze 1994–2005 dest HTML unless a dest-attribute fix is named. Do not invent period logos. Slice F starts only on the word **push**.
 
 ---
 
 ## Standing (2026-10-09)
 
-Intended ship is about **98%**. Visitor dest-true **415** is green. Hub **24 / 24**. Named packs on every live year. Working-flow phases 1–6 marked done on all eight 4-year bands. leftover-2× unique **1,138** on disk. leftover-3× unique catalogs **empty**.
+Intended ship is about **98%**. Visitor dest-true **415** is green. Hub **22 doors**. Named packs on every live year. Working-flow phases 1–6 marked done on all eight 4-year bands. leftover-2× unique **1,037** on disk. leftover-3× unique catalogs **empty**.
 
 Chrome phases 1–5 and 7 in [`MUSEUM-GRADE-UI.md`](MUSEUM-GRADE-UI.md) already passed their e2e locks (cards, footer/clock, year window, 390px, builder words clipped, public URL). Phase 6 was a checklist walk, not a dest-farm.
 
@@ -45,7 +45,7 @@ These stay wait-to-name. They are **not** museum-grade UI+UX.
 | Grow trail n to 10 (2004=8, 2013=9, 2014=9) | [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md) | named dest-farm (do not) |
 | Restore 2017–2019 / 2023–2025 | DISK-TRUTH | stay 0 |
 | leftover-3× unique catalogs | empty | stay empty |
-| Unfreeze 1994–2006 dest HTML | forests | a named dest-attribute only |
+| Unfreeze 1994–2005 dest HTML | forests | a named dest-attribute only |
 | Full warehouse `npm test` as the UX gate | dest-true 12 | do not |
 
 ---
@@ -56,7 +56,7 @@ Slices A–E ran together as `all of it`. After this pass: related Playwright, `
 
 ### Slice A — Honesty writers — done
 
-Slice A closed extras dual-write on dests that still exist: 2006 YouTube Watch / Twttr, 2009 Like, 2010 iPad order skip extras when the dest or button owns `[data-official-verb]`. Plot / Guess Doodle Start are year games (DO-NOT-APPLY), not dual-star extras.
+Slice A closed extras dual-write on dests that still exist: 2009 Like, 2010 iPad order skip extras when the dest or button owns `[data-official-verb]`. Plot / Guess Doodle Start are year games (DO-NOT-APPLY), not dual-star extras.
 
 | # | Dest | Bug | Fix |
 |---|------|-----|-----|
@@ -78,7 +78,7 @@ Direct dest URLs stay HTTP 200. They are not the grade path. Opening `lucky.html
 
 | # | Gap | Where | Fix class |
 |---|-----|-------|-----------|
-| B1 | `setIframeSrc` can abort the first `pages/home.html` load (`net::ERR_ABORTED`) and cancel the CSS import chain | `js/browser/create.js` | **Closed.** `seedHistory` leaves relative `pages/home.html` loading (no halt/`about:blank` upgrade). `hideOverlay()` already seeds; first-boot does not seed twice. `setIframeSrc` bounce stays for same-path Home/reload. Keep sandbox `allow-same-origin allow-scripts` so dest JS and localStorage share origin. Lock: `e2e/ux-phase2-window.spec.js`. |
+| B1 | `setIframeSrc` can abort the first `pages/home.html` load (`net::ERR_ABORTED`) and cancel the CSS import chain | `js/browser/create.js` | **Closed.** `seedHistory` leaves relative `pages/home.html` loading (no halt/`about:blank` upgrade). `hideOverlay()` already seeds; first-boot does not seed twice. Same-path Home/reload uses `location.reload` (no `about:blank` bounce). Keep sandbox `allow-same-origin allow-scripts` so dest JS and localStorage share origin. Lock: `e2e/ux-phase2-window.spec.js`. |
 | B2 | Year shell `height: 100%` vs dest `itt-dest-page.css` overflow fight | [`ITT-CSS-LAYERS.md`](ITT-CSS-LAYERS.md) | Standing. Shell owns the window. Dest owns the room. Do not paint 1994 with Chrome-habit. |
 | B3 | Gold leftover packing first paint on 1994–2001 official stars | `itt-leftover-fold.css` shows `[data-lo-panel][data-itt-gold-lx]` on `html[data-official-key]` | Standing. Gold stays leftover (`display:block; clear:both; margin-top:1.5em`). Do not make it the star verb. Did not restyle dest body flex/order (would unfreeze dest layout). |
 | B4 | Lean leftover dests use period leftover face (2008 XP face is on disk) | `css/leftover-dest-face.css` | Standing. Recheck 2007–2009 leftover dests at 1100px after any selector edit. |
@@ -141,7 +141,7 @@ Museum-grade on the public URL is the **same tree** as local :8080.
 
 1. Slices A–C green on dest-true 12.  
 2. User says **push**.  
-3. `museum/1994-2020-lean` updates. GitHub Pages (legacy, root `/`) serves the 23 doors.  
+3. `museum/1994-2020-lean` updates. GitHub Pages (legacy, root `/`) serves the 22 doors.  
 4. Actions billing (#17) still will not run the workflow. Local `npm run ci` stays the gate.  
 5. Recheck https://sourabhligade.github.io/internet-through-time/ hub + one door per chrome group.
 
@@ -180,7 +180,6 @@ Stars to open (one per live year):
 | 2003 | Photobucket | http://127.0.0.1:8080/years/2003/ |
 | 2004 | thefacebook networks | http://127.0.0.1:8080/years/2004/ · trail n=8 |
 | 2005 | YouTube upload | http://127.0.0.1:8080/years/2005/ |
-| 2006 | Twttr | http://127.0.0.1:8080/years/2006/ |
 | 2007 | iPhone Safari | http://127.0.0.1:8080/years/2007/ |
 | 2008 | App Store | http://127.0.0.1:8080/years/2008/ |
 | 2009 | Like | http://127.0.0.1:8080/years/2009/ |
@@ -205,7 +204,7 @@ Stars to open (one per live year):
 | `e2e/phase4-phone.spec.js` | after slice D |
 | `e2e/phase5-glass.spec.js` | after slice C |
 | Hub + one door per chrome group on :8080 | verb in the frame, year in the window |
-| Public URL | same 23 doors after **push** |
+| Public URL | same 22 doors after **push** |
 
 Full warehouse `npm test` is not the UX gate.
 

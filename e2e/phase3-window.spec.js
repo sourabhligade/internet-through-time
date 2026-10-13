@@ -7,7 +7,7 @@ const { test, expect } = require("@playwright/test");
  * 2015 omitted hash is not a door. Absent hashes do not open a live door.
  */
 
-const OWN = ["1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2004", "2005", "2006"];
+const OWN = ["1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2004", "2005"];
 const BORROWED = { 2003: "2004", 2007: "2004", 2008: "2004", 2009: "2007" };
 const LEAN = ["2010", "2012", "2013", "2014", "2020", "2021", "2022"];
 
@@ -102,7 +102,6 @@ const ADDR = {
   2003: "http://home.microsoft.com/intl/web2003/",
   2004: "http://home.microsoft.com/intl/web2004/",
   2005: "http://home.microsoft.com/intl/web2005/",
-  2006: "http://home.microsoft.com/intl/web2006/",
   2007: "http://home.microsoft.com/intl/web2007/",
   2008: "http://home.microsoft.com/intl/web2008/",
   2009: "http://home.microsoft.com/intl/web2009/",

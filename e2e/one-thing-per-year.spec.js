@@ -157,20 +157,6 @@ const THINGS = [
     },
   },
   {
-    year: "2006",
-    path: "/years/2006/sites/twitter/index.html",
-    key: "itt06-tweets",
-    incomplete: async (page) => {
-      await page.locator("[data-tw06-trap]").click();
-    },
-    complete: async (page) => {
-      await page.locator("[data-tw06-req]").nth(0).check();
-      await page.locator("[data-tw06-req]").nth(1).check();
-      await page.fill("[data-tw06-body]", "just setting up my twttr residual");
-      await page.locator("[data-tw06-post]").click();
-    },
-  },
-  {
     year: "2004",
     path: "/years/2004/sites/facebook/networks.html",
     key: "itt04-thefacebook-networks",

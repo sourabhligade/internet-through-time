@@ -25,7 +25,7 @@ from itt_gate import SHIP_YEARS, _NOT_SHIP as _WIPED  # noqa: E402
 
 FOUR_X_REQUIRED = {
     "1997", "1998", "1999", "2000",
-    "2005", "2006", "2007","2009", "2010",
+    "2005", "2007","2009", "2010",
     "2014",
 }
 FOUR_X_BANNED = {"2012", "2015", "2017"}

@@ -45,6 +45,17 @@ test.describe("lean year game engines", () => {
     expect(blob.gameId).toBe("loopsix");
     expect(blob.year).toBe("2013");
     expect(blob.real).toBe(true);
+    const st = page.locator("[data-itt-action-status]").first();
+    await expect(st).toHaveText("Saved.");
+    await expect(st).not.toContainText(/itt13-/);
+    const paint = await st.evaluate((el) => {
+      const cs = getComputedStyle(el);
+      return { color: cs.color, receipt: el.getAttribute("data-yg-receipt") };
+    });
+    expect(paint.receipt).toBe("ok");
+    expect(paint.color).toBe("rgb(0, 102, 0)");
+    await page.locator("[data-peg-trap]").click();
+    await expect(st).toHaveText("Already saved.");
     await expect(page.locator('[data-next-flow][data-next-when-key="itt13-game-loopsix"]')).toBeVisible();
   });
 
@@ -91,6 +102,25 @@ test.describe("lean year game engines", () => {
     expect(blob.gameId).toBe("tilefold");
     expect(blob.year).toBe("2014");
     expect(blob.real).toBe(true);
+    const st = page.locator("[data-itt-action-status]").first();
+    await expect(st).toHaveText("Saved.");
+    await expect(st).not.toContainText(/itt14-/);
+    const paint = await st.evaluate((el) => {
+      const cs = getComputedStyle(el);
+      return { color: cs.color, receipt: el.getAttribute("data-yg-receipt") };
+    });
+    expect(paint.receipt).toBe("ok");
+    expect(paint.color).toBe("rgb(0, 102, 0)");
+    await page.locator("[data-tile-trap]").click();
+    await expect(st).toHaveText("Already saved.");
+    await page.locator("[data-tile-fold='a']").first().click();
+    await expect(st).toHaveText("Already saved.");
+    const again = await st.evaluate((el) => {
+      const cs = getComputedStyle(el);
+      return { color: cs.color, receipt: el.getAttribute("data-yg-receipt") };
+    });
+    expect(again.receipt).toBe("ok");
+    expect(again.color).toBe("rgb(0, 102, 0)");
     await expect(page.locator('[data-next-flow][data-next-when-key="itt14-game-tilefold"]')).toBeVisible();
   });
 });

@@ -29,6 +29,14 @@
   function KEY() {
     return pref() + "-gmail";
   }
+  function leftoverOfficialOwns(doc) {
+    try {
+      if (ITT.leftoverOfficialOwns) return ITT.leftoverOfficialOwns(doc);
+      return !!(doc && doc.querySelector("[data-lo-panel][data-itt-dest-true] [data-lo-save][data-lo-key]"));
+    } catch (eOwns) {
+      return false;
+    }
+  }
   function MSG() {
     return pref() + "-gmail-msgs";
   }
@@ -138,7 +146,7 @@
         try {
           pageKey = (doc.documentElement && doc.documentElement.getAttribute("data-official-key")) || "";
         } catch (eKey) { /* */ }
-        /* Login on the year key is the finish. 2005 is leftover. Other years are official. */
+        /* Login on the year key is the finish. Dest-true leftover plaques own the leftover trail key. */
         if (pageKey && pageKey === KEY()) {
           user.real = true;
           user.multiStep = true;
@@ -146,7 +154,7 @@
           if (year() === "2005") user.leftover = true;
           else user.official = true;
         }
-        saveUser(user);
+        if (!leftoverOfficialOwns(doc)) saveUser(user);
         var msg = "Signed in. Opening inbox…";
         if (st) st.textContent = msg;
         if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {

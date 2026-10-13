@@ -19,6 +19,7 @@
   var key = YG ? YG.storageKey("tilefold", "2014") : "itt14-game-tilefold";
   var NEED = 2;
   var running = false;
+  var saved = false;
   var folded = {};
   var n = 0;
   var best = 0;
@@ -57,9 +58,10 @@
     paintBoard();
   }
   function writeBest() {
-    if (n < NEED) return;
+    if (n < NEED) return false;
+    var wrote = false;
     if (YG && YG.saveBest) {
-      YG.saveBest("tilefold", n, { year: "2014", merge: { multiStep: true, folds: n } });
+      wrote = !!YG.saveBest("tilefold", n, { year: "2014", merge: { multiStep: true, folds: n } });
     } else {
       try {
         window.ITT.User.store(key, {
@@ -72,14 +74,23 @@
             multiStep: true,
             ts: Date.now()
           });
-      } catch (eS) { /* */ }
+        wrote = true;
+      } catch (eS) {
+        wrote = false;
+      }
     }
+    if (!wrote) return false;
     if (n > best) best = n;
     try {
       if (window.ITT && ITT.revealNextFlow) ITT.revealNextFlow(document);
     } catch (eN) { /* */ }
+    return true;
   }
   function onFold(ev) {
+    if (saved) {
+      say("Already saved.");
+      return;
+    }
     if (!running) {
       say("New Fold first. Load never writes.");
       return;
@@ -93,14 +104,17 @@
     n += 1;
     paint();
     if (n >= NEED) {
-      writeBest();
-      say("Folded · " + key);
+      if (writeBest()) {
+        saved = true;
+        say("Saved.");
+      } else say("This browser blocked the save.");
     } else {
       say("Fold one more leftover tile.");
     }
   }
   function start() {
     running = true;
+    saved = false;
     folded = {};
     n = 0;
     paint();
@@ -114,6 +128,10 @@
   var trap = host.querySelector("[data-tile-trap]");
   if (trap) {
     trap.addEventListener("click", function () {
+      if (saved) {
+        say("Already saved.");
+        return;
+      }
       say("Flappy is not the gold. Never writes.");
     });
   }

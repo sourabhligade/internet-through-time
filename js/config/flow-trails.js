@@ -1,5 +1,5 @@
 /**
- * Dest-unique official trail per year. HTML 1994–2010, 2012–2014, and 2020–2022 are live. 2015 omitted. 2017–2019 and 2023–2025 are absent.
+ * Dest-unique official trail per year. HTML 1994–2010, 2012–2014, and 2020–2022 are live. 2015 omitted. 2017 has no year-card key. 2018–2019 and 2023–2025 are absent.
  * One dest slug once. Pack dests and leftover-3× unique dests stay off this trail.
  * Consumed by js/immersion/flow-trails.js.
  */
@@ -288,28 +288,6 @@
       {"n": 18, "name": "del.icio.us", "href": "sites/delicious/index.html", "match": "/delicious/", "whenKey": "itt05-delicious", "nextHref": "sites/firefox/index.html", "nextLabel": "Firefox"},
       {"n": 19, "name": "Firefox", "href": "sites/firefox/index.html", "match": "/firefox/", "whenKey": "itt05-fx15-lx", "nextHref": "sites/vimeo/index.html", "nextLabel": "Vimeo"},
       {"n": 20, "name": "Vimeo", "href": "sites/vimeo/index.html", "match": "/vimeo/", "whenKey": "itt05-vimeo-lx", "nextHref": "sites/youtube/upload.html", "nextLabel": "★ year gold"}
-    ],
-    "2006": [
-      {"n": 1, "name": "Twttr", "href": "sites/twitter/index.html", "match": "/twitter/", "whenKey": "itt06-tweets", "nextHref": "sites/facebook/feed.html", "nextLabel": "News Feed"},
-      {"n": 2, "name": "News Feed", "href": "sites/facebook/feed.html", "match": "/facebook/feed", "whenKey": "itt06-feed", "nextHref": "sites/gmail/index.html", "nextLabel": "Gmail"},
-      {"n": 3, "name": "Gmail", "href": "sites/gmail/index.html", "match": "/gmail/", "whenKey": "itt06-gmail", "nextHref": "sites/youtube/index.html", "nextLabel": "YouTube Google-owned"},
-      {"n": 4, "name": "YouTube Google-owned", "href": "sites/youtube/index.html", "match": "/youtube/", "whenKey": "itt06-yt", "nextHref": "sites/googledocs/index.html", "nextLabel": "Google Docs"},
-      {"n": 5, "name": "Google Docs", "href": "sites/googledocs/index.html", "match": "/googledocs/", "whenKey": "itt06-gdocs", "nextHref": "sites/aws/index.html", "nextLabel": "S3"},
-      {"n": 6, "name": "S3", "href": "sites/aws/index.html", "match": "/aws/", "whenKey": "itt06-s3", "nextHref": "sites/ie7/index.html", "nextLabel": "IE7"},
-      {"n": 7, "name": "IE7", "href": "sites/ie7/index.html", "match": "/ie7/", "whenKey": "itt06-ie7", "nextHref": "sites/wikipedia/millionth.html", "nextLabel": "Wiki millionth"},
-      {"n": 8, "name": "Wiki millionth", "href": "sites/wikipedia/millionth.html", "match": "/wikipedia/millionth", "whenKey": "itt06-wiki-1m", "nextHref": "sites/roblox/index.html", "nextLabel": "Roblox"},
-      {"n": 9, "name": "Roblox", "href": "sites/roblox/index.html", "match": "/roblox/", "whenKey": "itt06-roblox", "nextHref": "sites/playable/linerider.html", "nextLabel": "Line Rider"},
-      {"n": 10, "name": "Line Rider", "href": "sites/playable/linerider.html", "match": "/linerider/", "whenKey": "itt06-game-linerider", "nextHref": "sites/twitter/index.html", "nextLabel": "Twttr"},
-      {"n": 11, "name": "Google", "href": "sites/google/index.html", "match": "/google/", "whenKey": "itt06-google-q", "nextHref": "sites/yahoo/index.html", "nextLabel": "Yahoo"},
-      {"n": 12, "name": "Yahoo", "href": "sites/yahoo/index.html", "match": "/yahoo/", "whenKey": "itt06-yahoo-lx", "nextHref": "sites/amazon/index.html", "nextLabel": "Amazon"},
-      {"n": 13, "name": "Amazon", "href": "sites/amazon/index.html", "match": "/amazon/", "whenKey": "itt06-amz-lx", "nextHref": "sites/myspace/index.html", "nextLabel": "MySpace"},
-      {"n": 14, "name": "MySpace", "href": "sites/myspace/index.html", "match": "/myspace/", "whenKey": "itt06-ms-lx", "nextHref": "sites/flickr/index.html", "nextLabel": "Flickr"},
-      {"n": 15, "name": "Flickr", "href": "sites/flickr/index.html", "match": "/flickr/", "whenKey": "itt06-flickr", "nextHref": "sites/docs/index.html", "nextLabel": "Docs"},
-      {"n": 16, "name": "Docs", "href": "sites/docs/index.html", "match": "/docs/", "whenKey": "itt06-docs-lx", "nextHref": "sites/reddit/index.html", "nextLabel": "Reddit"},
-      {"n": 17, "name": "Reddit", "href": "sites/reddit/index.html", "match": "/reddit/", "whenKey": "itt06-reddit", "nextHref": "sites/delicious/index.html", "nextLabel": "del.icio.us"},
-      {"n": 18, "name": "del.icio.us", "href": "sites/delicious/index.html", "match": "/delicious/", "whenKey": "itt06-delicious", "nextHref": "sites/digg/index.html", "nextLabel": "Digg"},
-      {"n": 19, "name": "Digg", "href": "sites/digg/index.html", "match": "/digg/", "whenKey": "itt06-digg", "nextHref": "sites/maps/index.html", "nextLabel": "Maps"},
-      {"n": 20, "name": "Maps", "href": "sites/maps/index.html", "match": "/maps/", "whenKey": "itt06-maps", "nextHref": "sites/twitter/index.html", "nextLabel": "★ year gold"}
     ],
     "2007": [
       {"n": 1, "name": "iPhone Safari", "href": "sites/iphone/index.html", "match": "/iphone/", "whenKey": "itt07-iphone", "nextHref": "sites/streetview/index.html", "nextLabel": "Street View"},

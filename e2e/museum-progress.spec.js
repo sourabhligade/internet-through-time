@@ -25,21 +25,21 @@ test.describe('Museum passport + first night', () => {
     await clearMuseum(page);
     await page.goto('/');
     await expect(page.locator('#itt-passport-root, #begin-first-night, [data-itt-year-tour]')).toHaveCount(0);
-    await expect(page.locator('a.year-card.available.y2006[href*="years/2006"]')).toBeVisible();
+    await expect(page.locator('a.year-card.available.y2005[href*="years/2005"]')).toBeVisible();
     await expect(page.locator("a.year-card.available.y")).toHaveCount(0);
     await expect(page.locator('a.year-card.available.y2010[href*="years/2010"]')).toBeVisible();
     const live = await page.evaluate(() => {
       const mp = window.ITT && window.ITT.MuseumProgress;
-      return !!(mp && mp.isLiveYear && mp.isLiveYear('2006') && mp.isLiveYear('2010'));
+      return !!(mp && mp.isLiveYear && mp.isLiveYear('2005') && mp.isLiveYear('2010'));
     });
     expect(live).toBe(true);
   });
 
-  test('2006 year card opens the 2006 door', async ({ page }) => {
+  test('2005 year card opens the 2005 door', async ({ page }) => {
     await clearMuseum(page);
     await page.goto('/');
-    await page.locator('a.year-card.available[href*="years/2006"]').click();
-    await expect(page).toHaveURL(/years\/2006/);
+    await page.locator('a.year-card.available[href*="years/2005"]').click();
+    await expect(page).toHaveURL(/years\/2005/);
   });
 
   test('2010 year card opens the 2010 door', async ({ page }) => {

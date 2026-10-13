@@ -234,18 +234,6 @@ const SIGNATURE = {
       await frame.locator('[data-yt-upload] button[type="submit"]').first().click();
     },
   },
-  '2006': {
-    path: 'sites/twitter/index.html',
-    keySuffix: 'tweets',
-    body: /Twitter|tweet|twttr/i,
-    act: async (page) => {
-      const frame = contentFrame(page);
-      const form = frame.locator('[data-twitter-compose]');
-      await expect(form).toBeVisible({ timeout: 15000 });
-      await form.locator('[data-twitter-status], textarea, [name="status"]').first().fill('handoff tweet 2006');
-      await form.evaluate((f) => f.requestSubmit());
-    },
-  },
   '2007': {
     path: 'sites/iphone/index.html',
     keySuffix: 'iphone-history',

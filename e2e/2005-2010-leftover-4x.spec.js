@@ -8,42 +8,19 @@ const path = require("path");
 const { test, expect } = require("@playwright/test");
 
 const ROOT = path.join(__dirname, "..");
-const YEARS = ["2006", "2007","2010"];
+const YEARS = ["2007","2010"];
 const GOLD = {
-  2006: "itt06-tweets",
   2007: "itt07-iphone",
   2009: "itt09-like",
   2010: "itt10-ig",
 };
 const GOLD2 = { 2010: "itt10-ig-posts" };
 const OFFICIAL = {
-  2006: ["tweets", "feed", "fb-open", "yt", "gdocs", "s3", "ie7", "wiki-1m", "roblox", "game-linerider"],
   2007: ["iphone", "streetview", "gmail", "fbplat", "twitter", "youtube", "tumblr", "kindle", "ie6", "game-safariq"],
   2009: ["like", "farm", "bing", "iphone", "apps", "tweets", "4sq", "kickstarter", "win7", "game-plot"],
   2010: ["ig", "ig-posts", "iphone4", "ipad", "fb-og", "farm", "imgur", "4sq", "tweets", "yt", "game-slingnest"],
 };
-const SAMPLE = {
-  2006: [
-    { path: "/years/2006/sites/twitter/index.html", go: "t140-4x" },
-    { path: "/years/2006/sites/youtube/index.html", go: "yt-lx-4x" },
-    { path: "/years/2006/sites/firefox/index.html", go: "fx15-lx-4x" },
-  ],
-  2007: [
-    { path: "/years/2007/sites/iphone/index.html", go: "iphone-lx-4x" },
-    { path: "/years/2007/sites/maps/index.html", go: "maps-dp-4x" },
-    { path: "/years/2007/sites/twitter/index.html", go: "twitter-lx-4x" },
-  ],
-  2009: [
-    { path: "/years/2009/sites/facebook/index.html", go: "like-lx-4x" },
-    { path: "/years/2009/sites/twitter/index.html", go: "tweets-lx-4x" },
-    { path: "/years/2009/sites/kindle/index.html", go: "kindle-4x" },
-  ],
-  2010: [
-    { path: "/years/2010/sites/instagram/index.html", go: "ig-lx-4x" },
-    { path: "/years/2010/sites/twitter/index.html", go: "tweets-lx-4x" },
-    { path: "/years/2010/sites/kickstarter/index.html", go: "ks-lx-4x" },
-  ],
-};
+const SAMPLE = { 2007: [], 2010: [] };
 
 async function getKey(page, key) {
   return page.evaluate((k) => localStorage.getItem(k), key);

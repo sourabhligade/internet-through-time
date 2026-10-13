@@ -8,7 +8,7 @@
 **All-phase scan:** [`PHASE-SCAN.md`](PHASE-SCAN.md).  
 **Local:** http://127.0.0.1:8080
 
-These five phases lock visitor honesty, the dest in the year window, receipt glass, phone 390, and the 2015 omitted hash. They do not dest-farm. They do not restore 2017–2019 / 2023–2025. B1 first-boot abort is closed (`seedHistory` leaves relative `pages/home.html` loading). `setIframeSrc` bounce stays for same-path Home/reload. Slice F public tree waits on **push**.
+These five phases lock visitor honesty, the dest in the year window, receipt glass, phone 390, and the 2015 omitted hash. They do not dest-farm. They do not restore 2017–2019 / 2023–2025. B1 first-boot abort is closed (`seedHistory` leaves relative `pages/home.html` loading). Same-path Home/reload uses `location.reload` (no `about:blank` bounce). Slice F public tree waits on **push**.
 
 ```mermaid
 flowchart TD
@@ -34,7 +34,7 @@ Gate after a change in these files: the matching `ux-phaseN-*.spec.js` with `--w
 
 One trail key. One envelope `{v:1, kind:official, real:true}`. Empty / trap / incomplete never write the star when official-verb owns the dest.
 
-Same extras class already folded (scan, no dest-farm): 2006 Watch / Twttr, 2009 Like, 2010 iPad order. Plot / Guess Doodle are year games.
+Same extras class already folded (scan, no dest-farm): 2009 Like, 2010 iPad order. Plot / Guess Doodle are year games.
 
 **Done when:** dest-true 12 still green. Phase 1 spec green. Visitor sees one writer.
 
@@ -61,7 +61,7 @@ Direct dest URLs stay HTTP 200. They are dest-as-tab, not the grade path.
 | 2022 ChatGPT in frame | Dest HTML, year chrome stays 2022. |
 | Gold leftover | `html[data-official-key] [data-lo-panel][data-itt-gold-lx]` is `display:block` with a top gap. Fold CSS keeps `margin-top: 1.5em`. Writes leftover keys, not the star. |
 | Direct dest | `/years/1998/sites/google/lucky.html` HTTP 200. |
-| Home / reload | Same-path absolute reload still bounces through `about:blank` (`setIframeSrc`). |
+| Home / reload | Same-path Home/reload uses `location.reload`. No `about:blank` bounce. |
 
 **B1 closed:** `seedHistory` no longer upgrades relative HOME through `setIframeSrc` halt + `about:blank`. `hideOverlay()` already seeds; first-boot does not seed twice. Keep sandbox `allow-same-origin allow-scripts`.
 
@@ -136,5 +136,5 @@ Then `npm run check`. Do not add these files to the dest-true 12.
 
 ## Wait-to-name (not these phases)
 
-Pack B/C, `2x`, famous-double step 2, trail n under 10, restore absent years, leftover-3×, invent logos, unfreeze 1994–2006, **push**.
+Pack B/C, `2x`, famous-double step 2, trail n under 10, restore absent years, leftover-3×, invent logos, unfreeze 1994–2005, **push**.
 

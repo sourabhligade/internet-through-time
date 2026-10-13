@@ -44,7 +44,7 @@
         feedback("This browser blocked the save.", st, { error: true });
         return;
       }
-      feedback("Saved · " + key(suffix), st);
+      feedback("Saved.", st);
       reveal(doc);
     });
   }
@@ -391,7 +391,7 @@
         feedback("This browser blocked the save.", st, { error: true });
         return;
       }
-      feedback("Saved · " + key(suffix), st);
+      feedback("Saved.", st);
       reveal(doc);
     });
   }

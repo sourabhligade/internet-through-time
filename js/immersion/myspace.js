@@ -319,7 +319,7 @@
         var prevTop8 = window.ITT.User.take(top8Key, null);
         if (prevTop8 && prevTop8.real) {
           paintTop8(prevTop8);
-          if (top8St) top8St.textContent = "Saved · " + top8Key;
+          if (top8St) top8St.textContent = "Saved.";
           try {
             if (ITT.YearExtras && ITT.YearExtras.forYear) ITT.YearExtras.forYear("2003").showNext(doc);
           } catch (eN) { /* */ }
@@ -380,13 +380,13 @@
             return;
           }
           if (top8St) {
-            top8St.textContent = "Saved Top 8 · " + top8Key;
+            top8St.textContent = "Saved.";
             top8St.style.color = "#060";
           }
           try {
             if (ITT._immersionApi && ITT._immersionApi.markTourUsed) ITT._immersionApi.markTourUsed();
             if (ITT._immersionApi && ITT._immersionApi.actionFeedback) {
-              ITT._immersionApi.actionFeedback("Top 8 saved · " + top8Key, { status: top8St, kind: "ms-top8" });
+              ITT._immersionApi.actionFeedback("Saved.", { status: top8St, kind: "ms-top8" });
             }
             if (ITT.YearExtras && ITT.YearExtras.forYear) ITT.YearExtras.forYear("2003").showNext(doc);
           } catch (eF) { /* */ }

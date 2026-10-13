@@ -27,7 +27,6 @@
         stop("2003", "sites/yahoo/index.html", "portal leftover"),
         stop("2004", "sites/yahoo/index.html", "Web 2.0 year"),
         stop("2005", "sites/yahoo/index.html", "still #1"),
-        stop("2006", "sites/yahoo/index.html", "Twttr year"),
       ]
     },
     amazon: {
@@ -44,7 +43,6 @@
         stop("2002", "sites/amazon/index.html", "continuity"),
         stop("2003", "sites/amazon/index.html", "99¢ year"),
         stop("2004", "sites/amazon/index.html", "Web 2.0 year"),
-        stop("2006", "sites/amazon/index.html", "Twttr year"),
       ]
     },
     google: {
@@ -58,7 +56,6 @@
         stop("2002", "sites/google/index.html", "Stumble year"),
         stop("2003", "sites/google/index.html", "Photobucket year"),
         stop("2004", "sites/google/index.html", "thefacebook year"),
-        stop("2006", "sites/google/index.html", "YouTube deal year"),
         stop("2010", "sites/google/index.html", "lean"),
       ]
     },
@@ -67,7 +64,6 @@
       match: /\/sites\/(facebook|fbplat)\//,
       stops: [
         stop("2004", "sites/facebook/networks.html", "thefacebook"),
-        stop("2006", "sites/facebook/feed.html", "News Feed"),
         stop("2007", "sites/fbplat/index.html", "Platform"),
         stop("2009", "sites/facebook/index.html", "Like"),
         stop("2010", "sites/facebook/index.html", "Open Graph"),
@@ -80,7 +76,6 @@
       label: "YouTube",
       match: /\/sites\/youtube\//,
       stops: [
-        stop("2006", "sites/youtube/index.html", "Google deal"),
         stop("2007", "sites/youtube/index.html", "iPhone year"),
         stop("2010", "sites/youtube/index.html", "lean"),
         stop("2012", "sites/youtube/index.html", "IPO year"),
@@ -92,7 +87,6 @@
       label: "Twitter",
       match: /\/sites\/twitter\//,
       stops: [
-        stop("2006", "sites/twitter/index.html", "Twttr"),
         stop("2007", "sites/twitter/index.html", "iPhone year"),
         stop("2010", "sites/twitter/index.html", "lean"),
         stop("2012", "sites/twitter/index.html", "IPO year"),
@@ -139,7 +133,6 @@
 
   var SKIP_YEARS = {
     "2015": 1,
-    "2017": 1,
     "2018": 1,
     "2019": 1,
     "2023": 1,

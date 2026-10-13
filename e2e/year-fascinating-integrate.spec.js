@@ -172,20 +172,6 @@ test.describe("Fascinating integrate leftovers", () => {
     expect(await getKey(page, "itt00-mapquest")).toBeFalsy();
   });
 
-  test("2006 News Feed hide never writes · one story writes itt06-feed", async ({ page }) => {
-    skipIfWiped('2006');
-    test.skip(!yearOnDisk("2006"), "2006 not on disk");
-    await openClean(page, "/years/2006/sites/facebook/feed.html", ["itt06-feed", "itt06-tweets"]);
-    await page.locator("[data-feed-hide]").waitFor({ timeout: 20000 });
-    await page.locator("[data-feed-hide]").click();
-    expect(await getKey(page, "itt06-feed")).toBeFalsy();
-    await page.locator("[data-feed-story]").first().click();
-    await expect.poll(() => getKey(page, "itt06-feed")).toBeTruthy();
-    const blob = await blobOf(page, "itt06-feed");
-    expect(blob && blob.year).toBe("2006");
-    expect(await getKey(page, "itt06-tweets")).toBeFalsy();
-  });
-
   test("1999 SETI signal trap never writes · ticks+install writes itt99-seti", async ({ page }) => {
     await openClean(page, "/years/1999/sites/seti/index.html", ["itt99-seti", "itt99-aim"]);
     await page.locator("[data-seti-signal]").click();
@@ -259,7 +245,7 @@ test.describe("Fascinating integrate leftovers", () => {
       ["2000", /mapquest/],
       ["2001", /wikipedia\/edit/],
       ["2002", /stumbleupon/],
-      ["2006", /twitter/],
+      [/twitter/],
       ["2007", /iphone/],
       ["2008", /appstore/],
       ["2009", /facebook/],

@@ -1,6 +1,6 @@
 // @ts-check
 /**
- * All-years signature REAL gates (live doors 1994–2010, 2012–2014, and 2020–2022).
+ * All-years signature REAL gates (live doors 1994–2005, 2007–2010, 2012–2014, and 2020–2022).
  * One thesis interaction per year that MUST mutate year-prefixed localStorage
  * (or multi-step DOM state). Page-load-only is a failure.
  *
@@ -263,24 +263,6 @@ test.describe('all-years signature REAL · 2000s boom', () => {
 });
 
 test.describe('all-years signature REAL · late web', () => {
-  test('2006 Twitter post → itt06-tweets', async ({ page }) => {
-    skipIfWiped('2006');
-    await enterYear(page, '2006');
-    await clearPrefix(page, 'itt06-tweets');
-    await goImmersion(page, '2006', 'sites/twitter/index.html');
-    const frame = contentFrame(page);
-    const post = frame.locator('[data-tw06-post]');
-    await expect(post).toBeVisible({ timeout: 15000 });
-    await post.click();
-    await page.waitForTimeout(80);
-    expect(await page.evaluate(() => localStorage.getItem('itt06-tweets'))).toBeFalsy();
-    await frame.locator('[data-tw06-req]').nth(0).check();
-    await frame.locator('[data-tw06-req]').nth(1).check();
-    await frame.locator('[data-tw06-body]').fill('AllYear tweet museum');
-    await post.click();
-    await requireKey(page, 'itt06-tweets');
-  });
-
   test('2008 GitHub issue → itt08-github', async ({ page }) => {
     test.skip(!isLiveYear('2008'), '2008 is not a live HTML door');
     await enterYear(page, '2008');

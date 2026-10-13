@@ -56,8 +56,8 @@ async function getKey(page, key) {
 }
 
 test.describe("FLOW-CHECK pipeline · every playable year", () => {
- test("1 hub 23 cards · 2009 live · 2015 omitted · 2020–2022 live", async ({ page }) => {
- expect(SHIP).toHaveLength(23);
+ test("1 hub 22 cards · 2009 live · 2015 omitted · 2020–2022 live", async ({ page }) => {
+ expect(SHIP).toHaveLength(22);
     await page.goto("/");
  await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
     for (const y of SHIP) {

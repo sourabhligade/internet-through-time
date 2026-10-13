@@ -27,7 +27,7 @@ def resolve(page: Path, href: str):
             out.append(p)
     return Path(*out)
 
-# Open museum years — keep in sync with itt_gate.SHIP_YEARS / hub (DISK-TRUTH: 23 years). wiped.
+# Open museum years — keep in sync with itt_gate.SHIP_YEARS / hub (DISK-TRUTH: 22 years). wiped.
 from itt_gate import SHIP_YEARS
 
 YEARS = tuple(SHIP_YEARS)

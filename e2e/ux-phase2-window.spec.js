@@ -3,7 +3,7 @@
  * Museum-grade UX phase 2. Hub → year door → dest sits in #content.
  * Gold leftover stays leftover. Direct dest URLs stay HTTP 200.
  * B1 first-boot: relative pages/home.html is not ERR_ABORTED.
- * setIframeSrc bounce stays for same-path Home/reload.
+ * Same-path Home/reload uses location.reload (no about:blank bounce).
  * Off dest-true 12. Do not dest-farm.
  */
 const { test, expect } = require("@playwright/test");
@@ -183,5 +183,61 @@ test.describe("UX phase 2 dest in the year window", () => {
     const blob = JSON.parse((await getKey(page, "itt98-gold-lx")) || "{}");
     expect(blob.kind).toBe("leftover");
     await expect(page).toHaveURL(/\/years\/1998\//);
+  });
+
+  test("2010 map F4 F5 copy uses dest official keys", async () => {
+    const maps = fs.readFileSync(path.join(__dirname, "../js/config/flow-maps.js"), "utf8");
+    expect(maps).toMatch(/Like · itt10-fb-og/);
+    expect(maps).toMatch(/35h honesty · itt10-yt/);
+    expect(maps).not.toMatch(/Like · itt10-facebook/);
+    expect(maps).not.toMatch(/35h honesty · itt10-youtube/);
+  });
+
+  test("2010 year map paints dest official keys", async ({ page }) => {
+    await enterYear(page, "2010");
+    await waitGuided(page);
+    await goInFrame(page, "pages/map.html");
+    const frame = contentFrame(page);
+    await expect(frame.locator("body")).toContainText("itt10-fb-og", { timeout: 20000 });
+    await expect(frame.locator("body")).toContainText("itt10-yt");
+    await expect(frame.locator("body")).not.toContainText("itt10-facebook");
+    await expect(frame.locator("body")).not.toContainText("itt10-youtube");
+  });
+
+  for (const row of [
+    { year: "1998", dest: "sites/google/lucky.html", key: "itt98-lucky" },
+    { year: "2010", dest: "sites/instagram/index.html", key: "itt10-ig-posts" },
+    { year: "2022", dest: "sites/chatgpt/index.html", key: "itt22-chatgpt" },
+  ]) {
+    test(row.year + " dest reload does not bounce through about:blank", async ({ page }) => {
+      await enterYear(page, row.year);
+      await waitGuided(page);
+      await goInFrame(page, row.dest);
+      const slug = row.dest.split("/")[1];
+      await expect.poll(() => framePath(page), { timeout: 20000 }).toMatch(new RegExp(slug));
+      const blanked = [];
+      page.on("framenavigated", (frame) => {
+        const u = frame.url();
+        if (/^about:blank/.test(u)) blanked.push(u);
+      });
+      await page.locator("#btn-reload").click();
+      await expect.poll(() => framePath(page), { timeout: 20000 }).toMatch(new RegExp(slug));
+      const frame = contentFrame(page);
+      await expect(frame.locator("html")).toHaveAttribute("data-official-key", row.key);
+      expect(blanked, "about:blank bounce").toEqual([]);
+    });
+  }
+
+  test("same-path Home on Starting Point does not bounce through about:blank", async ({ page }) => {
+    await hubEnterYear(page, "1998");
+    const blanked = [];
+    page.on("framenavigated", (frame) => {
+      const u = frame.url();
+      if (/^about:blank/.test(u)) blanked.push(u);
+    });
+    await page.locator("#btn-home").click();
+    await waitGuided(page);
+    expect(blanked, "about:blank bounce").toEqual([]);
+    await expect(contentFrame(page).locator(".ott-guided")).toBeVisible();
   });
 });

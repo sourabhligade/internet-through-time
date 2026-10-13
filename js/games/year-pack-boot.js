@@ -69,6 +69,10 @@
   }
 
   function finish() {
+    if (saved) {
+      setStatus("Already saved.");
+      return;
+    }
     ensureRun();
     if (!ready()) {
       setStatus(
@@ -95,7 +99,7 @@
     saved = true;
     paintBest();
     step("save");
-    setStatus("Saved · itt" + String(year).slice(2) + "-game-" + gid + ".");
+    setStatus("Saved.");
     paintHud();
   }
 
@@ -115,12 +119,12 @@
     step("start");
     setStatus(
       waitMs && phrase
-        ? "Tap " + need + ". Type " + phrase + ". Wait. Finish. Incomplete never writes."
+        ? "Tap " + need + ". Type " + phrase + ". Wait. Finish."
         : waitMs
-          ? "Tap " + need + " times. Wait the timer. Finish. Incomplete never writes."
+          ? "Tap " + need + " times. Wait the timer. Finish."
           : phrase
-            ? "Tap " + need + " times. Type " + phrase + ". Finish. Incomplete never writes."
-            : "Tap " + need + " times. Finish. Incomplete never writes."
+            ? "Tap " + need + " times. Type " + phrase + ". Finish."
+            : "Tap " + need + " times. Finish."
     );
     if (waitMs > 0) {
       waitTimer = setTimeout(function () {

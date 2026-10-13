@@ -16,10 +16,9 @@ const path = require("path");
 const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
-const YEARS = ["2005", "2006"];
+const YEARS = ["2005"];
 const STAR = {
   2005: "itt05-yt-uploads",
-  2006: "itt06-tweets",
   2007: "itt07-iphone",
   2009: "itt09-like",
   2010: "itt10-ig-posts",

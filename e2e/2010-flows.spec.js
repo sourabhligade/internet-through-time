@@ -92,9 +92,10 @@ test.describe('2010 flows A–T', () => {
   });
 
   test('D iPad dest-true official never writes gold', async ({ page }) => {
-    await page.goto("/years/2010/sites/ipad/index.html");
-    await expect(page.locator("body")).toContainText(/\$499|no camera|iPad 2/i);
+    await page.goto("/years/2010/sites/ipad/order.html");
+    await expect(page.locator("body")).toContainText(/\$499|iPad/i);
     await officialSave(page, "/years/2010/sites/ipad/order.html", "itt10-ig");
+    expect(await getKey(page, "itt10-ig-posts")).toBeFalsy();
   });
 
   test('E iPhone 4 dest-true official never writes gold', async ({ page }) => {

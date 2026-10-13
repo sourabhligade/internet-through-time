@@ -1,9 +1,9 @@
 # Sources, archives & provenance — Internet Through Time
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **23 doors** (1994–2010, 2012–2014, and 2020–2022). **2015 is omitted.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2005, 2007–2010, 2012–2014, and 2020–2022). **2015 is omitted.** **2018–2019 and 2023–2025 are absent. 2017 has no year-card key.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 
-> **This file is a bibliography, not ship state.** Canonical playable years: [`DISK-TRUTH.md`](DISK-TRUTH.md) — **23 doors** (1994–2010, 2012–2014, and 2020–2022). **2015 is omitted.** **2017–2019 and 2023–2025 are absent.** Deleted research dossiers stay deleted. There is no `SOURCE-AUDIT.md`. §§11–12 still name deleted dossiers (`MASTER-PROVENANCE.md`, year `*-RESEARCH.md`, `docs/references/**`) as historical bibliography — those paths are **not on disk** and must not be restored.
+> **This file is a bibliography, not ship state.** Canonical playable years: [`DISK-TRUTH.md`](DISK-TRUTH.md) — **22 doors** (1994–2005, 2007–2010, 2012–2014, and 2020–2022). **2015 is omitted.** **2018–2019 and 2023–2025 are absent. 2017 has no year-card key.** Deleted research dossiers stay deleted. There is no `SOURCE-AUDIT.md`. §§11–12 still name deleted dossiers (`MASTER-PROVENANCE.md`, year `*-RESEARCH.md`, `docs/references/**`) as historical bibliography — those paths are **not on disk** and must not be restored.
 
 
 **Purpose:** External URL bibliography for reconstructions. Not ship state.  
@@ -720,31 +720,7 @@ Dossier: [`docs/2005-RESEARCH.md`](2005-RESEARCH.md) · **Detailed gather:** [`d
 
 **P0 planned rooms:** YouTube · Google Maps · Reddit · Digg · Google · MySpace · Flickr · Facebook (rename era) · Yahoo · Amazon · Wikipedia · iTunes podcasts.
 
-**Hub state:** **23 doors open** (1994–2010, 2012–2014, and 2020–2022). **2015 is omitted.** Research stack §16–§23 remains bibliography for densify/pixels.
+**Hub state:** **22 doors open** (1994–2005, 2007–2010, 2012–2014, and 2020–2022). **2015 is omitted.** Research stack §16–§23 remains bibliography for densify/pixels.
 
 **Anachronism bans:** Twitter (2006) · Facebook open registration (2006) · Google owns YouTube (2006) · iPhone · Chrome browser · modern YouTube/Maps/Reddit UI · Street View as 2005 default · consumer “cloud” branding.
-
-## 24. Year 2006 — research stack
-
-Dossier: [`docs/2006-RESEARCH.md`](2006-RESEARCH.md) · **Fresh deep research:** [`docs/2006-DEEP-RESEARCH-FRESH-2026-07-31.md`](2006-DEEP-RESEARCH-FRESH-2026-07-31.md) · **Implement phases:** [`docs/2006-IMPLEMENT-PHASES-CLEAR-2026-07-31.md`](2006-IMPLEMENT-PHASES-CLEAR-2026-07-31.md) · Detailed gather: [`docs/2006-DETAILED-SOURCE-RESEARCH-GATHERED-2026-07-30.md`](2006-DETAILED-SOURCE-RESEARCH-GATHERED-2026-07-30.md) · Capture: [`references/2006/CAPTURE-LOG.md`](references/2006/CAPTURE-LOG.md) · Extracts: [`references/2006/wayback-extracts/`](references/2006/wayback-extracts/)
-
-| Source | URL | Role |
-|--------|-----|------|
-| Cybercultural — Internet 2006 | https://cybercultural.com/p/internet-2006/ | Social breakthrough · Twitter · FB Feed/open · Google-YT · Digg · cloud · Docs · Time You |
-| Internet Live Stats | https://www.internetlivestats.com/total-number-of-websites/ | **85,507,314** sites · Twttr mark |
-| Google YouTube PR (SEC) | https://www.sec.gov/Archives/edgar/data/1288776/000119312506206884/dex991.htm | **Oct 9 2006** · **$1.65B** · independent brand |
-| Facebook Expansion | https://about.fb.com/news/2006/09/facebook-expansion-enables-more-people-to-connect-with-friends-in-a-trusted-environment/ | **Sep 26 2006** open |
-| Facebook Feed privacy | https://about.fb.com/news/2006/09/facebook-launches-additional-privacy-controls-for-news-feed-and-mini-feed/ | **Sep 8 2006** |
-| History.com Twitter | https://www.history.com/this-day-in-history/july-15/twitter-launches | **Jul 15** public · Mar 21 first tweet |
-| Amazon S3 press | https://press.aboutamazon.com/2006/3/amazon-web-services-launches | **Mar 14 2006** |
-| TechCrunch Docs | https://techcrunch.com/2006/10/10/google-docs-spreadsheets-launches/ | **Oct 10** Docs & Spreadsheets |
-| IE7 for XP | https://news.microsoft.com/source/2006/10/18/microsoft-releases-windows-internet-explorer-7-for-windows-xp/ | **Oct 18 2006** |
-| WDM Twitter 2006 | https://www.webdesignmuseum.org/gallery/twitter-2006 | Visual primary |
-| WDM IE7 2006 | https://www.webdesignmuseum.org/software/internet-explorer-7-0-in-2006 | Browser chrome |
-
-**P0 planned rooms:** Twitter/Twttr · Facebook (open + News Feed) · YouTube (two-era Google) · Digg peak · Google Docs · AWS · continuity MySpace/Flickr/Maps.
-
-**Hub state:** **23 doors open** (1994–2010, 2012–2014, and 2020–2022). **2015 is omitted.** 2006 is live.
-
-**Anachronism bans:** iPhone · Chrome · Street View default · Gmail open-as-year-start (Feb 2007) · Vista retail default (Jan 2007) · Google owns YouTube before Oct/Nov 2006 · modern X · campus-only Facebook after Sep 26 as product truth.
 

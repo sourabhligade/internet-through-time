@@ -10,7 +10,10 @@
   var ehp = host.querySelector("[data-ehp]");
   var key = YG ? YG.storageKey("gagslite", "2003") : "itt03-game-gagslite";
   var pHP = 30, eHP = 30, round = 0, healUsed = false, active = false;
-  function setStatus(m) { if (statusEl) statusEl.textContent = m; }
+  function setStatus(m) {
+    if (YG && YG.setStatus) YG.setStatus(statusEl, m);
+    else if (statusEl) statusEl.textContent = m;
+  }
   function log(m) { if (logEl) logEl.textContent = m + "\n" + (logEl.textContent || ""); }
   function paint() {
     if (php) php.textContent = String(pHP);

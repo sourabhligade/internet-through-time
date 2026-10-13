@@ -184,7 +184,7 @@
     function restore() {
       try {
         var raw = window.ITT.User.take(key);
-        if (raw && st) st.textContent = "Saved in this browser · " + key;
+        if (raw && st) st.textContent = "Saved.";
       } catch (eR) { /* */ }
     }
     restore();
@@ -238,10 +238,10 @@
         /* */
       }
       if (st) {
-        st.textContent = "Saved · Safari is the 2007 web · " + key;
-        st.style.color = "#6c6";
+        st.textContent = "Saved.";
+        st.style.color = "#060";
       }
-      ittFeedback("Saved iPhone Safari year", st);
+      ittFeedback("Saved.", st);
     });
   }
 

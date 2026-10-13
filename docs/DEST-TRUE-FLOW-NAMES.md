@@ -227,21 +227,6 @@
 | 13 | KAYAK residual | `kayak` | forest pack | **KEEP** |
 | 14 | Second Life residual | `secondlife` | forest pack | **DROP** |
 
-## 2006 · star Twttr · 11 dest-true flows
-
-| # | Flow name | Slug | Class | Verdict |
-|---|-----------|------|-------|---------|
-| 1 | Twttr | `twitter` | official 10 | **KEEP** |
-| 2 | News Feed | `facebook` | official 10 | **KEEP** |
-| 3 | YouTube Google-owned | `youtube` | official 10 | **KEEP** |
-| 4 | Google Docs | `googledocs` | official 10 | **KEEP** |
-| 5 | S3 | `aws` | official 10 | **KEEP** |
-| 6 | IE7 | `ie7` | official 10 | **KEEP** |
-| 7 | Wiki millionth | `wikipedia` | official 10 | **KEEP** |
-| 8 | Roblox | `roblox` | official 10 | **KEEP** |
-| 9 | Line Rider | `playable` | official 10 | **DO-NOT-APPLY** |
-| 10 | Meebo residual | `meebo` | forest pack | **DROP** |
-| 11 | Huffington Post residual | `huffpost` | forest pack | **DROP** |
 
 ## 2007 · star iPhone Safari · 42 dest-true flows
 
@@ -815,15 +800,6 @@
 | 2005 | `googleearth` | forest pack | Google Earth leftover |
 | 2005 | `kayak` | forest pack | KAYAK residual |
 | 2005 | `secondlife` | forest pack | Second Life residual |
-| 2006 | `facebook` | official 10 | News Feed |
-| 2006 | `googledocs` | official 10 | Google Docs |
-| 2006 | `aws` | official 10 | S3 |
-| 2006 | `ie7` | official 10 | IE7 |
-| 2006 | `wikipedia` | official 10 | Wiki millionth |
-| 2006 | `roblox` | official 10 | Roblox |
-| 2006 | `playable` | official 10 | Line Rider |
-| 2006 | `meebo` | forest pack | Meebo residual |
-| 2006 | `huffpost` | forest pack | Huffington Post residual |
 | 2007 | `streetview` | official 10 | Street View |
 | 2007 | `gmail` | official 10 | Gmail open |
 | 2007 | `fbplat` | official 10 | Facebook Platform |

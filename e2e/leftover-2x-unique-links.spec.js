@@ -196,7 +196,7 @@ test.describe("leftover-2× unique dest links", () => {
       expect(ids, row.year + " catalog ids").toEqual(row.dests);
       sum += row.n;
     }
-    expect(sum, "leftover-2× unique dests").toBe(1138);
+    expect(sum, "leftover-2× unique dests").toBe(1037);
   });
 
   test("impl leftover-2× keeps omitted 2015 empty catalog after SHIP_YEARS", () => {

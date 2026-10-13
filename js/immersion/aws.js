@@ -1,5 +1,5 @@
 /**
- * AWS 2006 — S3 / EC2 educational theater (no real cloud APIs)
+ * AWS S3 / EC2 educational theater (no real cloud APIs)
  * Keys: {prefix}-aws-buckets
  */
 (function (global) {
@@ -20,8 +20,8 @@
   }
   function storageKey() {
     return U().immersionStorageKey
-      ? U().immersionStorageKey("aws-buckets", "itt06")
-      : "itt06-aws-buckets";
+      ? U().immersionStorageKey("aws-buckets")
+      : "itt-aws-buckets";
   }
   function esc(s) {
     if (U().escapeHtml) return U().escapeHtml(s);
@@ -91,13 +91,13 @@
         render(doc);
         try {
           var trailKey = U().immersionStorageKey
-            ? U().immersionStorageKey("aws", "itt06")
-            : "itt06-aws";
+            ? U().immersionStorageKey("aws")
+            : "itt-aws";
           window.ITT.User.store(trailKey, {
             multiStep: true,
             real: true,
             official: true,
-            year: U().immersionYear ? U().immersionYear("2006") : "2006",
+            year: U().immersionYear ? U().immersionYear() : (ITT._immersionYear || ""),
             ts: Date.now(),
             bucket: name
           });

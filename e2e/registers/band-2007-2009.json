@@ -1,0 +1,3792 @@
+{
+  "band": "2007-2009",
+  "source": "scripts/gen_band_register.py",
+  "hooks": [
+    "data-official-verb",
+    "data-lo-save",
+    "data-ytl-go",
+    "data-yt-upload",
+    "data-game-start",
+    "data-wiki-save",
+    "data-su-stumble"
+  ],
+  "census": {
+    "html": 341,
+    "savePages": 288,
+    "destFolders": 224,
+    "trailRows": 30,
+    "leftover2x": 97,
+    "officialStops": 30,
+    "byYear": {
+      "2007": {
+        "html": 83,
+        "savePages": 31,
+        "destFolders": 33,
+        "trailRows": 10,
+        "leftover2x": 17
+      },
+      "2008": {
+        "html": 116,
+        "savePages": 115,
+        "destFolders": 113,
+        "trailRows": 10,
+        "leftover2x": 47
+      },
+      "2009": {
+        "html": 142,
+        "savePages": 142,
+        "destFolders": 78,
+        "trailRows": 10,
+        "leftover2x": 33
+      }
+    }
+  },
+  "rows": [
+    {
+      "year": "2007",
+      "dest": "amazonmp3",
+      "path": "years/2007/sites/amazonmp3/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "androidann",
+      "path": "years/2007/sites/androidann/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "appletv",
+      "path": "years/2007/sites/appletv/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "ebay",
+      "path": "years/2007/sites/ebay/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "fbplat",
+      "path": "years/2007/sites/fbplat/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 4,
+      "whenKey": "itt07-fbplat",
+      "name": "Facebook Platform"
+    },
+    {
+      "year": "2007",
+      "dest": "friendfeed",
+      "path": "years/2007/sites/friendfeed/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "funnyordie",
+      "path": "years/2007/sites/funnyordie/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "gears",
+      "path": "years/2007/sites/gears/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "gmail",
+      "path": "years/2007/sites/gmail/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 3,
+      "whenKey": "itt07-gmail",
+      "name": "Gmail open"
+    },
+    {
+      "year": "2007",
+      "dest": "gmail",
+      "path": "years/2007/sites/gmail/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "hackernews",
+      "path": "years/2007/sites/hackernews/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "icanhas",
+      "path": "years/2007/sites/icanhas/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "ie6",
+      "path": "years/2007/sites/ie6/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 9,
+      "whenKey": "itt07-ie6",
+      "name": "XP/IE6 residual"
+    },
+    {
+      "year": "2007",
+      "dest": "iphone",
+      "path": "years/2007/sites/iphone/index.html",
+      "hooks": [
+        "data-official-verb",
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 1,
+      "whenKey": "itt07-iphone",
+      "name": "iPhone Safari"
+    },
+    {
+      "year": "2007",
+      "dest": "iplayer",
+      "path": "years/2007/sites/iplayer/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "ipodtouch",
+      "path": "years/2007/sites/ipodtouch/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "justintv",
+      "path": "years/2007/sites/justintv/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "kindle",
+      "path": "years/2007/sites/kindle/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 8,
+      "whenKey": "itt07-kindle",
+      "name": "Kindle"
+    },
+    {
+      "year": "2007",
+      "dest": "maps",
+      "path": "years/2007/sites/maps/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "myspace",
+      "path": "years/2007/sites/myspace/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "netflix",
+      "path": "years/2007/sites/netflix/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "playable",
+      "path": "years/2007/sites/playable/game.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 10,
+      "whenKey": "itt07-game-safariq",
+      "name": "Safari Queue"
+    },
+    {
+      "year": "2007",
+      "dest": "pownce",
+      "path": "years/2007/sites/pownce/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "safari3",
+      "path": "years/2007/sites/safari3/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "streetview",
+      "path": "years/2007/sites/streetview/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 2,
+      "whenKey": "itt07-streetview",
+      "name": "Street View"
+    },
+    {
+      "year": "2007",
+      "dest": "tumblr",
+      "path": "years/2007/sites/tumblr/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 7,
+      "whenKey": "itt07-tumblr",
+      "name": "Tumblr"
+    },
+    {
+      "year": "2007",
+      "dest": "twitter",
+      "path": "years/2007/sites/twitter/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 5,
+      "whenKey": "itt07-twitter",
+      "name": "Twitter"
+    },
+    {
+      "year": "2007",
+      "dest": "wiki",
+      "path": "years/2007/sites/wiki/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "wow",
+      "path": "years/2007/sites/wow/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2007",
+      "dest": "youtube",
+      "path": "years/2007/sites/youtube/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 6,
+      "whenKey": "itt07-youtube",
+      "name": "YouTube"
+    },
+    {
+      "year": "2007",
+      "dest": "youtube",
+      "path": "years/2007/sites/youtube/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "addicting",
+      "path": "years/2008/sites/addicting/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "android",
+      "path": "years/2008/sites/android/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 3,
+      "whenKey": "itt08-android",
+      "name": "Android G1"
+    },
+    {
+      "year": "2008",
+      "dest": "appengine",
+      "path": "years/2008/sites/appengine/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "appstore",
+      "path": "years/2008/sites/appstore/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 1,
+      "whenKey": "itt08-apps",
+      "name": "App Store"
+    },
+    {
+      "year": "2008",
+      "dest": "armorgames",
+      "path": "years/2008/sites/armorgames/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "ars",
+      "path": "years/2008/sites/ars/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "bbc",
+      "path": "years/2008/sites/bbc/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "beacon",
+      "path": "years/2008/sites/beacon/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "bebo",
+      "path": "years/2008/sites/bebo/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "bitbucket",
+      "path": "years/2008/sites/bitbucket/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "bitcoin",
+      "path": "years/2008/sites/bitcoin/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "bitly",
+      "path": "years/2008/sites/bitly/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "braid",
+      "path": "years/2008/sites/braid/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "changegov",
+      "path": "years/2008/sites/changegov/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "chanology",
+      "path": "years/2008/sites/chanology/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "chrome",
+      "path": "years/2008/sites/chrome/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 2,
+      "whenKey": "itt08-chrome",
+      "name": "Chrome"
+    },
+    {
+      "year": "2008",
+      "dest": "clubpenguin",
+      "path": "years/2008/sites/clubpenguin/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "collegehumor",
+      "path": "years/2008/sites/collegehumor/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "craigslist",
+      "path": "years/2008/sites/craigslist/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "cuil",
+      "path": "years/2008/sites/cuil/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "delicious",
+      "path": "years/2008/sites/delicious/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "digg",
+      "path": "years/2008/sites/digg/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "disqus",
+      "path": "years/2008/sites/disqus/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "dropbox",
+      "path": "years/2008/sites/dropbox/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 9,
+      "whenKey": "itt08-dropbox",
+      "name": "Dropbox"
+    },
+    {
+      "year": "2008",
+      "dest": "duckduckgo",
+      "path": "years/2008/sites/duckduckgo/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "engadget",
+      "path": "years/2008/sites/engadget/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "etsy",
+      "path": "years/2008/sites/etsy/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "facebook",
+      "path": "years/2008/sites/facebook/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 6,
+      "whenKey": "itt08-facebook",
+      "name": "Facebook"
+    },
+    {
+      "year": "2008",
+      "dest": "failblog",
+      "path": "years/2008/sites/failblog/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "failwhale",
+      "path": "years/2008/sites/failwhale/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "fbconnect",
+      "path": "years/2008/sites/fbconnect/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "firefox",
+      "path": "years/2008/sites/firefox/downloadday.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "flash10",
+      "path": "years/2008/sites/flash10/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "flickr",
+      "path": "years/2008/sites/flickr/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "friendfeed",
+      "path": "years/2008/sites/friendfeed/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "friendster",
+      "path": "years/2008/sites/friendster/asia.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "funnyordie",
+      "path": "years/2008/sites/funnyordie/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "gaia",
+      "path": "years/2008/sites/gaia/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "geocities",
+      "path": "years/2008/sites/geocities/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "github",
+      "path": "years/2008/sites/github/issue.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 5,
+      "whenKey": "itt08-github",
+      "name": "GitHub issue"
+    },
+    {
+      "year": "2008",
+      "dest": "gizmodo",
+      "path": "years/2008/sites/gizmodo/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "gtaiv",
+      "path": "years/2008/sites/gtaiv/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "habbo",
+      "path": "years/2008/sites/habbo/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "heroku",
+      "path": "years/2008/sites/heroku/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "hi5",
+      "path": "years/2008/sites/hi5/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "html5",
+      "path": "years/2008/sites/html5/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "huffpo",
+      "path": "years/2008/sites/huffpo/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "hulu",
+      "path": "years/2008/sites/hulu/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 4,
+      "whenKey": "itt08-hulu",
+      "name": "Hulu"
+    },
+    {
+      "year": "2008",
+      "dest": "icanhas",
+      "path": "years/2008/sites/icanhas/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "identica",
+      "path": "years/2008/sites/identica/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "ie8",
+      "path": "years/2008/sites/ie8/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "ign",
+      "path": "years/2008/sites/ign/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "imeem",
+      "path": "years/2008/sites/imeem/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "iphone",
+      "path": "years/2008/sites/iphone/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 10,
+      "whenKey": "itt08-iphone3g",
+      "name": "iPhone 3G"
+    },
+    {
+      "year": "2008",
+      "dest": "iplayer",
+      "path": "years/2008/sites/iplayer/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "justin",
+      "path": "years/2008/sites/justin/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "kayak",
+      "path": "years/2008/sites/kayak/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "knol",
+      "path": "years/2008/sites/knol/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "kongregate",
+      "path": "years/2008/sites/kongregate/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "lbp",
+      "path": "years/2008/sites/lbp/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "lehman",
+      "path": "years/2008/sites/lehman/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "limewire",
+      "path": "years/2008/sites/limewire/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "lively",
+      "path": "years/2008/sites/lively/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "livespaces",
+      "path": "years/2008/sites/livespaces/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "mafiawars",
+      "path": "years/2008/sites/mafiawars/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "megaupload",
+      "path": "years/2008/sites/megaupload/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "miniclip",
+      "path": "years/2008/sites/miniclip/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "mint",
+      "path": "years/2008/sites/mint/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "mobileme",
+      "path": "years/2008/sites/mobileme/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "mybo",
+      "path": "years/2008/sites/mybo/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "myspace",
+      "path": "years/2008/sites/myspace/us.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "neopets",
+      "path": "years/2008/sites/neopets/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "newgrounds",
+      "path": "years/2008/sites/newgrounds/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "ning",
+      "path": "years/2008/sites/ning/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "nyt",
+      "path": "years/2008/sites/nyt/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "onion",
+      "path": "years/2008/sites/onion/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "opensocial",
+      "path": "years/2008/sites/opensocial/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "orkut",
+      "path": "years/2008/sites/orkut/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "pandora",
+      "path": "years/2008/sites/pandora/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "piratebay",
+      "path": "years/2008/sites/piratebay/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "playable",
+      "path": "years/2008/sites/playable/famous.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "playable",
+      "path": "years/2008/sites/playable/game.html",
+      "hooks": [
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "plurk",
+      "path": "years/2008/sites/plurk/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "pogo",
+      "path": "years/2008/sites/pogo/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "psn",
+      "path": "years/2008/sites/psn/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "rapidshare",
+      "path": "years/2008/sites/rapidshare/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "recaptcha",
+      "path": "years/2008/sites/recaptcha/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "reddit",
+      "path": "years/2008/sites/reddit/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "runescape",
+      "path": "years/2008/sites/runescape/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "scrabulous",
+      "path": "years/2008/sites/scrabulous/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "scribd",
+      "path": "years/2008/sites/scribd/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "secondlife",
+      "path": "years/2008/sites/secondlife/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "seesmic",
+      "path": "years/2008/sites/seesmic/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "silverlight",
+      "path": "years/2008/sites/silverlight/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "skydrive",
+      "path": "years/2008/sites/skydrive/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "spore",
+      "path": "years/2008/sites/spore/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "stumbleupon",
+      "path": "years/2008/sites/stumbleupon/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "tripadvisor",
+      "path": "years/2008/sites/tripadvisor/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "tweetdeck",
+      "path": "years/2008/sites/tweetdeck/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "twitter",
+      "path": "years/2008/sites/twitter/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 7,
+      "whenKey": "itt08-tweets",
+      "name": "Twitter"
+    },
+    {
+      "year": "2008",
+      "dest": "ustream",
+      "path": "years/2008/sites/ustream/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "vimeo",
+      "path": "years/2008/sites/vimeo/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "weather",
+      "path": "years/2008/sites/weather/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "webkinz",
+      "path": "years/2008/sites/webkinz/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "wii",
+      "path": "years/2008/sites/wii/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "wikileaks",
+      "path": "years/2008/sites/wikileaks/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "windows7",
+      "path": "years/2008/sites/windows7/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "wow",
+      "path": "years/2008/sites/wow/armory.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "wow",
+      "path": "years/2008/sites/wow/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "xboxlive",
+      "path": "years/2008/sites/xboxlive/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "xkcd",
+      "path": "years/2008/sites/xkcd/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "yelp",
+      "path": "years/2008/sites/yelp/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "youtube",
+      "path": "years/2008/sites/youtube/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 8,
+      "whenKey": "itt08-yt",
+      "name": "YouTube"
+    },
+    {
+      "year": "2008",
+      "dest": "ytmnd",
+      "path": "years/2008/sites/ytmnd/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2008",
+      "dest": "zillow",
+      "path": "years/2008/sites/zillow/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "among",
+      "path": "years/2009/sites/among/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "amz",
+      "path": "years/2009/sites/amz/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "android",
+      "path": "years/2009/sites/android/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "android",
+      "path": "years/2009/sites/android/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "android",
+      "path": "years/2009/sites/android/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "angry",
+      "path": "years/2009/sites/angry/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "angry",
+      "path": "years/2009/sites/angry/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "angry",
+      "path": "years/2009/sites/angry/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "appstore",
+      "path": "years/2009/sites/appstore/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "appstore",
+      "path": "years/2009/sites/appstore/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 5,
+      "whenKey": "itt09-apps",
+      "name": "App Store"
+    },
+    {
+      "year": "2009",
+      "dest": "appstore",
+      "path": "years/2009/sites/appstore/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "beacon",
+      "path": "years/2009/sites/beacon/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "beacon",
+      "path": "years/2009/sites/beacon/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "beacon",
+      "path": "years/2009/sites/beacon/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "bing",
+      "path": "years/2009/sites/bing/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "bing",
+      "path": "years/2009/sites/bing/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 3,
+      "whenKey": "itt09-bing",
+      "name": "Bing"
+    },
+    {
+      "year": "2009",
+      "dest": "bing",
+      "path": "years/2009/sites/bing/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "bitcoin",
+      "path": "years/2009/sites/bitcoin/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "bitcoin",
+      "path": "years/2009/sites/bitcoin/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "bitcoin",
+      "path": "years/2009/sites/bitcoin/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "brave",
+      "path": "years/2009/sites/brave/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "chatroulette",
+      "path": "years/2009/sites/chatroulette/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "chatroulette",
+      "path": "years/2009/sites/chatroulette/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "chatroulette",
+      "path": "years/2009/sites/chatroulette/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "chrome",
+      "path": "years/2009/sites/chrome/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "chrome",
+      "path": "years/2009/sites/chrome/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "chrome",
+      "path": "years/2009/sites/chrome/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "cont",
+      "path": "years/2009/sites/cont/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "couchsurfing",
+      "path": "years/2009/sites/couchsurfing/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "discord",
+      "path": "years/2009/sites/discord/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "edge",
+      "path": "years/2009/sites/edge/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "epic",
+      "path": "years/2009/sites/epic/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "etsy",
+      "path": "years/2009/sites/etsy/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "facebook",
+      "path": "years/2009/sites/facebook/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "facebook",
+      "path": "years/2009/sites/facebook/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 1,
+      "whenKey": "itt09-like",
+      "name": "Facebook Like"
+    },
+    {
+      "year": "2009",
+      "dest": "facebook",
+      "path": "years/2009/sites/facebook/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "farmville",
+      "path": "years/2009/sites/farmville/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "farmville",
+      "path": "years/2009/sites/farmville/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 2,
+      "whenKey": "itt09-farm",
+      "name": "FarmVille"
+    },
+    {
+      "year": "2009",
+      "dest": "farmville",
+      "path": "years/2009/sites/farmville/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "ff",
+      "path": "years/2009/sites/ff/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "figma",
+      "path": "years/2009/sites/figma/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "fn",
+      "path": "years/2009/sites/fn/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "foursquare",
+      "path": "years/2009/sites/foursquare/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "foursquare",
+      "path": "years/2009/sites/foursquare/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 7,
+      "whenKey": "itt09-4sq",
+      "name": "Foursquare"
+    },
+    {
+      "year": "2009",
+      "dest": "foursquare",
+      "path": "years/2009/sites/foursquare/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "friendfeed",
+      "path": "years/2009/sites/friendfeed/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "friendfeed",
+      "path": "years/2009/sites/friendfeed/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "github",
+      "path": "years/2009/sites/github/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "gmail",
+      "path": "years/2009/sites/gmail/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "google",
+      "path": "years/2009/sites/google/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "gowalla",
+      "path": "years/2009/sites/gowalla/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "gvoice",
+      "path": "years/2009/sites/gvoice/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "gvoice",
+      "path": "years/2009/sites/gvoice/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "hootsuite",
+      "path": "years/2009/sites/hootsuite/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "hulu",
+      "path": "years/2009/sites/hulu/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "hulu",
+      "path": "years/2009/sites/hulu/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "hulu",
+      "path": "years/2009/sites/hulu/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "icloud",
+      "path": "years/2009/sites/icloud/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "ie8",
+      "path": "years/2009/sites/ie8/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "ie8",
+      "path": "years/2009/sites/ie8/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "ig",
+      "path": "years/2009/sites/ig/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "iphone",
+      "path": "years/2009/sites/iphone/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "iphone",
+      "path": "years/2009/sites/iphone/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 4,
+      "whenKey": "itt09-iphone",
+      "name": "iPhone 3GS"
+    },
+    {
+      "year": "2009",
+      "dest": "iphone",
+      "path": "years/2009/sites/iphone/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "kickstarter",
+      "path": "years/2009/sites/kickstarter/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "kickstarter",
+      "path": "years/2009/sites/kickstarter/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 8,
+      "whenKey": "itt09-kickstarter",
+      "name": "Kickstarter"
+    },
+    {
+      "year": "2009",
+      "dest": "kickstarter",
+      "path": "years/2009/sites/kickstarter/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "kindle",
+      "path": "years/2009/sites/kindle/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "kindle",
+      "path": "years/2009/sites/kindle/c.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "kindle",
+      "path": "years/2009/sites/kindle/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "kindle",
+      "path": "years/2009/sites/kindle/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "kiva",
+      "path": "years/2009/sites/kiva/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "li",
+      "path": "years/2009/sites/li/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "maps",
+      "path": "years/2009/sites/maps/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "minecraft",
+      "path": "years/2009/sites/minecraft/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "minecraft",
+      "path": "years/2009/sites/minecraft/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "minecraft",
+      "path": "years/2009/sites/minecraft/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "mint",
+      "path": "years/2009/sites/mint/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "myspace",
+      "path": "years/2009/sites/myspace/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "myspace",
+      "path": "years/2009/sites/myspace/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "myspace",
+      "path": "years/2009/sites/myspace/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "netflix",
+      "path": "years/2009/sites/netflix/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "netflix",
+      "path": "years/2009/sites/netflix/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "netflix",
+      "path": "years/2009/sites/netflix/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "nfx",
+      "path": "years/2009/sites/nfx/c.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "nintendo",
+      "path": "years/2009/sites/nintendo/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "notion",
+      "path": "years/2009/sites/notion/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "omegle",
+      "path": "years/2009/sites/omegle/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "omegle",
+      "path": "years/2009/sites/omegle/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "omegle",
+      "path": "years/2009/sites/omegle/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "omegle",
+      "path": "years/2009/sites/omegle/pop.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "opentable",
+      "path": "years/2009/sites/opentable/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "palmpre",
+      "path": "years/2009/sites/palmpre/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "palmpre",
+      "path": "years/2009/sites/palmpre/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "patreon",
+      "path": "years/2009/sites/patreon/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "playable",
+      "path": "years/2009/sites/playable/close.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "playable",
+      "path": "years/2009/sites/playable/famous.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "playable",
+      "path": "years/2009/sites/playable/game.html",
+      "hooks": [
+        "data-official-verb",
+        "data-game-start"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 10,
+      "whenKey": "itt09-game-plot",
+      "name": "Plot Neighbors"
+    },
+    {
+      "year": "2009",
+      "dest": "playable",
+      "path": "years/2009/sites/playable/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "playable",
+      "path": "years/2009/sites/playable/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "pp",
+      "path": "years/2009/sites/pp/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "ps",
+      "path": "years/2009/sites/ps/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "reddit",
+      "path": "years/2009/sites/reddit/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "roblox",
+      "path": "years/2009/sites/roblox/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "safari",
+      "path": "years/2009/sites/safari/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "slack",
+      "path": "years/2009/sites/slack/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "spotify",
+      "path": "years/2009/sites/spotify/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "ss",
+      "path": "years/2009/sites/ss/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "steam",
+      "path": "years/2009/sites/steam/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "stumbleupon",
+      "path": "years/2009/sites/stumbleupon/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "teams",
+      "path": "years/2009/sites/teams/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "tt",
+      "path": "years/2009/sites/tt/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "twitch",
+      "path": "years/2009/sites/twitch/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "twitter",
+      "path": "years/2009/sites/twitter/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "twitter",
+      "path": "years/2009/sites/twitter/c.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "twitter",
+      "path": "years/2009/sites/twitter/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 6,
+      "whenKey": "itt09-tweets",
+      "name": "Twitter"
+    },
+    {
+      "year": "2009",
+      "dest": "twitter",
+      "path": "years/2009/sites/twitter/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "typekit",
+      "path": "years/2009/sites/typekit/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "ubercab",
+      "path": "years/2009/sites/ubercab/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "ubercab",
+      "path": "years/2009/sites/ubercab/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "wave",
+      "path": "years/2009/sites/wave/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "wave",
+      "path": "years/2009/sites/wave/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "wave",
+      "path": "years/2009/sites/wave/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "whatsapp",
+      "path": "years/2009/sites/whatsapp/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "whatsapp",
+      "path": "years/2009/sites/whatsapp/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "wiki",
+      "path": "years/2009/sites/wiki/edit.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "wikipedia",
+      "path": "years/2009/sites/wikipedia/edit.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "wikipedia",
+      "path": "years/2009/sites/wikipedia/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "wikipedia",
+      "path": "years/2009/sites/wikipedia/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "windows7",
+      "path": "years/2009/sites/windows7/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "windows7",
+      "path": "years/2009/sites/windows7/index.html",
+      "hooks": [
+        "data-official-verb"
+      ],
+      "leftover2x": false,
+      "role": "official",
+      "n": 9,
+      "whenKey": "itt09-win7",
+      "name": "Win7"
+    },
+    {
+      "year": "2009",
+      "dest": "windows7",
+      "path": "years/2009/sites/windows7/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "wolfram",
+      "path": "years/2009/sites/wolfram/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "wolfram",
+      "path": "years/2009/sites/wolfram/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "wolfram",
+      "path": "years/2009/sites/wolfram/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "wordpress",
+      "path": "years/2009/sites/wordpress/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "xbox",
+      "path": "years/2009/sites/xbox/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "youtube",
+      "path": "years/2009/sites/youtube/about.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "youtube",
+      "path": "years/2009/sites/youtube/c.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "youtube",
+      "path": "years/2009/sites/youtube/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "youtube",
+      "path": "years/2009/sites/youtube/more.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": true,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    },
+    {
+      "year": "2009",
+      "dest": "zoom",
+      "path": "years/2009/sites/zoom/index.html",
+      "hooks": [
+        "data-lo-save"
+      ],
+      "leftover2x": false,
+      "role": "save",
+      "n": null,
+      "whenKey": null,
+      "name": null
+    }
+  ]
+}

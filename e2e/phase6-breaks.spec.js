@@ -182,23 +182,6 @@ test("2005 YouTube empty description never writes", async ({ page }) => {
   expect(parsed.key).toBe("itt05-yt-uploads");
 });
 
-test("2006 Twitter empty and unticked text never write", async ({ page }) => {
-  await page.goto("/years/2006/sites/twitter/index.html", { waitUntil: "domcontentloaded" });
-  await clear(page, ["itt06-tweets"]);
-  await page.locator("[data-tw06-post]").click();
-  expect(await item(page, "itt06-tweets")).toBeNull();
-  await page.locator("[data-tw06-body]").fill("hello museum");
-  await page.locator("[data-tw06-post]").click();
-  expect(await item(page, "itt06-tweets")).toBeNull();
-  await page.locator("[data-tw06-req]").nth(0).check();
-  await page.locator("[data-tw06-req]").nth(1).check();
-  await page.locator("[data-tw06-body]").fill("h");
-  await page.locator("[data-tw06-post]").click();
-  expect(await item(page, "itt06-tweets")).toBeNull();
-  await page.locator("[data-tw06-body]").fill("hello museum");
-  await page.locator("[data-tw06-post]").click();
-  expect(await item(page, "itt06-tweets")).toBeTruthy();
-});
 
 test("2007 iPhone empty URL and missing ticks never write", async ({ page }) => {
   await page.goto("/years/2007/sites/iphone/index.html", { waitUntil: "domcontentloaded" });

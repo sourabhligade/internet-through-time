@@ -80,6 +80,8 @@ body.yg-body *::after {
   --yg-font: Tahoma, "MS Sans Serif", Arial, Helvetica, sans-serif;
   --yg-title-size: 20px;
   --yg-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+  --yg-receipt-ok: #060;
+  --yg-receipt-hold: #a00;
 
   max-width: 560px !important;
   margin: 10px auto 24px !important;
@@ -507,6 +509,30 @@ html[data-itt-year="2014"] [data-year-game] {
   border-left: 4px solid var(--yg-accent);
   border-radius: 0 var(--yg-radius) var(--yg-radius) 0;
   color: var(--yg-ink);
+}
+
+/* Museum receipt chip. Light paper so #060 / #a00 stay readable
+   on dark era HUDs (1996/1998/2000) and extra mx-shell chrome. */
+.yg-status[data-yg-receipt="ok"],
+[data-itt-action-status][data-yg-receipt="ok"],
+#play-status[data-yg-receipt="ok"] {
+  color: var(--yg-receipt-ok, #060) !important;
+  background: #e8f5e8 !important;
+  border-left-color: var(--yg-receipt-ok, #060) !important;
+}
+.yg-status[data-yg-receipt="hold"],
+[data-itt-action-status][data-yg-receipt="hold"],
+#play-status[data-yg-receipt="hold"] {
+  color: var(--yg-receipt-hold, #a00) !important;
+  background: #fde8e8 !important;
+  border-left-color: var(--yg-receipt-hold, #a00) !important;
+}
+.yg-status[data-yg-receipt="play"],
+[data-itt-action-status][data-yg-receipt="play"],
+#play-status[data-yg-receipt="play"] {
+  color: var(--yg-ink) !important;
+  background: var(--yg-hud-bg) !important;
+  border-left-color: var(--yg-accent) !important;
 }
 
 /* footer nav */

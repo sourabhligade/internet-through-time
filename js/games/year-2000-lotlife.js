@@ -103,8 +103,8 @@
   function paintHud() {
     if (scoreEl) scoreEl.textContent = String(score);
     if (partyBtn) {
-      partyBtn.disabled = false;
-      partyBtn.setAttribute("aria-disabled", readyForParty() ? "false" : "true");
+      partyBtn.disabled = !!saved;
+      partyBtn.setAttribute("aria-disabled", saved || !readyForParty() ? "true" : "false");
     }
     try {
       host.setAttribute("data-lot-placed", String(placedCount()));
@@ -150,6 +150,10 @@
     }
   }
   function throwParty() {
+    if (saved) {
+      setStatus("Already saved.");
+      return;
+    }
     if (!readyForParty()) {
       setStatus(
         !running
@@ -162,12 +166,10 @@
       );
       return;
     }
-    saved = true;
-    running = false;
-    stopTick();
     score = 40 + placedCount() * 8 + uses * 4;
+    var wrote = false;
     if (YG && YG.saveBest) {
-      YG.saveBest("lotlife", score, {
+      wrote = !!YG.saveBest("lotlife", score, {
         year: "2000",
         merge: {
           real: true,
@@ -184,10 +186,17 @@
         }
       });
     }
+    if (!wrote) {
+      setStatus("This browser blocked the save.");
+      return;
+    }
+    saved = true;
+    running = false;
+    stopTick();
     if (YG && YG.markStep) YG.markStep("save", host);
     paintHud();
     paintBest();
-    setStatus("Party saved · itt00-game-lotlife · score " + score + ".");
+    setStatus("Saved.");
   }
 
   if (shop) {

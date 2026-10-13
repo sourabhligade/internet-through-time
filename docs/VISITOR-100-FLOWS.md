@@ -1,6 +1,6 @@
 # Visitor 100% — dest-true flows, not dest-farm links
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **23 doors** (1994–2010, 2012–2014, and 2020–2022). **2015 is omitted.** **2017–2019 and 2023–2025 are absent.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2005, 2007–2010, 2012–2014, and 2020–2022). **2015 is omitted.** **2018–2019 and 2023–2025 are absent. 2017 has no year-card key.** Leftover-3× unique catalogs are **empty**. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 
 **Date:** 2026-09-27 
@@ -24,7 +24,7 @@ Do not dest-farm dests. Do not dest-lock 2015 again. Do not dest-lock forests / 
 | **Flows** | Official dest `data-official-need` · leftover-3× unique dest-true dests (one dest / one verb / one key) · star empty/trap never writes · cream leftover-3× unique dest-true leftover go 1 · period look / failed-final | **This is 100%.** |
 | **Links** | More dest folders · dest-farm leftover dest leftover-3× dest-farm extra dests · dest-lock revert of 2007 / 2010–2012 / 2014 / 2021 · leftover-20 dest-farm (2017 absent; leftover-20 unshipped) | **Fails I/O.** A year that looks full because it has 200 leftover dests has failed I/O. |
 
-2015 is omitted (0 HTML dest folders). 2017–2019 are absent. 2021 is live HTML. Warehouse dest-folder counts from dest-lock-reverted years do not raise visitor 100%. Leftover-3× unique catalogs are empty.
+2015 is omitted (0 HTML dest folders). 2017 has no year-card key. 2018–2019 are absent. 2021 is live HTML. Warehouse dest-folder counts from dest-lock-reverted years do not raise visitor 100%. Leftover-3× unique catalogs are empty.
 
 ---
 
@@ -34,11 +34,12 @@ Do not dest-farm dests. Do not dest-lock 2015 again. Do not dest-lock forests / 
 |------|------|
 | Door | **24/24** live doors: hub card · HTML year-shell · Starting Point · About · Map · star file · guided **6** · official files (2004=8, 2013=9, 2014=9, others 10) |
 | Official 10 hrefs | **0 missing** including 2012 / 2013 / 2014 / 2022 |
-| Official dest leftover-2× | **0** on playable years (1998 / 2006 / 2013 leftover-2× first paint is warehouse, not visitor first paint) |
+| Official dest leftover-2× | **0** on playable years (1998 / 2013 leftover-2× first paint is warehouse, not visitor first paint) |
 | Leftover-3× unique dest-true dests | **0** · catalogs empty · leftover go **1** · empty never writes · leftover never writes the star |
 | Dest-farm leftover-3× CUT specs | Dest-true pack asserts the catalogs stay empty |
 | Mock-flow DEST_FIELD / WEAK_REAL / HASH_CTA | **0** |
-| Absent | **2017–2019 · 2023–2025** no tree · no hub card |
+| No key | **2017** no year-card key · no tree · no hub card |
+| Absent | **2018–2019 · 2023–2025** no tree · no hub card |
 | Omitted | **2015** no year-card key · hash is not a door |
 | 2009 | live HTML · Facebook Like `itt09-like` |
 
@@ -59,7 +60,6 @@ Do not dest-farm dests. Do not dest-lock 2015 again. Do not dest-lock forests / 
 | Year | `data-lo-panel` on official 10 | Pass |
 |------|-------------------------------:|------|
 | 1998 | 1 | Strip or dest-true leftover dest leftover-2× warehouse fold |
-| 2006 | 3 | Same |
 | 2013 | 1 | Same |
 | 2009 | 30 | live HTML leftover warehouse (Like `itt09-like`) |
 
@@ -71,7 +71,7 @@ Do not dest-farm dests. Do not dest-lock 2015 again. Do not dest-lock forests / 
 
 ### 3.5 Unique leftover-**20** (not leftover-3× unique dest-true)
 
-**2017 is absent · not a door.** Unique leftover-20 is unshipped. leftover-3× unique dest-true dests (9 / 3 / 5) are a **different** map. Do not dest-farm leftover dest leftover-20 dests.
+**2017 has no year-card key · not a door.** Unique leftover-20 is unshipped. leftover-3× unique dest-true dests (9 / 3 / 5) are a **different** map. Do not dest-farm leftover dest leftover-20 dests.
 
 ---
 
@@ -131,9 +131,9 @@ Do not dest-farm leftover dest leftover-3× unique dest-true dests past these st
 
 | Year | Leftover-3× unique dest-true dests | Stop |
 |------|-----------------------------------:|------|
-| Forests 1994–2006 | stacked leftover-3× workshop | Unique leftover-3×n **not the forest job** |
+| Forests 1994–2005 | stacked leftover-3× workshop | Unique leftover-3×n **not the forest job** |
 | 2007 / 2010–2014 | dest-true catalogs **empty** · dest-links n=3 on 2008, 2009, 2010, 2012, 2013, 2020, 2021, 2022 · 2007 and 2014 stay 0 | Do not restore a 9-face catalog |
-| 2017 | **0 leftover-3× unique dest-true dests** | Absent · not a door · leftover-20 not shipped |
+| 2017 | **0 leftover-3× unique dest-true dests** | No year-card key · not a door · leftover-20 not shipped |
 | 2018 | **0** | Absent · not a door |
 | 2021 | dest-true **0** · dest-links n=3 (amazon · coinbaseipo · epicapple) · cap memory 5 unused | Do not dest-farm a 5-face catalog |
 | 2022 | dest-true **0** · dest-links n=3 (amazon · dalle2 · facebook) | Temu `ITT-2X-LINKS` is a leftover flow, not a unique-catalog row |
@@ -145,7 +145,7 @@ Do not dest-farm leftover dest leftover-3× unique dest-true dests past these st
 
 ### Phase 0 — law / docs (no dest HTML)
 
-- [x] Strike stale 27 / 28 years. Hub **23 doors**. **2015 is omitted.** **2022 live**. **2023–2025 absent**.
+- [x] Strike stale 27 / 28 years. Hub **22 doors**. **2015 is omitted.** **2022 live**. **2023–2025 absent**.
 - [x] Close GitHub **#11–#14** (A clutter-clear already on tree · dest-lock 2015 reverted · not dest-lock tickets).
 - [x] Link this file from [`docs/README.md`](README.md) + [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
@@ -173,7 +173,6 @@ Same dests. `data-official-need` so empty never writes.
 ### Phase 3 — official dest leftover-2× leftover
 
 - [x] 1998 official dest leftover-2× **1** (Snap n=10) folded under Also this year.
-- [x] 2006 official dest leftover-2× **3** (Line Rider n=10) folded under Also this year.
 - [x] 2013 official dest leftover-2× **1** (Loop Six n=10) folded under Also this year. First paint is gold-only.
 
 Fold or dest-true leftover dest leftover-2× warehouse. Do not dest-farm leftover dest leftover-2× dests.
@@ -192,7 +191,7 @@ Fold or dest-true leftover dest leftover-2× warehouse. Do not dest-farm leftove
 
 ### Phase 6 — unique leftover-20 (only if named)
 
-- [x] leftover-20 is unshipped. 2017 is absent. 2015 is omitted. Do not dest-farm leftover-20 dests on any year.
+- [x] leftover-20 is unshipped. 2017 has no year-card key. 2015 is omitted. Do not dest-farm leftover-20 dests on any year.
 
 ---
 
@@ -203,7 +202,7 @@ Fold or dest-true leftover dest leftover-2× warehouse. Do not dest-farm leftove
 - Dest-lock 2015 again.
 - Dest-farm leftover dest leftover-3× unique dest-true dests on past 3 or 2021 past 5.
 - Dest-farm leftover dest leftover-3× dest-farm extra dests (facebook / hbonow / hqtrivia) as leftover-3× unique dest-true dests.
-- Unique leftover-3×n on forests 1994–2006.
+- Unique leftover-3×n on forests 1994–2005.
 - Board 2009. 2009 is already a live HTML door.
 - Restore 2023–2025.
 - Invent brand pixels.

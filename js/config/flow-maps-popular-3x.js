@@ -18,7 +18,6 @@
     "2000": ["half|Half.com", "limewire|LimeWire", "yahoo|Yahoo", "geocities|GeoCities", "slashdot|Slashdot", "msn|MSN", "excite|Excite", "icq|ICQ"],
                 "2004": ["myspace|MySpace", "wikipedia|Wikipedia", "yahoo|Yahoo", "skype|Skype", "livejournal|LiveJournal", "friendster|Friendster", "cnn|CNN", "bbc|BBC", "imdb|IMDb"],
     "2005": ["milliondollar|Million Dollar Homepage", "clubpenguin|Club Penguin", "kayak|Kayak", "myspace|MySpace", "wikipedia|Wikipedia", "yahoo|Yahoo", "dailymotion|DailyMotion", "googlevideo|Google Video", "earth|Google Earth"],
-    "2006": ["flickr|Flickr", "gmail|Gmail", "reddit|Reddit", "myspace|MySpace", "delicious|del.icio.us", "digg|Digg", "google|Google", "yahoo|Yahoo", "amazon|Amazon"],
     "2007": ["wiki|Wikipedia", "myspace|MySpace", "maps|Maps"],
     "2009": ["omegle|Omegle", "chatroulette|Chatroulette", "wikipedia|Wikipedia", "android|Android", "kindle|Kindle", "reddit|Reddit", "youtube|YouTube", "myspace|MySpace", "wave|Google Wave"],
     "2010": ["netflix|Netflix", "tumblr|Tumblr", "formspring|Formspring"],

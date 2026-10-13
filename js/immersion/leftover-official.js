@@ -30,7 +30,6 @@
     "/years/2003/sites/photobucket/": { href: "", note: "[failed-final] Photobucket · no named WDM exhibit" },
     "/years/2004/sites/facebook/": { href: "", note: "[failed-final] thefacebook · no named WDM exhibit" },
     "/years/2005/sites/youtube/": { href: "https://www.webdesignmuseum.org/gallery/youtube-2005", note: "YouTube 2005 · WDM" },
-    "/years/2006/sites/twitter/": { href: "https://www.webdesignmuseum.org/gallery/twitter-2006", note: "Twttr · WDM 2006" },
     "/years/2007/sites/iphone/": { href: "https://www.webdesignmuseum.org/web-design-history/safari-1-0-2003", note: "iPhone Safari · period Safari history" },
     "/years/2008/sites/appstore/": { href: "https://www.apple.com/newsroom/2008/07/10iPhone-3G-on-Sale-Tomorrow/", note: "[failed-final] App Store · Apple 10 Jul 2008 · 500+ native apps" },
     "/years/2009/sites/facebook/": { href: "", note: "[failed-final] Facebook Like · 9 Feb 2009 · two partner Likes · Beacon never writes" },
@@ -123,6 +122,17 @@
     if (YX && YX.key) return YX.key(suffix);
     return prefix(year) + "-" + suffix;
   }
+
+  /** Dest-true leftover plaque owns the leftover trail key on this document. */
+  function leftoverOfficialOwns(doc) {
+    doc = doc || document;
+    try {
+      return !!(doc.querySelector("[data-lo-panel][data-itt-dest-true] [data-lo-save][data-lo-key]"));
+    } catch (eOwns) {
+      return false;
+    }
+  }
+  ITT.leftoverOfficialOwns = leftoverOfficialOwns;
 
   function say(st, msg, err) {
     if (st) {

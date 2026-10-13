@@ -27,7 +27,6 @@ const FEATURED = {
   2003: 'gagslite',
   2004: 'gemcascade',
   2005: 'heli',
-  2006: 'sled',
   2007: 'safariq',
   2008: 'goospan',
   2009: 'plot',

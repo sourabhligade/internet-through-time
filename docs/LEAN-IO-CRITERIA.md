@@ -1,12 +1,12 @@
 # Lean HTML visitor I/O criteria
 
-**Historical research.** Not ship law. Live hub is **23 doors** (1994–2010, 2012–2014, and 2020–2022). **2015 is omitted.** **2017–2019 and 2023–2025 are absent.** **2020–2022 are live HTML.** The year lists below are research, not a second door list. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
+**Historical research.** Not ship law. Live hub is **22 doors** (1994–2005, 2007–2010, 2012–2014, and 2020–2022). **2015 is omitted.** **2018–2019 and 2023–2025 are absent. 2017 has no year-card key.** **2020–2022 are live HTML.** The year lists below are research, not a second door list. Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 
 **Date:** 2026-09-14  
 **Status:** Criteria. Not dest-farm. Not ship law.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `scripts/itt_gate.py` `SHIP_YEARS`.  
-**Years in this note:** research for lean HTML doors 2020–2021. **2017 is absent. 2018–2019 are absent.** Do not restore them from this file.
+**Years in this note:** research for lean HTML doors 2020–2021. **2017 has no year-card key. 2018–2019 are absent.** Do not restore them from this file.
 
 I/O here means **how the year feels to use**: first click, period chrome, the star verb, what writes, what never writes. It does **not** mean dest count.
 
@@ -18,7 +18,7 @@ Deep-research on look / heritage peers is a companion pass. This file is the pas
 
 Each year is **one verb in that year’s chrome**. Incomplete never writes. Leftover machines stay in the workshop (`?deep=1`). A year that looks “full” because it has 200 leftover folders has **failed I/O**.
 
-**2021 ATT (Ask App Not to Track) is the I/O model among live lean doors.** **2017 is absent · not a door.** 2021 dest-farm is the anti-model.
+**2021 ATT (Ask App Not to Track) is the I/O model among live lean doors.** **2017 has no year-card key · not a door.** 2021 dest-farm is the anti-model.
 
 ---
 
@@ -51,7 +51,7 @@ Disk counts are **today’s tree**, not targets. Do not grow dests to “catch u
 
 | Year | Star dest | Key | Save (writes) | Trap / incomplete (never) | Shell | Hard bans | Disk now |
 |------|-----------|-----|---------------|---------------------------|-------|-----------|----------|
-| **2017** | absent · not a door | — | — | — | — | — | **0 dests** · do not dest-farm |
+| **2017** | no year-card key · not a door | — | — | — | — | — | **0 dests** · do not dest-farm |
 | **2018** | absent · not a door | — | — | — | — | — | **0 dests** · do not dest-farm |
 | **2019** | absent · not a door | — | — | — | — | — | **0 dests** · do not dest-farm |
 | **2021** | `sites/att/index.html` | `itt21-att` | **Ask App Not to Track** | **Allow** · ChatGPT dest · Wordle-as-2021-mass | Win10 mass · Chrome habit | ChatGPT · Zoom Leave as this dest | **18 dests** · 0 assets |
@@ -70,7 +70,7 @@ Period files under `assets/period/YYYY/` for **2017–2021 = 0**. WDM / oldweb.t
 | L2 | Phone-year star uses a **phone frame** (Stories, Face ID, ATT, Zoom-on-laptop is the exception) | Frame matches the verb | Desktop form that says “swipe” |
 | L3 | Chrome habit is **Chrome-shaped**, not IE6 leftover with a URL | `chrome-habit` / period-YYYY | XP gray on GDPR |
 | L4 | Starting Point above the fold is **thesis + 6 steps + star** | Clean | Unique A/B/C leftover boards in the first screen |
-| L5 | Lean years **read lean** | -sized door | 2021 warehouse pretending to be a thin lean door. 2017 is absent. |
+| L5 | Lean years **read lean** | -sized door | 2021 warehouse pretending to be a thin lean door. 2017 has no year-card key. |
 
 **Do not** dest-farm to fix look. **Do** one capture-backed star, then official 10, then stop.
 
@@ -82,7 +82,7 @@ Locked guided shape (already in `ui/year/start-data.js`):
 
 | Year | 1 | 2 ★ | 3 | 4 | 5 | 6 |
 |------|---|-----|---|---|---|---|
-| 2017 | absent · not a door | — | — | — | — | — |
+| 2017 | no year-card key · not a door | — | — | — | — | — |
 | 2018 | absent · not a door | — | — | — | — | — |
 | 2019 | absent · not a door | — | — | — | — | — |
 | 2021 | About | ATT Ask | Signal leftover | Copilot waitlist | Meta rename leftover | Map |
@@ -121,7 +121,7 @@ Do not skip ahead to dest-farm.
 | **E** | Phone frame + Chrome habit on Stories / Face ID / ATT / Zoom | L2 / L3 |
 | **F** | Official 10 dests match `flow-trails.js` and have dest-true verbs | I13 |
 | **G** | e2e: mvp + write/no-write for each star | I14 |
-| **H** | Optional dest-farm **lock** (2021): dests = `urlMap` ∩ disk, delete the rest **in the same pass** as matrices / READ-FIRST. **2017 is absent.** | Door reads lean |
+| **H** | Optional dest-farm **lock** (2021): dests = `urlMap` ∩ disk, delete the rest **in the same pass** as matrices / READ-FIRST. **2017 has no year-card key.** | Door reads lean |
 
 ---
 
@@ -142,7 +142,7 @@ Do not skip ahead to dest-farm.
 
 | Year | I1 star | I3 verb | I4 empty | I5 trap | I7 fold | L2 frame | I13 o10 | I14 e2e | Notes |
 |------|:-------:|:-------:|:--------:|:-------:|:-------:|:--------:|:-------:|:-------:|-------|
-| 2017 | — | — | — | — | — | — | — | — | absent · not a door |
+| 2017 | — | — | — | — | — | — | — | — | no year-card key · not a door |
 | 2018 | — | — | — | — | — | — | — | — | absent · not a door |
 | 2019 | — | — | — | — | — | — | — | — | absent · not a door |
 | 2021 | Y | Y | Y | Y | Y | Y | Y | Y | one-thing + mvp |

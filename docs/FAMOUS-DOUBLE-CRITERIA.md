@@ -2,7 +2,7 @@
 
 **Date:** 2026-10-04
 **Status:** Criteria only. Not an implement pass. No new folders from this file.
-**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json`. Hub is **23 doors** (1994–2010, 2012–2014, and 2020–2022). **2015 is omitted.** **2017, 2018, 2019, and 2023–2025 are absent.**
+**Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json`. Hub is **22 doors** (1994–2005, 2007–2010, 2012–2014, and 2020–2022). **2015 is omitted.** **2017 has no year-card key.** **2018, 2019, and 2023–2025 are absent.**
 **Older map:** [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) (2026-09-20). Its counts and its “2009 boarded / 2020–2022 absent” lines are stale. This file is the live class map. Candidate rows in the older file stay research until a cite and a named implement.
 **I/O:** [`LEAN-IO-CRITERIA.md`](LEAN-IO-CRITERIA.md) · [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md).
 **Bibliography:** [`SOURCES.md`](SOURCES.md). A 403 is not a cite. Web Design Museum galleries returned 403 on 2026-10-04.
@@ -19,7 +19,7 @@ Deep research is the companion pass. Its shortlist is not a build list. A row is
 |--|-----------|---------------|
 | Envelope | Read period sites, year essays, company blogs, ranks | 5,000 new dest folders |
 | New dests | Leftover dests on thin doors, one slug, one verb, one key | An 11th official stop · a second star · `lx` plus `d2` counted as two dests |
-| Years | §4 thin doors | Forests 1994–2006 · omitted 2015 · absent 2017, 2018, 2019, 2023–2025 |
+| Years | §4 thin doors | Forests 1994–2005 · omitted 2015 · 2017 has no year-card key · absent 2018, 2019, 2023–2025 |
 | When HTML | After a named implement and a cite that opened | A silent dest-farm from this file or from a research shortlist |
 
 ---
@@ -34,7 +34,7 @@ A proposed dest **fails** if any row is N. One miss is a fail. Inherits the I/O 
 | **F2** | Unique key | One key, `ittYY-slug` | `lx` and `d2` counted as two dests · a second writer on the official key |
 | **F3** | Unique verb | The period action for that dest | “Open leftover” copied onto the next folder |
 | **F4** | Year lock | A launch or a mass audience in that calendar year | Neighbor gold. App Store, Chrome, Android G1, or iPhone 3G as a 2007 dest. Instagram Android as a 2010 dest. Vine as a 2012 dest. Watch, Windows 10, or Periscope as a 2014 dest. TikTok’s brand, Face ID, or the Switch as a later buy. ChatGPT as a 2021 dest. GPT-4, Threads, or the X wordmark as a 2022 dest |
-| **F5** | Thin door only | The year is in the Double column of §4 | A new folder on 1994–2006, 2008, 2009, 2013, 2015, 2017, 2018, 2019, or 2023–2025 |
+| **F5** | Thin door only | The year is in the Double column of §4 | A new folder on 1994–2005, 2008, 2009, 2013, 2015, 2017, 2018, 2019, or 2023–2025 |
 | **F6** | Cap | The year’s site-folder count stays at or under the aim in §4 | A folder added to hit the aim with no cite · a wiped year rebuilt toward the rejected 132-dest farm |
 | **F7** | Official length | 2004 stays 8. 2013 and 2014 stay 9. Every other open door stays 10 | A new official stop · Facebook 1B removed from 2012 stop 10 |
 | **F8** | Star | Only the year chip writes the star key in §7 | A leftover writes a star key from §7 |
@@ -57,10 +57,11 @@ Counts are first-level folders under `years/YYYY/sites/`, with `playable` exclud
 
 | Class | Years | Sites now | Games | This pass |
 |-------|-------|----------:|------:|-----------|
-| Forest | 1994–2006 | 150–805 | about 20 | **Stop.** Do not add dests. |
+| Forest | 1994–2005 | 150–805 | about 20 | **Stop.** Do not add dests. |
 | Holes only | 2008 (112), 2009 (77), 2013 (51) | already past a thin door | 3 / 1 / 1 | A dest only when a cited famous room is missing. No doubling. |
 | Omitted | 2015 | 0 | 0 | **Stop.** No tree, no hub card. Do not dest-farm. |
-| Absent | 2017, 2018, 2019, 2023, 2024, 2025 | 0 | 0 | **Stop.** No tree, no hub card, no React door. |
+| No key | 2017 | 0 | 0 | **Stop.** No year-card key, no tree, no hub card. |
+| Absent | 2018, 2019, 2023, 2024, 2025 | 0 | 0 | **Stop.** No tree, no hub card, no React door. |
 
 ---
 
@@ -72,7 +73,7 @@ The rejected farm was 132.
 
 On 2026-10-05 the named double added ten leftover rooms: `marketplace`, `note7`, `gboard`, `touchbar`, `bots`, `watchs2`, `nesclassic`, `hololens`, `yahoobreach`, `twilio`. Sites now **66**. Folders **67** with `playable`. Ceiling stays **112**. Hard fail stays **132**. These rooms are leftover dests. They are not official stops and not leftover-2× links.
 
-**2002 named implement.** On 2026-10-05 the same double was built on the frozen 2002 forest, because that implement was named: twenty leftover rooms (`adwords`, `apache2`, `audiogalaxy`, `aws`, `bb5810`, `dotnet`, `dwmx`, `eclipse2`, `ffxi`, `ichat`, `imacg4`, `j2se14`, `nnw`, `nokia7650`, `ns7`, `plaxo`, `qt6`, `sidekick`, `tabletpc`, `tungsten`). Official trail stays 20. Star stays `itt02-stumble`. Folders go from 230 to 250. These rooms are direct-URL leftovers with one writer each. They are not official stops and not leftover-2× links. §3 still says Stop for any other new 1994–2006 folder.
+**2002 named implement.** On 2026-10-05 the same double was built on the frozen 2002 forest, because that implement was named: twenty leftover rooms (`adwords`, `apache2`, `audiogalaxy`, `aws`, `bb5810`, `dotnet`, `dwmx`, `eclipse2`, `ffxi`, `ichat`, `imacg4`, `j2se14`, `nnw`, `nokia7650`, `ns7`, `plaxo`, `qt6`, `sidekick`, `tabletpc`, `tungsten`). Official trail stays 20. Star stays `itt02-stumble`. Folders go from 230 to 250. These rooms are direct-URL leftovers with one writer each. They are not official stops and not leftover-2× links. §3 still says Stop for any other new 1994–2005 folder.
 
 | Year | Star key | Sites now | Aim | New leftover cap | Official toy |
 |------|----------|----------:|-----:|-----------------:|--------------|
@@ -232,7 +233,7 @@ One writer. Cream panel. Not an official stop. Not a leftover-3× unique stamp.
 | Official trails | Same folders and the same whenKeys as §6 |
 | Guided six | Exactly six `<li>` |
 | Star | Only the chip in §7 writes that key |
-| Unique leftover-20 | None. 2017 is absent |
+| Unique leftover-20 | None. 2017 has no year-card key |
 | 2012 leftover-4× | chrome, twitter, soundcloud only, if those rails are still on the page |
 | Empty and trap | Write neither the leftover key nor the star |
 | Mock | `DEST_FIELD`, `WEAK_REAL`, `HASH_CTA` = 0 on any new dest |
@@ -246,7 +247,7 @@ One writer. Cream panel. Not an official stop. Not a leftover-3× unique stamp.
 
 - Treat 5,000 websites as 5,000 dest folders.
 - Add a dest to hit the aim when no page opened.
-- Double 1994–2006.
+- Double 1994–2005.
 - Add an HTML tree for 2015.
 - Restore 2017, 2018, 2019, or 2023–2025.
 - Grow an official trail, or remove 2012 Facebook 1B from stop 10.

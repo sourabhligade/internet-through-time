@@ -1,1 +1,0 @@
-firefox 2004: WA harvest 2026-07-27 — web.archive.org/web/20041222111641id_/http://www.mozilla.org/images/firefox-preview-logo.gif (GIF 428×85). Also icon-wa.png product-firefox.png 20041106 · title-wa.gif. logo-recon.gif residual.

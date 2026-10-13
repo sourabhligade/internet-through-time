@@ -41,8 +41,8 @@ This is the leftover duplicate-flow list. Forest stacked leftover-3× workshop s
 | Forest leftover dests with stacked leftover-3× (`data-itt-lo3x` count ≥ 2, ~251 dests) | Named **stacked workshop**. Unique leftover-3×n is not the forest job |
 | Leftover dest KEEP dest-true `lx` + `d2` on leftover dest KEEP dests | Leftover dest KEEP leftover-2× dest-true I/O. Not leftover-3× unique dests |
 | Leftover-3× unique dest **links** cap on 2014 / 2021 / 2022 | Filled 2026-09-22 with official dest hrefs already on disk. No new dest folders |
-| Leftover-2× harvest MISS forests 1994–1998, 2005, 2006, | Cites on dests already on disk. Next pass |
-| Official-keyed extra dest rooms 2005/2006 leftover warehouse (not dest-true) | Dest-unique extra rooms. Not official n≤10. 2009 live HTML leftover warehouse stays |
+| Leftover-2× harvest MISS forests 1994–1998, 2005 | Cites on dests already on disk. Next pass |
+| Official-keyed extra dest rooms 2005 leftover warehouse (not dest-true) | Dest-unique extra rooms. Not official n≤10. 2009 live HTML leftover warehouse stays |
 | Period pixels 2022 = 0 | Failed-final |
 | leftover-20 unshipped (2017 absent) | Failed-final |
 | `leftover-dest-ui.html` | No spec. Leftover dest HTML + `leftover-dest-face.css` is the face |

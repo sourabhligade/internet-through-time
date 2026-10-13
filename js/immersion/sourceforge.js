@@ -74,7 +74,7 @@
     if (blurbEl) blurbEl.textContent = meta.blurb;
     try {
       var prev = window.ITT.User.take(key());
-      if (prev && st) feedback("Saved · " + key(), st, false);
+      if (prev && st) feedback("Saved.", st, false);
     } catch (e0) { /* */ }
     btn.addEventListener("click", function () {
       var hon = doc.querySelector("[data-sf-not-github]");
@@ -93,7 +93,7 @@
             ts: Date.now()
           });
       } catch (e1) { /* */ }
-      feedback("Download queued · " + meta.name + " · " + key(), st, false);
+      feedback("Saved.", st, false);
       try {
         if (ITT._immersionApi && ITT._immersionApi.markTourUsed) ITT._immersionApi.markTourUsed();
       } catch (e2) { /* */ }

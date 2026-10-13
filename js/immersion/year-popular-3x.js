@@ -162,7 +162,7 @@
     if (saved && saved.q) {
       if (field && !field.value) field.value = saved.q;
       if (saved.picked) markLocal(saved.picked);
-      say(YX, st, "Still open · " + k);
+      say(YX, st, "Saved.");
       try {
         if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
       } catch (eR) { /* */ }
@@ -234,7 +234,7 @@
         say(YX, st, "This browser blocked the save.", true);
         return;
       }
-      say(YX, st, "Saved · " + k);
+      say(YX, st, "Saved.");
       try {
         if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
       } catch (eN) { /* */ }

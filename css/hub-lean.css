@@ -134,6 +134,10 @@ body.hub-lean {
   border-color: rgba(255, 255, 255, 0.45) !important;
 }
 
+.hub-lean .year-card.y1999:hover {
+  outline-color: #000080;
+}
+
 .hub-lean .year-card:focus,
 .hub-lean .year-card:focus-visible {
   outline: 2px solid #fff;

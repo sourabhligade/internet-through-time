@@ -10,7 +10,7 @@ const trio = require("../scripts/popular-3x3-sites.json");
 
 const OPEN = [
   "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003",
-  "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2012",
+  "2004", "2005", "2007", "2008", "2009", "2010", "2012",
   "2013", "2014", "2020", "2021", "2022"
 ];
 const WIPED = ["2023", "2024", "2025"];
@@ -21,7 +21,7 @@ const LEAN = [
 const WINGS = {
   gray: ["1994", "1995", "1996"],
   bubble: ["1997", "1998", "1999", "2000"],
-  rebuild: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"],
+  rebuild: ["2001", "2002", "2003", "2004", "2005", "2007"],
   phone: ["2008", "2009", "2010", "2012", "2013"],
   stream: ["2014"]
 };
@@ -39,7 +39,6 @@ const GOLD = {
   "2003": /Photobucket/i,
   "2004": /thefacebook/i,
   "2005": /YouTube/i,
-  "2006": /Twitter 140/i,
   "2007": /iPhone Safari/i,
   "2008": /App Store/i,
   "2009": /Like/i,
@@ -88,7 +87,7 @@ test.describe("atlas hallway — all flows", () => {
     await page.goto("/");
     await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
     await expect(page.locator(".start-hint")).toHaveCount(0);
-    await expect(page.locator("a.year-card.available")).toHaveCount(23);
+    await expect(page.locator("a.year-card.available")).toHaveCount(22);
   });
 
   test("remember lines are year-true and wiped years stay off the spine", async ({ page }) => {
@@ -113,7 +112,7 @@ test.describe("atlas hallway — all flows", () => {
     for (const y of LEAN) {
       await expect(page.locator(`#atlas-spine .spine-year.lean.open[data-atlas-year="${y}"]`)).toBeVisible();
     }
-    for (const y of ["1994", "1998", "2004", "2006"]) {
+    for (const y of ["1994", "1998", "2004"]) {
       await expect(page.locator(`#atlas-spine [data-atlas-year="${y}"]`)).not.toHaveClass(/lean/);
     }
     await expect(page.locator('#atlas-spine .atlas-wing[data-wing="wiped-late"]')).toHaveCount(0);
@@ -206,7 +205,7 @@ test.describe("atlas hallway — all flows", () => {
   test("popular third-trio rooms on disk are listed after catalog load", async ({ page }) => {
     await page.goto("/atlas/");
     await waitCatalog(page);
-    const sample = ["1994", "2004", "2006", "2014"];
+    const sample = ["1994", "2004", "2014"];
     for (const y of sample) {
       const want = (trio[y] || []).length;
       expect(want, y + " trio").toBeGreaterThanOrEqual(3);
@@ -222,20 +221,20 @@ test.describe("atlas hallway — all flows", () => {
     }
   });
 
-  test("museum-wide Every flow lists 24 golds and live official trails", async ({ page }) => {
+  test("museum-wide Every flow lists 22 golds and live official trails", async ({ page }) => {
     await page.goto("/atlas/");
     await waitCatalog(page);
     const golds = page.locator("#atlas-all-golds ol li");
-    await expect(golds).toHaveCount(23);
+    await expect(golds).toHaveCount(22);
     const goldHrefs = await page.locator("#atlas-all-golds a").evaluateAll((els) => els.map((a) => a.getAttribute("href") || ""));
-    expect(goldHrefs.length).toBe(23);
+    expect(goldHrefs.length).toBe(22);
     for (const h of goldHrefs) await expectLive(page, h, "all-golds");
 
     await expect(page.locator("#atlas-all-guided")).toBeVisible();
     await expect(page.locator("#atlas-all-official")).toBeVisible();
     await expect(page.locator("#atlas-all-games")).toBeVisible();
     const officialYears = page.locator("#atlas-all-official h4");
-    await expect(officialYears).toHaveCount(23);
+    await expect(officialYears).toHaveCount(22);
   });
 
   test("first night is the real 5-stop walk; spine keeps 2021 and 2022", async ({ page }) => {
@@ -246,7 +245,7 @@ test.describe("atlas hallway — all flows", () => {
     await expect(night).toContainText(/CSotD|guestbook/i);
     await expect(night).toContainText(/Google/i);
     await expect(night).toContainText(/thefacebook/i);
-    await expect(night).toContainText(/Twttr|Twitter/i);
+    await expect(night).toContainText(/YouTube/i);
     await expect(night).toContainText(/Instagram/i);
     const nightHrefs = await night.locator("a[href]").evaluateAll((els) =>
       els.map((a) => a.getAttribute("href") || "").filter((h) => h && !h.startsWith("#"))

@@ -19,8 +19,8 @@ const path = require('path');
 
 /** Boarded plaque years: no visitor door. 2023–2025 have no tree. */
 const BOARDED = new Set(['2023', '2024', '2025']);
-/** 2015 is omitted from year-card (no tree, no hub card). */
-const OMITTED = new Set(['2015']);
+/** Not a visitor door. 2011 has leftover rooms and no index.html. 2015 and 2017 have no tree. */
+const OMITTED = new Set(['2011', '2015', '2017']);
 
 /** Discover years/YYYY with index.html (skip research-only, boarded, and omitted). */
 function shippedYears() {
@@ -78,6 +78,16 @@ test.describe('all years smoke — home page direct', () => {
   }
 });
 
+test("2011 and 2017 are not shipped doors", () => {
+  expect(YEARS).not.toContain("2011");
+  expect(YEARS).not.toContain("2017");
+  expect(YEARS).toHaveLength(22);
+  const root = path.join(__dirname, "..");
+  expect(fs.existsSync(path.join(root, "years", "2017"))).toBe(false);
+  expect(fs.existsSync(path.join(root, "years", "2011", "index.html"))).toBe(false);
+  expect(fs.existsSync(path.join(root, "years", "2011", "sites", "kindlefire", "index.html"))).toBe(true);
+});
+
 test.describe('omitted 2015 is not a door', () => {
   test('2015 has no hub card and hash is not a door', async ({ page }) => {
     await page.goto('/');
@@ -96,7 +106,9 @@ test.describe('hub unlock consistency', () => {
     const years = await page.$$eval('a.year-card.available[data-year]', (els) =>
       els.map((e) => e.getAttribute('data-year')).filter(Boolean)
     );
-    expect(years.length).toBeGreaterThanOrEqual(10);
+    expect(years).toHaveLength(22);
+    expect(years).not.toContain("2011");
+    expect(years).not.toContain("2017");
     for (const y of years) {
       const res = await page.goto(`/years/${y}/`);
       expect(res && res.status(), `year ${y}`).toBeLessThan(400);

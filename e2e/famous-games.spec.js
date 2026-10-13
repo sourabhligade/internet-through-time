@@ -19,7 +19,6 @@ const ENGINES = {
   2003: ["tetris", "simon"],
   2004: ["breakout", "mines"],
   2005: ["snake", "invaders"],
-  2006: ["tetris", "snake"],
   2008: ["snake", "breakout"],
   2010: ["snake", "breakout"],
     2012: ["tetris", "snake"],

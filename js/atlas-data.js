@@ -1,7 +1,7 @@
 /**
  * Museum atlas — visitor floor plan of every playable year and flow.
  * Paths are from repo root. Atlas page prefixes ../ when needed.
- * 2007–2010, 2012–2014, and 2020–2022 lean doors live. 2015 is omitted. 2017–2019 and 2023–2025 are absent. Do not invent rooms.
+ * 2007–2010, 2012–2014, and 2020–2022 lean doors live. 2015 is omitted. 2017 has no year-card key. 2018–2019 and 2023–2025 are absent. Do not invent rooms.
  */
 (function (global) {
   "use strict";
@@ -10,7 +10,7 @@
   var OPEN = (function openFromCard() {
     var years = ITT.YEAR_CARD && ITT.YEAR_CARD.years;
     var fallback = [
-      "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2012", "2013", "2014", "2020", "2021", "2022"
+      "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2007", "2008", "2009", "2010", "2012", "2013", "2014", "2020", "2021", "2022"
     ];
     if (!years) return fallback;
     var out = [];
@@ -30,7 +30,7 @@
     wings: [
       { id: "gray", label: "Gray / directories", blurb: "Directories, SSL cart, portal hop.", years: ["1994", "1995", "1996"] },
       { id: "bubble", label: "Bubble", blurb: "Push, Lucky, AIM, MapQuest.", years: ["1997", "1998", "1999", "2000"] },
-      { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, Twttr, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2006", "2007"] },
+      { id: "rebuild", label: "Rebuild", blurb: "Wiki edit, Stumble, Photobucket, thefacebook, iPhone Safari.", years: ["2001", "2002", "2003", "2004", "2005", "2007"] },
  { id: "phone", label: "Phone eats the web", blurb: "App Store · Like · Chrome · G1 · Instagram iOS. Vine 6s is the 2013 door.", years: ["2008", "2009", "2010", "2012", "2013"] },
       { id: "stream", label: "Streams / tracking", blurb: "WhatsApp Install.", years: ["2014"] }
     ],
@@ -53,7 +53,6 @@
       "2003": "Photobucket hotlink is the save. 99¢. Friendster still larger than MySpace.",
       "2004": "College network only. Not modern Facebook.",
       "2005": "YouTube upload is the save. Maps / Reddit / Digg. Google does not own YouTube.",
-      "2006": "140 because SMS. News Feed. No iPhone.",
       "2007": "Safari only. App Store is . Desktop still mass.",
       "2008": "App Store is the save. Chrome is a room. Desktop stays XP + IE 7.",
       "2009": "Like, not Reactions. No iPad.",
@@ -80,7 +79,6 @@
       "2003": "You uploaded a photo to get a URL you could paste. Songs were 99¢. Friendster was still bigger.",
       "2004": "You needed a college. The wall was not a Feed. Gmail was an invite.",
       "2005": "You uploaded a clip. You dragged a map. You boosted a link. Google did not own YouTube yet.",
-      "2006": "You typed 140 because SMS. News Feed was. There was no iPhone yet.",
       "2007": "You used Safari on the phone. The App Store was next year. Desktop was still mass.",
       "2008": "You tapped FREE. Hundreds of apps, not millions day one. Chrome was a late download.",
       "2009": "You Liked a partner page. Beacon never wrote. Reactions were not here yet.",
@@ -248,17 +246,6 @@
         ],
         game: { label: "HoverChop", href: "years/2005/sites/playable/game.html" }
       },
-      "2006": {
-        wiped: false,
-        era: "Twitter 140 · News Feed",
-        thesis: "140 because SMS. News Feed. No iPhone.",
-        gold: { label: "Twitter 140", href: "years/2006/sites/twitter/index.html", key: "itt06-tweets" },
-        guided: [
-          { label: "News Feed", href: "years/2006/sites/facebook/feed.html" },
-          { label: "Firefox", href: "years/2006/sites/firefox/index.html" }
-        ],
-        game: { label: "TrailSled", href: "years/2006/sites/playable/game.html" }
-      },
             "2010": {
         era: "iPad · Instagram iOS · Open Graph",
         thesis: "Filter on iPhone only. Android is next year.",
@@ -378,8 +365,7 @@
           { year: "2002", href: "years/2002/sites/yahoo/index.html", note: "broadband" },
           { year: "2003", href: "years/2003/sites/yahoo/index.html", note: "portal leftover" },
           { year: "2004", href: "years/2004/sites/yahoo/index.html", note: "Web 2.0 year" },
-          { year: "2005", href: "years/2005/sites/yahoo/index.html", note: "still #1" },
-          { year: "2006", href: "years/2006/sites/yahoo/index.html", note: "Twttr year" }
+          { year: "2005", href: "years/2005/sites/yahoo/index.html", note: "still #1" }
         ]
       },
       {
@@ -407,8 +393,7 @@
           { year: "2003", href: "years/2003/sites/google/index.html", note: "Photobucket year" },
           { year: "2004", href: "years/2004/sites/google/index.html", note: "thefacebook year" },
           { year: "2005", href: "years/2005/sites/maps/index.html", note: "Maps leftover" },
-          { year: "2006", href: "years/2006/sites/google/index.html", note: "YouTube deal year" },
-                    { year: "2010", href: "years/2010/sites/google/index.html", note: "lean" }
+          { year: "2010", href: "years/2010/sites/google/index.html", note: "lean" }
         ]
       },
       {
@@ -475,7 +460,7 @@
       {
         id: "first-night",
         label: "First night",
-        blurb: "The built-in 5-stop walk. CSotD · Google · thefacebook · Twttr · Instagram. Stops in 2010.",
+        blurb: "The built-in 5-stop walk. CSotD · Google · thefacebook · YouTube upload · Instagram. Stops in 2010.",
         href: "../index.html",
         startYear: "1994",
         startPath: "years/1994/?trail=first-night",
@@ -483,7 +468,7 @@
           { year: "1994", label: "CSotD guestbook", href: "years/1994/sites/csotd/index.html" },
           { year: "1998", label: "Sparse Google", href: "years/1998/sites/google/index.html" },
           { year: "2004", label: "thefacebook", href: "years/2004/sites/facebook/networks.html" },
-          { year: "2006", label: "Twttr", href: "years/2006/sites/twitter/index.html" },
+          { year: "2005", label: "YouTube upload", href: "years/2005/sites/youtube/upload.html" },
           { year: "2010", label: "Instagram iOS", href: "years/2010/sites/instagram/index.html" }
         ]
       },

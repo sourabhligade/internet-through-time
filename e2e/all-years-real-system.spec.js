@@ -34,7 +34,6 @@ const ALL_YEARS = [
   '2003',
   '2004',
   '2005',
-  '2006',
   '2007',
   '2008',
   '2009',
@@ -113,10 +112,10 @@ async function getKey(page, key) {
 }
 
 test.describe('REAL system live-year list', () => {
-  test('23 live doors · about pages exist · no-thesis years named', () => {
-    expect(ALL_YEARS).toHaveLength(23);
+  test('22 live doors · about pages exist · no-thesis years named', () => {
+    expect(ALL_YEARS).toHaveLength(22);
     expect(NO_THESIS_YEARS).toEqual(['2020', '2021']);
-    expect(YEARS).toHaveLength(21);
+    expect(YEARS).toHaveLength(20);
     for (const year of ALL_YEARS) {
       const about = path.join(__dirname, '..', 'years', year, 'pages', 'about.html');
       expect(fs.existsSync(about), `${year}: about.html`).toBe(true);

@@ -3,11 +3,11 @@
 **Not ship law.** Live playable state is [`DISK-TRUTH.md`](DISK-TRUTH.md).  
 **Branch:** `museum/1994-2020-lean` · local **ahead of** origin `81c652c65`.  
 **Visitor gate:** `npm run check` 0 · dest-true **415** · warehouse year-flow aligned · named packs filled.  
-**Scan close (2026-10-09):** YouTube rebind assigns `ITT.youtube.boot`. 2020 extras year-gated. Atlas skips 2017. JumpStation DROP row removed from flow-maps. github-ready 2015 is omitted. leftover-2× unique catalog **1,138**. 2009 is live (BOARDED sets). Dest-gold skips any `[data-official-verb]` form. Bing empty and Technorati empty never write. HousingMaps persists on filter submit. Clickscape persists on bank/chop/mine. Follow-site skip is absent years only. `--chrome-light` is defined. 2008 leftover dests use the XP leftover face. 2009 hidden Like-gold buttons carry `data-lo-trap`.  
+**Scan close (2026-10-09):** YouTube rebind assigns `ITT.youtube.boot`. 2020 extras year-gated. Atlas does not list 2017. JumpStation DROP row removed from flow-maps. github-ready 2015 is omitted. leftover-2× unique catalog **1,037**. 2009 is live (BOARDED sets). Dest-gold skips any `[data-official-verb]` form. Bing empty and Technorati empty never write. HousingMaps persists on filter submit. Clickscape persists on bank/chop/mine. Follow-site skip is absent years only. `--chrome-light` is defined. 2008 leftover dests use the XP leftover face. 2009 hidden Like-gold buttons carry `data-lo-trap`.  
 **Push:** dest-true is green. GitHub Actions will not run (#17 billing lock). Say **push**.  
-**Museum-grade UI+UX remainder:** [`MUSEUM-GRADE-UX-COMPLETE.md`](MUSEUM-GRADE-UX-COMPLETE.md). Chrome phases 1–7 shipped. Slices A–E implemented. UX phases 1–5 implemented (honesty, dest in window, receipt glass, phone 390, 2015 omitted lock). B1 first-boot `pages/home.html` abort closed (`seedHistory` leaves relative HOME loading; same-path Home/reload bounce remains). Slice F public tree waits on **push**. Not dest-farm. Five UX phase locks: [`MUSEUM-GRADE-UX-PHASES.md`](MUSEUM-GRADE-UX-PHASES.md) (`e2e/ux-phase1-honesty.spec.js` … `e2e/ux-phase5-2015.spec.js`). Off dest-true 12. All-phase scan: [`PHASE-SCAN.md`](PHASE-SCAN.md).
+**Museum-grade UI+UX remainder:** [`MUSEUM-GRADE-UX-COMPLETE.md`](MUSEUM-GRADE-UX-COMPLETE.md). Chrome phases 1–7 shipped. Slices A–E implemented. UX phases 1–5 implemented (honesty, dest in window, receipt glass, phone 390, 2015 omitted lock). B1 first-boot `pages/home.html` abort closed (`seedHistory` leaves relative HOME loading; same-path Home/reload uses `location.reload`). Slice F public tree waits on **push**. Not dest-farm. Five UX phase locks: [`MUSEUM-GRADE-UX-PHASES.md`](MUSEUM-GRADE-UX-PHASES.md) (`e2e/ux-phase1-honesty.spec.js` … `e2e/ux-phase5-2015.spec.js`). Off dest-true 12. All-phase scan: [`PHASE-SCAN.md`](PHASE-SCAN.md).
 
-Do not dest-farm. Do not restore 2017–2019 or 2023–2025 until named. Do not unfreeze 1994–2006. Do not run 1999–2004 `2x` until named. Do not start 2008 Pack B/C until named.
+Do not dest-farm. Do not add a 2017 year-card key. Do not restore 2018–2019 or 2023–2025 until named. Do not unfreeze 1994–2005. Do not run 1999–2004 `2x` until named. Do not start 2008 Pack B/C until named.
 
 ---
 
@@ -28,8 +28,6 @@ Warehouse complete paths now match dest-true (reqs + need, `Saved.`, envelope) f
 
 2015 packs were deleted with the door. Helper `e2e/year-pack-io.js`.
 
-2006 YouTube Watch extras skip `saveJSON` when the dest already has matching `data-official-key` + `[data-official-verb]`.
-
 ---
 
 ## Live years
@@ -48,7 +46,6 @@ Warehouse complete paths now match dest-true (reqs + need, `Saved.`, envelope) f
 | 2003 | HTML frozen | 10 | one-thing + official-10 | mvp flows densify trail | Photobucket extras skip when verb owns |
 | 2004 | HTML frozen | **8** | one-thing + official-10 | mvp flows densify trail | trail n=8 (Gem Cascade is the game dest) |
 | 2005 | HTML frozen | 10 | one-thing + official-10 | mvp flows densify trail | — |
-| 2006 | HTML frozen | 10 | one-thing + official-10 | mvp flows densify trail | Watch extras skip when verb owns |
 | 2007 | HTML lean | 10 | one-thing + official-10 | mvp flows densify trail | — |
 | 2008 | HTML lean | 10 | one-thing + 2008-mvp | mvp flows densify trail | Pack B rooms on disk (verify only) · Pack C wait |
 | 2009 | HTML lean | 10 | one-thing + 2009-mvp | mvp flows densify trail + 5x-live | — |
@@ -68,11 +65,16 @@ Warehouse complete paths now match dest-true (reqs + need, `Saved.`, envelope) f
 |------|------|
 | 2015 | no year-card key · no hub card · no React door · hash is not a door |
 
+## No year-card key
+
+| Year | Disk |
+|------|------|
+| 2017 | no year-card key · no tree · no hub card · hash is not a door |
+
 ## Absent (stay 0)
 
 | Year | Disk |
 |------|------|
-| 2017 | no tree · no hub card · no React door |
 | 2018 | no tree · no hub card · no React door |
 | 2019 | no tree · no hub card · no React door |
 | 2023–2025 | wiped |
@@ -87,7 +89,7 @@ Working-flow phases 1–6 are marked done through 2022–2025, including the 201
 |------|----------------|
 | 2004 / 2013 / 2014 trail n under 10 | Disk law. Do not dest-farm to 10. |
 | 2008 Pack B/C | Pack B’s 35 rooms are already under `years/2008/sites/` (verify HTTP 200). Pack C and **new** dests wait until named. |
-| 2017–2019 / 2023–2025 | Stay 0. |
+| 2018–2019 / 2023–2025 | Stay 0. 2017 has no year-card key. |
 | leftover-3× unique | Catalogs empty. Do not dest-farm. |
 | Dest doubling | Waits on the word `2x`. |
 | Famous-double step 2 | Wait until named. |

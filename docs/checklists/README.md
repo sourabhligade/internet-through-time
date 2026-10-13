@@ -2,7 +2,7 @@
 
 One file per year. Tick a line after the link finishes. An empty click stores nothing.
 
-**Live hub 23 doors** (1994–2010, 2012–2014, and 2020–2022). **2015 is omitted.** 2017–2019 and 2023–2025 have no checklist.
+**Live hub 22 doors** (1994–2005, 2007–2010, 2012–2014, and 2020–2022). **2015 is omitted.** **2011 is not a door** (21 leftover rooms, no checklist, no `years/2011/index.html`). **2017 has no year-card key** and no checklist. 2018–2019 and 2023–2025 have no checklist.
 
 Leftover-2× unique dest catalog `n` is from `e2e/leftover-2x-unique-links.matrix.json`. Forest leftover-10 rows are leftover trail n=11–20 (a sample), not that catalog. Lean leftover rows are the leftover-2× unique dests already on disk. Rails fold unless `?deep=1`. Official dest leftover-2× first paint stays 0.
 
@@ -20,7 +20,6 @@ Ship law: [`../DISK-TRUTH.md`](../DISK-TRUTH.md). Current holes: [`../YEAR-INCOM
 - [2003](2003.md) — 10 official, leftover trail 10, leftover-2× unique 21, 10 pictures
 - [2004](2004.md) — 8 official, leftover trail 10, leftover-2× unique 148, 151 pictures
 - [2005](2005.md) — 10 official, leftover trail 10, leftover-2× unique 92, pictures restored
-- [2006](2006.md) — 10 official, leftover trail 10, leftover-2× unique 101, 150 pictures
 - [2007](2007.md) — 10 official, leftover-2× unique 17, 150 pictures
 - [2008](2008.md) — 10 official, Pack A on disk, leftover-2× unique 47 · App Store `itt08-apps`
 - [2009](2009.md) — live HTML door · Facebook Like `itt09-like` · 10 official on disk · leftover-2× unique 33 · 17 pictures

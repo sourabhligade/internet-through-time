@@ -968,42 +968,6 @@ body {
   height: 36px;
 }
 
-/* 2006 — social breakthrough · FB blue chrome + Twitter cyan accent */
-.y2006 {
-  border-left-color: #33ccff;
-  background: #ffffff;
-}
-.y2006::before {
-  content: "Twitter · Facebook open · YouTube deal · Digg peak";
-  background: #3b5998;
-  color: #fff;
-  border-bottom: 2px solid #33ccff;
-}
-.y2006 .era-chip {
-  background: #e5f6ff;
-  border-color: #33ccff;
-  color: #0a4a6b;
-  font-weight: bold;
-}
-.y2006 .meta { color: #3b5998; }
-.y2006 .year { color: #3b5998; }
-.y2006 .label { color: #222; }
-.y2006 .motif {
-  background-image: url("../assets/period/2006/youtube/logo-wa.gif");
-  opacity: 0.5;
-  width: 88px;
-  height: 36px;
-}
-.y2006 .year-card-inner {
-  border-bottom: 2px solid #33ccff;
-  background: #fafcff;
-}
-.y2006:hover,
-.y2006:focus {
-  background: #eef4ff;
-  outline-color: #33ccff;
-}
-
 /* 2007 — iPhone black glass · multi-touch blue accent · open web */
 .y2007 {
   border-left-color: #09f;
@@ -1294,8 +1258,8 @@ body {
 .compare-2000s th:nth-child(6) { background: #d0dcf0; } /* 2004 FB */
 .compare-2000s th:nth-child(7) { background: #ffd0d0; } /* 2005 YT */
 
-/* 2006–2007 two-column */
-.compare-late th:nth-child(2) { background: #d0e8ff; color: #1d3c78; } /* 2006 */
+/* 2007 two-column */
+.compare-late th:nth-child(2) { background: #d0e8ff; color: #1d3c78; }
 .compare-late th:nth-child(3) { background: #222; color: #09f; } /* 2007 */
 .compare-late { max-width: 720px; }
 
@@ -1309,8 +1273,7 @@ body {
 .year-card.available.y2002:hover,
 .year-card.available.y2003:hover,
 .year-card.available.y2004:hover,
-.year-card.available.y2005:hover,
-.year-card.available.y2006:hover {
+.year-card.available.y2005:hover {
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.12);
 }
 

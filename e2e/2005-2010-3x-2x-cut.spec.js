@@ -1,9 +1,9 @@
 // @ts-check
 /**
  * CUT-3X-2X-2005-2010 — leftover 3× second pack, E2E, not mock.
- * Live years: 2005 / 2006 / 2007 /  / 2009 / 2010.
+ * Live years: 2005 / 2007 / 2009 / 2010.
  * Doors 10–18. Today’s leftover 3× / leftover 999 stay.
- * Lean 2006 / 2007 / 2009 stay at 6 leftover-3× (no invented pop-more).
+ * Lean 2007 / 2009 stay at 6 leftover-3× (no invented pop-more).
  * Stars / guided 6 / official gold stay put.
  */
 const { test, expect } = require("@playwright/test");
@@ -38,24 +38,6 @@ const YEAR_WRONG_2009 = [
  *   doors: { dest: string, go: string, key: string, next: string, nextKey: string, weather: RegExp, lx: string[], never: string[] }[]
  * }>} */
 const LIVE = {
-  2006: {
-    star: "itt06-tweets",
-    starHref: "twitter",
-    gold: ["itt06-tweets", "itt06-feed", "itt06-fb-open", "itt06-yt", "itt06-gdocs", "itt06-ie7"],
-    want2x: 9,
-    official: ["twitter", "facebook", "youtube", "googledocs", "aws", "ie7", "wikipedia", "roblox", "playable"],
-    ils: ["85,507,314"],
-    doors: [
-      { dest: "/years/2006/sites/wii/index.html", go: "[data-pop-go][data-pop-id='wii']", key: "itt06-pop-wii", next: "time-you/index.html", nextKey: "itt06-pop-time-you", weather: /Wii North America 19 Nov 2006/i, lx: ["itt06-wii"], never: ["itt06-tweets"] },
-      { dest: "/years/2006/sites/time-you/index.html", go: "[data-pop-go][data-pop-id='time-you']", key: "itt06-pop-time-you", next: "skype/index.html", nextKey: "itt06-pop-skype", weather: /Time Person of the Year 2006 is You/i, lx: ["itt06-time-you"], never: ["itt06-tweets"] },
-      { dest: "/years/2006/sites/skype/index.html", go: "[data-pop-go][data-pop-id='skype']", key: "itt06-pop-skype", next: "lastfm/index.html", nextKey: "itt06-pop-lastfm", weather: /Skype leftover 2006 calls/i, lx: ["itt06-skype-lx"], never: ["itt06-tweets"] },
-      { dest: "/years/2006/sites/lastfm/index.html", go: "[data-pop-go][data-pop-id='lastfm']", key: "itt06-pop-lastfm", next: "secondlife/index.html", nextKey: "itt06-pop-secondlife", weather: /Last\.fm leftover 2006 scrobble/i, lx: ["itt06-lastfm-lx"], never: ["itt06-tweets"] },
-      { dest: "/years/2006/sites/secondlife/index.html", go: "[data-pop-go][data-pop-id='secondlife']", key: "itt06-pop-secondlife", next: "blogger/index.html", nextKey: "itt06-pop-blogger", weather: /Second Life leftover 2006 habit/i, lx: ["itt06-secondlife"], never: ["itt06-tweets"] },
-      { dest: "/years/2006/sites/blogger/index.html", go: "[data-pop-go][data-pop-id='blogger']", key: "itt06-pop-blogger", next: "wordpress/index.html", nextKey: "itt06-pop3-wordpress", weather: /Blogger leftover 2006/i, lx: ["itt06-blogger-lx"], never: ["itt06-tweets"] },
-      { dest: "/years/2006/sites/wordpress/index.html", go: "[data-pop-go][data-pop-id='pop3-wordpress']", key: "itt06-pop3-wordpress", next: "adsense/index.html", nextKey: "itt06-pop3-adsense", weather: /WordPress leftover 2006/i, lx: ["itt06-wp-lx"], never: ["itt06-tweets"] },
-      { dest: "/years/2006/sites/adsense/index.html", go: "[data-pop-go][data-pop-id='pop3-adsense']", key: "itt06-pop3-adsense", next: "flickr/index.html", nextKey: "itt06-pop3-flickr", weather: /AdSense leftover 2006/i, lx: ["itt06-adsense-lx"], never: ["itt06-tweets"] },
-      { dest: "/years/2006/sites/flickr/index.html", go: "[data-pop-go][data-pop-id='pop3-flickr']", key: "itt06-pop3-flickr", next: "pages/home.html", nextKey: "", weather: /Flickr leftover 2006 after Yahoo/i, lx: ["itt06-flickr-lx"], never: ["itt06-tweets"] }],
-  },
   2007: {
     star: "itt07-iphone",
     starHref: "iphone",
@@ -211,9 +193,6 @@ async function walkDoor(page, door, gold) {
 }
 
 const FIRST_PACK_MISSING = {
-  2006: [
-    { dest: "/years/2006/sites/youtube/index.html", go: "[data-pop-go][data-pop-id='youtube']", key: "itt06-pop-youtube", next: "facebook/index.html", nextKey: "itt06-pop-facebook", weather: /YouTube leftover 2006 leftover 3×/i, lx: [], never: ["itt06-tweets", "itt06-yt"] },
-    { dest: "/years/2006/sites/facebook/index.html", go: "[data-pop-go][data-pop-id='facebook']", key: "itt06-pop-facebook", next: "wikipedia/index.html", nextKey: "itt06-pop-wikipedia", weather: /Facebook leftover 2006 leftover 3×/i, lx: [], never: ["itt06-tweets", "itt06-feed", "itt06-fb-open"] }],
 };
 
 test.describe("leftover 3× first-pack dest machines that were missing", () => {
@@ -237,7 +216,7 @@ test.describe("leftover 3× first-pack dest machines that were missing", () => {
 
 test.describe("CUT-3X-2X-2005-2010 dest folders stay frozen", () => {
   test("dest folders stay at the live lean counts", () => {
-    const want = { 2006: 370, 2007: 33, 2009: 78, 2010: 29 };
+    const want = { 2007: 33, 2009: 78, 2010: 29 };
     for (const [y, n] of Object.entries(want)) {
       const dir = path.join(ROOT, "years", y, "sites");
       const got = fs.readdirSync(dir).filter((name) => fs.statSync(path.join(dir, name)).isDirectory()).length;
@@ -300,14 +279,13 @@ for (const [year, spec] of Object.entries(LIVE)) {
           expect(joined, "year-wrong 2009 dest " + bad).not.toMatch(new RegExp("/" + bad + "/"));
         }
       }
-      if (year === "2006") expect(twoXH.join(" ")).toMatch(/wii/);
-      if (year === "2007") expect(twoXH.join(" ")).toMatch(/ipodtouch/);
+            if (year === "2007") expect(twoXH.join(" ")).toMatch(/ipodtouch/);
       if (year === "") expect(twoXH.join(" ")).toMatch(/airbnb/);
       if (year === "2009") expect(twoXH.join(" ")).toMatch(/wolfram/);
       if (year === "2010") expect(twoXH.join(" ")).toMatch(/hulu/);
 
       // lean years must not grow a fake pop-more nine
-      if (year === "2006" || year === "2007" || year === "2009") {
+      if (year === "2007" || year === "2009") {
         await expect(page.locator(`[data-itt-pop-more="${year}"]`)).toHaveCount(0);
       }
 

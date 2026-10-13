@@ -44,7 +44,6 @@ SIGNATURE: dict[str, list[str]] = {
     "2003": ["pages/home.html", "sites/photobucket/index.html", "sites/myspace/index.html", "sites/itunes/index.html", "sites/wordpress/index.html"],
     "2004": ["pages/home.html", "sites/facebook/networks.html", "sites/facebook/index.html", "sites/flickr/index.html", "sites/gmail/index.html"],
     "2005": ["pages/home.html", "pages/about.html", "sites/youtube/upload.html", "sites/maps/index.html", "sites/reddit/index.html", "sites/digg/index.html", "sites/playable/game.html"],
-    "2006": ["pages/home.html", "pages/about.html", "sites/twitter/index.html", "sites/facebook/feed.html", "sites/youtube/index.html", "sites/googledocs/index.html", "sites/playable/linerider.html"],
     "2007": ["pages/home.html", "pages/about.html", "sites/iphone/index.html", "sites/streetview/index.html", "sites/gmail/index.html", "sites/fbplat/index.html", "sites/playable/game.html"],
     "2008": ["pages/home.html", "pages/about.html", "sites/appstore/index.html", "sites/chrome/index.html", "sites/android/index.html", "sites/github/issue.html", "sites/playable/game.html"],
     "2009": [

@@ -129,7 +129,7 @@
     score = 0;
     if (scoreEl) scoreEl.textContent = "0";
     resetNests();
-    setStatus("Drag from the sling. Start never writes.");
+    setStatus("Drag from the sling.");
     if (raf) cancelAnimationFrame(raf);
     raf = requestAnimationFrame(step);
   }

@@ -34,7 +34,6 @@ const GAMES = [
   { year: '2003', prefix: 'itt03', gameId: 'gagslite', key: 'itt03-game-gagslite', kind: 'record-end' },
   { year: '2004', prefix: 'itt04', gameId: 'gemcascade', key: 'itt04-game-gemcascade', kind: 'score-end' },
   { year: '2005', prefix: 'itt05', gameId: 'heli', key: 'itt05-game-heli', kind: 'score-end' },
-  { year: '2006', prefix: 'itt06', gameId: 'sled', key: 'itt06-game-sled', kind: 'score-end' },
 ];
 
 /**
@@ -158,15 +157,6 @@ test.describe('REAL complete writes', () => {
     expect(await getKey(page, 'itt05-game-heli')).toBeNull();
   });
 
-  test('2006 load alone does not write itt06-game-sled', async ({ page }) => {
-    skipIfWiped('2006');
-    test.skip(!yearOnDisk('2006'), '2006 not on disk');
-    await enterYear(page, '2006');
-    await clearPrefixGames(page, 'itt06');
-    await openGame(page, '2006');
-    expect(await getKey(page, 'itt06-game-sled')).toBeNull();
-  });
-
   test('2005 heli crash path can write year best via hook', async ({ page }) => {
     skipIfWiped('2005');
     test.skip(!yearOnDisk('2005'), '2005 wiped');
@@ -200,42 +190,6 @@ test.describe('REAL complete writes', () => {
     expect(blob.real).toBe(true);
     expect(blob.year).toBe('2005');
     expect(blob.gameId).toBe('heli');
-    expect(blob.best).toBeGreaterThan(0);
-  });
-
-  test('2006 sled finish writes year best', async ({ page }) => {
-    skipIfWiped('2006');
-    test.skip(!yearOnDisk('2006'), '2006 not on disk');
-    await enterYear(page, '2006');
-    await clearPrefixGames(page, 'itt06');
-    const frame = await openGame(page, '2006');
-    await frame.locator('#play-start').click();
-    await expect(frame.locator('#play-score, [data-game-score]').first()).toBeVisible();
-    await page.evaluate(() => {
-      const w = document.getElementById('content').contentWindow;
-      if (typeof w.ITTYearGameOnScore === 'function') w.ITTYearGameOnScore('sled', 99);
-      else if (w.ITT && w.ITT.YearGame) w.ITT.YearGame.saveBest('sled', 99, { year: '2006' });
-    });
-    const blob = JSON.parse((await getKey(page, 'itt06-game-sled')) || '{}');
-    expect(blob.real).toBe(true);
-    expect(String(blob.year)).toBe('2006');
-  });
-
-  test('2006 TrailSled Ride on demo ramp writes itt06-game-sled', async ({ page }) => {
-    skipIfWiped('2006');
-    test.skip(!yearOnDisk('2006'), '2006 not on disk');
-    await enterYear(page, '2006');
-    await clearPrefixGames(page, 'itt06');
-    const frame = await openGame(page, '2006');
-    expect(await getKey(page, 'itt06-game-sled')).toBeNull();
-    await frame.locator('#play-start').click();
-    await expect
-      .poll(async () => getKey(page, 'itt06-game-sled'), { timeout: 15000 })
-      .toBeTruthy();
-    const blob = JSON.parse((await getKey(page, 'itt06-game-sled')) || '{}');
-    expect(blob.real).toBe(true);
-    expect(blob.year).toBe('2006');
-    expect(blob.gameId).toBe('sled');
     expect(blob.best).toBeGreaterThan(0);
   });
 
@@ -359,18 +313,3 @@ test.describe('REAL complete writes', () => {
   });
 });
 
-// ——— Isolation matrix sample ———
-test('REAL isolation: 2005 write does not create 2006 key', async ({ page }) => {
-  test.skip(!yearOnDisk('2005') || !yearOnDisk('2006'), '2005/2006 not on disk');
-  await enterYear(page, '2005');
-  await clearPrefixGames(page, 'itt05');
-  await clearPrefixGames(page, 'itt06');
-  await openGame(page, '2005');
-  await waitYearGame(page);
-  await page.evaluate(() => {
-    const w = document.getElementById('content').contentWindow;
-    w.ITT.YearGame.saveBest('heli', 5, { year: '2005' });
-  });
-  expect(await getKey(page, 'itt05-game-heli')).toBeTruthy();
-  expect(await getKey(page, 'itt06-game-heli')).toBeNull();
-});

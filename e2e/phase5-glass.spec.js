@@ -20,7 +20,6 @@ const PAGES = [
   ["2003", "/years/2003/sites/culturallyauthenticpic/index.html"],
   ["2004", "/years/2004/sites/miamiherald/index.html"],
   ["2005", "/years/2005/sites/memeorandum/index.html"],
-  ["2006", "/years/2006/sites/memeorandum/index.html"],
   ["2007", "/years/2007/sites/maps/index.html"],
   ["2008", "/years/2008/sites/webkinz/index.html"],
   ["2009", "/years/2009/sites/maps/index.html"],

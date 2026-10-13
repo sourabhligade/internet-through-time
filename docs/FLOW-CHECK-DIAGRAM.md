@@ -1,10 +1,10 @@
 # Flow-check diagram
 
-**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **23 doors** (1994–2010, 2012–2014, and 2020–2022). Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
+**Historical (2026-09-30 docs pass).** Not ship law. Live hub is **22 doors** (1994–2005, 2007–2010, 2012–2014, and 2020–2022). Current maps: [`DISK-TRUTH.md`](DISK-TRUTH.md) · [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
 
 **Date:** 2026-09-20  
-**Live check updated:** 2026-10-09. Sections 1–4 are the old walk. The live hub is 23 doors. Sections 5–6 still name leftover-3× unique dests whose catalogs are empty.  
+**Live check updated:** 2026-10-09. Sections 1–4 are the old walk. The live hub is 22 doors. Sections 5–6 still name leftover-3× unique dests whose catalogs are empty.  
 **Status:** Check map. Not dest-farm.  
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md).  
 **Dest-true I/O:** [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md).  
@@ -14,13 +14,13 @@
 
 ---
 
-## 1. Museum door (23 open years)
+## 1. Museum door (22 open years)
 
-Old walk, not the live list. Live hub is **23 doors**: HTML 1994–2010, 2012–2014, and 2020–2022 with 2015 omitted. 2017–2019 and 2023–2025 are absent.
+Old walk, not the live list. Live hub is **22 doors**: HTML 1994–2005, 2007–2010, 2012–2014, and 2020–2022 with 2015 omitted. 2017 has no year-card key. 2018–2019 and 2023–2025 are absent.
 
 ```mermaid
 flowchart TD
- HUB["Hub index.html<br/>24 year cards"] --> KIND{"Card kind"}
+ HUB["Hub index.html<br/>22 year cards"] --> KIND{"Card kind"}
  KIND -->|HTML| YEAR["/years/YYYY/"]
  KIND -->|omitted 2015| ABSENT["not a door"]
  YEAR --> ROOM["Room click"]
@@ -44,16 +44,16 @@ flowchart TD
 
 ```mermaid
 flowchart LR
- subgraph PLAY["23 open doors"]
- HTML["HTML doors<br/>1994–2010, 2012–2014, and 2020–2022"]
+ subgraph PLAY["22 open doors"]
+ HTML["HTML doors<br/>1994–2005, 2007–2010, 2012–2014, and 2020–2022"]
  end
- ABSENT["2017–2019 absent"]
+ ABSENT["2018–2019 absent"]
  WIPE["2023–2025 wiped"]
 ```
 
 | Class | Years | Check |
 |-------|-------|-------|
-| HTML door | 1994–2010, 2012–2014, and 2020–2022 | `/years/YYYY/` returns 200. Official list stops at the cap above. |
+| HTML door | 1994–2005, 2007–2010, 2012–2014, and 2020–2022 | `/years/YYYY/` returns 200. Official list stops at the cap above. |
 | Omitted | 2015 | No year-card key, no hub card. Hash is not a door. |
 | Absent | 2017, 2018, 2019 | No card, no tree, no React door. |
 | Wiped | 2023–2025 | No tree. Do not restore. |
@@ -89,7 +89,7 @@ flowchart TD
 
 ```mermaid
 flowchart TD
- A["1. Hub: 23 cards, 1994–2010, 2012–2014, and 2020–2022."] --> B["2. HTML door. 2015 omitted. 2017 absent."]
+ A["1. Hub: 22 cards, 1994–2005, 2007–2010, 2012–2014, and 2020–2022."] --> B["2. HTML door. 2015 omitted. 2017 absent."]
  B --> C["3. Star verb. Empty / trap never write. Complete writes star key."]
  C --> D["4. HTML official stops through the cap. 2004=8. 2013–2014=9. 2012=10."]
  D --> E["5. Leftover only where that year still has a rail. Do not dest-farm."]

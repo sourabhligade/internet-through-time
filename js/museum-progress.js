@@ -8,7 +8,7 @@
  *   itt-last-year      (existing)
  *
  * Trails:
- *   first-night        1994 → 1998 → 2004 → 2006 → 2010
+ *   first-night        1994 → 1998 → 2004 → 2005 → 2010
  *   YYYY-start         short in-year tour for every shipped year
  */
 (function (global) {
@@ -67,13 +67,13 @@
       match: "/facebook/networks"
     },
     {
-      id: "fn-2006",
-      year: "2006",
-      path: "sites/twitter/index.html",
-      title: "2006 · Twttr",
-      blurb: "Update. News Feed leftover. Google owns YouTube.",
+      id: "fn-2005",
+      year: "2005",
+      path: "sites/youtube/upload.html",
+      title: "2005 · YouTube upload",
+      blurb: "Upload a clip. Google does not own YouTube yet.",
       mode: "visit",
-      match: "/twitter/"
+      match: "/youtube/upload"
     },
     {
       id: "fn-2010",
@@ -168,9 +168,6 @@
     "2005": yearVisitTour("2005",
       { path: "sites/youtube/upload.html", label: "YouTube upload", blurb: "Empty / dating / Google-owned never write.", match: "/youtube/upload" },
       { path: "sites/maps/index.html", label: "Google Maps leftover", blurb: "8 Feb leftover. No Street View.", match: "/maps/" }),
-    "2006": yearVisitTour("2006",
-      { path: "sites/twitter/index.html", label: "Twttr", blurb: "Empty / 280 / iPhone never write.", match: "/twitter/" },
-      { path: "sites/facebook/feed.html", label: "News Feed leftover", blurb: "5 Sep leftover. Not the chip.", match: "/facebook/feed" }),
     "2009": yearVisitTour("2009",
       { path: "sites/facebook/index.html", label: "Facebook Like", blurb: "9 Feb. Two partner Likes. Not Reactions.", match: "/facebook/" },
       { path: "sites/farmville/index.html", label: "FarmVille", blurb: "Plant / harvest. Social game year.", match: "/farmville/" }),
@@ -776,7 +773,7 @@
     } else {
       html +=
         "<b>First night</b> — a ~20 minute arc across decades: " +
-        "1994 · 1998 Google · 2004 thefacebook · 2006 Twttr · 2010 Instagram." +
+        "1994 · 1998 Google · 2004 thefacebook · 2005 YouTube · 2010 Instagram." +
         '<br><button type="button" data-itt-night-start class="start-btn">Start first night</button>';
     }
     html += "</div></div>";

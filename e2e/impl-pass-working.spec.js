@@ -37,8 +37,7 @@ const FOREST = [
   { href: "/years/1994/sites/cnn/index.html", suffix: "cnn-dp", star: "itt94-csotd" },
   { href: "/years/1998/sites/cnn/index.html", suffix: "cnn-lx", star: "itt98-lucky" },
   { href: "/years/2000/sites/yahoo/index.html", suffix: "yahoo", star: "itt00-mapquest" },
-  { href: "/years/2003/sites/yahoo/index.html", suffix: "yahoo", star: "itt03-photobucket" },
-  { href: "/years/2006/sites/google/index.html", suffix: "google-q", star: "itt06-tweets" },
+  { href: "/years/2003/sites/yahoo/index.html", suffix: "yahoo", star: "itt03-photobucket" }
   ];
 
 for (const row of FOREST) {
@@ -77,11 +76,4 @@ test("2005 Starting Point title is 2005 not 2004", async ({ page }) => {
   await expect(frame.locator("body")).toContainText(/2005|YouTube|Upload/i);
 });
 
-test("2006 dirbar names Twttr", async ({ page }) => {
-  await page.goto("/years/2006/");
-  const skip = page.locator("#skip-connect");
-  if (await skip.isVisible().catch(() => false)) await skip.click();
-  await expect(page.locator("body")).toHaveAttribute("data-itt-year", "2006");
-  await expect(page.locator("body")).toContainText(/Twttr|Twitter/i);
-});
 

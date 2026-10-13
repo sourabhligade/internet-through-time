@@ -123,10 +123,6 @@ html[data-itt-year="2021"] a[href="?deep=1"] {
 html[data-itt-year="2021"]:not(:has(.att21-phone)) {
   color-scheme: only light;
 }
-html[data-itt-year="2021"] #itt-exhibit-nav,
-html[data-itt-year="2021"] #itt-wayfind {
-  display: none !important;
-}
 html[data-itt-year="2021"] [data-official-verb-host]:not(.att21-alert) {
   background: #fff !important;
   border: 1px solid #dadce0 !important;

@@ -18,7 +18,6 @@ const CARDS = {
   2003: { body: "rgb(58, 110, 165)", card: "rgb(58, 110, 165)", link: "rgb(207, 228, 255)", flows: 10 },
   2004: { body: "rgb(58, 110, 165)", card: "rgb(58, 110, 165)", link: "rgb(207, 228, 255)", flows: 8 },
   2005: { body: "rgb(58, 110, 165)", card: "rgb(58, 110, 165)", link: "rgb(207, 228, 255)", flows: 10 },
-  2006: { body: "rgb(58, 110, 165)", card: "rgb(58, 110, 165)", link: "rgb(207, 228, 255)", flows: 10 },
   2007: { body: "rgb(58, 110, 165)", card: "rgb(58, 110, 165)", link: "rgb(207, 228, 255)", flows: 10 },
   2008: { body: "rgb(236, 233, 216)", card: "rgb(58, 110, 165)", link: "rgb(207, 228, 255)", flows: 10 },
   2009: { body: "rgb(231, 235, 242)", card: "rgb(59, 89, 152)", link: "rgb(216, 223, 234)", flows: 10 },

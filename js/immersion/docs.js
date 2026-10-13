@@ -1,5 +1,5 @@
 /**
- * Google Docs / Writely 2006 — collaborative web office theater
+ * Google Docs / Writely — collaborative web office theater
  * Keys: {prefix}-docs via immersionStorageKey
  */
 (function (global) {
@@ -20,8 +20,8 @@
   }
   function storageKey() {
     return U().immersionStorageKey
-      ? U().immersionStorageKey("docs", "itt06")
-      : "itt06-docs";
+      ? U().immersionStorageKey("docs", "itt07")
+      : "itt07-docs";
   }
   function esc(s) {
     if (U().escapeHtml) return U().escapeHtml(s);
@@ -46,7 +46,7 @@
       try {
         if (ITT.debug && ITT.debug.record) {
           ITT.debug.record({
-            year: "2006",
+            year: U().immersionYear ? U().immersionYear() : (ITT._immersionYear || ""),
             key: storageKey(),
             feature: "docs",
             error: e && e.name,
@@ -123,7 +123,7 @@
           return;
         }
         if (st) {
-          st.textContent = "Saved in this browser · collaborators can “see” edits (theater).";
+          st.textContent = "Saved.";
           ittFeedback(st.textContent, st);
         }
       });

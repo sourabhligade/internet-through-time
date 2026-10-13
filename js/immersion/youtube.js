@@ -84,7 +84,7 @@
           '">reddit</a>'
       );
     }
-    if (y === 2005 || y === 2006) {
+    if (y === 2005) {
       bits.push(
         '<a href="../delicious/index.html?url=' +
           encodeURIComponent(shareUrl) +

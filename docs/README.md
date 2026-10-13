@@ -2,7 +2,7 @@
 
 **Ship law:** [`DISK-TRUTH.md`](DISK-TRUTH.md) · `js/year-card.json` · live `years/` · `scripts/itt_gate.py` `SHIP_YEARS`.
 
-Hub is **23 years open** (1994–2010, 2012–2014, and 2020–2022). **2015 is omitted** (no year-card key, no hub card, hash is not a door). **leanBoot** is 2007–2010, 2012–2014, and 2020–2022. **2008** App Store `itt08-apps`. **2009** Facebook Like `itt09-like`. **2020** Zoom Leave `itt20-zoom`. **2021** Ask App Not to Track `itt21-att`. **2022** ChatGPT Send `itt22-chatgpt`. **Absent:** 2017, 2018, 2019, and 2023–2025. Leftover-3× unique catalogs are **empty**. Leftover-2× unique links: **1,138** across 21 matrix rows in `e2e/leftover-2x-unique-links.matrix.json` (2020–2022 have no row; 2015 omitted). Dest doubling waits on `2x`.
+Hub is **22 years open** (1994–2005, 2007–2010, 2012–2014, and 2020–2022). **2011 is not a door** (no year-card key, no hub card, no `years/2011/index.html`). **2015 is omitted** (no year-card key, no hub card, hash is not a door). **2017 has no year-card key** (no tree, no hub card). **leanBoot** is 2007–2010, 2012–2014, and 2020–2022. **2008** App Store `itt08-apps`. **2009** Facebook Like `itt09-like`. **2020** Zoom Leave `itt20-zoom`. **2021** Ask App Not to Track `itt21-att`. **2022** ChatGPT Send `itt22-chatgpt`. **Absent:** 2018, 2019, and 2023–2025. Leftover-3× unique catalogs are **empty**. Leftover-2× unique links: **1,037** across 21 matrix rows in `e2e/leftover-2x-unique-links.matrix.json` (2020–2022 have no row; 2015 omitted). Dest doubling waits on `2x`.
 
 Finished-work maps (27-door lists, leftover-3× unique notes, closed implement checklists, dated snapshots) were removed. Do not restore them. Do not dest-farm. Current holes: [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md).
 
@@ -12,12 +12,12 @@ Finished-work maps (27-door lists, leftover-3× unique notes, closed implement c
 1b. [`CODE-STRUCTURE.md`](CODE-STRUCTURE.md) — SRP: config vs engine vs dest HTML vs dest-true e2e. Dest-true CI pack is **12** specs.
 2. [`ARCHITECTURE.md`](ARCHITECTURE.md) — year differences live in config + HTML. Shared engines live in `js/`.
 3. That year’s `YYYY-READ-FIRST.md` when it still sits in this folder (2020–2022) — thesis and bans only. Live list is DISK-TRUTH.
-4. [`LEAN-IO-CRITERIA.md`](LEAN-IO-CRITERIA.md) — visitor I/O pass/fail for lean HTML doors. 2020–2022 are live HTML. 2017 is absent.
+4. [`LEAN-IO-CRITERIA.md`](LEAN-IO-CRITERIA.md) — visitor I/O pass/fail for lean HTML doors. 2020–2022 are live HTML. 2017 has no year-card key.
 5. [`2013-IO-CRITERIA.md`](2013-IO-CRITERIA.md) — same bar for 2013 Vine 6s.
-6. 2017 is absent. Do not restore it. Leftover-3× unique catalogs are empty. Do not grow them.
+6. 2017 has no year-card key. Do not add one. Leftover-3× unique catalogs are empty. Do not grow them.
 7. [`CLONE-STRIP-DEST-LOCKED.md`](CLONE-STRIP-DEST-LOCKED.md) — strip leftover clone machines on dest-locked lean dests.
 8. [`VISITOR-100-FLOWS.md`](VISITOR-100-FLOWS.md) — 100% is dest-true flows on dests already on disk, not dest-farm links.
-9. [`FLOW-CHECK-DIAGRAM.md`](FLOW-CHECK-DIAGRAM.md) — §§1–4 are the 24-door walk. §§5–6 leftover-3× unique dests; catalogs empty.
+9. [`FLOW-CHECK-DIAGRAM.md`](FLOW-CHECK-DIAGRAM.md) — §§1–4 are the old 24-door walk. §§5–6 leftover-3× unique dests; catalogs empty.
 10. Named list [`DEST-TRUE-FLOW-NAMES.md`](DEST-TRUE-FLOW-NAMES.md) · KEEP/DROP/MISS [`YEAR-FALSE-KEEP-DROP.md`](YEAR-FALSE-KEEP-DROP.md).
 11. [`LEAN-DOUBLE-CRITERIA.md`](LEAN-DOUBLE-CRITERIA.md) — 5k walk, not 5k dests. Cap is a ceiling.
 12. [`FAMOUS-DOUBLE-CRITERIA.md`](FAMOUS-DOUBLE-CRITERIA.md) — criteria only. Thin doors, taken slugs, game rule. No folders from that file.

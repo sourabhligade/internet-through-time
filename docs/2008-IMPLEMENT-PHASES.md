@@ -219,7 +219,7 @@ Stop when the named leftover dests exist. HTML count is a side effect. Do not pa
 | [x] | Count `years/2008/sites/*` ≤ **~210** · official 10 present · guided 6 | D13 · I6 · I13 |
 | [x] | `npm run test:e2e:dest-true` after the door is named live | dest-true green. Full warehouse stays red |
 
-Visitor 100% on 2008 is dest-true I/O on dests **this pass put on disk**, not matching 2006’s 371 folders.
+Visitor 100% on 2008 is dest-true I/O on dests **this pass put on disk**.
 
 ---
 

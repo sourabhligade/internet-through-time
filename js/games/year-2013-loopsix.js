@@ -19,6 +19,7 @@
   var key = YG ? YG.storageKey("loopsix", "2013") : "itt13-game-loopsix";
   var NEED = 6;
   var running = false;
+  var saved = false;
   var beats = 0;
   var best = 0;
 
@@ -44,7 +45,7 @@
     paintTrack();
   }
   function writeBest() {
-    if (beats <= 0) return;
+    if (beats <= 0) return false;
     var onCabinet = /\/years\/2013\//.test(String(location.pathname || ""));
     if (!onCabinet) {
       if (window.ITTGames) {
@@ -54,10 +55,11 @@
       }
       if (beats > best) best = beats;
       paint();
-      return;
+      return false;
     }
+    var wrote = false;
     if (YG && YG.saveBest) {
-      YG.saveBest("loopsix", beats, { year: "2013", merge: { multiStep: true, loop: beats } });
+      wrote = !!YG.saveBest("loopsix", beats, { year: "2013", merge: { multiStep: true, loop: beats } });
     } else {
       try {
         window.ITT.User.store(key, {
@@ -69,32 +71,48 @@
             multiStep: true,
             ts: Date.now()
           });
-      } catch (eS) { /* */ }
+        wrote = true;
+      } catch (eS) {
+        wrote = false;
+      }
     }
+    if (!wrote) return false;
     if (beats > best) best = beats;
     try {
       if (window.ITT && ITT.revealNextFlow) ITT.revealNextFlow(document);
     } catch (eN) { /* */ }
+    return true;
   }
   function start() {
     running = true;
+    saved = false;
     beats = 0;
     paint();
     say("Loop of six. Beat A / Beat B. 15s never scores.");
   }
   function beat() {
+    if (saved) {
+      say("Already saved.");
+      return;
+    }
     if (!running) {
       say("New Game first. Incomplete never writes.");
       return;
     }
     if (beats >= NEED) {
-      say("Loop closed. New Game for another six. Star stays Vine.");
+      say("Already saved.");
       return;
     }
     beats += 1;
     paint();
-    if (beats >= NEED) writeBest();
-    say(beats >= NEED ? "Loop of six · leftover cabinet · star stays Vine." : "Beat " + beats + " / 6 · 15s never scores.");
+    if (beats >= NEED) {
+      if (writeBest()) {
+        saved = true;
+        say("Saved.");
+      } else say("This browser blocked the save.");
+    } else {
+      say("Beat " + beats + " / 6.");
+    }
   }
 
   if (startBtn) startBtn.addEventListener("click", start);
@@ -104,6 +122,10 @@
   var trap = host.querySelector("[data-peg-trap]");
   if (trap) {
     trap.addEventListener("click", function () {
+      if (saved) {
+        say("Already saved.");
+        return;
+      }
       say("15 seconds is the trap. Never scores.");
     });
   }

@@ -442,7 +442,7 @@
         "label": "Start"
       },
       {
-        "go": "sites/napster/index.html",
+        "go": "sites/napster/search.html",
         "label": "Napster"
       },
       {
@@ -523,11 +523,11 @@
         "label": "Amazon"
       },
       {
-        "go": "sites/napster/index.html",
+        "go": "sites/napster/search.html",
         "label": "Napster"
       },
       {
-        "go": "sites/pets/index.html",
+        "go": "sites/pets/shop.html",
         "label": "Pets.com"
       },
       {
@@ -719,7 +719,7 @@
         "label": "Gmail"
       },
       {
-        "go": "sites/flickr/index.html",
+        "go": "sites/flickr/upload.html",
         "label": "Flickr"
       },
       {
@@ -819,46 +819,6 @@
     "thesis": "2005 thesis: Web 2.0 boom. YouTube upload is the save. Yahoo still #1 visits. Google does not own YouTube.",
     "openLoc": "Open Location in Internet Explorer:",
     "aboutHtml": "<p><b>Microsoft Internet Explorer</b></p> <p>Version 6.0<br>Copyright © 1995–2001 Microsoft Corporation</p> <p>Educational historical Web exhibit.</p> <p>Supports Dynamic HTML, CSS, ActiveX, and always-on broadband.</p>",
-    "startBanner": "Windows<b>XP</b>",
-    "taskBtn": "Internet Explorer",
-    "icon": "e",
-    "aria": "Internet Explorer 6",
-    "locLabel": "Address",
-    "bookmarksTitle": "Favorites",
-    "mailPh": "friend@aol.com",
-    "hasTaskbar": true,
-    "maximized": true
-  },
-  "2006": {
-    "title": "Internet Explorer 6.0 — 2006",
-    "css": [
-      "win95-netscape.css",
-      "ie5-overrides.css",
-      "period-2006.css"],
-    "bodyClass": "year-2006 os-winxp browser-ie6",
-    "boot": "browser-2006.js",
-    "dir": [
-      { "go": "pages/home.html", "label": "Start" },
-      { "go": "sites/twitter/index.html", "label": "Twttr" },
-      { "go": "sites/facebook/feed.html", "label": "Feed" },
-      { "go": "sites/youtube/index.html", "label": "YouTube" },
-      { "go": "sites/googledocs/index.html", "label": "Docs" },
-      { "go": "sites/wikipedia/millionth.html", "label": "Wiki 1M" },
-      { "go": "pages/about.html", "label": "About" }
-    ],
-    "chrome": "2006",
-    "toolbar": "ie",
-    "family": "ie",
-    "location": "http://home.microsoft.com/intl/web2006/",
-    "prefHome": "http://home.microsoft.com/intl/web2006/",
-    "yearLabel": "2006 · Windows XP · Internet Explorer 6",
-    "windowTitle": "Welcome to the World Wide Web — Microsoft Internet Explorer",
-    "connectH2": "Network Connections",
-    "connectBtn": "Connect (always-on broadband)",
-    "skipBtn": "Skip connect",
-    "thesis": "2006 thesis: Twttr is the save. News Feed leftover. Google owns YouTube. iPhone is 2007.",
-    "openLoc": "Open Location in Internet Explorer:",
-    "aboutHtml": "<p><b>Microsoft Internet Explorer</b></p> <p>Version 6.0<br>Copyright © 1995–2001 Microsoft Corporation</p> <p>Educational historical Web exhibit.</p>",
     "startBanner": "Windows<b>XP</b>",
     "taskBtn": "Internet Explorer",
     "icon": "e",
@@ -1031,7 +991,7 @@
       "label": "Instagram"
     },
     {
-      "go": "sites/ipad/index.html",
+      "go": "sites/ipad/order.html",
       "label": "iPad"
     },
     {

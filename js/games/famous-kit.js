@@ -85,7 +85,7 @@
         return;
       }
       saved = true;
-      status("Saved · " + prefixFor(year) + "-game-" + gid + " · " + score);
+      status("Saved.");
     }
     function failSave() {
       if (score > 0) save(score);

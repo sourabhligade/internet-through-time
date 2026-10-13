@@ -1,6 +1,6 @@
 /**
- * Thefacebook / Facebook immersion — campus profile + 2006 News Feed (localStorage)
- * Year-aware keys: 2006 → itt06 · 2005 → itt05 (migrates itt04) · else itt04
+ * Thefacebook / Facebook immersion — campus profile + News Feed (localStorage)
+ * Year-aware keys: 2005 → itt05 (migrates itt04) · else itt04
  */
 (function (global) {
   "use strict";
@@ -28,7 +28,7 @@
   }
   function feedKey() {
     if (ITT.util && ITT.util.immersionStorageKey) {
-      return ITT.util.immersionStorageKey("fb-feed", "itt06");
+      return ITT.util.immersionStorageKey("fb-feed", "itt05");
     }
     var y = year();
     if (y && /^\d{4}$/.test(y)) return "itt" + y.slice(2) + "-fb-feed";
@@ -42,13 +42,8 @@
         raw = window.ITT.User.take("itt04-thefacebook");
         if (raw) window.ITT.User.store(k, raw);
       }
-      if (!raw && k === "itt06-thefacebook") {
-        raw = window.ITT.User.take("itt05-thefacebook") || window.ITT.User.take("itt04-thefacebook");
-        if (raw) window.ITT.User.store(k, raw);
-      }
       if (!raw && k === "itt07-thefacebook") {
         raw =
-          window.ITT.User.take("itt06-thefacebook") ||
           window.ITT.User.take("itt05-thefacebook") ||
           window.ITT.User.take("itt04-thefacebook");
         if (raw) window.ITT.User.store(k, raw);
@@ -104,7 +99,7 @@
   }
   function defaultProfile() {
     var y = year();
-    if (y >= "2006") {
+    if (y >= "2007") {
       var status = "joined Facebook";
       if (y === "2007") status = "using Facebook Platform apps";
       else if (y === "2009") status = "Liking everything · FarmVille later";
@@ -291,34 +286,6 @@
       });
     }
 
-    var feedHost = doc.querySelector("[data-fb-feed]");
-    if (feedHost && feedHost.getAttribute("data-feed-bound") !== "1") {
-      feedHost.setAttribute("data-feed-bound", "1");
-      feedHost.addEventListener("click", function (ev) {
-        var t = ev.target;
-        while (t && t !== feedHost && !(t.getAttribute && t.getAttribute("data-feed-story"))) {
-          t = t.parentNode;
-        }
-        if (!t || t === feedHost) return;
-        if (year() !== "2006") return;
-        var who = t.getAttribute("data-feed-story") || "story";
-        var feedKeyL = ITT.util && ITT.util.immersionStorageKey
-          ? ITT.util.immersionStorageKey("feed", "itt06")
-          : "itt06-feed";
-        try {
-          window.ITT.User.store(feedKeyL, {
-            multiStep: true,
-            real: true,
-            year: "2006",
-            ts: Date.now(),
-            story: String(who).slice(0, 40)
-          });
-        } catch (eFeed) { /* */ }
-        var fst = doc.querySelector("[data-feed-status]");
-        if (fst) fst.textContent = "Story persist · itt06-feed";
-        try { if (ITT.revealNextFlow) ITT.revealNextFlow(doc); } catch (eN) { /* */ }
-      });
-    }
     var hideFeed = doc.querySelector("[data-feed-hide]");
     if (hideFeed && hideFeed.getAttribute("data-feed-hide-bound") !== "1") {
       hideFeed.setAttribute("data-feed-hide-bound", "1");
@@ -463,7 +430,7 @@
         p.name = email.split("@")[0] || p.name;
         save(p);
         if (global.location) {
-          global.location.href = year() === "2006" ? "feed.html" : "profile.html";
+          global.location.href = "profile.html";
         }
       });
     }

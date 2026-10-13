@@ -28,8 +28,7 @@ const {
 
 const YEARS = [
   '1994', '1995', '1996', '1997', '1998', '1999',
-  '2000', '2001', '2002', '2003', '2004', '2005', '2006',
-  '2007', '2008', '2009', '2010', '2012', '2013', '2014',
+  '2000', '2001', '2002', '2003', '2004', '2005', '2007', '2008', '2009', '2010', '2012', '2013', '2014',
 ].filter((year) => isLiveYear(year) && fs.existsSync(path.join(__dirname, '..', 'years', year, 'index.html')));
 
 /** Location bar hint that should resolve inside each year (when known). */
@@ -48,7 +47,6 @@ const LOCATION_HINT = {
   /* Prefer keys that exist in each year's locationHints map */
   '2007': { type: 'iphone', re: /iphone|safari/i },
   '2005': { type: 'youtube', re: /youtube|upload/i },
-  '2006': { type: 'twitter', re: /twttr|twitter/i },
   '2013': { type: 'vine', re: /vine|six|6s/i },
   '2014': { type: 'whatsapp', re: /whatsapp|install/i },
 
@@ -120,7 +118,7 @@ for (const year of YEARS) {
 
     test(`Museum hub link leaves immersion (UX U2)`, async ({ page }) => {
       /* Spot-check a few years so suite stays fast; path is same pattern all years. */
-      test.skip(!['1995', '2004', '2006'].includes(year), 'spot-check only');
+      test.skip(!['1995', '2004'].includes(year), 'spot-check only');
       await enterYear(page, year);
       await killOverlays(page);
       const frame = contentFrame(page);

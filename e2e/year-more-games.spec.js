@@ -36,7 +36,6 @@ function starKey(year) {
     2003: "itt03-photobucket",
     2004: "itt04-thefacebook-networks",
     2005: "itt05-yt-uploads",
-    2006: "itt06-tweets",
     2009: "itt09-like",
     2010: "itt10-ig-posts",
     2012: "itt12-ig-android",

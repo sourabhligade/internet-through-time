@@ -400,7 +400,7 @@
                 return;
               }
               api.markTourUsed();
-              if (st) st.textContent = "Saved · open History to see this edit.";
+              if (st) st.textContent = "Saved.";
               api.actionFeedback("Saved locally · open History.", { status: st, flash: true });
             });
           })(wikiSaves[wsi]);

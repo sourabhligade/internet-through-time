@@ -121,53 +121,6 @@
         }
       ];
     }
-    if (year() === "2006") {
-      /* Peak UGC year — power diggers · algorithm drama · Time “You” culture */
-      return [
-        {
-          id: "d06-0",
-          title: "Google to acquire YouTube for $1.65 billion",
-          diggs: 4820,
-          url: "http://www.youtube.com/"
-        },
-        {
-          id: "d06-1",
-          title: "Twitter launches publicly — 140 characters",
-          diggs: 2100,
-          url: "http://twitter.com/"
-        },
-        {
-          id: "d06-2",
-          title: "Facebook opens to everyone (not just .edu)",
-          diggs: 3500,
-          url: "http://www.facebook.com/"
-        },
-        {
-          id: "d06-3",
-          title: "Amazon EC2: rent a server by the hour",
-          diggs: 980,
-          url: "http://aws.amazon.com/"
-        },
-        {
-          id: "d06-4",
-          title: "Time Person of the Year is… You",
-          diggs: 5600,
-          url: "http://www.time.com/"
-        },
-        {
-          id: "d06-5",
-          title: "Digg algorithm drama: top users bury stories",
-          diggs: 1800,
-          url: "http://digg.com/"
-        },
-        {
-          id: "d06-6",
-          title: "IE 7 is out — tabs for the masses",
-          diggs: 740,
-          url: "http://www.microsoft.com/windows/ie/"
-        }
-      ];
-    }
     return [
       {
         id: "d05-0",
@@ -335,23 +288,6 @@
                 try {
                   if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
                 } catch (eN) { /* */ }
-              } else if (want === "itt06-digg") {
-                try {
-                  if (!window.ITT.User.take("itt06-digg")) {
-                    window.ITT.User.store("itt06-digg", {
-                        multiStep: true,
-                        real: true,
-                        leftover: true,
-                        year: "2006",
-                        ts: Date.now(),
-                        bury: delta < 0,
-                        story: String(row.title || "").slice(0, 80)
-                      });
-                  }
-                } catch (e06) { /* */ }
-                try {
-                  if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
-                } catch (eN6) { /* */ }
               }
             }
             var msg =

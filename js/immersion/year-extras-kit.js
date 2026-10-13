@@ -298,7 +298,6 @@
         k === "itt03-photobucket" ||
         k === "itt04-thefacebook-networks" ||
         k === "itt05-yt-uploads" ||
-        k === "itt06-tweets" ||
         k === "itt07-iphone" ||
         k === "itt08-apps" ||
         k === "itt09-like" ||

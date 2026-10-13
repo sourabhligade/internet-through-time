@@ -133,7 +133,7 @@
       G.feedback("This browser blocked the save.", st, { error: true });
       return;
     }
-    G.feedback("Saved in this browser.", st);
+    G.feedback("Saved.", st);
     G.markUsed();
     try {
       btn.setAttribute("data-real-bound", "1");

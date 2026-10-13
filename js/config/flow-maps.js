@@ -1997,7 +1997,7 @@
           "sites": [
                     {
                               "name": "F1 Flickr stream",
-                              "href": "sites/flickr/index.html",
+                              "href": "sites/flickr/upload.html",
                               "do": "Filename + tag · itt04-flickr"
                     },
                     {
@@ -2174,29 +2174,6 @@ ITT.flowMaps["2005"] = {
       }
     ]
   };
-    ITT.flowMaps["2006"] = {
-    "year": "2006",
-    "thesis": "Twttr update is the gold. News Feed / Google←YouTube. XP + IE6.",
-    "shell": "Windows XP · IE 6",
-    "how": [
-      "Twttr: 140-class update",
-      "News Feed is not the star",
-      "Incomplete never writes"
-    ],
-    "branches": [
-      {
-        "label": "Enter",
-        "do": "2006 star first",
-        "sites": [
-          { "name": "Starting Point", "href": "pages/home.html", "do": "6 steps · official 10 flows" },
-          { "name": "Twttr", "href": "sites/twitter/index.html", "do": "★ gold" },
-          { "name": "Famous", "href": "sites/playable/famous.html", "do": "cabinet" },
-          { "name": "Year flow map", "href": "pages/map.html", "do": "This tree" }
-        ]
-      }
-    ]
-  };
-
   ITT.flowMaps["2008"] = {
     year: "2008",
     thesis: "Phones get a store. App Store is the star. Desktop stays XP + IE 7.",
@@ -2310,8 +2287,8 @@ ITT.flowMaps["2005"] = {
         "sites": [
           { "name": "F2 Instagram", "href": "sites/instagram/index.html", "do": "Star filter/share · itt10-ig-posts" },
           { "name": "F3 Imgur", "href": "sites/imgur/index.html", "do": "Upload residual · itt10-imgur" },
-          { "name": "F4 Facebook OG", "href": "sites/facebook/index.html", "do": "Like · itt10-facebook" },
-          { "name": "F5 YouTube", "href": "sites/youtube/index.html", "do": "35h honesty · itt10-youtube" }
+          { "name": "F4 Facebook OG", "href": "sites/facebook/index.html", "do": "Like · itt10-fb-og" },
+          { "name": "F5 YouTube", "href": "sites/youtube/index.html", "do": "35h honesty · itt10-yt" }
         ]
       }
     ],
@@ -2437,7 +2414,7 @@ ITT.flowMaps["2007"] = {
           { name: "2 Street View", href: "sites/streetview/index.html", do: "29 May · Gmail" },
           { name: "3 Gmail open", href: "sites/gmail/index.html", do: "7 Feb · Platform" },
           { name: "4 Facebook Platform", href: "sites/fbplat/index.html", do: "24 May · Twitter" },
-          { name: "5 Twitter", href: "sites/twitter/index.html", do: "Twttr is 2006 · YouTube" },
+          { name: "5 Twitter", href: "sites/twitter/index.html", do: "Twitter · YouTube" },
           { name: "6 YouTube", href: "sites/youtube/index.html", do: "Google-owned · Tumblr" },
           { name: "7 Tumblr", href: "sites/tumblr/index.html", do: "ILS birthmark · Kindle" },
           { name: "8 Kindle", href: "sites/kindle/index.html", do: "19 Nov · IE6" },

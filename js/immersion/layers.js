@@ -23,7 +23,6 @@
     "2010": { machine: "Windows 7 · Internet Explorer 8", star: "Instagram iOS", starHref: "sites/instagram/index.html", game: "Sling Nest" },
     "2012": { machine: "Windows 7 · Internet Explorer 9", star: "Instagram Android", starHref: "sites/instagram/android.html", game: "Guess Doodle" },
     "2005": { machine: "Windows XP · Internet Explorer 6", star: "YouTube upload", starHref: "sites/youtube/upload.html", game: "" },
-    "2006": { machine: "Windows XP · Internet Explorer 6", star: "Twttr", starHref: "sites/twitter/index.html", game: "" },
     "2007": { machine: "Windows XP · Internet Explorer 6", star: "iPhone Safari", starHref: "sites/iphone/index.html", game: "" },
     "2013": { machine: "Windows 7 residual · IE 9", star: "Vine 6s", starHref: "sites/vine/record.html", game: "" },
     "2014": { machine: "Windows 7 residual · IE 9", star: "WhatsApp Install", starHref: "sites/whatsapp/index.html", game: "" },

@@ -1427,162 +1427,6 @@ def test_2005_no_anachronism_products() -> None:
     ok("2005-no-anachronism-products")
 
 
-def test_2006_signature() -> None:
-    if not (ROOT / "years/2006").exists():
-        ok("2006-signature-skip")
-        return
-    need = [
-        "years/2006/index.html",
-        "years/2006/pages/home.html",
-        "years/2006/pages/about.html",
-        "years/2006/sites/twitter/index.html",
-        "years/2006/sites/facebook/index.html",
-        "years/2006/sites/facebook/feed.html",
-        "years/2006/sites/youtube/index.html",
-        "years/2006/sites/digg/index.html",
-        "years/2006/sites/docs/index.html",
-        "years/2006/sites/aws/index.html",
-        "years/2006/sites/reader/index.html",
-        "years/2006/sites/time-you/index.html",
-        "js/config/2006.js",
-        "js/config/immersion-2006.js",
-        "js/browser-2006.js",
-        "js/immersion-2006.js",
-        "js/immersion/year-2006-extras.js",
-        "css/period-2006.css",
-    ]
-    missing = [n for n in need if not (ROOT / n).is_file()]
-    if missing:
-        fail("2006-signature", "missing: " + ", ".join(missing))
-        return
-    shell = read(ROOT / "years/2006/index.html")
-    if 'data-itt-year="2006"' not in shell:
-        fail("2006-signature", "shell year")
-        return
-    tw = read(ROOT / "years/2006/sites/twitter/index.html")
-    if "data-tw06-post" not in tw or "What are you doing" not in tw:
-        fail("2006-signature", "twitter hooks")
-        return
-    feed = read(ROOT / "years/2006/sites/facebook/feed.html")
-    if "data-fb-feed" not in feed or "News Feed" not in feed:
-        fail("2006-signature", "facebook feed hooks")
-        return
-    yt = read(ROOT / "years/2006/sites/youtube/index.html")
-    if "1.65" not in yt and "9 Oct" not in yt:
-        fail("2006-signature", "youtube two-era honesty")
-        return
-    home = year_home("2006")
-    for needle in ("Twttr", "Facebook", "YouTube", "85,507,314"):
-        if needle not in home:
-            fail("2006-signature", f"home missing {needle}")
-            return
-    icfg = read(ROOT / "js/config/immersion-2006.js")
-    for flag in ("twitter: true", "facebook: true", "youtube: true", "digg: true", "docs: true", "aws: true"):
-        if flag not in icfg:
-            fail("2006-signature", f"features missing {flag}")
-            return
-    if 'storagePrefix: "itt06"' not in icfg:
-        fail("2006-signature", "storagePrefix itt06")
-        return
-    hub = read(ROOT / "index.html")
-    if 'href="years/2006/"' not in hub:
-        fail("2006-signature", "hub not unlocked")
-        return
-    extras = read(ROOT / "js/immersion/year-2006-extras.js")
-    if "itt06" not in extras or "data-tw06-post" not in extras:
-        fail("2006-signature", "year extras missing Twttr machine")
-        return
-    ok("2006-signature")
-
-
-def test_2006_urlmap_complete() -> None:
-    if not (ROOT / "years/2006").exists():
-        ok("2006-urlmap-complete-skip")
-        return
-    root = ROOT / "years/2006"
-    htmls = []
-    for pth in root.rglob("*.html"):
-        rel = str(pth.relative_to(root)).replace("\\", "/")
-        if rel == "index.html":
-            continue
-        htmls.append(rel)
-    cfg = read(ROOT / "js/config/2006.js")
-    missing = [h for h in htmls if f'"{h}"' not in cfg]
-    if missing:
-        fail("2006-urlmap-complete", "unmapped: " + ", ".join(missing[:8]))
-        return
-    ok("2006-urlmap-complete")
-
-
-def test_2006_no_anachronism_products() -> None:
-    if not (ROOT / "years/2006").exists():
-        ok("2006-no-anachronism-products-skip")
-        return
-    banned = ("instagram", "tiktok", "iphone", "chrome-browser")
-    for name in banned:
-        if (ROOT / "years/2006/sites" / name).exists():
-            fail("2006-anachronism", f"banned site tree: {name}")
-            return
-    home = year_home("2006").lower()
-    about = read(ROOT / "years/2006/pages/about.html").lower()
-    if "iphone" not in home and "iphone" not in about:
-        fail("2006-anachronism", "should ban iPhone on home/about")
-        return
-    if "street view" not in about and "street view" not in home:
-        fail("2006-anachronism", "should ban Street View")
-        return
-    # YouTube must not claim year-start Google ownership without late-year framing
-    yt = read(ROOT / "years/2006/sites/youtube/index.html").lower()
-    if "independent" not in yt and "oct" not in yt:
-        fail("2006-anachronism", "youtube needs two-era honesty")
-        return
-    ok("2006-no-anachronism-products")
-
-
-def test_2006_densify() -> None:
-    """Continuity year-truth + Reader/IE7/Time densify rooms."""
-    if not (ROOT / "years/2006").exists():
-        ok("2006-densify-skip")
-        return
-    ms = read(ROOT / "years/2006/sites/myspace/index.html")
-    if "Jul 18, 2006" in ms and "$580" in ms:
-        fail("2006-densify", "MySpace must not claim News Corp sale as Jul 2006")
-        return
-    if "2005" not in ms and "News Corp" not in ms:
-        fail("2006-densify", "MySpace needs News Corp continuity honesty")
-        return
-    fl = read(ROOT / "years/2006/sites/flickr/index.html")
-    if "Yahoo" not in fl and "photostream" not in fl:
-        fail("2006-densify", "Flickr leftover needs Yahoo photostream honesty")
-        return
-    maps = read(ROOT / "years/2006/sites/maps/index.html")
-    if "Street View" not in maps:
-        fail("2006-densify", "Maps leftover needs Street View ban")
-        return
-    rd_path = ROOT / "years/2006/sites/reddit/index.html"
-    if rd_path.is_file():
-        rd = read(rd_path)
-        if "Digg" not in rd:
-            fail("2006-densify", "Reddit should acknowledge Digg peak")
-            return
-    gm = read(ROOT / "years/2006/sites/gmail/index.html")
-    if "2007" not in gm:
-        fail("2006-densify", "Gmail leftover needs open-is-2007 honesty")
-        return
-    for rel in (
-        "years/2006/sites/reader/index.html",
-        "years/2006/sites/time-you/index.html",
-    ):
-        if not (ROOT / rel).is_file():
-            fail("2006-densify", f"missing {rel}")
-            return
-    if "data-reader-add" not in read(ROOT / "years/2006/sites/reader/index.html"):
-        fail("2006-densify", "reader hooks")
-        return
-    ok("2006-densify")
-
-
-
 
 def test_2007_signature() -> None:
     if not (ROOT / "years/2007").exists():
@@ -1993,7 +1837,7 @@ def test_immersion_registry_complete() -> None:
     reg = read(ROOT / "js/immersion/registry.js")
     for year in (
         "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002",
-        "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", 
+        "2003", "2004", "2005", "2007", "2008", "2009", "2010", 
         "2012", "2013", "2014", "2020", "2021", "2022",
     ):
         # Only require registry entry when the year tree is on disk (wiped years skip)
@@ -2029,13 +1873,6 @@ def test_immersion_registry_complete() -> None:
     if (ROOT / "years/2007").is_dir():
         if "iphone.js" not in reg:
             fail("immersion-registry", "2007 iphone.js missing")
-            return
-    if (ROOT / "years/2006").is_dir():
-        if "twitter.js" not in reg or "docs.js" not in reg or "aws.js" not in reg:
-            fail("immersion-registry", "2006 twitter/docs/aws missing from registry")
-            return
-        if "reader.js" not in reg:
-            fail("immersion-registry", "2006 reader.js missing from registry")
             return
     if (ROOT / "years/2009").is_dir():
         for mod in ("farmville.js", "bing.js"):
@@ -2199,10 +2036,6 @@ def main() -> int:
         test_2005_urlmap_complete,
         test_2005_no_anachronism_products,
         test_2005_densify,
-        test_2006_signature,
-        test_2006_urlmap_complete,
-        test_2006_no_anachronism_products,
-        test_2006_densify,
         test_2007_signature,
         test_2007_urlmap_complete,
         test_2009_signature,

@@ -64,6 +64,7 @@ npx playwright test \
   e2e/2008-mvp.spec.js \
   e2e/2009-mvp.spec.js \
   e2e/dest-top.spec.js \
+  e2e/dest-chrome-2021-2022.spec.js \
   e2e/follow-site.spec.js \
   e2e/user-save-honest.spec.js \
   --workers=2

@@ -1,7 +1,8 @@
 // @ts-check
 /**
  * Museum door — docs/FLOW-CHECK-DIAGRAM.md §4 + docs/DISK-TRUTH.md.
- * Hub 23 years (1994–2010, 2012–2014, and 2020–2022). 2015 is omitted. 2017–2019 and 2023–2025 are absent.
+ * Hub 22 years (1994–2005, 2007–2010, 2012–2014, and 2020–2022). 2015 is omitted.
+ * 2011 is not a door. 2017 has no year-card key. 2018–2019 and 2023–2025 are absent.
  * Links first, then dest-true I/O. Dest-folder count is not a pass.
  */
 const fs = require("fs");
@@ -47,14 +48,16 @@ async function getKey(page, key) {
 }
 
 test.describe("visitor door", () => {
- test("hub lists 23 years including 2009, 2008, 2005, and 2020–2022", async ({ page }) => {
- expect(SHIP).toHaveLength(23);
+ test("hub lists 22 years including 2009, 2008, 2005, and 2020–2022", async ({ page }) => {
+ expect(SHIP).toHaveLength(22);
     await page.goto("/");
  await expect(page.locator("h1")).toHaveText(/The Internet Through Time/);
     await expect(page.locator("body")).not.toContainText(/27 years open/i);
     await expect(page.locator("a.year-card[href*='years/2005']")).toBeVisible();
     await expect(page.locator("a.year-card.available[href*='years/2015']")).toHaveCount(0);
     await expect(page.locator('a.year-card.available[data-year="2015"]')).toHaveCount(0);
+    await expect(page.locator('a.year-card[data-year="2011"]')).toHaveCount(0);
+    await expect(page.locator(".year-card.y2011")).toHaveCount(0);
     for (const y of SHIP) {
       await expect(page.locator(`a.year-card.available[href*="years/${y}"]`).first()).toBeVisible();
     }
@@ -81,6 +84,41 @@ test.describe("visitor door", () => {
     await page.goto("/app/index.html#/year/2015");
     await expect(page.getByRole("heading", { name: "2015 is not a door" })).toBeVisible();
     await expect(page.locator("body")).not.toContainText("Periscope");
+  });
+
+  test("2017 has no year-card key · no tree · no hub card · year URL is not a door", async ({ page }) => {
+    expect(CARD["2017"]).toBeUndefined();
+    expect(SHIP).not.toContain("2017");
+    expect(fs.existsSync(path.join(ROOT, "years", "2017"))).toBe(false);
+    await page.goto("/");
+    await expect(page.locator('a.year-card[data-year="2017"]')).toHaveCount(0);
+    await expect(page.locator(".year-card.y2017")).toHaveCount(0);
+    const live = await page.evaluate(() => !!(window.ITT && window.ITT.MuseumProgress && window.ITT.MuseumProgress.isLiveYear("2017")));
+    expect(live).toBe(false);
+    expect((await page.request.get("/years/2017/")).status()).toBe(404);
+    expect((await page.request.get("/years/2017/index.html")).status()).toBe(404);
+    await page.goto("/app/index.html#/year/2017");
+    await expect(page.getByRole("heading", { name: "2017 is not a door" })).toBeVisible();
+  });
+
+  test("2011 is not a door · leftover rooms stay · hub card stays off", async ({ page }) => {
+    expect(CARD["2011"]).toBeUndefined();
+    expect(SHIP).not.toContain("2011");
+    expect(fs.existsSync(path.join(ROOT, "years", "2011", "index.html"))).toBe(false);
+    expect(fs.existsSync(path.join(ROOT, "years", "2011", "pages", "home.html"))).toBe(false);
+    expect(fs.existsSync(path.join(ROOT, "years", "2011", "sites", "kindlefire", "index.html"))).toBe(true);
+    await page.goto("/");
+    await expect(page.locator('a.year-card[data-year="2011"]')).toHaveCount(0);
+    await expect(page.locator(".year-card.y2011")).toHaveCount(0);
+    const live = await page.evaluate(() => !!(window.ITT && window.ITT.MuseumProgress && window.ITT.MuseumProgress.isLiveYear("2011")));
+    expect(live).toBe(false);
+    const listing = await page.request.get("/years/2011/");
+    expect(listing.status()).toBe(200);
+    expect(await listing.text()).toContain("Directory listing");
+    expect((await page.request.get("/years/2011/index.html")).status()).toBe(404);
+    expect((await page.request.get("/years/2011/sites/kindlefire/index.html")).status()).toBe(200);
+    await page.goto("/app/index.html#/year/2011");
+    await expect(page.getByRole("heading", { name: "2011 is not a door" })).toBeVisible();
   });
 
   test("every ship year has shell, Starting Point, About, Map, dest-unique official n files", () => {

@@ -506,11 +506,6 @@ html[data-itt-year="2022"] .itt-pop3x-flow {
   color: #202124 !important;
 }
 html[data-itt-year="2022"] body:not(.itt-start-page) .itt-layer-legend,
-html[data-itt-year="2022"] body:not(.itt-start-page) #itt-exhibit-nav,
-html[data-itt-year="2022"] body:not(.itt-start-page) #itt-wayfind,
-html[data-itt-year="2022"] body:not(.itt-start-page) #itt-exhibit-foot,
-html[data-itt-year="2022"] body:not(.itt-start-page) [data-itt-flow-trail],
-html[data-itt-year="2022"] body:not(.itt-start-page) .crumb,
 html[data-itt-year="2022"] body:not(.itt-start-page) .itt-pixel-failed {
   display: none !important;
 }

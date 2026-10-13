@@ -119,19 +119,6 @@
                 });
             }
             if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
-          } else if (ok === "itt06-flickr") {
-            if (!window.ITT.User.take("itt06-flickr")) {
-              window.ITT.User.store("itt06-flickr", {
-                  multiStep: true,
-                  real: true,
-                  leftover: true,
-                  year: "2006",
-                  title: title.slice(0, 80),
-                  tags: String(tags || "").slice(0, 80),
-                  ts: Date.now()
-                });
-            }
-            if (ITT.revealNextFlow) ITT.revealNextFlow(doc);
           }
         } catch (eFlOff) { /* */ }
         var st = doc.querySelector("[data-flickr-status]");

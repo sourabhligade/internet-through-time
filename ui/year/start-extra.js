@@ -26,7 +26,6 @@
 
  "2005": "<p class=\"itt-felt-trail\">After the star: <a href=\"../sites/youtube/upload.html\">keep going</a>.</p>",
 
- "2006": "<p class=\"itt-felt-trail\">After the star: <a href=\"../sites/twitter/index.html\">keep going</a>.</p>",
 
  "2008": "<p class=\"itt-felt-trail\">After the star: <a href=\"../sites/firefox/downloadday.html\">Firefox Download Day</a> · <a href=\"../sites/cuil/index.html\">Cuil</a> · <a href=\"../sites/bitcoin/index.html\">Bitcoin paper</a>. Mass rooms start at <a href=\"../sites/hi5/index.html\">hi5</a>. Pack B and Pack C never write <code>itt08-apps</code>. DuckDuckGo, IE8, and Windows 7 are rooms, never the January shell.</p>",
 

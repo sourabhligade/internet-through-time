@@ -143,6 +143,7 @@ CI_E2E_ALLOWLIST = (
     "e2e/2008-mvp.spec.js",
     "e2e/2009-mvp.spec.js",
     "e2e/dest-top.spec.js",
+    "e2e/dest-chrome-2021-2022.spec.js",
     "e2e/follow-site.spec.js",
     "e2e/user-save-honest.spec.js",
 )
@@ -289,11 +290,14 @@ def test_year_card() -> None:
     if open_years != list(SHIP_YEARS):
         fail("year-card", "SHIP_YEARS drifted from the card")
         return
-    if len(open_years) != 23:
-        fail("year-card", f"expected 23 open doors, got {len(open_years)}")
+    if len(open_years) != 22:
+        fail("year-card", f"expected 22 open doors, got {len(open_years)}")
         return
     if "2015" in years:
         fail("year-card", "2015 must stay omitted (no year-card key)")
+        return
+    if "2017" in years:
+        fail("year-card", "2017 must have no year-card key")
         return
     if years.get("2020", {}).get("kind") != "html" or years.get("2020", {}).get("star") != "itt20-zoom":
         fail("year-card", "2020 must be html with star itt20-zoom")
@@ -304,12 +308,12 @@ def test_year_card() -> None:
     if years.get("2022", {}).get("kind") != "html" or years.get("2022", {}).get("star") != "itt22-chatgpt":
         fail("year-card", "2022 must be html with star itt22-chatgpt")
         return
-    for wiped in ("2017", "2018", "2019", "2023", "2024", "2025"):
+    for wiped in ("2018", "2019", "2023", "2024", "2025"):
         if years.get(wiped, {}).get("kind") != "absent":
             fail("year-card", f"{wiped} must stay absent")
             return
     frozen = [y for y, r in years.items() if r.get("frozen")]
-    if sorted(frozen) != [str(y) for y in range(1994, 2007)]:
+    if sorted(frozen) != [str(y) for y in range(1994, 2006)]:
         fail("year-card", f"frozen years {sorted(frozen)}")
         return
     lean = sorted(y for y, r in years.items() if r.get("leanBoot"))
@@ -367,6 +371,104 @@ def test_gitignore_test_artifacts() -> None:
     ok("gitignore-artifacts")
 
 
+def test_gitnexusignore() -> None:
+    gi = ROOT / ".gitnexusignore"
+    if not gi.is_file():
+        fail("gitnexusignore", "missing .gitnexusignore")
+        return
+    text = read(gi)
+    for needle in ("app/assets/", "react/node_modules/"):
+        if needle not in text:
+            fail("gitnexusignore", f"missing {needle}")
+            return
+    ok("gitnexusignore")
+
+
+def test_trail_year_keys() -> None:
+    src = read(ROOT / "scripts" / "check-every-flow.py")
+    if r'\n\s*"(\d{4})": \[' not in src:
+        fail("trail-year-keys", "check-every-flow.py year regex must allow indent drift")
+        return
+    text = read(ROOT / "js" / "config" / "flow-trails.js")
+    years = re.findall(r'\n\s*"(\d{4})": \[', text)
+    if len(years) != len(set(years)):
+        fail("trail-year-keys", f"duplicate trail years {years}")
+        return
+    if set(years) != set(SHIP_YEARS):
+        fail("trail-year-keys", f"trail years {sorted(years)} != SHIP_YEARS {list(SHIP_YEARS)}")
+        return
+    for y in ("2012", "2020", "2021", "2022"):
+        if y not in years:
+            fail("trail-year-keys", f"{y} collapsed into another trail year")
+            return
+    ok(f"trail-year-keys ({len(years)} years)")
+
+
+def test_2004_f1_flickr_upload() -> None:
+    maps = read(ROOT / "js" / "config" / "flow-maps.js")
+    if not re.search(
+        r'"name":\s*"F1 Flickr stream"[\s\S]{0,160}"href":\s*"sites/flickr/upload.html"',
+        maps,
+    ):
+        fail("2004-f1-flickr", "2004 F1 Flickr stream must point at upload.html")
+        return
+    years_js = read(ROOT / "ui" / "year" / "years.js")
+    for needle in (
+        "sites/napster/search.html",
+        "sites/pets/shop.html",
+        "sites/flickr/upload.html",
+        "sites/ipad/order.html",
+    ):
+        if needle not in years_js:
+            fail("2004-f1-flickr", f"years.js official dir missing {needle}")
+            return
+    ok("official-machine-hrefs")
+
+
+def test_leftover_2010_matrix_pack() -> None:
+    leftover_keys = {"itt10-facebook", "itt10-youtube"}
+    official_keys = {"itt10-fb-og", "itt10-yt"}
+    found: set[str] = set()
+
+    def walk(node: object) -> None:
+        if isinstance(node, dict):
+            key = node.get("key")
+            if key in leftover_keys:
+                found.add(str(key))
+                if node.get("pack") != "leftover":
+                    fail("leftover-2010-pack", f"{key} must be pack leftover")
+                    return
+                if key in official_keys:
+                    fail("leftover-2010-pack", f"{key} retargeted onto an official dest key")
+                    return
+            for val in node.values():
+                walk(val)
+        elif isinstance(node, list):
+            for val in node:
+                walk(val)
+
+    for rel in ("e2e/5x-recheck.matrix.json", "e2e/popular-flows.matrix.json"):
+        walk(json.loads(read(ROOT / rel)))
+        if failures and failures[-1].startswith("leftover-2010-pack"):
+            return
+    if found != leftover_keys:
+        fail("leftover-2010-pack", f"missing leftover keys {sorted(leftover_keys - found)}")
+        return
+    ok("leftover-2010-pack")
+
+
+def test_dest_chrome_css() -> None:
+    c21 = read(ROOT / "css" / "period-2021.css")
+    c22 = read(ROOT / "css" / "period-2022.css")
+    if re.search(r"#itt-wayfind[\s\S]{0,220}display:\s*none\s*!important", c21):
+        fail("dest-chrome-css", "period-2021.css hides #itt-wayfind with !important")
+        return
+    if re.search(r"#itt-wayfind[\s\S]{0,220}display:\s*none\s*!important", c22):
+        fail("dest-chrome-css", "period-2022.css hides #itt-wayfind with !important")
+        return
+    ok("dest-chrome-css")
+
+
 def main() -> int:
     print("Pipeline static tests")
     print("=" * 40)
@@ -385,6 +487,11 @@ def main() -> int:
         test_deploy_configs,
         test_year_card,
         test_gitignore_test_artifacts,
+        test_gitnexusignore,
+        test_trail_year_keys,
+        test_2004_f1_flickr_upload,
+        test_leftover_2010_matrix_pack,
+        test_dest_chrome_css,
     ]
     for t in tests:
         t()

@@ -247,22 +247,6 @@ KEEP 10 · DROP 1 · DO-NOT-APPLY 0 · MISS 0
 | `secondlife` | forest pack | **DROP** |
 KEEP 12 · DROP 1 · DO-NOT-APPLY 1 · MISS 0
 
-## 2006 · star `twitter`
-
-| Slug | Class | Verdict |
-|------|-------|---------|
-| `twitter` | official 10 | **KEEP** |
-| `facebook` | official 10 | **KEEP** |
-| `youtube` | official 10 | **KEEP** |
-| `googledocs` | official 10 | **KEEP** |
-| `aws` | official 10 | **KEEP** |
-| `ie7` | official 10 | **KEEP** |
-| `wikipedia` | official 10 | **KEEP** |
-| `roblox` | official 10 | **KEEP** |
-| `playable` | official 10 | **DO-NOT-APPLY** |
-| `meebo` | forest pack | **DROP** |
-| `huffpost` | forest pack | **DROP** |
-KEEP 8 · DROP 2 · DO-NOT-APPLY 1 · MISS 0
 
 ## 2007 · star `iphone`
 

@@ -1,5 +1,5 @@
 /**
- * Google Reader 2006 — subscription list theater (localStorage)
+ * Google Reader — subscription list theater (localStorage)
  * Keys: {prefix}-reader-subs
  */
 (function (global) {
@@ -20,8 +20,8 @@
   }
   function storageKey() {
     return U().immersionStorageKey
-      ? U().immersionStorageKey("reader-subs", "itt06")
-      : "itt06-reader-subs";
+      ? U().immersionStorageKey("reader-subs", "itt07")
+      : "itt07-reader-subs";
   }
   function esc(s) {
     if (U().escapeHtml) return U().escapeHtml(s);
@@ -107,13 +107,13 @@
         render(doc);
         try {
           var trailKey = U().immersionStorageKey
-            ? U().immersionStorageKey("reader", "itt06")
-            : "itt06-reader";
+            ? U().immersionStorageKey("reader", "itt07")
+            : "itt07-reader";
           window.ITT.User.store(trailKey, {
             multiStep: true,
             real: true,
             official: true,
-            year: U().immersionYear ? U().immersionYear("2006") : "2006",
+            year: U().immersionYear ? U().immersionYear() : (ITT._immersionYear || ""),
             ts: Date.now(),
             feed: name.slice(0, 48)
           });

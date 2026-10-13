@@ -838,7 +838,7 @@
         feedback("Open at least two UGC trails first (YouTube / Digg / Wikipedia).", st, true);
         return;
       }
-      saveJSON(key, blob({ name: name, year: "2006", trails: trails.slice() }));
+      saveJSON(key, blob({ name: name, year: (ITT._immersionYear && String(ITT._immersionYear)) || (document.documentElement && document.documentElement.getAttribute("data-itt-year")) || "", trails: trails.slice() }));
       stamp();
       if (cover) cover.textContent = name;
       feedback("Person of the Year cover saved locally.", st);

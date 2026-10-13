@@ -6,14 +6,12 @@ const STARS = {
   2003: "itt03-photobucket",
   2004: "itt04-thefacebook-networks",
   2005: "itt05-yt-uploads",
-  2006: "itt06-tweets",
 };
 
 const INSTALL_WIDTHS = {
   2003: [1280],
   2004: [1280, 390],
   2005: [1280],
-  2006: [1280, 390],
 };
 
 async function readKey(page, key) {
@@ -26,7 +24,7 @@ async function clearKeys(page, keys) {
   }, keys);
 }
 
-for (const year of ["2003", "2004", "2005", "2006"]) {
+for (const year of ["2003", "2004", "2005"]) {
   for (const width of INSTALL_WIDTHS[year]) {
     test(`WordPress ${year} install @${width} empty never writes`, async ({ page }) => {
       test.setTimeout(90000);
@@ -72,7 +70,7 @@ for (const year of ["2003", "2004", "2005", "2006"]) {
   }
 }
 
-for (const year of ["2004", "2005", "2006"]) {
+for (const year of ["2004", "2005"]) {
   test(`WordPress ${year} publish empty never writes`, async ({ page }) => {
     test.setTimeout(90000);
     const key = `itt${year.slice(2)}-wp-posts`;

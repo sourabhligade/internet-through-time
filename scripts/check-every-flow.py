@@ -22,7 +22,7 @@ def react_keys():
 
 def trail_stops():
     text = open(os.path.join(ROOT, "js", "config", "flow-trails.js"), encoding="utf-8").read()
-    years = list(re.finditer(r'\n    "(\d{4})": \[', text))
+    years = list(re.finditer(r'\n\s*"(\d{4})": \[', text))
     stops = []
     for i, match in enumerate(years):
         year = match.group(1)

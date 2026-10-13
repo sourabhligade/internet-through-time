@@ -1,7 +1,7 @@
 // @ts-check
 /**
  * 2007 dest-true official 10 — period control writes official:true.
- * Trap / empty never write. Neighbor 2006 /  keys stay empty.
+ * Trap / empty never write. Neighbor keys stay empty.
  */
 const { test, expect } = require("@playwright/test");
 
@@ -25,7 +25,7 @@ async function openClear(page, path, keys) {
 }
 
 async function completeOfficial(page, { path, key, field }) {
-  await openClear(page, path, [key, "itt06-tweets", "itt08-github", "itt08-chrome"]);
+  await openClear(page, path, [key, "itt08-github", "itt08-chrome"]);
   const trap = page.locator("[data-official-trap]").first();
   if (await trap.count()) {
     await trap.click();
@@ -42,7 +42,6 @@ async function completeOfficial(page, { path, key, field }) {
   const blob = JSON.parse((await getKey(page, key)) || "{}");
   expect(blob.official).toBe(true);
   expect(blob.year).toBe("2007");
-  expect(await getKey(page, "itt06-tweets")).toBeFalsy();
   expect(await getKey(page, "itt08-chrome")).toBeFalsy();
 }
 
@@ -79,7 +78,7 @@ test.describe("2007 dest-true official", () => {
     });
   });
 
-  test("Twitter leftover update writes itt07-twitter not itt06-tweets", async ({ page }) => {
+  test("Twitter leftover update writes itt07-twitter", async ({ page }) => {
     await completeOfficial(page, {
       path: "/years/2007/sites/twitter/index.html",
       key: "itt07-twitter",

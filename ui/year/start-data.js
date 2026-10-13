@@ -160,19 +160,6 @@
  
  ]
  },
- "2006": {
- "href": "../sites/twitter/index.html",
- "label": "★ One-thing · Twttr update REAL",
- "items": [
- " <a href=\"about.html\">About 2006</a> — feed year · Twttr birthmark",
- " <a href=\"../sites/twitter/index.html\">★ Twttr</a> — empty / 280 / iPhone never write",
- " <a href=\"../sites/facebook/feed.html\">News Feed</a> — 5 Sep",
- " <a href=\"../sites/youtube/index.html\">YouTube Google-owned</a> — 9 Oct",
- " <a href=\"../sites/googledocs/index.html\">Google Docs</a> — Oct",
- " <a href=\"map.html\">Year flow map</a> "
- 
- ]
- },
  "2009": {
  "href": "../sites/facebook/index.html",
  "label": "★ One-thing · Facebook Like REAL",

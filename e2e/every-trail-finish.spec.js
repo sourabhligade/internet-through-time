@@ -106,12 +106,6 @@ const CUSTOM = {
     for (let i = 0; i < n; i++) await reqs.nth(i).check();
     await page.locator("form[data-yt-upload] button[type='submit']").click();
   },
-  "itt06-tweets": async (page) => {
-    await page.locator("[data-tw06-req]").nth(0).check();
-    await page.locator("[data-tw06-req]").nth(1).check();
-    await page.fill("[data-tw06-body]", "just setting up my twttr");
-    await page.locator("[data-tw06-post]").click();
-  },
   "itt07-iphone": async (page) => {
     await page.locator("[data-official-need]").fill("apple.com");
     await page.locator("[data-official-req]").nth(0).check();

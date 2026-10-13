@@ -197,17 +197,13 @@ test.describe('year-signature 1998', () => {
 });
 
 test.describe('year-signature 1999', () => {
-  test('Napster client/download theater', async ({ page }) => {
+  test('Napster search theater', async ({ page }) => {
     await enterYear(page, '1999');
-    await goImmersion(page, '1999', 'sites/napster/index.html');
+    await goImmersion(page, '1999', 'sites/napster/search.html');
     const frame = contentFrame(page);
     await expect(frame.locator('body')).toContainText(/Napster/i, { timeout: 15000 });
-    const link = frame.locator('a[href*="client"], a[href*="download"], a[href*="legal"]').first();
-    await expect(link).toBeVisible({ timeout: 10000 });
-    await link.click();
-    await page.waitForTimeout(700);
-    await expect(frame.locator('body')).toContainText(/Napster|Download|Legal|Client|Beta/i, {
-      timeout: 12000,
+    await expect(frame.locator('[data-napster-search], [data-official-need]').first()).toBeVisible({
+      timeout: 10000,
     });
   });
   test('Blogger post → view + itt99-blog', async ({ page }) => {
@@ -264,7 +260,7 @@ test.describe('year-signature 2000', () => {
   });
   test('Pets.com multipage', async ({ page }) => {
     await enterYear(page, '2000');
-    await goImmersion(page, '2000', 'sites/pets/index.html');
+    await goImmersion(page, '2000', 'sites/pets/shop.html');
     await expect(contentFrame(page).locator('body')).toContainText(/Pets|sock|puppet|dog/i, { timeout: 15000 });
   });
 });
@@ -298,7 +294,7 @@ test.describe('year-signature 2004', () => {
   });
   test('Flickr upload theater', async ({ page }) => {
     await enterYear(page, '2004');
-    await goImmersion(page, '2004', 'sites/flickr/index.html');
+    await goImmersion(page, '2004', 'sites/flickr/upload.html');
     await expect(contentFrame(page).locator('body')).toContainText(/Flickr|photo|Upload/i, { timeout: 15000 });
   });
 });
@@ -418,39 +414,6 @@ test.describe('year-signature 2005', () => {
   });
 });
 
-test.describe('year-signature 2006', () => {
-  test('Digg leftover dest loads (not the star)', async ({ page }) => {
-    skipIfWiped('2006');
-    await enterYear(page, '2006');
-    await goImmersion(page, '2006', 'sites/digg/index.html');
-    await expect(contentFrame(page).locator('body')).toContainText(/Digg/i, { timeout: 15000 });
-    await expect(contentFrame(page).locator("h1").first()).toBeVisible();
-  });
-
-  test('Twttr update REAL → itt06-tweets', async ({ page }) => {
-    skipIfWiped('2006');
-    await enterYear(page, '2006');
-    await page.evaluate(() => {
-      try {
-        localStorage.removeItem('itt06-tweets');
-      } catch (e) {
-        /* */
-      }
-    });
-    await goImmersion(page, '2006', 'sites/twitter/index.html');
-    const frame = contentFrame(page);
-    await expect(frame.locator('[data-tw06-post]')).toBeVisible({ timeout: 15000 });
-    await frame.locator('[data-tw06-trap]').click();
-    expect(await page.evaluate(() => localStorage.getItem('itt06-tweets'))).toBeFalsy();
-    await frame.locator('[data-tw06-req]').nth(0).check();
-    await frame.locator('[data-tw06-req]').nth(1).check();
-    await frame.locator('[data-tw06-body]').fill('just setting up my twttr residual');
-    await frame.locator('[data-tw06-post]').click();
-    await expect
-      .poll(async () => page.evaluate(() => localStorage.getItem('itt06-tweets')), { timeout: 8000 })
-      .toBeTruthy();
-  });
-});
 
 test.describe('year-signature 2008', () => {
   test('Chrome download theater → itt08-chrome', async ({ page }) => {

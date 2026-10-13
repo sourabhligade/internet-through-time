@@ -22,7 +22,7 @@ A clone is two leftover writers on the same dest (`lx` + `d2`, leftover-3× + le
 
 | This pass | Not this pass |
 |-----------|---------------|
-| Strip leftover clone machines on dest-locked lean dests | Dest-lock forests 1994–2006 |
+| Strip leftover clone machines on dest-locked lean dests | Dest-lock forests 1994–2005 |
 | Replace leftover dest leftover-2× **pairs** with one dest-true leftover writer | Dest-lock 2013 leftover 2× ×2 (year law) |
 | Delete leftover warehouse on official dest HTML | Board 2009. 2009 is already a live HTML door |
 | Keep leftover-3× unique dest-true cream face | Add dests · dest-farm leftover-20 (unshipped; 2017 absent) |
@@ -32,7 +32,7 @@ A clone is two leftover writers on the same dest (`lx` + `d2`, leftover-3× + le
 
 | Year | Why |
 |------|-----|
-| 1994–2006 | Forests. Leftover-2× on dests is DISK-TRUTH. |
+| 1994–2005 | Forests. Leftover-2× on dests is DISK-TRUTH. |
 | 2013 | READ-FIRST: leftover 2× ×2 on every dest. Never dest-locked. |
 | 2009 | Boarded plaque. |
 | , 2014, 2021 | Already **0** clone dests. |
@@ -235,13 +235,13 @@ one-thing 2012 IG Android still pass
 | 2012 | `sites/yahoo/index.html` | extra leftover dest | one leftover dest-true face (`yeslo-yahoo` **or** convert to leftover-2× `yahoo-lx` shape) | `yeslo2-yahoo` · `yeslo3-yahoo` | R1 preferred |
 | 2017 | — | absent · not a door | — | — | Do not dest-farm |
 
-2017 is absent. leftover-20 is unshipped. Do not dest-farm leftover-20 dests.
+2017 has no year-card key. leftover-20 is unshipped. Do not dest-farm leftover-20 dests.
 
 ### Pass C done when
 
 ```
 2007 / 2010 / 2012 dests with 2+ leftover persist keys = 0
-2017 is absent (leftover-20 unshipped)
+2017 has no year-card key (leftover-20 unshipped)
 one-thing stars still write/no-write
 ```
 
@@ -258,7 +258,7 @@ one-thing stars still write/no-write
 | `e2e/leftover-3x-unique.spec.js` | No dest list change. Recheck leftover-3× unique dests still dest-true leftover-3× first paint. |
 | `e2e/leftover-4x-unique.spec.js` | 2012 chrome / twitter / soundcloud untouched. Recheck. |
 | `e2e/leftover-dest-3x-face.spec.js` | Recheck amazon leftover-3× dest face (not this strip). |
-| `e2e/one-thing-per-year.spec.js` | Stars untouched. Recheck 2007 / 2010 / 2012. 2017 is absent. |
+| `e2e/one-thing-per-year.spec.js` | Stars untouched. Recheck 2007 / 2010 / 2012. 2017 has no year-card key. |
 | `scripts/audit-mock-flows.js` | Must not class remaining leftover dest faces as `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA`. |
 | `docs/DISK-TRUTH.md` | Dest-locked leftover dest leftover-2× = **one writer**. Forests + 2013 stay two. Official dest leftover-2× = 0 including 2012 Medium / Path / Flipboard. 2014 dest folders **18**. |
 
@@ -307,7 +307,7 @@ npx playwright test \
 3. Apply R1 / R2 / R3 / R4. **Do not mix.**
 4. Incomplete (empty field, 0 ticks, trap pick) never writes the kept key.
 5. Complete writes **only** the kept key. Star key stays empty.
-6. Leftover never writes `itt07-iphone` / `itt10-ig-posts` / `itt12-ig-android` / `itt20-zoom`. **2017 is absent · not a door.**
+6. Leftover never writes `itt07-iphone` / `itt10-ig-posts` / `itt12-ig-android` / `itt20-zoom`. **2017 has no year-card key · not a door.**
 7. No new dest folder. No new brand pixels. failed-final cite stays.
 8. Do not leave a second leftover persist key in a comment or `hidden` panel.
 
@@ -318,9 +318,9 @@ A mechanical pass is allowed: delete `details.itt-also-year` leftover-2× blocks
 ## 12. Do not
 
 - Dest-lock 2013 leftover 2× ×2.
-- Dest-lock forests 1994–2006.
+- Dest-lock forests 1994–2005.
 - Strip leftover-3× unique dest-true cream faces.
-- Dest-farm leftover-20 dests. 2017 is absent. leftover-20 is unshipped.
+- Dest-farm leftover-20 dests. 2017 has no year-card key. leftover-20 is unshipped.
 - Add dests to / 2021 “to make leftover-3× 9.”
 - Keep `*-d2` as a second unique leftover dest.
 - Fold leftover warehouse on official dests (`details` is still leftover warehouse).

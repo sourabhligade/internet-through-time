@@ -24,6 +24,14 @@
         ""
     );
   }
+  function leftoverOfficialOwns(doc) {
+    try {
+      if (ITT.leftoverOfficialOwns) return ITT.leftoverOfficialOwns(doc);
+      return !!(doc && doc.querySelector("[data-lo-panel][data-itt-dest-true] [data-lo-save][data-lo-key]"));
+    } catch (eOwns) {
+      return false;
+    }
+  }
   function KEY() {
     if (ITT.util && ITT.util.immersionStorageKey) {
       return ITT.util.immersionStorageKey("delicious-posts", "itt05");
@@ -151,10 +159,10 @@
           mine: true
         });
         save(list.slice(0, 40));
-        /* 2005 n=18 and 2006 n=18 are leftover copies. 2004 stays on official-verb. */
+        /* 2005 n=18 leftover dests write via leftover-official. */
         try {
           var yLo = year();
-          if ((yLo === "2005" || yLo === "2006") && url && url !== "http://") {
+          if (yLo === "2005" && url && url !== "http://" && !leftoverOfficialOwns(doc)) {
             var loKey = "itt" + yLo.slice(2) + "-delicious";
             if (!window.ITT.User.take(loKey)) {
               window.ITT.User.store(loKey, {

@@ -1,6 +1,6 @@
 # Lean-door leftover double — criteria only
 
-**2017–2019 and 2023–2025 are absent.** Lists for absent years in this file are research. Do not restore `years/` for an absent year. Live doors are 1994–2010, 2012–2014, and 2020–2022. **2015 is omitted.** 2020–2022 are live HTML. Ship law is [`DISK-TRUTH.md`](DISK-TRUTH.md).
+**2018–2019 and 2023–2025 are absent. 2017 has no year-card key.** Lists for absent years in this file are research. Do not restore `years/` for an absent year. Live doors are 1994–2005, 2007–2010, 2012–2014, and 2020–2022. **2015 is omitted.** 2020–2022 are live HTML. Ship law is [`DISK-TRUTH.md`](DISK-TRUTH.md).
 
 **Date:** 2026-09-20  
 **Status:** Implemented 2026-09-20 (Step 2 named). Not dest-farm. Not leftover-3× unique growth. Leftover dests on thin lean doors only. Cap is not a quota.  
@@ -25,7 +25,7 @@ A year that looks full because it has 200 leftover dests has **failed I/O**. **2
 |--|-----------|---------------|
 | Envelope | Read / cite ~5,000 period sites, blogs, galleries, ranks | 5,000 dest folders |
 | New dests | Leftover dests · dest-disjoint · year-mass or year-launch · one dest / one verb / one key | Official 11th · leftover-3× unique past the stop · `lx`+`d2` clones |
-| Years | Thin lean doors listed in §4 | Forests 1994–2006 · dest-farm years already dense · 2009 · 2023–2025 |
+| Years | Thin lean doors listed in §4 | Forests 1994–2005 · dest-farm years already dense · 2009 · 2023–2025 |
 | When HTML | After a **named** implement pass **and** a cite | Silent dest-farm from this file |
 
 ---
@@ -50,7 +50,7 @@ A dest **fails** if any row is N. One miss is a fail. Inherits leftover-3× **U1
 | **D12** | Cite or drop | Primary or labeled secondary cite, or drop the row | Invent a dest to hit the double |
 | **D13** | Not a forest | Target is lean-door 2×, not 2004 **810** / **597** | Board C again · dest-lock revert of dest-lock years |
 | **D14** | Leftover-3× stop | 2018 leftover-3× unique stays **3**. 2021 stays **5**. Extra dests are leftover dests, not leftover-3× unique dest-true dests | Growing leftover-3× unique to 9 on 2018 / 2021 |
-| **D15** | Unique leftover-20 | **2017 is absent.** Do not dest-farm leftover-20 maps on any year | 20 unique leftover dests on 2022 to “look like 2017” |
+| **D15** | Unique leftover-20 | **2017 has no year-card key.** Do not dest-farm leftover-20 maps on any year | 20 unique leftover dests on 2022 to “look like 2017” |
 | **M1–M4** | Dest-true leftover | keep vs trap · field · 2 ticks · Go | `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` |
 
 If a year cannot pass without new dests **and** no cite exists, **stop**. Do not dest-farm a substitute.
@@ -63,7 +63,7 @@ Disk counts = first-level dirs under `years/YYYY/sites/` (2026-09-20).
 
 | Class | Years | Disk dests | This pass |
 |-------|-------|------------|-----------|
-| Forest | 1994–2006 | 153–810 | **Stop.** Stacked leftover-2× / leftover-3× workshop. Board C already doubled 1999–2004. Do not dest-farm unique leftover-3×n. Do not dest-lock forests. |
+| Forest | 1994–2005 | 153–810 | **Stop.** Stacked leftover-2× / leftover-3× workshop. Board C already doubled 1999–2004. Do not dest-farm unique leftover-3×n. Do not dest-lock forests. |
 | Dest-lock lean (thin) | 2007 · 2010–2012 · 2014 · 2021 | 23 / 22 / 31 / 24 / 18 / **15** | **Double leftover dests** to the aim in §4. Do not dest-lock revert. |
 | Dest-true lean (thin) | · 2022 | 13 / 19 | **Double leftover dests** to the aim in §4. Leftover-3× unique stops stay. |
 | Dest-true lean (upper) | 2013 | 54 | **Holes only.** Do not grow to a forest. |
@@ -196,12 +196,12 @@ Do not skip ahead to dest HTML.
 
 - Dest-farm dests to raise a percentage.
 - Treat 5,000 websites as 5,000 dest folders.
-- Double forests 1994–2006.
-- Double dest-lock-reverted warehouses. **2015 is omitted. 2017 is absent.** Do not dest-farm.
+- Double forests 1994–2005.
+- Double dest-lock-reverted warehouses. **2015 is omitted. 2017 has no year-card key.** Do not dest-farm.
 - Dest-lock revert 2007 / 2010–2012 / 2014 / 2021.
 - Dest-lock 2015 again. 2015 is omitted.
 - Dest-farm leftover-3× unique dest-true dests on past 3 or 2021 past 5.
-- Dest-farm leftover-20 dests. leftover-20 is unshipped. 2017 is absent.
+- Dest-farm leftover-20 dests. leftover-20 is unshipped. 2017 has no year-card key.
 - Unique leftover-3×n on forests.
 - Grow official 10. Grow guided past 6.
 - Board 2009. 2009 is already a live HTML door.
@@ -223,7 +223,7 @@ Do not skip ahead to dest HTML.
 | [`YEAR-INCOMPLETE-NOW.md`](YEAR-INCOMPLETE-NOW.md) | Current year holes. Leftover-3× catalogs empty |
 | [`LEAN-IO-CRITERIA.md`](LEAN-IO-CRITERIA.md) | I1–I14 |
 | [`--DEST-DENSITY.md`](--DEST-DENSITY.md) | Earlier 2× leftover dest pass |
-| 2017-UNIQUE-FLOWS.md | Not on disk. 2017 is absent. Leftover-20 is not a live rail |
+| 2017-UNIQUE-FLOWS.md | Not on disk. 2017 has no year-card key. Leftover-20 is not a live rail |
 | [`2x-harvest-c-1999-2004.md`](2x-harvest-c-1999-2004.md) | Forest Board C — already shipped · do not re-run |
 | `js/config/flow-trails.js` | Official 10 |
 | `scripts/leftover-3x-unique.json` | Leftover-3× unique dest-true dests |
@@ -255,7 +255,7 @@ CNIL-shaped leftover dest. One writer. Cream panel. Not leftover-3× unique.
 | Guided Starting Point | exactly 6 `<li>` |
 | Star | Only the year chip writes gold |
 | Leftover-3× unique dest-true | catalogs **empty** · dest-links live n=3 on 2008, 2009, 2010, 2012, 2013, 2020, 2021, and 2022 · 2021 cap memory 5 is unused (live n=3) |
-| Unique leftover-20 | not a live rail · 2017 is absent |
+| Unique leftover-20 | not a live rail · 2017 has no year-card key |
 | leftover-4× unique | 2007 digg/flickr/reddit · 2010 netflix/tumblr/wave · 2012 chrome/twitter/soundcloud · 2013 askfm/whisper/facebook |
 | Empty / trap | never write leftover or star |
 | Mock | `DEST_FIELD` / `WEAK_REAL` / `HASH_CTA` = 0 on new dests |

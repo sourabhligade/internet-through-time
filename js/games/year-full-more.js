@@ -94,7 +94,7 @@
         return;
       }
       saved = true;
-      status("Saved · " + prefixFor(year) + "-game-" + gid + " · " + score);
+      status("Saved.");
       try {
         var next = host.querySelector("[data-next-flow]");
         if (next) {
@@ -153,6 +153,10 @@
     if (startBtn) startBtn.addEventListener("click", start);
     if (trapBtn) {
       trapBtn.addEventListener("click", function () {
+        if (saved) {
+          status("Already saved.");
+          return;
+        }
         status("Trap never writes.");
       });
     }

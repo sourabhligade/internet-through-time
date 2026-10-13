@@ -24,7 +24,6 @@ const GOLD = [
   { year: "2003", writer: "sites/photobucket/index.html", key: "itt03-photobucket", nextNeedle: "itunes", chipHref: "sites/photobucket/index.html" },
   { year: "2004", writer: "sites/facebook/networks.html", key: "itt04-thefacebook-networks", nextNeedle: "friends", chipHref: "sites/facebook/networks.html" },
   { year: "2005", writer: "sites/youtube/upload.html", key: "itt05-yt-uploads", nextNeedle: "maps", chipHref: "sites/youtube/upload.html" },
-  { year: "2006", writer: "sites/twitter/index.html", key: "itt06-tweets", nextNeedle: "facebook/feed", chipHref: "sites/twitter/index.html" },
   { year: "2007", writer: "sites/iphone/index.html", key: "itt07-iphone", nextNeedle: "streetview", chipHref: "sites/iphone/index.html" },
   { year: "2008", writer: "sites/appstore/index.html", key: "itt08-apps", nextNeedle: "chrome", chipHref: "sites/appstore/index.html" },
   { year: "2009", writer: "sites/facebook/index.html", key: "itt09-like", nextNeedle: "farmville", chipHref: "sites/facebook/index.html" },

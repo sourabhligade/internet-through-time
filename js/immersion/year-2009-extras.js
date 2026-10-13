@@ -40,7 +40,7 @@
         feedback("This browser blocked the save.", st, { error: true });
         return;
       }
-      feedback("Saved · " + key(suffix), st);
+      feedback("Saved.", st);
       reveal(doc);
     });
   }
@@ -283,7 +283,7 @@
         return;
       }
       saveJSON(key("kickstarter"), blob({ note: note.slice(0, 40), date: "2009-04-28" }));
-      feedback("Backed ·" + key("kickstarter"), st);
+      feedback("Saved.", st);
       reveal(doc);
     });
   }
@@ -308,7 +308,7 @@
         feedback("This browser blocked the save.", st, { error: true });
         return;
       }
-      feedback("Saved · " + key(suffix), st);
+      feedback("Saved.", st);
       reveal(doc);
     });
   }

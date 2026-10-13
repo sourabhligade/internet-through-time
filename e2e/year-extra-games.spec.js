@@ -3,7 +3,7 @@
  * Two leftover extra games per shipped year (extra-a / extra-b).
  * Minute machines: empty Finish never writes · year-true verbs write ittYY-game-*.
  * 2012 extra-a/b are on disk (Android share · IPO pin). Dest-missing extras still skip.
- * No HTML extras tree: 2015 omitted, 2017–2019 and 2023–2025 absent.
+ * No HTML extras tree: 2015 omitted, 2017 has no year-card key, 2018–2019 and 2023–2025 absent.
  */
 const fs = require("fs");
 const path = require("path");
@@ -13,7 +13,7 @@ const { killOverlays } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
 const YEARS = [];
-const SKIP_HTML_EXTRAS = new Set(["2015", "2017", "2018", "2019", "2023", "2024", "2025"]);
+const SKIP_HTML_EXTRAS = new Set(["2015", "2018", "2019", "2023", "2024", "2025"]);
 for (let y = 1994; y <= 2010; y++) {
   const s = String(y);
   if (SKIP_HTML_EXTRAS.has(s)) continue;
@@ -24,7 +24,7 @@ for (let y = 2012; y <= 2015; y++) {
   if (SKIP_HTML_EXTRAS.has(s)) continue;
   YEARS.push(s);
 }
-for (let y = 2017; y <= 2022; y++) {
+for (let y = 2018; y <= 2022; y++) {
   const s = String(y);
   if (SKIP_HTML_EXTRAS.has(s)) continue;
   YEARS.push(s);
@@ -160,12 +160,29 @@ test.describe("year extra games — minute machines", () => {
         expect(gid).toBeTruthy();
         expect(kind).toBeTruthy();
         const key = prefix(year) + "-game-" + gid;
+        const st = root.locator("[data-itt-action-status]").first();
         await root.locator("[data-mx-finish]").click();
         expect(await page.evaluate((k) => localStorage.getItem(k), key)).toBeFalsy();
+        await expect(st).toContainText(/never writes/i);
+        const hold = await st.evaluate((el) => {
+          const cs = getComputedStyle(el);
+          return { color: cs.color, receipt: el.getAttribute("data-yg-receipt") };
+        });
+        expect(hold.receipt).toBe("hold");
+        expect(hold.color).toBe("rgb(170, 0, 0)");
         await completeMinute(root, page);
         await expect
           .poll(async () => page.evaluate((k) => localStorage.getItem(k), key), { timeout: 8000 })
           .toBeTruthy();
+        await expect(st).toHaveText("Saved.");
+        await expect(st).not.toContainText(/itt\d{2}-/);
+        const ok = await st.evaluate((el) => {
+          const cs = getComputedStyle(el);
+          return { color: cs.color, receipt: el.getAttribute("data-yg-receipt"), text: el.textContent };
+        });
+        expect(ok.receipt).toBe("ok");
+        expect(ok.color).toBe("rgb(0, 102, 0)");
+        expect(ok.text).not.toMatch(/itt\d{2}-/);
         const blob = JSON.parse((await page.evaluate((k) => localStorage.getItem(k), key)) || "{}");
         expect(blob.real).toBe(true);
         expect(String(blob.year)).toBe(year);

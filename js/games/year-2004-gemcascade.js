@@ -219,11 +219,7 @@
     saved = true;
     if (YG && YG.markStep) YG.markStep("save", host);
     paintBest();
-    setStatus(
-      score > 0
-        ? "Saved · itt04-game-gemcascade · score " + score + "."
-        : "No matches — nothing written."
-    );
+    setStatus(score > 0 ? "Saved." : "No matches — nothing written.");
   }
   function start() {
     running = true;

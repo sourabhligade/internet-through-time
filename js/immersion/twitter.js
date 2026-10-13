@@ -1,6 +1,6 @@
 /**
- * Twitter / Twttr 2006 — compose 140 · timeline (localStorage theater)
- * Keys: {prefix}-tweets via immersionStorageKey (itt06-tweets in 2006)
+ * Twitter / Twttr — compose 140 · timeline (localStorage theater)
+ * Keys: {prefix}-tweets via immersionStorageKey
  * BAN: modern X chrome · For You algorithm · long posts
  */
 (function (global) {
@@ -13,8 +13,8 @@
   }
   function storageKey() {
     return U().immersionStorageKey
-      ? U().immersionStorageKey("tweets", "itt06")
-      : "itt06-tweets";
+      ? U().immersionStorageKey("tweets", "itt07")
+      : "itt07-tweets";
   }
   function esc(s) {
     if (U().escapeHtml) return U().escapeHtml(s);

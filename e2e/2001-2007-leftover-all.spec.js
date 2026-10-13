@@ -9,7 +9,7 @@ const { test, expect } = require("@playwright/test");
 const { revealLeftoverRails } = require("./helpers");
 
 const ROOT = path.join(__dirname, "..");
-const YEARS = new Set(["2001", "2002", "2003", "2004", "2005", "2006", "2007"]);
+const YEARS = new Set(["2001", "2002", "2003", "2004", "2005", "2007"]);
 const MATRIX = JSON.parse(fs.readFileSync(path.join(__dirname, "leftover-official.matrix.json"), "utf8"));
 const DESTS = MATRIX.dests.filter((d) => {
   if (!YEARS.has(d.year)) return false;
@@ -95,7 +95,7 @@ async function runDest(page, d) {
 }
 
 const LIVE_PANELS = {
-  2001: 274, 2002: 264, 2003: 214, 2004: 892, 2005: 909, 2006: 493, 2007: 18,
+  2001: 274, 2002: 264, 2003: 214, 2004: 892, 2005: 909, 2007: 18,
 };
 
 function panelCount(year) {

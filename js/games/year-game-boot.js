@@ -211,6 +211,19 @@
     return /(?:\?|&)test=1\b/.test(locSearch());
   }
 
+  function receiptKind(msg) {
+    var s = String(msg || "").replace(/\s+/g, " ").trim();
+    if (s === "Saved." || s === "Already saved.") return "ok";
+    if (
+      /blocked the save/i.test(s) ||
+      /never writes/i.test(s) ||
+      /nothing written/i.test(s)
+    ) {
+      return "hold";
+    }
+    return "play";
+  }
+
   function setStatus(el, msg) {
     if (!el) {
       try {
@@ -219,7 +232,25 @@
         el = null;
       }
     }
-    if (el) el.textContent = String(msg || "");
+    if (!el) return;
+    el.textContent = String(msg || "");
+    try {
+      var kind = receiptKind(msg);
+      el.setAttribute("data-yg-receipt", kind);
+      if (kind === "ok") {
+        el.style.color = "#060";
+        el.style.backgroundColor = "#e8f5e8";
+        el.style.borderLeft = "4px solid #060";
+      } else if (kind === "hold") {
+        el.style.color = "#a00";
+        el.style.backgroundColor = "#fde8e8";
+        el.style.borderLeft = "4px solid #a00";
+      } else {
+        el.style.color = "";
+        el.style.backgroundColor = "";
+        el.style.borderLeft = "";
+      }
+    } catch (eK) { /* */ }
   }
 
   /**
@@ -256,7 +287,7 @@
       }
       var bestEl = document.querySelector("[data-game-best]");
       if (bestEl) bestEl.textContent = String(blob.best);
-      setStatus(null, "Run saved · score " + score + " · best " + blob.best);
+      setStatus(null, "Saved.");
     } catch (e) { /* */ }
   }
 

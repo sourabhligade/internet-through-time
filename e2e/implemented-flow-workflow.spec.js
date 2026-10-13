@@ -10,7 +10,7 @@ const ROOT = path.join(__dirname, "..");
 test("2005 leftover rail opens and every painted link is in the 105", async ({ page }) => {
   const text = fs.readFileSync(path.join(ROOT, "js/config/leftover-2x-unique-links.js"), "utf8");
   const start = text.indexOf('"2005": [');
-  const end = text.indexOf('"2006":', start);
+  const end = text.indexOf('"2007":', start);
   const allow = new Set([...text.slice(start, end).matchAll(/"id":\s*"([^"]+)"/g)].map((m) => m[1]));
   await page.goto("/years/2005/sites/qq/index.html");
   await revealLeftoverRails(page);
